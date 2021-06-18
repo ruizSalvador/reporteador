@@ -3255,3 +3255,7 @@ C:\Reporteador\Korima_Reporteador\Korima_Reporteador\obj\x86\Release\Korima_Repo
 C:\Reporteador\Korima_Reporteador\Korima_Reporteador\obj\x86\Release\Korima_Reporteador.RPT_Adquisiciones_Adtvo_Devengado.resources
 C:\Reporteador\Korima_Reporteador\Korima_Reporteador\obj\x86\Release\Korima_Reporteador.RPT_Balanza_Nivel_Afectable.resources
 C:\Reporteador\Korima_Reporteador\Korima_Reporteador\obj\x86\Release\Korima_Reporteador.RPT_Balanza_Devengado.resources
+D:\ProyectosKorima\Reporteador\Korima_Reporteador\bin\Release\Korima_Reporteador.exe.config
+D:\ProyectosKorima\Reporteador\Korima_Reporteador\obj\x86\Release\Korima_Reporteador.exe
+D:\ProyectosKorima\Reporteador\Korima_Reporteador\obj\x86\Release\Korima_Reporteador.xml
+D:\ProyectosKorima\Reporteador\Korima_Reporteador\obj\x86\Release\Korima_Reporteador.pdb

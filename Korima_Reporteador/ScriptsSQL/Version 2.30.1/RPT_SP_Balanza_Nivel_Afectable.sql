@@ -122,7 +122,7 @@ Select VW_C_Contable.IdCuentaContable, NumeroCuenta, NombreCuenta,
 					End as SaldoAcreedor, Afectable,VW_C_Contable.Financiero 
 	From VW_C_Contable JOIN T_SaldosInicialesCont ON VW_C_Contable.IdCuentaContable = T_SaldosInicialesCont.IdCuentaContable
 	Where  
-	 Mes = 12  And [Year] = @Ejercicio And TipoCuenta <> 'X' --AND NumeroCuenta like '5%'
+	 Mes = @Periodo2  And [Year] = @Ejercicio And TipoCuenta <> 'X' --AND NumeroCuenta like '5%'
 	Order By NumeroCuenta
 
 

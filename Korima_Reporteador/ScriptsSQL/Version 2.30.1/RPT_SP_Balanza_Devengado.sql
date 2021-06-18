@@ -63,7 +63,7 @@ Select C_Contable.IdCuentaContable, NumeroCuenta, NombreCuenta,
 					End as SaldoAcreedor, Afectable,C_Contable.Financiero 
 	From C_Contable JOIN T_SaldosInicialesCont ON C_Contable.IdCuentaContable = T_SaldosInicialesCont.IdCuentaContable
 	Where  
-	 Mes = 12  And [Year] = YEAR(@FechaFin) And TipoCuenta <> 'X' AND (NumeroCuenta like '825%' OR NumeroCuenta like '814%')
+	 Mes = MONTH(@FechaFin)  And [Year] = YEAR(@FechaFin) And TipoCuenta <> 'X' AND (NumeroCuenta like '825%' OR NumeroCuenta like '814%')
 	Order By NumeroCuenta
 
 SELECT
