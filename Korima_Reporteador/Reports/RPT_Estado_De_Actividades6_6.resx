@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ocultar43.Condition" xml:space="preserve">
+    <value>([MaskNumeroCuenta] like '432%' and [MaskNumeroCuenta] &lt;&gt; '432000') or
+([MaskNumeroCuenta] like '433%' and [MaskNumeroCuenta] &lt;&gt; '433000')or 
+([MaskNumeroCuenta] like '434%' and [MaskNumeroCuenta] &lt;&gt; '434000')or 
+([MaskNumeroCuenta] like '435%' and [MaskNumeroCuenta] &lt;&gt; '435000')or 
+([MaskNumeroCuenta] like '436%' and [MaskNumeroCuenta] &lt;&gt; '436000')or 
+([MaskNumeroCuenta] like '437%' and [MaskNumeroCuenta] &lt;&gt; '437000')or 
+([MaskNumeroCuenta] like '438%' and [MaskNumeroCuenta] &lt;&gt; '438000')or 
+([MaskNumeroCuenta] like '439%' and [MaskNumeroCuenta] &lt;&gt; '439000')</value>
+  </data>
+  <data name="ocultar55.Condition" xml:space="preserve">
+    <value>([MaskNumeroCuenta] like '550%' and [MaskNumeroCuenta] &lt;&gt; '550000') or
+([MaskNumeroCuenta] like '551%' and [MaskNumeroCuenta] &lt;&gt; '551000') or
+([MaskNumeroCuenta] like '552%' and [MaskNumeroCuenta] &lt;&gt; '552000') or
+([MaskNumeroCuenta] like '553%' and [MaskNumeroCuenta] &lt;&gt; '553000') or
+([MaskNumeroCuenta] like '554%' and [MaskNumeroCuenta] &lt;&gt; '554000') or
+([MaskNumeroCuenta] like '555%' and [MaskNumeroCuenta] &lt;&gt; '555000') or
+([MaskNumeroCuenta] like '556%' and [MaskNumeroCuenta] &lt;&gt; '556000') or
+([MaskNumeroCuenta] like '557%' and [MaskNumeroCuenta] &lt;&gt; '557000') or
+([MaskNumeroCuenta] like '558%' and [MaskNumeroCuenta] &lt;&gt; '558000') or
+([MaskNumeroCuenta] like '559%' and [MaskNumeroCuenta] &lt;&gt; '559000')</value>
+  </data>
+  <data name="ocultar4142.Condition" xml:space="preserve">
+    <value>([MaskNumeroCuenta] like '412%' and [MaskNumeroCuenta] &lt;&gt; '412000') or
+([MaskNumeroCuenta] like '413%' and [MaskNumeroCuenta] &lt;&gt; '413000') or
+([MaskNumeroCuenta] like '414%' and [MaskNumeroCuenta] &lt;&gt; '414000') or
+([MaskNumeroCuenta] like '415%' and [MaskNumeroCuenta] &lt;&gt; '415000') or
+([MaskNumeroCuenta] like '416%' and [MaskNumeroCuenta] &lt;&gt; '416000') or
+([MaskNumeroCuenta] like '417%' and [MaskNumeroCuenta] &lt;&gt; '417000') or
+([MaskNumeroCuenta] like '418%' and [MaskNumeroCuenta] &lt;&gt; '418000') or
+([MaskNumeroCuenta] like '419%' and [MaskNumeroCuenta] &lt;&gt; '419000') or
+([MaskNumeroCuenta] = '420000') </value>
+  </data>
+  <data name="ocultar51525354.Condition" xml:space="preserve">
+    <value>([MaskNumeroCuenta] like '511%' and [MaskNumeroCuenta] &lt;&gt; '511000') or
+([MaskNumeroCuenta] like '512%' and [MaskNumeroCuenta] &lt;&gt; '512000') or
+([MaskNumeroCuenta] like '513%' and [MaskNumeroCuenta] &lt;&gt; '513000') or
+([MaskNumeroCuenta] like '521%' and [MaskNumeroCuenta] &lt;&gt; '521000') or
+([MaskNumeroCuenta] like '522%' and [MaskNumeroCuenta] &lt;&gt; '522000') or
+([MaskNumeroCuenta] like '523%' and [MaskNumeroCuenta] &lt;&gt; '523000') or
+([MaskNumeroCuenta] like '524%' and [MaskNumeroCuenta] &lt;&gt; '524000') or
+([MaskNumeroCuenta] like '525%' and [MaskNumeroCuenta] &lt;&gt; '525000') or
+([MaskNumeroCuenta] like '526%' and [MaskNumeroCuenta] &lt;&gt; '526000') or
+([MaskNumeroCuenta] like '527%' and [MaskNumeroCuenta] &lt;&gt; '527000') or
+([MaskNumeroCuenta] like '528%' and [MaskNumeroCuenta] &lt;&gt; '528000') or
+([MaskNumeroCuenta] like '529%' and [MaskNumeroCuenta] &lt;&gt; '529000') or
+([MaskNumeroCuenta] like '531%' and [MaskNumeroCuenta] &lt;&gt; '531000') or
+([MaskNumeroCuenta] like '532%' and [MaskNumeroCuenta] &lt;&gt; '532000') or
+([MaskNumeroCuenta] like '533%' and [MaskNumeroCuenta] &lt;&gt; '533000') or
+([MaskNumeroCuenta] like '54%' and [MaskNumeroCuenta] &lt;&gt; '540000') </value>
+  </data>
+</root>

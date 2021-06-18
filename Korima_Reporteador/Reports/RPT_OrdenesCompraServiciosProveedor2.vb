@@ -1,0 +1,3 @@
+﻿Public Class RPT_OrdenesCompraServiciosProveedor2
+
+End Class

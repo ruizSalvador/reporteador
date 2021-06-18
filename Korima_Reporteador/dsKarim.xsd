@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsKarim" targetNamespace="http://tempuri.org/dsKarim.xsd" xmlns:mstns="http://tempuri.org/dsKarim.xsd" xmlns="http://tempuri.org/dsKarim.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsKarim" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsKarim" msprop:Generator_UserDSName="dsKarim">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="SP_EstadoAnalitico_PresupuestoEgresosDetallado" msprop:Generator_TableClassName="SP_EstadoAnalitico_PresupuestoEgresosDetalladoDataTable" msprop:Generator_TableVarName="tableSP_EstadoAnalitico_PresupuestoEgresosDetallado" msprop:Generator_TablePropName="SP_EstadoAnalitico_PresupuestoEgresosDetallado" msprop:Generator_RowDeletingName="SP_EstadoAnalitico_PresupuestoEgresosDetalladoRowDeleting" msprop:Generator_RowChangingName="SP_EstadoAnalitico_PresupuestoEgresosDetalladoRowChanging" msprop:Generator_RowEvHandlerName="SP_EstadoAnalitico_PresupuestoEgresosDetalladoRowChangeEventHandler" msprop:Generator_RowDeletedName="SP_EstadoAnalitico_PresupuestoEgresosDetalladoRowDeleted" msprop:Generator_UserTableName="SP_EstadoAnalitico_PresupuestoEgresosDetallado" msprop:Generator_RowChangedName="SP_EstadoAnalitico_PresupuestoEgresosDetalladoRowChanged" msprop:Generator_RowEvArgName="SP_EstadoAnalitico_PresupuestoEgresosDetalladoRowChangeEvent" msprop:Generator_RowClassName="SP_EstadoAnalitico_PresupuestoEgresosDetalladoRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Concepto" msprop:Generator_ColumnVarNameInTable="columnConcepto" msprop:Generator_ColumnPropNameInRow="Concepto" msprop:Generator_ColumnPropNameInTable="ConceptoColumn" msprop:Generator_UserColumnName="Concepto" type="xs:string" minOccurs="0" />
+              <xs:element name="Aprobado_d" msprop:Generator_ColumnVarNameInTable="columnAprobado_d" msprop:Generator_ColumnPropNameInRow="Aprobado_d" msprop:Generator_ColumnPropNameInTable="Aprobado_dColumn" msprop:Generator_UserColumnName="Aprobado_d" type="xs:string" minOccurs="0" />
+              <xs:element name="Ampliaciones_Reducciones" msprop:Generator_ColumnVarNameInTable="columnAmpliaciones_Reducciones" msprop:Generator_ColumnPropNameInRow="Ampliaciones_Reducciones" msprop:Generator_ColumnPropNameInTable="Ampliaciones_ReduccionesColumn" msprop:Generator_UserColumnName="Ampliaciones_Reducciones" type="xs:string" minOccurs="0" />
+              <xs:element name="Modificado" msprop:Generator_ColumnVarNameInTable="columnModificado" msprop:Generator_ColumnPropNameInRow="Modificado" msprop:Generator_ColumnPropNameInTable="ModificadoColumn" msprop:Generator_UserColumnName="Modificado" type="xs:string" minOccurs="0" />
+              <xs:element name="Devengado" msprop:Generator_ColumnVarNameInTable="columnDevengado" msprop:Generator_ColumnPropNameInRow="Devengado" msprop:Generator_ColumnPropNameInTable="DevengadoColumn" msprop:Generator_UserColumnName="Devengado" type="xs:string" minOccurs="0" />
+              <xs:element name="Pagado" msprop:Generator_ColumnVarNameInTable="columnPagado" msprop:Generator_ColumnPropNameInRow="Pagado" msprop:Generator_ColumnPropNameInTable="PagadoColumn" msprop:Generator_UserColumnName="Pagado" type="xs:string" minOccurs="0" />
+              <xs:element name="Subejercicio_e" msprop:Generator_ColumnVarNameInTable="columnSubejercicio_e" msprop:Generator_ColumnPropNameInRow="Subejercicio_e" msprop:Generator_ColumnPropNameInTable="Subejercicio_eColumn" msprop:Generator_UserColumnName="Subejercicio_e" type="xs:string" minOccurs="0" />
+              <xs:element name="Negritas" msprop:Generator_ColumnVarNameInTable="columnNegritas" msprop:Generator_ColumnPropNameInRow="Negritas" msprop:Generator_ColumnPropNameInTable="NegritasColumn" msprop:Generator_UserColumnName="Negritas" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SP_Informes_Actuarias" msprop:Generator_TableClassName="SP_Informes_ActuariasDataTable" msprop:Generator_TableVarName="tableSP_Informes_Actuarias" msprop:Generator_TablePropName="SP_Informes_Actuarias" msprop:Generator_RowDeletingName="SP_Informes_ActuariasRowDeleting" msprop:Generator_RowChangingName="SP_Informes_ActuariasRowChanging" msprop:Generator_RowEvHandlerName="SP_Informes_ActuariasRowChangeEventHandler" msprop:Generator_RowDeletedName="SP_Informes_ActuariasRowDeleted" msprop:Generator_UserTableName="SP_Informes_Actuarias" msprop:Generator_RowChangedName="SP_Informes_ActuariasRowChanged" msprop:Generator_RowEvArgName="SP_Informes_ActuariasRowChangeEvent" msprop:Generator_RowClassName="SP_Informes_ActuariasRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Concepto" msprop:Generator_ColumnVarNameInTable="columnConcepto" msprop:Generator_ColumnPropNameInRow="Concepto" msprop:Generator_ColumnPropNameInTable="ConceptoColumn" msprop:Generator_UserColumnName="Concepto" type="xs:string" minOccurs="0" />
+              <xs:element name="Pensiones_y_Jubilaciones" msprop:Generator_ColumnVarNameInTable="columnPensiones_y_Jubilaciones" msprop:Generator_ColumnPropNameInRow="Pensiones_y_Jubilaciones" msprop:Generator_ColumnPropNameInTable="Pensiones_y_JubilacionesColumn" msprop:Generator_UserColumnName="Pensiones_y_Jubilaciones" type="xs:string" minOccurs="0" />
+              <xs:element name="Salud" msprop:Generator_ColumnVarNameInTable="columnSalud" msprop:Generator_ColumnPropNameInRow="Salud" msprop:Generator_ColumnPropNameInTable="SaludColumn" msprop:Generator_UserColumnName="Salud" type="xs:string" minOccurs="0" />
+              <xs:element name="Riesgos_de_trabajo" msprop:Generator_ColumnVarNameInTable="columnRiesgos_de_trabajo" msprop:Generator_ColumnPropNameInRow="Riesgos_de_trabajo" msprop:Generator_ColumnPropNameInTable="Riesgos_de_trabajoColumn" msprop:Generator_UserColumnName="Riesgos_de_trabajo" type="xs:string" minOccurs="0" />
+              <xs:element name="Invalidez_y_vida" msprop:Generator_ColumnVarNameInTable="columnInvalidez_y_vida" msprop:Generator_ColumnPropNameInRow="Invalidez_y_vida" msprop:Generator_ColumnPropNameInTable="Invalidez_y_vidaColumn" msprop:Generator_UserColumnName="Invalidez_y_vida" type="xs:string" minOccurs="0" />
+              <xs:element name="Otras_prestaciones_sociales" msprop:Generator_ColumnVarNameInTable="columnOtras_prestaciones_sociales" msprop:Generator_ColumnPropNameInRow="Otras_prestaciones_sociales" msprop:Generator_ColumnPropNameInTable="Otras_prestaciones_socialesColumn" msprop:Generator_UserColumnName="Otras_prestaciones_sociales" type="xs:string" minOccurs="0" />
+              <xs:element name="Negritas" msprop:Generator_ColumnVarNameInTable="columnNegritas" msprop:Generator_ColumnPropNameInRow="Negritas" msprop:Generator_ColumnPropNameInTable="NegritasColumn" msprop:Generator_UserColumnName="Negritas" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,3 @@
+﻿Public Class RPT_Relacion_Analitica__CXC_Corto_Plazo
+
+End Class

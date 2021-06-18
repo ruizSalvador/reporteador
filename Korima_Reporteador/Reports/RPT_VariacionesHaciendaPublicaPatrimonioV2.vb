@@ -1,0 +1,3 @@
+﻿Public Class RPT_VariacionesHaciendaPublicaPatrimonioV2
+
+End Class

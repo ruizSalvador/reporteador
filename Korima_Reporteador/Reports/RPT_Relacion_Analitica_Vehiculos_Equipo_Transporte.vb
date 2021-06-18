@@ -1,0 +1,3 @@
+﻿Public Class RPT_Relacion_Analitica_Vehiculos_Equipo_Transporte
+
+End Class

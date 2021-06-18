@@ -1,0 +1,3 @@
+﻿Public Class RPT_Ramo_Programa_Objeto_Gasto_Capitulo
+
+End Class
