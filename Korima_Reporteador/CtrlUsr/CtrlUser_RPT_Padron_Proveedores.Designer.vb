@@ -780,9 +780,9 @@ Partial Class CtrlUser_RPT_Padron_Proveedores
         '
         Me.LabelControl5.Location = New System.Drawing.Point(14, 10)
         Me.LabelControl5.Name = "LabelControl5"
-        Me.LabelControl5.Size = New System.Drawing.Size(47, 13)
+        Me.LabelControl5.Size = New System.Drawing.Size(43, 13)
         Me.LabelControl5.TabIndex = 41
-        Me.LabelControl5.Text = "Ejercidio :"
+        Me.LabelControl5.Text = "Ejercicio:"
         '
         'ChkMuestraNulos
         '
