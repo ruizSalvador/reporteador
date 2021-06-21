@@ -780,9 +780,9 @@ Partial Class CtrlUser_RPT_Padron_Proveedores
         '
         Me.LabelControl5.Location = New System.Drawing.Point(14, 10)
         Me.LabelControl5.Name = "LabelControl5"
-        Me.LabelControl5.Size = New System.Drawing.Size(46, 13)
+        Me.LabelControl5.Size = New System.Drawing.Size(47, 13)
         Me.LabelControl5.TabIndex = 41
-        Me.LabelControl5.Text = "Ejercicio :"
+        Me.LabelControl5.Text = "Ejercidio :"
         '
         'ChkMuestraNulos
         '
@@ -809,7 +809,7 @@ Partial Class CtrlUser_RPT_Padron_Proveedores
         '
         Me.ErrorProvider1.ContainerControl = Me
         '
-        'CtrlUser_RPT_Layout_Devengado_Contable
+        'CtrlUser_RPT_Padron_Proveedores
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -818,7 +818,7 @@ Partial Class CtrlUser_RPT_Padron_Proveedores
         Me.Controls.Add(Me.barDockControlRight)
         Me.Controls.Add(Me.barDockControlBottom)
         Me.Controls.Add(Me.barDockControlTop)
-        Me.Name = "CtrlUser_RPT_Layout_Devengado_Contable"
+        Me.Name = "CtrlUser_RPT_Padron_Proveedores"
         Me.Size = New System.Drawing.Size(752, 471)
         CType(Me.SplitContainerControl1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainerControl1.ResumeLayout(False)
