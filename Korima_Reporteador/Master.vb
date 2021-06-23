@@ -12,7 +12,7 @@ Public Class MDI_Principal
     'Dim bdd As String = "IECAN_PRODUCCION"
     'Dim bdd As String = "Korima_San_Miguel_Alto"
     'Dim bdd As String = "Korima_Municipio_Piedad"
-    Dim bdd As String = "Korima_TSJ"
+    Dim bdd As String = "Korima_TET"
     'Dim bdd As String = "KorimaNogales"
     'Dim bdd As String = "KorimaUPALT"
 
