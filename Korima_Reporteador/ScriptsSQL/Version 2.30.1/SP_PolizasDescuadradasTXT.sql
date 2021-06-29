@@ -10,7 +10,7 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 
---Exec SP_PolizasDescuadradasTXT 1,12,2019
+--Exec SP_PolizasDescuadradasTXT 1,12,2021
 CREATE PROCEDURE [dbo].[SP_PolizasDescuadradasTXT]
 @periodo1 smallint,
 @periodo2 smallint,
@@ -39,7 +39,7 @@ Where  --T_Polizas.Periodo in (1,2,3,4,5,6,7,8,9,10,11) And
 	   T_Polizas.Ejercicio = @Ejercicio
 	  And T_Polizas.Periodo Between @periodo1 and @periodo2 
 	  and T_Polizas.TipoPoliza in ('D','E','I')
-	  and (T_Polizas.IdPolizaCancelacion = 0 ) or (T_Polizas.IdPolizaCancelacion is null)
+	  and ((T_Polizas.IdPolizaCancelacion = 0 ) or (T_Polizas.IdPolizaCancelacion is null))
 Group by T_Polizas.NoPoliza,T_Polizas.TipoPoliza,T_Polizas.Periodo,T_polizas.Concepto
 Order by Periodo,TipoPoliza,NoPoliza
 
@@ -48,5 +48,5 @@ Select * from @Polizas Where Abono <> Cargo order by Periodo,TipoPoliza,NoPoliza
 END
 
 
-Exec SP_CFG_LogScripts 'SP_PolizasDescuadradasTXT','2.30'
+Exec SP_CFG_LogScripts 'SP_PolizasDescuadradasTXT','2.30.1'
 GO
