@@ -6,1089 +6,7 @@ Korima_Reporteador
 </name>
 </assembly>
 <members>
-<member name="T:Korima_Reporteador.DataSetDavid.NotaPercentDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:Korima_Reporteador.DataSetDavid.NotaActualAnteriorDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:Korima_Reporteador.DataSetDavid.NotaDividendosDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:Korima_Reporteador.DataSetDavid.SP_RPT_EstadoEjercicioPresupuestoEGRDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:Korima_Reporteador.DataSetDavid.SP_RPT_MatrizPagadoGastosDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:Korima_Reporteador.DataSetDavid.SP_RPT_MatrizDevengadoGastosDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:Korima_Reporteador.DataSetDavid.SP_RPT_MatrizIngresosDevengadosDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:Korima_Reporteador.DataSetDavid.SP_RPT_MatrizIngresosRecaudadosDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:Korima_Reporteador.DataSetDavid.SP_RPT_MatrizRecaudadoIngresosSinDevengadoDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:Korima_Reporteador.DataSetDavid.NotaPercentRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:Korima_Reporteador.DataSetDavid.NotaActualAnteriorRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:Korima_Reporteador.DataSetDavid.NotaDividendosRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:Korima_Reporteador.DataSetDavid.SP_RPT_EstadoEjercicioPresupuestoEGRRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:Korima_Reporteador.DataSetDavid.SP_RPT_MatrizPagadoGastosRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:Korima_Reporteador.DataSetDavid.SP_RPT_MatrizDevengadoGastosRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:Korima_Reporteador.DataSetDavid.SP_RPT_MatrizIngresosDevengadosRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:Korima_Reporteador.DataSetDavid.SP_RPT_MatrizIngresosRecaudadosRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:Korima_Reporteador.DataSetDavid.SP_RPT_MatrizRecaudadoIngresosSinDevengadoRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:Korima_Reporteador.DataSetDavid.NotaPercentRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:Korima_Reporteador.DataSetDavid.NotaActualAnteriorRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:Korima_Reporteador.DataSetDavid.NotaDividendosRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:Korima_Reporteador.DataSetDavid.SP_RPT_EstadoEjercicioPresupuestoEGRRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:Korima_Reporteador.DataSetDavid.SP_RPT_MatrizPagadoGastosRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:Korima_Reporteador.DataSetDavid.SP_RPT_MatrizDevengadoGastosRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:Korima_Reporteador.DataSetDavid.SP_RPT_MatrizIngresosDevengadosRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:Korima_Reporteador.DataSetDavid.SP_RPT_MatrizIngresosRecaudadosRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:Korima_Reporteador.DataSetDavid.SP_RPT_MatrizRecaudadoIngresosSinDevengadoRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:Korima_Reporteador.DataSetDavid">
-	<summary>
-Represents a strongly typed in-memory cache of data.
-</summary>
-</member><member name="P:Korima_Reporteador.PrintRibbonControllerResources.ResourceManager">
-	<summary>
-  Returns the cached ResourceManager instance used by this class.
-</summary>
-</member><member name="P:Korima_Reporteador.PrintRibbonControllerResources.Culture">
-	<summary>
-  Overrides the current thread's CurrentUICulture property for all
-  resource lookups using this strongly typed resource class.
-</summary>
-</member><member name="T:Korima_Reporteador.PrintRibbonControllerResources">
-	<summary>
-  A strongly-typed resource class, for looking up localized strings, etc.
-</summary>
-</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSet1.VW_RPT_CFG_DatosEntesDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSet1.VW_RPT_CFG_DatosEntesRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSet1.VW_RPT_CFG_DatosEntesRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSet1">
-	<summary>
-Represents a strongly typed in-memory cache of data.
-</summary>
-</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSet1TableAdapters.VW_RPT_CFG_DatosEntesTableAdapter">
-	<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member><member name="M:Korima_Reporteador._Korima2_00_ReporteadorDataSet1TableAdapters.TableAdapterManager.UpdateUpdatedRows(Korima_Reporteador._Korima2_00_ReporteadorDataSet1,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
-	<summary>
-Update rows in top-down order.
-</summary>
-</member><member name="M:Korima_Reporteador._Korima2_00_ReporteadorDataSet1TableAdapters.TableAdapterManager.UpdateInsertedRows(Korima_Reporteador._Korima2_00_ReporteadorDataSet1,System.Collections.Generic.List{System.Data.DataRow})">
-	<summary>
-Insert rows in top-down order.
-</summary>
-</member><member name="M:Korima_Reporteador._Korima2_00_ReporteadorDataSet1TableAdapters.TableAdapterManager.UpdateDeletedRows(Korima_Reporteador._Korima2_00_ReporteadorDataSet1,System.Collections.Generic.List{System.Data.DataRow})">
-	<summary>
-Delete rows in bottom-up order.
-</summary>
-</member><member name="M:Korima_Reporteador._Korima2_00_ReporteadorDataSet1TableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
-	<summary>
-Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
-</summary>
-</member><member name="M:Korima_Reporteador._Korima2_00_ReporteadorDataSet1TableAdapters.TableAdapterManager.UpdateAll(Korima_Reporteador._Korima2_00_ReporteadorDataSet1)">
-	<summary>
-Update all changes to the dataset.
-</summary>
-</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption">
-	<summary>
-Update Order Option
-</summary>
-</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSet1TableAdapters.TableAdapterManager.SelfReferenceComparer">
-	<summary>
-Used to sort self-referenced table's rows
-</summary>
-</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSet1TableAdapters.TableAdapterManager">
-	<summary>
-TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
-</summary>
-</member><member name="T:Korima_Reporteador.DataSetArturo.SP_RPT_AnaliticoDeLaDeudaPublicaPorPeriodoDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:Korima_Reporteador.DataSetArturo.SP_RPT_AnaliticoDeLaDeudaPublicaPorPeriodoRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:Korima_Reporteador.DataSetArturo.SP_RPT_AnaliticoDeLaDeudaPublicaPorPeriodoRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:Korima_Reporteador.DataSetArturo">
-	<summary>
-Represents a strongly typed in-memory cache of data.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.ResourceManager">
-	<summary>
-  Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Culture">
-	<summary>
-  Reemplaza la propiedad CurrentUICulture del subproceso actual para todas las
-  búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources._16_On">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources._24_On">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources._32_On">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources._48_On">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.account_settings_16">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Add_16x16">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Add_24x24">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Add_32x32">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Add_48x48">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.CC_Buscar_128">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.CC_Buscar_16">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.CC_Buscar_24">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.CC_Buscar_32">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.CC_Buscar_48">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.CC_ExportExcel_16">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.CC_ExportExcel_24">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.CC_ExportExcel_32">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.CC_ExportExcel_48">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.cms_128">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.cms_16">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.cms_161">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.cms_24">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.cms_32">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.cms_48">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.connection_string_config_128">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.connection_string_config_16">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.connection_string_config_24">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.connection_string_config_32">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.connection_string_config_48">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Copy_16x16">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Copy_24x24">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Copy_32x32">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Copy_48x48">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Cut_16x16">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Cut_24x24">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Cut_32x32">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Cut_48x48">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Delete_16x16">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Delete_24x24">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Delete_32x32">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Delete_48x48">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Filter_128x128">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Filter_16x16">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Filter_24x24">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Filter_32x32">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Filter_48x48">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Frame_Imagen_128">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Help_16x16">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Help_24x24">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Help_32x32">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Help_48x48">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Information_16x16">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Information_24x24">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Information_32x32">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Information_48x48">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Invoce_128">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Invoce_16">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Invoce_24">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Invoce_32">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Invoce_48">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Korima128">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Korima16">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Korima24">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Korima256">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Korima32">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Korima48">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Log_Out_16x16">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Log_Out_24x24">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Log_Out_32x32">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Log_Out_48x48">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Ok_128">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Ok_16">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Ok_24">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Ok_32">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Ok_48">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Open_16x16">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Open_24x24">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Open_32x32">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Open_48x48">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.password_lock_128">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.password_lock_16">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.password_lock_24">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.password_lock_32">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.password_lock_48">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Paste_16x16">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Paste_24x24">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Paste_32x32">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Paste_48x48">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Print_16x16">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Print_24x24">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Print_32x32">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Print_48x48">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Redo_16x16">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Redo_24x24">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Redo_32x32">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Redo_48x48">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Refresh_16x16">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Refresh_24x24">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Refresh_32x32">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Refresh_48x48">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Remove_16x16">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Remove_24x24">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Remove_32x32">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Remove_48x48">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Save_16x16">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Save_24x24">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Save_32x32">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Save_48x48">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Servidor_128">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Servidor_24">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Servidor_32">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Servidor_48">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Servidor_Buscar_128">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Servidor_Buscar_16">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Servidor_Buscar_24">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Servidor_Buscar_32">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Servidor_Buscar_48">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Servidor_Mal_128">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Servidor_Mal_16">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Servidor_Mal_24">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Servidor_Mal_32">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Servidor_Mal_48">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Servidor_Ok_128">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Servidor_Ok_16">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Servidor_Ok_24">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Servidor_Ok_32">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Servidor_Ok_48">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Servidor_Q_128">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Servidor_Q_15">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Servidor_Q_16">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Servidor_Q_24">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Servidor_Q_32">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Servidor_Q_48">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Spell_Check16">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Spell_Check24">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Spell_Check32">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Spell_Check48">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Trash_Green16">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Trash_Green24">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Trash_Green32">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Trash_Green48">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Undo_16x16">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Undo_24x24">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Undo_32x32">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.Undo_48x48">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.User_16x16">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.User_24x24">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.User_32x32">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Korima_Reporteador.My.Resources.Resources.User_48x48">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="T:Korima_Reporteador.My.Resources.Resources">
-	<summary>
-  Clase de recurso fuertemente tipado, para buscar cadenas traducidas, etc.
-</summary>
-</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSet.VW_C_UsuariosDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSet.VariacionesHPDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSet.NotasDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSet.TotalCargosDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSet.FlujoEfectivoDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSet.VW_C_UsuariosRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSet.VariacionesHPRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSet.NotasRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSet.TotalCargosRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSet.FlujoEfectivoRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSet.VW_C_UsuariosRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSet.VariacionesHPRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSet.NotasRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSet.TotalCargosRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSet.FlujoEfectivoRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSet">
-	<summary>
-Represents a strongly typed in-memory cache of data.
-</summary>
-</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSetTableAdapters.VW_C_UsuariosTableAdapter">
-	<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member><member name="M:Korima_Reporteador._Korima2_00_ReporteadorDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(Korima_Reporteador._Korima2_00_ReporteadorDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
-	<summary>
-Update rows in top-down order.
-</summary>
-</member><member name="M:Korima_Reporteador._Korima2_00_ReporteadorDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(Korima_Reporteador._Korima2_00_ReporteadorDataSet,System.Collections.Generic.List{System.Data.DataRow})">
-	<summary>
-Insert rows in top-down order.
-</summary>
-</member><member name="M:Korima_Reporteador._Korima2_00_ReporteadorDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(Korima_Reporteador._Korima2_00_ReporteadorDataSet,System.Collections.Generic.List{System.Data.DataRow})">
-	<summary>
-Delete rows in bottom-up order.
-</summary>
-</member><member name="M:Korima_Reporteador._Korima2_00_ReporteadorDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
-	<summary>
-Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
-</summary>
-</member><member name="M:Korima_Reporteador._Korima2_00_ReporteadorDataSetTableAdapters.TableAdapterManager.UpdateAll(Korima_Reporteador._Korima2_00_ReporteadorDataSet)">
-	<summary>
-Update all changes to the dataset.
-</summary>
-</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
-	<summary>
-Update Order Option
-</summary>
-</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
-	<summary>
-Used to sort self-referenced table's rows
-</summary>
-</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSetTableAdapters.TableAdapterManager">
-	<summary>
-TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
-</summary>
-</member><member name="T:Korima_Reporteador.DataSetBlanca1.NotaDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:Korima_Reporteador.DataSetBlanca1.Nota2DataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:Korima_Reporteador.DataSetBlanca1.NotaRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:Korima_Reporteador.DataSetBlanca1.Nota2Row">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:Korima_Reporteador.DataSetBlanca1.NotaRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:Korima_Reporteador.DataSetBlanca1.Nota2RowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:Korima_Reporteador.DataSetBlanca1">
-	<summary>
-Represents a strongly typed in-memory cache of data.
-</summary>
-</member><member name="T:Korima_Reporteador.DSetArturo.SP_RPT_AnaliticoDeLaDeudaPublicaPorPeriodoLDFDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:Korima_Reporteador.DSetArturo.SP_RPT_AnaliticoDeLaDeudaPublicaPorPeriodoLDFRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:Korima_Reporteador.DSetArturo.SP_RPT_AnaliticoDeLaDeudaPublicaPorPeriodoLDFRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:Korima_Reporteador.DSetArturo">
-	<summary>
-Represents a strongly typed in-memory cache of data.
-</summary>
-</member><member name="T:Korima_Reporteador.DSEnrique.SP_RPT_CatalogoProveedoresDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:Korima_Reporteador.DSEnrique.SP_RPT_CatalogoEmpleadosDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:Korima_Reporteador.DSEnrique.SP_EstadoEjercicioIngresos_FuenteFinanciamientoDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:Korima_Reporteador.DSEnrique.REPORTE_Estado_De_ActividadesDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:Korima_Reporteador.DSEnrique.SP_RPT_Formato_Gral_SPDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:Korima_Reporteador.DSEnrique.SP_RPT_Formato_Espec_SPDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:Korima_Reporteador.DSEnrique.REPORTE_Estado_De_ActividadesAnaliticoRedondeo2DataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:Korima_Reporteador.DSEnrique.REPORTE_Estado_De_ActividadesAnaliticoRedondeoDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:Korima_Reporteador.DSEnrique.SP_RPT_CatalogoProductosDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:Korima_Reporteador.DSEnrique.SP_RPT_K2_ComprobacionDeGastosDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:Korima_Reporteador.DSEnrique.REPORTE_Estado_De_ActividadesRedondeo_PeriodosDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:Korima_Reporteador.DSEnrique.SP_RPT_CatalogoProveedoresRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:Korima_Reporteador.DSEnrique.SP_RPT_CatalogoEmpleadosRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:Korima_Reporteador.DSEnrique.SP_EstadoEjercicioIngresos_FuenteFinanciamientoRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:Korima_Reporteador.DSEnrique.REPORTE_Estado_De_ActividadesRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:Korima_Reporteador.DSEnrique.SP_RPT_Formato_Gral_SPRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:Korima_Reporteador.DSEnrique.SP_RPT_Formato_Espec_SPRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:Korima_Reporteador.DSEnrique.REPORTE_Estado_De_ActividadesAnaliticoRedondeo2Row">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:Korima_Reporteador.DSEnrique.REPORTE_Estado_De_ActividadesAnaliticoRedondeoRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:Korima_Reporteador.DSEnrique.SP_RPT_CatalogoProductosRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:Korima_Reporteador.DSEnrique.SP_RPT_K2_ComprobacionDeGastosRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:Korima_Reporteador.DSEnrique.REPORTE_Estado_De_ActividadesRedondeo_PeriodosRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:Korima_Reporteador.DSEnrique.SP_RPT_CatalogoProveedoresRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:Korima_Reporteador.DSEnrique.SP_RPT_CatalogoEmpleadosRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:Korima_Reporteador.DSEnrique.SP_EstadoEjercicioIngresos_FuenteFinanciamientoRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:Korima_Reporteador.DSEnrique.REPORTE_Estado_De_ActividadesRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:Korima_Reporteador.DSEnrique.SP_RPT_Formato_Gral_SPRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:Korima_Reporteador.DSEnrique.SP_RPT_Formato_Espec_SPRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:Korima_Reporteador.DSEnrique.REPORTE_Estado_De_ActividadesAnaliticoRedondeo2RowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:Korima_Reporteador.DSEnrique.REPORTE_Estado_De_ActividadesAnaliticoRedondeoRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:Korima_Reporteador.DSEnrique.SP_RPT_CatalogoProductosRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:Korima_Reporteador.DSEnrique.SP_RPT_K2_ComprobacionDeGastosRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:Korima_Reporteador.DSEnrique.REPORTE_Estado_De_ActividadesRedondeo_PeriodosRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:Korima_Reporteador.DSEnrique">
-	<summary>
-Represents a strongly typed in-memory cache of data.
-</summary>
-</member><member name="T:Korima_Reporteador.DataSetBlanca.NotaDataTable">
+<member name="T:Korima_Reporteador.DataSetBlanca.NotaDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
@@ -1908,6 +826,19 @@ Row event argument class
 	<summary>
 Represents a strongly typed in-memory cache of data.
 </summary>
+</member><member name="P:Korima_Reporteador.PrintRibbonControllerResources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:Korima_Reporteador.PrintRibbonControllerResources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:Korima_Reporteador.PrintRibbonControllerResources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
 </member><member name="T:Korima_Reporteador.DataSetAlvirde.SP_RPT_InformeProgramaEstadoEjercicioPresupuestoEGRDataTable">
 	<summary>
 Represents the strongly named DataTable class.
@@ -1959,6 +890,150 @@ Row event argument class
 </member><member name="T:Korima_Reporteador.DataSetAlvirde">
 	<summary>
 Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetArturo.SP_RPT_AnaliticoDeLaDeudaPublicaPorPeriodoDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetArturo.SP_RPT_AnaliticoDeLaDeudaPublicaPorPeriodoRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetArturo.SP_RPT_AnaliticoDeLaDeudaPublicaPorPeriodoRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetArturo">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca1.NotaDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca1.Nota2DataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca1.NotaRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca1.Nota2Row">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca1.NotaRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca1.Nota2RowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca1">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSet.VW_C_UsuariosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSet.VariacionesHPDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSet.NotasDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSet.TotalCargosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSet.FlujoEfectivoDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSet.VW_C_UsuariosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSet.VariacionesHPRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSet.NotasRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSet.TotalCargosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSet.FlujoEfectivoRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSet.VW_C_UsuariosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSet.VariacionesHPRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSet.NotasRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSet.TotalCargosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSet.FlujoEfectivoRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSet">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSetTableAdapters.VW_C_UsuariosTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:Korima_Reporteador._Korima2_00_ReporteadorDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(Korima_Reporteador._Korima2_00_ReporteadorDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:Korima_Reporteador._Korima2_00_ReporteadorDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(Korima_Reporteador._Korima2_00_ReporteadorDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:Korima_Reporteador._Korima2_00_ReporteadorDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(Korima_Reporteador._Korima2_00_ReporteadorDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:Korima_Reporteador._Korima2_00_ReporteadorDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:Korima_Reporteador._Korima2_00_ReporteadorDataSetTableAdapters.TableAdapterManager.UpdateAll(Korima_Reporteador._Korima2_00_ReporteadorDataSet)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSetTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
 </summary>
 </member><member name="T:Korima_Reporteador.DSLuisRojas.SP_RPT_Relacion_Analitica_Efectivo_ISAFDataTable">
 	<summary>
@@ -2400,6 +1475,10 @@ Represents the strongly named DataTable class.
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.RPT_SP_Padron_ProveedoresDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
 </member><member name="T:Korima_Reporteador.dsNotasBenn.SP_NOTA_ESF_PDORow">
 	<summary>
 Represents strongly named DataRow class.
@@ -2713,6 +1792,10 @@ Represents strongly named DataRow class.
 Represents strongly named DataRow class.
 </summary>
 </member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_FoliosNoTramitadosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.RPT_SP_Padron_ProveedoresRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
@@ -3032,7 +2115,936 @@ Row event argument class
 	<summary>
 Row event argument class
 </summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.RPT_SP_Padron_ProveedoresRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
 </member><member name="T:Korima_Reporteador.dsNotasBenn">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.ResourceManager">
+	<summary>
+  Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Culture">
+	<summary>
+  Reemplaza la propiedad CurrentUICulture del subproceso actual para todas las
+  búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources._16_On">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources._24_On">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources._32_On">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources._48_On">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.account_settings_16">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Add_16x16">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Add_24x24">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Add_32x32">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Add_48x48">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.CC_Buscar_128">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.CC_Buscar_16">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.CC_Buscar_24">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.CC_Buscar_32">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.CC_Buscar_48">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.CC_ExportExcel_16">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.CC_ExportExcel_24">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.CC_ExportExcel_32">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.CC_ExportExcel_48">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.cms_128">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.cms_16">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.cms_161">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.cms_24">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.cms_32">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.cms_48">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.connection_string_config_128">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.connection_string_config_16">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.connection_string_config_24">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.connection_string_config_32">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.connection_string_config_48">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Copy_16x16">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Copy_24x24">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Copy_32x32">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Copy_48x48">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Cut_16x16">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Cut_24x24">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Cut_32x32">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Cut_48x48">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Delete_16x16">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Delete_24x24">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Delete_32x32">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Delete_48x48">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Filter_128x128">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Filter_16x16">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Filter_24x24">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Filter_32x32">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Filter_48x48">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Frame_Imagen_128">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Help_16x16">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Help_24x24">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Help_32x32">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Help_48x48">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Information_16x16">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Information_24x24">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Information_32x32">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Information_48x48">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Invoce_128">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Invoce_16">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Invoce_24">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Invoce_32">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Invoce_48">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Korima128">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Korima16">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Korima24">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Korima256">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Korima32">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Korima48">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Log_Out_16x16">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Log_Out_24x24">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Log_Out_32x32">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Log_Out_48x48">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Ok_128">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Ok_16">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Ok_24">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Ok_32">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Ok_48">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Open_16x16">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Open_24x24">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Open_32x32">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Open_48x48">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.password_lock_128">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.password_lock_16">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.password_lock_24">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.password_lock_32">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.password_lock_48">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Paste_16x16">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Paste_24x24">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Paste_32x32">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Paste_48x48">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Print_16x16">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Print_24x24">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Print_32x32">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Print_48x48">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Redo_16x16">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Redo_24x24">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Redo_32x32">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Redo_48x48">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Refresh_16x16">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Refresh_24x24">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Refresh_32x32">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Refresh_48x48">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Remove_16x16">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Remove_24x24">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Remove_32x32">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Remove_48x48">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Save_16x16">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Save_24x24">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Save_32x32">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Save_48x48">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Servidor_128">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Servidor_24">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Servidor_32">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Servidor_48">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Servidor_Buscar_128">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Servidor_Buscar_16">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Servidor_Buscar_24">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Servidor_Buscar_32">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Servidor_Buscar_48">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Servidor_Mal_128">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Servidor_Mal_16">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Servidor_Mal_24">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Servidor_Mal_32">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Servidor_Mal_48">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Servidor_Ok_128">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Servidor_Ok_16">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Servidor_Ok_24">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Servidor_Ok_32">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Servidor_Ok_48">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Servidor_Q_128">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Servidor_Q_15">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Servidor_Q_16">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Servidor_Q_24">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Servidor_Q_32">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Servidor_Q_48">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Spell_Check16">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Spell_Check24">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Spell_Check32">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Spell_Check48">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Trash_Green16">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Trash_Green24">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Trash_Green32">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Trash_Green48">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Undo_16x16">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Undo_24x24">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Undo_32x32">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Undo_48x48">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.User_16x16">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.User_24x24">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.User_32x32">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.User_48x48">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="T:Korima_Reporteador.My.Resources.Resources">
+	<summary>
+  Clase de recurso fuertemente tipado, para buscar cadenas traducidas, etc.
+</summary>
+</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSet1.VW_RPT_CFG_DatosEntesDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSet1.VW_RPT_CFG_DatosEntesRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSet1.VW_RPT_CFG_DatosEntesRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSet1">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSet1TableAdapters.VW_RPT_CFG_DatosEntesTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:Korima_Reporteador._Korima2_00_ReporteadorDataSet1TableAdapters.TableAdapterManager.UpdateUpdatedRows(Korima_Reporteador._Korima2_00_ReporteadorDataSet1,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:Korima_Reporteador._Korima2_00_ReporteadorDataSet1TableAdapters.TableAdapterManager.UpdateInsertedRows(Korima_Reporteador._Korima2_00_ReporteadorDataSet1,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:Korima_Reporteador._Korima2_00_ReporteadorDataSet1TableAdapters.TableAdapterManager.UpdateDeletedRows(Korima_Reporteador._Korima2_00_ReporteadorDataSet1,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:Korima_Reporteador._Korima2_00_ReporteadorDataSet1TableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:Korima_Reporteador._Korima2_00_ReporteadorDataSet1TableAdapters.TableAdapterManager.UpdateAll(Korima_Reporteador._Korima2_00_ReporteadorDataSet1)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSet1TableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSet1TableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetDavid.NotaPercentDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetDavid.NotaActualAnteriorDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetDavid.NotaDividendosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetDavid.SP_RPT_EstadoEjercicioPresupuestoEGRDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetDavid.SP_RPT_MatrizPagadoGastosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetDavid.SP_RPT_MatrizDevengadoGastosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetDavid.SP_RPT_MatrizIngresosDevengadosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetDavid.SP_RPT_MatrizIngresosRecaudadosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetDavid.SP_RPT_MatrizRecaudadoIngresosSinDevengadoDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetDavid.NotaPercentRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetDavid.NotaActualAnteriorRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetDavid.NotaDividendosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetDavid.SP_RPT_EstadoEjercicioPresupuestoEGRRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetDavid.SP_RPT_MatrizPagadoGastosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetDavid.SP_RPT_MatrizDevengadoGastosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetDavid.SP_RPT_MatrizIngresosDevengadosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetDavid.SP_RPT_MatrizIngresosRecaudadosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetDavid.SP_RPT_MatrizRecaudadoIngresosSinDevengadoRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetDavid.NotaPercentRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetDavid.NotaActualAnteriorRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetDavid.NotaDividendosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetDavid.SP_RPT_EstadoEjercicioPresupuestoEGRRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetDavid.SP_RPT_MatrizPagadoGastosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetDavid.SP_RPT_MatrizDevengadoGastosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetDavid.SP_RPT_MatrizIngresosDevengadosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetDavid.SP_RPT_MatrizIngresosRecaudadosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetDavid.SP_RPT_MatrizRecaudadoIngresosSinDevengadoRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetDavid">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:Korima_Reporteador.DSEnrique.SP_RPT_CatalogoProveedoresDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DSEnrique.SP_RPT_CatalogoEmpleadosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DSEnrique.SP_EstadoEjercicioIngresos_FuenteFinanciamientoDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DSEnrique.REPORTE_Estado_De_ActividadesDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DSEnrique.SP_RPT_Formato_Gral_SPDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DSEnrique.SP_RPT_Formato_Espec_SPDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DSEnrique.REPORTE_Estado_De_ActividadesAnaliticoRedondeo2DataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DSEnrique.REPORTE_Estado_De_ActividadesAnaliticoRedondeoDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DSEnrique.SP_RPT_CatalogoProductosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DSEnrique.SP_RPT_K2_ComprobacionDeGastosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DSEnrique.REPORTE_Estado_De_ActividadesRedondeo_PeriodosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DSEnrique.SP_RPT_CatalogoProveedoresRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DSEnrique.SP_RPT_CatalogoEmpleadosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DSEnrique.SP_EstadoEjercicioIngresos_FuenteFinanciamientoRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DSEnrique.REPORTE_Estado_De_ActividadesRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DSEnrique.SP_RPT_Formato_Gral_SPRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DSEnrique.SP_RPT_Formato_Espec_SPRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DSEnrique.REPORTE_Estado_De_ActividadesAnaliticoRedondeo2Row">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DSEnrique.REPORTE_Estado_De_ActividadesAnaliticoRedondeoRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DSEnrique.SP_RPT_CatalogoProductosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DSEnrique.SP_RPT_K2_ComprobacionDeGastosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DSEnrique.REPORTE_Estado_De_ActividadesRedondeo_PeriodosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DSEnrique.SP_RPT_CatalogoProveedoresRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DSEnrique.SP_RPT_CatalogoEmpleadosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DSEnrique.SP_EstadoEjercicioIngresos_FuenteFinanciamientoRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DSEnrique.REPORTE_Estado_De_ActividadesRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DSEnrique.SP_RPT_Formato_Gral_SPRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DSEnrique.SP_RPT_Formato_Espec_SPRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DSEnrique.REPORTE_Estado_De_ActividadesAnaliticoRedondeo2RowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DSEnrique.REPORTE_Estado_De_ActividadesAnaliticoRedondeoRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DSEnrique.SP_RPT_CatalogoProductosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DSEnrique.SP_RPT_K2_ComprobacionDeGastosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DSEnrique.REPORTE_Estado_De_ActividadesRedondeo_PeriodosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DSEnrique">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:Korima_Reporteador.DSetArturo.SP_RPT_AnaliticoDeLaDeudaPublicaPorPeriodoLDFDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DSetArturo.SP_RPT_AnaliticoDeLaDeudaPublicaPorPeriodoLDFRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DSetArturo.SP_RPT_AnaliticoDeLaDeudaPublicaPorPeriodoLDFRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DSetArturo">
 	<summary>
 Represents a strongly typed in-memory cache of data.
 </summary>

@@ -36,9 +36,17 @@ Public Class CtrlUser_RPT_Pagado_Ejercicio
     End Function
 
     Private Sub SimpleButton1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SimpleButton1.Click
+        ErrorProvider1.Clear()
+        If FechaIni.DateTime.Year <> FechaFin.DateTime.Year Then
+            ErrorProvider1.SetError(FechaFin, "El periodo de tiempo tiene que pertenecer al mismo ejercicio")
+            Exit Sub
+        End If
+
+
+
         Me.Cursor = Cursors.WaitCursor
         SplitContainerControl1.Collapsed = True
-        ErrorProvider1.Clear()
+        'ErrorProvider1.Clear()
         Dim reporte As New RPT_Pagado_Ejercicio
         Dim printTool As New ReportPrintTool(reporte)
         Dim SQLConexion As SqlConnection

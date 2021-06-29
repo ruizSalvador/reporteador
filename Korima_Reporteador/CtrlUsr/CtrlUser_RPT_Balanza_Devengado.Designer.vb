@@ -25,8 +25,9 @@ Partial Class CtrlUser_RPT_Balanza_Devengado
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CtrlUser_RPT_Balanza_Devengado))
         Me.SplitContainerControl1 = New DevExpress.XtraEditors.SplitContainerControl()
-        Me.SimpleButton2 = New DevExpress.XtraEditors.SimpleButton()
-        Me.filterProyecto = New DevExpress.XtraEditors.LookUpEdit()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.dtFechaFin = New DevExpress.XtraEditors.DateEdit()
         Me.PrintBarManager1 = New DevExpress.XtraPrinting.Preview.PrintBarManager(Me.components)
         Me.PreviewBar1 = New DevExpress.XtraPrinting.Preview.PreviewBar()
         Me.PrintPreviewBarItem4 = New DevExpress.XtraPrinting.Preview.PrintPreviewBarItem()
@@ -84,6 +85,9 @@ Partial Class CtrlUser_RPT_Balanza_Devengado
         Me.PrintPreviewBarCheckItem16 = New DevExpress.XtraPrinting.Preview.PrintPreviewBarCheckItem()
         Me.PrintPreviewBarCheckItem17 = New DevExpress.XtraPrinting.Preview.PrintPreviewBarCheckItem()
         Me.PrintControl1 = New DevExpress.XtraPrinting.Control.PrintControl()
+        Me.dtFechaIni = New DevExpress.XtraEditors.DateEdit()
+        Me.SimpleButton2 = New DevExpress.XtraEditors.SimpleButton()
+        Me.filterProyecto = New DevExpress.XtraEditors.LookUpEdit()
         Me.ChkAnual = New System.Windows.Forms.CheckBox()
         Me.filterPeriodoIni = New DevExpress.XtraEditors.TimeEdit()
         Me.filterPeriodoFin = New DevExpress.XtraEditors.TimeEdit()
@@ -94,25 +98,21 @@ Partial Class CtrlUser_RPT_Balanza_Devengado
         Me.ChkMuestraNulos = New System.Windows.Forms.CheckBox()
         Me.SimpleButton1 = New DevExpress.XtraEditors.SimpleButton()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
-        Me.dtFechaIni = New DevExpress.XtraEditors.DateEdit()
-        Me.dtFechaFin = New DevExpress.XtraEditors.DateEdit()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
         CType(Me.SplitContainerControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainerControl1.SuspendLayout()
-        CType(Me.filterProyecto.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dtFechaFin.Properties.VistaTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dtFechaFin.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PrintBarManager1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PrintPreviewRepositoryItemComboBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemProgressBar1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemZoomTrackBar1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dtFechaIni.Properties.VistaTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dtFechaIni.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.filterProyecto.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.filterPeriodoIni.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.filterPeriodoFin.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.filterEjercicio.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.dtFechaIni.Properties.VistaTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.dtFechaIni.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.dtFechaFin.Properties.VistaTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.dtFechaFin.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'SplitContainerControl1
@@ -140,28 +140,38 @@ Partial Class CtrlUser_RPT_Balanza_Devengado
         Me.SplitContainerControl1.Panel2.Controls.Add(Me.PrintControl1)
         Me.SplitContainerControl1.Panel2.Text = "Panel2"
         Me.SplitContainerControl1.Size = New System.Drawing.Size(752, 390)
-        Me.SplitContainerControl1.SplitterPosition = 222
+        Me.SplitContainerControl1.SplitterPosition = 240
         Me.SplitContainerControl1.TabIndex = 4
         Me.SplitContainerControl1.Text = "SplitContainerControl1"
         '
-        'SimpleButton2
+        'Label2
         '
-        Me.SimpleButton2.Image = Global.Korima_Reporteador.My.Resources.Resources.Delete_16x16
-        Me.SimpleButton2.Location = New System.Drawing.Point(189, 106)
-        Me.SimpleButton2.Name = "SimpleButton2"
-        Me.SimpleButton2.Size = New System.Drawing.Size(25, 20)
-        Me.SimpleButton2.TabIndex = 49
-        Me.SimpleButton2.Visible = False
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(122, 34)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(65, 13)
+        Me.Label2.TabIndex = 53
+        Me.Label2.Text = "Fecha Final:"
         '
-        'filterProyecto
+        'Label1
         '
-        Me.filterProyecto.Location = New System.Drawing.Point(13, 106)
-        Me.filterProyecto.MenuManager = Me.PrintBarManager1
-        Me.filterProyecto.Name = "filterProyecto"
-        Me.filterProyecto.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.filterProyecto.Size = New System.Drawing.Size(170, 20)
-        Me.filterProyecto.TabIndex = 48
-        Me.filterProyecto.Visible = False
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(12, 34)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(70, 13)
+        Me.Label1.TabIndex = 52
+        Me.Label1.Text = "Fecha Inicial:"
+        '
+        'dtFechaFin
+        '
+        Me.dtFechaFin.EditValue = Nothing
+        Me.dtFechaFin.Location = New System.Drawing.Point(121, 52)
+        Me.dtFechaFin.MenuManager = Me.PrintBarManager1
+        Me.dtFechaFin.Name = "dtFechaFin"
+        Me.dtFechaFin.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.dtFechaFin.Properties.VistaTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton()})
+        Me.dtFechaFin.Size = New System.Drawing.Size(100, 20)
+        Me.dtFechaFin.TabIndex = 51
         '
         'PrintBarManager1
         '
@@ -714,9 +724,39 @@ Partial Class CtrlUser_RPT_Balanza_Devengado
         Me.PrintControl1.IsMetric = True
         Me.PrintControl1.Location = New System.Drawing.Point(0, 0)
         Me.PrintControl1.Name = "PrintControl1"
-        Me.PrintControl1.Size = New System.Drawing.Size(525, 390)
+        Me.PrintControl1.Size = New System.Drawing.Size(507, 390)
         Me.PrintControl1.TabIndex = 1
         Me.PrintControl1.TooltipFont = New System.Drawing.Font("Tahoma", 8.25!)
+        '
+        'dtFechaIni
+        '
+        Me.dtFechaIni.EditValue = Nothing
+        Me.dtFechaIni.Location = New System.Drawing.Point(13, 52)
+        Me.dtFechaIni.MenuManager = Me.PrintBarManager1
+        Me.dtFechaIni.Name = "dtFechaIni"
+        Me.dtFechaIni.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.dtFechaIni.Properties.VistaTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton()})
+        Me.dtFechaIni.Size = New System.Drawing.Size(100, 20)
+        Me.dtFechaIni.TabIndex = 50
+        '
+        'SimpleButton2
+        '
+        Me.SimpleButton2.Image = Global.Korima_Reporteador.My.Resources.Resources.Delete_16x16
+        Me.SimpleButton2.Location = New System.Drawing.Point(189, 106)
+        Me.SimpleButton2.Name = "SimpleButton2"
+        Me.SimpleButton2.Size = New System.Drawing.Size(25, 20)
+        Me.SimpleButton2.TabIndex = 49
+        Me.SimpleButton2.Visible = False
+        '
+        'filterProyecto
+        '
+        Me.filterProyecto.Location = New System.Drawing.Point(13, 106)
+        Me.filterProyecto.MenuManager = Me.PrintBarManager1
+        Me.filterProyecto.Name = "filterProyecto"
+        Me.filterProyecto.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.filterProyecto.Size = New System.Drawing.Size(170, 20)
+        Me.filterProyecto.TabIndex = 48
+        Me.filterProyecto.Visible = False
         '
         'ChkAnual
         '
@@ -823,46 +863,6 @@ Partial Class CtrlUser_RPT_Balanza_Devengado
         '
         Me.ErrorProvider1.ContainerControl = Me
         '
-        'dtFechaIni
-        '
-        Me.dtFechaIni.EditValue = Nothing
-        Me.dtFechaIni.Location = New System.Drawing.Point(13, 52)
-        Me.dtFechaIni.MenuManager = Me.PrintBarManager1
-        Me.dtFechaIni.Name = "dtFechaIni"
-        Me.dtFechaIni.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.dtFechaIni.Properties.VistaTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton()})
-        Me.dtFechaIni.Size = New System.Drawing.Size(100, 20)
-        Me.dtFechaIni.TabIndex = 50
-        '
-        'dtFechaFin
-        '
-        Me.dtFechaFin.EditValue = Nothing
-        Me.dtFechaFin.Location = New System.Drawing.Point(121, 52)
-        Me.dtFechaFin.MenuManager = Me.PrintBarManager1
-        Me.dtFechaFin.Name = "dtFechaFin"
-        Me.dtFechaFin.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.dtFechaFin.Properties.VistaTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton()})
-        Me.dtFechaFin.Size = New System.Drawing.Size(100, 20)
-        Me.dtFechaFin.TabIndex = 51
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(12, 34)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(70, 13)
-        Me.Label1.TabIndex = 52
-        Me.Label1.Text = "Fecha Inicial:"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(122, 34)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(65, 13)
-        Me.Label2.TabIndex = 53
-        Me.Label2.Text = "Fecha Final:"
-        '
         'CtrlUser_RPT_Balanza_Devengado
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -876,19 +876,19 @@ Partial Class CtrlUser_RPT_Balanza_Devengado
         Me.Size = New System.Drawing.Size(752, 471)
         CType(Me.SplitContainerControl1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainerControl1.ResumeLayout(False)
-        CType(Me.filterProyecto.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dtFechaFin.Properties.VistaTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dtFechaFin.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PrintBarManager1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PrintPreviewRepositoryItemComboBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RepositoryItemProgressBar1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RepositoryItemZoomTrackBar1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dtFechaIni.Properties.VistaTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dtFechaIni.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.filterProyecto.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.filterPeriodoIni.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.filterPeriodoFin.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.filterEjercicio.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.dtFechaIni.Properties.VistaTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.dtFechaIni.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.dtFechaFin.Properties.VistaTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.dtFechaFin.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

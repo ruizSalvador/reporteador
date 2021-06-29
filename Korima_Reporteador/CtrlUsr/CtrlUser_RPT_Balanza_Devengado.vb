@@ -36,9 +36,15 @@ Public Class CtrlUser_RPT_Balanza_Devengado
     End Function
 
     Private Sub SimpleButton1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SimpleButton1.Click
+        ErrorProvider1.Clear()
+        If dtFechaIni.DateTime.Year <> dtFechaFin.DateTime.Year Then
+            ErrorProvider1.SetError(dtFechaFin, "El periodo de tiempo tiene que pertenecer al mismo ejercicio")
+            Exit Sub
+        End If
+
         Me.Cursor = Cursors.WaitCursor
         SplitContainerControl1.Collapsed = True
-        ErrorProvider1.Clear()
+        'ErrorProvider1.Clear()
         Dim reporte As New RPT_Balanza_Devengado
         Dim printTool As New ReportPrintTool(reporte)
         Dim SQLConexion As SqlConnection

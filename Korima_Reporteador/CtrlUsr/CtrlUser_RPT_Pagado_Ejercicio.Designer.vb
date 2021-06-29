@@ -153,7 +153,7 @@ Partial Class CtrlUser_RPT_Pagado_Ejercicio
         '
         'LabelControl3
         '
-        Me.LabelControl3.Location = New System.Drawing.Point(124, 29)
+        Me.LabelControl3.Location = New System.Drawing.Point(106, 29)
         Me.LabelControl3.Name = "LabelControl3"
         Me.LabelControl3.Size = New System.Drawing.Size(50, 13)
         Me.LabelControl3.TabIndex = 56
@@ -170,7 +170,7 @@ Partial Class CtrlUser_RPT_Pagado_Ejercicio
         'FechaFin
         '
         Me.FechaFin.EditValue = Nothing
-        Me.FechaFin.Location = New System.Drawing.Point(121, 48)
+        Me.FechaFin.Location = New System.Drawing.Point(103, 48)
         Me.FechaFin.MenuManager = Me.PrintBarManager1
         Me.FechaFin.Name = "FechaFin"
         Me.FechaFin.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
