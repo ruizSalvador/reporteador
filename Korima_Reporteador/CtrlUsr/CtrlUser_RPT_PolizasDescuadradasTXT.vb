@@ -53,19 +53,44 @@ Public Class CtrlUser_RPT_PolizasDescuadradasTXT
         Dim objReader As StreamReader = Nothing
         RichTextBox1.Text = ""
         ObtieneCadenas()
-        Try
-            Dim d As DialogResult = FolderBrowserDialog1.ShowDialog()
-            If FolderBrowserDialog1.SelectedPath <> "" And d = DialogResult.OK Then
+
+        Dim dr As DialogResult = FolderBrowserDialog1.ShowDialog()
+        If dr = DialogResult.OK Then
+            If FolderBrowserDialog1.SelectedPath <> "" Then 'And dr = DialogResult.OK Then
                 Me.Cursor = Cursors.WaitCursor
                 SplitContainerControl1.Collapsed = True
                 PathArchivo = FolderBrowserDialog1.SelectedPath + "\Polizas Descuadradas " + Año + " " + Mes + "-" + Mes2 + ".txt"
-                If File.Exists(PathArchivo) Then
-                    MessageBox.Show("El Archivo: " + PathArchivo + " ya Existe.", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                    'strStreamW = File.Open(PathArchivo, FileMode.Open) 'Abrir
-                Else
-                    strStreamW = File.Create(PathArchivo) ' Crear
-                End If
-                strStreamWriter = New StreamWriter(strStreamW, System.Text.Encoding.UTF8)
+            End If
+
+
+            Dim count As Int32 = 1
+            Dim filename As String = Path.GetFileNameWithoutExtension(PathArchivo)
+            Dim folder As String = Path.GetDirectoryName(PathArchivo)
+            Dim ext As String = Path.GetExtension(PathArchivo)
+
+            While File.Exists(PathArchivo)
+                Dim newName As String = String.Format("{0}({1}){2}", filename, count, ext)
+                PathArchivo = Path.Combine(folder, newName)
+                count += 1
+            End While
+
+            strStreamW = File.Create(PathArchivo) ' Crear
+            strStreamWriter = New StreamWriter(strStreamW, System.Text.Encoding.ASCII)
+            'End If
+            'Try
+            '    Dim d As DialogResult = FolderBrowserDialog1.ShowDialog()
+            '    If FolderBrowserDialog1.SelectedPath <> "" And d = DialogResult.OK Then
+            '        Me.Cursor = Cursors.WaitCursor
+            '        SplitContainerControl1.Collapsed = True
+            '        PathArchivo = FolderBrowserDialog1.SelectedPath + "\Polizas Descuadradas " + Año + " " + Mes + "-" + Mes2 + ".txt"
+            '        If File.Exists(PathArchivo) Then
+            '            MessageBox.Show("El Archivo: " + PathArchivo + " ya Existe.", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            '            'strStreamW = File.Open(PathArchivo, FileMode.Open) 'Abrir
+            '        Else
+            '            strStreamW = File.Create(PathArchivo) ' Crear
+            '        End If
+            '        strStreamWriter = New StreamWriter(strStreamW, System.Text.Encoding.UTF8)
+            Try
 
                 Dim SQLmConnStr As String = ""
                 SQLmConnStr = cnnString
@@ -96,14 +121,15 @@ Public Class CtrlUser_RPT_PolizasDescuadradasTXT
                 Me.Cursor = Cursors.Default
                 objReader.Close()
                 MessageBox.Show("El archivo ha sido guardado en: " + PathArchivo, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            End If
 
-        Catch ex As Exception
-            'MsgBox("Error al Guardar la información en el archivo. " & ex.ToString, MsgBoxStyle.Critical, Application.ProductName)
-            MsgBox("Error al Guardar la información en el archivo. ", MsgBoxStyle.Information, Application.ProductName)
-            'strStreamWriter.Close() ' cerramos
-            'objReader.Close()
-        End Try
+
+            Catch ex As Exception
+                'MsgBox("Error al Guardar la información en el archivo. " & ex.ToString, MsgBoxStyle.Critical, Application.ProductName)
+                MsgBox("Error al Guardar la información en el archivo. ", MsgBoxStyle.Information, Application.ProductName)
+                'strStreamWriter.Close() ' cerramos
+                'objReader.Close()
+            End Try
+        End If
     End Sub
 
     Sub ObtieneCadenas()
