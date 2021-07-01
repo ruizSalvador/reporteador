@@ -185,7 +185,7 @@ Partial Class CtrlUser_RPT_PolizaAuxiliarMayor_Fechas
         'dtFechaFin
         '
         Me.dtFechaFin.EditValue = Nothing
-        Me.dtFechaFin.Location = New System.Drawing.Point(121, 160)
+        Me.dtFechaFin.Location = New System.Drawing.Point(121, 118)
         Me.dtFechaFin.MenuManager = Me.PrintBarManager1
         Me.dtFechaFin.Name = "dtFechaFin"
         Me.dtFechaFin.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
@@ -751,7 +751,7 @@ Partial Class CtrlUser_RPT_PolizaAuxiliarMayor_Fechas
         'dtFechaIni
         '
         Me.dtFechaIni.EditValue = Nothing
-        Me.dtFechaIni.Location = New System.Drawing.Point(14, 160)
+        Me.dtFechaIni.Location = New System.Drawing.Point(14, 118)
         Me.dtFechaIni.MenuManager = Me.PrintBarManager1
         Me.dtFechaIni.Name = "dtFechaIni"
         Me.dtFechaIni.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
@@ -761,7 +761,7 @@ Partial Class CtrlUser_RPT_PolizaAuxiliarMayor_Fechas
         '
         'srchRangoA
         '
-        Me.srchRangoA.Location = New System.Drawing.Point(15, 249)
+        Me.srchRangoA.Location = New System.Drawing.Point(15, 211)
         Me.srchRangoA.MenuManager = Me.PrintBarManager1
         Me.srchRangoA.Name = "srchRangoA"
         Me.srchRangoA.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
@@ -796,7 +796,7 @@ Partial Class CtrlUser_RPT_PolizaAuxiliarMayor_Fechas
         '
         'srchRangoDe
         '
-        Me.srchRangoDe.Location = New System.Drawing.Point(14, 205)
+        Me.srchRangoDe.Location = New System.Drawing.Point(14, 167)
         Me.srchRangoDe.MenuManager = Me.PrintBarManager1
         Me.srchRangoDe.Name = "srchRangoDe"
         Me.srchRangoDe.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
@@ -908,7 +908,7 @@ Partial Class CtrlUser_RPT_PolizaAuxiliarMayor_Fechas
         'CheckBox3
         '
         Me.CheckBox3.AutoSize = True
-        Me.CheckBox3.Location = New System.Drawing.Point(15, 295)
+        Me.CheckBox3.Location = New System.Drawing.Point(15, 257)
         Me.CheckBox3.Name = "CheckBox3"
         Me.CheckBox3.Size = New System.Drawing.Size(146, 17)
         Me.CheckBox3.TabIndex = 36
@@ -917,7 +917,7 @@ Partial Class CtrlUser_RPT_PolizaAuxiliarMayor_Fechas
         '
         'LabelControl7
         '
-        Me.LabelControl7.Location = New System.Drawing.Point(15, 230)
+        Me.LabelControl7.Location = New System.Drawing.Point(15, 192)
         Me.LabelControl7.Name = "LabelControl7"
         Me.LabelControl7.Size = New System.Drawing.Size(121, 13)
         Me.LabelControl7.TabIndex = 35
@@ -926,7 +926,7 @@ Partial Class CtrlUser_RPT_PolizaAuxiliarMayor_Fechas
         'SimpleButton5
         '
         Me.SimpleButton5.Image = Global.Korima_Reporteador.My.Resources.Resources.Delete_16x16
-        Me.SimpleButton5.Location = New System.Drawing.Point(191, 249)
+        Me.SimpleButton5.Location = New System.Drawing.Point(191, 211)
         Me.SimpleButton5.Name = "SimpleButton5"
         Me.SimpleButton5.Size = New System.Drawing.Size(25, 20)
         Me.SimpleButton5.TabIndex = 34
@@ -934,7 +934,7 @@ Partial Class CtrlUser_RPT_PolizaAuxiliarMayor_Fechas
         '
         'LabelControl6
         '
-        Me.LabelControl6.Location = New System.Drawing.Point(14, 186)
+        Me.LabelControl6.Location = New System.Drawing.Point(14, 148)
         Me.LabelControl6.Name = "LabelControl6"
         Me.LabelControl6.Size = New System.Drawing.Size(123, 13)
         Me.LabelControl6.TabIndex = 32
@@ -943,7 +943,7 @@ Partial Class CtrlUser_RPT_PolizaAuxiliarMayor_Fechas
         'SimpleButton3
         '
         Me.SimpleButton3.Image = Global.Korima_Reporteador.My.Resources.Resources.Delete_16x16
-        Me.SimpleButton3.Location = New System.Drawing.Point(190, 205)
+        Me.SimpleButton3.Location = New System.Drawing.Point(190, 167)
         Me.SimpleButton3.Name = "SimpleButton3"
         Me.SimpleButton3.Size = New System.Drawing.Size(25, 20)
         Me.SimpleButton3.TabIndex = 31
@@ -952,7 +952,7 @@ Partial Class CtrlUser_RPT_PolizaAuxiliarMayor_Fechas
         'CheckBox2
         '
         Me.CheckBox2.AutoSize = True
-        Me.CheckBox2.Location = New System.Drawing.Point(15, 317)
+        Me.CheckBox2.Location = New System.Drawing.Point(15, 279)
         Me.CheckBox2.Name = "CheckBox2"
         Me.CheckBox2.Size = New System.Drawing.Size(238, 17)
         Me.CheckBox2.TabIndex = 29
@@ -961,11 +961,12 @@ Partial Class CtrlUser_RPT_PolizaAuxiliarMayor_Fechas
         '
         'LabelControl3
         '
-        Me.LabelControl3.Location = New System.Drawing.Point(14, 96)
+        Me.LabelControl3.Location = New System.Drawing.Point(14, 345)
         Me.LabelControl3.Name = "LabelControl3"
         Me.LabelControl3.Size = New System.Drawing.Size(39, 13)
         Me.LabelControl3.TabIndex = 16
         Me.LabelControl3.Text = "Ejercicio"
+        Me.LabelControl3.Visible = False
         '
         'LabelControl2
         '
@@ -987,7 +988,7 @@ Partial Class CtrlUser_RPT_PolizaAuxiliarMayor_Fechas
         'CheckBox1
         '
         Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(15, 275)
+        Me.CheckBox1.Location = New System.Drawing.Point(15, 237)
         Me.CheckBox1.Name = "CheckBox1"
         Me.CheckBox1.Size = New System.Drawing.Size(179, 17)
         Me.CheckBox1.TabIndex = 2
@@ -1013,7 +1014,7 @@ Partial Class CtrlUser_RPT_PolizaAuxiliarMayor_Fechas
         '
         'LabelControl5
         '
-        Me.LabelControl5.Location = New System.Drawing.Point(124, 141)
+        Me.LabelControl5.Location = New System.Drawing.Point(124, 99)
         Me.LabelControl5.Name = "LabelControl5"
         Me.LabelControl5.Size = New System.Drawing.Size(50, 13)
         Me.LabelControl5.TabIndex = 3
@@ -1021,7 +1022,7 @@ Partial Class CtrlUser_RPT_PolizaAuxiliarMayor_Fechas
         '
         'LabelControl4
         '
-        Me.LabelControl4.Location = New System.Drawing.Point(20, 141)
+        Me.LabelControl4.Location = New System.Drawing.Point(20, 99)
         Me.LabelControl4.Name = "LabelControl4"
         Me.LabelControl4.Size = New System.Drawing.Size(61, 13)
         Me.LabelControl4.TabIndex = 3
@@ -1029,7 +1030,7 @@ Partial Class CtrlUser_RPT_PolizaAuxiliarMayor_Fechas
         '
         'SimpleButton1
         '
-        Me.SimpleButton1.Location = New System.Drawing.Point(15, 350)
+        Me.SimpleButton1.Location = New System.Drawing.Point(15, 314)
         Me.SimpleButton1.Name = "SimpleButton1"
         Me.SimpleButton1.Size = New System.Drawing.Size(202, 21)
         Me.SimpleButton1.TabIndex = 2
@@ -1038,18 +1039,19 @@ Partial Class CtrlUser_RPT_PolizaAuxiliarMayor_Fechas
         'FilterEjercicio
         '
         Me.FilterEjercicio.EditValue = Nothing
-        Me.FilterEjercicio.Location = New System.Drawing.Point(14, 115)
+        Me.FilterEjercicio.Location = New System.Drawing.Point(14, 364)
         Me.FilterEjercicio.Name = "FilterEjercicio"
         Me.FilterEjercicio.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton()})
         Me.FilterEjercicio.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.[Default]
         Me.FilterEjercicio.Properties.Mask.EditMask = "yyyy"
         Me.FilterEjercicio.Size = New System.Drawing.Size(57, 20)
         Me.FilterEjercicio.TabIndex = 17
+        Me.FilterEjercicio.Visible = False
         '
         'filterPeriodoDe
         '
         Me.filterPeriodoDe.EditValue = Nothing
-        Me.filterPeriodoDe.Location = New System.Drawing.Point(80, 115)
+        Me.filterPeriodoDe.Location = New System.Drawing.Point(80, 364)
         Me.filterPeriodoDe.Name = "filterPeriodoDe"
         Me.filterPeriodoDe.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton()})
         Me.filterPeriodoDe.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.[Default]
@@ -1061,7 +1063,7 @@ Partial Class CtrlUser_RPT_PolizaAuxiliarMayor_Fechas
         'filterPeriodoAl
         '
         Me.filterPeriodoAl.EditValue = Nothing
-        Me.filterPeriodoAl.Location = New System.Drawing.Point(143, 115)
+        Me.filterPeriodoAl.Location = New System.Drawing.Point(143, 364)
         Me.filterPeriodoAl.MenuManager = Me.PrintBarManager1
         Me.filterPeriodoAl.Name = "filterPeriodoAl"
         Me.filterPeriodoAl.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton()})

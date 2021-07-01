@@ -693,35 +693,12 @@ if @cta is null
 BEGIN
 set @cta = ''
 END
- --Select * from @TotalGral
---select 'tabla2',* from @tabla2 where concepto='RECLASIFICACION DE CUENTA'--kazb  
---update @tabla2 set SaldoFila= SaldoFila+SaldoInicial where NumeroxCuenta=1 and ((ImporteAbono<>null or ImporteCargo<>null) or (ImporteAbono<>0 or ImporteCargo<>0))    
+   
 DELETE FROM @tabla2 Where NumeroxCuenta>1 and ((ImporteAbono is null And ImporteCargo is null) or (ImporteAbono=0 And ImporteCargo=0)) and saldoFila =SaldoFila and SaldoInicial=SaldoInicial and Mes > MONTH(@FechaIni)     
---select * from @tabla2 order by Fecha,Numero,TipoPoliza,NoPoliza asc--where fecha is not null    
---select * from @tabla2 order by Fecha,TipoPoliza,Numero,NoPoliza asc--where fecha is not null    
+  
 select * from @tabla2 where NumeroCuentaContable <> @cta order by Fecha,Numero,NoPoliza asc--where fecha is not null
 --select * from @tabla2 order by NumeroCuentaContable 
 --Select * from @tabla2
---Select distinct NumeroCuentaContable, SaldoFinal  from @tabla2 --order by NumeroCuentaContable
-  --select distinct SaldoFinal from @tabla2 where SaldoFinal <> 0 --in (select distinct NumeroCuentaContable from @tabla2 where SaldoFinal <> 0) 
-
-
---Select distinct t2.NumeroCuentaContable,
---(Select top 1 SaldoFinal from @tabla2 Where NumeroCuentaContable = t2.NumeroCuentaContable)
--- from @tabla2 t2 where t2.NumeroCuentaContable in (select distinct NumeroCuentaContable from @tabla2 where SaldoFinal <> 0)
-
- --Declare @Cuentas as table (    
- -- Cuenta varchar(100))
- -- Insert into @Cuentas
- -- select distinct NumeroCuentaContable from @tabla2 where Afectable = 1
-
- -- Declare @TotalGral as Table(
- -- Cuenta varchar(100),
- -- SaldoFinal decimal(18,2))
- -- Insert into @TotalGral
- -- Select Cuenta, 
- -- (Select top 1 SaldoFinal from @tabla2 where NumeroCuentaContable = Cuenta)
- -- from @Cuentas 
 
  GO
  Exec SP_CFG_LogScripts 'SP_RPT_K2_AuxiliarMayor','2.30'
