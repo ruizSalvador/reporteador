@@ -4006,3 +4006,7 @@ C:\Users\AgileDev\Documents\GitHub\Reporteador\Korima_Reporteador\obj\x86\Releas
 C:\Users\AgileDev\Documents\GitHub\Reporteador\Korima_Reporteador\obj\x86\Release\Korima_Reporteador.exe.manifest
 C:\Users\AgileDev\Documents\GitHub\Reporteador\Korima_Reporteador\obj\x86\Release\Korima_Reporteador.application
 C:\Users\AgileDev\Documents\GitHub\Reporteador\Korima_Reporteador\obj\x86\Release\Korima_Reporteador.exe
+C:\Users\AgileDev\OneDrive - Prisma Hanil\Documentos\GitHub\Reporteador\Korima_Reporteador\bin\Release\Korima_Reporteador.exe.config
+C:\Users\AgileDev\OneDrive - Prisma Hanil\Documentos\GitHub\Reporteador\Korima_Reporteador\obj\x86\Release\Korima_Reporteador.exe
+C:\Users\AgileDev\OneDrive - Prisma Hanil\Documentos\GitHub\Reporteador\Korima_Reporteador\obj\x86\Release\Korima_Reporteador.xml
+C:\Users\AgileDev\OneDrive - Prisma Hanil\Documentos\GitHub\Reporteador\Korima_Reporteador\obj\x86\Release\Korima_Reporteador.pdb

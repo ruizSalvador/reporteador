@@ -8,8 +8,8 @@ Public Class MDI_Principal
     'Dim bdd As String = "CespteInicializacion"
     'Dim bdd As String = "FIARUM"
     'Dim bdd As String = "UNEME2020"
-    Dim bdd As String = "KorimaSGG"
-    'Dim bdd As String = "IECAN_PRODUCCION"
+    'Dim bdd As String = "KorimaSGG"
+    Dim bdd As String = "IECAN_PRODUCCION"
     'Dim bdd As String = "Korima_San_Miguel_Alto"
     'Dim bdd As String = "Korima_Municipio_Piedad"
     'Dim bdd As String = "Korima_TSJ"
@@ -904,6 +904,8 @@ Public Class MDI_Principal
                 LoadCtrlUser(New CtrlUser_RPT_Pagado_Ejercicio, tvMenu.SelectedNode.Text.Trim)
             Case 1510 ' Padrón de Proveedores
                 LoadCtrlUser(New CtrlUser_RPT_Padron_Proveedores, tvMenu.SelectedNode.Text.Trim)
+            Case 1512 ' Auxiliar de Mayor por Fechas
+                LoadCtrlUser(New CtrlUser_RPT_PolizaAuxiliarMayor_Fechas, tvMenu.SelectedNode.Text.Trim)
             Case Else
                 'MessageBox.Show("Error: Consulte al administrador", "Reporte no encontrado", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End Select

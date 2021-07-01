@@ -22,8 +22,7 @@ GO
 SET NOCOUNT ON
 GO
 --EXEC SP_RPT_K2_AuxiliarMayor_Fechas '','',2019,1,1,1,'11110-00001','11110-00003',0,0
---EXEC SP_RPT_K2_AuxiliarMayor_Fechas '','',2019,1,12,0,'11110-00001','93000-00000',0,0
---EXEC SP_RPT_K2_AuxiliarMayor_Fechas '','',2020,9,9,1,'','',0,0
+--EXEC SP_RPT_K2_AuxiliarMayor_Fechas '','','20200101','20201231',1,'','',0,0
 
 Create PROCEDURE [dbo].[SP_RPT_K2_AuxiliarMayor_Fechas]     
 @NumeroCuenta varchar(30),    

@@ -826,115 +826,6 @@ Row event argument class
 	<summary>
 Represents a strongly typed in-memory cache of data.
 </summary>
-</member><member name="P:Korima_Reporteador.PrintRibbonControllerResources.ResourceManager">
-	<summary>
-  Returns the cached ResourceManager instance used by this class.
-</summary>
-</member><member name="P:Korima_Reporteador.PrintRibbonControllerResources.Culture">
-	<summary>
-  Overrides the current thread's CurrentUICulture property for all
-  resource lookups using this strongly typed resource class.
-</summary>
-</member><member name="T:Korima_Reporteador.PrintRibbonControllerResources">
-	<summary>
-  A strongly-typed resource class, for looking up localized strings, etc.
-</summary>
-</member><member name="T:Korima_Reporteador.DataSetAlvirde.SP_RPT_InformeProgramaEstadoEjercicioPresupuestoEGRDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:Korima_Reporteador.DataSetAlvirde.SP_RPT_K2_Libro_Inventario_Arqueologicos_Artisticos_HistoricosDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:Korima_Reporteador.DataSetAlvirde.RPT_OrdenesCompraServiciosProveedor2DataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:Korima_Reporteador.DataSetAlvirde.SP_RPT_EstadoEjercicioPresupuestoINGDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:Korima_Reporteador.DataSetAlvirde.SP_RPT_InformeProgramaEstadoEjercicioPresupuestoEGRRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:Korima_Reporteador.DataSetAlvirde.SP_RPT_K2_Libro_Inventario_Arqueologicos_Artisticos_HistoricosRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:Korima_Reporteador.DataSetAlvirde.RPT_OrdenesCompraServiciosProveedor2Row">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:Korima_Reporteador.DataSetAlvirde.SP_RPT_EstadoEjercicioPresupuestoINGRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:Korima_Reporteador.DataSetAlvirde.SP_RPT_InformeProgramaEstadoEjercicioPresupuestoEGRRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:Korima_Reporteador.DataSetAlvirde.SP_RPT_K2_Libro_Inventario_Arqueologicos_Artisticos_HistoricosRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:Korima_Reporteador.DataSetAlvirde.RPT_OrdenesCompraServiciosProveedor2RowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:Korima_Reporteador.DataSetAlvirde.SP_RPT_EstadoEjercicioPresupuestoINGRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:Korima_Reporteador.DataSetAlvirde">
-	<summary>
-Represents a strongly typed in-memory cache of data.
-</summary>
-</member><member name="T:Korima_Reporteador.DataSetArturo.SP_RPT_AnaliticoDeLaDeudaPublicaPorPeriodoDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:Korima_Reporteador.DataSetArturo.SP_RPT_AnaliticoDeLaDeudaPublicaPorPeriodoRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:Korima_Reporteador.DataSetArturo.SP_RPT_AnaliticoDeLaDeudaPublicaPorPeriodoRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:Korima_Reporteador.DataSetArturo">
-	<summary>
-Represents a strongly typed in-memory cache of data.
-</summary>
-</member><member name="T:Korima_Reporteador.DataSetBlanca1.NotaDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:Korima_Reporteador.DataSetBlanca1.Nota2DataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:Korima_Reporteador.DataSetBlanca1.NotaRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:Korima_Reporteador.DataSetBlanca1.Nota2Row">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:Korima_Reporteador.DataSetBlanca1.NotaRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:Korima_Reporteador.DataSetBlanca1.Nota2RowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:Korima_Reporteador.DataSetBlanca1">
-	<summary>
-Represents a strongly typed in-memory cache of data.
-</summary>
 </member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSet.VW_C_UsuariosDataTable">
 	<summary>
 Represents the strongly named DataTable class.
@@ -1034,6 +925,58 @@ Used to sort self-referenced table's rows
 </member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSetTableAdapters.TableAdapterManager">
 	<summary>
 TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetAlvirde.SP_RPT_InformeProgramaEstadoEjercicioPresupuestoEGRDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetAlvirde.SP_RPT_K2_Libro_Inventario_Arqueologicos_Artisticos_HistoricosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetAlvirde.RPT_OrdenesCompraServiciosProveedor2DataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetAlvirde.SP_RPT_EstadoEjercicioPresupuestoINGDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetAlvirde.SP_RPT_InformeProgramaEstadoEjercicioPresupuestoEGRRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetAlvirde.SP_RPT_K2_Libro_Inventario_Arqueologicos_Artisticos_HistoricosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetAlvirde.RPT_OrdenesCompraServiciosProveedor2Row">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetAlvirde.SP_RPT_EstadoEjercicioPresupuestoINGRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetAlvirde.SP_RPT_InformeProgramaEstadoEjercicioPresupuestoEGRRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetAlvirde.SP_RPT_K2_Libro_Inventario_Arqueologicos_Artisticos_HistoricosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetAlvirde.RPT_OrdenesCompraServiciosProveedor2RowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetAlvirde.SP_RPT_EstadoEjercicioPresupuestoINGRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetAlvirde">
+	<summary>
+Represents a strongly typed in-memory cache of data.
 </summary>
 </member><member name="T:Korima_Reporteador.DSLuisRojas.SP_RPT_Relacion_Analitica_Efectivo_ISAFDataTable">
 	<summary>
@@ -2732,167 +2675,19 @@ Represents a strongly typed in-memory cache of data.
 	<summary>
   Clase de recurso fuertemente tipado, para buscar cadenas traducidas, etc.
 </summary>
-</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSet1.VW_RPT_CFG_DatosEntesDataTable">
+</member><member name="T:Korima_Reporteador.DataSetArturo.SP_RPT_AnaliticoDeLaDeudaPublicaPorPeriodoDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSet1.VW_RPT_CFG_DatosEntesRow">
+</member><member name="T:Korima_Reporteador.DataSetArturo.SP_RPT_AnaliticoDeLaDeudaPublicaPorPeriodoRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSet1.VW_RPT_CFG_DatosEntesRowChangeEvent">
+</member><member name="T:Korima_Reporteador.DataSetArturo.SP_RPT_AnaliticoDeLaDeudaPublicaPorPeriodoRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSet1">
-	<summary>
-Represents a strongly typed in-memory cache of data.
-</summary>
-</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSet1TableAdapters.VW_RPT_CFG_DatosEntesTableAdapter">
-	<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member><member name="M:Korima_Reporteador._Korima2_00_ReporteadorDataSet1TableAdapters.TableAdapterManager.UpdateUpdatedRows(Korima_Reporteador._Korima2_00_ReporteadorDataSet1,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
-	<summary>
-Update rows in top-down order.
-</summary>
-</member><member name="M:Korima_Reporteador._Korima2_00_ReporteadorDataSet1TableAdapters.TableAdapterManager.UpdateInsertedRows(Korima_Reporteador._Korima2_00_ReporteadorDataSet1,System.Collections.Generic.List{System.Data.DataRow})">
-	<summary>
-Insert rows in top-down order.
-</summary>
-</member><member name="M:Korima_Reporteador._Korima2_00_ReporteadorDataSet1TableAdapters.TableAdapterManager.UpdateDeletedRows(Korima_Reporteador._Korima2_00_ReporteadorDataSet1,System.Collections.Generic.List{System.Data.DataRow})">
-	<summary>
-Delete rows in bottom-up order.
-</summary>
-</member><member name="M:Korima_Reporteador._Korima2_00_ReporteadorDataSet1TableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
-	<summary>
-Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
-</summary>
-</member><member name="M:Korima_Reporteador._Korima2_00_ReporteadorDataSet1TableAdapters.TableAdapterManager.UpdateAll(Korima_Reporteador._Korima2_00_ReporteadorDataSet1)">
-	<summary>
-Update all changes to the dataset.
-</summary>
-</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption">
-	<summary>
-Update Order Option
-</summary>
-</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSet1TableAdapters.TableAdapterManager.SelfReferenceComparer">
-	<summary>
-Used to sort self-referenced table's rows
-</summary>
-</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSet1TableAdapters.TableAdapterManager">
-	<summary>
-TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
-</summary>
-</member><member name="T:Korima_Reporteador.DataSetDavid.NotaPercentDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:Korima_Reporteador.DataSetDavid.NotaActualAnteriorDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:Korima_Reporteador.DataSetDavid.NotaDividendosDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:Korima_Reporteador.DataSetDavid.SP_RPT_EstadoEjercicioPresupuestoEGRDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:Korima_Reporteador.DataSetDavid.SP_RPT_MatrizPagadoGastosDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:Korima_Reporteador.DataSetDavid.SP_RPT_MatrizDevengadoGastosDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:Korima_Reporteador.DataSetDavid.SP_RPT_MatrizIngresosDevengadosDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:Korima_Reporteador.DataSetDavid.SP_RPT_MatrizIngresosRecaudadosDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:Korima_Reporteador.DataSetDavid.SP_RPT_MatrizRecaudadoIngresosSinDevengadoDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:Korima_Reporteador.DataSetDavid.NotaPercentRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:Korima_Reporteador.DataSetDavid.NotaActualAnteriorRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:Korima_Reporteador.DataSetDavid.NotaDividendosRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:Korima_Reporteador.DataSetDavid.SP_RPT_EstadoEjercicioPresupuestoEGRRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:Korima_Reporteador.DataSetDavid.SP_RPT_MatrizPagadoGastosRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:Korima_Reporteador.DataSetDavid.SP_RPT_MatrizDevengadoGastosRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:Korima_Reporteador.DataSetDavid.SP_RPT_MatrizIngresosDevengadosRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:Korima_Reporteador.DataSetDavid.SP_RPT_MatrizIngresosRecaudadosRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:Korima_Reporteador.DataSetDavid.SP_RPT_MatrizRecaudadoIngresosSinDevengadoRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:Korima_Reporteador.DataSetDavid.NotaPercentRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:Korima_Reporteador.DataSetDavid.NotaActualAnteriorRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:Korima_Reporteador.DataSetDavid.NotaDividendosRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:Korima_Reporteador.DataSetDavid.SP_RPT_EstadoEjercicioPresupuestoEGRRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:Korima_Reporteador.DataSetDavid.SP_RPT_MatrizPagadoGastosRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:Korima_Reporteador.DataSetDavid.SP_RPT_MatrizDevengadoGastosRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:Korima_Reporteador.DataSetDavid.SP_RPT_MatrizIngresosDevengadosRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:Korima_Reporteador.DataSetDavid.SP_RPT_MatrizIngresosRecaudadosRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:Korima_Reporteador.DataSetDavid.SP_RPT_MatrizRecaudadoIngresosSinDevengadoRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:Korima_Reporteador.DataSetDavid">
+</member><member name="T:Korima_Reporteador.DataSetArturo">
 	<summary>
 Represents a strongly typed in-memory cache of data.
 </summary>
@@ -3032,6 +2827,34 @@ Row event argument class
 	<summary>
 Represents a strongly typed in-memory cache of data.
 </summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca1.NotaDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca1.Nota2DataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca1.NotaRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca1.Nota2Row">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca1.NotaRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca1.Nota2RowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca1">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
 </member><member name="T:Korima_Reporteador.DSetArturo.SP_RPT_AnaliticoDeLaDeudaPublicaPorPeriodoLDFDataTable">
 	<summary>
 Represents the strongly named DataTable class.
@@ -3047,6 +2870,183 @@ Row event argument class
 </member><member name="T:Korima_Reporteador.DSetArturo">
 	<summary>
 Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetDavid.NotaPercentDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetDavid.NotaActualAnteriorDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetDavid.NotaDividendosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetDavid.SP_RPT_EstadoEjercicioPresupuestoEGRDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetDavid.SP_RPT_MatrizPagadoGastosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetDavid.SP_RPT_MatrizDevengadoGastosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetDavid.SP_RPT_MatrizIngresosDevengadosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetDavid.SP_RPT_MatrizIngresosRecaudadosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetDavid.SP_RPT_MatrizRecaudadoIngresosSinDevengadoDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetDavid.NotaPercentRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetDavid.NotaActualAnteriorRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetDavid.NotaDividendosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetDavid.SP_RPT_EstadoEjercicioPresupuestoEGRRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetDavid.SP_RPT_MatrizPagadoGastosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetDavid.SP_RPT_MatrizDevengadoGastosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetDavid.SP_RPT_MatrizIngresosDevengadosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetDavid.SP_RPT_MatrizIngresosRecaudadosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetDavid.SP_RPT_MatrizRecaudadoIngresosSinDevengadoRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetDavid.NotaPercentRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetDavid.NotaActualAnteriorRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetDavid.NotaDividendosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetDavid.SP_RPT_EstadoEjercicioPresupuestoEGRRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetDavid.SP_RPT_MatrizPagadoGastosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetDavid.SP_RPT_MatrizDevengadoGastosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetDavid.SP_RPT_MatrizIngresosDevengadosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetDavid.SP_RPT_MatrizIngresosRecaudadosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetDavid.SP_RPT_MatrizRecaudadoIngresosSinDevengadoRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetDavid">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="P:Korima_Reporteador.PrintRibbonControllerResources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:Korima_Reporteador.PrintRibbonControllerResources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:Korima_Reporteador.PrintRibbonControllerResources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSet1.VW_RPT_CFG_DatosEntesDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSet1.VW_RPT_CFG_DatosEntesRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSet1.VW_RPT_CFG_DatosEntesRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSet1">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSet1TableAdapters.VW_RPT_CFG_DatosEntesTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:Korima_Reporteador._Korima2_00_ReporteadorDataSet1TableAdapters.TableAdapterManager.UpdateUpdatedRows(Korima_Reporteador._Korima2_00_ReporteadorDataSet1,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:Korima_Reporteador._Korima2_00_ReporteadorDataSet1TableAdapters.TableAdapterManager.UpdateInsertedRows(Korima_Reporteador._Korima2_00_ReporteadorDataSet1,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:Korima_Reporteador._Korima2_00_ReporteadorDataSet1TableAdapters.TableAdapterManager.UpdateDeletedRows(Korima_Reporteador._Korima2_00_ReporteadorDataSet1,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:Korima_Reporteador._Korima2_00_ReporteadorDataSet1TableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:Korima_Reporteador._Korima2_00_ReporteadorDataSet1TableAdapters.TableAdapterManager.UpdateAll(Korima_Reporteador._Korima2_00_ReporteadorDataSet1)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSet1TableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSet1TableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
 </summary>
 </member>
 </members>
