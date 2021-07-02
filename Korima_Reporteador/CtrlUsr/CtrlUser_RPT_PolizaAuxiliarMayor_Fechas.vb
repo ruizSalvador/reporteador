@@ -34,8 +34,14 @@ Public Class CtrlUser_RPT_PolizaAuxiliarMayor_Fechas
     End Function
 
     Private Sub SimpleButton1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SimpleButton1.Click
-        If (srchRangoDe.Text = "" And srchRangoA.Text <> "") Or (srchRangoDe.Text <> "" And srchRangoA.Text = "") Then
-            MessageBox.Show("Debe seleccionar ambos rangos", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        'If (dtFechaIni.Text = "" And dtFechaFin.Text = "") Then
+        '    MessageBox.Show("Debe seleccionar ambos rangos", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        '    Exit Sub
+        'End If
+
+        ErrorProvider1.Clear()
+        If (dtFechaIni.DateTime.Year <> dtFechaFin.DateTime.Year) Or (dtFechaIni.Text = "") Or (dtFechaFin.Text = "") Then
+            ErrorProvider1.SetError(dtFechaFin, "El periodo de tiempo tiene que pertenecer al mismo ejercicio")
             Exit Sub
         End If
         Me.Cursor = Cursors.WaitCursor
@@ -50,7 +56,7 @@ Public Class CtrlUser_RPT_PolizaAuxiliarMayor_Fechas
         Dim i As Integer
         i = srchFilterCuenta.Properties.View.GetFocusedRowCellValue("Nivel")
 
-        ErrorProvider1.Clear()
+        'ErrorProvider1.Clear()
         If (srchFilterCuenta.Text <> "") Then
             If srchFilterCuenta.Properties.View.GetFocusedRowCellValue("Nivel") = 0 Then
                 strFiltro = strFiltro & srchFilterCuenta.Text.Substring(0, 1)
@@ -164,11 +170,12 @@ Public Class CtrlUser_RPT_PolizaAuxiliarMayor_Fechas
             .PICEnteLogoSecundario.Image = pRPTCFGDatosEntes.LogoEnteSecundario
             'Se limita la funcionalidad a un solo mes solo por esta version
             '.lblRptDescripcionFiltrado.Text = "Periodo de " & MesLetra(filterPeriodoDe.Time.Month) & " del " & filterPeriodoDe.Time.Year.ToString & " a " & MesLetra(filterPeriodoAl.Time.Month) & " del " & filterPeriodoAl.Time.Year.ToString
+            .lblRptDescripcionFiltrado.Text = dtFechaIni.Text & " al " & dtFechaFin.Text
             '.lblSubtitulo.Text = "Ejercicio del " & filterPeriodoAl.Time.Year.ToString
-            .lblRptDescripcionFiltrado.Text = "Periodo: " & MesLetra(filterPeriodoDe.Time.Month) & " a " & MesLetra(filterPeriodoAl.Time.Month) & " del " & FilterEjercicio.Time.Year.ToString
-            If filterPeriodoDe.Time.Month = filterPeriodoAl.Time.Month Then
-                .lblRptDescripcionFiltrado.Text = "Periodo: " & MesLetra(filterPeriodoDe.Time.Month) & " del " & FilterEjercicio.Time.Year.ToString
-            End If
+            '.lblRptDescripcionFiltrado.Text = "Periodo: " & MesLetra(filterPeriodoDe.Time.Month) & " a " & MesLetra(filterPeriodoAl.Time.Month) & " del " & FilterEjercicio.Time.Year.ToString
+            'If filterPeriodoDe.Time.Month = filterPeriodoAl.Time.Month Then
+            '.lblRptDescripcionFiltrado.Text = "Periodo: " & MesLetra(filterPeriodoDe.Time.Month) & " del " & FilterEjercicio.Time.Year.ToString
+            'End If
 
             If srchFilterCuenta.Text = "" Then
                 '.XrLblTotCargo.Visible = False
