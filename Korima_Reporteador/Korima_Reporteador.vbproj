@@ -168,6 +168,12 @@
     <Compile Include="CtrlNotas\CtrlNotaInformePasivosContingentes.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="CtrlUsr\CtrlUsr_RPT_ConsultaEstadodelEjerciciodelPresupuesto_Rec.designer.vb">
+      <DependentUpon>CtrlUsr_RPT_ConsultaEstadodelEjerciciodelPresupuesto_Rec.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CtrlUsr\CtrlUsr_RPT_ConsultaEstadodelEjerciciodelPresupuesto_Rec.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="CtrlUsr\CtrlUser_RPT_PolizaAuxiliarMayor_Fechas.Designer.vb">
       <DependentUpon>CtrlUser_RPT_PolizaAuxiliarMayor_Fechas.vb</DependentUpon>
     </Compile>
@@ -2220,6 +2226,12 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="PrintRibbonControllerResources.Designer.vb" />
+    <Compile Include="Reports\RPT_ConsultaEstadodelEjerciciodelPresupuesto_Rec.Designer.vb">
+      <DependentUpon>RPT_ConsultaEstadodelEjerciciodelPresupuesto_Rec.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RPT_ConsultaEstadodelEjerciciodelPresupuesto_Rec.vb">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Reports\RPT_Padron_Proveedores.Designer.vb">
       <DependentUpon>RPT_Padron_Proveedores.vb</DependentUpon>
     </Compile>
@@ -4455,6 +4467,9 @@
     <EmbeddedResource Include="CtrlNotas\CtrlNotaInformePasivosContingentes.resx">
       <DependentUpon>CtrlNotaInformePasivosContingentes.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CtrlUsr\CtrlUsr_RPT_ConsultaEstadodelEjerciciodelPresupuesto_Rec.resx">
+      <DependentUpon>CtrlUsr_RPT_ConsultaEstadodelEjerciciodelPresupuesto_Rec.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CtrlUsr\CtrlUser_RPT_PolizaAuxiliarMayor_Fechas.resx">
       <DependentUpon>CtrlUser_RPT_PolizaAuxiliarMayor_Fechas.vb</DependentUpon>
     </EmbeddedResource>
@@ -5453,6 +5468,9 @@
       <DependentUpon>CtrlUsr_CargadordeDocumentos.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PrintRibbonControllerResources.resx" />
+    <EmbeddedResource Include="Reports\RPT_ConsultaEstadodelEjerciciodelPresupuesto_Rec.resx">
+      <DependentUpon>RPT_ConsultaEstadodelEjerciciodelPresupuesto_Rec.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\RPT_Padron_Proveedores.resx">
       <DependentUpon>RPT_Padron_Proveedores.vb</DependentUpon>
     </EmbeddedResource>
