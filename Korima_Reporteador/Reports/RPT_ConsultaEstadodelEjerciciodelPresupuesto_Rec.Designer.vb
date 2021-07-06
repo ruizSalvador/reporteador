@@ -75,8 +75,6 @@ Partial Public Class RPT_ConsultaEstadodelEjerciciodelPresupuesto_Rec
         Me.line2 = New DevExpress.XtraReports.UI.XRLine()
         Me.label10 = New DevExpress.XtraReports.UI.XRLabel()
         Me.ReportFooter = New DevExpress.XtraReports.UI.ReportFooterBand()
-        Me.Firmas = New DevExpress.XtraReports.UI.XRSubreport()
-        Me.RpT_FirmasHorizontal1 = New Korima_Reporteador.RPT_FirmasHorizontal()
         Me.label2 = New DevExpress.XtraReports.UI.XRLabel()
         Me.lblRptEnteDomicilio = New DevExpress.XtraReports.UI.XRLabel()
         Me.lblRptEnteCiudad = New DevExpress.XtraReports.UI.XRLabel()
@@ -113,6 +111,8 @@ Partial Public Class RPT_ConsultaEstadodelEjerciciodelPresupuesto_Rec
         Me.Amp_Red = New DevExpress.XtraReports.UI.CalculatedField()
         Me.VW_RPT_CFG_DatosEntesTableAdapter1 = New Korima_Reporteador._Korima2_00_ReporteadorDataSet1TableAdapters.VW_RPT_CFG_DatosEntesTableAdapter()
         Me.cfModificado = New DevExpress.XtraReports.UI.CalculatedField()
+        Me.Firmas = New DevExpress.XtraReports.UI.XRSubreport()
+        Me.RpT_FirmasHorizontal1 = New Korima_Reporteador.RPT_FirmasHorizontal()
         CType(Me.DataSetBlanca1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RpT_FirmasHorizontal1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -217,7 +217,7 @@ Partial Public Class RPT_ConsultaEstadodelEjerciciodelPresupuesto_Rec
         Me.XrLabel16.StylePriority.UseBorders = False
         Me.XrLabel16.StylePriority.UseFont = False
         Me.XrLabel16.StylePriority.UseTextAlignment = False
-        Me.XrLabel16.Text = "label30"
+        Me.XrLabel16.Text = "XrLabel16"
         Me.XrLabel16.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight
         '
         'XrLabel24
@@ -724,14 +724,6 @@ Partial Public Class RPT_ConsultaEstadodelEjerciciodelPresupuesto_Rec
         Me.ReportFooter.Name = "ReportFooter"
         Me.ReportFooter.Visible = False
         '
-        'Firmas
-        '
-        Me.Firmas.Dpi = 254.0!
-        Me.Firmas.LocationFloat = New DevExpress.Utils.PointFloat(0.0!, 0.0!)
-        Me.Firmas.Name = "Firmas"
-        Me.Firmas.ReportSource = Me.RpT_FirmasHorizontal1
-        Me.Firmas.SizeF = New System.Drawing.SizeF(3675.0!, 68.33651!)
-        '
         'label2
         '
         Me.label2.Borders = CType((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Top), DevExpress.XtraPrinting.BorderSide)
@@ -1073,7 +1065,7 @@ Partial Public Class RPT_ConsultaEstadodelEjerciciodelPresupuesto_Rec
         XrSummary7.FormatString = "{0:n2}"
         XrSummary7.Running = DevExpress.XtraReports.UI.SummaryRunning.Report
         Me.XrLabel17.Summary = XrSummary7
-        Me.XrLabel17.Text = "label15"
+        Me.XrLabel17.Text = "XrLabel17"
         Me.XrLabel17.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight
         '
         'XrLabel11
@@ -1239,6 +1231,14 @@ Partial Public Class RPT_ConsultaEstadodelEjerciciodelPresupuesto_Rec
         Me.cfModificado.Expression = "([Autorizado] + ([Ampliaciones] + [TransferenciaAmp]) - ([Reducciones] + [Transfe" & _
     "renciaRed])) "
         Me.cfModificado.Name = "cfModificado"
+        '
+        'Firmas
+        '
+        Me.Firmas.Dpi = 254.0!
+        Me.Firmas.LocationFloat = New DevExpress.Utils.PointFloat(0.0!, 0.0!)
+        Me.Firmas.Name = "Firmas"
+        Me.Firmas.ReportSource = Me.RpT_FirmasHorizontal1
+        Me.Firmas.SizeF = New System.Drawing.SizeF(3675.0!, 68.33651!)
         '
         'RPT_ConsultaEstadodelEjerciciodelPresupuesto_Rec
         '

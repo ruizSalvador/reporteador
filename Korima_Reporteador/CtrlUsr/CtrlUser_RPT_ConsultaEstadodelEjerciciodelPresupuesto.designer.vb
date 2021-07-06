@@ -25,6 +25,7 @@ Partial Class CtrlUser_RPT_ConsultaEstadodelEjerciciodelPresupuesto
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CtrlUser_RPT_ConsultaEstadodelEjerciciodelPresupuesto))
         Me.SplitContainerControl1 = New DevExpress.XtraEditors.SplitContainerControl()
+        Me.chkTransAnual = New System.Windows.Forms.CheckBox()
         Me.ChkAmpRed = New System.Windows.Forms.CheckBox()
         Me.CleanProgramaOperativo = New DevExpress.XtraEditors.SimpleButton()
         Me.filterProgramaOperativo = New DevExpress.XtraEditors.LookUpEdit()
@@ -109,7 +110,7 @@ Partial Class CtrlUser_RPT_ConsultaEstadodelEjerciciodelPresupuesto
         Me.filterPeriodoInicioAnt = New DevExpress.XtraEditors.DateEdit()
         Me.SPRPTConsultaEstadodelEjerciciodelPresupuestoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DataSetBlanca = New Korima_Reporteador.DataSetBlanca()
-        Me.chkTransAnual = New System.Windows.Forms.CheckBox()
+        Me.chkRec = New System.Windows.Forms.CheckBox()
         CType(Me.SplitContainerControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainerControl1.SuspendLayout()
         CType(Me.filterProgramaOperativo.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -137,6 +138,7 @@ Partial Class CtrlUser_RPT_ConsultaEstadodelEjerciciodelPresupuesto
         Me.SplitContainerControl1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.SplitContainerControl1.Location = New System.Drawing.Point(0, 53)
         Me.SplitContainerControl1.Name = "SplitContainerControl1"
+        Me.SplitContainerControl1.Panel1.Controls.Add(Me.chkRec)
         Me.SplitContainerControl1.Panel1.Controls.Add(Me.chkTransAnual)
         Me.SplitContainerControl1.Panel1.Controls.Add(Me.ChkAmpRed)
         Me.SplitContainerControl1.Panel1.Controls.Add(Me.CleanProgramaOperativo)
@@ -166,10 +168,20 @@ Partial Class CtrlUser_RPT_ConsultaEstadodelEjerciciodelPresupuesto
         Me.SplitContainerControl1.Panel1.Text = "Panel1"
         Me.SplitContainerControl1.Panel2.Controls.Add(Me.PrintControl1)
         Me.SplitContainerControl1.Panel2.Text = "Panel2"
-        Me.SplitContainerControl1.Size = New System.Drawing.Size(752, 390)
+        Me.SplitContainerControl1.Size = New System.Drawing.Size(752, 416)
         Me.SplitContainerControl1.SplitterPosition = 206
         Me.SplitContainerControl1.TabIndex = 4
         Me.SplitContainerControl1.Text = "SplitContainerControl1"
+        '
+        'chkTransAnual
+        '
+        Me.chkTransAnual.AutoSize = True
+        Me.chkTransAnual.Location = New System.Drawing.Point(16, 163)
+        Me.chkTransAnual.Name = "chkTransAnual"
+        Me.chkTransAnual.Size = New System.Drawing.Size(89, 17)
+        Me.chkTransAnual.TabIndex = 64
+        Me.chkTransAnual.Text = "Transf. Anual"
+        Me.chkTransAnual.UseVisualStyleBackColor = True
         '
         'ChkAmpRed
         '
@@ -184,7 +196,7 @@ Partial Class CtrlUser_RPT_ConsultaEstadodelEjerciciodelPresupuesto
         'CleanProgramaOperativo
         '
         Me.CleanProgramaOperativo.Image = Global.Korima_Reporteador.My.Resources.Resources.Delete_16x16
-        Me.CleanProgramaOperativo.Location = New System.Drawing.Point(177, 331)
+        Me.CleanProgramaOperativo.Location = New System.Drawing.Point(177, 357)
         Me.CleanProgramaOperativo.Name = "CleanProgramaOperativo"
         Me.CleanProgramaOperativo.Size = New System.Drawing.Size(25, 20)
         Me.CleanProgramaOperativo.TabIndex = 62
@@ -193,7 +205,7 @@ Partial Class CtrlUser_RPT_ConsultaEstadodelEjerciciodelPresupuesto
         '
         'filterProgramaOperativo
         '
-        Me.filterProgramaOperativo.Location = New System.Drawing.Point(16, 331)
+        Me.filterProgramaOperativo.Location = New System.Drawing.Point(16, 357)
         Me.filterProgramaOperativo.Name = "filterProgramaOperativo"
         Me.filterProgramaOperativo.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.filterProgramaOperativo.Properties.Columns.AddRange(New DevExpress.XtraEditors.Controls.LookUpColumnInfo() {New DevExpress.XtraEditors.Controls.LookUpColumnInfo("Clave", 40, "Clave"), New DevExpress.XtraEditors.Controls.LookUpColumnInfo("Nombre", 150, "Nombre")})
@@ -203,7 +215,7 @@ Partial Class CtrlUser_RPT_ConsultaEstadodelEjerciciodelPresupuesto
         '
         'lblProgramaOperativo
         '
-        Me.lblProgramaOperativo.Location = New System.Drawing.Point(20, 315)
+        Me.lblProgramaOperativo.Location = New System.Drawing.Point(20, 341)
         Me.lblProgramaOperativo.Name = "lblProgramaOperativo"
         Me.lblProgramaOperativo.Size = New System.Drawing.Size(131, 13)
         Me.lblProgramaOperativo.TabIndex = 60
@@ -223,7 +235,7 @@ Partial Class CtrlUser_RPT_ConsultaEstadodelEjerciciodelPresupuesto
         'filterUnidadResponsable
         '
         Me.filterUnidadResponsable.Enabled = False
-        Me.filterUnidadResponsable.Location = New System.Drawing.Point(16, 249)
+        Me.filterUnidadResponsable.Location = New System.Drawing.Point(16, 275)
         Me.filterUnidadResponsable.Name = "filterUnidadResponsable"
         Me.filterUnidadResponsable.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.filterUnidadResponsable.Properties.Columns.AddRange(New DevExpress.XtraEditors.Controls.LookUpColumnInfo() {New DevExpress.XtraEditors.Controls.LookUpColumnInfo("Clave", 40, "Clave"), New DevExpress.XtraEditors.Controls.LookUpColumnInfo("Nombre", 150, "Unidad Responsable")})
@@ -234,7 +246,7 @@ Partial Class CtrlUser_RPT_ConsultaEstadodelEjerciciodelPresupuesto
         '
         Me.SimpleButton4.Enabled = False
         Me.SimpleButton4.Image = Global.Korima_Reporteador.My.Resources.Resources.Delete_16x16
-        Me.SimpleButton4.Location = New System.Drawing.Point(177, 249)
+        Me.SimpleButton4.Location = New System.Drawing.Point(177, 275)
         Me.SimpleButton4.Name = "SimpleButton4"
         Me.SimpleButton4.Size = New System.Drawing.Size(25, 20)
         Me.SimpleButton4.TabIndex = 31
@@ -243,7 +255,7 @@ Partial Class CtrlUser_RPT_ConsultaEstadodelEjerciciodelPresupuesto
         'LabelControl7
         '
         Me.LabelControl7.Enabled = False
-        Me.LabelControl7.Location = New System.Drawing.Point(17, 230)
+        Me.LabelControl7.Location = New System.Drawing.Point(17, 256)
         Me.LabelControl7.Name = "LabelControl7"
         Me.LabelControl7.Size = New System.Drawing.Size(104, 13)
         Me.LabelControl7.TabIndex = 29
@@ -252,7 +264,7 @@ Partial Class CtrlUser_RPT_ConsultaEstadodelEjerciciodelPresupuesto
         'filterPartida
         '
         Me.filterPartida.Enabled = False
-        Me.filterPartida.Location = New System.Drawing.Point(15, 205)
+        Me.filterPartida.Location = New System.Drawing.Point(15, 231)
         Me.filterPartida.Name = "filterPartida"
         Me.filterPartida.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.filterPartida.Properties.Columns.AddRange(New DevExpress.XtraEditors.Controls.LookUpColumnInfo() {New DevExpress.XtraEditors.Controls.LookUpColumnInfo("ClavePartida", 40, "Clave"), New DevExpress.XtraEditors.Controls.LookUpColumnInfo("DescripcionPartida", 150, "Partida")})
@@ -263,7 +275,7 @@ Partial Class CtrlUser_RPT_ConsultaEstadodelEjerciciodelPresupuesto
         '
         Me.SimpleButton3.Enabled = False
         Me.SimpleButton3.Image = Global.Korima_Reporteador.My.Resources.Resources.Delete_16x16
-        Me.SimpleButton3.Location = New System.Drawing.Point(176, 205)
+        Me.SimpleButton3.Location = New System.Drawing.Point(176, 231)
         Me.SimpleButton3.Name = "SimpleButton3"
         Me.SimpleButton3.Size = New System.Drawing.Size(25, 20)
         Me.SimpleButton3.TabIndex = 28
@@ -272,7 +284,7 @@ Partial Class CtrlUser_RPT_ConsultaEstadodelEjerciciodelPresupuesto
         'LabelControl6
         '
         Me.LabelControl6.Enabled = False
-        Me.LabelControl6.Location = New System.Drawing.Point(16, 186)
+        Me.LabelControl6.Location = New System.Drawing.Point(16, 212)
         Me.LabelControl6.Name = "LabelControl6"
         Me.LabelControl6.Size = New System.Drawing.Size(41, 13)
         Me.LabelControl6.TabIndex = 26
@@ -281,7 +293,7 @@ Partial Class CtrlUser_RPT_ConsultaEstadodelEjerciciodelPresupuesto
         'filterFuenteFinanciamiento
         '
         Me.filterFuenteFinanciamiento.Enabled = False
-        Me.filterFuenteFinanciamiento.Location = New System.Drawing.Point(17, 292)
+        Me.filterFuenteFinanciamiento.Location = New System.Drawing.Point(17, 318)
         Me.filterFuenteFinanciamiento.Name = "filterFuenteFinanciamiento"
         Me.filterFuenteFinanciamiento.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.filterFuenteFinanciamiento.Properties.Columns.AddRange(New DevExpress.XtraEditors.Controls.LookUpColumnInfo() {New DevExpress.XtraEditors.Controls.LookUpColumnInfo("CLAVE", 40, "Clave"), New DevExpress.XtraEditors.Controls.LookUpColumnInfo("DESCRIPCION", 150, "Descripción")})
@@ -292,7 +304,7 @@ Partial Class CtrlUser_RPT_ConsultaEstadodelEjerciciodelPresupuesto
         '
         Me.SimpleButton2.Enabled = False
         Me.SimpleButton2.Image = Global.Korima_Reporteador.My.Resources.Resources.Delete_16x16
-        Me.SimpleButton2.Location = New System.Drawing.Point(178, 292)
+        Me.SimpleButton2.Location = New System.Drawing.Point(178, 318)
         Me.SimpleButton2.Name = "SimpleButton2"
         Me.SimpleButton2.Size = New System.Drawing.Size(25, 20)
         Me.SimpleButton2.TabIndex = 25
@@ -301,7 +313,7 @@ Partial Class CtrlUser_RPT_ConsultaEstadodelEjerciciodelPresupuesto
         'LabelControl3
         '
         Me.LabelControl3.Enabled = False
-        Me.LabelControl3.Location = New System.Drawing.Point(18, 273)
+        Me.LabelControl3.Location = New System.Drawing.Point(18, 299)
         Me.LabelControl3.Name = "LabelControl3"
         Me.LabelControl3.Size = New System.Drawing.Size(130, 13)
         Me.LabelControl3.TabIndex = 23
@@ -332,7 +344,7 @@ Partial Class CtrlUser_RPT_ConsultaEstadodelEjerciciodelPresupuesto
         'filterPeriodoFinalAnt
         '
         Me.filterPeriodoFinalAnt.EditValue = Nothing
-        Me.filterPeriodoFinalAnt.Location = New System.Drawing.Point(144, 358)
+        Me.filterPeriodoFinalAnt.Location = New System.Drawing.Point(144, 384)
         Me.filterPeriodoFinalAnt.MenuManager = Me.PrintBarManager1
         Me.filterPeriodoFinalAnt.Name = "filterPeriodoFinalAnt"
         Me.filterPeriodoFinalAnt.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
@@ -696,7 +708,7 @@ Partial Class CtrlUser_RPT_ConsultaEstadodelEjerciciodelPresupuesto
         '
         Me.barDockControlBottom.CausesValidation = False
         Me.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.barDockControlBottom.Location = New System.Drawing.Point(0, 443)
+        Me.barDockControlBottom.Location = New System.Drawing.Point(0, 469)
         Me.barDockControlBottom.Size = New System.Drawing.Size(752, 28)
         '
         'barDockControlLeft
@@ -704,14 +716,14 @@ Partial Class CtrlUser_RPT_ConsultaEstadodelEjerciciodelPresupuesto
         Me.barDockControlLeft.CausesValidation = False
         Me.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left
         Me.barDockControlLeft.Location = New System.Drawing.Point(0, 53)
-        Me.barDockControlLeft.Size = New System.Drawing.Size(0, 390)
+        Me.barDockControlLeft.Size = New System.Drawing.Size(0, 416)
         '
         'barDockControlRight
         '
         Me.barDockControlRight.CausesValidation = False
         Me.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right
         Me.barDockControlRight.Location = New System.Drawing.Point(752, 53)
-        Me.barDockControlRight.Size = New System.Drawing.Size(0, 390)
+        Me.barDockControlRight.Size = New System.Drawing.Size(0, 416)
         '
         'PrintPreviewBarCheckItem1
         '
@@ -893,7 +905,7 @@ Partial Class CtrlUser_RPT_ConsultaEstadodelEjerciciodelPresupuesto
         Me.PrintControl1.IsMetric = True
         Me.PrintControl1.Location = New System.Drawing.Point(0, 0)
         Me.PrintControl1.Name = "PrintControl1"
-        Me.PrintControl1.Size = New System.Drawing.Size(541, 390)
+        Me.PrintControl1.Size = New System.Drawing.Size(541, 416)
         Me.PrintControl1.TabIndex = 1
         Me.PrintControl1.TooltipFont = New System.Drawing.Font("Tahoma", 8.25!)
         '
@@ -961,7 +973,7 @@ Partial Class CtrlUser_RPT_ConsultaEstadodelEjerciciodelPresupuesto
         '
         'SimpleButton1
         '
-        Me.SimpleButton1.Location = New System.Drawing.Point(16, 360)
+        Me.SimpleButton1.Location = New System.Drawing.Point(16, 386)
         Me.SimpleButton1.Name = "SimpleButton1"
         Me.SimpleButton1.Size = New System.Drawing.Size(116, 21)
         Me.SimpleButton1.TabIndex = 2
@@ -970,7 +982,7 @@ Partial Class CtrlUser_RPT_ConsultaEstadodelEjerciciodelPresupuesto
         'filterPeriodoInicioAnt
         '
         Me.filterPeriodoInicioAnt.EditValue = Nothing
-        Me.filterPeriodoInicioAnt.Location = New System.Drawing.Point(138, 364)
+        Me.filterPeriodoInicioAnt.Location = New System.Drawing.Point(138, 390)
         Me.filterPeriodoInicioAnt.Name = "filterPeriodoInicioAnt"
         Me.filterPeriodoInicioAnt.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.filterPeriodoInicioAnt.Properties.VistaTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton()})
@@ -988,15 +1000,15 @@ Partial Class CtrlUser_RPT_ConsultaEstadodelEjerciciodelPresupuesto
         Me.DataSetBlanca.DataSetName = "DataSetBlanca"
         Me.DataSetBlanca.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'chkTransAnual
+        'chkRec
         '
-        Me.chkTransAnual.AutoSize = True
-        Me.chkTransAnual.Location = New System.Drawing.Point(16, 163)
-        Me.chkTransAnual.Name = "chkTransAnual"
-        Me.chkTransAnual.Size = New System.Drawing.Size(89, 17)
-        Me.chkTransAnual.TabIndex = 64
-        Me.chkTransAnual.Text = "Transf. Anual"
-        Me.chkTransAnual.UseVisualStyleBackColor = True
+        Me.chkRec.AutoSize = True
+        Me.chkRec.Location = New System.Drawing.Point(16, 186)
+        Me.chkRec.Name = "chkRec"
+        Me.chkRec.Size = New System.Drawing.Size(125, 17)
+        Me.chkRec.TabIndex = 65
+        Me.chkRec.Text = "Recalendarizaciones"
+        Me.chkRec.UseVisualStyleBackColor = True
         '
         'CtrlUser_RPT_ConsultaEstadodelEjerciciodelPresupuesto
         '
@@ -1008,7 +1020,7 @@ Partial Class CtrlUser_RPT_ConsultaEstadodelEjerciciodelPresupuesto
         Me.Controls.Add(Me.barDockControlBottom)
         Me.Controls.Add(Me.barDockControlTop)
         Me.Name = "CtrlUser_RPT_ConsultaEstadodelEjerciciodelPresupuesto"
-        Me.Size = New System.Drawing.Size(752, 471)
+        Me.Size = New System.Drawing.Size(752, 497)
         CType(Me.SplitContainerControl1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainerControl1.ResumeLayout(False)
         CType(Me.filterProgramaOperativo.Properties, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1117,5 +1129,6 @@ Partial Class CtrlUser_RPT_ConsultaEstadodelEjerciciodelPresupuesto
     Friend WithEvents lblProgramaOperativo As DevExpress.XtraEditors.LabelControl
     Friend WithEvents ChkAmpRed As System.Windows.Forms.CheckBox
     Friend WithEvents chkTransAnual As System.Windows.Forms.CheckBox
+    Friend WithEvents chkRec As System.Windows.Forms.CheckBox
 
 End Class

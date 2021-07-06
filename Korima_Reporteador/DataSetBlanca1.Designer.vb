@@ -8219,6 +8219,8 @@ Partial Public Class DataSetBlanca
         
         Private columnPresDispComp As Global.System.Data.DataColumn
         
+        Private columnRecalendarizaciones As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub New()
@@ -8367,6 +8369,14 @@ Partial Public Class DataSetBlanca
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property RecalendarizacionesColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnRecalendarizaciones
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -8403,9 +8413,9 @@ Partial Public Class DataSetBlanca
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Function AddSP_RPT_ConsultaEstadodelEjerciciodelPresupuestoRow(ByVal IdSelloPresupuestal As String, ByVal Sello As String, ByVal Autorizado As String, ByVal Ampliaciones As String, ByVal Reducciones As String, ByVal TransferenciaAmp As String, ByVal TransferenciaRed As String, ByVal Modificado As String, ByVal PreComprometido As String, ByVal Comprometido As String, ByVal Devengado As String, ByVal Ejercido As String, ByVal Pagado As String, ByVal PresDispComp As String) As SP_RPT_ConsultaEstadodelEjerciciodelPresupuestoRow
+        Public Overloads Function AddSP_RPT_ConsultaEstadodelEjerciciodelPresupuestoRow(ByVal IdSelloPresupuestal As String, ByVal Sello As String, ByVal Autorizado As String, ByVal Ampliaciones As String, ByVal Reducciones As String, ByVal TransferenciaAmp As String, ByVal TransferenciaRed As String, ByVal Modificado As String, ByVal PreComprometido As String, ByVal Comprometido As String, ByVal Devengado As String, ByVal Ejercido As String, ByVal Pagado As String, ByVal PresDispComp As String, ByVal Recalendarizaciones As String) As SP_RPT_ConsultaEstadodelEjerciciodelPresupuestoRow
             Dim rowSP_RPT_ConsultaEstadodelEjerciciodelPresupuestoRow As SP_RPT_ConsultaEstadodelEjerciciodelPresupuestoRow = CType(Me.NewRow,SP_RPT_ConsultaEstadodelEjerciciodelPresupuestoRow)
-            Dim columnValuesArray() As Object = New Object() {IdSelloPresupuestal, Sello, Autorizado, Ampliaciones, Reducciones, TransferenciaAmp, TransferenciaRed, Modificado, PreComprometido, Comprometido, Devengado, Ejercido, Pagado, PresDispComp}
+            Dim columnValuesArray() As Object = New Object() {IdSelloPresupuestal, Sello, Autorizado, Ampliaciones, Reducciones, TransferenciaAmp, TransferenciaRed, Modificado, PreComprometido, Comprometido, Devengado, Ejercido, Pagado, PresDispComp, Recalendarizaciones}
             rowSP_RPT_ConsultaEstadodelEjerciciodelPresupuestoRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowSP_RPT_ConsultaEstadodelEjerciciodelPresupuestoRow)
             Return rowSP_RPT_ConsultaEstadodelEjerciciodelPresupuestoRow
@@ -8448,6 +8458,7 @@ Partial Public Class DataSetBlanca
             Me.columnEjercido = MyBase.Columns("Ejercido")
             Me.columnPagado = MyBase.Columns("Pagado")
             Me.columnPresDispComp = MyBase.Columns("PresDispComp")
+            Me.columnRecalendarizaciones = MyBase.Columns("Recalendarizaciones")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -8481,6 +8492,8 @@ Partial Public Class DataSetBlanca
             MyBase.Columns.Add(Me.columnPagado)
             Me.columnPresDispComp = New Global.System.Data.DataColumn("PresDispComp", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnPresDispComp)
+            Me.columnRecalendarizaciones = New Global.System.Data.DataColumn("Recalendarizaciones", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnRecalendarizaciones)
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -39027,6 +39040,22 @@ Partial Public Class DataSetBlanca
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Recalendarizaciones() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableSP_RPT_ConsultaEstadodelEjerciciodelPresupuesto.RecalendarizacionesColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'Recalendarizaciones' de la tabla 'SP_RPT_ConsultaEstadode"& _ 
+                            "lEjerciciodelPresupuesto' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableSP_RPT_ConsultaEstadodelEjerciciodelPresupuesto.RecalendarizacionesColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsIdSelloPresupuestalNull() As Boolean
             Return Me.IsNull(Me.tableSP_RPT_ConsultaEstadodelEjerciciodelPresupuesto.IdSelloPresupuestalColumn)
         End Function
@@ -39191,6 +39220,18 @@ Partial Public Class DataSetBlanca
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetPresDispCompNull()
             Me(Me.tableSP_RPT_ConsultaEstadodelEjerciciodelPresupuesto.PresDispCompColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsRecalendarizacionesNull() As Boolean
+            Return Me.IsNull(Me.tableSP_RPT_ConsultaEstadodelEjerciciodelPresupuesto.RecalendarizacionesColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetRecalendarizacionesNull()
+            Me(Me.tableSP_RPT_ConsultaEstadodelEjerciciodelPresupuesto.RecalendarizacionesColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     

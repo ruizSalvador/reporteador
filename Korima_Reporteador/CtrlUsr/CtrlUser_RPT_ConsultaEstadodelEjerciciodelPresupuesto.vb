@@ -123,7 +123,11 @@ Public Class CtrlUser_RPT_ConsultaEstadodelEjerciciodelPresupuesto
                 Me.nomTipoReporte = "Consulta Estado del Ejercicio  "
                 Me.nomTipoClaves = "Id"
                 'Me.FIRMAS = "Por Partida/Fuente de Financiamiento"
-                rpt = New RPT_ConsultaEstadodelEjerciciodelPresupuesto()
+                If chkRec.Checked = True Then
+                    rpt = New RPT_ConsultaEstadodelEjerciciodelPresupuesto_Rec()
+                Else
+                    rpt = New RPT_ConsultaEstadodelEjerciciodelPresupuesto()
+                End If
                 Me.filterFuenteFinanciamiento.Enabled = True
                 Me.SimpleButton2.Enabled = True
                 Me.LabelControl3.Enabled = True
@@ -180,8 +184,8 @@ Public Class CtrlUser_RPT_ConsultaEstadodelEjerciciodelPresupuesto
 
 
         If ChkAnual.Checked = True Then
-            SQLComando.Parameters.Add(New SqlParameter("@Mes", 0))
-            SQLComando.Parameters.Add(New SqlParameter("@Mes2", 0))
+            SQLComando.Parameters.Add(New SqlParameter("@Mes", 1))
+            SQLComando.Parameters.Add(New SqlParameter("@Mes2", 12))
             SQLComando.Parameters.Add(New SqlParameter("@Tipo", Me.SP))
             SQLComando.Parameters.Add(New SqlParameter("@Ejercicio", Year(filterPeriodoAl.EditValue)))
 
