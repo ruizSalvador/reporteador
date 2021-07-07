@@ -10,7 +10,7 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 
--- Exec SP_RPT_K2_EndeudamientoNeto 2,5,2021,0
+-- Exec SP_RPT_K2_EndeudamientoNeto 1,5,2021,1
 CREATE PROCEDURE [dbo].[SP_RPT_K2_EndeudamientoNeto]
 @MesInicio int, @MesFin Int, @Ejercicio int, @Mayor bit
 AS
@@ -64,7 +64,7 @@ SUM(TS.TotalCargos) as Cargos, SUM(TS.TotalAbonos)-SUM(TS.TotalCargos) as Endeud
 'Créditos Bancarios' as Grupo
  From T_SaldosInicialesCont TS
  Join c_contable on C_Contable.IdCuentaContable=TS.IdCuentaContable 
- Where (Mes between @MesInicio and @MesFin) and Year =@Ejercicio
+ Where (Mes between @MesInicio and @MesFin) and Year =@Ejercicio AND Afectable = 1
  AND Substring(NumeroCuenta, 1,@Estructura1) in ('21310'+REPLICATE('0',@estructura1-5),'21410'+REPLICATE('0',@estructura1-5),'31330'+REPLICATE('0',@estructura1-5),'22330'+REPLICATE('0',@estructura1-5),'22310'+REPLICATE('0',@estructura1-5),'22351'+REPLICATE('0',@estructura1-5)) and 
  SUBSTRING (numerocuenta, @Estructura1+2,LEN(numerocuenta))<>@CerosEstructura
  Group By NumeroCuenta, NombreCuenta, TS.IdCuentaContable
@@ -78,7 +78,7 @@ SUM(TS.TotalCargos) as Cargos, SUM(TS.TotalAbonos)-SUM(TS.TotalCargos) as Endeud
 'Otros Instrumentos de Deuda'as Grupo 
 From T_SaldosInicialesCont TS
 Join c_contable on C_Contable.IdCuentaContable=TS.IdCuentaContable 
- Where (Mes between @MesInicio and @MesFin) and Year =@Ejercicio
+ Where (Mes between @MesInicio and @MesFin) and Year =@Ejercicio AND Afectable = 1
  AND Substring(NumeroCuenta, 1,@Estructura1) in ('21320'+REPLICATE('0',@estructura1-5),'21410'+REPLICATE('0',@estructura1-5),'21330'+REPLICATE('0',@estructura1-5),'22340'+REPLICATE('0',@estructura1-5),'22320'+REPLICATE('0',@estructura1-5),'22352'+REPLICATE('0',@estructura1-5)) and 
  SUBSTRING (numerocuenta, @Estructura1+2,LEN(numerocuenta))<>@CerosEstructura
  Group By NumeroCuenta, NombreCuenta, TS.IdCuentaContable

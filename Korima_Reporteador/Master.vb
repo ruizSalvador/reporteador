@@ -3,11 +3,11 @@
 Public Class MDI_Principal
     Dim IdUsuario As String = "Debug"
     'Dim bdd As String = "Korima_Pruebas"
-    'Dim bdd As String = "KORIMAMUNICIPIO"
+    Dim bdd As String = "KORIMAMUNICIPIO"
     'Dim bdd As String = "Korima_Pruebas"
     'Dim bdd As String = "CespteInicializacion"
     'Dim bdd As String = "FIARUM"
-    Dim bdd As String = "UNEME2020"
+    'Dim bdd As String = "UNEME2020"
     'Dim bdd As String = "KorimaSGG"
     'Dim bdd As String = "IECAN_PRODUCCION"
     'Dim bdd As String = "Korima_San_Miguel_Alto"
