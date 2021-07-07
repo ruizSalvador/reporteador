@@ -906,8 +906,6 @@ Public Class MDI_Principal
                 LoadCtrlUser(New CtrlUser_RPT_Padron_Proveedores, tvMenu.SelectedNode.Text.Trim)
             Case 1512 ' Auxiliar de Mayor por Fechas
                 LoadCtrlUser(New CtrlUser_RPT_PolizaAuxiliarMayor_Fechas, tvMenu.SelectedNode.Text.Trim)
-            Case 1513 ' Auxiliar de Mayor por Fechas
-                LoadCtrlUser(New CtrlUsr_RPT_ConsultaEstadodelEjerciciodelPresupuesto_Rec(1, 1), tvMenu.SelectedNode.Text.Trim)
             Case Else
                 'MessageBox.Show("Error: Consulte al administrador", "Reporte no encontrado", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End Select

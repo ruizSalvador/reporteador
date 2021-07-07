@@ -168,12 +168,6 @@
     <Compile Include="CtrlNotas\CtrlNotaInformePasivosContingentes.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="CtrlUsr\CtrlUsr_RPT_ConsultaEstadodelEjerciciodelPresupuesto_Rec.designer.vb">
-      <DependentUpon>CtrlUsr_RPT_ConsultaEstadodelEjerciciodelPresupuesto_Rec.vb</DependentUpon>
-    </Compile>
-    <Compile Include="CtrlUsr\CtrlUsr_RPT_ConsultaEstadodelEjerciciodelPresupuesto_Rec.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
     <Compile Include="CtrlUsr\CtrlUser_RPT_PolizaAuxiliarMayor_Fechas.Designer.vb">
       <DependentUpon>CtrlUser_RPT_PolizaAuxiliarMayor_Fechas.vb</DependentUpon>
     </Compile>
@@ -4466,9 +4460,6 @@
   <ItemGroup>
     <EmbeddedResource Include="CtrlNotas\CtrlNotaInformePasivosContingentes.resx">
       <DependentUpon>CtrlNotaInformePasivosContingentes.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CtrlUsr\CtrlUsr_RPT_ConsultaEstadodelEjerciciodelPresupuesto_Rec.resx">
-      <DependentUpon>CtrlUsr_RPT_ConsultaEstadodelEjerciciodelPresupuesto_Rec.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CtrlUsr\CtrlUser_RPT_PolizaAuxiliarMayor_Fechas.resx">
       <DependentUpon>CtrlUser_RPT_PolizaAuxiliarMayor_Fechas.vb</DependentUpon>

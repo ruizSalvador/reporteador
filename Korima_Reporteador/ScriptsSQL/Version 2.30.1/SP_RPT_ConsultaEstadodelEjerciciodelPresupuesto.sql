@@ -10,7 +10,7 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 
---Exec SP_RPT_ConsultaEstadodelEjerciciodelPresupuesto 1,12,1,2020,'','','','',1,1,1
+--Exec SP_RPT_ConsultaEstadodelEjerciciodelPresupuesto 1,12,1,2020,'','','','',1,1,0
 CREATE PROCEDURE [dbo].[SP_RPT_ConsultaEstadodelEjerciciodelPresupuesto] 
 
 @Mes  as int, 
