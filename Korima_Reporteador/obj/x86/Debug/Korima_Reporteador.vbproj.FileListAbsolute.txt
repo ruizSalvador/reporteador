@@ -5565,7 +5565,6 @@ C:\Users\AgileDev\OneDrive - Prisma Hanil\Documentos\GitHub\Reporteador\Korima_R
 C:\Users\AgileDev\OneDrive - Prisma Hanil\Documentos\GitHub\Reporteador\Korima_Reporteador\obj\x86\Debug\Korima_Reporteador.SUB_NOTA_FIOPoGFFed.resources
 C:\Users\AgileDev\OneDrive - Prisma Hanil\Documentos\GitHub\Reporteador\Korima_Reporteador\obj\x86\Debug\Korima_Reporteador.SUB_NOTA_FIOPoGFFed2.resources
 C:\Users\AgileDev\OneDrive - Prisma Hanil\Documentos\GitHub\Reporteador\Korima_Reporteador\obj\x86\Debug\Korima_Reporteador.vbproj.GenerateResource.Cache
-C:\Users\AgileDev\OneDrive - Prisma Hanil\Documentos\GitHub\Reporteador\Korima_Reporteador\obj\x86\Debug\Korima_Reporteador.exe.licenses
 C:\Users\AgileDev\OneDrive - Prisma Hanil\Documentos\GitHub\Reporteador\Korima_Reporteador\obj\x86\Debug\Korima_Reporteador.exe.manifest
 C:\Users\AgileDev\OneDrive - Prisma Hanil\Documentos\GitHub\Reporteador\Korima_Reporteador\obj\x86\Debug\Korima_Reporteador.application
 C:\Users\AgileDev\OneDrive - Prisma Hanil\Documentos\GitHub\Reporteador\Korima_Reporteador\obj\x86\Debug\Korima_Reporteador.RPT_ConsultaEstadodelEjerciciodelPresupuesto_Rec.resources
