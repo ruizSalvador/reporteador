@@ -1723,14 +1723,23 @@ Where NumeroCuenta like '____'+Replicate('0', @Estructura1 + -4)+'-'+ @CerosEstr
  SaldoAcreedor = (Select ISNULL(SUM(SaldoAcreedor),0) FROM #BalanzaAcu Where NumeroCuenta in ('52520-04521') )
  Where IdCuenta = 624
 
-     Update C_BalanzaASEJ set
+ --    Update C_BalanzaASEJ set
+ --CargosSinFlujo = (Select ISNULL(SUM(CargosSinFlujo),0) FROM #BalanzaAcu Where NumeroCuenta in ('52620-04641') ),
+ --AbonosSinFlujo = (Select ISNULL(SUM(AbonosSinFlujo),0) FROM #BalanzaAcu Where NumeroCuenta in ('52620-04641') ),
+ --TotalCargos = (Select ISNULL(SUM(TotalCargos),0) FROM #BalanzaAcu Where NumeroCuenta in ('52620-04641') ),
+ --TotalAbonos = (Select ISNULL(SUM(TotalAbonos),0) FROM #BalanzaAcu Where NumeroCuenta in ('52620-04641') ),
+ --SaldoDeudor = (Select ISNULL(SUM(SaldoDeudor),0) FROM #BalanzaAcu Where NumeroCuenta in ('52620-04641') ),
+ --SaldoAcreedor = (Select ISNULL(SUM(SaldoAcreedor),0) FROM #BalanzaAcu Where NumeroCuenta in ('52620-04641') )
+ --Where IdCuenta = 629
+
+      Update C_BalanzaASEJ set
  CargosSinFlujo = (Select ISNULL(SUM(CargosSinFlujo),0) FROM #BalanzaAcu Where NumeroCuenta in ('52620-04641') ),
  AbonosSinFlujo = (Select ISNULL(SUM(AbonosSinFlujo),0) FROM #BalanzaAcu Where NumeroCuenta in ('52620-04641') ),
  TotalCargos = (Select ISNULL(SUM(TotalCargos),0) FROM #BalanzaAcu Where NumeroCuenta in ('52620-04641') ),
  TotalAbonos = (Select ISNULL(SUM(TotalAbonos),0) FROM #BalanzaAcu Where NumeroCuenta in ('52620-04641') ),
  SaldoDeudor = (Select ISNULL(SUM(SaldoDeudor),0) FROM #BalanzaAcu Where NumeroCuenta in ('52620-04641') ),
  SaldoAcreedor = (Select ISNULL(SUM(SaldoAcreedor),0) FROM #BalanzaAcu Where NumeroCuenta in ('52620-04641') )
- Where IdCuenta = 629
+ Where IdCuenta = 636
 
    Update C_BalanzaASEJ set
  CargosSinFlujo = (Select ISNULL(SUM(CargosSinFlujo),0) FROM #BalanzaAcu Where NumeroCuenta in ('54110-09211') ),
