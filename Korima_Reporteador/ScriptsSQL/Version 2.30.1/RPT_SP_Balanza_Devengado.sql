@@ -11,7 +11,7 @@ SET QUOTED_IDENTIFIER ON
 GO
 
 
--- Exec RPT_SP_Balanza_Devengado '20200101','20201231'
+-- Exec RPT_SP_Balanza_Devengado '20200101','20200131'
 CREATE PROCEDURE [dbo].[RPT_SP_Balanza_Devengado]
 
 --@Ejercicio int,
@@ -96,7 +96,7 @@ SELECT
 	'0' as SS_CUENTA,
 	'' as DESC_SS_CUENTA,
 
-	RIGHT(TRIM(CC.NumeroCuenta),5) as SS_CUENTA_ESP,
+	RIGHT(LTRIM(RTRIM(CC.NumeroCuenta)),5) as SS_CUENTA_ESP,
 CC.NombreCuenta  as DESC_SSCUENTA,
 --CC.NumeroCuenta,
 
@@ -178,7 +178,7 @@ LEFT JOIN @SaldosFinales Finales  ON Finales.IdCuenta = D_Polizas.IdCuentaContab
 	'0' as SS_CUENTA,
 	'' as DESC_SS_CUENTA,
 
-	RIGHT(TRIM(CC.NumeroCuenta),5) as SS_CUENTA_ESP,
+	RIGHT(LTRIM(RTRIM(CC.NumeroCuenta)),5) as SS_CUENTA_ESP,
 CC.NombreCuenta  as DESC_SSCUENTA,
 --CC.NumeroCuenta,
 --T_Polizas.IdPoliza,
@@ -224,6 +224,11 @@ LEFT JOIN @SaldosFinales Finales  ON Finales.IdCuenta = D_Polizas.IdCuentaContab
 
 
 END
+
+GO 
+
+Exec SP_CFG_LogScripts 'RPT_SP_Balanza_Devengado','2.30.1'
+GO
 
 			
 

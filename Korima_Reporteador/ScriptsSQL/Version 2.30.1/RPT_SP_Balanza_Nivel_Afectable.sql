@@ -11,7 +11,7 @@ SET QUOTED_IDENTIFIER ON
 GO
 
 
---Exec RPT_SP_Balanza_Nivel_Afectable 2020
+--Exec RPT_SP_Balanza_Nivel_Afectable 2020,1,1
 CREATE PROCEDURE [dbo].[RPT_SP_Balanza_Nivel_Afectable]
 
 @Ejercicio int,
@@ -158,7 +158,7 @@ SELECT
 	0 as SS_CUENTA,
 	'' as DESC_SS_CUENTA,
 
-	RIGHT(TRIM(CC.NumeroCuenta),5) as SS_CUENTA_ESP,
+	RIGHT(LTRIM(RTRIM(CC.NumeroCuenta)),5) as SS_CUENTA_ESP,
 CC.NombreCuenta  as DESC_SSCUENTA,
 --CC.NumeroCuenta,
 
@@ -240,7 +240,7 @@ SELECT
 	0 as SS_CUENTA,
 	'' as DESC_SS_CUENTA,
 
-	RIGHT(TRIM(CC.nocuenta),5) as SS_CUENTA_ESP,
+	RIGHT(LTRIM(RTRIM(CC.nocuenta)),5) as SS_CUENTA_ESP,
 CC.nombre  as DESC_SSCUENTA,
 
 			
@@ -265,5 +265,10 @@ END
 
 --Select * from VW_C_Contable
 			
+GO 
+
+Exec SP_CFG_LogScripts 'RPT_SP_Balanza_Nivel_Afectable','2.30.1'
+GO
+
 
 
