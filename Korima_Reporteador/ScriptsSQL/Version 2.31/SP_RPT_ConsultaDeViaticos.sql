@@ -2,11 +2,13 @@
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[SP_RPT_ConsultaDeViaticos]') AND type in (N'P', N'PC'))
 DROP PROCEDURE [dbo].[SP_RPT_ConsultaDeViaticos]
 GO
+
 /****** Object:  StoredProcedure [dbo].[SP_RPT_ConsultaDeViaticos]    Script Date: 10/26/2016 12:34:36 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
+
 
 --EXEC SP_RPT_ConsultaDeViaticos '20200101','20201231'
 CREATE PROCEDURE [dbo].[SP_RPT_ConsultaDeViaticos] 
@@ -24,9 +26,11 @@ DECLARE @edo nvarchar(200)
 DECLARE Solicitudes CURSOR FOR SELECT IdSolicitudCheques FROM T_SolicitudCheques WHERE IdTipoMovimiento = 397
 
 
+
 	IF EXISTS (SELECT * FROM sysobjects WHERE type = 'U' AND name = 'Temp_Destinos')
 		BEGIN
 			DELETE FROM Temp_Destinos
+			
 		END
 	ELSE
 		BEGIN
@@ -85,8 +89,8 @@ SELECT Year(Fecha) as 'Periodo',  Datename(mm,Fecha) as 'Mes',
 	   '1' as 'Acompañantes',
 	   'NA' as 'Importe Acompañantes',
 	   'México' as 'País',
-	   'Jalisco' as 'Estado',
-	   'Guadalajara' as 'Ciudad',
+	   (Select top 1 EntidadFederativa from RPT_CFG_DatosEntes) as 'Estado',
+	   (Select top 1 Ciudad from RPT_CFG_DatosEntes) as 'Ciudad',
 	   'México' as 'País Destino',
 	   cd_Destino as 'Estado Destino',
 	    Destino as 'Ciudad destino',
