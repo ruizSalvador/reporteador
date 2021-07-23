@@ -128,7 +128,7 @@ Public Class CtrlUser_RPT_Estado_Situacion_FinancieraDetallado
 
         'Firmas 
         Dim adapterD As SqlClient.SqlDataAdapter
-        adapterD = New SqlClient.SqlDataAdapter("SELECT * FROM VW_RPT_K2_Firmas2 where Formato = 'Estado de situacion financiera LDF' and (Nombre1 <>'' or Puesto1 <> '' or Nombre2 <>'' or Puesto2<>'') Order by Orden ", cnnString)
+        adapterD = New SqlClient.SqlDataAdapter("SELECT * FROM VW_RPT_K2_Firmas2 where Formato = 'LDF Estado de situacion financiera' and (Nombre1 <>'' or Puesto1 <> '' or Nombre2 <>'' or Puesto2<>'') Order by Orden ", cnnString)
         Dim dsD As New DataSet()
         dsD.EnforceConstraints = False
         adapterD.Fill(dsD, "VW_RPT_K2_Firmas2")
@@ -158,7 +158,7 @@ Public Class CtrlUser_RPT_Estado_Situacion_FinancieraDetallado
             ultimo = ultimo.AddDays(-ultimo.Day + 1).AddMonths(1).AddDays(-1)
             .lblFechaRango.Text = "Al 31  de Diciembre de " + (primero.Year - 1).ToString + " Y Al " + primero.Day.ToString + " de " + MesLetra(primero.Month) + " de " + primero.Year.ToString
             .XrLblUsr.Text = "Generado por: " + MDI_Principal.strUsuario
-            Dim cmd As New SqlCommand("SELECT TOP(1) T_Firmas.CodigoISO FROM C_Formatos JOIN T_Firmas ON C_Formatos.IdFormato = T_Firmas.IdFormato  Where Formato='Estado de situacion financiera LDF' ", New SqlConnection(cnnString))
+            Dim cmd As New SqlCommand("SELECT TOP(1) T_Firmas.CodigoISO FROM C_Formatos JOIN T_Firmas ON C_Formatos.IdFormato = T_Firmas.IdFormato  Where Formato='LDF Estado de situacion financiera' ", New SqlConnection(cnnString))
             cmd.Connection.Open()
             Dim reader = cmd.ExecuteScalar()
             cmd.Connection.Close()

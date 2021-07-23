@@ -151,7 +151,7 @@ Public Class CtrlUser_RPT_EstadoAnalitico_EjercicioPresupuestoEgresosDetallado_L
                 Me.TITULO = "Clasificación Administrativa"
                 Me.nomTipoReporte = "Concepto "
                 Me.nomTipoClaves = "" '"Ramo"
-                Me.FIRMAS = "Clasificación Administrativa-Dependencia"
+                Me.FIRMAS = "LDF Clasificación Administrativa"
                 'Me.chkAprAnual.Visible = True
                 'Me.ChkAmpRed.Visible = True
                 'rpt = New RPT_EstadoEjercicioPresupuestal2Colum()
@@ -196,7 +196,7 @@ Public Class CtrlUser_RPT_EstadoAnalitico_EjercicioPresupuestoEgresosDetallado_L
                 Me.TITULO = "Clasificación por Objeto del Gasto (Capitulo y Concepto)"
                 Me.nomTipoReporte = "Concepto"
                 Me.nomTipoClaves = "Capítulo"
-                Me.FIRMAS = "Clasificación por Objeto del Gasto (Cap-Con)"
+                Me.FIRMAS = "LDF Clasificación por Objeto Gasto(Capitulo y Concepto)"
                 'Me.chkAprAnual.Visible = True
                 'Me.ChkAmpRed.Visible = True
                 'rpt = New RPT_EstadoEjercicioPresupuestal2Niveles()
@@ -208,7 +208,7 @@ Public Class CtrlUser_RPT_EstadoAnalitico_EjercicioPresupuestoEgresosDetallado_L
                 Me.TITULO = "Clasificación Funcional (Finalidad y Función)"
                 Me.nomTipoReporte = "CONCEPTO"
                 Me.nomTipoClaves = "" '"Finalidad"
-                Me.FIRMAS = "Clasificación Funcional (Finalidad Y Función)"
+                Me.FIRMAS = "LDF Clasificación Funcional (Finalidad Y Función)"
                 'Me.chkAprAnual.Visible = True
                 'Me.ChkAmpRed.Visible = True
                 'rpt = New RPT_EstadoEjercicioPresupuestal2Niveles3Colum()
@@ -551,7 +551,7 @@ Public Class CtrlUser_RPT_EstadoAnalitico_EjercicioPresupuestoEgresosDetallado_L
         'Firmas 
         Dim adapterC As SqlClient.SqlDataAdapter
         'adapterC = New SqlClient.SqlDataAdapter("SELECT * FROM VW_RPT_K2_Firmas where Formato = 'Estado Analitico De Ingresos por Rubro' and (Nombre1 <>'' or Puesto1 <> '' or Nombre2 <>'' or Puesto2<>'') Order by Orden ", cnnString)
-        adapterC = New SqlClient.SqlDataAdapter("SELECT * FROM VW_RPT_K2_Firmas2 where Formato = 'Estado sobre el Ejercicio de los Ingresos por Rubro' and (Nombre1 <>'' or Puesto1 <> '' or Nombre2 <>'' or Puesto2<>'') Order by Orden ", cnnString)
+        adapterC = New SqlClient.SqlDataAdapter("SELECT * FROM VW_RPT_K2_Firmas2 where Formato = " & "'" & Me.FIRMAS & "' and (Nombre1 <>'' or Puesto1 <> '' or Nombre2 <>'' or Puesto2<>'') Order by Orden ", cnnString)
         Dim dsC As New DataSet()
         dsC.EnforceConstraints = False
         adapterC.Fill(dsC, "VW_RPT_K2_Firmas2")
@@ -608,7 +608,7 @@ Public Class CtrlUser_RPT_EstadoAnalitico_EjercicioPresupuestoEgresosDetallado_L
             End If
             .lblRptTituloTipo.Text = nomTipoReporte
             .XrLblUsr.Text = "Generado por: " + MDI_Principal.strUsuario
-            Dim cmd As New SqlCommand("SELECT TOP(1) T_Firmas.CodigoISO FROM C_Formatos JOIN T_Firmas ON C_Formatos.IdFormato = T_Firmas.IdFormato  Where Formato='Estado Analitico De Ingresos por Rubro' ", New SqlConnection(cnnString))
+            Dim cmd As New SqlCommand("SELECT TOP(1) T_Firmas.CodigoISO FROM C_Formatos JOIN T_Firmas ON C_Formatos.IdFormato = T_Firmas.IdFormato  Where Formato= '" & FIRMAS & "'", New SqlConnection(cnnString))
             cmd.Connection.Open()
             Dim reader = cmd.ExecuteScalar()
             cmd.Connection.Close()
