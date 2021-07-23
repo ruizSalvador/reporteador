@@ -972,7 +972,7 @@ EXEC SP_FirmasReporte 'Clasificacion por Objeto Gasto(Capitulo y Concepto)'
 
 go 
 
-Exec SP_CFG_LogScripts 'SP_EstadoAnaliticoEjercicio_PresupuestoEgresosDetallado_NoEtiquetado','2.30'
+Exec SP_CFG_LogScripts 'SP_EstadoAnaliticoEjercicio_PresupuestoEgresosDetallado_NoEtiquetado','2.30.1'
 GO
 --exec SP_EstadoAnaliticoEjercicio_PresupuestoEgresosDetallado_NoEtiquetado @Mes=9,@Mes2=9,@Ejercicio=2017,@MuestraCeros=1,@Tipo=7
 --exec SP_EstadoAnaliticoEjercicio_PresupuestoEgresosDetallado_NoEtiquetado @Mes=0,@Mes2=0,@Ejercicio=2017,@MuestraCeros=1,@Tipo=7

@@ -233,5 +233,5 @@ Order by F1 desc
 
 GO
 
-Exec SP_CFG_LogScripts 'SP_RPT_LayoutEgresos','2.30'
+Exec SP_CFG_LogScripts 'SP_RPT_LayoutEgresos','2.30.1'
 GO

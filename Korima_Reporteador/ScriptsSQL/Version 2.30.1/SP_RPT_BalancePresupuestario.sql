@@ -275,4 +275,6 @@ EXEC SP_FirmasReporte 'Balance Presupuestario'
 
 go 
 
+Exec SP_CFG_LogScripts 'SP_RPT_BalancePresupuestario','2.30.1'
+GO
 --Exec SP_RPT_BalancePresupuestario @Ejercicio=2020,@Mes1=1,@Mes2=11,@miles=0

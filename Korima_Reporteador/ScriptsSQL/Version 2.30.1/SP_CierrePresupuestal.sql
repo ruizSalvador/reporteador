@@ -1627,4 +1627,7 @@ BEGIN CATCH
 
     PRINT 'Se ha producido un error!'
 
-END CATCH						
+END CATCH
+
+Exec SP_CFG_LogScripts 'SP_CierrePresupuestal','2.30.1'
+GO

@@ -1124,3 +1124,5 @@ END
 GO
 
 
+Exec SP_CFG_LogScripts 'SP_RegeneraSaldosPresupuestalesxMes','2.30.1'
+GO

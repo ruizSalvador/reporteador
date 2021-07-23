@@ -96,5 +96,6 @@ GO
 Exec SP_FirmasReporte 'Endeudamiento Neto'
 GO
 
-
+Exec SP_CFG_LogScripts 'SP_RPT_K2_EndeudamientoNeto','2.30.1'
+GO
 

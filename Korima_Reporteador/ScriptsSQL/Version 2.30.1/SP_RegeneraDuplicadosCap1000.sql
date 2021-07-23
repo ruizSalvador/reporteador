@@ -139,3 +139,6 @@ order by IdSelloPresupuestal
 					DEALLOCATE CICLOREGENERA
 	
 END
+
+Exec SP_CFG_LogScripts 'SP_RegeneraDuplicadosCap1000','2.30.1'
+GO

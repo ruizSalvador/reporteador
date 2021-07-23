@@ -701,6 +701,6 @@ select * from @tabla2 where NumeroCuentaContable <> @cta order by Fecha,Numero,N
 --Select * from @tabla2
 
  GO
- Exec SP_CFG_LogScripts 'SP_RPT_K2_AuxiliarMayor','2.30'
+ Exec SP_CFG_LogScripts 'SP_RPT_K2_AuxiliarMayor','2.30.1'
 GO
 

@@ -498,6 +498,8 @@ END
 EXEC SP_FirmasReporte 'Clasificacion por Objeto Gasto(Capitulo y Concepto)'  
 
 go 
+Exec SP_CFG_LogScripts 'SP_EstadoAnaliticoEjercicio_PresupuestoEgresosDetallado_Etiquetado','2.30.1'
+GO
 
 --exec SP_EstadoAnaliticoEjercicio_PresupuestoEgresosDetallado_Etiquetado @Mes=1,@Mes2=11,@Ejercicio=2017,@MuestraCeros=1,@Tipo=6
 --exec SP_EstadoAnaliticoEjercicio_PresupuestoEgresosDetallado_Etiquetado @Mes=12,@Mes2=12,@Ejercicio=2017,@MuestraCeros=1,@Tipo=7

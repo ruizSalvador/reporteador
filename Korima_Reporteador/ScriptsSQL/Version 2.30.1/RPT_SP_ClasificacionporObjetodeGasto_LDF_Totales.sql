@@ -401,3 +401,6 @@ BEGIN
 END
 
 END
+
+Exec SP_CFG_LogScripts 'RPT_SP_ClasificacionporObjetodeGasto_LDF_Totales','2.30.1'
+GO

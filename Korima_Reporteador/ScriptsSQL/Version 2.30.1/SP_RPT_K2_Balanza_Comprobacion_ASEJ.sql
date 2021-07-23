@@ -2949,4 +2949,6 @@ DROP TABLE #BalanzaAcu
 END
 
 GO
+Exec SP_CFG_LogScripts 'RPT_SP_K2_Balanza_Comprobacion_ASEJ','2.30.1'
+GO
 

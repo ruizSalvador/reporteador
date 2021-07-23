@@ -8787,3 +8787,6 @@ Where NumeroCuenta like '8%'
                     /* Add log and history optional*/
 		
 END
+
+Exec SP_CFG_LogScripts 'RPT_SP_Actualiza_Tabla_BalanzaASEJ','2.30.1'
+GO

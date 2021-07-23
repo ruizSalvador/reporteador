@@ -103,3 +103,6 @@ CCG.Clave, CTG.Clave
 Order by NumeroCuenta
 
 END
+
+Exec SP_CFG_LogScripts 'SP_Layout_Presupuestal','2.30.1'
+GO

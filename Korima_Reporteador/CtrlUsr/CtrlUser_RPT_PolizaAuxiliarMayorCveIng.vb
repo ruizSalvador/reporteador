@@ -38,7 +38,7 @@ Public Class CtrlUser_RPT_PolizaAuxiliarMayorCveIng
         'If (srchSello1.Text.Trim = "n") Then
         '    If (srchSello1.Text.Trim = "") Then ErrorProvider1.SetError(srchSello1, "Debe Indicar el sello presupuestal")
         '    Exit Sub
-        'End If
+        'End IfFil
         'If (FiltroSello.Text = "" And LUE_RangoA.Text <> "") Or (FiltroSello.Text <> "" And LUE_RangoA.Text = "") Then
         '    MessageBox.Show("Debe seleccionar ambos rangos", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information)
         '    Exit Sub
@@ -59,23 +59,24 @@ Public Class CtrlUser_RPT_PolizaAuxiliarMayorCveIng
         SQLmConnStr = cnnString
         strFiltro = ""
         Dim i As Integer
-        i = FilterCuenta.GetColumnValue("Nivel")
+        i = srchFilterCuenta.Properties.View.GetFocusedRowCellValue("Nivel")
 
 
         ErrorProvider1.Clear()
-        If (FilterCuenta.Text <> "") Then
-            If FilterCuenta.GetColumnValue("Nivel") = 0 Then
-                strFiltro = strFiltro & FilterCuenta.Text.Substring(0, 1)
-            ElseIf FilterCuenta.GetColumnValue("Nivel") = 1 Then
-                strFiltro = strFiltro & FilterCuenta.Text.Substring(0, 2)
-            ElseIf FilterCuenta.GetColumnValue("Nivel") = 2 Then
-                strFiltro = strFiltro & FilterCuenta.Text.Substring(0, 3)
-            ElseIf FilterCuenta.GetColumnValue("Nivel") = 3 Then
-                strFiltro = strFiltro & FilterCuenta.Text.Substring(0, 4)
-            ElseIf FilterCuenta.GetColumnValue("Nivel") = 4 Then
-                strFiltro = strFiltro & FilterCuenta.Text.Substring(0, 5)
+        If (srchFilterCuenta.Text <> "") Then
+            If srchFilterCuenta.Properties.View.GetFocusedRowCellValue("Nivel") = 0 Then
+                strFiltro = strFiltro & srchFilterCuenta.Text.Substring(0, 1)
+            ElseIf srchFilterCuenta.Properties.View.GetFocusedRowCellValue("Nivel") = 1 Then
+                strFiltro = strFiltro & srchFilterCuenta.Text.Substring(0, 2)
+            ElseIf srchFilterCuenta.Properties.View.GetFocusedRowCellValue("Nivel") = 2 Then
+                strFiltro = strFiltro & srchFilterCuenta.Text.Substring(0, 3)
+            ElseIf srchFilterCuenta.Properties.View.GetFocusedRowCellValue("Nivel") = 3 Then
+                strFiltro = strFiltro & srchFilterCuenta.Text.Substring(0, 4)
+            ElseIf srchFilterCuenta.Properties.View.GetFocusedRowCellValue("Nivel") = 4 Then
+                strFiltro = strFiltro & srchFilterCuenta.Text.Substring(0, 5)
             Else 'If filterProveedor1.Properties.KeyValue = 5 Then
-                strFiltro = FilterCuenta.Text
+                strFiltro = srchFilterCuenta.Text
+
             End If
         End If
 
@@ -102,15 +103,15 @@ Public Class CtrlUser_RPT_PolizaAuxiliarMayorCveIng
         SQLConexion.Open()
         Dim SQLComando As New SqlCommand("SP_RPT_K2_AuxiliarMayorCveIng", SQLConexion)
         SQLComando.CommandType = CommandType.StoredProcedure
-        If FilterCuenta.Text.Trim <> "" Then
+        If srchFilterCuenta.Text.Trim <> "" Then
             SQLComando.Parameters.Add(New SqlParameter("@NumeroCuenta", ""))
             SQLComando.Parameters.Add(New SqlParameter("@CuentaAcumulable", strFiltro))
         End If
-        If FilterCuentaAfectable.Text.Trim <> "" Then
-            SQLComando.Parameters.Add(New SqlParameter("@NumeroCuenta", FilterCuentaAfectable.Text.Trim))
-            SQLComando.Parameters.Add(New SqlParameter("@CuentaAcumulable", FilterCuentaAfectable.Text.Trim))
+        If srchFilterCuentaAfectable.Text.Trim <> "" Then
+            SQLComando.Parameters.Add(New SqlParameter("@NumeroCuenta", srchFilterCuentaAfectable.Text.Trim))
+            SQLComando.Parameters.Add(New SqlParameter("@CuentaAcumulable", srchFilterCuentaAfectable.Text.Trim))
         End If
-        If FilterCuentaAfectable.Text.Trim = "" And FilterCuenta.Text.Trim = "" Then
+        If srchFilterCuentaAfectable.Text.Trim = "" And srchFilterCuenta.Text.Trim = "" Then
             SQLComando.Parameters.Add(New SqlParameter("@NumeroCuenta", ""))
             SQLComando.Parameters.Add(New SqlParameter("@CuentaAcumulable", ""))
         End If
@@ -239,6 +240,23 @@ Public Class CtrlUser_RPT_PolizaAuxiliarMayorCveIng
             '.ShowHeader = True
         End With
 
+        With srchFilterCuenta.Properties
+            .DataSource = ObjTempSQL2.List(" NumeroCuenta Like '____0-00000' or numerocuenta like '____0-000000' or numerocuenta like '_____0-000000' or numerocuenta like '_____0-00000'", 0, "C_Contable", " Order by NumeroCuenta ")
+            .DisplayMember = "NumeroCuenta"
+            .ValueMember = "NumeroCuenta"
+            '.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoFilter
+            .NullText = ""
+            '.ShowHeader = True
+        End With
+        With srchFilterCuentaAfectable.Properties
+            '.DataSource = ObjTempSQL2.List(" nivel >= 4", 0, "C_Contable", " Order by NumeroCuenta ")
+            .DataSource = ObjTempSQL2.List(" Afectable =1 AND Nivel >=0 ", 0, "C_Contable", " Order by NumeroCuenta ")
+            .DisplayMember = "NumeroCuenta"
+            .ValueMember = "IdCuentaContable"
+            '.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoFilter
+            .NullText = ""
+            '.ShowHeader = True
+        End With
         'With FilterSello.Properties
         '    .DataSource = ObjTempSQL2.List(" lYear = " & FilterEjercicio.Text, 0, "T_SellosPresupuestales", " Order by IdSelloPresupuestal ")
         '    .DisplayMember = "Sello"
@@ -248,23 +266,7 @@ Public Class CtrlUser_RPT_PolizaAuxiliarMayorCveIng
         '    .ShowHeader = True
         'End With
 
-        With FilterCuenta.Properties
-            .DataSource = ObjTempSQL2.List(" NumeroCuenta Like '____0-00000' or numerocuenta like '____0-000000'", 0, "C_Contable", " Order by NumeroCuenta ")
-            .DisplayMember = "NumeroCuenta"
-            .ValueMember = "NumeroCuenta"
-            .SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoFilter
-            .NullText = ""
-            .ShowHeader = True
-        End With
-        With FilterCuentaAfectable.Properties
-            '.DataSource = ObjTempSQL2.List(" nivel >= 4", 0, "C_Contable", " Order by NumeroCuenta ")
-            .DataSource = ObjTempSQL2.List(" Afectable =1 AND Nivel >=0 ", 0, "C_Contable", " Order by NumeroCuenta ")
-            .DisplayMember = "NumeroCuenta"
-            .ValueMember = "NumeroCuenta"
-            .SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoFilter
-            .NullText = ""
-            .ShowHeader = True
-        End With
+       
         'With FiltroSello.Properties
 
         '    .DataSource = ObjTempSQL2.List(" lYear = " & FilterEjercicio.Text, 0, "T_SellosPresupuestales", " Order by IdSelloPresupuestal ")
@@ -293,12 +295,12 @@ Public Class CtrlUser_RPT_PolizaAuxiliarMayorCveIng
     End Sub
 
     Private Sub SimpleButton4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SimpleButton4.Click
-        FilterCuenta.Properties.DataSource = Nothing
-        FilterCuenta.Properties.NullText = ""
-        FilterCuentaAfectable.Enabled = True
+        srchFilterCuenta.Properties.DataSource = Nothing
+        srchFilterCuenta.Properties.NullText = ""
+        srchFilterCuentaAfectable.Enabled = True
         SimpleButton2.Enabled = True
 
-        If FilterCuentaAfectable.Text = "" Then
+        If srchFilterCuentaAfectable.Text = "" Then
             LUE_RangoA.Enabled = True
             'FiltroSello.Enabled = True
             'SimpleButton3.Enabled = True
@@ -306,34 +308,34 @@ Public Class CtrlUser_RPT_PolizaAuxiliarMayorCveIng
         End If
     End Sub
 
-    Private Sub filterProveedor_GotFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles FilterCuenta.GotFocus
+    Private Sub srchFilterCuenta_GotFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles srchFilterCuenta.GotFocus
 
         Dim ObjTempSQL2 As New clsRPT_CFG_DatosEntesCtrl
-        With FilterCuenta.Properties
-            .DataSource = ObjTempSQL2.List(" NumeroCuenta Like '____0-00000' or numerocuenta like '____0-000000'", 0, "C_Contable", " Order by NumeroCuenta ")
+        With srchFilterCuenta.Properties
+            .DataSource = ObjTempSQL2.List(" NumeroCuenta Like '____0-00000' or numerocuenta like '____0-000000' or numerocuenta like '_____0-000000' or numerocuenta like '_____0-00000'", 0, "C_Contable", " Order by NumeroCuenta ")
             .DisplayMember = "NumeroCuenta"
             .ValueMember = "NumeroCuenta"
-            .SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoFilter
+            '.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoFilter
             .NullText = ""
-            .ShowHeader = True
+            '.ShowHeader = True
         End With
     End Sub
-    Private Sub FilterCuentaAfectable_GotFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles FilterCuentaAfectable.GotFocus
+    Private Sub srchFilterCuentaAfectable_GotFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles srchFilterCuentaAfectable.GotFocus
 
         Dim ObjTempSQL2 As New clsRPT_CFG_DatosEntesCtrl
-        With FilterCuentaAfectable.Properties
+        With srchFilterCuentaAfectable.Properties
             '.DataSource = ObjTempSQL2.List(" nivel >= 4", 0, "C_Contable", " Order by NumeroCuenta ")
-            .DataSource = ObjTempSQL2.List(" Afectable =1 and Nivel >=0 ", 0, "C_Contable", " Order by NumeroCuenta ")
+            .DataSource = ObjTempSQL2.List(" Afectable =1 AND Nivel >=0 ", 0, "C_Contable", " Order by NumeroCuenta ")
             .DisplayMember = "NumeroCuenta"
-            .ValueMember = "NumeroCuenta"
-            .SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoFilter
+            .ValueMember = "IdCuentaContable"
+            '.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoFilter
             .NullText = ""
-            .ShowHeader = True
+            '.ShowHeader = True
         End With
     End Sub
 
-    Private Sub FilterCuenta_EditValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles FilterCuenta.EditValueChanged
-        FilterCuentaAfectable.Enabled = False
+    Private Sub srchFilterCuenta_EditValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles srchFilterCuenta.EditValueChanged
+        srchFilterCuentaAfectable.Enabled = False
         SimpleButton2.Enabled = False
         'lookups inferiores
         LUE_RangoA.Enabled = False
@@ -342,8 +344,8 @@ Public Class CtrlUser_RPT_PolizaAuxiliarMayorCveIng
         SimpleButton5.Enabled = False
     End Sub
 
-    Private Sub FilterCuentaAfectable_EditValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles FilterCuentaAfectable.EditValueChanged
-        FilterCuenta.Enabled = False
+    Private Sub srchFilterCuentaAfectable_EditValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles srchFilterCuentaAfectable.EditValueChanged
+        srchFilterCuenta.Enabled = False
         SimpleButton4.Enabled = False
         'lookups inferiores
         LUE_RangoA.Enabled = False
@@ -353,11 +355,11 @@ Public Class CtrlUser_RPT_PolizaAuxiliarMayorCveIng
     End Sub
 
     Private Sub SimpleButton2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SimpleButton2.Click
-        FilterCuentaAfectable.Properties.DataSource = Nothing
-        FilterCuentaAfectable.Properties.NullText = ""
-        FilterCuenta.Enabled = True
+        srchFilterCuentaAfectable.Properties.DataSource = Nothing
+        srchFilterCuentaAfectable.Properties.NullText = ""
+        srchFilterCuenta.Enabled = True
         SimpleButton4.Enabled = True
-        If FilterCuenta.Text = "" Then
+        If srchFilterCuenta.Text = "" Then
             LUE_RangoA.Enabled = True
             'FiltroSello.Enabled = True
             'SimpleButton3.Enabled = True
@@ -369,8 +371,8 @@ Public Class CtrlUser_RPT_PolizaAuxiliarMayorCveIng
         srchSello2.Properties.DataSource = Nothing
         srchSello2.Properties.NullText = ""
         If LUE_RangoA.Text = "" Then
-            FilterCuenta.Enabled = True
-            FilterCuentaAfectable.Enabled = True
+            srchFilterCuenta.Enabled = True
+            srchFilterCuentaAfectable.Enabled = True
             SimpleButton2.Enabled = True
             SimpleButton4.Enabled = True
         End If
@@ -380,8 +382,8 @@ Public Class CtrlUser_RPT_PolizaAuxiliarMayorCveIng
         LUE_RangoA.Properties.DataSource = Nothing
         LUE_RangoA.Properties.NullText = ""
         If srchSello2.Text = "" Then
-            FilterCuenta.Enabled = True
-            FilterCuentaAfectable.Enabled = True
+            srchFilterCuenta.Enabled = True
+            srchFilterCuentaAfectable.Enabled = True
             SimpleButton2.Enabled = True
             SimpleButton4.Enabled = True
         End If
@@ -472,19 +474,19 @@ Public Class CtrlUser_RPT_PolizaAuxiliarMayorCveIng
     End Sub
 
     Private Sub LUE_RangoA_EditValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles LUE_RangoA.EditValueChanged
-        FilterCuenta.Enabled = False
-        FilterCuentaAfectable.Enabled = False
+        srchFilterCuenta.Enabled = False
+        srchFilterCuentaAfectable.Enabled = False
         SimpleButton2.Enabled = False
         SimpleButton4.Enabled = False
     End Sub
 
-    Private Sub FilterCuenta_EditValueChanging(ByVal sender As System.Object, ByVal e As DevExpress.XtraEditors.Controls.ChangingEventArgs) Handles FilterCuenta.EditValueChanging, FilterEjercicio.EditValueChanging
+    Private Sub FilterCuenta_EditValueChanging(ByVal sender As System.Object, ByVal e As DevExpress.XtraEditors.Controls.ChangingEventArgs) Handles FilterEjercicio.EditValueChanging
 
     End Sub
 
-    Private Sub FilterCuenta_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles FilterCuenta.Click
-        If FilterCuenta.Text <> "" Then
-            FilterCuentaAfectable.Enabled = False
+    Private Sub srchFilterCuenta_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles srchFilterCuenta.Click
+        If srchFilterCuenta.Text <> "" Then
+            srchFilterCuentaAfectable.Enabled = False
             SimpleButton2.Enabled = False
             'lookups inferiores
             LUE_RangoA.Enabled = False
@@ -494,9 +496,9 @@ Public Class CtrlUser_RPT_PolizaAuxiliarMayorCveIng
         End If
     End Sub
 
-    Private Sub FilterCuentaAfectable_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles FilterCuentaAfectable.Click
-        If FilterCuentaAfectable.Text <> "" Then
-            FilterCuenta.Enabled = False
+    Private Sub srchFilterCuentaAfectable_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles srchFilterCuentaAfectable.Click
+        If srchFilterCuentaAfectable.Text <> "" Then
+            srchFilterCuenta.Enabled = False
             SimpleButton4.Enabled = False
             'lookups inferiores
             LUE_RangoA.Enabled = False
@@ -528,8 +530,8 @@ Public Class CtrlUser_RPT_PolizaAuxiliarMayorCveIng
 
     Private Sub LUE_RangoA_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles LUE_RangoA.Click
         If LUE_RangoA.Text <> "" Then
-            FilterCuenta.Enabled = False
-            FilterCuentaAfectable.Enabled = False
+            srchFilterCuenta.Enabled = False
+            srchFilterCuentaAfectable.Enabled = False
             SimpleButton2.Enabled = False
             SimpleButton4.Enabled = False
         End If

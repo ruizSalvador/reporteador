@@ -943,8 +943,8 @@ GO
 EXEC SP_FirmasReporte 'Estado de Flujos de Efectivo EF'
 GO
 
---Exec SP_CFG_LogScripts 'SP_RPT_Flujo_de_Efectivo_EF','2.29.1'
---GO
+Exec SP_CFG_LogScripts 'SP_RPT_Flujo_de_Efectivo_EF','2.30.1'
+GO
 
 
 -- EXEC SP_RPT_Flujo_de_Efectivo_EF 2018,5,0,1,0

@@ -131,3 +131,6 @@ FROM T_cheques TCH
 END
 GO
 
+Exec SP_CFG_LogScripts 'RPT_SP_Pagado_Ejercicio','2.30.1'
+GO
+

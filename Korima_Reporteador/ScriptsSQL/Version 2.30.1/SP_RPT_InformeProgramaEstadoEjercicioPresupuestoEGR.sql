@@ -6524,3 +6524,6 @@ END
 
 
 GO
+
+Exec SP_CFG_LogScripts 'SP_RPT_InformeProgramaEstadoEjercicioPresupuestoEGR','2.30.1'
+GO

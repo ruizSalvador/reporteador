@@ -177,5 +177,6 @@ SELECT
 END
 
 			
-
+Exec SP_CFG_LogScripts 'RPT_SP_Adquisiciones_Adtvo_Devengado','2.30.1'
+GO
 

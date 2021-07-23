@@ -25,7 +25,7 @@ Partial Class CtrlUser_RPT_PolizaAuxiliarMayorCveIng
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CtrlUser_RPT_PolizaAuxiliarMayorCveIng))
         Me.SplitContainerControl1 = New DevExpress.XtraEditors.SplitContainerControl()
-        Me.srchSello2 = New DevExpress.XtraEditors.SearchLookUpEdit()
+        Me.srchFilterCuentaAfectable = New DevExpress.XtraEditors.SearchLookUpEdit()
         Me.PrintBarManager1 = New DevExpress.XtraPrinting.Preview.PrintBarManager(Me.components)
         Me.PreviewBar1 = New DevExpress.XtraPrinting.Preview.PreviewBar()
         Me.PrintPreviewBarItem4 = New DevExpress.XtraPrinting.Preview.PrintPreviewBarItem()
@@ -83,6 +83,14 @@ Partial Class CtrlUser_RPT_PolizaAuxiliarMayorCveIng
         Me.PrintPreviewBarCheckItem16 = New DevExpress.XtraPrinting.Preview.PrintPreviewBarCheckItem()
         Me.PrintPreviewBarCheckItem17 = New DevExpress.XtraPrinting.Preview.PrintPreviewBarCheckItem()
         Me.PrintControl1 = New DevExpress.XtraPrinting.Control.PrintControl()
+        Me.GridView2 = New DevExpress.XtraGrid.Views.Grid.GridView()
+        Me.GridColumn7 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.GridColumn8 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.srchFilterCuenta = New DevExpress.XtraEditors.SearchLookUpEdit()
+        Me.GridView1 = New DevExpress.XtraGrid.Views.Grid.GridView()
+        Me.GridColumn5 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.GridColumn6 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.srchSello2 = New DevExpress.XtraEditors.SearchLookUpEdit()
         Me.srchSello2View = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.GridColumn3 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridColumn4 = New DevExpress.XtraGrid.Columns.GridColumn()
@@ -102,11 +110,9 @@ Partial Class CtrlUser_RPT_PolizaAuxiliarMayorCveIng
         Me.SimpleButton3 = New DevExpress.XtraEditors.SimpleButton()
         Me.CheckBox2 = New System.Windows.Forms.CheckBox()
         Me.LabelControl3 = New DevExpress.XtraEditors.LabelControl()
-        Me.FilterCuentaAfectable = New DevExpress.XtraEditors.LookUpEdit()
         Me.LabelControl2 = New DevExpress.XtraEditors.LabelControl()
         Me.SimpleButton2 = New DevExpress.XtraEditors.SimpleButton()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
-        Me.FilterCuenta = New DevExpress.XtraEditors.LookUpEdit()
         Me.LabelControl1 = New DevExpress.XtraEditors.LabelControl()
         Me.SimpleButton4 = New DevExpress.XtraEditors.SimpleButton()
         Me.LabelControl5 = New DevExpress.XtraEditors.LabelControl()
@@ -118,18 +124,20 @@ Partial Class CtrlUser_RPT_PolizaAuxiliarMayorCveIng
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         CType(Me.SplitContainerControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainerControl1.SuspendLayout()
-        CType(Me.srchSello2.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.srchFilterCuentaAfectable.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PrintBarManager1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PrintPreviewRepositoryItemComboBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemProgressBar1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemZoomTrackBar1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.GridView2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.srchFilterCuenta.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.GridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.srchSello2.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.srchSello2View, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.srchSello1.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SearchLookUpEdit1View, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.filterFuenteFinanciamiento.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LUE_RangoA.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.FilterCuentaAfectable.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.FilterCuenta.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FilterEjercicio.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.filterPeriodoDe.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.filterPeriodoAl.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -142,6 +150,8 @@ Partial Class CtrlUser_RPT_PolizaAuxiliarMayorCveIng
         Me.SplitContainerControl1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.SplitContainerControl1.Location = New System.Drawing.Point(0, 53)
         Me.SplitContainerControl1.Name = "SplitContainerControl1"
+        Me.SplitContainerControl1.Panel1.Controls.Add(Me.srchFilterCuentaAfectable)
+        Me.SplitContainerControl1.Panel1.Controls.Add(Me.srchFilterCuenta)
         Me.SplitContainerControl1.Panel1.Controls.Add(Me.srchSello2)
         Me.SplitContainerControl1.Panel1.Controls.Add(Me.srchSello1)
         Me.SplitContainerControl1.Panel1.Controls.Add(Me.Label2)
@@ -156,11 +166,9 @@ Partial Class CtrlUser_RPT_PolizaAuxiliarMayorCveIng
         Me.SplitContainerControl1.Panel1.Controls.Add(Me.SimpleButton3)
         Me.SplitContainerControl1.Panel1.Controls.Add(Me.CheckBox2)
         Me.SplitContainerControl1.Panel1.Controls.Add(Me.LabelControl3)
-        Me.SplitContainerControl1.Panel1.Controls.Add(Me.FilterCuentaAfectable)
         Me.SplitContainerControl1.Panel1.Controls.Add(Me.LabelControl2)
         Me.SplitContainerControl1.Panel1.Controls.Add(Me.SimpleButton2)
         Me.SplitContainerControl1.Panel1.Controls.Add(Me.CheckBox1)
-        Me.SplitContainerControl1.Panel1.Controls.Add(Me.FilterCuenta)
         Me.SplitContainerControl1.Panel1.Controls.Add(Me.LabelControl1)
         Me.SplitContainerControl1.Panel1.Controls.Add(Me.SimpleButton4)
         Me.SplitContainerControl1.Panel1.Controls.Add(Me.LabelControl5)
@@ -177,16 +185,16 @@ Partial Class CtrlUser_RPT_PolizaAuxiliarMayorCveIng
         Me.SplitContainerControl1.TabIndex = 4
         Me.SplitContainerControl1.Text = "SplitContainerControl1"
         '
-        'srchSello2
+        'srchFilterCuentaAfectable
         '
-        Me.srchSello2.Location = New System.Drawing.Point(21, 243)
-        Me.srchSello2.MenuManager = Me.PrintBarManager1
-        Me.srchSello2.Name = "srchSello2"
-        Me.srchSello2.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.srchSello2.Properties.View = Me.srchSello2View
-        Me.srchSello2.Properties.ViewType = DevExpress.XtraEditors.Repository.GridLookUpViewType.GridView
-        Me.srchSello2.Size = New System.Drawing.Size(161, 20)
-        Me.srchSello2.TabIndex = 44
+        Me.srchFilterCuentaAfectable.Location = New System.Drawing.Point(15, 63)
+        Me.srchFilterCuentaAfectable.MenuManager = Me.PrintBarManager1
+        Me.srchFilterCuentaAfectable.Name = "srchFilterCuentaAfectable"
+        Me.srchFilterCuentaAfectable.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.srchFilterCuentaAfectable.Properties.View = Me.GridView2
+        Me.srchFilterCuentaAfectable.Properties.ViewType = DevExpress.XtraEditors.Repository.GridLookUpViewType.GridView
+        Me.srchFilterCuentaAfectable.Size = New System.Drawing.Size(151, 20)
+        Me.srchFilterCuentaAfectable.TabIndex = 46
         '
         'PrintBarManager1
         '
@@ -743,6 +751,76 @@ Partial Class CtrlUser_RPT_PolizaAuxiliarMayorCveIng
         Me.PrintControl1.TabIndex = 1
         Me.PrintControl1.TooltipFont = New System.Drawing.Font("Tahoma", 8.25!)
         '
+        'GridView2
+        '
+        Me.GridView2.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.GridColumn7, Me.GridColumn8})
+        Me.GridView2.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus
+        Me.GridView2.Name = "GridView2"
+        Me.GridView2.OptionsSelection.EnableAppearanceFocusedCell = False
+        Me.GridView2.OptionsView.ShowGroupPanel = False
+        '
+        'GridColumn7
+        '
+        Me.GridColumn7.Caption = "Número"
+        Me.GridColumn7.FieldName = "NumeroCuenta"
+        Me.GridColumn7.Name = "GridColumn7"
+        Me.GridColumn7.Visible = True
+        Me.GridColumn7.VisibleIndex = 0
+        '
+        'GridColumn8
+        '
+        Me.GridColumn8.Caption = "Nombre"
+        Me.GridColumn8.FieldName = "NombreCuenta"
+        Me.GridColumn8.Name = "GridColumn8"
+        Me.GridColumn8.Visible = True
+        Me.GridColumn8.VisibleIndex = 1
+        '
+        'srchFilterCuenta
+        '
+        Me.srchFilterCuenta.Location = New System.Drawing.Point(15, 23)
+        Me.srchFilterCuenta.MenuManager = Me.PrintBarManager1
+        Me.srchFilterCuenta.Name = "srchFilterCuenta"
+        Me.srchFilterCuenta.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.srchFilterCuenta.Properties.View = Me.GridView1
+        Me.srchFilterCuenta.Properties.ViewType = DevExpress.XtraEditors.Repository.GridLookUpViewType.GridView
+        Me.srchFilterCuenta.Size = New System.Drawing.Size(153, 20)
+        Me.srchFilterCuenta.TabIndex = 45
+        '
+        'GridView1
+        '
+        Me.GridView1.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.GridColumn5, Me.GridColumn6})
+        Me.GridView1.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus
+        Me.GridView1.Name = "GridView1"
+        Me.GridView1.OptionsSelection.EnableAppearanceFocusedCell = False
+        Me.GridView1.OptionsView.ShowGroupPanel = False
+        '
+        'GridColumn5
+        '
+        Me.GridColumn5.Caption = "Número"
+        Me.GridColumn5.FieldName = "NumeroCuenta"
+        Me.GridColumn5.Name = "GridColumn5"
+        Me.GridColumn5.Visible = True
+        Me.GridColumn5.VisibleIndex = 0
+        '
+        'GridColumn6
+        '
+        Me.GridColumn6.Caption = "Nombre"
+        Me.GridColumn6.FieldName = "NombreCuenta"
+        Me.GridColumn6.Name = "GridColumn6"
+        Me.GridColumn6.Visible = True
+        Me.GridColumn6.VisibleIndex = 1
+        '
+        'srchSello2
+        '
+        Me.srchSello2.Location = New System.Drawing.Point(21, 243)
+        Me.srchSello2.MenuManager = Me.PrintBarManager1
+        Me.srchSello2.Name = "srchSello2"
+        Me.srchSello2.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.srchSello2.Properties.View = Me.srchSello2View
+        Me.srchSello2.Properties.ViewType = DevExpress.XtraEditors.Repository.GridLookUpViewType.GridView
+        Me.srchSello2.Size = New System.Drawing.Size(161, 20)
+        Me.srchSello2.TabIndex = 44
+        '
         'srchSello2View
         '
         Me.srchSello2View.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.GridColumn3, Me.GridColumn4})
@@ -916,16 +994,6 @@ Partial Class CtrlUser_RPT_PolizaAuxiliarMayorCveIng
         Me.LabelControl3.TabIndex = 16
         Me.LabelControl3.Text = "Ejercicio"
         '
-        'FilterCuentaAfectable
-        '
-        Me.FilterCuentaAfectable.Location = New System.Drawing.Point(14, 59)
-        Me.FilterCuentaAfectable.MenuManager = Me.PrintBarManager1
-        Me.FilterCuentaAfectable.Name = "FilterCuentaAfectable"
-        Me.FilterCuentaAfectable.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.FilterCuentaAfectable.Properties.Columns.AddRange(New DevExpress.XtraEditors.Controls.LookUpColumnInfo() {New DevExpress.XtraEditors.Controls.LookUpColumnInfo("NumeroCuenta", 120, "Numero"), New DevExpress.XtraEditors.Controls.LookUpColumnInfo("NombreCuenta", 200, "Nombre"), New DevExpress.XtraEditors.Controls.LookUpColumnInfo("Nivel", "Nivel", 20, DevExpress.Utils.FormatType.None, "", False, DevExpress.Utils.HorzAlignment.[Default])})
-        Me.FilterCuentaAfectable.Size = New System.Drawing.Size(170, 20)
-        Me.FilterCuentaAfectable.TabIndex = 12
-        '
         'LabelControl2
         '
         Me.LabelControl2.Location = New System.Drawing.Point(14, 44)
@@ -952,16 +1020,6 @@ Partial Class CtrlUser_RPT_PolizaAuxiliarMayorCveIng
         Me.CheckBox1.TabIndex = 2
         Me.CheckBox1.Text = "Mostrar cuentas sin movimientos"
         Me.CheckBox1.UseVisualStyleBackColor = True
-        '
-        'FilterCuenta
-        '
-        Me.FilterCuenta.Location = New System.Drawing.Point(14, 21)
-        Me.FilterCuenta.MenuManager = Me.PrintBarManager1
-        Me.FilterCuenta.Name = "FilterCuenta"
-        Me.FilterCuenta.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.FilterCuenta.Properties.Columns.AddRange(New DevExpress.XtraEditors.Controls.LookUpColumnInfo() {New DevExpress.XtraEditors.Controls.LookUpColumnInfo("NumeroCuenta", 120, "Numero"), New DevExpress.XtraEditors.Controls.LookUpColumnInfo("NombreCuenta", 200, "Nombre"), New DevExpress.XtraEditors.Controls.LookUpColumnInfo("Nivel", "Nivel", 20, DevExpress.Utils.FormatType.None, "", False, DevExpress.Utils.HorzAlignment.[Default])})
-        Me.FilterCuenta.Size = New System.Drawing.Size(170, 20)
-        Me.FilterCuenta.TabIndex = 2
         '
         'LabelControl1
         '
@@ -1056,18 +1114,20 @@ Partial Class CtrlUser_RPT_PolizaAuxiliarMayorCveIng
         Me.Size = New System.Drawing.Size(752, 471)
         CType(Me.SplitContainerControl1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainerControl1.ResumeLayout(False)
-        CType(Me.srchSello2.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.srchFilterCuentaAfectable.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PrintBarManager1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PrintPreviewRepositoryItemComboBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RepositoryItemProgressBar1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RepositoryItemZoomTrackBar1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.GridView2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.srchFilterCuenta.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.GridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.srchSello2.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.srchSello2View, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.srchSello1.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SearchLookUpEdit1View, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.filterFuenteFinanciamiento.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LUE_RangoA.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.FilterCuentaAfectable.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.FilterCuenta.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.FilterEjercicio.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.filterPeriodoDe.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.filterPeriodoAl.Properties, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1139,9 +1199,7 @@ Partial Class CtrlUser_RPT_PolizaAuxiliarMayorCveIng
     Friend WithEvents ErrorProvider1 As System.Windows.Forms.ErrorProvider
     Friend WithEvents LabelControl1 As DevExpress.XtraEditors.LabelControl
     Friend WithEvents SimpleButton4 As DevExpress.XtraEditors.SimpleButton
-    Friend WithEvents FilterCuenta As DevExpress.XtraEditors.LookUpEdit
     Friend WithEvents CheckBox1 As System.Windows.Forms.CheckBox
-    Friend WithEvents FilterCuentaAfectable As DevExpress.XtraEditors.LookUpEdit
     Friend WithEvents LabelControl2 As DevExpress.XtraEditors.LabelControl
     Friend WithEvents SimpleButton2 As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents LabelControl3 As DevExpress.XtraEditors.LabelControl
@@ -1167,5 +1225,13 @@ Partial Class CtrlUser_RPT_PolizaAuxiliarMayorCveIng
     Friend WithEvents srchSello2View As DevExpress.XtraGrid.Views.Grid.GridView
     Friend WithEvents GridColumn3 As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents GridColumn4 As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents srchFilterCuenta As DevExpress.XtraEditors.SearchLookUpEdit
+    Friend WithEvents GridView1 As DevExpress.XtraGrid.Views.Grid.GridView
+    Friend WithEvents srchFilterCuentaAfectable As DevExpress.XtraEditors.SearchLookUpEdit
+    Friend WithEvents GridView2 As DevExpress.XtraGrid.Views.Grid.GridView
+    Friend WithEvents GridColumn7 As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents GridColumn8 As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents GridColumn5 As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents GridColumn6 As DevExpress.XtraGrid.Columns.GridColumn
 
 End Class

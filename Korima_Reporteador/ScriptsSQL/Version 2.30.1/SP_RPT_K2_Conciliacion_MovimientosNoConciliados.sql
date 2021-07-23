@@ -172,6 +172,7 @@ END
 GO
 EXEC SP_FirmasReporte 'Conciliacion Movimientos No Conciliados'
 GO
-
+Exec SP_CFG_LogScripts 'SP_RPT_K2_Conciliacion_MovimientosNoConciliados','2.30.1'
+GO
 
 

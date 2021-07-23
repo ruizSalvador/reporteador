@@ -49,3 +49,6 @@ End
 Select * From @tmp
 
 END
+
+Exec SP_CFG_LogScripts 'SP_RPT_FoliosNoTramitados','2.30.1'
+GO
