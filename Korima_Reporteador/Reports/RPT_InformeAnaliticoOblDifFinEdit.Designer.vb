@@ -66,7 +66,6 @@ Partial Public Class RPT_InformeAnaliticoOblDifFinEdit
         Me.line2 = New DevExpress.XtraReports.UI.XRLine()
         Me.ReportFooter = New DevExpress.XtraReports.UI.ReportFooterBand()
         Me.XrSubreport1 = New DevExpress.XtraReports.UI.XRSubreport()
-        Me.RpT_FirmasVertical1 = New Korima_Reporteador.RPT_FirmasVertical()
         Me.FormattingRule1 = New DevExpress.XtraReports.UI.FormattingRule()
         Me.XrLabel5 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel10 = New DevExpress.XtraReports.UI.XRLabel()
@@ -89,10 +88,11 @@ Partial Public Class RPT_InformeAnaliticoOblDifFinEdit
         Me.XrLabel2 = New DevExpress.XtraReports.UI.XRLabel()
         Me.SumaHorizontal = New DevExpress.XtraReports.UI.CalculatedField()
         Me.EvenStyle = New DevExpress.XtraReports.UI.XRControlStyle()
+        Me.RpT_FirmasVerticalElectronica1 = New Korima_Reporteador.RPT_FirmasVerticalElectronica()
         prmNota1 = New DevExpress.XtraReports.Parameters.Parameter()
         CType(Me.DataSetBlanca1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RpT_FirmasVertical1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me._Korima2_00_ReporteadorDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RpT_FirmasVerticalElectronica1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         '
         'prmNota1
@@ -709,14 +709,14 @@ Partial Public Class RPT_InformeAnaliticoOblDifFinEdit
         Me.XrSubreport1.Dpi = 254.0!
         Me.XrSubreport1.LocationFloat = New DevExpress.Utils.PointFloat(1119.188!, 25.00001!)
         Me.XrSubreport1.Name = "XrSubreport1"
-        Me.XrSubreport1.ReportSource = Me.RpT_FirmasVertical1
+        Me.XrSubreport1.ReportSource = Me.RpT_FirmasVerticalElectronica1
         Me.XrSubreport1.SizeF = New System.Drawing.SizeF(2012.458!, 58.41992!)
         '
         'FormattingRule1
         '
         Me.FormattingRule1.Condition = "[Parameters.prmNota1]  Like  'Espacio asignado para notas%' or" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "[Parameters.prmTi" & _
-            "po]  Like  'Espacio asignado para notas%' or" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "[Parameters.prmNaturaleza] Like  '" & _
-            "Espacio asignado para notas%' "
+    "po]  Like  'Espacio asignado para notas%' or" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "[Parameters.prmNaturaleza] Like  '" & _
+    "Espacio asignado para notas%' "
         Me.FormattingRule1.DataSource = Me.DataSetBlanca1
         '
         '
@@ -822,7 +822,7 @@ Partial Public Class RPT_InformeAnaliticoOblDifFinEdit
         'XrLabel18
         '
         Me.XrLabel18.Borders = CType(((DevExpress.XtraPrinting.BorderSide.Top Or DevExpress.XtraPrinting.BorderSide.Right) _
-                    Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
+            Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
         Me.XrLabel18.BorderWidth = 1
         Me.XrLabel18.Dpi = 254.0!
         Me.XrLabel18.Font = New System.Drawing.Font("Tahoma", 8.0!, System.Drawing.FontStyle.Bold)
@@ -840,7 +840,7 @@ Partial Public Class RPT_InformeAnaliticoOblDifFinEdit
         'XrLabel17
         '
         Me.XrLabel17.Borders = CType(((DevExpress.XtraPrinting.BorderSide.Top Or DevExpress.XtraPrinting.BorderSide.Right) _
-                    Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
+            Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
         Me.XrLabel17.BorderWidth = 1
         Me.XrLabel17.Dpi = 254.0!
         Me.XrLabel17.Font = New System.Drawing.Font("Tahoma", 8.0!, System.Drawing.FontStyle.Bold)
@@ -858,7 +858,7 @@ Partial Public Class RPT_InformeAnaliticoOblDifFinEdit
         'XrLabel16
         '
         Me.XrLabel16.Borders = CType(((DevExpress.XtraPrinting.BorderSide.Top Or DevExpress.XtraPrinting.BorderSide.Right) _
-                    Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
+            Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
         Me.XrLabel16.BorderWidth = 1
         Me.XrLabel16.Dpi = 254.0!
         Me.XrLabel16.Font = New System.Drawing.Font("Tahoma", 8.0!, System.Drawing.FontStyle.Bold)
@@ -876,7 +876,7 @@ Partial Public Class RPT_InformeAnaliticoOblDifFinEdit
         'XrLabel12
         '
         Me.XrLabel12.Borders = CType(((DevExpress.XtraPrinting.BorderSide.Top Or DevExpress.XtraPrinting.BorderSide.Right) _
-                    Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
+            Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
         Me.XrLabel12.BorderWidth = 1
         Me.XrLabel12.Dpi = 254.0!
         Me.XrLabel12.Font = New System.Drawing.Font("Tahoma", 8.0!, System.Drawing.FontStyle.Bold)
@@ -889,13 +889,13 @@ Partial Public Class RPT_InformeAnaliticoOblDifFinEdit
         Me.XrLabel12.StylePriority.UseFont = False
         Me.XrLabel12.StylePriority.UseTextAlignment = False
         Me.XrLabel12.Text = "Monto promedio mensual del pago de la contraprestación correspondiente al pago de" & _
-            " inversión (j)"
+    " inversión (j)"
         Me.XrLabel12.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
         '
         'XrLabel9
         '
         Me.XrLabel9.Borders = CType(((DevExpress.XtraPrinting.BorderSide.Top Or DevExpress.XtraPrinting.BorderSide.Right) _
-                    Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
+            Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
         Me.XrLabel9.BorderWidth = 1
         Me.XrLabel9.Dpi = 254.0!
         Me.XrLabel9.Font = New System.Drawing.Font("Tahoma", 8.0!, System.Drawing.FontStyle.Bold)
@@ -913,7 +913,7 @@ Partial Public Class RPT_InformeAnaliticoOblDifFinEdit
         'XrLabel7
         '
         Me.XrLabel7.Borders = CType(((DevExpress.XtraPrinting.BorderSide.Top Or DevExpress.XtraPrinting.BorderSide.Right) _
-                    Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
+            Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
         Me.XrLabel7.BorderWidth = 1
         Me.XrLabel7.Dpi = 254.0!
         Me.XrLabel7.Font = New System.Drawing.Font("Tahoma", 8.0!, System.Drawing.FontStyle.Bold)
@@ -931,7 +931,7 @@ Partial Public Class RPT_InformeAnaliticoOblDifFinEdit
         'XrLabel4
         '
         Me.XrLabel4.Borders = CType(((DevExpress.XtraPrinting.BorderSide.Top Or DevExpress.XtraPrinting.BorderSide.Right) _
-                    Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
+            Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
         Me.XrLabel4.BorderWidth = 1
         Me.XrLabel4.Dpi = 254.0!
         Me.XrLabel4.Font = New System.Drawing.Font("Tahoma", 8.0!, System.Drawing.FontStyle.Bold)
@@ -949,7 +949,7 @@ Partial Public Class RPT_InformeAnaliticoOblDifFinEdit
         'XrLabel15
         '
         Me.XrLabel15.Borders = CType(((DevExpress.XtraPrinting.BorderSide.Top Or DevExpress.XtraPrinting.BorderSide.Right) _
-                    Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
+            Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
         Me.XrLabel15.BorderWidth = 1
         Me.XrLabel15.Dpi = 254.0!
         Me.XrLabel15.Font = New System.Drawing.Font("Tahoma", 8.0!, System.Drawing.FontStyle.Bold)
@@ -967,7 +967,7 @@ Partial Public Class RPT_InformeAnaliticoOblDifFinEdit
         'XrLabel11
         '
         Me.XrLabel11.Borders = CType(((DevExpress.XtraPrinting.BorderSide.Top Or DevExpress.XtraPrinting.BorderSide.Right) _
-                    Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
+            Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
         Me.XrLabel11.BorderWidth = 1
         Me.XrLabel11.Dpi = 254.0!
         Me.XrLabel11.Font = New System.Drawing.Font("Tahoma", 8.0!, System.Drawing.FontStyle.Bold)
@@ -985,7 +985,7 @@ Partial Public Class RPT_InformeAnaliticoOblDifFinEdit
         'XrLabel6
         '
         Me.XrLabel6.Borders = CType(((DevExpress.XtraPrinting.BorderSide.Top Or DevExpress.XtraPrinting.BorderSide.Right) _
-                    Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
+            Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
         Me.XrLabel6.BorderWidth = 1
         Me.XrLabel6.Dpi = 254.0!
         Me.XrLabel6.Font = New System.Drawing.Font("Tahoma", 8.0!, System.Drawing.FontStyle.Bold)
@@ -1003,8 +1003,8 @@ Partial Public Class RPT_InformeAnaliticoOblDifFinEdit
         'XrLabel2
         '
         Me.XrLabel2.Borders = CType((((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Top) _
-                    Or DevExpress.XtraPrinting.BorderSide.Right) _
-                    Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
+            Or DevExpress.XtraPrinting.BorderSide.Right) _
+            Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
         Me.XrLabel2.BorderWidth = 1
         Me.XrLabel2.Dpi = 254.0!
         Me.XrLabel2.Font = New System.Drawing.Font("Tahoma", 8.0!, System.Drawing.FontStyle.Bold)
@@ -1050,8 +1050,8 @@ Partial Public Class RPT_InformeAnaliticoOblDifFinEdit
         Me.StyleSheet.AddRange(New DevExpress.XtraReports.UI.XRControlStyle() {Me.EvenStyle})
         Me.Version = "11.1"
         CType(Me.DataSetBlanca1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RpT_FirmasVertical1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me._Korima2_00_ReporteadorDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RpT_FirmasVerticalElectronica1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
 
     End Sub
@@ -1105,7 +1105,6 @@ Partial Public Class RPT_InformeAnaliticoOblDifFinEdit
     Friend WithEvents SumaHorizontal As DevExpress.XtraReports.UI.CalculatedField
     Friend WithEvents XrLblIso As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents XrLblUsr As DevExpress.XtraReports.UI.XRLabel
-    Private WithEvents RpT_FirmasVertical1 As Korima_Reporteador.RPT_FirmasVertical
     Friend WithEvents XrLabel25 As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents XrLabel24 As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents XrLabel23 As DevExpress.XtraReports.UI.XRLabel
@@ -1123,4 +1122,5 @@ Partial Public Class RPT_InformeAnaliticoOblDifFinEdit
     Friend WithEvents DataSetBlanca1 As Korima_Reporteador.DataSetBlanca
     Friend WithEvents EvenStyle As DevExpress.XtraReports.UI.XRControlStyle
     Public WithEvents PICEnteLogoSecundario As DevExpress.XtraReports.UI.XRPictureBox
+    Private WithEvents RpT_FirmasVerticalElectronica1 As Korima_Reporteador.RPT_FirmasVerticalElectronica
 End Class

@@ -36,6 +36,7 @@ Partial Public Class RPT_BalancePres3
         Me.TopMargin = New DevExpress.XtraReports.UI.TopMarginBand()
         Me.BottomMargin = New DevExpress.XtraReports.UI.BottomMarginBand()
         Me.PageHeader = New DevExpress.XtraReports.UI.PageHeaderBand()
+        Me.PICEnteLogoSecundario = New DevExpress.XtraReports.UI.XRPictureBox()
         Me.line1 = New DevExpress.XtraReports.UI.XRLine()
         Me.lblSubtitulo = New DevExpress.XtraReports.UI.XRLabel()
         Me.lblTitulo = New DevExpress.XtraReports.UI.XRLabel()
@@ -60,7 +61,6 @@ Partial Public Class RPT_BalancePres3
         Me.lbl_prmNota1 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel3 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrSubreport1 = New DevExpress.XtraReports.UI.XRSubreport()
-        Me.RpT_FirmasVertical1 = New Korima_Reporteador.RPT_FirmasVertical()
         Me.FormattingRule1 = New DevExpress.XtraReports.UI.FormattingRule()
         Me.DsNotasBenn1 = New Korima_Reporteador.dsNotasBenn()
         Me.XrLabel5 = New DevExpress.XtraReports.UI.XRLabel()
@@ -76,11 +76,11 @@ Partial Public Class RPT_BalancePres3
         Me.XrLabel6 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel2 = New DevExpress.XtraReports.UI.XRLabel()
         Me.SumaHorizontal = New DevExpress.XtraReports.UI.CalculatedField()
-        Me.PICEnteLogoSecundario = New DevExpress.XtraReports.UI.XRPictureBox()
+        Me.RpT_FirmasVerticalElectronica1 = New Korima_Reporteador.RPT_FirmasVerticalElectronica()
         prmNota1 = New DevExpress.XtraReports.Parameters.Parameter()
-        CType(Me.RpT_FirmasVertical1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DsNotasBenn1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me._Korima2_00_ReporteadorDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RpT_FirmasVerticalElectronica1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         '
         'prmNota1
@@ -277,6 +277,14 @@ Partial Public Class RPT_BalancePres3
         Me.PageHeader.Dpi = 254.0!
         Me.PageHeader.HeightF = 438.7584!
         Me.PageHeader.Name = "PageHeader"
+        '
+        'PICEnteLogoSecundario
+        '
+        Me.PICEnteLogoSecundario.Dpi = 254.0!
+        Me.PICEnteLogoSecundario.LocationFloat = New DevExpress.Utils.PointFloat(1737.096!, 63.5!)
+        Me.PICEnteLogoSecundario.Name = "PICEnteLogoSecundario"
+        Me.PICEnteLogoSecundario.SizeF = New System.Drawing.SizeF(215.3709!, 203.2!)
+        Me.PICEnteLogoSecundario.Sizing = DevExpress.XtraPrinting.ImageSizeMode.ZoomImage
         '
         'line1
         '
@@ -503,8 +511,8 @@ Partial Public Class RPT_BalancePres3
         'XrPanel1
         '
         Me.XrPanel1.Borders = CType((((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Top) _
-                    Or DevExpress.XtraPrinting.BorderSide.Right) _
-                    Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
+            Or DevExpress.XtraPrinting.BorderSide.Right) _
+            Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
         Me.XrPanel1.BorderWidth = 2
         Me.XrPanel1.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.lbl_prmNota1, Me.XrLabel3})
         Me.XrPanel1.Dpi = 254.0!
@@ -548,14 +556,14 @@ Partial Public Class RPT_BalancePres3
         Me.XrSubreport1.Dpi = 254.0!
         Me.XrSubreport1.LocationFloat = New DevExpress.Utils.PointFloat(260.6291!, 25.00001!)
         Me.XrSubreport1.Name = "XrSubreport1"
-        Me.XrSubreport1.ReportSource = Me.RpT_FirmasVertical1
+        Me.XrSubreport1.ReportSource = Me.RpT_FirmasVerticalElectronica1
         Me.XrSubreport1.SizeF = New System.Drawing.SizeF(2012.458!, 58.41992!)
         '
         'FormattingRule1
         '
         Me.FormattingRule1.Condition = "[Parameters.prmNota1]  Like  'Espacio asignado para notas%' or" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "[Parameters.prmTi" & _
-            "po]  Like  'Espacio asignado para notas%' or" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "[Parameters.prmNaturaleza] Like  '" & _
-            "Espacio asignado para notas%' "
+    "po]  Like  'Espacio asignado para notas%' or" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "[Parameters.prmNaturaleza] Like  '" & _
+    "Espacio asignado para notas%' "
         Me.FormattingRule1.DataSource = Me.DsNotasBenn1
         '
         '
@@ -666,7 +674,7 @@ Partial Public Class RPT_BalancePres3
         'XrLabel15
         '
         Me.XrLabel15.Borders = CType(((DevExpress.XtraPrinting.BorderSide.Top Or DevExpress.XtraPrinting.BorderSide.Right) _
-                    Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
+            Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
         Me.XrLabel15.BorderWidth = 2
         Me.XrLabel15.Dpi = 254.0!
         Me.XrLabel15.Font = New System.Drawing.Font("Tahoma", 8.0!, System.Drawing.FontStyle.Bold)
@@ -684,7 +692,7 @@ Partial Public Class RPT_BalancePres3
         'XrLabel11
         '
         Me.XrLabel11.Borders = CType(((DevExpress.XtraPrinting.BorderSide.Top Or DevExpress.XtraPrinting.BorderSide.Right) _
-                    Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
+            Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
         Me.XrLabel11.BorderWidth = 2
         Me.XrLabel11.Dpi = 254.0!
         Me.XrLabel11.Font = New System.Drawing.Font("Tahoma", 8.0!, System.Drawing.FontStyle.Bold)
@@ -702,7 +710,7 @@ Partial Public Class RPT_BalancePres3
         'XrLabel6
         '
         Me.XrLabel6.Borders = CType(((DevExpress.XtraPrinting.BorderSide.Top Or DevExpress.XtraPrinting.BorderSide.Right) _
-                    Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
+            Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
         Me.XrLabel6.BorderWidth = 2
         Me.XrLabel6.Dpi = 254.0!
         Me.XrLabel6.Font = New System.Drawing.Font("Tahoma", 8.0!, System.Drawing.FontStyle.Bold)
@@ -720,8 +728,8 @@ Partial Public Class RPT_BalancePres3
         'XrLabel2
         '
         Me.XrLabel2.Borders = CType((((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Top) _
-                    Or DevExpress.XtraPrinting.BorderSide.Right) _
-                    Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
+            Or DevExpress.XtraPrinting.BorderSide.Right) _
+            Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
         Me.XrLabel2.BorderWidth = 2
         Me.XrLabel2.Dpi = 254.0!
         Me.XrLabel2.Font = New System.Drawing.Font("Tahoma", 8.0!, System.Drawing.FontStyle.Bold)
@@ -741,14 +749,6 @@ Partial Public Class RPT_BalancePres3
         Me.SumaHorizontal.Expression = "Iif([NumeroCuenta] Like '22%' ,[MasDe365] ,[Nota1] + [Nota2] + [Nota3])"
         Me.SumaHorizontal.Name = "SumaHorizontal"
         '
-        'PICEnteLogoSecundario
-        '
-        Me.PICEnteLogoSecundario.Dpi = 254.0!
-        Me.PICEnteLogoSecundario.LocationFloat = New DevExpress.Utils.PointFloat(1737.096!, 63.5!)
-        Me.PICEnteLogoSecundario.Name = "PICEnteLogoSecundario"
-        Me.PICEnteLogoSecundario.SizeF = New System.Drawing.SizeF(215.3709!, 203.2!)
-        Me.PICEnteLogoSecundario.Sizing = DevExpress.XtraPrinting.ImageSizeMode.ZoomImage
-        '
         'RPT_BalancePres3
         '
         Me.Bands.AddRange(New DevExpress.XtraReports.UI.Band() {Me.Detail, Me.TopMargin, Me.BottomMargin, Me.PageHeader, Me.PageFooter, Me.ReportFooter, Me.GroupHeader1, Me.GroupFooter1})
@@ -767,9 +767,9 @@ Partial Public Class RPT_BalancePres3
         Me.ReportUnit = DevExpress.XtraReports.UI.ReportUnit.TenthsOfAMillimeter
         Me.SnapGridSize = 31.75!
         Me.Version = "11.1"
-        CType(Me.RpT_FirmasVertical1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DsNotasBenn1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me._Korima2_00_ReporteadorDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RpT_FirmasVerticalElectronica1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
 
     End Sub
@@ -827,6 +827,6 @@ Partial Public Class RPT_BalancePres3
     Friend WithEvents SumaHorizontal As DevExpress.XtraReports.UI.CalculatedField
     Friend WithEvents XrLblIso As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents XrLblUsr As DevExpress.XtraReports.UI.XRLabel
-    Private WithEvents RpT_FirmasVertical1 As Korima_Reporteador.RPT_FirmasVertical
     Public WithEvents PICEnteLogoSecundario As DevExpress.XtraReports.UI.XRPictureBox
+    Private WithEvents RpT_FirmasVerticalElectronica1 As Korima_Reporteador.RPT_FirmasVerticalElectronica
 End Class

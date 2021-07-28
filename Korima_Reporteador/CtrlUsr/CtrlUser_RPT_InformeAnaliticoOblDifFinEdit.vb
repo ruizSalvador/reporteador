@@ -67,13 +67,13 @@ Public Class CtrlUser_RPT_InformeAnaliticoOblDifFinEdit
 
         'Firmas 
         Dim adapterC As SqlClient.SqlDataAdapter
-        adapterC = New SqlClient.SqlDataAdapter("SELECT * FROM VW_RPT_K2_Firmas where Formato = '" & "LDF Informe Analitico de Obligaciones Diferentes de Financiamientos" & "' and (Nombre1 <>'' or Puesto1 <> '' or Nombre2 <>'' or Puesto2<>'') Order by Orden ", cnnString)
+        adapterC = New SqlClient.SqlDataAdapter("SELECT * FROM VW_RPT_K2_Firmas2 where Formato = '" & "LDF Informe Analitico de Obligaciones Diferentes de Financiamientos" & "' and (Nombre1 <>'' or Puesto1 <> '' or Nombre2 <>'' or Puesto2<>'') Order by Orden ", cnnString)
         Dim dsC As New DataSet()
         dsC.EnforceConstraints = False
-        adapterC.Fill(dsC, "VW_RPT_K2_Firmas")
+        adapterC.Fill(dsC, "VW_RPT_K2_Firmas2")
         reporte.XrSubreport1.ReportSource.DataSource = dsC
         reporte.XrSubreport1.ReportSource.DataAdapter = adapterC
-        reporte.XrSubreport1.ReportSource.DataMember = "VW_RPT_K2_Firmas"
+        reporte.XrSubreport1.ReportSource.DataMember = "VW_RPT_K2_Firmas2"
 
 
         Dim ctrlRPTCFGDatosEntes As New clsRPT_CFG_DatosEntesCtrl

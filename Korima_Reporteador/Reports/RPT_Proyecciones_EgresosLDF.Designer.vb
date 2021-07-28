@@ -40,6 +40,7 @@ Partial Public Class RPT_Proyecciones_EgresosLDF
         Me.TopMargin = New DevExpress.XtraReports.UI.TopMarginBand()
         Me.BottomMargin = New DevExpress.XtraReports.UI.BottomMarginBand()
         Me.PageHeader = New DevExpress.XtraReports.UI.PageHeaderBand()
+        Me.PICEnteLogoSecundario = New DevExpress.XtraReports.UI.XRPictureBox()
         Me.line1 = New DevExpress.XtraReports.UI.XRLine()
         Me.lblSubtitulo = New DevExpress.XtraReports.UI.XRLabel()
         Me.lblTitulo = New DevExpress.XtraReports.UI.XRLabel()
@@ -61,7 +62,6 @@ Partial Public Class RPT_Proyecciones_EgresosLDF
         Me.line2 = New DevExpress.XtraReports.UI.XRLine()
         Me.ReportFooter = New DevExpress.XtraReports.UI.ReportFooterBand()
         Me.XrSubreport1 = New DevExpress.XtraReports.UI.XRSubreport()
-        Me.RpT_FirmasVertical1 = New Korima_Reporteador.RPT_FirmasVertical()
         Me.FormattingRule1 = New DevExpress.XtraReports.UI.FormattingRule()
         Me.XrLabel5 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel10 = New DevExpress.XtraReports.UI.XRLabel()
@@ -80,11 +80,11 @@ Partial Public Class RPT_Proyecciones_EgresosLDF
         Me.XrLabel2 = New DevExpress.XtraReports.UI.XRLabel()
         Me.SumaHorizontal = New DevExpress.XtraReports.UI.CalculatedField()
         Me.EvenStyle = New DevExpress.XtraReports.UI.XRControlStyle()
-        Me.PICEnteLogoSecundario = New DevExpress.XtraReports.UI.XRPictureBox()
+        Me.RpT_FirmasVerticalElectronica1 = New Korima_Reporteador.RPT_FirmasVerticalElectronica()
         prmNota1 = New DevExpress.XtraReports.Parameters.Parameter()
         CType(Me.DsNotasBenn1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RpT_FirmasVertical1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me._Korima2_00_ReporteadorDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RpT_FirmasVerticalElectronica1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         '
         'prmNota1
@@ -372,6 +372,14 @@ Partial Public Class RPT_Proyecciones_EgresosLDF
         Me.PageHeader.HeightF = 438.7584!
         Me.PageHeader.Name = "PageHeader"
         '
+        'PICEnteLogoSecundario
+        '
+        Me.PICEnteLogoSecundario.Dpi = 254.0!
+        Me.PICEnteLogoSecundario.LocationFloat = New DevExpress.Utils.PointFloat(2231.071!, 69.0676!)
+        Me.PICEnteLogoSecundario.Name = "PICEnteLogoSecundario"
+        Me.PICEnteLogoSecundario.SizeF = New System.Drawing.SizeF(215.3709!, 203.2!)
+        Me.PICEnteLogoSecundario.Sizing = DevExpress.XtraPrinting.ImageSizeMode.ZoomImage
+        '
         'line1
         '
         Me.line1.Dpi = 254.0!
@@ -599,14 +607,14 @@ Partial Public Class RPT_Proyecciones_EgresosLDF
         Me.XrSubreport1.Dpi = 254.0!
         Me.XrSubreport1.LocationFloat = New DevExpress.Utils.PointFloat(635.0!, 63.5!)
         Me.XrSubreport1.Name = "XrSubreport1"
-        Me.XrSubreport1.ReportSource = Me.RpT_FirmasVertical1
+        Me.XrSubreport1.ReportSource = Me.RpT_FirmasVerticalElectronica1
         Me.XrSubreport1.SizeF = New System.Drawing.SizeF(2012.458!, 58.41992!)
         '
         'FormattingRule1
         '
         Me.FormattingRule1.Condition = "[Parameters.prmNota1]  Like  'Espacio asignado para notas%' or" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "[Parameters.prmTi" & _
-            "po]  Like  'Espacio asignado para notas%' or" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "[Parameters.prmNaturaleza] Like  '" & _
-            "Espacio asignado para notas%' "
+    "po]  Like  'Espacio asignado para notas%' or" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "[Parameters.prmNaturaleza] Like  '" & _
+    "Espacio asignado para notas%' "
         Me.FormattingRule1.DataSource = Me.DsNotasBenn1
         '
         '
@@ -713,7 +721,7 @@ Partial Public Class RPT_Proyecciones_EgresosLDF
         'XrLabel9
         '
         Me.XrLabel9.Borders = CType(((DevExpress.XtraPrinting.BorderSide.Top Or DevExpress.XtraPrinting.BorderSide.Right) _
-                    Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
+            Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
         Me.XrLabel9.BorderWidth = 1
         Me.XrLabel9.Dpi = 254.0!
         Me.XrLabel9.Font = New System.Drawing.Font("Tahoma", 8.0!, System.Drawing.FontStyle.Bold)
@@ -731,7 +739,7 @@ Partial Public Class RPT_Proyecciones_EgresosLDF
         'XrLabel7
         '
         Me.XrLabel7.Borders = CType(((DevExpress.XtraPrinting.BorderSide.Top Or DevExpress.XtraPrinting.BorderSide.Right) _
-                    Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
+            Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
         Me.XrLabel7.BorderWidth = 1
         Me.XrLabel7.Dpi = 254.0!
         Me.XrLabel7.Font = New System.Drawing.Font("Tahoma", 8.0!, System.Drawing.FontStyle.Bold)
@@ -749,7 +757,7 @@ Partial Public Class RPT_Proyecciones_EgresosLDF
         'XrLabel4
         '
         Me.XrLabel4.Borders = CType(((DevExpress.XtraPrinting.BorderSide.Top Or DevExpress.XtraPrinting.BorderSide.Right) _
-                    Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
+            Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
         Me.XrLabel4.BorderWidth = 1
         Me.XrLabel4.Dpi = 254.0!
         Me.XrLabel4.Font = New System.Drawing.Font("Tahoma", 8.0!, System.Drawing.FontStyle.Bold)
@@ -767,7 +775,7 @@ Partial Public Class RPT_Proyecciones_EgresosLDF
         'XrLabel15
         '
         Me.XrLabel15.Borders = CType(((DevExpress.XtraPrinting.BorderSide.Top Or DevExpress.XtraPrinting.BorderSide.Right) _
-                    Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
+            Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
         Me.XrLabel15.BorderWidth = 1
         Me.XrLabel15.Dpi = 254.0!
         Me.XrLabel15.Font = New System.Drawing.Font("Tahoma", 8.0!, System.Drawing.FontStyle.Bold)
@@ -785,7 +793,7 @@ Partial Public Class RPT_Proyecciones_EgresosLDF
         'XrLabel11
         '
         Me.XrLabel11.Borders = CType(((DevExpress.XtraPrinting.BorderSide.Top Or DevExpress.XtraPrinting.BorderSide.Right) _
-                    Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
+            Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
         Me.XrLabel11.BorderWidth = 1
         Me.XrLabel11.Dpi = 254.0!
         Me.XrLabel11.Font = New System.Drawing.Font("Tahoma", 8.0!, System.Drawing.FontStyle.Bold)
@@ -803,7 +811,7 @@ Partial Public Class RPT_Proyecciones_EgresosLDF
         'XrLabel6
         '
         Me.XrLabel6.Borders = CType(((DevExpress.XtraPrinting.BorderSide.Top Or DevExpress.XtraPrinting.BorderSide.Right) _
-                    Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
+            Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
         Me.XrLabel6.BorderWidth = 1
         Me.XrLabel6.Dpi = 254.0!
         Me.XrLabel6.Font = New System.Drawing.Font("Tahoma", 8.0!, System.Drawing.FontStyle.Bold)
@@ -821,8 +829,8 @@ Partial Public Class RPT_Proyecciones_EgresosLDF
         'XrLabel2
         '
         Me.XrLabel2.Borders = CType((((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Top) _
-                    Or DevExpress.XtraPrinting.BorderSide.Right) _
-                    Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
+            Or DevExpress.XtraPrinting.BorderSide.Right) _
+            Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
         Me.XrLabel2.BorderWidth = 1
         Me.XrLabel2.Dpi = 254.0!
         Me.XrLabel2.Font = New System.Drawing.Font("Tahoma", 8.0!, System.Drawing.FontStyle.Bold)
@@ -848,14 +856,6 @@ Partial Public Class RPT_Proyecciones_EgresosLDF
         Me.EvenStyle.BackColor = System.Drawing.Color.Gainsboro
         Me.EvenStyle.Name = "EvenStyle"
         '
-        'PICEnteLogoSecundario
-        '
-        Me.PICEnteLogoSecundario.Dpi = 254.0!
-        Me.PICEnteLogoSecundario.LocationFloat = New DevExpress.Utils.PointFloat(2231.071!, 69.0676!)
-        Me.PICEnteLogoSecundario.Name = "PICEnteLogoSecundario"
-        Me.PICEnteLogoSecundario.SizeF = New System.Drawing.SizeF(215.3709!, 203.2!)
-        Me.PICEnteLogoSecundario.Sizing = DevExpress.XtraPrinting.ImageSizeMode.ZoomImage
-        '
         'RPT_Proyecciones_EgresosLDF
         '
         Me.Bands.AddRange(New DevExpress.XtraReports.UI.Band() {Me.Detail, Me.TopMargin, Me.BottomMargin, Me.PageHeader, Me.PageFooter, Me.ReportFooter, Me.GroupHeader1, Me.GroupFooter1})
@@ -876,8 +876,8 @@ Partial Public Class RPT_Proyecciones_EgresosLDF
         Me.StyleSheet.AddRange(New DevExpress.XtraReports.UI.XRControlStyle() {Me.EvenStyle})
         Me.Version = "11.1"
         CType(Me.DsNotasBenn1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RpT_FirmasVertical1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me._Korima2_00_ReporteadorDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RpT_FirmasVerticalElectronica1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
 
     End Sub
@@ -939,6 +939,6 @@ Partial Public Class RPT_Proyecciones_EgresosLDF
     Friend WithEvents EvenStyle As DevExpress.XtraReports.UI.XRControlStyle
     Friend WithEvents DsNotasBenn1 As Korima_Reporteador.dsNotasBenn
     Friend WithEvents XrSubreport1 As DevExpress.XtraReports.UI.XRSubreport
-    Private WithEvents RpT_FirmasVertical1 As Korima_Reporteador.RPT_FirmasVertical
     Friend WithEvents PICEnteLogoSecundario As DevExpress.XtraReports.UI.XRPictureBox
+    Private WithEvents RpT_FirmasVerticalElectronica1 As Korima_Reporteador.RPT_FirmasVerticalElectronica
 End Class
