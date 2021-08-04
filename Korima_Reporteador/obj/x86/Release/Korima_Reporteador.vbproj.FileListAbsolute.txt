@@ -5502,3 +5502,5 @@ D:\GitHub\Reporteador\Korima_Reporteador\obj\x86\Release\Korima_Reporteador.SUB_
 D:\GitHub\Reporteador\Korima_Reporteador\obj\x86\Release\Korima_Reporteador.vbproj.GenerateResource.Cache
 D:\GitHub\Reporteador\Korima_Reporteador\obj\x86\Release\Korima_Reporteador.exe.manifest
 D:\GitHub\Reporteador\Korima_Reporteador\obj\x86\Release\Korima_Reporteador.application
+D:\GitHub\Reporteador\Korima_Reporteador\obj\x86\Release\Korima_Reporteador.CtrlUser_RPT_Seguimiento_Metas.resources
+D:\GitHub\Reporteador\Korima_Reporteador\obj\x86\Release\Korima_Reporteador.RPT_Seg_Metas.resources

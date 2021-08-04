@@ -43,10 +43,10 @@ Public Class CtrlNotas_RPT_Conciliacion_AhorroDesahorro
 
         'Firmas 
         Dim adapterC As SqlClient.SqlDataAdapter
-        adapterC = New SqlClient.SqlDataAdapter("SELECT * FROM VW_RPT_K2_Firmas where Formato = 'Conciliación Ahorro/Desahorro' and (Nombre1 <>'' or Puesto1 <> '' or Nombre2 <>'' or Puesto2<>'') Order by Orden ", cnnString)
+        adapterC = New SqlClient.SqlDataAdapter("SELECT * FROM VW_RPT_K2_Firmas2 where Formato = 'Conciliación Ahorro Desahorro' and (Nombre1 <>'' or Puesto1 <> '' or Nombre2 <>'' or Puesto2<>'') Order by Orden ", cnnString)
         Dim dsC As New DataSet()
         dsC.EnforceConstraints = False
-        adapterC.Fill(dsC, "VW_RPT_K2_Firmas")
+        adapterC.Fill(dsC, "VW_RPT_K2_Firmas2")
         reporte.XrSubreport1.ReportSource.DataSource = dsC
         reporte.XrSubreport1.ReportSource.DataAdapter = adapterC
         reporte.XrSubreport1.ReportSource.DataMember = "VW_RPT_K2_Firmas"
@@ -73,7 +73,7 @@ Public Class CtrlNotas_RPT_Conciliacion_AhorroDesahorro
             .lblTitulo.Text = "Conciliación de Flujos de Efectivo Neto"
             .lblSubtitulo.Text = "Ahorro/Desahorro antes de Rubros Extraordinarios"
             .XrLblUsr.Text = "Generado por: " + MDI_Principal.strUsuario
-            Dim cmd As New SqlCommand("SELECT TOP(1) T_Firmas.CodigoISO FROM C_Formatos JOIN T_Firmas ON C_Formatos.IdFormato = T_Firmas.IdFormato  Where Formato='Conciliación Ahorro/Desahorro' ", New SqlConnection(cnnString))
+            Dim cmd As New SqlCommand("SELECT TOP(1) T_Firmas.CodigoISO FROM C_Formatos JOIN T_Firmas ON C_Formatos.IdFormato = T_Firmas.IdFormato  Where Formato='Conciliación Ahorro Desahorro' ", New SqlConnection(cnnString))
             cmd.Connection.Open()
             Dim reader = cmd.ExecuteScalar()
             cmd.Connection.Close()

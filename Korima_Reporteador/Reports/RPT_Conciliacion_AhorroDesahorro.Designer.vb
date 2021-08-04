@@ -32,6 +32,7 @@ Partial Public Class RPT_Conciliacion_AhorroDesahorro
         Me.TopMargin = New DevExpress.XtraReports.UI.TopMarginBand()
         Me.BottomMargin = New DevExpress.XtraReports.UI.BottomMarginBand()
         Me.PageHeader = New DevExpress.XtraReports.UI.PageHeaderBand()
+        Me.PICEnteLogoSecundario = New DevExpress.XtraReports.UI.XRPictureBox()
         Me.line1 = New DevExpress.XtraReports.UI.XRLine()
         Me.lblSubtitulo = New DevExpress.XtraReports.UI.XRLabel()
         Me.lblTitulo = New DevExpress.XtraReports.UI.XRLabel()
@@ -58,7 +59,6 @@ Partial Public Class RPT_Conciliacion_AhorroDesahorro
         Me.XrLabel11 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrPageBreak1 = New DevExpress.XtraReports.UI.XRPageBreak()
         Me.XrSubreport1 = New DevExpress.XtraReports.UI.XRSubreport()
-        Me.RpT_FirmasHorizontal1 = New Korima_Reporteador.RPT_FirmasHorizontal()
         Me.XrLabel5 = New DevExpress.XtraReports.UI.XRLabel()
         Me._Korima2_00_ReporteadorDataSet1 = New Korima_Reporteador._Korima2_00_ReporteadorDataSet()
         Me.VW_C_UsuariosTableAdapter = New Korima_Reporteador._Korima2_00_ReporteadorDataSetTableAdapters.VW_C_UsuariosTableAdapter()
@@ -69,11 +69,11 @@ Partial Public Class RPT_Conciliacion_AhorroDesahorro
         Me.XrLabel12 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel6 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel2 = New DevExpress.XtraReports.UI.XRLabel()
-        Me.PICEnteLogoSecundario = New DevExpress.XtraReports.UI.XRPictureBox()
+        Me.RpT_FirmasHorizontalElectronica1 = New Korima_Reporteador.RPT_FirmasHorizontalElectronica()
         prmNota1 = New DevExpress.XtraReports.Parameters.Parameter()
         CType(Me.DsNotasBenn1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RpT_FirmasHorizontal1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me._Korima2_00_ReporteadorDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RpT_FirmasHorizontalElectronica1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         '
         'prmNota1
@@ -250,6 +250,14 @@ Partial Public Class RPT_Conciliacion_AhorroDesahorro
         Me.PageHeader.HeightF = 409.6543!
         Me.PageHeader.Name = "PageHeader"
         '
+        'PICEnteLogoSecundario
+        '
+        Me.PICEnteLogoSecundario.Dpi = 254.0!
+        Me.PICEnteLogoSecundario.LocationFloat = New DevExpress.Utils.PointFloat(2397.125!, 63.50004!)
+        Me.PICEnteLogoSecundario.Name = "PICEnteLogoSecundario"
+        Me.PICEnteLogoSecundario.SizeF = New System.Drawing.SizeF(215.3709!, 203.2!)
+        Me.PICEnteLogoSecundario.Sizing = DevExpress.XtraPrinting.ImageSizeMode.ZoomImage
+        '
         'line1
         '
         Me.line1.Dpi = 254.0!
@@ -388,7 +396,7 @@ Partial Public Class RPT_Conciliacion_AhorroDesahorro
         'XrLabel4
         '
         Me.XrLabel4.Borders = CType(((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Top) _
-                    Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
+            Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
         Me.XrLabel4.BorderWidth = 1
         Me.XrLabel4.CanGrow = False
         Me.XrLabel4.Dpi = 254.0!
@@ -493,8 +501,8 @@ Partial Public Class RPT_Conciliacion_AhorroDesahorro
         'XrPanel1
         '
         Me.XrPanel1.Borders = CType((((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Top) _
-                    Or DevExpress.XtraPrinting.BorderSide.Right) _
-                    Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
+            Or DevExpress.XtraPrinting.BorderSide.Right) _
+            Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
         Me.XrPanel1.BorderWidth = 2
         Me.XrPanel1.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.lbl_prmNota1, Me.XrLabel11})
         Me.XrPanel1.Dpi = 254.0!
@@ -543,7 +551,7 @@ Partial Public Class RPT_Conciliacion_AhorroDesahorro
         Me.XrSubreport1.Dpi = 254.0!
         Me.XrSubreport1.LocationFloat = New DevExpress.Utils.PointFloat(239.294!, 138.0653!)
         Me.XrSubreport1.Name = "XrSubreport1"
-        Me.XrSubreport1.ReportSource = Me.RpT_FirmasHorizontal1
+        Me.XrSubreport1.ReportSource = Me.RpT_FirmasHorizontalElectronica1
         Me.XrSubreport1.SizeF = New System.Drawing.SizeF(1190.625!, 58.42!)
         '
         'XrLabel5
@@ -593,7 +601,7 @@ Partial Public Class RPT_Conciliacion_AhorroDesahorro
         'XrLabel10
         '
         Me.XrLabel10.Borders = CType(((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Top) _
-                    Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
+            Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
         Me.XrLabel10.BorderWidth = 1
         Me.XrLabel10.CanGrow = False
         Me.XrLabel10.Dpi = 254.0!
@@ -662,8 +670,8 @@ Partial Public Class RPT_Conciliacion_AhorroDesahorro
         'XrLabel2
         '
         Me.XrLabel2.Borders = CType((((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Top) _
-                    Or DevExpress.XtraPrinting.BorderSide.Right) _
-                    Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
+            Or DevExpress.XtraPrinting.BorderSide.Right) _
+            Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
         Me.XrLabel2.BorderWidth = 1
         Me.XrLabel2.CanGrow = False
         Me.XrLabel2.Dpi = 254.0!
@@ -678,14 +686,6 @@ Partial Public Class RPT_Conciliacion_AhorroDesahorro
         Me.XrLabel2.StylePriority.UseTextAlignment = False
         Me.XrLabel2.Text = "Descripcion"
         Me.XrLabel2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter
-        '
-        'PICEnteLogoSecundario
-        '
-        Me.PICEnteLogoSecundario.Dpi = 254.0!
-        Me.PICEnteLogoSecundario.LocationFloat = New DevExpress.Utils.PointFloat(2397.125!, 63.50004!)
-        Me.PICEnteLogoSecundario.Name = "PICEnteLogoSecundario"
-        Me.PICEnteLogoSecundario.SizeF = New System.Drawing.SizeF(215.3709!, 203.2!)
-        Me.PICEnteLogoSecundario.Sizing = DevExpress.XtraPrinting.ImageSizeMode.ZoomImage
         '
         'RPT_Conciliacion_AhorroDesahorro
         '
@@ -705,8 +705,8 @@ Partial Public Class RPT_Conciliacion_AhorroDesahorro
         Me.SnapGridSize = 31.75!
         Me.Version = "11.1"
         CType(Me.DsNotasBenn1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RpT_FirmasHorizontal1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me._Korima2_00_ReporteadorDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RpT_FirmasHorizontalElectronica1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
 
     End Sub
@@ -755,9 +755,9 @@ Partial Public Class RPT_Conciliacion_AhorroDesahorro
     Friend WithEvents XrLabel7 As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents XrLabel8 As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents XrLabel10 As DevExpress.XtraReports.UI.XRLabel
-    Private WithEvents RpT_FirmasHorizontal1 As Korima_Reporteador.RPT_FirmasHorizontal
     Friend WithEvents XrPanel1 As DevExpress.XtraReports.UI.XRPanel
     Friend WithEvents lbl_prmNota1 As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents XrLabel11 As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents PICEnteLogoSecundario As DevExpress.XtraReports.UI.XRPictureBox
+    Private WithEvents RpT_FirmasHorizontalElectronica1 As Korima_Reporteador.RPT_FirmasHorizontalElectronica
 End Class
