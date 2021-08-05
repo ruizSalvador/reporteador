@@ -2226,6 +2226,12 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="PrintRibbonControllerResources.Designer.vb" />
+    <Compile Include="Reports\RPT_Seg_Metas_Sin_Cal.Designer.vb">
+      <DependentUpon>RPT_Seg_Metas_Sin_Cal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RPT_Seg_Metas_Sin_Cal.vb">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Reports\RPT_Seg_Metas.Designer.vb">
       <DependentUpon>RPT_Seg_Metas.vb</DependentUpon>
     </Compile>
@@ -5474,6 +5480,9 @@
       <DependentUpon>CtrlUsr_CargadordeDocumentos.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PrintRibbonControllerResources.resx" />
+    <EmbeddedResource Include="Reports\RPT_Seg_Metas_Sin_Cal.resx">
+      <DependentUpon>RPT_Seg_Metas_Sin_Cal.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\RPT_Seg_Metas.resx">
       <DependentUpon>RPT_Seg_Metas.vb</DependentUpon>
     </EmbeddedResource>

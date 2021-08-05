@@ -91,7 +91,7 @@ Partial Class CtrlUser_RPT_Seguimiento_Metas
         Me.LabelControl7 = New DevExpress.XtraEditors.LabelControl()
         Me.filterEjercicio = New DevExpress.XtraEditors.TimeEdit()
         Me.LabelControl5 = New DevExpress.XtraEditors.LabelControl()
-        Me.ChkMuestraNulos = New System.Windows.Forms.CheckBox()
+        Me.ChkCalendarizacion = New System.Windows.Forms.CheckBox()
         Me.SimpleButton1 = New DevExpress.XtraEditors.SimpleButton()
         Me.TreeList1 = New DevExpress.XtraTreeList.TreeList()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
@@ -124,7 +124,7 @@ Partial Class CtrlUser_RPT_Seguimiento_Metas
         Me.SplitContainerControl1.Panel1.Controls.Add(Me.LabelControl7)
         Me.SplitContainerControl1.Panel1.Controls.Add(Me.filterEjercicio)
         Me.SplitContainerControl1.Panel1.Controls.Add(Me.LabelControl5)
-        Me.SplitContainerControl1.Panel1.Controls.Add(Me.ChkMuestraNulos)
+        Me.SplitContainerControl1.Panel1.Controls.Add(Me.ChkCalendarizacion)
         Me.SplitContainerControl1.Panel1.Controls.Add(Me.SimpleButton1)
         Me.SplitContainerControl1.Panel1.Text = "Panel1"
         Me.SplitContainerControl1.Panel2.Controls.Add(Me.TreeList1)
@@ -138,17 +138,18 @@ Partial Class CtrlUser_RPT_Seguimiento_Metas
         'SimpleButton2
         '
         Me.SimpleButton2.Image = Global.Korima_Reporteador.My.Resources.Resources.Delete_16x16
-        Me.SimpleButton2.Location = New System.Drawing.Point(189, 80)
+        Me.SimpleButton2.Location = New System.Drawing.Point(189, 78)
         Me.SimpleButton2.Name = "SimpleButton2"
         Me.SimpleButton2.Size = New System.Drawing.Size(25, 20)
         Me.SimpleButton2.TabIndex = 49
         '
         'filterProyecto
         '
-        Me.filterProyecto.Location = New System.Drawing.Point(13, 80)
+        Me.filterProyecto.Location = New System.Drawing.Point(13, 78)
         Me.filterProyecto.MenuManager = Me.PrintBarManager1
         Me.filterProyecto.Name = "filterProyecto"
         Me.filterProyecto.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.filterProyecto.Properties.Columns.AddRange(New DevExpress.XtraEditors.Controls.LookUpColumnInfo() {New DevExpress.XtraEditors.Controls.LookUpColumnInfo("IdDefMeta", "Id"), New DevExpress.XtraEditors.Controls.LookUpColumnInfo("Clave", "Clave"), New DevExpress.XtraEditors.Controls.LookUpColumnInfo("Descripcion", "Descripcion")})
         Me.filterProyecto.Size = New System.Drawing.Size(170, 20)
         Me.filterProyecto.TabIndex = 48
         '
@@ -744,11 +745,11 @@ Partial Class CtrlUser_RPT_Seguimiento_Metas
         'LabelControl6
         '
         Me.LabelControl6.CausesValidation = False
-        Me.LabelControl6.Location = New System.Drawing.Point(15, 61)
+        Me.LabelControl6.Location = New System.Drawing.Point(15, 59)
         Me.LabelControl6.Name = "LabelControl6"
-        Me.LabelControl6.Size = New System.Drawing.Size(47, 13)
+        Me.LabelControl6.Size = New System.Drawing.Size(33, 13)
         Me.LabelControl6.TabIndex = 43
-        Me.LabelControl6.Text = "Proyecto:"
+        Me.LabelControl6.Text = "Metas:"
         '
         'LabelControl7
         '
@@ -782,22 +783,19 @@ Partial Class CtrlUser_RPT_Seguimiento_Metas
         Me.LabelControl5.TabIndex = 41
         Me.LabelControl5.Text = "Ejercicio :"
         '
-        'ChkMuestraNulos
+        'ChkCalendarizacion
         '
-        Me.ChkMuestraNulos.AutoSize = True
-        Me.ChkMuestraNulos.Checked = True
-        Me.ChkMuestraNulos.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.ChkMuestraNulos.Location = New System.Drawing.Point(15, 245)
-        Me.ChkMuestraNulos.Name = "ChkMuestraNulos"
-        Me.ChkMuestraNulos.Size = New System.Drawing.Size(105, 17)
-        Me.ChkMuestraNulos.TabIndex = 2
-        Me.ChkMuestraNulos.Text = "Mostrar sin saldo"
-        Me.ChkMuestraNulos.UseVisualStyleBackColor = True
-        Me.ChkMuestraNulos.Visible = False
+        Me.ChkCalendarizacion.AutoSize = True
+        Me.ChkCalendarizacion.Location = New System.Drawing.Point(15, 114)
+        Me.ChkCalendarizacion.Name = "ChkCalendarizacion"
+        Me.ChkCalendarizacion.Size = New System.Drawing.Size(144, 17)
+        Me.ChkCalendarizacion.TabIndex = 2
+        Me.ChkCalendarizacion.Text = "Calendarización Mensual"
+        Me.ChkCalendarizacion.UseVisualStyleBackColor = True
         '
         'SimpleButton1
         '
-        Me.SimpleButton1.Location = New System.Drawing.Point(14, 137)
+        Me.SimpleButton1.Location = New System.Drawing.Point(14, 141)
         Me.SimpleButton1.Name = "SimpleButton1"
         Me.SimpleButton1.Size = New System.Drawing.Size(189, 21)
         Me.SimpleButton1.TabIndex = 2
@@ -903,7 +901,7 @@ Partial Class CtrlUser_RPT_Seguimiento_Metas
     Friend WithEvents PrintPreviewBarCheckItem16 As DevExpress.XtraPrinting.Preview.PrintPreviewBarCheckItem
     Friend WithEvents PrintPreviewBarCheckItem17 As DevExpress.XtraPrinting.Preview.PrintPreviewBarCheckItem
     Friend WithEvents ErrorProvider1 As System.Windows.Forms.ErrorProvider
-    Friend WithEvents ChkMuestraNulos As System.Windows.Forms.CheckBox
+    Friend WithEvents ChkCalendarizacion As System.Windows.Forms.CheckBox
     Friend WithEvents filterPeriodoIni As DevExpress.XtraEditors.TimeEdit
     Friend WithEvents filterPeriodoFin As DevExpress.XtraEditors.TimeEdit
     Friend WithEvents LabelControl6 As DevExpress.XtraEditors.LabelControl

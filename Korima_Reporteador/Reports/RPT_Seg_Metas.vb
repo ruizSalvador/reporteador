@@ -6,6 +6,9 @@ Public Class RPT_Seg_Metas
     'Dim Recaudado As Double
     Private dt As DataTable
     Public Ejercicio As Integer
+    Public Mes As Integer
+    Public IdMeta As Integer
+    Public Calendarizacion As Integer
     Private treeList As New DevExpress.XtraTreeList.TreeList()
 
     ''28 porc modificado
@@ -171,10 +174,11 @@ Public Class RPT_Seg_Metas
         SQLComando.CommandType = CommandType.StoredProcedure
         '--- Parametros IN
         SQLComando.Parameters.Add(New SqlParameter("@IdUsuario", 2))
-        SQLComando.Parameters.Add(New SqlParameter("@IdMeta", 0))
+        SQLComando.Parameters.Add(New SqlParameter("@IdMeta", Me.IdMeta))
         SQLComando.Parameters.Add(New SqlParameter("@Ejercicio", Me.Ejercicio))
         'SQLComando.Parameters.Add(New SqlParameter("@Proyecto", filterProyecto.Properties.KeyValue))
         SQLComando.Parameters.Add(New SqlParameter("@Mes", 1))
+        SQLComando.Parameters.Add(New SqlParameter("@Calendarizacion", Calendarizacion))
 
 
         Dim adapter As New SqlDataAdapter(SQLComando)

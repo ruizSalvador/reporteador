@@ -59,10 +59,15 @@ Partial Public Class RPT_Seg_Metas
         Me.TreeListColumn15 = New DevExpress.XtraTreeList.Columns.TreeListColumn()
         Me.TreeListColumn16 = New DevExpress.XtraTreeList.Columns.TreeListColumn()
         Me.TreeListColumn17 = New DevExpress.XtraTreeList.Columns.TreeListColumn()
+        Me.TreeListColumn22 = New DevExpress.XtraTreeList.Columns.TreeListColumn()
         Me.TreeListColumn18 = New DevExpress.XtraTreeList.Columns.TreeListColumn()
+        Me.TreeListColumn23 = New DevExpress.XtraTreeList.Columns.TreeListColumn()
         Me.TreeListColumn19 = New DevExpress.XtraTreeList.Columns.TreeListColumn()
+        Me.TreeListColumn24 = New DevExpress.XtraTreeList.Columns.TreeListColumn()
         Me.TreeListColumn20 = New DevExpress.XtraTreeList.Columns.TreeListColumn()
+        Me.TreeListColumn25 = New DevExpress.XtraTreeList.Columns.TreeListColumn()
         Me.TreeListColumn21 = New DevExpress.XtraTreeList.Columns.TreeListColumn()
+        Me.TreeListColumn26 = New DevExpress.XtraTreeList.Columns.TreeListColumn()
         Me.NegritasGrupos = New DevExpress.XtraReports.UI.FormattingRule()
         Me.DataSetBlanca1 = New Korima_Reporteador.DataSetBlanca()
         Me.NoVisibleTipo = New DevExpress.XtraReports.UI.FormattingRule()
@@ -72,9 +77,6 @@ Partial Public Class RPT_Seg_Metas
         Me.BottomMargin = New DevExpress.XtraReports.UI.BottomMarginBand()
         Me.XrLblIso = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLblUsr = New DevExpress.XtraReports.UI.XRLabel()
-        Me.ReportHeader = New DevExpress.XtraReports.UI.ReportHeaderBand()
-        Me.XrLabel3 = New DevExpress.XtraReports.UI.XRLabel()
-        Me.XrLabel2 = New DevExpress.XtraReports.UI.XRLabel()
         CType(Me.RpT_FirmasHorizontal1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TreeList1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataSetBlanca1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -292,200 +294,396 @@ Partial Public Class RPT_Seg_Metas
         '
         Me.Detail.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.WinControlContainer1})
         Me.Detail.Dpi = 254.0!
-        Me.Detail.HeightF = 686.8073!
+        Me.Detail.HeightF = 631.2448!
         Me.Detail.KeepTogether = True
         Me.Detail.Name = "Detail"
         '
         'WinControlContainer1
         '
         Me.WinControlContainer1.Dpi = 254.0!
-        Me.WinControlContainer1.LocationFloat = New DevExpress.Utils.PointFloat(25.00009!, 52.91667!)
+        Me.WinControlContainer1.LocationFloat = New DevExpress.Utils.PointFloat(0.0!, 52.91667!)
         Me.WinControlContainer1.Name = "WinControlContainer1"
-        Me.WinControlContainer1.SizeF = New System.Drawing.SizeF(4162.086!, 587.5865!)
+        Me.WinControlContainer1.SizeF = New System.Drawing.SizeF(5350.0!, 238.25!)
         Me.WinControlContainer1.WinControl = Me.TreeList1
         '
         'TreeList1
         '
-        Me.TreeList1.Columns.AddRange(New DevExpress.XtraTreeList.Columns.TreeListColumn() {Me.TreeListColumn1, Me.TreeListColumn2, Me.TreeListColumn4, Me.TreeListColumn5, Me.TreeListColumn3, Me.TreeListColumn6, Me.TreeListColumn7, Me.TreeListColumn8, Me.TreeListColumn9, Me.TreeListColumn10, Me.TreeListColumn11, Me.TreeListColumn12, Me.TreeListColumn13, Me.TreeListColumn14, Me.TreeListColumn15, Me.TreeListColumn16, Me.TreeListColumn17, Me.TreeListColumn18, Me.TreeListColumn19, Me.TreeListColumn20, Me.TreeListColumn21})
+        Me.TreeList1.Columns.AddRange(New DevExpress.XtraTreeList.Columns.TreeListColumn() {Me.TreeListColumn1, Me.TreeListColumn2, Me.TreeListColumn4, Me.TreeListColumn5, Me.TreeListColumn3, Me.TreeListColumn6, Me.TreeListColumn7, Me.TreeListColumn8, Me.TreeListColumn9, Me.TreeListColumn10, Me.TreeListColumn11, Me.TreeListColumn12, Me.TreeListColumn13, Me.TreeListColumn14, Me.TreeListColumn15, Me.TreeListColumn16, Me.TreeListColumn17, Me.TreeListColumn22, Me.TreeListColumn18, Me.TreeListColumn23, Me.TreeListColumn19, Me.TreeListColumn24, Me.TreeListColumn20, Me.TreeListColumn25, Me.TreeListColumn21, Me.TreeListColumn26})
         Me.TreeList1.Location = New System.Drawing.Point(0, 0)
         Me.TreeList1.Name = "TreeList1"
         Me.TreeList1.OptionsPrint.PrintAllNodes = True
-        Me.TreeList1.OptionsView.ShowRowFooterSummary = True
-        Me.TreeList1.OptionsView.ShowSummaryFooter = True
         Me.TreeList1.ParentFieldName = "IdPadre"
-        Me.TreeList1.Size = New System.Drawing.Size(1573, 222)
+        Me.TreeList1.Size = New System.Drawing.Size(2022, 90)
         Me.TreeList1.TabIndex = 0
         '
         'TreeListColumn1
         '
+        Me.TreeListColumn1.AppearanceHeader.Options.UseTextOptions = True
+        Me.TreeListColumn1.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        Me.TreeListColumn1.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
         Me.TreeListColumn1.Caption = "Clave"
         Me.TreeListColumn1.FieldName = "Clave"
         Me.TreeListColumn1.Name = "TreeListColumn1"
         Me.TreeListColumn1.Visible = True
         Me.TreeListColumn1.VisibleIndex = 0
+        Me.TreeListColumn1.Width = 70
         '
         'TreeListColumn2
         '
+        Me.TreeListColumn2.AppearanceHeader.Options.UseTextOptions = True
+        Me.TreeListColumn2.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        Me.TreeListColumn2.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
         Me.TreeListColumn2.Caption = "Descripcion"
         Me.TreeListColumn2.FieldName = "Descripcion"
         Me.TreeListColumn2.Name = "TreeListColumn2"
         Me.TreeListColumn2.Visible = True
         Me.TreeListColumn2.VisibleIndex = 1
+        Me.TreeListColumn2.Width = 150
         '
         'TreeListColumn4
         '
+        Me.TreeListColumn4.AppearanceHeader.Options.UseTextOptions = True
+        Me.TreeListColumn4.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        Me.TreeListColumn4.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
         Me.TreeListColumn4.Caption = "Indicador"
         Me.TreeListColumn4.FieldName = "Indicador"
         Me.TreeListColumn4.Name = "TreeListColumn4"
         Me.TreeListColumn4.Visible = True
         Me.TreeListColumn4.VisibleIndex = 3
+        Me.TreeListColumn4.Width = 70
         '
         'TreeListColumn5
         '
         Me.TreeListColumn5.AppearanceCell.Options.UseTextOptions = True
         Me.TreeListColumn5.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
         Me.TreeListColumn5.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
+        Me.TreeListColumn5.AppearanceHeader.Options.UseTextOptions = True
+        Me.TreeListColumn5.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        Me.TreeListColumn5.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
         Me.TreeListColumn5.Caption = "Cantidad"
         Me.TreeListColumn5.FieldName = "Cantidad"
         Me.TreeListColumn5.Name = "TreeListColumn5"
         Me.TreeListColumn5.Visible = True
         Me.TreeListColumn5.VisibleIndex = 4
+        Me.TreeListColumn5.Width = 71
         '
         'TreeListColumn3
         '
+        Me.TreeListColumn3.AppearanceHeader.Options.UseTextOptions = True
+        Me.TreeListColumn3.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        Me.TreeListColumn3.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
         Me.TreeListColumn3.Caption = "Entregable"
         Me.TreeListColumn3.FieldName = "Entregable"
         Me.TreeListColumn3.Name = "TreeListColumn3"
         Me.TreeListColumn3.Visible = True
         Me.TreeListColumn3.VisibleIndex = 2
+        Me.TreeListColumn3.Width = 70
         '
         'TreeListColumn6
         '
+        Me.TreeListColumn6.AppearanceCell.Options.UseTextOptions = True
+        Me.TreeListColumn6.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        Me.TreeListColumn6.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
+        Me.TreeListColumn6.AppearanceHeader.Options.UseTextOptions = True
+        Me.TreeListColumn6.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        Me.TreeListColumn6.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
         Me.TreeListColumn6.Caption = "Enero"
         Me.TreeListColumn6.FieldName = "Enero"
         Me.TreeListColumn6.Name = "TreeListColumn6"
         Me.TreeListColumn6.Visible = True
         Me.TreeListColumn6.VisibleIndex = 5
+        Me.TreeListColumn6.Width = 71
         '
         'TreeListColumn7
         '
+        Me.TreeListColumn7.AppearanceCell.Options.UseTextOptions = True
+        Me.TreeListColumn7.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        Me.TreeListColumn7.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
+        Me.TreeListColumn7.AppearanceHeader.Options.UseTextOptions = True
+        Me.TreeListColumn7.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        Me.TreeListColumn7.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
         Me.TreeListColumn7.Caption = "Febrero"
         Me.TreeListColumn7.FieldName = "Febrero"
         Me.TreeListColumn7.Name = "TreeListColumn7"
         Me.TreeListColumn7.Visible = True
         Me.TreeListColumn7.VisibleIndex = 6
+        Me.TreeListColumn7.Width = 71
         '
         'TreeListColumn8
         '
+        Me.TreeListColumn8.AppearanceCell.Options.UseTextOptions = True
+        Me.TreeListColumn8.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        Me.TreeListColumn8.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
+        Me.TreeListColumn8.AppearanceHeader.Options.UseTextOptions = True
+        Me.TreeListColumn8.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        Me.TreeListColumn8.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
         Me.TreeListColumn8.Caption = "Marzo"
         Me.TreeListColumn8.FieldName = "Marzo"
         Me.TreeListColumn8.Name = "TreeListColumn8"
         Me.TreeListColumn8.Visible = True
         Me.TreeListColumn8.VisibleIndex = 7
+        Me.TreeListColumn8.Width = 71
         '
         'TreeListColumn9
         '
+        Me.TreeListColumn9.AppearanceCell.Options.UseTextOptions = True
+        Me.TreeListColumn9.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        Me.TreeListColumn9.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
+        Me.TreeListColumn9.AppearanceHeader.Options.UseTextOptions = True
+        Me.TreeListColumn9.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        Me.TreeListColumn9.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
         Me.TreeListColumn9.Caption = "Abril"
         Me.TreeListColumn9.FieldName = "Abril"
         Me.TreeListColumn9.Name = "TreeListColumn9"
         Me.TreeListColumn9.Visible = True
         Me.TreeListColumn9.VisibleIndex = 8
+        Me.TreeListColumn9.Width = 71
         '
         'TreeListColumn10
         '
+        Me.TreeListColumn10.AppearanceCell.Options.UseTextOptions = True
+        Me.TreeListColumn10.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        Me.TreeListColumn10.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
+        Me.TreeListColumn10.AppearanceHeader.Options.UseTextOptions = True
+        Me.TreeListColumn10.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        Me.TreeListColumn10.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
         Me.TreeListColumn10.Caption = "Mayo"
         Me.TreeListColumn10.FieldName = "Mayo"
         Me.TreeListColumn10.Name = "TreeListColumn10"
         Me.TreeListColumn10.Visible = True
         Me.TreeListColumn10.VisibleIndex = 9
+        Me.TreeListColumn10.Width = 71
         '
         'TreeListColumn11
         '
+        Me.TreeListColumn11.AppearanceCell.Options.UseTextOptions = True
+        Me.TreeListColumn11.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        Me.TreeListColumn11.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
+        Me.TreeListColumn11.AppearanceHeader.Options.UseTextOptions = True
+        Me.TreeListColumn11.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        Me.TreeListColumn11.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
         Me.TreeListColumn11.Caption = "Junio"
         Me.TreeListColumn11.FieldName = "Junio"
         Me.TreeListColumn11.Name = "TreeListColumn11"
         Me.TreeListColumn11.Visible = True
         Me.TreeListColumn11.VisibleIndex = 10
+        Me.TreeListColumn11.Width = 71
         '
         'TreeListColumn12
         '
+        Me.TreeListColumn12.AppearanceCell.Options.UseTextOptions = True
+        Me.TreeListColumn12.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        Me.TreeListColumn12.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
+        Me.TreeListColumn12.AppearanceHeader.Options.UseTextOptions = True
+        Me.TreeListColumn12.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        Me.TreeListColumn12.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
         Me.TreeListColumn12.Caption = "Julio"
         Me.TreeListColumn12.FieldName = "Julio"
         Me.TreeListColumn12.Name = "TreeListColumn12"
         Me.TreeListColumn12.Visible = True
         Me.TreeListColumn12.VisibleIndex = 11
+        Me.TreeListColumn12.Width = 71
         '
         'TreeListColumn13
         '
+        Me.TreeListColumn13.AppearanceCell.Options.UseTextOptions = True
+        Me.TreeListColumn13.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        Me.TreeListColumn13.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
+        Me.TreeListColumn13.AppearanceHeader.Options.UseTextOptions = True
+        Me.TreeListColumn13.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        Me.TreeListColumn13.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
         Me.TreeListColumn13.Caption = "Agosto"
         Me.TreeListColumn13.FieldName = "Agosto"
         Me.TreeListColumn13.Name = "TreeListColumn13"
         Me.TreeListColumn13.Visible = True
         Me.TreeListColumn13.VisibleIndex = 12
+        Me.TreeListColumn13.Width = 71
         '
         'TreeListColumn14
         '
+        Me.TreeListColumn14.AppearanceCell.Options.UseTextOptions = True
+        Me.TreeListColumn14.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        Me.TreeListColumn14.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
+        Me.TreeListColumn14.AppearanceHeader.Options.UseTextOptions = True
+        Me.TreeListColumn14.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        Me.TreeListColumn14.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
         Me.TreeListColumn14.Caption = "Septiembre"
         Me.TreeListColumn14.FieldName = "Septiembre"
         Me.TreeListColumn14.Name = "TreeListColumn14"
         Me.TreeListColumn14.Visible = True
         Me.TreeListColumn14.VisibleIndex = 13
+        Me.TreeListColumn14.Width = 71
         '
         'TreeListColumn15
         '
+        Me.TreeListColumn15.AppearanceCell.Options.UseTextOptions = True
+        Me.TreeListColumn15.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        Me.TreeListColumn15.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
+        Me.TreeListColumn15.AppearanceHeader.Options.UseTextOptions = True
+        Me.TreeListColumn15.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        Me.TreeListColumn15.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
         Me.TreeListColumn15.Caption = "Octubre"
         Me.TreeListColumn15.FieldName = "Octubre"
         Me.TreeListColumn15.Name = "TreeListColumn15"
         Me.TreeListColumn15.Visible = True
         Me.TreeListColumn15.VisibleIndex = 14
+        Me.TreeListColumn15.Width = 71
         '
         'TreeListColumn16
         '
+        Me.TreeListColumn16.AppearanceCell.Options.UseTextOptions = True
+        Me.TreeListColumn16.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        Me.TreeListColumn16.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
+        Me.TreeListColumn16.AppearanceHeader.Options.UseTextOptions = True
+        Me.TreeListColumn16.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        Me.TreeListColumn16.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
         Me.TreeListColumn16.Caption = "Noviembre"
         Me.TreeListColumn16.FieldName = "Noviembre"
         Me.TreeListColumn16.Name = "TreeListColumn16"
         Me.TreeListColumn16.Visible = True
         Me.TreeListColumn16.VisibleIndex = 15
+        Me.TreeListColumn16.Width = 71
         '
         'TreeListColumn17
         '
+        Me.TreeListColumn17.AppearanceCell.Options.UseTextOptions = True
+        Me.TreeListColumn17.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        Me.TreeListColumn17.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
+        Me.TreeListColumn17.AppearanceHeader.Options.UseTextOptions = True
+        Me.TreeListColumn17.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        Me.TreeListColumn17.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
         Me.TreeListColumn17.Caption = "Diciembre"
         Me.TreeListColumn17.FieldName = "Diciembre"
         Me.TreeListColumn17.Name = "TreeListColumn17"
         Me.TreeListColumn17.Visible = True
         Me.TreeListColumn17.VisibleIndex = 16
+        Me.TreeListColumn17.Width = 71
+        '
+        'TreeListColumn22
+        '
+        Me.TreeListColumn22.AppearanceHeader.Options.UseTextOptions = True
+        Me.TreeListColumn22.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        Me.TreeListColumn22.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
+        Me.TreeListColumn22.Caption = "Presupuesto Asignado"
+        Me.TreeListColumn22.FieldName = "Presupuesto_Asignado"
+        Me.TreeListColumn22.Format.FormatString = "{0:n2}"
+        Me.TreeListColumn22.Format.FormatType = DevExpress.Utils.FormatType.Numeric
+        Me.TreeListColumn22.Name = "TreeListColumn22"
+        Me.TreeListColumn22.Visible = True
+        Me.TreeListColumn22.VisibleIndex = 17
+        Me.TreeListColumn22.Width = 120
         '
         'TreeListColumn18
         '
+        Me.TreeListColumn18.AppearanceHeader.Options.UseTextOptions = True
+        Me.TreeListColumn18.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        Me.TreeListColumn18.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
         Me.TreeListColumn18.Caption = "Comprometido"
         Me.TreeListColumn18.FieldName = "Comprometido"
+        Me.TreeListColumn18.Format.FormatString = "{0:n2}"
+        Me.TreeListColumn18.Format.FormatType = DevExpress.Utils.FormatType.Numeric
         Me.TreeListColumn18.Name = "TreeListColumn18"
         Me.TreeListColumn18.Visible = True
-        Me.TreeListColumn18.VisibleIndex = 17
+        Me.TreeListColumn18.VisibleIndex = 18
+        Me.TreeListColumn18.Width = 120
+        '
+        'TreeListColumn23
+        '
+        Me.TreeListColumn23.AppearanceCell.Options.UseTextOptions = True
+        Me.TreeListColumn23.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        Me.TreeListColumn23.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
+        Me.TreeListColumn23.AppearanceHeader.Options.UseTextOptions = True
+        Me.TreeListColumn23.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        Me.TreeListColumn23.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
+        Me.TreeListColumn23.Caption = "%"
+        Me.TreeListColumn23.FieldName = "Porc_Comprometido"
+        Me.TreeListColumn23.Name = "TreeListColumn23"
+        Me.TreeListColumn23.Visible = True
+        Me.TreeListColumn23.VisibleIndex = 19
         '
         'TreeListColumn19
         '
+        Me.TreeListColumn19.AppearanceHeader.Options.UseTextOptions = True
+        Me.TreeListColumn19.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        Me.TreeListColumn19.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
         Me.TreeListColumn19.Caption = "Devengado"
         Me.TreeListColumn19.FieldName = "Devengado"
+        Me.TreeListColumn19.Format.FormatString = "{0:n2}"
+        Me.TreeListColumn19.Format.FormatType = DevExpress.Utils.FormatType.Numeric
         Me.TreeListColumn19.Name = "TreeListColumn19"
         Me.TreeListColumn19.Visible = True
-        Me.TreeListColumn19.VisibleIndex = 18
+        Me.TreeListColumn19.VisibleIndex = 20
+        Me.TreeListColumn19.Width = 120
+        '
+        'TreeListColumn24
+        '
+        Me.TreeListColumn24.AppearanceCell.Options.UseTextOptions = True
+        Me.TreeListColumn24.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        Me.TreeListColumn24.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
+        Me.TreeListColumn24.AppearanceHeader.Options.UseTextOptions = True
+        Me.TreeListColumn24.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        Me.TreeListColumn24.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
+        Me.TreeListColumn24.Caption = "%"
+        Me.TreeListColumn24.FieldName = "Porc_Devengado"
+        Me.TreeListColumn24.Name = "TreeListColumn24"
+        Me.TreeListColumn24.Visible = True
+        Me.TreeListColumn24.VisibleIndex = 21
         '
         'TreeListColumn20
         '
+        Me.TreeListColumn20.AppearanceHeader.Options.UseTextOptions = True
+        Me.TreeListColumn20.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        Me.TreeListColumn20.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
         Me.TreeListColumn20.Caption = "Ejercido"
         Me.TreeListColumn20.FieldName = "Ejercido"
+        Me.TreeListColumn20.Format.FormatString = "{0:n2}"
+        Me.TreeListColumn20.Format.FormatType = DevExpress.Utils.FormatType.Numeric
         Me.TreeListColumn20.Name = "TreeListColumn20"
         Me.TreeListColumn20.Visible = True
-        Me.TreeListColumn20.VisibleIndex = 19
+        Me.TreeListColumn20.VisibleIndex = 22
+        Me.TreeListColumn20.Width = 120
+        '
+        'TreeListColumn25
+        '
+        Me.TreeListColumn25.AppearanceCell.Options.UseTextOptions = True
+        Me.TreeListColumn25.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        Me.TreeListColumn25.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
+        Me.TreeListColumn25.AppearanceHeader.Options.UseTextOptions = True
+        Me.TreeListColumn25.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        Me.TreeListColumn25.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
+        Me.TreeListColumn25.Caption = "%"
+        Me.TreeListColumn25.FieldName = "Porc_Ejercido"
+        Me.TreeListColumn25.Name = "TreeListColumn25"
+        Me.TreeListColumn25.Visible = True
+        Me.TreeListColumn25.VisibleIndex = 23
         '
         'TreeListColumn21
         '
+        Me.TreeListColumn21.AppearanceHeader.Options.UseTextOptions = True
+        Me.TreeListColumn21.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        Me.TreeListColumn21.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
         Me.TreeListColumn21.Caption = "Pagado"
         Me.TreeListColumn21.FieldName = "Pagado"
+        Me.TreeListColumn21.Format.FormatString = "{0:n2}"
+        Me.TreeListColumn21.Format.FormatType = DevExpress.Utils.FormatType.Numeric
         Me.TreeListColumn21.Name = "TreeListColumn21"
         Me.TreeListColumn21.Visible = True
-        Me.TreeListColumn21.VisibleIndex = 20
+        Me.TreeListColumn21.VisibleIndex = 24
+        Me.TreeListColumn21.Width = 120
+        '
+        'TreeListColumn26
+        '
+        Me.TreeListColumn26.AppearanceCell.Options.UseTextOptions = True
+        Me.TreeListColumn26.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        Me.TreeListColumn26.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
+        Me.TreeListColumn26.AppearanceHeader.Options.UseTextOptions = True
+        Me.TreeListColumn26.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        Me.TreeListColumn26.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
+        Me.TreeListColumn26.Caption = "%"
+        Me.TreeListColumn26.FieldName = "Porc_Pagado"
+        Me.TreeListColumn26.Name = "TreeListColumn26"
+        Me.TreeListColumn26.Visible = True
+        Me.TreeListColumn26.VisibleIndex = 25
         '
         'NegritasGrupos
         '
@@ -568,57 +766,17 @@ Partial Public Class RPT_Seg_Metas
         Me.XrLblUsr.StylePriority.UseTextAlignment = False
         Me.XrLblUsr.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight
         '
-        'ReportHeader
-        '
-        Me.ReportHeader.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.XrLabel3, Me.XrLabel2})
-        Me.ReportHeader.Dpi = 254.0!
-        Me.ReportHeader.HeightF = 129.6458!
-        Me.ReportHeader.Name = "ReportHeader"
-        '
-        'XrLabel3
-        '
-        Me.XrLabel3.Borders = CType(((DevExpress.XtraPrinting.BorderSide.Top Or DevExpress.XtraPrinting.BorderSide.Right) _
-            Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
-        Me.XrLabel3.Dpi = 254.0!
-        Me.XrLabel3.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.XrLabel3.LocationFloat = New DevExpress.Utils.PointFloat(420.6881!, 60.58335!)
-        Me.XrLabel3.Name = "XrLabel3"
-        Me.XrLabel3.Padding = New DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254.0!)
-        Me.XrLabel3.SizeF = New System.Drawing.SizeF(187.8543!, 69.06249!)
-        Me.XrLabel3.StylePriority.UseBorders = False
-        Me.XrLabel3.StylePriority.UseFont = False
-        Me.XrLabel3.StylePriority.UseTextAlignment = False
-        Me.XrLabel3.Text = "Entregable"
-        Me.XrLabel3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
-        '
-        'XrLabel2
-        '
-        Me.XrLabel2.Borders = CType((((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Top) _
-            Or DevExpress.XtraPrinting.BorderSide.Right) _
-            Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
-        Me.XrLabel2.Dpi = 254.0!
-        Me.XrLabel2.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.XrLabel2.LocationFloat = New DevExpress.Utils.PointFloat(18.52148!, 60.58334!)
-        Me.XrLabel2.Name = "XrLabel2"
-        Me.XrLabel2.Padding = New DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254.0!)
-        Me.XrLabel2.SizeF = New System.Drawing.SizeF(402.1667!, 69.06248!)
-        Me.XrLabel2.StylePriority.UseBorders = False
-        Me.XrLabel2.StylePriority.UseFont = False
-        Me.XrLabel2.StylePriority.UseTextAlignment = False
-        Me.XrLabel2.Text = "Procesos y Objetivos"
-        Me.XrLabel2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
-        '
         'RPT_Seg_Metas
         '
-        Me.Bands.AddRange(New DevExpress.XtraReports.UI.Band() {Me.Detail, Me.TopMargin, Me.BottomMargin, Me.ReportFooter, Me.ReportHeader})
+        Me.Bands.AddRange(New DevExpress.XtraReports.UI.Band() {Me.Detail, Me.TopMargin, Me.BottomMargin, Me.ReportFooter})
         Me.DataMember = "Nota"
         Me.DataSource = Me.DataSetBlanca1
         Me.Dpi = 254.0!
         Me.FormattingRuleSheet.AddRange(New DevExpress.XtraReports.UI.FormattingRule() {Me.NoVisibleTipo, Me.NegritasGrupos, Me.NoVisibleRubro})
         Me.Landscape = True
-        Me.Margins = New System.Drawing.Printing.Margins(0, 21, 467, 341)
+        Me.Margins = New System.Drawing.Printing.Margins(0, 93, 467, 341)
         Me.PageHeight = 2783
-        Me.PageWidth = 5099
+        Me.PageWidth = 5799
         Me.PaperKind = System.Drawing.Printing.PaperKind.Custom
         Me.ReportUnit = DevExpress.XtraReports.UI.ReportUnit.TenthsOfAMillimeter
         Me.ScriptsSource = "" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
@@ -630,22 +788,11 @@ Partial Public Class RPT_Seg_Metas
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
 
     End Sub
-    Friend WithEvents PICEnteLogo As DevExpress.XtraReports.UI.XRPictureBox
-    Friend WithEvents lblRptNombreEnte As DevExpress.XtraReports.UI.XRLabel
-    Friend WithEvents lblRptNombreReporte As DevExpress.XtraReports.UI.XRLabel
-    Friend WithEvents lblTitulo As DevExpress.XtraReports.UI.XRLabel
-    Friend WithEvents lblSubtitulo As DevExpress.XtraReports.UI.XRLabel
-    Friend WithEvents lblRptDescripcionFiltrado As DevExpress.XtraReports.UI.XRLabel
-    Friend WithEvents XrLabel1 As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents line1 As DevExpress.XtraReports.UI.XRLine
     Friend WithEvents pageInfo3 As DevExpress.XtraReports.UI.XRPageInfo
     Friend WithEvents pageInfo1 As DevExpress.XtraReports.UI.XRPageInfo
     Friend WithEvents pageInfo2 As DevExpress.XtraReports.UI.XRPageInfo
     Friend WithEvents ReportFooter As DevExpress.XtraReports.UI.ReportFooterBand
-    Friend WithEvents lblRptEnteDomicilio As DevExpress.XtraReports.UI.XRLabel
-    Friend WithEvents lblRptEnteRFC As DevExpress.XtraReports.UI.XRLabel
-    Friend WithEvents lblRptEnteCiudad As DevExpress.XtraReports.UI.XRLabel
-    Friend WithEvents lblRptEnteTelefono As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents line2 As DevExpress.XtraReports.UI.XRLine
     Friend WithEvents Detail As DevExpress.XtraReports.UI.DetailBand
     Friend WithEvents TopMargin As DevExpress.XtraReports.UI.TopMarginBand
@@ -654,11 +801,8 @@ Partial Public Class RPT_Seg_Metas
     Friend WithEvents NoVisibleTipo As DevExpress.XtraReports.UI.FormattingRule
     Friend WithEvents NegritasGrupos As DevExpress.XtraReports.UI.FormattingRule
     Friend WithEvents XrPageBreak1 As DevExpress.XtraReports.UI.XRPageBreak
-    Friend WithEvents XrLblIso As DevExpress.XtraReports.UI.XRLabel
-    Friend WithEvents XrLblUsr As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents DataSetBlanca1 As Korima_Reporteador.DataSetBlanca
     Public WithEvents PICEnteLogoSecundario As DevExpress.XtraReports.UI.XRPictureBox
-    Friend WithEvents XrSubreport1 As DevExpress.XtraReports.UI.XRSubreport
     Private WithEvents RpT_FirmasHorizontal1 As Korima_Reporteador.RPT_FirmasHorizontal
     Public WithEvents WinControlContainer1 As DevExpress.XtraReports.UI.WinControlContainer
     Friend WithEvents TreeListColumn1 As DevExpress.XtraTreeList.Columns.TreeListColumn
@@ -682,8 +826,24 @@ Partial Public Class RPT_Seg_Metas
     Friend WithEvents TreeListColumn19 As DevExpress.XtraTreeList.Columns.TreeListColumn
     Friend WithEvents TreeListColumn20 As DevExpress.XtraTreeList.Columns.TreeListColumn
     Friend WithEvents TreeListColumn21 As DevExpress.XtraTreeList.Columns.TreeListColumn
-    Friend WithEvents ReportHeader As DevExpress.XtraReports.UI.ReportHeaderBand
-    Friend WithEvents XrLabel3 As DevExpress.XtraReports.UI.XRLabel
-    Friend WithEvents XrLabel2 As DevExpress.XtraReports.UI.XRLabel
     Public WithEvents TreeList1 As DevExpress.XtraTreeList.TreeList
+    Friend WithEvents TreeListColumn22 As DevExpress.XtraTreeList.Columns.TreeListColumn
+    Friend WithEvents TreeListColumn23 As DevExpress.XtraTreeList.Columns.TreeListColumn
+    Friend WithEvents TreeListColumn24 As DevExpress.XtraTreeList.Columns.TreeListColumn
+    Friend WithEvents TreeListColumn25 As DevExpress.XtraTreeList.Columns.TreeListColumn
+    Friend WithEvents TreeListColumn26 As DevExpress.XtraTreeList.Columns.TreeListColumn
+    Public WithEvents PICEnteLogo As DevExpress.XtraReports.UI.XRPictureBox
+    Public WithEvents lblRptNombreEnte As DevExpress.XtraReports.UI.XRLabel
+    Public WithEvents lblRptNombreReporte As DevExpress.XtraReports.UI.XRLabel
+    Public WithEvents lblTitulo As DevExpress.XtraReports.UI.XRLabel
+    Public WithEvents lblSubtitulo As DevExpress.XtraReports.UI.XRLabel
+    Public WithEvents lblRptDescripcionFiltrado As DevExpress.XtraReports.UI.XRLabel
+    Public WithEvents XrLabel1 As DevExpress.XtraReports.UI.XRLabel
+    Public WithEvents lblRptEnteDomicilio As DevExpress.XtraReports.UI.XRLabel
+    Public WithEvents lblRptEnteRFC As DevExpress.XtraReports.UI.XRLabel
+    Public WithEvents lblRptEnteCiudad As DevExpress.XtraReports.UI.XRLabel
+    Public WithEvents lblRptEnteTelefono As DevExpress.XtraReports.UI.XRLabel
+    Public WithEvents XrLblIso As DevExpress.XtraReports.UI.XRLabel
+    Public WithEvents XrLblUsr As DevExpress.XtraReports.UI.XRLabel
+    Public WithEvents XrSubreport1 As DevExpress.XtraReports.UI.XRSubreport
 End Class

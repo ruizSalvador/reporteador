@@ -39,14 +39,23 @@ Public Class CtrlUser_RPT_Seguimiento_Metas
         Me.Cursor = Cursors.WaitCursor
         SplitContainerControl1.Collapsed = True
         ErrorProvider1.Clear()
-        Dim reporte As New RPT_Seg_Metas
+        Dim reporte As New Object
+        If ChkCalendarizacion.Checked = True Then
+            reporte = New RPT_Seg_Metas
+        Else
+            reporte = New RPT_Seg_Metas_Sin_Cal
+        End If
         Dim printTool As New ReportPrintTool(reporte)
         Dim SQLConexion As SqlConnection
         Dim SQLmConnStr As String = ""
         SQLmConnStr = cnnString
 
 
-        reporte.Ejercicio = 2020
+        reporte.Ejercicio = Year(filterEjercicio.EditValue)
+        reporte.Mes = Month(filterPeriodoIni.EditValue)
+        reporte.IdMeta = IIf(filterProyecto.Text.Length = 0, 0, Convert.ToInt32(filterProyecto.EditValue))
+        reporte.Calendarizacion = ChkCalendarizacion.Checked
+
         '--Codgio para Llenar Reporte con SP
         'SQLConexion = New SqlConnection(SQLmConnStr)
         'SQLConexion.Open()
@@ -100,7 +109,7 @@ Public Class CtrlUser_RPT_Seguimiento_Metas
         '--- Llenar datos del ente
         With reporte
             .lblRptNombreEnte.Text = pRPTCFGDatosEntes.Nombre
-            .lblTitulo.Text = "Ficha Técnica del Indicador del Proyecto Institucional"
+            .lblTitulo.Text = "ESTADO DE GASTO PRESUPUESTAL PROGRAMÁTICO A "
             .lblRptNombreReporte.Text = ""
             .lblRptDescripcionFiltrado.Text = ""
             .lblRptEnteDomicilio.Text = pRPTCFGDatosEntes.Domicilio
@@ -111,7 +120,7 @@ Public Class CtrlUser_RPT_Seguimiento_Metas
             .PICEnteLogoSecundario.Image = pRPTCFGDatosEntes.LogoEnteSecundario
 
             ' Cambiar en tiempo de ejecución las etiquetas - '@PRodriguez 20200122 B1226
-            .lblRptDescripcionFiltrado.Text = "Ejercicio: " & filterEjercicio.Time.Year.ToString
+            .lblRptDescripcionFiltrado.Text = "Presupuesto de Egresos Ejercicio: " & filterEjercicio.Time.Year.ToString
             '.TreeRptMetas.DataSource = ds.Tables(0)
 
             '.XrLMetaBase.Text = "Meta " & Year(filterEjercicio.EditValue).ToString & ":"
@@ -141,7 +150,7 @@ Public Class CtrlUser_RPT_Seguimiento_Metas
     Private Sub CtrlUser_RPT_FichaTecnicaIndicadorProyectoInstitucional_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         'filterPeriodoFin.Time = Now
         filterEjercicio.Time = Now
-        'filterPeriodoIni.Time = Now
+        filterPeriodoIni.Time = Now
         filterEjercicio.EditValue = Now
 
         'Dim ObjTempSQL2 As New clsRPT_CFG_DatosEntesCtrl
@@ -154,12 +163,11 @@ Public Class CtrlUser_RPT_Seguimiento_Metas
         '    .ShowHeader = True
         'End With
 
-        ' Se cambia el filtro - @PRodriguez 202002 B1226
         Dim ObjTempSQL2 As New clsRPT_CFG_DatosEntesCtrl
         With filterProyecto.Properties
-            .DataSource = ObjTempSQL2.List(" Ejercicio =" & Year(filterEjercicio.EditValue), 0, "VW_RPT_FichaTecnicaIndicadorProyectoInstitucional", "Order by Clave ASC")
+            .DataSource = ObjTempSQL2.List(" IdPadre = 0 AND Ejercicio=" & Year(filterEjercicio.EditValue), 0, " T_DefinicionMetas ", "")
             .DisplayMember = "Clave"
-            .ValueMember = "ID"
+            .ValueMember = "IdDefMeta"
             .SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoFilter
             .NullText = ""
             .ShowHeader = True
@@ -180,11 +188,11 @@ Public Class CtrlUser_RPT_Seguimiento_Metas
         '    .ShowHeader = True
         'End With
 
-        ' Se cambia el filtro - @PRodriguez 202002 B1226
+
         With filterProyecto.Properties
-            .DataSource = ObjTempSQL2.List("Ejercicio=" & Year(filterEjercicio.EditValue), 0, "VW_RPT_FichaTecnicaIndicadorProyectoInstitucional", " Order by Clave ASC")
+            .DataSource = ObjTempSQL2.List(" IdPadre = 0 AND Ejercicio=" & Year(filterEjercicio.EditValue), 0, " T_DefinicionMetas ", "")
             .DisplayMember = "Clave"
-            .ValueMember = "ID"
+            .ValueMember = "IdDefMeta"
             .SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoFilter
             .NullText = ""
             .ShowHeader = True
