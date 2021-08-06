@@ -173,7 +173,7 @@ Public Class RPT_Seg_Metas_Sin_Cal
         Dim SQLComando As New SqlCommand("RPT_SeguimientoIndicadoresMetas", SQLConexion)
         SQLComando.CommandType = CommandType.StoredProcedure
         '--- Parametros IN
-        SQLComando.Parameters.Add(New SqlParameter("@IdUsuario", 2))
+        'SQLComando.Parameters.Add(New SqlParameter("@IdUsuario", 2))
         SQLComando.Parameters.Add(New SqlParameter("@IdMeta", Me.IdMeta))
         SQLComando.Parameters.Add(New SqlParameter("@Ejercicio", Me.Ejercicio))
         'SQLComando.Parameters.Add(New SqlParameter("@Proyecto", filterProyecto.Properties.KeyValue))
