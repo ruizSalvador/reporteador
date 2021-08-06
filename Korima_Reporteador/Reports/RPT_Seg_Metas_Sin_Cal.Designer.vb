@@ -65,6 +65,10 @@ Partial Public Class RPT_Seg_Metas_Sin_Cal
         Me.BottomMargin = New DevExpress.XtraReports.UI.BottomMarginBand()
         Me.XrLblIso = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLblUsr = New DevExpress.XtraReports.UI.XRLabel()
+        Me.ReportHeader = New DevExpress.XtraReports.UI.ReportHeaderBand()
+        Me.XrLabel4 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.XrLabel3 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.XrLabel2 = New DevExpress.XtraReports.UI.XRLabel()
         CType(Me.RpT_FirmasHorizontalElectronica1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TreeList1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataSetBlanca1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -281,14 +285,14 @@ Partial Public Class RPT_Seg_Metas_Sin_Cal
         '
         Me.Detail.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.WinControlContainer1})
         Me.Detail.Dpi = 254.0!
-        Me.Detail.HeightF = 631.2448!
+        Me.Detail.HeightF = 377.2448!
         Me.Detail.KeepTogether = True
         Me.Detail.Name = "Detail"
         '
         'WinControlContainer1
         '
         Me.WinControlContainer1.Dpi = 254.0!
-        Me.WinControlContainer1.LocationFloat = New DevExpress.Utils.PointFloat(0.0!, 50.27083!)
+        Me.WinControlContainer1.LocationFloat = New DevExpress.Utils.PointFloat(0.001614889!, 0.0!)
         Me.WinControlContainer1.Name = "WinControlContainer1"
         Me.WinControlContainer1.SizeF = New System.Drawing.SizeF(5434.667!, 238.25!)
         Me.WinControlContainer1.WinControl = Me.TreeList1
@@ -336,7 +340,7 @@ Partial Public Class RPT_Seg_Metas_Sin_Cal
         Me.TreeListColumn4.FieldName = "Indicador"
         Me.TreeListColumn4.Name = "TreeListColumn4"
         Me.TreeListColumn4.Visible = True
-        Me.TreeListColumn4.VisibleIndex = 3
+        Me.TreeListColumn4.VisibleIndex = 2
         Me.TreeListColumn4.Width = 70
         '
         'TreeListColumn5
@@ -351,20 +355,16 @@ Partial Public Class RPT_Seg_Metas_Sin_Cal
         Me.TreeListColumn5.FieldName = "Cantidad"
         Me.TreeListColumn5.Name = "TreeListColumn5"
         Me.TreeListColumn5.Visible = True
-        Me.TreeListColumn5.VisibleIndex = 4
-        Me.TreeListColumn5.Width = 71
+        Me.TreeListColumn5.VisibleIndex = 3
+        Me.TreeListColumn5.Width = 50
         '
         'TreeListColumn3
         '
-        Me.TreeListColumn3.AppearanceHeader.Options.UseTextOptions = True
-        Me.TreeListColumn3.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
-        Me.TreeListColumn3.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
         Me.TreeListColumn3.Caption = "Entregable"
         Me.TreeListColumn3.FieldName = "Entregable"
         Me.TreeListColumn3.Name = "TreeListColumn3"
         Me.TreeListColumn3.Visible = True
-        Me.TreeListColumn3.VisibleIndex = 2
-        Me.TreeListColumn3.Width = 70
+        Me.TreeListColumn3.VisibleIndex = 4
         '
         'TreeListColumn22
         '
@@ -573,9 +573,65 @@ Partial Public Class RPT_Seg_Metas_Sin_Cal
         Me.XrLblUsr.StylePriority.UseTextAlignment = False
         Me.XrLblUsr.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight
         '
+        'ReportHeader
+        '
+        Me.ReportHeader.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.XrLabel4, Me.XrLabel3, Me.XrLabel2})
+        Me.ReportHeader.Dpi = 254.0!
+        Me.ReportHeader.HeightF = 83.42001!
+        Me.ReportHeader.Name = "ReportHeader"
+        '
+        'XrLabel4
+        '
+        Me.XrLabel4.BackColor = System.Drawing.Color.LightGray
+        Me.XrLabel4.Dpi = 254.0!
+        Me.XrLabel4.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.XrLabel4.ForeColor = System.Drawing.Color.Black
+        Me.XrLabel4.LocationFloat = New DevExpress.Utils.PointFloat(1653.644!, 25.00001!)
+        Me.XrLabel4.Name = "XrLabel4"
+        Me.XrLabel4.Padding = New DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254.0!)
+        Me.XrLabel4.SizeF = New System.Drawing.SizeF(3852.356!, 58.42!)
+        Me.XrLabel4.StylePriority.UseBackColor = False
+        Me.XrLabel4.StylePriority.UseFont = False
+        Me.XrLabel4.StylePriority.UseForeColor = False
+        Me.XrLabel4.StylePriority.UseTextAlignment = False
+        Me.XrLabel4.Text = "Avance Financiero"
+        Me.XrLabel4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
+        '
+        'XrLabel3
+        '
+        Me.XrLabel3.BackColor = System.Drawing.Color.LightGray
+        Me.XrLabel3.Borders = DevExpress.XtraPrinting.BorderSide.None
+        Me.XrLabel3.Dpi = 254.0!
+        Me.XrLabel3.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.XrLabel3.LocationFloat = New DevExpress.Utils.PointFloat(1082.144!, 25.00001!)
+        Me.XrLabel3.Name = "XrLabel3"
+        Me.XrLabel3.Padding = New DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254.0!)
+        Me.XrLabel3.SizeF = New System.Drawing.SizeF(571.5!, 58.42!)
+        Me.XrLabel3.StylePriority.UseBackColor = False
+        Me.XrLabel3.StylePriority.UseBorders = False
+        Me.XrLabel3.StylePriority.UseFont = False
+        Me.XrLabel3.StylePriority.UseTextAlignment = False
+        Me.XrLabel3.Text = "Metas"
+        Me.XrLabel3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
+        '
+        'XrLabel2
+        '
+        Me.XrLabel2.BackColor = System.Drawing.Color.LightGray
+        Me.XrLabel2.Dpi = 254.0!
+        Me.XrLabel2.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.XrLabel2.LocationFloat = New DevExpress.Utils.PointFloat(0.0!, 25.00001!)
+        Me.XrLabel2.Name = "XrLabel2"
+        Me.XrLabel2.Padding = New DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254.0!)
+        Me.XrLabel2.SizeF = New System.Drawing.SizeF(1082.144!, 58.41999!)
+        Me.XrLabel2.StylePriority.UseBackColor = False
+        Me.XrLabel2.StylePriority.UseFont = False
+        Me.XrLabel2.StylePriority.UseTextAlignment = False
+        Me.XrLabel2.Text = "Procesos y objetivos específicos"
+        Me.XrLabel2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
+        '
         'RPT_Seg_Metas_Sin_Cal
         '
-        Me.Bands.AddRange(New DevExpress.XtraReports.UI.Band() {Me.Detail, Me.TopMargin, Me.BottomMargin, Me.ReportFooter})
+        Me.Bands.AddRange(New DevExpress.XtraReports.UI.Band() {Me.Detail, Me.TopMargin, Me.BottomMargin, Me.ReportFooter, Me.ReportHeader})
         Me.DataMember = "Nota"
         Me.DataSource = Me.DataSetBlanca1
         Me.Dpi = 254.0!
@@ -613,7 +669,6 @@ Partial Public Class RPT_Seg_Metas_Sin_Cal
     Public WithEvents WinControlContainer1 As DevExpress.XtraReports.UI.WinControlContainer
     Friend WithEvents TreeListColumn1 As DevExpress.XtraTreeList.Columns.TreeListColumn
     Friend WithEvents TreeListColumn2 As DevExpress.XtraTreeList.Columns.TreeListColumn
-    Friend WithEvents TreeListColumn3 As DevExpress.XtraTreeList.Columns.TreeListColumn
     Friend WithEvents TreeListColumn4 As DevExpress.XtraTreeList.Columns.TreeListColumn
     Friend WithEvents TreeListColumn5 As DevExpress.XtraTreeList.Columns.TreeListColumn
     Friend WithEvents TreeListColumn18 As DevExpress.XtraTreeList.Columns.TreeListColumn
@@ -641,4 +696,9 @@ Partial Public Class RPT_Seg_Metas_Sin_Cal
     Public WithEvents lblRptEnteTelefono As DevExpress.XtraReports.UI.XRLabel
     Public WithEvents XrLblIso As DevExpress.XtraReports.UI.XRLabel
     Public WithEvents XrLblUsr As DevExpress.XtraReports.UI.XRLabel
+    Friend WithEvents ReportHeader As DevExpress.XtraReports.UI.ReportHeaderBand
+    Friend WithEvents XrLabel2 As DevExpress.XtraReports.UI.XRLabel
+    Friend WithEvents TreeListColumn3 As DevExpress.XtraTreeList.Columns.TreeListColumn
+    Friend WithEvents XrLabel3 As DevExpress.XtraReports.UI.XRLabel
+    Friend WithEvents XrLabel4 As DevExpress.XtraReports.UI.XRLabel
 End Class
