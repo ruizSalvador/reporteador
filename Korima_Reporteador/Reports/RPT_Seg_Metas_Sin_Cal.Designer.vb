@@ -637,7 +637,7 @@ Partial Public Class RPT_Seg_Metas_Sin_Cal
         Me.Dpi = 254.0!
         Me.FormattingRuleSheet.AddRange(New DevExpress.XtraReports.UI.FormattingRule() {Me.NoVisibleTipo, Me.NegritasGrupos, Me.NoVisibleRubro})
         Me.Landscape = True
-        Me.Margins = New System.Drawing.Printing.Margins(0, 93, 467, 341)
+        Me.Margins = New System.Drawing.Printing.Margins(0, 61, 467, 341)
         Me.PageHeight = 2783
         Me.PageWidth = 5599
         Me.PaperKind = System.Drawing.Printing.PaperKind.Custom

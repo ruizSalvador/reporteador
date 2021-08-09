@@ -5504,3 +5504,4 @@ D:\GitHub\Reporteador\Korima_Reporteador\obj\x86\Release\Korima_Reporteador.exe.
 D:\GitHub\Reporteador\Korima_Reporteador\obj\x86\Release\Korima_Reporteador.application
 D:\GitHub\Reporteador\Korima_Reporteador\obj\x86\Release\Korima_Reporteador.CtrlUser_RPT_Seguimiento_Metas.resources
 D:\GitHub\Reporteador\Korima_Reporteador\obj\x86\Release\Korima_Reporteador.RPT_Seg_Metas.resources
+D:\GitHub\Reporteador\Korima_Reporteador\obj\x86\Release\Korima_Reporteador.RPT_Seg_Metas_Sin_Cal.resources
