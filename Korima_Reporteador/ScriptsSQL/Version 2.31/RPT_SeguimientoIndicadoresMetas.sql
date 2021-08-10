@@ -14,11 +14,11 @@ GO
 	Comments: Generación de reporte de seguimiento  metas
 */
 
--- Exec RPT_SeguimientoIndicadoresMetas 0,2020,6,1
+-- Exec RPT_SeguimientoIndicadoresMetas 0,2020,8,0
 CREATE PROCEDURE [dbo].[RPT_SeguimientoIndicadoresMetas] 
 	--@IdUsuario int, 
 	@IdMeta int, 
-	@Ejercicio int , 
+	@Ejercicio int, 
 	@Mes int,
 	@Calendarizacion bit
 
@@ -217,7 +217,7 @@ BEGIN
 
 
 Insert into #Info
-SELECT ID, IdPadre, level, Indicador, Clave, Descripcion,IdUnicoProyecto, Cantidad, IdProdMeta, IdAreaResp, IdActInst, Modificado, Comprometido, Devengado, Ejercido, Pagado,0,0,0,0,0,0,0,0,0,0,0,0,Ejercicio
+SELECT ID, IdPadre, level, Indicador, Clave, Descripcion,IdUnicoProyecto, IdProdMeta, Cantidad, IdAreaResp, IdActInst, Modificado, Comprometido, Devengado, Ejercido, Pagado,0,0,0,0,0,0,0,0,0,0,0,0,Ejercicio
 FROM tree
 
 Insert into @Seguimiento
@@ -261,7 +261,6 @@ BEGIN
  FROM #Ejercicios
  WHERE RowID = @RowCounterEj
 
- --Select @EjercicioPadre
 
 						UPDATE I SET
 	 I.Modificado = ISNULL(( SELECT SUM(p.Modificado)
@@ -393,6 +392,7 @@ END
 
 DROP TABLE #Sumatorias
 -------------------------*************************************************
+
 If @Calendarizacion != 0
 BEGIN
 Select 
