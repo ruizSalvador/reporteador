@@ -93,9 +93,10 @@ Public Class CtrlUser_RPT_RelacionBienesPatrimonio
             If (chkDepreciacion.Checked = False) Then
                 .lblGranTotal.Text = String.Format("{0:C}", dsCuentas.TotalCargos.Rows(0)(4) + dsCuentas.TotalCargos.Rows(0)(0) + dsCuentas.TotalCargos.Rows(1)(0)).Replace("$", String.Empty)
             Else
-                .lblGranTotal.Text = String.Format("{0:C}", dsCuentas.TotalCargos.Rows(0)(4)).Replace("$", String.Empty)
+                '.lblGranTotal.Text = String.Format("{0:C}", dsCuentas.TotalCargos.Rows(0)(4)).Replace("$", String.Empty)
+                .lblGranTotal.Text = String.Format("{0:C}", dsCuentas.TotalCargos.Rows(0)(3) + dsCuentas.TotalCargos.Rows(0)(0) + dsCuentas.TotalCargos.Rows(1)(0)).Replace("$", String.Empty)
             End If
-            .lblDiferencia.Text = String.Format("{0:C}", dsCuentas.TotalCargos.Rows(0)(5)).Replace("$", String.Empty)
+            '.lblDiferencia.Text = String.Format("{0:C}", dsCuentas.TotalCargos.Rows(0)(5)).Replace("$", String.Empty)
         End With
 
         'Firmas 

@@ -20,9 +20,11 @@ Partial Public Class RPT_RelacionBienesPatrimonio
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(RPT_RelacionBienesPatrimonio))
-        Dim XrSummary1 As DevExpress.XtraReports.UI.XRSummary = New DevExpress.XtraReports.UI.XRSummary()
         Dim XrSummary2 As DevExpress.XtraReports.UI.XRSummary = New DevExpress.XtraReports.UI.XRSummary()
         Dim XrSummary3 As DevExpress.XtraReports.UI.XRSummary = New DevExpress.XtraReports.UI.XRSummary()
+        Dim XrSummary4 As DevExpress.XtraReports.UI.XRSummary = New DevExpress.XtraReports.UI.XRSummary()
+        Dim XrSummary5 As DevExpress.XtraReports.UI.XRSummary = New DevExpress.XtraReports.UI.XRSummary()
+        Dim XrSummary1 As DevExpress.XtraReports.UI.XRSummary = New DevExpress.XtraReports.UI.XRSummary()
         Me.XrLabel1 = New DevExpress.XtraReports.UI.XRLabel()
         Me.oleDbCommand1 = New System.Data.OleDb.OleDbCommand()
         Me.oleDbConnection1 = New System.Data.OleDb.OleDbConnection()
@@ -32,6 +34,7 @@ Partial Public Class RPT_RelacionBienesPatrimonio
         Me.label10 = New DevExpress.XtraReports.UI.XRLabel()
         Me.label31 = New DevExpress.XtraReports.UI.XRLabel()
         Me.TopMargin = New DevExpress.XtraReports.UI.TopMarginBand()
+        Me.PICEnteLogoSecundario = New DevExpress.XtraReports.UI.XRPictureBox()
         Me.line1 = New DevExpress.XtraReports.UI.XRLine()
         Me.lblTitulo = New DevExpress.XtraReports.UI.XRLabel()
         Me.lblSubtitulo = New DevExpress.XtraReports.UI.XRLabel()
@@ -69,9 +72,9 @@ Partial Public Class RPT_RelacionBienesPatrimonio
         Me.XrLabel3 = New DevExpress.XtraReports.UI.XRLabel()
         Me.lblCuentaDos = New DevExpress.XtraReports.UI.XRLabel()
         Me.lblCuentaUno = New DevExpress.XtraReports.UI.XRLabel()
+        Me.XrLabel5 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrSubreport1 = New DevExpress.XtraReports.UI.XRSubreport()
         Me.RpT_FirmasVerticalElectronica1 = New Korima_Reporteador.RPT_FirmasVerticalElectronica()
-        Me.PICEnteLogoSecundario = New DevExpress.XtraReports.UI.XRPictureBox()
         CType(Me.DsNotasBenn1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RpT_FirmasVerticalElectronica1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -98,7 +101,7 @@ Partial Public Class RPT_RelacionBienesPatrimonio
         'oleDbConnection1
         '
         Me.oleDbConnection1.ConnectionString = "Provider=SQLNCLI.1;Password=123;Persist Security Info=True;User ID=sa;Initial Cat" & _
-            "alog=K2ReportesTlaquepaque;Data Source=benjaminmelende\sqlexpress"
+    "alog=K2ReportesTlaquepaque;Data Source=benjaminmelende\sqlexpress"
         '
         'Detail
         '
@@ -182,6 +185,14 @@ Partial Public Class RPT_RelacionBienesPatrimonio
         Me.TopMargin.Dpi = 254.0!
         Me.TopMargin.HeightF = 542.0!
         Me.TopMargin.Name = "TopMargin"
+        '
+        'PICEnteLogoSecundario
+        '
+        Me.PICEnteLogoSecundario.Dpi = 254.0!
+        Me.PICEnteLogoSecundario.LocationFloat = New DevExpress.Utils.PointFloat(1287.923!, 172.4025!)
+        Me.PICEnteLogoSecundario.Name = "PICEnteLogoSecundario"
+        Me.PICEnteLogoSecundario.SizeF = New System.Drawing.SizeF(215.3709!, 203.2!)
+        Me.PICEnteLogoSecundario.Sizing = DevExpress.XtraPrinting.ImageSizeMode.ZoomImage
         '
         'line1
         '
@@ -313,7 +324,7 @@ Partial Public Class RPT_RelacionBienesPatrimonio
         'LblTipoMovimientoHeader
         '
         Me.LblTipoMovimientoHeader.Borders = CType(((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Top) _
-                    Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
+            Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
         Me.LblTipoMovimientoHeader.BorderWidth = 1
         Me.LblTipoMovimientoHeader.Dpi = 254.0!
         Me.LblTipoMovimientoHeader.Font = New System.Drawing.Font("Tahoma", 8.0!, System.Drawing.FontStyle.Bold)
@@ -331,8 +342,8 @@ Partial Public Class RPT_RelacionBienesPatrimonio
         'label4
         '
         Me.label4.Borders = CType((((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Top) _
-                    Or DevExpress.XtraPrinting.BorderSide.Right) _
-                    Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
+            Or DevExpress.XtraPrinting.BorderSide.Right) _
+            Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
         Me.label4.BorderWidth = 1
         Me.label4.Dpi = 254.0!
         Me.label4.Font = New System.Drawing.Font("Tahoma", 8.0!, System.Drawing.FontStyle.Bold)
@@ -350,7 +361,7 @@ Partial Public Class RPT_RelacionBienesPatrimonio
         'label8
         '
         Me.label8.Borders = CType(((DevExpress.XtraPrinting.BorderSide.Top Or DevExpress.XtraPrinting.BorderSide.Right) _
-                    Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
+            Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
         Me.label8.BorderWidth = 1
         Me.label8.Dpi = 254.0!
         Me.label8.Font = New System.Drawing.Font("Tahoma", 8.0!, System.Drawing.FontStyle.Bold)
@@ -506,7 +517,7 @@ Partial Public Class RPT_RelacionBienesPatrimonio
         '
         'ReportFooter
         '
-        Me.ReportFooter.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.lblDiferencia, Me.XrLabel4, Me.lblGranTotal, Me.lblTotalDos, Me.lblTotalUno, Me.XrLabel3, Me.lblCuentaDos, Me.lblCuentaUno, Me.XrSubreport1, Me.XrLabel7})
+        Me.ReportFooter.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.XrLabel5, Me.lblDiferencia, Me.XrLabel4, Me.lblGranTotal, Me.lblTotalDos, Me.lblTotalUno, Me.XrLabel3, Me.lblCuentaDos, Me.lblCuentaUno, Me.XrSubreport1, Me.XrLabel7})
         Me.ReportFooter.Dpi = 254.0!
         Me.ReportFooter.HeightF = 436.5625!
         Me.ReportFooter.Name = "ReportFooter"
@@ -515,12 +526,14 @@ Partial Public Class RPT_RelacionBienesPatrimonio
         '
         Me.lblDiferencia.Dpi = 254.0!
         Me.lblDiferencia.Font = New System.Drawing.Font("Tahoma", 8.0!, System.Drawing.FontStyle.Bold)
-        Me.lblDiferencia.LocationFloat = New DevExpress.Utils.PointFloat(1520.988!, 0.0!)
+        Me.lblDiferencia.LocationFloat = New DevExpress.Utils.PointFloat(1266.987!, 58.41996!)
         Me.lblDiferencia.Name = "lblDiferencia"
         Me.lblDiferencia.Padding = New DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254.0!)
         Me.lblDiferencia.SizeF = New System.Drawing.SizeF(254.0!, 58.42!)
         Me.lblDiferencia.StylePriority.UseFont = False
         Me.lblDiferencia.StylePriority.UseTextAlignment = False
+        XrSummary2.FormatString = "{0:n2}"
+        Me.lblDiferencia.Summary = XrSummary2
         Me.lblDiferencia.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight
         '
         'XrLabel4
@@ -552,9 +565,9 @@ Partial Public Class RPT_RelacionBienesPatrimonio
         Me.lblGranTotal.StylePriority.UseBorders = False
         Me.lblGranTotal.StylePriority.UseFont = False
         Me.lblGranTotal.StylePriority.UseTextAlignment = False
-        XrSummary1.FormatString = "{0:n2}"
-        XrSummary1.Func = DevExpress.XtraReports.UI.SummaryFunc.Avg
-        Me.lblGranTotal.Summary = XrSummary1
+        XrSummary3.FormatString = "{0:n2}"
+        XrSummary3.Func = DevExpress.XtraReports.UI.SummaryFunc.Avg
+        Me.lblGranTotal.Summary = XrSummary3
         Me.lblGranTotal.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight
         '
         'lblTotalDos
@@ -569,8 +582,8 @@ Partial Public Class RPT_RelacionBienesPatrimonio
         Me.lblTotalDos.StylePriority.UseBorders = False
         Me.lblTotalDos.StylePriority.UseFont = False
         Me.lblTotalDos.StylePriority.UseTextAlignment = False
-        XrSummary2.FormatString = "{0:n2}"
-        Me.lblTotalDos.Summary = XrSummary2
+        XrSummary4.FormatString = "{0:n2}"
+        Me.lblTotalDos.Summary = XrSummary4
         Me.lblTotalDos.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight
         '
         'lblTotalUno
@@ -578,15 +591,15 @@ Partial Public Class RPT_RelacionBienesPatrimonio
         Me.lblTotalUno.Borders = DevExpress.XtraPrinting.BorderSide.None
         Me.lblTotalUno.Dpi = 254.0!
         Me.lblTotalUno.Font = New System.Drawing.Font("Tahoma", 8.0!)
-        Me.lblTotalUno.LocationFloat = New DevExpress.Utils.PointFloat(1520.987!, 151.1108!)
+        Me.lblTotalUno.LocationFloat = New DevExpress.Utils.PointFloat(1520.988!, 151.1108!)
         Me.lblTotalUno.Name = "lblTotalUno"
         Me.lblTotalUno.Padding = New DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254.0!)
         Me.lblTotalUno.SizeF = New System.Drawing.SizeF(257.125!, 41.82359!)
         Me.lblTotalUno.StylePriority.UseBorders = False
         Me.lblTotalUno.StylePriority.UseFont = False
         Me.lblTotalUno.StylePriority.UseTextAlignment = False
-        XrSummary3.FormatString = "{0:n2}"
-        Me.lblTotalUno.Summary = XrSummary3
+        XrSummary5.FormatString = "{0:n2}"
+        Me.lblTotalUno.Summary = XrSummary5
         Me.lblTotalUno.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight
         '
         'XrLabel3
@@ -640,6 +653,23 @@ Partial Public Class RPT_RelacionBienesPatrimonio
         Me.lblCuentaUno.Text = "Cuenta Uno"
         Me.lblCuentaUno.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
         '
+        'XrLabel5
+        '
+        Me.XrLabel5.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "SP_RPT_K2_RelacionBienesPatrimonio.Valor")})
+        Me.XrLabel5.Dpi = 254.0!
+        Me.XrLabel5.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.XrLabel5.LocationFloat = New DevExpress.Utils.PointFloat(1520.987!, 0.0!)
+        Me.XrLabel5.Name = "XrLabel5"
+        Me.XrLabel5.Padding = New DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254.0!)
+        Me.XrLabel5.SizeF = New System.Drawing.SizeF(254.0!, 58.42!)
+        Me.XrLabel5.StylePriority.UseFont = False
+        Me.XrLabel5.StylePriority.UseTextAlignment = False
+        XrSummary1.FormatString = "{0:n2}"
+        XrSummary1.Running = DevExpress.XtraReports.UI.SummaryRunning.Report
+        Me.XrLabel5.Summary = XrSummary1
+        Me.XrLabel5.Text = "XrLabel5"
+        Me.XrLabel5.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight
+        '
         'XrSubreport1
         '
         Me.XrSubreport1.Dpi = 254.0!
@@ -647,14 +677,6 @@ Partial Public Class RPT_RelacionBienesPatrimonio
         Me.XrSubreport1.Name = "XrSubreport1"
         Me.XrSubreport1.ReportSource = Me.RpT_FirmasVerticalElectronica1
         Me.XrSubreport1.SizeF = New System.Drawing.SizeF(1840.583!, 58.41992!)
-        '
-        'PICEnteLogoSecundario
-        '
-        Me.PICEnteLogoSecundario.Dpi = 254.0!
-        Me.PICEnteLogoSecundario.LocationFloat = New DevExpress.Utils.PointFloat(1287.923!, 172.4025!)
-        Me.PICEnteLogoSecundario.Name = "PICEnteLogoSecundario"
-        Me.PICEnteLogoSecundario.SizeF = New System.Drawing.SizeF(215.3709!, 203.2!)
-        Me.PICEnteLogoSecundario.Sizing = DevExpress.XtraPrinting.ImageSizeMode.ZoomImage
         '
         'RPT_RelacionBienesPatrimonio
         '
@@ -725,5 +747,6 @@ Partial Public Class RPT_RelacionBienesPatrimonio
     Private WithEvents RpT_FirmasVerticalElectronica1 As Korima_Reporteador.RPT_FirmasVerticalElectronica
     Friend WithEvents lblDiferencia As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents PICEnteLogoSecundario As DevExpress.XtraReports.UI.XRPictureBox
+    Friend WithEvents XrLabel5 As DevExpress.XtraReports.UI.XRLabel
     ' Friend dss As XtraReportSerialization.dssDataSet
 End Class
