@@ -7,29 +7,29 @@ Public Class CtrlUser_RPT_Seguimiento_Metas
     Private Function MesLetra(ByVal Mes As Integer) As String
         Select Case Mes
             Case 1
-                Return "Enero"
+                Return "ENERO"
             Case 2
-                Return "Febrero"
+                Return "FEBRERO"
             Case 3
-                Return "Marzo"
+                Return "MARZO"
             Case 4
-                Return "Abril"
+                Return "ABRIL"
             Case 5
-                Return "Mayo"
+                Return "MAYO"
             Case 6
-                Return "Junio"
+                Return "JUNIO"
             Case 7
-                Return "Julio"
+                Return "JULIO"
             Case 8
-                Return "Agosto"
+                Return "AGOSTO"
             Case 9
-                Return "Septiembre"
+                Return "SEPTIEMBRE"
             Case 10
-                Return "Octubre"
+                Return "OCTUBRE"
             Case 11
-                Return "Noviembre"
+                Return "NOVIEMBRE"
             Case 12
-                Return "Diciembre"
+                Return "DICIEMBRE"
             Case Else
                 Return ""
         End Select
@@ -53,10 +53,25 @@ Public Class CtrlUser_RPT_Seguimiento_Metas
 
         reporte.Ejercicio = Year(filterEjercicio.EditValue)
         reporte.Mes = Month(filterPeriodoIni.EditValue)
-        reporte.IdMeta = IIf(filterProyecto.Text.Length = 0, 0, Convert.ToInt32(filterProyecto.EditValue))
+        reporte.IdMeta = 1 'IIf(filterProyecto.Text.Length = 0, 0, Convert.ToInt32(filterProyecto.EditValue))
         reporte.Calendarizacion = ChkCalendarizacion.Checked
 
-        '--Codgio para Llenar Reporte con SP
+        Dim str As String = ""
+        For Each item As CheckedListBoxItem In filterProyecto.Properties.Items
+            If item.CheckState = CheckState.Checked Then
+                'MessageBox.Show(item.Value.ToString)
+                str = str & "," & "'" & item.Value.ToString & "'"
+            End If
+        Next
+
+        'Dim cadena As String
+        Try
+            reporte.CadenaMeta = str.Remove(0, 1)
+        Catch ex As Exception
+            reporte.CadenaMeta = ""
+        End Try
+
+       '--Codgio para Llenar Reporte con SP
         'SQLConexion = New SqlConnection(SQLmConnStr)
         'SQLConexion.Open()
         'Dim SQLComando As New SqlCommand("RPT_SeguimientoIndicadoresMetas", SQLConexion)
@@ -109,7 +124,7 @@ Public Class CtrlUser_RPT_Seguimiento_Metas
         '--- Llenar datos del ente
         With reporte
             .lblRptNombreEnte.Text = pRPTCFGDatosEntes.Nombre
-            .lblTitulo.Text = "ESTADO DE GASTO PRESUPUESTAL PROGRAMÁTICO A "
+            .lblTitulo.Text = "ESTADO DE GASTO PRESUPUESTAL PROGRAMÁTICO A " & MesLetra(filterPeriodoIni.Time.Month) & " DE " & filterEjercicio.Time.Year.ToString
             .lblRptNombreReporte.Text = ""
             .lblRptDescripcionFiltrado.Text = ""
             .lblRptEnteDomicilio.Text = pRPTCFGDatosEntes.Domicilio
@@ -119,8 +134,8 @@ Public Class CtrlUser_RPT_Seguimiento_Metas
             .PICEnteLogo.Image = pRPTCFGDatosEntes.LogoEnte
             .PICEnteLogoSecundario.Image = pRPTCFGDatosEntes.LogoEnteSecundario
 
-            ' Cambiar en tiempo de ejecución las etiquetas - '@PRodriguez 20200122 B1226
-            .lblRptDescripcionFiltrado.Text = "Presupuesto de Egresos Ejercicio: " & filterEjercicio.Time.Year.ToString
+
+            .lblRptDescripcionFiltrado.Text = "Presupuesto de Egresos Ejercicio " & filterEjercicio.Time.Year.ToString
             '.TreeRptMetas.DataSource = ds.Tables(0)
 
             '.XrLMetaBase.Text = "Meta " & Year(filterEjercicio.EditValue).ToString & ":"
@@ -168,16 +183,35 @@ Public Class CtrlUser_RPT_Seguimiento_Metas
             .DataSource = ObjTempSQL2.List(" IdPadre = 0 AND Ejercicio=" & Year(filterEjercicio.EditValue), 0, " T_DefinicionMetas ", "")
             .DisplayMember = "Clave"
             .ValueMember = "IdDefMeta"
-            .SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoFilter
+            '.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoFilter
             .NullText = ""
-            .ShowHeader = True
+            '.ShowHeader = True
         End With
+
+        ''--------------------------------------------
+        'Dim SQLConexion As SqlConnection
+        'SQLConexion = New SqlConnection(cnnString)
+        'SQLConexion.Open()
+        'Dim iProv As Int16 = 0
+        ''iProv = filterProv.EditValue
+        'Dim sql As String = "Select Clave, Descripcion From T_DefinicionMetas Where IdPadre= 0 and Ejercicio= " & Year(filterEjercicio.EditValue)
+        'Dim command As New SqlCommand(sql, SQLConexion)
+        'Dim reader As SqlDataReader = command.ExecuteReader()
+
+        'chkMetas.Items.Clear()
+        'While reader.Read
+        '    chkMetas.BeginUpdate()
+        '    chkMetas.Items.Add(reader.Item("Clave"))
+        '    chkMetas.EndUpdate()
+        'End While
+
+        'CheckBox1.Checked = False
 
 
     End Sub
 
 
-    Private Sub filterEstructuraProgramatica_GotFocus(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles filterProyecto.GotFocus
+    Private Sub filterEstructuraProgramatica_GotFocus(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Dim ObjTempSQL2 As New clsRPT_CFG_DatosEntesCtrl
         'With filterProyecto.Properties
         '    .DataSource = ObjTempSQL2.List("Ejercicio=" & Year(filterEjercicio.EditValue), 0, "VW_RPT_K2_FiltroInfAdmtvoEdoEjerPresupuestoEGR", " Order by Id ")
@@ -193,9 +227,9 @@ Public Class CtrlUser_RPT_Seguimiento_Metas
             .DataSource = ObjTempSQL2.List(" IdPadre = 0 AND Ejercicio=" & Year(filterEjercicio.EditValue), 0, " T_DefinicionMetas ", "")
             .DisplayMember = "Clave"
             .ValueMember = "IdDefMeta"
-            .SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoFilter
+            '.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoFilter
             .NullText = ""
-            .ShowHeader = True
+            '.ShowHeader = True
         End With
 
 
@@ -217,5 +251,47 @@ Public Class CtrlUser_RPT_Seguimiento_Metas
         filterProyecto.Properties.NullText = ""
         filterProyecto.Properties.ValueMember = ""
 
+    End Sub
+
+    Private Sub filterEjercicio_TextChanged(sender As System.Object, e As System.EventArgs) Handles filterEjercicio.TextChanged
+        'Dim SQLConexion As SqlConnection
+        'SQLConexion = New SqlConnection(cnnString)
+        'SQLConexion.Open()
+        'Dim iProv As Int32 = 0
+        'Dim _year As Int32
+        'Dim fecha As DateTime = filterEjercicio.EditValue
+        'If (filterEjercicio.Text = "") Then
+        '    _year = 0
+        'Else
+        '    _year = fecha.Year
+        'End If
+        ''iProv = filterProv.EditValue
+
+        ''Dim SQLConexion As SqlConnection
+        'SQLConexion = New SqlConnection(cnnString)
+        'SQLConexion.Open()
+        '' Dim iProv As Int16 = 0
+        ''iProv = filterProv.EditValue
+        'Dim sql As String = "Select Clave, Descripcion From T_DefinicionMetas Where IdPadre= 0 and Ejercicio= " & _year
+        'Dim command As New SqlCommand(sql, SQLConexion)
+        'Dim reader As SqlDataReader = command.ExecuteReader()
+
+        'chkMetas.Items.Clear()
+        'While reader.Read
+        '    chkMetas.BeginUpdate()
+        '    chkMetas.Items.Add(reader.Item("Clave"))
+        '    chkMetas.EndUpdate()
+        'End While
+
+        '--------------------
+        Dim ObjTempSQL2 As New clsRPT_CFG_DatosEntesCtrl
+        With filterProyecto.Properties
+            .DataSource = ObjTempSQL2.List(" IdPadre = 0 AND Ejercicio=" & Year(filterEjercicio.EditValue), 0, " T_DefinicionMetas ", "")
+            .DisplayMember = "Clave"
+            .ValueMember = "IdDefMeta"
+            '.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoFilter
+            .NullText = ""
+            '.ShowHeader = True
+        End With
     End Sub
 End Class

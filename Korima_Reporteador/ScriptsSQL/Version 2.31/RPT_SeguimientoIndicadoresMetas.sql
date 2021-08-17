@@ -14,10 +14,11 @@ GO
 	Comments: Generación de reporte de seguimiento  metas
 */
 
--- Exec RPT_SeguimientoIndicadoresMetas 0,2020,8,0
+-- Exec RPT_SeguimientoIndicadoresMetas '58,59,60',2020,8,0
 CREATE PROCEDURE [dbo].[RPT_SeguimientoIndicadoresMetas] 
 	--@IdUsuario int, 
-	@IdMeta int, 
+	--@IdMeta int,
+	@CadenaMeta varchar(max),
 	@Ejercicio int, 
 	@Mes int,
 	@Calendarizacion bit
@@ -72,45 +73,54 @@ Declare @Seguimiento as Table(IdDefMeta int,
 						Diciembre int,
 						Ejercicio int
 						);
-IF @IdMeta != 0
+IF @CadenaMeta != ''
 BEGIN
-	WITH tree (ID, IdPadre, level, Indicador, Clave, Descripcion, IdUnicoProyecto, IdProdMeta, Cantidad, IdAreaResp, IdActInst, Modificado, Comprometido, Devengado, Ejercido, Pagado, Ejercicio) as 
-(
-   SELECT IdDefMeta, IdPadre, 0 as level, IdIndicador, Clave, Descripcion,IdUnicoProyecto, IdProdMeta, Cantidad,
-   ISNULL((SELECT  IdAreaResp FROM C_Departamentos WHERE IdDepartamento = T_DefinicionMetas.IdDepartamento),0) as IdAreaResp,
-   ISNULL((SELECT IdPadre FROM C_EP_Ramo WHERE Id = T_DefinicionMetas.IdUnicoProyecto AND Nivel = 5),0) as IdActInst,
-   0 as Modificado ,
-   0 as Comprometido ,
-   0 as Devengado ,
-   0 as Ejercido ,
-   0 as Pagado ,
-   Ejercicio
-   FROM T_DefinicionMetas
-   WHERE IdPadre = 0
-   AND T_DefinicionMetas.IdDefMeta = @IdMeta
+--Declare @Cadena varchar(100) = '58,59,60'
+	DECLARE @sql nvarchar(max)
 
-   UNION ALL
+SET @sql = 
 
-   SELECT c2.IdDefMeta, c2.IdPadre, tree.level + 1, c2.IdIndicador, c2.Clave, c2.Descripcion,c2.IdUnicoProyecto, c2.IdProdMeta, c2.Cantidad,
-   ISNULL((SELECT IdAreaResp FROM C_Departamentos WHERE IdDepartamento = c2.IdDepartamento),0) as IdAreaResp,
-   ISNULL((SELECT IdPadre FROM C_EP_Ramo WHERE Id = c2.IdUnicoProyecto AND Nivel = 5),0) as IdActInst,
-   0 as Modificado ,
-   0 as Comprometido ,
-   0 as Devengado ,
-   0 as Ejercido ,
-   0 as Pagado ,
-   c2.Ejercicio
-   FROM T_DefinicionMetas c2 
-     INNER JOIN tree ON tree.id = c2.IdPadre
-	 WHERE c2.Ejercicio = @Ejercicio
-	 
-)
+'WITH tree (ID, IdPadre, level, Indicador, Clave, Descripcion, IdUnicoProyecto, IdProdMeta, Cantidad, IdAreaResp, IdActInst, Modificado, Comprometido, Devengado, Ejercido, Pagado, Ejercicio) as '
++ '( '
++'SELECT IdDefMeta, IdPadre, 0 as level, IdIndicador, Clave, Descripcion,IdUnicoProyecto, IdProdMeta, Cantidad, '
++'ISNULL((SELECT  IdAreaResp FROM C_Departamentos WHERE IdDepartamento = T_DefinicionMetas.IdDepartamento),0) as IdAreaResp, '
++'ISNULL((SELECT IdPadre FROM C_EP_Ramo WHERE Id = T_DefinicionMetas.IdUnicoProyecto AND Nivel = 5),0) as IdActInst, '
++'0 as Modificado , '
++'0 as Comprometido , '
++'0 as Devengado , '
++'0 as Ejercido , '
++'0 as Pagado , '
++'Ejercicio '
++'FROM T_DefinicionMetas '
++'WHERE IdPadre = 0 '
++'AND T_DefinicionMetas.IdDefMeta in (' + @CadenaMeta + ') '
 
++'UNION ALL '
 
++'SELECT c2.IdDefMeta, c2.IdPadre, tree.level + 1, c2.IdIndicador, c2.Clave, c2.Descripcion,c2.IdUnicoProyecto, c2.IdProdMeta, c2.Cantidad, '
++'ISNULL((SELECT IdAreaResp FROM C_Departamentos WHERE IdDepartamento = c2.IdDepartamento),0) as IdAreaResp, '
++'ISNULL((SELECT IdPadre FROM C_EP_Ramo WHERE Id = c2.IdUnicoProyecto AND Nivel = 5),0) as IdActInst, '
++'0 as Modificado , '
++'0 as Comprometido , '
++'0 as Devengado , '
++'0 as Ejercido , '
++'0 as Pagado , '
++'c2.Ejercicio '
++'FROM T_DefinicionMetas c2 '
++'INNER JOIN tree ON tree.id = c2.IdPadre '
++'WHERE c2.Ejercicio = ' + Convert(nvarchar(20),@Ejercicio)
+
++') '
++'SELECT ID, IdPadre, level, Indicador, Clave, Descripcion,IdUnicoProyecto, IdProdMeta, Cantidad, IdAreaResp, IdActInst, Modificado, Comprometido, Devengado, Ejercido, Pagado,0,0,0,0,0,0,0,0,0,0,0,0, Ejercicio '
++'FROM tree '
 
 Insert into #info
-SELECT ID, IdPadre, level, Indicador, Clave, Descripcion,IdUnicoProyecto, IdProdMeta, Cantidad, IdAreaResp, IdActInst, Modificado, Comprometido, Devengado, Ejercido, Pagado,0,0,0,0,0,0,0,0,0,0,0,0, Ejercicio
-FROM tree
+EXEC (@sql)
+
+
+--Insert into #info
+--SELECT ID, IdPadre, level, Indicador, Clave, Descripcion,IdUnicoProyecto, IdProdMeta, Cantidad, IdAreaResp, IdActInst, Modificado, Comprometido, Devengado, Ejercido, Pagado,0,0,0,0,0,0,0,0,0,0,0,0, Ejercicio
+--FROM tree
 
 Insert into @Seguimiento
 Select IdDefMeta, Avance, 

@@ -9,6 +9,7 @@ Public Class RPT_Seg_Metas_Sin_Cal
     Public Mes As Integer
     Public IdMeta As Integer
     Public Calendarizacion As Integer
+    Public CadenaMeta As String
     Private treeList As New DevExpress.XtraTreeList.TreeList()
 
     ''28 porc modificado
@@ -174,10 +175,10 @@ Public Class RPT_Seg_Metas_Sin_Cal
         SQLComando.CommandType = CommandType.StoredProcedure
         '--- Parametros IN
         'SQLComando.Parameters.Add(New SqlParameter("@IdUsuario", 2))
-        SQLComando.Parameters.Add(New SqlParameter("@IdMeta", Me.IdMeta))
+        'SQLComando.Parameters.Add(New SqlParameter("@IdMeta", Me.IdMeta))
+        SQLComando.Parameters.Add(New SqlParameter("@CadenaMeta", CadenaMeta))
         SQLComando.Parameters.Add(New SqlParameter("@Ejercicio", Me.Ejercicio))
-        'SQLComando.Parameters.Add(New SqlParameter("@Proyecto", filterProyecto.Properties.KeyValue))
-        SQLComando.Parameters.Add(New SqlParameter("@Mes", 1))
+        SQLComando.Parameters.Add(New SqlParameter("@Mes", Me.Mes))
         SQLComando.Parameters.Add(New SqlParameter("@Calendarizacion", Calendarizacion))
 
 

@@ -321,6 +321,7 @@ Partial Public Class RPT_Seg_Metas
         Me.TreeList1.Location = New System.Drawing.Point(0, 0)
         Me.TreeList1.Name = "TreeList1"
         Me.TreeList1.OptionsPrint.PrintAllNodes = True
+        Me.TreeList1.OptionsPrint.PrintTreeButtons = False
         Me.TreeList1.ParentFieldName = "IdPadre"
         Me.TreeList1.Size = New System.Drawing.Size(2022, 90)
         Me.TreeList1.TabIndex = 0
@@ -369,7 +370,7 @@ Partial Public Class RPT_Seg_Metas
         Me.TreeListColumn5.AppearanceHeader.Options.UseTextOptions = True
         Me.TreeListColumn5.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
         Me.TreeListColumn5.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
-        Me.TreeListColumn5.Caption = "Cantidad"
+        Me.TreeListColumn5.Caption = "Meta"
         Me.TreeListColumn5.FieldName = "Cantidad"
         Me.TreeListColumn5.Name = "TreeListColumn5"
         Me.TreeListColumn5.Visible = True
@@ -873,7 +874,6 @@ Partial Public Class RPT_Seg_Metas
         Me.XrLabel3.StylePriority.UseBorders = False
         Me.XrLabel3.StylePriority.UseFont = False
         Me.XrLabel3.StylePriority.UseTextAlignment = False
-        Me.XrLabel3.Text = "Metas"
         Me.XrLabel3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
         '
         'XrLabel2

@@ -26,7 +26,16 @@ Partial Class CtrlUser_RPT_Seguimiento_Metas
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CtrlUser_RPT_Seguimiento_Metas))
         Me.SplitContainerControl1 = New DevExpress.XtraEditors.SplitContainerControl()
         Me.SimpleButton2 = New DevExpress.XtraEditors.SimpleButton()
-        Me.filterProyecto = New DevExpress.XtraEditors.LookUpEdit()
+        Me.ChkAnual = New System.Windows.Forms.CheckBox()
+        Me.filterPeriodoIni = New DevExpress.XtraEditors.TimeEdit()
+        Me.filterPeriodoFin = New DevExpress.XtraEditors.TimeEdit()
+        Me.LabelControl6 = New DevExpress.XtraEditors.LabelControl()
+        Me.LabelControl7 = New DevExpress.XtraEditors.LabelControl()
+        Me.filterEjercicio = New DevExpress.XtraEditors.TimeEdit()
+        Me.LabelControl5 = New DevExpress.XtraEditors.LabelControl()
+        Me.ChkCalendarizacion = New System.Windows.Forms.CheckBox()
+        Me.SimpleButton1 = New DevExpress.XtraEditors.SimpleButton()
+        Me.filterProyecto = New DevExpress.XtraEditors.CheckedComboBoxEdit()
         Me.PrintBarManager1 = New DevExpress.XtraPrinting.Preview.PrintBarManager(Me.components)
         Me.PreviewBar1 = New DevExpress.XtraPrinting.Preview.PreviewBar()
         Me.PrintPreviewBarItem4 = New DevExpress.XtraPrinting.Preview.PrintPreviewBarItem()
@@ -84,27 +93,18 @@ Partial Class CtrlUser_RPT_Seguimiento_Metas
         Me.PrintPreviewBarCheckItem16 = New DevExpress.XtraPrinting.Preview.PrintPreviewBarCheckItem()
         Me.PrintPreviewBarCheckItem17 = New DevExpress.XtraPrinting.Preview.PrintPreviewBarCheckItem()
         Me.PrintControl1 = New DevExpress.XtraPrinting.Control.PrintControl()
-        Me.ChkAnual = New System.Windows.Forms.CheckBox()
-        Me.filterPeriodoIni = New DevExpress.XtraEditors.TimeEdit()
-        Me.filterPeriodoFin = New DevExpress.XtraEditors.TimeEdit()
-        Me.LabelControl6 = New DevExpress.XtraEditors.LabelControl()
-        Me.LabelControl7 = New DevExpress.XtraEditors.LabelControl()
-        Me.filterEjercicio = New DevExpress.XtraEditors.TimeEdit()
-        Me.LabelControl5 = New DevExpress.XtraEditors.LabelControl()
-        Me.ChkCalendarizacion = New System.Windows.Forms.CheckBox()
-        Me.SimpleButton1 = New DevExpress.XtraEditors.SimpleButton()
         Me.TreeList1 = New DevExpress.XtraTreeList.TreeList()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         CType(Me.SplitContainerControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainerControl1.SuspendLayout()
+        CType(Me.filterPeriodoIni.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.filterPeriodoFin.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.filterEjercicio.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.filterProyecto.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PrintBarManager1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PrintPreviewRepositoryItemComboBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemProgressBar1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemZoomTrackBar1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.filterPeriodoIni.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.filterPeriodoFin.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.filterEjercicio.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TreeList1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -116,7 +116,6 @@ Partial Class CtrlUser_RPT_Seguimiento_Metas
         Me.SplitContainerControl1.Location = New System.Drawing.Point(0, 53)
         Me.SplitContainerControl1.Name = "SplitContainerControl1"
         Me.SplitContainerControl1.Panel1.Controls.Add(Me.SimpleButton2)
-        Me.SplitContainerControl1.Panel1.Controls.Add(Me.filterProyecto)
         Me.SplitContainerControl1.Panel1.Controls.Add(Me.ChkAnual)
         Me.SplitContainerControl1.Panel1.Controls.Add(Me.filterPeriodoIni)
         Me.SplitContainerControl1.Panel1.Controls.Add(Me.filterPeriodoFin)
@@ -126,6 +125,7 @@ Partial Class CtrlUser_RPT_Seguimiento_Metas
         Me.SplitContainerControl1.Panel1.Controls.Add(Me.LabelControl5)
         Me.SplitContainerControl1.Panel1.Controls.Add(Me.ChkCalendarizacion)
         Me.SplitContainerControl1.Panel1.Controls.Add(Me.SimpleButton1)
+        Me.SplitContainerControl1.Panel1.Controls.Add(Me.filterProyecto)
         Me.SplitContainerControl1.Panel1.Text = "Panel1"
         Me.SplitContainerControl1.Panel2.Controls.Add(Me.TreeList1)
         Me.SplitContainerControl1.Panel2.Controls.Add(Me.PrintControl1)
@@ -142,14 +142,109 @@ Partial Class CtrlUser_RPT_Seguimiento_Metas
         Me.SimpleButton2.Name = "SimpleButton2"
         Me.SimpleButton2.Size = New System.Drawing.Size(25, 20)
         Me.SimpleButton2.TabIndex = 49
+        Me.SimpleButton2.Visible = False
+        '
+        'ChkAnual
+        '
+        Me.ChkAnual.AutoSize = True
+        Me.ChkAnual.Location = New System.Drawing.Point(30, 343)
+        Me.ChkAnual.Name = "ChkAnual"
+        Me.ChkAnual.Size = New System.Drawing.Size(53, 17)
+        Me.ChkAnual.TabIndex = 47
+        Me.ChkAnual.Text = "Anual"
+        Me.ChkAnual.UseVisualStyleBackColor = True
+        Me.ChkAnual.Visible = False
+        '
+        'filterPeriodoIni
+        '
+        Me.filterPeriodoIni.EditValue = Nothing
+        Me.filterPeriodoIni.Location = New System.Drawing.Point(93, 29)
+        Me.filterPeriodoIni.Name = "filterPeriodoIni"
+        Me.filterPeriodoIni.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton()})
+        Me.filterPeriodoIni.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.[Default]
+        Me.filterPeriodoIni.Properties.Mask.EditMask = "MM"
+        Me.filterPeriodoIni.Size = New System.Drawing.Size(59, 20)
+        Me.filterPeriodoIni.TabIndex = 46
+        '
+        'filterPeriodoFin
+        '
+        Me.filterPeriodoFin.EditValue = Nothing
+        Me.filterPeriodoFin.Location = New System.Drawing.Point(89, 341)
+        Me.filterPeriodoFin.Name = "filterPeriodoFin"
+        Me.filterPeriodoFin.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton()})
+        Me.filterPeriodoFin.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.[Default]
+        Me.filterPeriodoFin.Properties.Mask.EditMask = "MM"
+        Me.filterPeriodoFin.Size = New System.Drawing.Size(60, 20)
+        Me.filterPeriodoFin.TabIndex = 45
+        Me.filterPeriodoFin.Visible = False
+        '
+        'LabelControl6
+        '
+        Me.LabelControl6.CausesValidation = False
+        Me.LabelControl6.Location = New System.Drawing.Point(15, 59)
+        Me.LabelControl6.Name = "LabelControl6"
+        Me.LabelControl6.Size = New System.Drawing.Size(33, 13)
+        Me.LabelControl6.TabIndex = 43
+        Me.LabelControl6.Text = "Metas:"
+        '
+        'LabelControl7
+        '
+        Me.LabelControl7.Location = New System.Drawing.Point(95, 10)
+        Me.LabelControl7.Name = "LabelControl7"
+        Me.LabelControl7.Size = New System.Drawing.Size(40, 13)
+        Me.LabelControl7.TabIndex = 44
+        Me.LabelControl7.Text = "Periodo:"
+        '
+        'filterEjercicio
+        '
+        Me.filterEjercicio.EditValue = Nothing
+        Me.filterEjercicio.Location = New System.Drawing.Point(13, 29)
+        Me.filterEjercicio.Name = "filterEjercicio"
+        Me.filterEjercicio.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton()})
+        Me.filterEjercicio.Properties.DisplayFormat.FormatString = "yyyy"
+        Me.filterEjercicio.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime
+        Me.filterEjercicio.Properties.EditFormat.FormatString = "d"
+        Me.filterEjercicio.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime
+        Me.filterEjercicio.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.[Default]
+        Me.filterEjercicio.Properties.Mask.EditMask = "yyyy"
+        Me.filterEjercicio.Properties.Mask.UseMaskAsDisplayFormat = True
+        Me.filterEjercicio.Size = New System.Drawing.Size(59, 20)
+        Me.filterEjercicio.TabIndex = 42
+        '
+        'LabelControl5
+        '
+        Me.LabelControl5.Location = New System.Drawing.Point(14, 10)
+        Me.LabelControl5.Name = "LabelControl5"
+        Me.LabelControl5.Size = New System.Drawing.Size(46, 13)
+        Me.LabelControl5.TabIndex = 41
+        Me.LabelControl5.Text = "Ejercicio :"
+        '
+        'ChkCalendarizacion
+        '
+        Me.ChkCalendarizacion.AutoSize = True
+        Me.ChkCalendarizacion.Location = New System.Drawing.Point(15, 120)
+        Me.ChkCalendarizacion.Name = "ChkCalendarizacion"
+        Me.ChkCalendarizacion.Size = New System.Drawing.Size(144, 17)
+        Me.ChkCalendarizacion.TabIndex = 2
+        Me.ChkCalendarizacion.Text = "Calendarización Mensual"
+        Me.ChkCalendarizacion.UseVisualStyleBackColor = True
+        '
+        'SimpleButton1
+        '
+        Me.SimpleButton1.Location = New System.Drawing.Point(14, 147)
+        Me.SimpleButton1.Name = "SimpleButton1"
+        Me.SimpleButton1.Size = New System.Drawing.Size(189, 21)
+        Me.SimpleButton1.TabIndex = 2
+        Me.SimpleButton1.Text = "Imprimir reporte"
         '
         'filterProyecto
         '
+        Me.filterProyecto.EditValue = ""
         Me.filterProyecto.Location = New System.Drawing.Point(13, 78)
         Me.filterProyecto.MenuManager = Me.PrintBarManager1
         Me.filterProyecto.Name = "filterProyecto"
         Me.filterProyecto.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.filterProyecto.Properties.Columns.AddRange(New DevExpress.XtraEditors.Controls.LookUpColumnInfo() {New DevExpress.XtraEditors.Controls.LookUpColumnInfo("IdDefMeta", "Id"), New DevExpress.XtraEditors.Controls.LookUpColumnInfo("Clave", "Clave"), New DevExpress.XtraEditors.Controls.LookUpColumnInfo("Descripcion", "Descripcion")})
+        Me.filterProyecto.Properties.NullText = "[EditValue is null]"
         Me.filterProyecto.Size = New System.Drawing.Size(170, 20)
         Me.filterProyecto.TabIndex = 48
         '
@@ -708,99 +803,6 @@ Partial Class CtrlUser_RPT_Seguimiento_Metas
         Me.PrintControl1.TabIndex = 1
         Me.PrintControl1.TooltipFont = New System.Drawing.Font("Tahoma", 8.25!)
         '
-        'ChkAnual
-        '
-        Me.ChkAnual.AutoSize = True
-        Me.ChkAnual.Location = New System.Drawing.Point(15, 280)
-        Me.ChkAnual.Name = "ChkAnual"
-        Me.ChkAnual.Size = New System.Drawing.Size(53, 17)
-        Me.ChkAnual.TabIndex = 47
-        Me.ChkAnual.Text = "Anual"
-        Me.ChkAnual.UseVisualStyleBackColor = True
-        Me.ChkAnual.Visible = False
-        '
-        'filterPeriodoIni
-        '
-        Me.filterPeriodoIni.EditValue = Nothing
-        Me.filterPeriodoIni.Location = New System.Drawing.Point(93, 29)
-        Me.filterPeriodoIni.Name = "filterPeriodoIni"
-        Me.filterPeriodoIni.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton()})
-        Me.filterPeriodoIni.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.[Default]
-        Me.filterPeriodoIni.Properties.Mask.EditMask = "MM"
-        Me.filterPeriodoIni.Size = New System.Drawing.Size(59, 20)
-        Me.filterPeriodoIni.TabIndex = 46
-        '
-        'filterPeriodoFin
-        '
-        Me.filterPeriodoFin.EditValue = Nothing
-        Me.filterPeriodoFin.Location = New System.Drawing.Point(58, 206)
-        Me.filterPeriodoFin.Name = "filterPeriodoFin"
-        Me.filterPeriodoFin.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton()})
-        Me.filterPeriodoFin.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.[Default]
-        Me.filterPeriodoFin.Properties.Mask.EditMask = "MM"
-        Me.filterPeriodoFin.Size = New System.Drawing.Size(60, 20)
-        Me.filterPeriodoFin.TabIndex = 45
-        Me.filterPeriodoFin.Visible = False
-        '
-        'LabelControl6
-        '
-        Me.LabelControl6.CausesValidation = False
-        Me.LabelControl6.Location = New System.Drawing.Point(15, 59)
-        Me.LabelControl6.Name = "LabelControl6"
-        Me.LabelControl6.Size = New System.Drawing.Size(33, 13)
-        Me.LabelControl6.TabIndex = 43
-        Me.LabelControl6.Text = "Metas:"
-        '
-        'LabelControl7
-        '
-        Me.LabelControl7.Location = New System.Drawing.Point(95, 10)
-        Me.LabelControl7.Name = "LabelControl7"
-        Me.LabelControl7.Size = New System.Drawing.Size(40, 13)
-        Me.LabelControl7.TabIndex = 44
-        Me.LabelControl7.Text = "Periodo:"
-        '
-        'filterEjercicio
-        '
-        Me.filterEjercicio.EditValue = Nothing
-        Me.filterEjercicio.Location = New System.Drawing.Point(13, 29)
-        Me.filterEjercicio.Name = "filterEjercicio"
-        Me.filterEjercicio.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton()})
-        Me.filterEjercicio.Properties.DisplayFormat.FormatString = "yyyy"
-        Me.filterEjercicio.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime
-        Me.filterEjercicio.Properties.EditFormat.FormatString = "d"
-        Me.filterEjercicio.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime
-        Me.filterEjercicio.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.[Default]
-        Me.filterEjercicio.Properties.Mask.EditMask = "yyyy"
-        Me.filterEjercicio.Properties.Mask.UseMaskAsDisplayFormat = True
-        Me.filterEjercicio.Size = New System.Drawing.Size(59, 20)
-        Me.filterEjercicio.TabIndex = 42
-        '
-        'LabelControl5
-        '
-        Me.LabelControl5.Location = New System.Drawing.Point(14, 10)
-        Me.LabelControl5.Name = "LabelControl5"
-        Me.LabelControl5.Size = New System.Drawing.Size(46, 13)
-        Me.LabelControl5.TabIndex = 41
-        Me.LabelControl5.Text = "Ejercicio :"
-        '
-        'ChkCalendarizacion
-        '
-        Me.ChkCalendarizacion.AutoSize = True
-        Me.ChkCalendarizacion.Location = New System.Drawing.Point(15, 114)
-        Me.ChkCalendarizacion.Name = "ChkCalendarizacion"
-        Me.ChkCalendarizacion.Size = New System.Drawing.Size(144, 17)
-        Me.ChkCalendarizacion.TabIndex = 2
-        Me.ChkCalendarizacion.Text = "Calendarización Mensual"
-        Me.ChkCalendarizacion.UseVisualStyleBackColor = True
-        '
-        'SimpleButton1
-        '
-        Me.SimpleButton1.Location = New System.Drawing.Point(14, 141)
-        Me.SimpleButton1.Name = "SimpleButton1"
-        Me.SimpleButton1.Size = New System.Drawing.Size(189, 21)
-        Me.SimpleButton1.TabIndex = 2
-        Me.SimpleButton1.Text = "Imprimir reporte"
-        '
         'TreeList1
         '
         Me.TreeList1.HorzScrollVisibility = DevExpress.XtraTreeList.ScrollVisibility.Always
@@ -828,14 +830,14 @@ Partial Class CtrlUser_RPT_Seguimiento_Metas
         Me.Size = New System.Drawing.Size(752, 471)
         CType(Me.SplitContainerControl1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainerControl1.ResumeLayout(False)
+        CType(Me.filterPeriodoIni.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.filterPeriodoFin.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.filterEjercicio.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.filterProyecto.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PrintBarManager1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PrintPreviewRepositoryItemComboBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RepositoryItemProgressBar1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RepositoryItemZoomTrackBar1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.filterPeriodoIni.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.filterPeriodoFin.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.filterEjercicio.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TreeList1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -909,8 +911,8 @@ Partial Class CtrlUser_RPT_Seguimiento_Metas
     Friend WithEvents filterEjercicio As DevExpress.XtraEditors.TimeEdit
     Friend WithEvents LabelControl5 As DevExpress.XtraEditors.LabelControl
     Friend WithEvents ChkAnual As System.Windows.Forms.CheckBox
-    Friend WithEvents filterProyecto As DevExpress.XtraEditors.LookUpEdit
     Friend WithEvents SimpleButton2 As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents TreeList1 As DevExpress.XtraTreeList.TreeList
+    Friend WithEvents filterProyecto As DevExpress.XtraEditors.CheckedComboBoxEdit
 
 End Class
