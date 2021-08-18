@@ -11,7 +11,6 @@ GO
 /*
 	Bug:	KOR-70
 	Date:	2021-07-09
-	Comments: Generación de reporte de seguimiento  metas
 */
 
 -- Exec RPT_SeguimientoIndicadoresMetas '58,59,60',2020,8,0
@@ -117,11 +116,6 @@ SET @sql =
 Insert into #info
 EXEC (@sql)
 
-
---Insert into #info
---SELECT ID, IdPadre, level, Indicador, Clave, Descripcion,IdUnicoProyecto, IdProdMeta, Cantidad, IdAreaResp, IdActInst, Modificado, Comprometido, Devengado, Ejercido, Pagado,0,0,0,0,0,0,0,0,0,0,0,0, Ejercicio
---FROM tree
-
 Insert into @Seguimiento
 Select IdDefMeta, Avance, 
  [0] ,[1],[2],[3],[4],[5],[6],[7],[8],[9],[10],[11],[12]
@@ -223,7 +217,6 @@ BEGIN
      INNER JOIN tree ON tree.id = c2.IdPadre
 	 
 )
-
 
 
 Insert into #Info
@@ -463,6 +456,8 @@ IdUnicoProyecto,
 IdAreaResp,
 IdActInst,
 Modificado as Presupuesto_Asignado,
+(Enero+Febrero+Marzo+Abril+Mayo+Junio+Julio+Agosto+Septiembre+Octubre+Noviembre+Diciembre) as Cantidad_Av,
+CONCAT(CAST(ISNULL(CAST(((Enero+Febrero+Marzo+Abril+Mayo+Junio+Julio+Agosto+Septiembre+Octubre+Noviembre+Diciembre) * 100) as decimal(18,2)),0)/NULLIF(Cantidad,0) as decimal(18,2)),'%') as Porc_Av,
 Comprometido,
 CONCAT(CAST(ISNULL((Comprometido * 100),0)/NULLIF(Modificado,0) as decimal(18,2)),'%') as Porc_Comprometido, 
 Devengado,

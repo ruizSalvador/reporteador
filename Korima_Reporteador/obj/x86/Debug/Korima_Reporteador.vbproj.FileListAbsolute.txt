@@ -6320,4 +6320,3 @@ D:\GitHub\Reporteador\Korima_Reporteador\obj\x86\Debug\Korima_Reporteador.applic
 D:\GitHub\Reporteador\Korima_Reporteador\obj\x86\Debug\Korima_Reporteador.CtrlUser_RPT_Seguimiento_Metas.resources
 D:\GitHub\Reporteador\Korima_Reporteador\obj\x86\Debug\Korima_Reporteador.RPT_Seg_Metas.resources
 D:\GitHub\Reporteador\Korima_Reporteador\obj\x86\Debug\Korima_Reporteador.RPT_Seg_Metas_Sin_Cal.resources
-D:\GitHub\Reporteador\Korima_Reporteador\obj\x86\Debug\Korima_Reporteador.exe.licenses

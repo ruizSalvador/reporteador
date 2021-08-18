@@ -48,6 +48,8 @@ Partial Public Class RPT_Seg_Metas_Sin_Cal
         Me.TreeListColumn5 = New DevExpress.XtraTreeList.Columns.TreeListColumn()
         Me.TreeListColumn3 = New DevExpress.XtraTreeList.Columns.TreeListColumn()
         Me.TreeListColumn22 = New DevExpress.XtraTreeList.Columns.TreeListColumn()
+        Me.TreeListColumn6 = New DevExpress.XtraTreeList.Columns.TreeListColumn()
+        Me.TreeListColumn7 = New DevExpress.XtraTreeList.Columns.TreeListColumn()
         Me.TreeListColumn18 = New DevExpress.XtraTreeList.Columns.TreeListColumn()
         Me.TreeListColumn23 = New DevExpress.XtraTreeList.Columns.TreeListColumn()
         Me.TreeListColumn19 = New DevExpress.XtraTreeList.Columns.TreeListColumn()
@@ -66,6 +68,7 @@ Partial Public Class RPT_Seg_Metas_Sin_Cal
         Me.XrLblIso = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLblUsr = New DevExpress.XtraReports.UI.XRLabel()
         Me.ReportHeader = New DevExpress.XtraReports.UI.ReportHeaderBand()
+        Me.XrLabel5 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel4 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel3 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel2 = New DevExpress.XtraReports.UI.XRLabel()
@@ -299,7 +302,7 @@ Partial Public Class RPT_Seg_Metas_Sin_Cal
         '
         'TreeList1
         '
-        Me.TreeList1.Columns.AddRange(New DevExpress.XtraTreeList.Columns.TreeListColumn() {Me.TreeListColumn1, Me.TreeListColumn2, Me.TreeListColumn4, Me.TreeListColumn5, Me.TreeListColumn3, Me.TreeListColumn22, Me.TreeListColumn18, Me.TreeListColumn23, Me.TreeListColumn19, Me.TreeListColumn24, Me.TreeListColumn20, Me.TreeListColumn25, Me.TreeListColumn21, Me.TreeListColumn26})
+        Me.TreeList1.Columns.AddRange(New DevExpress.XtraTreeList.Columns.TreeListColumn() {Me.TreeListColumn1, Me.TreeListColumn2, Me.TreeListColumn4, Me.TreeListColumn5, Me.TreeListColumn3, Me.TreeListColumn22, Me.TreeListColumn6, Me.TreeListColumn7, Me.TreeListColumn18, Me.TreeListColumn23, Me.TreeListColumn19, Me.TreeListColumn24, Me.TreeListColumn20, Me.TreeListColumn25, Me.TreeListColumn21, Me.TreeListColumn26})
         Me.TreeList1.Location = New System.Drawing.Point(0, 0)
         Me.TreeList1.Name = "TreeList1"
         Me.TreeList1.OptionsPrint.PrintAllNodes = True
@@ -361,6 +364,9 @@ Partial Public Class RPT_Seg_Metas_Sin_Cal
         '
         'TreeListColumn3
         '
+        Me.TreeListColumn3.AppearanceHeader.Options.UseTextOptions = True
+        Me.TreeListColumn3.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        Me.TreeListColumn3.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
         Me.TreeListColumn3.Caption = "Entregable"
         Me.TreeListColumn3.FieldName = "Entregable"
         Me.TreeListColumn3.Name = "TreeListColumn3"
@@ -381,6 +387,28 @@ Partial Public Class RPT_Seg_Metas_Sin_Cal
         Me.TreeListColumn22.VisibleIndex = 5
         Me.TreeListColumn22.Width = 120
         '
+        'TreeListColumn6
+        '
+        Me.TreeListColumn6.AppearanceHeader.Options.UseTextOptions = True
+        Me.TreeListColumn6.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        Me.TreeListColumn6.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
+        Me.TreeListColumn6.Caption = "Cantidad"
+        Me.TreeListColumn6.FieldName = "Cantidad_Av"
+        Me.TreeListColumn6.Name = "TreeListColumn6"
+        Me.TreeListColumn6.Visible = True
+        Me.TreeListColumn6.VisibleIndex = 6
+        '
+        'TreeListColumn7
+        '
+        Me.TreeListColumn7.AppearanceHeader.Options.UseTextOptions = True
+        Me.TreeListColumn7.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        Me.TreeListColumn7.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
+        Me.TreeListColumn7.Caption = "Porcentaje"
+        Me.TreeListColumn7.FieldName = "Porc_Av"
+        Me.TreeListColumn7.Name = "TreeListColumn7"
+        Me.TreeListColumn7.Visible = True
+        Me.TreeListColumn7.VisibleIndex = 7
+        '
         'TreeListColumn18
         '
         Me.TreeListColumn18.AppearanceHeader.Options.UseTextOptions = True
@@ -392,7 +420,7 @@ Partial Public Class RPT_Seg_Metas_Sin_Cal
         Me.TreeListColumn18.Format.FormatType = DevExpress.Utils.FormatType.Numeric
         Me.TreeListColumn18.Name = "TreeListColumn18"
         Me.TreeListColumn18.Visible = True
-        Me.TreeListColumn18.VisibleIndex = 6
+        Me.TreeListColumn18.VisibleIndex = 8
         Me.TreeListColumn18.Width = 120
         '
         'TreeListColumn23
@@ -407,7 +435,7 @@ Partial Public Class RPT_Seg_Metas_Sin_Cal
         Me.TreeListColumn23.FieldName = "Porc_Comprometido"
         Me.TreeListColumn23.Name = "TreeListColumn23"
         Me.TreeListColumn23.Visible = True
-        Me.TreeListColumn23.VisibleIndex = 7
+        Me.TreeListColumn23.VisibleIndex = 9
         '
         'TreeListColumn19
         '
@@ -420,7 +448,7 @@ Partial Public Class RPT_Seg_Metas_Sin_Cal
         Me.TreeListColumn19.Format.FormatType = DevExpress.Utils.FormatType.Numeric
         Me.TreeListColumn19.Name = "TreeListColumn19"
         Me.TreeListColumn19.Visible = True
-        Me.TreeListColumn19.VisibleIndex = 8
+        Me.TreeListColumn19.VisibleIndex = 10
         Me.TreeListColumn19.Width = 120
         '
         'TreeListColumn24
@@ -435,7 +463,7 @@ Partial Public Class RPT_Seg_Metas_Sin_Cal
         Me.TreeListColumn24.FieldName = "Porc_Devengado"
         Me.TreeListColumn24.Name = "TreeListColumn24"
         Me.TreeListColumn24.Visible = True
-        Me.TreeListColumn24.VisibleIndex = 9
+        Me.TreeListColumn24.VisibleIndex = 11
         '
         'TreeListColumn20
         '
@@ -448,7 +476,7 @@ Partial Public Class RPT_Seg_Metas_Sin_Cal
         Me.TreeListColumn20.Format.FormatType = DevExpress.Utils.FormatType.Numeric
         Me.TreeListColumn20.Name = "TreeListColumn20"
         Me.TreeListColumn20.Visible = True
-        Me.TreeListColumn20.VisibleIndex = 10
+        Me.TreeListColumn20.VisibleIndex = 12
         Me.TreeListColumn20.Width = 120
         '
         'TreeListColumn25
@@ -463,7 +491,7 @@ Partial Public Class RPT_Seg_Metas_Sin_Cal
         Me.TreeListColumn25.FieldName = "Porc_Ejercido"
         Me.TreeListColumn25.Name = "TreeListColumn25"
         Me.TreeListColumn25.Visible = True
-        Me.TreeListColumn25.VisibleIndex = 11
+        Me.TreeListColumn25.VisibleIndex = 13
         '
         'TreeListColumn21
         '
@@ -476,7 +504,7 @@ Partial Public Class RPT_Seg_Metas_Sin_Cal
         Me.TreeListColumn21.Format.FormatType = DevExpress.Utils.FormatType.Numeric
         Me.TreeListColumn21.Name = "TreeListColumn21"
         Me.TreeListColumn21.Visible = True
-        Me.TreeListColumn21.VisibleIndex = 12
+        Me.TreeListColumn21.VisibleIndex = 14
         Me.TreeListColumn21.Width = 120
         '
         'TreeListColumn26
@@ -491,7 +519,7 @@ Partial Public Class RPT_Seg_Metas_Sin_Cal
         Me.TreeListColumn26.FieldName = "Porc_Pagado"
         Me.TreeListColumn26.Name = "TreeListColumn26"
         Me.TreeListColumn26.Visible = True
-        Me.TreeListColumn26.VisibleIndex = 13
+        Me.TreeListColumn26.VisibleIndex = 15
         '
         'NegritasGrupos
         '
@@ -576,10 +604,27 @@ Partial Public Class RPT_Seg_Metas_Sin_Cal
         '
         'ReportHeader
         '
-        Me.ReportHeader.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.XrLabel4, Me.XrLabel3, Me.XrLabel2})
+        Me.ReportHeader.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.XrLabel5, Me.XrLabel4, Me.XrLabel3, Me.XrLabel2})
         Me.ReportHeader.Dpi = 254.0!
         Me.ReportHeader.HeightF = 83.42001!
         Me.ReportHeader.Name = "ReportHeader"
+        '
+        'XrLabel5
+        '
+        Me.XrLabel5.BackColor = System.Drawing.Color.LightGray
+        Me.XrLabel5.Borders = DevExpress.XtraPrinting.BorderSide.None
+        Me.XrLabel5.Dpi = 254.0!
+        Me.XrLabel5.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.XrLabel5.LocationFloat = New DevExpress.Utils.PointFloat(2161.644!, 25.00001!)
+        Me.XrLabel5.Name = "XrLabel5"
+        Me.XrLabel5.Padding = New DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254.0!)
+        Me.XrLabel5.SizeF = New System.Drawing.SizeF(571.5!, 58.42!)
+        Me.XrLabel5.StylePriority.UseBackColor = False
+        Me.XrLabel5.StylePriority.UseBorders = False
+        Me.XrLabel5.StylePriority.UseFont = False
+        Me.XrLabel5.StylePriority.UseTextAlignment = False
+        Me.XrLabel5.Text = "Avance Programático"
+        Me.XrLabel5.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
         '
         'XrLabel4
         '
@@ -587,10 +632,10 @@ Partial Public Class RPT_Seg_Metas_Sin_Cal
         Me.XrLabel4.Dpi = 254.0!
         Me.XrLabel4.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.XrLabel4.ForeColor = System.Drawing.Color.Black
-        Me.XrLabel4.LocationFloat = New DevExpress.Utils.PointFloat(1653.644!, 25.00001!)
+        Me.XrLabel4.LocationFloat = New DevExpress.Utils.PointFloat(2733.144!, 25.00001!)
         Me.XrLabel4.Name = "XrLabel4"
         Me.XrLabel4.Padding = New DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254.0!)
-        Me.XrLabel4.SizeF = New System.Drawing.SizeF(3852.356!, 58.42!)
+        Me.XrLabel4.SizeF = New System.Drawing.SizeF(2791.376!, 58.42!)
         Me.XrLabel4.StylePriority.UseBackColor = False
         Me.XrLabel4.StylePriority.UseFont = False
         Me.XrLabel4.StylePriority.UseForeColor = False
@@ -607,7 +652,7 @@ Partial Public Class RPT_Seg_Metas_Sin_Cal
         Me.XrLabel3.LocationFloat = New DevExpress.Utils.PointFloat(1082.144!, 25.00001!)
         Me.XrLabel3.Name = "XrLabel3"
         Me.XrLabel3.Padding = New DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254.0!)
-        Me.XrLabel3.SizeF = New System.Drawing.SizeF(571.5!, 58.42!)
+        Me.XrLabel3.SizeF = New System.Drawing.SizeF(1079.5!, 58.42!)
         Me.XrLabel3.StylePriority.UseBackColor = False
         Me.XrLabel3.StylePriority.UseBorders = False
         Me.XrLabel3.StylePriority.UseFont = False
@@ -701,4 +746,7 @@ Partial Public Class RPT_Seg_Metas_Sin_Cal
     Friend WithEvents TreeListColumn3 As DevExpress.XtraTreeList.Columns.TreeListColumn
     Friend WithEvents XrLabel3 As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents XrLabel4 As DevExpress.XtraReports.UI.XRLabel
+    Friend WithEvents TreeListColumn6 As DevExpress.XtraTreeList.Columns.TreeListColumn
+    Friend WithEvents TreeListColumn7 As DevExpress.XtraTreeList.Columns.TreeListColumn
+    Friend WithEvents XrLabel5 As DevExpress.XtraReports.UI.XRLabel
 End Class
