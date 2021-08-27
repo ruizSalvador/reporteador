@@ -3,7 +3,7 @@
 Public Class MDI_Principal
     Dim IdUsuario As String = "Debug"
     'Dim bdd As String = "Demo230abril"
-    'Dim bdd As String = "KORIMAMUNICIPIO"
+    Dim bdd As String = "KORIMAMUNICIPIO"
     'Dim bdd As String = "KmSClara"
     'Dim bdd As String = "KorimaITEI"
     'Dim bdd As String = "CespteInicializacion"
@@ -14,7 +14,7 @@ Public Class MDI_Principal
     'Dim bdd As String = "Korima_San_Miguel_Alto"
     'Dim bdd As String = "Korima_Municipio_Piedad"
     'Dim bdd As String = "Korima_TET"
-    Dim bdd As String = "KorimaTSJ"
+    'Dim bdd As String = "KorimaTSJ"
     'Dim bdd As String = "KorimaNogales"
     'Dim bdd As String = "KorimaUPALT"
 
@@ -38,7 +38,7 @@ Public Class MDI_Principal
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         '---Versiones
         '1.0.0 - Se agregaron los 3 reportes iniciales
-        lblVer.Caption = "Reportes Kórima Versión 2.30.1"
+        lblVer.Caption = "Reportes Kórima Versión 2.31"
         '--- Asignación de Id de Usua.1o desde parametro en linea de comando
 #If Not Debug Then
         If Environment.GetCommandLineArgs.Length > 1 Then
