@@ -67,11 +67,11 @@ Partial Public Class RPT_Seg_Metas_Sin_Cal
         Me.BottomMargin = New DevExpress.XtraReports.UI.BottomMarginBand()
         Me.XrLblIso = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLblUsr = New DevExpress.XtraReports.UI.XRLabel()
-        Me.ReportHeader = New DevExpress.XtraReports.UI.ReportHeaderBand()
-        Me.XrLabel5 = New DevExpress.XtraReports.UI.XRLabel()
-        Me.XrLabel4 = New DevExpress.XtraReports.UI.XRLabel()
-        Me.XrLabel3 = New DevExpress.XtraReports.UI.XRLabel()
-        Me.XrLabel2 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.PageHeader = New DevExpress.XtraReports.UI.PageHeaderBand()
+        Me.XrLabel9 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.XrLabel8 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.XrLabel7 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.XrLabel6 = New DevExpress.XtraReports.UI.XRLabel()
         CType(Me.RpT_FirmasHorizontalElectronica1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TreeList1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataSetBlanca1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -389,6 +389,9 @@ Partial Public Class RPT_Seg_Metas_Sin_Cal
         '
         'TreeListColumn6
         '
+        Me.TreeListColumn6.AppearanceCell.Options.UseTextOptions = True
+        Me.TreeListColumn6.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        Me.TreeListColumn6.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
         Me.TreeListColumn6.AppearanceHeader.Options.UseTextOptions = True
         Me.TreeListColumn6.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
         Me.TreeListColumn6.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
@@ -400,6 +403,9 @@ Partial Public Class RPT_Seg_Metas_Sin_Cal
         '
         'TreeListColumn7
         '
+        Me.TreeListColumn7.AppearanceCell.Options.UseTextOptions = True
+        Me.TreeListColumn7.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        Me.TreeListColumn7.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
         Me.TreeListColumn7.AppearanceHeader.Options.UseTextOptions = True
         Me.TreeListColumn7.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
         Me.TreeListColumn7.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
@@ -602,81 +608,81 @@ Partial Public Class RPT_Seg_Metas_Sin_Cal
         Me.XrLblUsr.StylePriority.UseTextAlignment = False
         Me.XrLblUsr.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight
         '
-        'ReportHeader
+        'PageHeader
         '
-        Me.ReportHeader.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.XrLabel5, Me.XrLabel4, Me.XrLabel3, Me.XrLabel2})
-        Me.ReportHeader.Dpi = 254.0!
-        Me.ReportHeader.HeightF = 83.42001!
-        Me.ReportHeader.Name = "ReportHeader"
+        Me.PageHeader.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.XrLabel9, Me.XrLabel8, Me.XrLabel7, Me.XrLabel6})
+        Me.PageHeader.Dpi = 254.0!
+        Me.PageHeader.HeightF = 84.66671!
+        Me.PageHeader.Name = "PageHeader"
         '
-        'XrLabel5
+        'XrLabel9
         '
-        Me.XrLabel5.BackColor = System.Drawing.Color.LightGray
-        Me.XrLabel5.Borders = DevExpress.XtraPrinting.BorderSide.None
-        Me.XrLabel5.Dpi = 254.0!
-        Me.XrLabel5.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.XrLabel5.LocationFloat = New DevExpress.Utils.PointFloat(2161.644!, 25.00001!)
-        Me.XrLabel5.Name = "XrLabel5"
-        Me.XrLabel5.Padding = New DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254.0!)
-        Me.XrLabel5.SizeF = New System.Drawing.SizeF(571.5!, 58.42!)
-        Me.XrLabel5.StylePriority.UseBackColor = False
-        Me.XrLabel5.StylePriority.UseBorders = False
-        Me.XrLabel5.StylePriority.UseFont = False
-        Me.XrLabel5.StylePriority.UseTextAlignment = False
-        Me.XrLabel5.Text = "Avance Programático"
-        Me.XrLabel5.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
+        Me.XrLabel9.BackColor = System.Drawing.Color.LightGray
+        Me.XrLabel9.Borders = DevExpress.XtraPrinting.BorderSide.None
+        Me.XrLabel9.Dpi = 254.0!
+        Me.XrLabel9.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.XrLabel9.LocationFloat = New DevExpress.Utils.PointFloat(2161.644!, 26.2467!)
+        Me.XrLabel9.Name = "XrLabel9"
+        Me.XrLabel9.Padding = New DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254.0!)
+        Me.XrLabel9.SizeF = New System.Drawing.SizeF(571.5!, 58.42!)
+        Me.XrLabel9.StylePriority.UseBackColor = False
+        Me.XrLabel9.StylePriority.UseBorders = False
+        Me.XrLabel9.StylePriority.UseFont = False
+        Me.XrLabel9.StylePriority.UseTextAlignment = False
+        Me.XrLabel9.Text = "Avance Programático"
+        Me.XrLabel9.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
         '
-        'XrLabel4
+        'XrLabel8
         '
-        Me.XrLabel4.BackColor = System.Drawing.Color.LightGray
-        Me.XrLabel4.Dpi = 254.0!
-        Me.XrLabel4.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.XrLabel4.ForeColor = System.Drawing.Color.Black
-        Me.XrLabel4.LocationFloat = New DevExpress.Utils.PointFloat(2733.144!, 25.00001!)
-        Me.XrLabel4.Name = "XrLabel4"
-        Me.XrLabel4.Padding = New DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254.0!)
-        Me.XrLabel4.SizeF = New System.Drawing.SizeF(2791.376!, 58.42!)
-        Me.XrLabel4.StylePriority.UseBackColor = False
-        Me.XrLabel4.StylePriority.UseFont = False
-        Me.XrLabel4.StylePriority.UseForeColor = False
-        Me.XrLabel4.StylePriority.UseTextAlignment = False
-        Me.XrLabel4.Text = "Avance Financiero"
-        Me.XrLabel4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
+        Me.XrLabel8.BackColor = System.Drawing.Color.LightGray
+        Me.XrLabel8.Dpi = 254.0!
+        Me.XrLabel8.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.XrLabel8.ForeColor = System.Drawing.Color.Black
+        Me.XrLabel8.LocationFloat = New DevExpress.Utils.PointFloat(2733.144!, 26.2467!)
+        Me.XrLabel8.Name = "XrLabel8"
+        Me.XrLabel8.Padding = New DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254.0!)
+        Me.XrLabel8.SizeF = New System.Drawing.SizeF(2800.86!, 58.42001!)
+        Me.XrLabel8.StylePriority.UseBackColor = False
+        Me.XrLabel8.StylePriority.UseFont = False
+        Me.XrLabel8.StylePriority.UseForeColor = False
+        Me.XrLabel8.StylePriority.UseTextAlignment = False
+        Me.XrLabel8.Text = "Avance Financiero"
+        Me.XrLabel8.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
         '
-        'XrLabel3
+        'XrLabel7
         '
-        Me.XrLabel3.BackColor = System.Drawing.Color.LightGray
-        Me.XrLabel3.Borders = DevExpress.XtraPrinting.BorderSide.None
-        Me.XrLabel3.Dpi = 254.0!
-        Me.XrLabel3.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.XrLabel3.LocationFloat = New DevExpress.Utils.PointFloat(1082.144!, 25.00001!)
-        Me.XrLabel3.Name = "XrLabel3"
-        Me.XrLabel3.Padding = New DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254.0!)
-        Me.XrLabel3.SizeF = New System.Drawing.SizeF(1079.5!, 58.42!)
-        Me.XrLabel3.StylePriority.UseBackColor = False
-        Me.XrLabel3.StylePriority.UseBorders = False
-        Me.XrLabel3.StylePriority.UseFont = False
-        Me.XrLabel3.StylePriority.UseTextAlignment = False
-        Me.XrLabel3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
+        Me.XrLabel7.BackColor = System.Drawing.Color.LightGray
+        Me.XrLabel7.Borders = DevExpress.XtraPrinting.BorderSide.None
+        Me.XrLabel7.Dpi = 254.0!
+        Me.XrLabel7.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.XrLabel7.LocationFloat = New DevExpress.Utils.PointFloat(1082.144!, 26.2467!)
+        Me.XrLabel7.Name = "XrLabel7"
+        Me.XrLabel7.Padding = New DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254.0!)
+        Me.XrLabel7.SizeF = New System.Drawing.SizeF(1079.5!, 58.42!)
+        Me.XrLabel7.StylePriority.UseBackColor = False
+        Me.XrLabel7.StylePriority.UseBorders = False
+        Me.XrLabel7.StylePriority.UseFont = False
+        Me.XrLabel7.StylePriority.UseTextAlignment = False
+        Me.XrLabel7.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
         '
-        'XrLabel2
+        'XrLabel6
         '
-        Me.XrLabel2.BackColor = System.Drawing.Color.LightGray
-        Me.XrLabel2.Dpi = 254.0!
-        Me.XrLabel2.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.XrLabel2.LocationFloat = New DevExpress.Utils.PointFloat(0.0!, 25.00001!)
-        Me.XrLabel2.Name = "XrLabel2"
-        Me.XrLabel2.Padding = New DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254.0!)
-        Me.XrLabel2.SizeF = New System.Drawing.SizeF(1082.144!, 58.41999!)
-        Me.XrLabel2.StylePriority.UseBackColor = False
-        Me.XrLabel2.StylePriority.UseFont = False
-        Me.XrLabel2.StylePriority.UseTextAlignment = False
-        Me.XrLabel2.Text = "Procesos y objetivos específicos"
-        Me.XrLabel2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
+        Me.XrLabel6.BackColor = System.Drawing.Color.LightGray
+        Me.XrLabel6.Dpi = 254.0!
+        Me.XrLabel6.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.XrLabel6.LocationFloat = New DevExpress.Utils.PointFloat(0.0!, 25.00001!)
+        Me.XrLabel6.Name = "XrLabel6"
+        Me.XrLabel6.Padding = New DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254.0!)
+        Me.XrLabel6.SizeF = New System.Drawing.SizeF(1082.144!, 58.41999!)
+        Me.XrLabel6.StylePriority.UseBackColor = False
+        Me.XrLabel6.StylePriority.UseFont = False
+        Me.XrLabel6.StylePriority.UseTextAlignment = False
+        Me.XrLabel6.Text = "Procesos y objetivos específicos"
+        Me.XrLabel6.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
         '
         'RPT_Seg_Metas_Sin_Cal
         '
-        Me.Bands.AddRange(New DevExpress.XtraReports.UI.Band() {Me.Detail, Me.TopMargin, Me.BottomMargin, Me.ReportFooter, Me.ReportHeader})
+        Me.Bands.AddRange(New DevExpress.XtraReports.UI.Band() {Me.Detail, Me.TopMargin, Me.BottomMargin, Me.ReportFooter, Me.PageHeader})
         Me.DataMember = "Nota"
         Me.DataSource = Me.DataSetBlanca1
         Me.Dpi = 254.0!
@@ -741,12 +747,12 @@ Partial Public Class RPT_Seg_Metas_Sin_Cal
     Public WithEvents lblRptEnteTelefono As DevExpress.XtraReports.UI.XRLabel
     Public WithEvents XrLblIso As DevExpress.XtraReports.UI.XRLabel
     Public WithEvents XrLblUsr As DevExpress.XtraReports.UI.XRLabel
-    Friend WithEvents ReportHeader As DevExpress.XtraReports.UI.ReportHeaderBand
-    Friend WithEvents XrLabel2 As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents TreeListColumn3 As DevExpress.XtraTreeList.Columns.TreeListColumn
-    Friend WithEvents XrLabel3 As DevExpress.XtraReports.UI.XRLabel
-    Friend WithEvents XrLabel4 As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents TreeListColumn6 As DevExpress.XtraTreeList.Columns.TreeListColumn
     Friend WithEvents TreeListColumn7 As DevExpress.XtraTreeList.Columns.TreeListColumn
-    Friend WithEvents XrLabel5 As DevExpress.XtraReports.UI.XRLabel
+    Friend WithEvents PageHeader As DevExpress.XtraReports.UI.PageHeaderBand
+    Friend WithEvents XrLabel9 As DevExpress.XtraReports.UI.XRLabel
+    Friend WithEvents XrLabel8 As DevExpress.XtraReports.UI.XRLabel
+    Friend WithEvents XrLabel7 As DevExpress.XtraReports.UI.XRLabel
+    Friend WithEvents XrLabel6 As DevExpress.XtraReports.UI.XRLabel
 End Class

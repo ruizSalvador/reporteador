@@ -13,7 +13,7 @@ GO
 	Date:	2021-07-09
 */
 
--- Exec RPT_SeguimientoIndicadoresMetas '58,59,60',2020,8,0
+-- Exec RPT_SeguimientoIndicadoresMetas '',2020,8,0
 CREATE PROCEDURE [dbo].[RPT_SeguimientoIndicadoresMetas] 
 	--@IdUsuario int, 
 	--@IdMeta int,
@@ -233,8 +233,8 @@ Avance,
 Cantidad,
 Month(FechaAprobacion) as Mes
 FROM T_SeguimientoMeta 
-Where --Year(FechaAprobacion) = @Ejercicio 
-Estatus = 'Aprobado' --AND Month(FechaAprobacion) <= @Mes
+Where Year(FechaAprobacion) = @Ejercicio 
+AND Estatus = 'Aprobado' --AND Month(FechaAprobacion) <= @Mes
 ) as p
 	PIVOT 
 	( 
@@ -452,12 +452,12 @@ CI.Nombre as Indicador,
 F.Cantidad,
 CPM.Nombre as Entregable,
 IdUnicoProyecto,
+(Enero+Febrero+Marzo+Abril+Mayo+Junio+Julio+Agosto+Septiembre+Octubre+Noviembre+Diciembre) as Cantidad_Av,
+CONCAT(CAST(ISNULL(CAST(((Enero+Febrero+Marzo+Abril+Mayo+Junio+Julio+Agosto+Septiembre+Octubre+Noviembre+Diciembre) * 100) as decimal(18,2)),0)/NULLIF(Cantidad,0) as decimal(18,2)),'%') as Porc_Av,
 
 IdAreaResp,
 IdActInst,
 Modificado as Presupuesto_Asignado,
-(Enero+Febrero+Marzo+Abril+Mayo+Junio+Julio+Agosto+Septiembre+Octubre+Noviembre+Diciembre) as Cantidad_Av,
-CONCAT(CAST(ISNULL(CAST(((Enero+Febrero+Marzo+Abril+Mayo+Junio+Julio+Agosto+Septiembre+Octubre+Noviembre+Diciembre) * 100) as decimal(18,2)),0)/NULLIF(Cantidad,0) as decimal(18,2)),'%') as Porc_Av,
 Comprometido,
 CONCAT(CAST(ISNULL((Comprometido * 100),0)/NULLIF(Modificado,0) as decimal(18,2)),'%') as Porc_Comprometido, 
 Devengado,

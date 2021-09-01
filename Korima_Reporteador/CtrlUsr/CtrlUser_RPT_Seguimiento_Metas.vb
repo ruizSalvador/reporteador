@@ -211,18 +211,9 @@ Public Class CtrlUser_RPT_Seguimiento_Metas
     End Sub
 
 
-    Private Sub filterEstructuraProgramatica_GotFocus(ByVal sender As System.Object, ByVal e As System.EventArgs)
+    Private Sub filterProyecto_GotFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles filterProyecto.GotFocus
+
         Dim ObjTempSQL2 As New clsRPT_CFG_DatosEntesCtrl
-        'With filterProyecto.Properties
-        '    .DataSource = ObjTempSQL2.List("Ejercicio=" & Year(filterEjercicio.EditValue), 0, "VW_RPT_K2_FiltroInfAdmtvoEdoEjerPresupuestoEGR", " Order by Id ")
-        '    .DisplayMember = "Proyecto"
-        '    .ValueMember = "Id"
-        '    .SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoFilter
-        '    .NullText = ""
-        '    .ShowHeader = True
-        'End With
-
-
         With filterProyecto.Properties
             .DataSource = ObjTempSQL2.List(" IdPadre = 0 AND Ejercicio=" & Year(filterEjercicio.EditValue), 0, " T_DefinicionMetas ", "")
             .DisplayMember = "Clave"
@@ -231,10 +222,9 @@ Public Class CtrlUser_RPT_Seguimiento_Metas
             .NullText = ""
             '.ShowHeader = True
         End With
-
-
-
+        filterProyecto.EditValue = Nothing
     End Sub
+
 
     Private Sub ChkAnual_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles ChkAnual.CheckedChanged
         'If ChkAnual.Checked = True Then
@@ -254,35 +244,7 @@ Public Class CtrlUser_RPT_Seguimiento_Metas
     End Sub
 
     Private Sub filterEjercicio_TextChanged(sender As System.Object, e As System.EventArgs) Handles filterEjercicio.TextChanged
-        'Dim SQLConexion As SqlConnection
-        'SQLConexion = New SqlConnection(cnnString)
-        'SQLConexion.Open()
-        'Dim iProv As Int32 = 0
-        'Dim _year As Int32
-        'Dim fecha As DateTime = filterEjercicio.EditValue
-        'If (filterEjercicio.Text = "") Then
-        '    _year = 0
-        'Else
-        '    _year = fecha.Year
-        'End If
-        ''iProv = filterProv.EditValue
-
-        ''Dim SQLConexion As SqlConnection
-        'SQLConexion = New SqlConnection(cnnString)
-        'SQLConexion.Open()
-        '' Dim iProv As Int16 = 0
-        ''iProv = filterProv.EditValue
-        'Dim sql As String = "Select Clave, Descripcion From T_DefinicionMetas Where IdPadre= 0 and Ejercicio= " & _year
-        'Dim command As New SqlCommand(sql, SQLConexion)
-        'Dim reader As SqlDataReader = command.ExecuteReader()
-
-        'chkMetas.Items.Clear()
-        'While reader.Read
-        '    chkMetas.BeginUpdate()
-        '    chkMetas.Items.Add(reader.Item("Clave"))
-        '    chkMetas.EndUpdate()
-        'End While
-
+       
         '--------------------
         Dim ObjTempSQL2 As New clsRPT_CFG_DatosEntesCtrl
         With filterProyecto.Properties
@@ -293,5 +255,9 @@ Public Class CtrlUser_RPT_Seguimiento_Metas
             .NullText = ""
             '.ShowHeader = True
         End With
+
+        filterProyecto.SetEditValue(-1)
     End Sub
+
+   
 End Class

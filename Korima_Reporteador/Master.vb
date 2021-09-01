@@ -3,8 +3,8 @@
 Public Class MDI_Principal
     Dim IdUsuario As String = "Debug"
     'Dim bdd As String = "Demo230abril"
-    Dim bdd As String = "KORIMAMUNICIPIO"
-    'Dim bdd As String = "KmSClara"
+    'Dim bdd As String = "KORIMAMUNICIPIO"
+    Dim bdd As String = "KmSClara"
     'Dim bdd As String = "KorimaITEI"
     'Dim bdd As String = "CespteInicializacion"
     'Dim bdd As String = "Fiarum2016"

@@ -264,14 +264,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Korima_Reporteador.exe" size="29169152">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Korima_Reporteador.exe" size="29169664">
       <assemblyIdentity name="Korima_Reporteador" version="2.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>wuKuLSOdTJz39GfD16E1Tp0c0Kc=</dsig:DigestValue>
+        <dsig:DigestValue>eM87X6FG5i4OPaqvUh+i/rLumRo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

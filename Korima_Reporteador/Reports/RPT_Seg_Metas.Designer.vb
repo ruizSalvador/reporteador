@@ -79,13 +79,13 @@ Partial Public Class RPT_Seg_Metas
         Me.BottomMargin = New DevExpress.XtraReports.UI.BottomMarginBand()
         Me.XrLblIso = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLblUsr = New DevExpress.XtraReports.UI.XRLabel()
-        Me.ReportHeader = New DevExpress.XtraReports.UI.ReportHeaderBand()
         Me.XrLabel7 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel6 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel5 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel4 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel3 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel2 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.PageHeader = New DevExpress.XtraReports.UI.PageHeaderBand()
         CType(Me.RpT_FirmasHorizontal1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TreeList1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataSetBlanca1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -800,19 +800,12 @@ Partial Public Class RPT_Seg_Metas
         Me.XrLblUsr.StylePriority.UseTextAlignment = False
         Me.XrLblUsr.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight
         '
-        'ReportHeader
-        '
-        Me.ReportHeader.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.XrLabel7, Me.XrLabel6, Me.XrLabel5, Me.XrLabel4, Me.XrLabel3, Me.XrLabel2})
-        Me.ReportHeader.Dpi = 254.0!
-        Me.ReportHeader.HeightF = 83.42001!
-        Me.ReportHeader.Name = "ReportHeader"
-        '
         'XrLabel7
         '
         Me.XrLabel7.BackColor = System.Drawing.Color.LightGray
         Me.XrLabel7.Dpi = 254.0!
         Me.XrLabel7.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.XrLabel7.LocationFloat = New DevExpress.Utils.PointFloat(3926.5!, 25.00001!)
+        Me.XrLabel7.LocationFloat = New DevExpress.Utils.PointFloat(3926.501!, 25.00001!)
         Me.XrLabel7.Name = "XrLabel7"
         Me.XrLabel7.Padding = New DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254.0!)
         Me.XrLabel7.SizeF = New System.Drawing.SizeF(1814.499!, 58.42!)
@@ -827,7 +820,7 @@ Partial Public Class RPT_Seg_Metas
         Me.XrLabel6.BackColor = System.Drawing.Color.LightGray
         Me.XrLabel6.Dpi = 254.0!
         Me.XrLabel6.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.XrLabel6.LocationFloat = New DevExpress.Utils.PointFloat(3503.168!, 25.00001!)
+        Me.XrLabel6.LocationFloat = New DevExpress.Utils.PointFloat(3503.167!, 25.00001!)
         Me.XrLabel6.Name = "XrLabel6"
         Me.XrLabel6.Padding = New DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254.0!)
         Me.XrLabel6.SizeF = New System.Drawing.SizeF(423.3325!, 58.42!)
@@ -842,7 +835,7 @@ Partial Public Class RPT_Seg_Metas
         Me.XrLabel5.BackColor = System.Drawing.Color.LightGray
         Me.XrLabel5.Dpi = 254.0!
         Me.XrLabel5.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.XrLabel5.LocationFloat = New DevExpress.Utils.PointFloat(1367.494!, 25.00001!)
+        Me.XrLabel5.LocationFloat = New DevExpress.Utils.PointFloat(1367.494!, 25.0!)
         Me.XrLabel5.Name = "XrLabel5"
         Me.XrLabel5.Padding = New DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254.0!)
         Me.XrLabel5.SizeF = New System.Drawing.SizeF(2135.673!, 58.42!)
@@ -857,7 +850,7 @@ Partial Public Class RPT_Seg_Metas
         Me.XrLabel4.BackColor = System.Drawing.Color.LightGray
         Me.XrLabel4.Borders = DevExpress.XtraPrinting.BorderSide.None
         Me.XrLabel4.Dpi = 254.0!
-        Me.XrLabel4.LocationFloat = New DevExpress.Utils.PointFloat(1175.494!, 25.00001!)
+        Me.XrLabel4.LocationFloat = New DevExpress.Utils.PointFloat(1175.494!, 25.0!)
         Me.XrLabel4.Name = "XrLabel4"
         Me.XrLabel4.Padding = New DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254.0!)
         Me.XrLabel4.SizeF = New System.Drawing.SizeF(192.0!, 58.42!)
@@ -872,7 +865,7 @@ Partial Public Class RPT_Seg_Metas
         Me.XrLabel3.Borders = DevExpress.XtraPrinting.BorderSide.None
         Me.XrLabel3.Dpi = 254.0!
         Me.XrLabel3.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.XrLabel3.LocationFloat = New DevExpress.Utils.PointFloat(822.8483!, 25.00001!)
+        Me.XrLabel3.LocationFloat = New DevExpress.Utils.PointFloat(822.8483!, 25.0!)
         Me.XrLabel3.Name = "XrLabel3"
         Me.XrLabel3.Padding = New DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254.0!)
         Me.XrLabel3.SizeF = New System.Drawing.SizeF(352.6459!, 58.42!)
@@ -887,7 +880,7 @@ Partial Public Class RPT_Seg_Metas
         Me.XrLabel2.BackColor = System.Drawing.Color.LightGray
         Me.XrLabel2.Dpi = 254.0!
         Me.XrLabel2.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.XrLabel2.LocationFloat = New DevExpress.Utils.PointFloat(0.0!, 25.00001!)
+        Me.XrLabel2.LocationFloat = New DevExpress.Utils.PointFloat(0.0!, 25.0!)
         Me.XrLabel2.Name = "XrLabel2"
         Me.XrLabel2.Padding = New DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254.0!)
         Me.XrLabel2.SizeF = New System.Drawing.SizeF(822.8483!, 58.42!)
@@ -897,9 +890,16 @@ Partial Public Class RPT_Seg_Metas
         Me.XrLabel2.Text = "Procesos y Objetivos Específicos"
         Me.XrLabel2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
         '
+        'PageHeader
+        '
+        Me.PageHeader.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.XrLabel2, Me.XrLabel3, Me.XrLabel4, Me.XrLabel5, Me.XrLabel6, Me.XrLabel7})
+        Me.PageHeader.Dpi = 254.0!
+        Me.PageHeader.HeightF = 83.42001!
+        Me.PageHeader.Name = "PageHeader"
+        '
         'RPT_Seg_Metas
         '
-        Me.Bands.AddRange(New DevExpress.XtraReports.UI.Band() {Me.Detail, Me.TopMargin, Me.BottomMargin, Me.ReportFooter, Me.ReportHeader})
+        Me.Bands.AddRange(New DevExpress.XtraReports.UI.Band() {Me.Detail, Me.TopMargin, Me.BottomMargin, Me.ReportFooter, Me.PageHeader})
         Me.DataMember = "Nota"
         Me.DataSource = Me.DataSetBlanca1
         Me.Dpi = 254.0!
@@ -976,7 +976,6 @@ Partial Public Class RPT_Seg_Metas
     Public WithEvents XrLblIso As DevExpress.XtraReports.UI.XRLabel
     Public WithEvents XrLblUsr As DevExpress.XtraReports.UI.XRLabel
     Public WithEvents XrSubreport1 As DevExpress.XtraReports.UI.XRSubreport
-    Friend WithEvents ReportHeader As DevExpress.XtraReports.UI.ReportHeaderBand
     Friend WithEvents XrLabel2 As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents XrLabel3 As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents TreeListColumn3 As DevExpress.XtraTreeList.Columns.TreeListColumn
@@ -986,4 +985,5 @@ Partial Public Class RPT_Seg_Metas
     Friend WithEvents TreeListColumn28 As DevExpress.XtraTreeList.Columns.TreeListColumn
     Friend WithEvents XrLabel6 As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents XrLabel7 As DevExpress.XtraReports.UI.XRLabel
+    Friend WithEvents PageHeader As DevExpress.XtraReports.UI.PageHeaderBand
 End Class
