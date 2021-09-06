@@ -2,14 +2,14 @@
 
 Public Class MDI_Principal
     Dim IdUsuario As String = "Debug"
-    'Dim bdd As String = "Demo230abril"
+    Dim bdd As String = "Demo230abril"
     'Dim bdd As String = "KORIMAMUNICIPIO"
-    Dim bdd As String = "KmSClara"
+    'Dim bdd As String = "KmSClara"
     'Dim bdd As String = "KorimaITEI"
     'Dim bdd As String = "CespteInicializacion"
     'Dim bdd As String = "Fiarum2016"
     'Dim bdd As String = "UNEME2020"
-    'Dim bdd As String = "KorimaSGGPruebas"
+    'Dim bdd As String = "k2301"
     'Dim bdd As String = "IECAN_PRODUCCION"
     'Dim bdd As String = "Korima_San_Miguel_Alto"
     'Dim bdd As String = "Korima_Municipio_Piedad"
@@ -20,8 +20,8 @@ Public Class MDI_Principal
 
 
     'Dim server As String = "SRV-KORIMA\korima_2014"
-    'Dim server As String = "LAPTOP-OC11LS61\SQLEXPRESS19"
-    Dim server As String = "LAPTOP-OC11LS61\SQLEXPRESS17"
+    Dim server As String = "LAPTOP-OC11LS61\SQLEXPRESS19"
+    'Dim server As String = "LAPTOP-OC11LS61\SQLEXPRESS17"
     'Dim server As String = "ARTURODEV\SQLEXPRESS01"
     'Dim server As String = "ARTURODEV\SQLEXPRESS02"
     'Dim server As String = "SRV-KORITEST\SQLEXPRESS14"

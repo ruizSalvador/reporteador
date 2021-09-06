@@ -25,6 +25,7 @@ Public Class CtrlUser_RPT_IndicadoresPosturaFiscal
         SQLComando.Parameters.Add(New SqlParameter("@MesInicio", filterPeriodoIni.Time.Month))
         SQLComando.Parameters.Add(New SqlParameter("@MesFin", filterPeriodoFin.Time.Month))
         SQLComando.Parameters.Add(New SqlParameter("@Ejercicio", filterEjercicio.Time.Year))
+        SQLComando.Parameters.Add(New SqlParameter("@Paraestatal", chkParaestatal.Checked))
 
         Dim adapter As New SqlDataAdapter(SQLComando)
         Dim ds As New DataSet()

@@ -10,9 +10,13 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 
---EXEC SP_RPT_K2_IndicadoresPosturaFiscal 1,12,2016
+-- EXEC SP_RPT_K2_IndicadoresPosturaFiscal 1,9,2021,0
 CREATE PROCEDURE [dbo].[SP_RPT_K2_IndicadoresPosturaFiscal]
-@MesInicio int, @MesFin int,@Ejercicio int
+@MesInicio int, 
+@MesFin int,
+@Ejercicio int
+,@Paraestatal bit
+
 AS
 BEGIN
 declare @Estructura1 as int
@@ -57,8 +61,11 @@ SUM(isnull(T_PresupuestoFlujo.Estimado,0))
 FROM T_PresupuestoFlujo 
 JOIN C_PartidasGastosIngresos
 ON T_PresupuestoFlujo.IdPartida= C_PartidasGastosIngresos.IdPartidaGI
+JOIN C_FuenteFinanciamiento ON C_FuenteFinanciamiento.IDFUENTEFINANCIAMIENTO = C_PartidasGastosIngresos.IdFuenteFinanciamiento
 WHERE T_PresupuestoFlujo.Ejercicio=@Ejercicio and (T_PresupuestoFlujo.Mes = 0) and 
-len(C_PartidasGastosIngresos.Clave)>4 and substring(C_PartidasGastosIngresos.Clave,6,1) in('1','2','3','4','5','6','8'))
+len(C_PartidasGastosIngresos.Clave)>4 and substring(C_PartidasGastosIngresos.Clave,6,1) in('1','2','3','4','5','6','8')
+and substring(C_FuenteFinanciamiento.Clave,1,2) not in('12','13')
+)
 
 Declare @PresFlujo4 as Decimal (18,4) = (select 
 SUM(isnull(T_PresupuestoFlujo.Estimado,0))
@@ -67,6 +74,13 @@ JOIN C_PartidasGastosIngresos
 ON T_PresupuestoFlujo.IdPartida= C_PartidasGastosIngresos.IdPartidaGI
 WHERE T_PresupuestoFlujo.Ejercicio=@Ejercicio and (T_PresupuestoFlujo.Mes = 0) and 
 len(C_PartidasGastosIngresos.Clave)>4 and substring(C_PartidasGastosIngresos.Clave,6,1) in('7','9'))
+
+--Declare @Estimado19 as Decimal (18,4) = (select 
+--SUM(isnull(T_PresupuestoFlujo.Estimado,0))
+--FROM T_PresupuestoFlujo JOIN C_PartidasGastosIngresos ON T_PresupuestoFlujo.IdPartida= C_PartidasGastosIngresos.IdPartidaGI
+--JOIN C_FuenteFinanciamiento ON C_FuenteFinanciamiento.IDFUENTEFINANCIAMIENTO = C_PartidasGastosIngresos.IdFuenteFinanciamiento
+--WHERE T_PresupuestoFlujo.Ejercicio=2021 and (T_PresupuestoFlujo.Mes = 0) and 
+--len(C_PartidasGastosIngresos.Clave)>4 and substring(C_FuenteFinanciamiento.Clave,1,2) in('12','13'))
 
 Declare @PresNw7 as Decimal (18,4) = (select 
 sum(isnull(T_PresupuestoNW.Autorizado,0))
@@ -85,19 +99,28 @@ Where (T_PresupuestoNW.Mes = 0) and T_PresupuestoNW.Year=@Ejercicio and
 SUBSTRING(convert(varchar(max),IdPartida),1,1) in ('4'))
 
 Declare @SaldosCont14 as Decimal (18,4) = (select 
-isnull(sum(T_SaldosInicialesCont.TotalAbonos),0)
-FROM T_SaldosInicialesCont 
-JOIN c_contable on C_Contable.IdCuentaContable=T_SaldosInicialesCont.IdCuentaContable 
-Where (Mes = 0) and Year =@Ejercicio and NumeroCuenta in('541'+REPLICATE('0',@Estructura1-3)+'-'+@CerosEstructura,
-'542'+REPLICATE('0',@Estructura1-3)+'-'+@CerosEstructura,'543'+REPLICATE('0',@Estructura1-3)+'-'+@CerosEstructura))
+isnull((Select sum(isnull(T_SaldosInicialesCont.TotalCargos,0)) From T_SaldosInicialesCont JOIN c_contable on C_Contable.IdCuentaContable=T_SaldosInicialesCont.IdCuentaContable 
+Where (Mes Between 1 and 12) and Year =@Ejercicio and (NumeroCuenta like ('821'+REPLICATE('0',@Estructura1-3)+'-09211%') or NumeroCuenta like ('821'+REPLICATE('0',@Estructura1-3)+'-009211%'))
+and (NumeroCuenta like ('821'+REPLICATE('0',@Estructura1-3)+'-09311%') or NumeroCuenta like ('821'+REPLICATE('0',@Estructura1-3)+'-009311%'))
+and (NumeroCuenta like ('821'+REPLICATE('0',@Estructura1-3)+'-09411%') or NumeroCuenta like ('821'+REPLICATE('0',@Estructura1-3)+'-009411%'))
+and (NumeroCuenta like ('821'+REPLICATE('0',@Estructura1-3)+'-09511%') or NumeroCuenta like ('821'+REPLICATE('0',@Estructura1-3)+'-009511%'))
+),0))
+
+Declare @SaldosCont14_Dev as Decimal (18,4) = (select 
+isnull((Select sum(isnull(T_SaldosInicialesCont.TotalCargos,0)) From T_SaldosInicialesCont JOIN c_contable on C_Contable.IdCuentaContable=T_SaldosInicialesCont.IdCuentaContable 
+Where (Mes Between 1 and 12) and Year =@Ejercicio and (NumeroCuenta like ('825'+REPLICATE('0',@Estructura1-3)+'-09211%') or NumeroCuenta like ('825'+REPLICATE('0',@Estructura1-3)+'-009211%'))
+and (NumeroCuenta like ('825'+REPLICATE('0',@Estructura1-3)+'-09311%') or NumeroCuenta like ('825'+REPLICATE('0',@Estructura1-3)+'-009311%'))
+and (NumeroCuenta like ('825'+REPLICATE('0',@Estructura1-3)+'-09411%') or NumeroCuenta like ('825'+REPLICATE('0',@Estructura1-3)+'-009411%'))
+and (NumeroCuenta like ('825'+REPLICATE('0',@Estructura1-3)+'-09511%') or NumeroCuenta like ('825'+REPLICATE('0',@Estructura1-3)+'-009511%'))
+),0))
 
 Declare @SaldosCont19 as Decimal (18,4) = (select 
 isnull((Select sum(isnull(T_SaldosInicialesCont.TotalCargos,0)) From T_SaldosInicialesCont JOIN c_contable on C_Contable.IdCuentaContable=T_SaldosInicialesCont.IdCuentaContable 
-Where (Mes = 0) and Year =@Ejercicio and (NumeroCuenta like ('811'+REPLICATE('0',@Estructura1-3)+'-01%') or NumeroCuenta like ('811'+REPLICATE('0',@Estructura1-3)+'-001%'))),0))
+Where (Mes Between 1 and 12) and Year =@Ejercicio and (NumeroCuenta like ('811'+REPLICATE('0',@Estructura1-3)+'-01%') or NumeroCuenta like ('811'+REPLICATE('0',@Estructura1-3)+'-001%'))),0))
 
 Declare @SaldosCont21 as Decimal (18,4) = (select 
 isnull((Select sum(isnull(T_SaldosInicialesCont.TotalAbonos,0)) From T_SaldosInicialesCont JOIN c_contable on C_Contable.IdCuentaContable=T_SaldosInicialesCont.IdCuentaContable 
-Where (Mes = 0) and Year =@Ejercicio and (NumeroCuenta like ('821'+REPLICATE('0',@Estructura1-3)+'-091%') Or NumeroCuenta like ('821'+REPLICATE('0',@Estructura1-3)+'-91%'))),0))
+Where (Mes Between 1 and 12) and Year =@Ejercicio and (NumeroCuenta like ('821'+REPLICATE('0',@Estructura1-3)+'-091%') Or NumeroCuenta like ('821'+REPLICATE('0',@Estructura1-3)+'-91%'))),0))
 
 
 Declare @Valores as table (Orden decimal(15,2),Estimado decimal(18,4), Devengado decimal(18,4),Pagado decimal(18,4))
@@ -109,8 +132,10 @@ select
 FROM T_PresupuestoFlujo 
 JOIN C_PartidasGastosIngresos
 ON T_PresupuestoFlujo.IdPartida= C_PartidasGastosIngresos.IdPartidaGI
+JOIN C_FuenteFinanciamiento ON C_FuenteFinanciamiento.IDFUENTEFINANCIAMIENTO = C_PartidasGastosIngresos.IdFuenteFinanciamiento
 WHERE T_PresupuestoFlujo.Ejercicio=@Ejercicio and (T_PresupuestoFlujo.Mes between @MesInicio and @MesFin) and 
 len(C_PartidasGastosIngresos.Clave)>4 and substring(C_PartidasGastosIngresos.Clave,6,1) in('1','2','3','4','5','6','8') 
+AND substring(C_FuenteFinanciamiento.Clave,1,2) not in('12','13')
 
 insert into @Valores
 select 
@@ -146,12 +171,12 @@ insert into @Valores
 select 
 14,
 @SaldosCont14, 
-sum(isnull(T_SaldosInicialesCont.TotalAbonos,0)), 
+@SaldosCont14_Dev, 
 sum(isnull(T_SaldosInicialesCont.TotalCargos,0)) 
 FROM T_SaldosInicialesCont 
 JOIN c_contable on C_Contable.IdCuentaContable=T_SaldosInicialesCont.IdCuentaContable 
 Where (Mes between @MesInicio and @MesFin) and Year =@Ejercicio and NumeroCuenta in('541'+REPLICATE('0',@Estructura1-3)+'-'+@CerosEstructura,
-'542'+REPLICATE('0',@Estructura1-3)+'-'+@CerosEstructura,'543'+REPLICATE('0',@Estructura1-3)+'-'+@CerosEstructura)
+'542'+REPLICATE('0',@Estructura1-3)+'-'+@CerosEstructura,'543'+REPLICATE('0',@Estructura1-3)+'-'+@CerosEstructura, '544'+REPLICATE('0',@Estructura1-3)+'-'+@CerosEstructura)
 
 
 insert into @Valores
@@ -171,7 +196,12 @@ isnull((Select sum(isnull(T_SaldosInicialesCont.TotalAbonos,0)) From T_SaldosIni
 Where (Mes between @MesInicio and @MesFin) and Year =@Ejercicio and (NumeroCuenta like ('825'+REPLICATE('0',@Estructura1-3)+'-091%') Or NumeroCuenta like ('825'+REPLICATE('0',@Estructura1-3)+'-91%'))),0), 
 isnull((Select sum(isnull(T_SaldosInicialesCont.TotalCargos,0)) From T_SaldosInicialesCont JOIN c_contable on C_Contable.IdCuentaContable=T_SaldosInicialesCont.IdCuentaContable 
 Where (Mes between @MesInicio and @MesFin) and Year =@Ejercicio and (NumeroCuenta like ('827'+REPLICATE('0',@Estructura1-3)+'-091%') Or NumeroCuenta like ('827'+REPLICATE('0',@Estructura1-3)+'-91%'))),0)
-update @titulos set T.Estimado=V.Estimado, T.Devengado=V.Devengado,T.pagado=V.Pagado  
+
+--Select * from @Valores
+--Select @PresFlujo3
+--Select @PresFlujo4
+
+update @titulos set T.Estimado= ISNULL(V.Estimado,0), T.Devengado= ISNULL(V.Devengado,0), T.pagado= ISNULL(V.Pagado,0)  
 from @Titulos T JOIN @Valores V on V.Orden=T.Orden 
 
 update @Titulos set  Estimado = (select sum(isnull(Estimado,0)) from @Titulos where Orden in (3,4)), 
@@ -201,6 +231,35 @@ update @Titulos set Estimado=((Select isnull(Estimado,0) from @titulos where Ord
 Devengado= ((Select isnull(Devengado,0) from @titulos where Orden =19)-(Select isnull(Devengado,0) from @titulos where Orden =21)),
 Pagado= ((Select isnull(Pagado,0) from @titulos where Orden =19)-(Select isnull(Pagado,0) from @titulos where Orden =21))
 where orden =23
+
+If @Paraestatal = 1
+BEGIN
+
+	UPDATE @Titulos set
+	Estimado = (Select isnull(Estimado,0) from @titulos where Orden =3),
+	Devengado = (Select isnull(Devengado,0) from @titulos where Orden =3),
+	Pagado = (Select isnull(Pagado,0) from @titulos where Orden =3)
+	Where Orden = 4
+
+	UPDATE @Titulos set
+	Estimado = (Select isnull(Estimado,0) from @titulos where Orden =7),
+	Devengado = (Select isnull(Devengado,0) from @titulos where Orden =7),
+	Pagado = (Select isnull(Pagado,0) from @titulos where Orden =7)
+	Where Orden = 8
+
+	UPDATE @Titulos set
+	Estimado = 0,
+	Devengado = 0,
+	Pagado = 0
+	Where Orden = 3
+
+	UPDATE @Titulos set
+	Estimado = 0,
+	Devengado = 0,
+	Pagado = 0
+	Where Orden = 7
+
+END
 
 Select * from @Titulos 
 

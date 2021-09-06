@@ -25,6 +25,7 @@ Partial Class CtrlUser_RPT_IndicadoresPosturaFiscal
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CtrlUser_RPT_IndicadoresPosturaFiscal))
         Me.SplitContainerControl1 = New DevExpress.XtraEditors.SplitContainerControl()
+        Me.chkParaestatal = New System.Windows.Forms.CheckBox()
         Me.filterPeriodoIni = New DevExpress.XtraEditors.TimeEdit()
         Me.filterPeriodoFin = New DevExpress.XtraEditors.TimeEdit()
         Me.LabelControl6 = New DevExpress.XtraEditors.LabelControl()
@@ -108,6 +109,7 @@ Partial Class CtrlUser_RPT_IndicadoresPosturaFiscal
         Me.SplitContainerControl1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.SplitContainerControl1.Location = New System.Drawing.Point(0, 53)
         Me.SplitContainerControl1.Name = "SplitContainerControl1"
+        Me.SplitContainerControl1.Panel1.Controls.Add(Me.chkParaestatal)
         Me.SplitContainerControl1.Panel1.Controls.Add(Me.filterPeriodoIni)
         Me.SplitContainerControl1.Panel1.Controls.Add(Me.filterPeriodoFin)
         Me.SplitContainerControl1.Panel1.Controls.Add(Me.LabelControl6)
@@ -122,6 +124,16 @@ Partial Class CtrlUser_RPT_IndicadoresPosturaFiscal
         Me.SplitContainerControl1.SplitterPosition = 222
         Me.SplitContainerControl1.TabIndex = 4
         Me.SplitContainerControl1.Text = "SplitContainerControl1"
+        '
+        'chkParaestatal
+        '
+        Me.chkParaestatal.AutoSize = True
+        Me.chkParaestatal.Location = New System.Drawing.Point(20, 134)
+        Me.chkParaestatal.Name = "chkParaestatal"
+        Me.chkParaestatal.Size = New System.Drawing.Size(186, 17)
+        Me.chkParaestatal.TabIndex = 41
+        Me.chkParaestatal.Text = "Organismo es Sector Paraestatal?"
+        Me.chkParaestatal.UseVisualStyleBackColor = True
         '
         'filterPeriodoIni
         '
@@ -187,7 +199,7 @@ Partial Class CtrlUser_RPT_IndicadoresPosturaFiscal
         '
         'SimpleButton1
         '
-        Me.SimpleButton1.Location = New System.Drawing.Point(19, 92)
+        Me.SimpleButton1.Location = New System.Drawing.Point(19, 98)
         Me.SimpleButton1.Name = "SimpleButton1"
         Me.SimpleButton1.Size = New System.Drawing.Size(189, 21)
         Me.SimpleButton1.TabIndex = 2
@@ -752,7 +764,7 @@ Partial Class CtrlUser_RPT_IndicadoresPosturaFiscal
         '
         Me.ErrorProvider1.ContainerControl = Me
         '
-        'CtrlUser_RPT_ConciliacionIngresos
+        'CtrlUser_RPT_IndicadoresPosturaFiscal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -761,7 +773,7 @@ Partial Class CtrlUser_RPT_IndicadoresPosturaFiscal
         Me.Controls.Add(Me.barDockControlRight)
         Me.Controls.Add(Me.barDockControlBottom)
         Me.Controls.Add(Me.barDockControlTop)
-        Me.Name = "CtrlUser_RPT_ConciliacionIngresos"
+        Me.Name = "CtrlUser_RPT_IndicadoresPosturaFiscal"
         Me.Size = New System.Drawing.Size(752, 471)
         CType(Me.SplitContainerControl1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainerControl1.ResumeLayout(False)
@@ -842,5 +854,6 @@ Partial Class CtrlUser_RPT_IndicadoresPosturaFiscal
     Friend WithEvents LabelControl7 As DevExpress.XtraEditors.LabelControl
     Friend WithEvents filterEjercicio As DevExpress.XtraEditors.TimeEdit
     Friend WithEvents LabelControl5 As DevExpress.XtraEditors.LabelControl
+    Friend WithEvents chkParaestatal As System.Windows.Forms.CheckBox
 
 End Class

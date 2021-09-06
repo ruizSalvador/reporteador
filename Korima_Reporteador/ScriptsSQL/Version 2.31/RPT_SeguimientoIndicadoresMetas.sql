@@ -13,7 +13,7 @@ GO
 	Date:	2021-07-09
 */
 
--- Exec RPT_SeguimientoIndicadoresMetas '',2020,8,0
+-- Exec RPT_SeguimientoIndicadoresMetas '1529',2021,9,1
 CREATE PROCEDURE [dbo].[RPT_SeguimientoIndicadoresMetas] 
 	--@IdUsuario int, 
 	--@IdMeta int,
@@ -120,7 +120,7 @@ Insert into @Seguimiento
 Select IdDefMeta, Avance, 
  [0] ,[1],[2],[3],[4],[5],[6],[7],[8],[9],[10],[11],[12]
 From (	
-SELECT DISTINCT
+SELECT 
 IdDefMeta,
 Avance,
 Cantidad,
@@ -149,7 +149,7 @@ UPDATE I SET
 				From T_PresupuestoNw p JOIN T_SellosPresupuestales s
 				ON p.IdSelloPresupuestal = s.IdSelloPresupuestal
 				AND p.[Year] =  @Ejercicio 
-				AND p.Mes = 0 AND
+				AND p.Mes <= @Mes AND
 				(I.IdAreaResp <> 0 AND I.IdAreaResp = s.IdAreaResp ) AND
 				(I.IdActInst <> 0 AND I.IdActInst = s.IdActInstitucional)  AND
 				(I.IdUnicoProyecto <> 0 AND I.IdUnicoProyecto = s.IdProyecto)   
@@ -158,7 +158,7 @@ UPDATE I SET
 				From T_PresupuestoNw p JOIN T_SellosPresupuestales s
 				ON p.IdSelloPresupuestal = s.IdSelloPresupuestal
 				AND p.[Year] =  @Ejercicio 
-				AND p.Mes = 0 AND
+				AND p.Mes <= @Mes AND
 				(I.IdAreaResp <> 0 AND I.IdAreaResp = s.IdAreaResp ) AND
 				(I.IdActInst <> 0 AND I.IdActInst = s.IdActInstitucional)  AND
 				(I.IdUnicoProyecto <> 0 AND I.IdUnicoProyecto = s.IdProyecto)   
@@ -167,7 +167,7 @@ UPDATE I SET
 				From T_PresupuestoNw p JOIN T_SellosPresupuestales s
 				ON p.IdSelloPresupuestal = s.IdSelloPresupuestal
 				AND p.[Year] =  @Ejercicio 
-				AND p.Mes = 0 AND
+				AND p.Mes <= @Mes AND
 				(I.IdAreaResp <> 0 AND I.IdAreaResp = s.IdAreaResp ) AND
 				(I.IdActInst <> 0 AND I.IdActInst = s.IdActInstitucional)  AND
 				(I.IdUnicoProyecto <> 0 AND I.IdUnicoProyecto = s.IdProyecto)   
@@ -176,7 +176,7 @@ UPDATE I SET
 				From T_PresupuestoNw p JOIN T_SellosPresupuestales s
 				ON p.IdSelloPresupuestal = s.IdSelloPresupuestal
 				AND p.[Year] =  @Ejercicio 
-				AND p.Mes = 0 AND
+				AND p.Mes <= @Mes AND
 				(I.IdAreaResp <> 0 AND I.IdAreaResp = s.IdAreaResp ) AND
 				(I.IdActInst <> 0 AND I.IdActInst = s.IdActInstitucional)  AND
 				(I.IdUnicoProyecto <> 0 AND I.IdUnicoProyecto = s.IdProyecto)   
@@ -227,7 +227,7 @@ Insert into @Seguimiento
 Select IdDefMeta, Avance, 
  [0] ,[1],[2],[3],[4],[5],[6],[7],[8],[9],[10],[11],[12]
 From (	
-SELECT DISTINCT
+SELECT 
 IdDefMeta,
 Avance,
 Cantidad,
@@ -320,7 +320,6 @@ END
 DROP TABLE #Ejercicios
 END
 
-
 Update I set 
 I.Enero = ISNULL(S.Enero,0),
 I.Febrero = ISNULL(S.Febrero,0),
@@ -335,8 +334,25 @@ I.Octubre = ISNULL(S.Octubre,0),
 I.Noviembre = ISNULL(S.Noviembre,0),
 I.Diciembre = ISNULL(S.Diciembre,0)
 
-FROM #Info I, @Seguimiento S 
-Where I.ID = s.IdDefMeta
+FROM #Info I JOIN 
+(
+Select IdDefMeta,
+SUM(Enero) as Enero,
+SUM(Febrero) as Febrero,
+SUM(Marzo) as Marzo,
+SUM(Abril) as Abril,
+SUM(Mayo) as Mayo,
+SUM(Junio) as Junio,
+SUM(Julio) as Julio,
+SUM(Agosto) as Agosto,
+SUM(Septiembre) as Septiembre,
+SUM(Octubre) as Octubre,
+SUM(Noviembre) as Noviembre,
+SUM(Diciembre) as Diciembre
+ FROM @Seguimiento 
+group by IdDefMeta
+) S
+ON I.ID = S.IdDefMeta
 
 -------------------------*************************************************
 CREATE TABLE #Sumatorias (
