@@ -89,7 +89,7 @@ JOIN C_PartidasGastosIngresos
 ON C_PartidasGastosIngresos.IdPartidaGI=T_Tarifario.IdPartidaGI
 JOIN C_TipoCuentas ctipo
 ON ctipo.IdTipoCuenta = T_Tarifario.IdTipoCuenta
-Where tf.tipofactura = 4 and (Tf.Fecha BETWEEN @FechaInicio AND @FechaFin) and (df.IdTarifa  BETWEEN @TarifarioInicio AND @TarifarioFin)
+Where tf.tipofactura = 4 and (Tf.Fecha >= @FechaInicio AND Tf.Fecha <= @FechaFin) and (df.IdTarifa  BETWEEN @TarifarioInicio AND @TarifarioFin)
 order by Tf.Folio
 END
 
@@ -134,7 +134,7 @@ JOIN T_Polizas TP ON TP.IdPoliza = TF.IdPoliza and TP.TipoPoliza ='I'
 JOIN D_Polizas DP ON DP.IdPoliza = TF.IdPoliza
 JOIN C_Contable CCON ON CCON.IdCuentaContable = DP.IdCuentaContable and NumeroCuenta like '815%'
 Where --tf.tipofactura = 4 and 
-(Tf.Fecha BETWEEN @FechaInicio AND @FechaFin) and (df.IdTarifa  BETWEEN @TarifarioInicio AND @TarifarioFin)
+(Tf.Fecha >= @FechaInicio AND Tf.Fecha <= @FechaFin) and (df.IdTarifa  BETWEEN @TarifarioInicio AND @TarifarioFin)
 Group by TF.Folio, TF.Fecha, CC.IdCliente, DF.Concepto, DF.IdTarifa, C_PartidasGastosIngresos.Clave, TF.Status, TF.IdPoliza,
 ctipo.Descripcion
 
@@ -157,7 +157,7 @@ JOIN C_PartidasGastosIngresos
 ON C_PartidasGastosIngresos.IdPartidaGI=T_Tarifario.IdPartidaGI
 JOIN C_TipoCuentas ctipo
 ON ctipo.IdTipoCuenta = T_Tarifario.IdTipoCuenta 
-Where TNC.Tipo=1  and (TNC.Fecha BETWEEN @FechaInicio AND @FechaFin) and (dnc.IdTarifa  BETWEEN @TarifarioInicio AND @TarifarioFin)
+Where TNC.Tipo=1  and (TNC.Fecha >= @FechaInicio AND TNC.Fecha <= @FechaFin) and (dnc.IdTarifa  BETWEEN @TarifarioInicio AND @TarifarioFin)
 order by TNC.Folio 
 END
 
@@ -180,7 +180,7 @@ JOIN C_PartidasGastosIngresos
 ON C_PartidasGastosIngresos.IdPartidaGI=T_Tarifario.IdPartidaGI
 JOIN C_TipoCuentas ctipo
 ON ctipo.IdTipoCuenta = T_Tarifario.IdTipoCuenta
-Where tf.tipofactura = 4 and (Tf.Fecha BETWEEN @FechaInicio AND @FechaFin) and (df.IdTarifa  BETWEEN @TarifarioInicio AND @TarifarioFin)
+Where tf.tipofactura = 4 and (Tf.Fecha >= @FechaInicio AND Tf.Fecha <= @FechaFin) and (df.IdTarifa  BETWEEN @TarifarioInicio AND @TarifarioFin)
 
 union all
 --Recaudados
@@ -221,7 +221,7 @@ JOIN T_Polizas TP ON TP.IdPoliza = TF.IdPoliza and TP.TipoPoliza ='I'
 JOIN D_Polizas DP ON DP.IdPoliza = TF.IdPoliza
 JOIN C_Contable CCON ON CCON.IdCuentaContable = DP.IdCuentaContable and NumeroCuenta like '815%'
 Where --tf.tipofactura = 4 and 
-(Tf.Fecha BETWEEN @FechaInicio AND @FechaFin) and (df.IdTarifa  BETWEEN @TarifarioInicio AND @TarifarioFin)
+(Tf.Fecha >= @FechaInicio AND Tf.Fecha <= @FechaFin) and (df.IdTarifa  BETWEEN @TarifarioInicio AND @TarifarioFin)
 Group by TF.Folio, TF.Fecha, CC.IdCliente, DF.Concepto, DF.IdTarifa, C_PartidasGastosIngresos.Clave, TF.Status, TF.IdPoliza,
 ctipo.Descripcion
 
@@ -240,27 +240,29 @@ JOIN C_PartidasGastosIngresos
 ON C_PartidasGastosIngresos.IdPartidaGI=T_Tarifario.IdPartidaGI
 JOIN C_TipoCuentas ctipo
 ON ctipo.IdTipoCuenta = T_Tarifario.IdTipoCuenta 
-Where TNC.Tipo=1 and (TNC.Fecha BETWEEN @FechaInicio AND @FechaFin) and (dnc.IdTarifa  BETWEEN @TarifarioInicio AND @TarifarioFin)
+Where TNC.Tipo=1 and (TNC.Fecha >= @FechaInicio AND TNC.Fecha <= @FechaFin) and (dnc.IdTarifa  BETWEEN @TarifarioInicio AND @TarifarioFin)
 
 
 END
 
+--Select * from @TablaTodos order by Fecha
 
 if @MostrarCancelados = 1 
 BEGIN
 insert into @Pivot
 SELECT *
 FROM (SELECT --YEAR(Fecha) [Year], 
-       DATENAME(MONTH, Fecha) [Mes],
+        DATENAME(MONTH, Fecha) as [Mes],
 	   Cliente,
 	   Clave,
 	   NombreCuenta,
 	   Concepto, 
-       isnull([Importe],0) as [Importe]
+       ISNULL([Importe],0) as Importe
       FROM @TablaTodos
 
-      GROUP BY YEAR(Fecha), Cliente, Concepto,Clave, NombreCuenta, Importe,
-      DATENAME(MONTH, Fecha)) AS Meses	  
+      --GROUP BY YEAR(Fecha), Cliente, Concepto, Clave, NombreCuenta, Importe,
+      --DATENAME(MONTH, Fecha)) AS Meses	
+	  ) as src
 PIVOT( SUM([Importe]) 
     FOR Mes IN ([Enero],[Febrero],[Marzo],[Abril],[Mayo],
     [Junio],[Julio],[Agosto],[Septiembre],[Octubre],[Noviembre],
@@ -302,4 +304,4 @@ GO
 EXEC SP_FirmasReporte 'Tarifario Ingresos'
 GO
 
---exec SP_RPT_CriTarifario 4, '01-07-2015','30-09-2105',1,9999,1
+-- Exec SP_RPT_CriTarifario 2, '01-01-2021','30-09-2021',1,9999,1
