@@ -45,6 +45,7 @@ Partial Public Class RPT_Tarifario_Ingresos
         Me.lblEstatus = New DevExpress.XtraReports.UI.XRLabel()
         Me.label11 = New DevExpress.XtraReports.UI.XRLabel()
         Me.TopMargin = New DevExpress.XtraReports.UI.TopMarginBand()
+        Me.PICEnteLogoSecundario = New DevExpress.XtraReports.UI.XRPictureBox()
         Me.line1 = New DevExpress.XtraReports.UI.XRLine()
         Me.lblSubtitulo = New DevExpress.XtraReports.UI.XRLabel()
         Me.lblRptDescripcionFiltrado = New DevExpress.XtraReports.UI.XRLabel()
@@ -82,7 +83,6 @@ Partial Public Class RPT_Tarifario_Ingresos
         Me.XrLabel11 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel8 = New DevExpress.XtraReports.UI.XRLabel()
         Me.DataSetBlanca11 = New Korima_Reporteador.DataSetBlanca1()
-        Me.PICEnteLogoSecundario = New DevExpress.XtraReports.UI.XRPictureBox()
         CType(Me.DataSetBlanca1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataSetBlanca11, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -125,7 +125,7 @@ Partial Public Class RPT_Tarifario_Ingresos
         '
         Me.XrLabel2.AnchorVertical = CType((DevExpress.XtraReports.UI.VerticalAnchorStyles.Top Or DevExpress.XtraReports.UI.VerticalAnchorStyles.Bottom), DevExpress.XtraReports.UI.VerticalAnchorStyles)
         Me.XrLabel2.Borders = CType(((DevExpress.XtraPrinting.BorderSide.Top Or DevExpress.XtraPrinting.BorderSide.Right) _
-                    Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
+            Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
         Me.XrLabel2.CanGrow = False
         Me.XrLabel2.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "SP_RPT_Tarifario_Ingresos.Importe")})
         Me.XrLabel2.Dpi = 254.0!
@@ -147,7 +147,7 @@ Partial Public Class RPT_Tarifario_Ingresos
         '
         Me.label31.AnchorVertical = CType((DevExpress.XtraReports.UI.VerticalAnchorStyles.Top Or DevExpress.XtraReports.UI.VerticalAnchorStyles.Bottom), DevExpress.XtraReports.UI.VerticalAnchorStyles)
         Me.label31.Borders = CType(((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Top) _
-                    Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
+            Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
         Me.label31.CanGrow = False
         Me.label31.Dpi = 254.0!
         Me.label31.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -164,7 +164,7 @@ Partial Public Class RPT_Tarifario_Ingresos
         'ColTipo
         '
         Me.ColTipo.Condition = "[Tipo]   == 'Por Recaudar' or [Tipo]   == 'Recaudados' or [Tipo]   == 'Devolucion" & _
-            "es y Compensaciones' "
+    "es y Compensaciones' " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "or [Tipo]   =='Por Recaudar-Recaudados'"
         Me.ColTipo.DataMember = "SP_RPT_Tarifario_Ingresos"
         Me.ColTipo.DataSource = Me.DataSetBlanca1
         '
@@ -211,7 +211,7 @@ Partial Public Class RPT_Tarifario_Ingresos
         '
         Me.XrLabel5.AnchorVertical = CType((DevExpress.XtraReports.UI.VerticalAnchorStyles.Top Or DevExpress.XtraReports.UI.VerticalAnchorStyles.Bottom), DevExpress.XtraReports.UI.VerticalAnchorStyles)
         Me.XrLabel5.Borders = CType(((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Top) _
-                    Or DevExpress.XtraPrinting.BorderSide.Right), DevExpress.XtraPrinting.BorderSide)
+            Or DevExpress.XtraPrinting.BorderSide.Right), DevExpress.XtraPrinting.BorderSide)
         Me.XrLabel5.CanGrow = False
         Me.XrLabel5.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "SP_RPT_Tarifario_Ingresos.Cliente", "{0}")})
         Me.XrLabel5.Dpi = 254.0!
@@ -308,7 +308,7 @@ Partial Public Class RPT_Tarifario_Ingresos
         'label4
         '
         Me.label4.Borders = CType(((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Top) _
-                    Or DevExpress.XtraPrinting.BorderSide.Right), DevExpress.XtraPrinting.BorderSide)
+            Or DevExpress.XtraPrinting.BorderSide.Right), DevExpress.XtraPrinting.BorderSide)
         Me.label4.BorderWidth = 1
         Me.label4.Dpi = 254.0!
         Me.label4.Font = New System.Drawing.Font("Tahoma", 8.0!, System.Drawing.FontStyle.Bold)
@@ -326,7 +326,7 @@ Partial Public Class RPT_Tarifario_Ingresos
         'XrLabel3
         '
         Me.XrLabel3.Borders = CType(((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Top) _
-                    Or DevExpress.XtraPrinting.BorderSide.Right), DevExpress.XtraPrinting.BorderSide)
+            Or DevExpress.XtraPrinting.BorderSide.Right), DevExpress.XtraPrinting.BorderSide)
         Me.XrLabel3.BorderWidth = 1
         Me.XrLabel3.Dpi = 254.0!
         Me.XrLabel3.Font = New System.Drawing.Font("Tahoma", 8.0!, System.Drawing.FontStyle.Bold)
@@ -417,6 +417,14 @@ Partial Public Class RPT_Tarifario_Ingresos
         Me.TopMargin.Dpi = 254.0!
         Me.TopMargin.HeightF = 493.0!
         Me.TopMargin.Name = "TopMargin"
+        '
+        'PICEnteLogoSecundario
+        '
+        Me.PICEnteLogoSecundario.Dpi = 254.0!
+        Me.PICEnteLogoSecundario.LocationFloat = New DevExpress.Utils.PointFloat(2375.841!, 172.4025!)
+        Me.PICEnteLogoSecundario.Name = "PICEnteLogoSecundario"
+        Me.PICEnteLogoSecundario.SizeF = New System.Drawing.SizeF(215.3709!, 203.2!)
+        Me.PICEnteLogoSecundario.Sizing = DevExpress.XtraPrinting.ImageSizeMode.ZoomImage
         '
         'line1
         '
@@ -589,7 +597,7 @@ Partial Public Class RPT_Tarifario_Ingresos
         'XrLabel13
         '
         Me.XrLabel13.Borders = CType(((DevExpress.XtraPrinting.BorderSide.Top Or DevExpress.XtraPrinting.BorderSide.Right) _
-                    Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
+            Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
         Me.XrLabel13.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "SP_RPT_Tarifario_Ingresos.Descripcion")})
         Me.XrLabel13.Dpi = 254.0!
         Me.XrLabel13.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -629,7 +637,7 @@ Partial Public Class RPT_Tarifario_Ingresos
         '
         Me.label7.AnchorVertical = CType((DevExpress.XtraReports.UI.VerticalAnchorStyles.Top Or DevExpress.XtraReports.UI.VerticalAnchorStyles.Bottom), DevExpress.XtraReports.UI.VerticalAnchorStyles)
         Me.label7.Borders = CType(((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Top) _
-                    Or DevExpress.XtraPrinting.BorderSide.Right), DevExpress.XtraPrinting.BorderSide)
+            Or DevExpress.XtraPrinting.BorderSide.Right), DevExpress.XtraPrinting.BorderSide)
         Me.label7.CanGrow = False
         Me.label7.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "SP_RPT_Tarifario_Ingresos.Folio", "{0}")})
         Me.label7.Dpi = 254.0!
@@ -912,7 +920,7 @@ Partial Public Class RPT_Tarifario_Ingresos
         'XrLabel8
         '
         Me.XrLabel8.Borders = CType(((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Top) _
-                    Or DevExpress.XtraPrinting.BorderSide.Right), DevExpress.XtraPrinting.BorderSide)
+            Or DevExpress.XtraPrinting.BorderSide.Right), DevExpress.XtraPrinting.BorderSide)
         Me.XrLabel8.Dpi = 254.0!
         Me.XrLabel8.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.XrLabel8.LocationFloat = New DevExpress.Utils.PointFloat(156.9044!, 0.0!)
@@ -929,14 +937,6 @@ Partial Public Class RPT_Tarifario_Ingresos
         '
         Me.DataSetBlanca11.DataSetName = "DataSetBlanca1"
         Me.DataSetBlanca11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'PICEnteLogoSecundario
-        '
-        Me.PICEnteLogoSecundario.Dpi = 254.0!
-        Me.PICEnteLogoSecundario.LocationFloat = New DevExpress.Utils.PointFloat(2375.841!, 172.4025!)
-        Me.PICEnteLogoSecundario.Name = "PICEnteLogoSecundario"
-        Me.PICEnteLogoSecundario.SizeF = New System.Drawing.SizeF(215.3709!, 203.2!)
-        Me.PICEnteLogoSecundario.Sizing = DevExpress.XtraPrinting.ImageSizeMode.ZoomImage
         '
         'RPT_Tarifario_Ingresos
         '

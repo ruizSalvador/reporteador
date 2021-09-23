@@ -183,9 +183,9 @@ Partial Class CtrlUser_RPT_Seguimiento_Metas
         Me.LabelControl6.CausesValidation = False
         Me.LabelControl6.Location = New System.Drawing.Point(15, 59)
         Me.LabelControl6.Name = "LabelControl6"
-        Me.LabelControl6.Size = New System.Drawing.Size(33, 13)
+        Me.LabelControl6.Size = New System.Drawing.Size(167, 13)
         Me.LabelControl6.TabIndex = 43
-        Me.LabelControl6.Text = "Metas:"
+        Me.LabelControl6.Text = "Metas: (seleccionar al menos una):"
         '
         'LabelControl7
         '

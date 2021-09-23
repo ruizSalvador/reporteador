@@ -38,8 +38,11 @@ Public Class CtrlUser_RPT_Tarifario_Ingresos
         If ComboBox1.Text = "Devoluciones y Compensaciones" Then
             SQLComando.Parameters.Add(New SqlParameter("@Tipo", 3))
         End If
-        If ComboBox1.Text = "Todos" Then
+        If ComboBox1.Text = "Por Recaudar-Recaudado" Then
             SQLComando.Parameters.Add(New SqlParameter("@Tipo", 4))
+        End If
+        If ComboBox1.Text = "Todos" Then
+            SQLComando.Parameters.Add(New SqlParameter("@Tipo", 5))
         End If
         If ComboBox1.Text = "" Then
             SQLComando.Parameters.Add(New SqlParameter("@Tipo", 0))
@@ -106,7 +109,7 @@ Public Class CtrlUser_RPT_Tarifario_Ingresos
         '
         Dim ObjTempSQL As New clsRPT_CFG_DatosEntesCtrl
         With FilterDelTarifario.Properties
-            .DataSource = ObjTempSQL.List("", 0, "T_Tarifario", " Order by IdTarifa ")
+            .DataSource = ObjTempSQL.List("YEAR(FechaVigencia) =" & Year(filterPeriodoDe.EditValue), 0, "T_Tarifario", " Order by IdTarifa ")
             .DisplayMember = "DecripcionTarifario"
             .ValueMember = "IdTarifa"
             .SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoFilter
@@ -119,7 +122,7 @@ Public Class CtrlUser_RPT_Tarifario_Ingresos
         '
         Dim ObjTempSQL As New clsRPT_CFG_DatosEntesCtrl
         With FilterAlTarifario.Properties
-            .DataSource = ObjTempSQL.List("", 0, "T_Tarifario", " Order by IdTarifa ")
+            .DataSource = ObjTempSQL.List("YEAR(FechaVigencia) =" & Year(filterPeriodoDe.EditValue), 0, "T_Tarifario", " Order by IdTarifa ")
             .DisplayMember = "DecripcionTarifario"
             .ValueMember = "IdTarifa"
             .SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoFilter
@@ -141,5 +144,28 @@ Public Class CtrlUser_RPT_Tarifario_Ingresos
 
     Private Sub ChkMuestraNulos_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles ChkMuestraCancelado.CheckedChanged
 
+    End Sub
+
+    Private Sub filterPeriodoDe_TextChanged(sender As System.Object, e As System.EventArgs) Handles filterPeriodoDe.TextChanged
+        Dim ObjTempSQL As New clsRPT_CFG_DatosEntesCtrl
+        With FilterDelTarifario.Properties
+            .DataSource = ObjTempSQL.List("YEAR(FechaVigencia) =" & Year(filterPeriodoDe.EditValue), 0, "T_Tarifario", " Order by IdTarifa ")
+            .DisplayMember = "DecripcionTarifario"
+            .ValueMember = "IdTarifa"
+            .SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoFilter
+            .NullText = ""
+            .ShowHeader = True
+        End With
+
+
+        ' Dim ObjTempSQL As New clsRPT_CFG_DatosEntesCtrl
+        With FilterAlTarifario.Properties
+            .DataSource = ObjTempSQL.List("YEAR(FechaVigencia) =" & Year(filterPeriodoDe.EditValue), 0, "T_Tarifario", " Order by IdTarifa ")
+            .DisplayMember = "DecripcionTarifario"
+            .ValueMember = "IdTarifa"
+            .SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoFilter
+            .NullText = ""
+            .ShowHeader = True
+        End With
     End Sub
 End Class

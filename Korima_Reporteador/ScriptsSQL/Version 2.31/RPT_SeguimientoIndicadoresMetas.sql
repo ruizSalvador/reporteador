@@ -149,7 +149,7 @@ UPDATE I SET
 				From T_PresupuestoNw p JOIN T_SellosPresupuestales s
 				ON p.IdSelloPresupuestal = s.IdSelloPresupuestal
 				AND p.[Year] =  @Ejercicio 
-				AND p.Mes <= @Mes AND
+				AND (p.Mes Between 1 and @Mes) AND
 				(I.IdAreaResp <> 0 AND I.IdAreaResp = s.IdAreaResp ) AND
 				(I.IdActInst <> 0 AND I.IdActInst = s.IdActInstitucional)  AND
 				(I.IdUnicoProyecto <> 0 AND I.IdUnicoProyecto = s.IdProyecto)   
@@ -158,7 +158,7 @@ UPDATE I SET
 				From T_PresupuestoNw p JOIN T_SellosPresupuestales s
 				ON p.IdSelloPresupuestal = s.IdSelloPresupuestal
 				AND p.[Year] =  @Ejercicio 
-				AND p.Mes <= @Mes AND
+				AND (p.Mes Between 1 and @Mes) AND
 				(I.IdAreaResp <> 0 AND I.IdAreaResp = s.IdAreaResp ) AND
 				(I.IdActInst <> 0 AND I.IdActInst = s.IdActInstitucional)  AND
 				(I.IdUnicoProyecto <> 0 AND I.IdUnicoProyecto = s.IdProyecto)   
@@ -167,7 +167,7 @@ UPDATE I SET
 				From T_PresupuestoNw p JOIN T_SellosPresupuestales s
 				ON p.IdSelloPresupuestal = s.IdSelloPresupuestal
 				AND p.[Year] =  @Ejercicio 
-				AND p.Mes <= @Mes AND
+				AND (p.Mes Between 1 and @Mes) AND
 				(I.IdAreaResp <> 0 AND I.IdAreaResp = s.IdAreaResp ) AND
 				(I.IdActInst <> 0 AND I.IdActInst = s.IdActInstitucional)  AND
 				(I.IdUnicoProyecto <> 0 AND I.IdUnicoProyecto = s.IdProyecto)   
@@ -176,7 +176,7 @@ UPDATE I SET
 				From T_PresupuestoNw p JOIN T_SellosPresupuestales s
 				ON p.IdSelloPresupuestal = s.IdSelloPresupuestal
 				AND p.[Year] =  @Ejercicio 
-				AND p.Mes <= @Mes AND
+				AND (p.Mes Between 1 and @Mes) AND
 				(I.IdAreaResp <> 0 AND I.IdAreaResp = s.IdAreaResp ) AND
 				(I.IdActInst <> 0 AND I.IdActInst = s.IdActInstitucional)  AND
 				(I.IdUnicoProyecto <> 0 AND I.IdUnicoProyecto = s.IdProyecto)   

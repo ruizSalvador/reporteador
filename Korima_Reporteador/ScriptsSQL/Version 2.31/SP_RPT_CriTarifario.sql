@@ -90,6 +90,7 @@ ON C_PartidasGastosIngresos.IdPartidaGI=T_Tarifario.IdPartidaGI
 JOIN C_TipoCuentas ctipo
 ON ctipo.IdTipoCuenta = T_Tarifario.IdTipoCuenta
 Where tf.tipofactura = 4 and (Tf.Fecha >= @FechaInicio AND Tf.Fecha <= @FechaFin) and (df.IdTarifa  BETWEEN @TarifarioInicio AND @TarifarioFin)
+AND PagoInmediato in (0)
 order by Tf.Folio
 END
 
@@ -98,24 +99,26 @@ If @Tipo=2
 BEGIN
 --Recaudados
 Insert @TablaTodos 
---Select TRC.Folio , TRC.Fecha, CC.IdCliente as Cliente, dr.Importe ,dr.Descripcion as Concepto,  'Recaudados' as Tipo, dr.IdTarifa, C_PartidasGastosIngresos.Clave,TRC.status, idpoliza, ctipo.Descripcion as NombreCuenta
---FROM c_clientes as cc
---JOIN
---T_RecibosCaja as TRC ON cc.IdCliente = TRC.IdCliente
---JOIN
---d_recibos as DR ON dr.IdIngreso = trc.idingreso
---JOIN T_Tarifario 
---ON T_Tarifario.IdTarifa=DR.IdTarifa
---JOIN C_PartidasGastosIngresos
---ON C_PartidasGastosIngresos.IdPartidaGI=T_Tarifario.IdPartidaGI 
---JOIN C_TipoCuentas ctipo
---ON ctipo.IdTipoCuenta = T_Tarifario.IdTipoCuenta
---Where TRC.TipoIngreso <> 'N' and TRC.TipoIngreso <> 'O' and TRC.TipoPago <> 'E' and (TRC.Fecha BETWEEN @FechaInicio AND @FechaFin)
---and (dr.IdTarifa  BETWEEN @TarifarioInicio AND @TarifarioFin)
+Select TRC.Folio , TRC.Fecha, CC.IdCliente as Cliente, dr.Importe ,dr.Descripcion as Concepto,  'Recaudados' as Tipo, dr.IdTarifa, C_PartidasGastosIngresos.Clave,TRC.status, idpoliza, ctipo.Descripcion as NombreCuenta
+FROM c_clientes as cc
+JOIN
+T_RecibosCaja as TRC ON cc.IdCliente = TRC.IdCliente
+JOIN
+d_recibos as DR ON dr.IdIngreso = trc.idingreso
+JOIN T_Tarifario 
+ON T_Tarifario.IdTarifa=DR.IdTarifa
+JOIN C_PartidasGastosIngresos
+ON C_PartidasGastosIngresos.IdPartidaGI=T_Tarifario.IdPartidaGI 
+JOIN C_TipoCuentas ctipo
+ON ctipo.IdTipoCuenta = T_Tarifario.IdTipoCuenta
+Where TRC.TipoIngreso <> 'N' and TRC.TipoIngreso <> 'O' and TRC.TipoPago <> 'E' and (TRC.Fecha BETWEEN @FechaInicio AND @FechaFin)
+and (dr.IdTarifa  BETWEEN @TarifarioInicio AND @TarifarioFin)
 --order by trc.Folio 
+
+union all
+
 Select Tf.Folio , Tf.Fecha , CC.IdCliente as Cliente, 
---df.Importe ,
-SUM(DP.ImporteAbono) as Importe,
+df.Importe ,
 df.Concepto  as Concepto, 'Recaudados' as Tipo, df.IdTarifa, 
 C_PartidasGastosIngresos.Clave, TF.Status, TF.IdPoliza, ctipo.Descripcion as NombreCuenta
 --,TP.TipoPoliza
@@ -131,12 +134,8 @@ ON C_PartidasGastosIngresos.IdPartidaGI=T_Tarifario.IdPartidaGI
 JOIN C_TipoCuentas ctipo
 ON ctipo.IdTipoCuenta = T_Tarifario.IdTipoCuenta
 JOIN T_Polizas TP ON TP.IdPoliza = TF.IdPoliza and TP.TipoPoliza ='I'
-JOIN D_Polizas DP ON DP.IdPoliza = TF.IdPoliza
-JOIN C_Contable CCON ON CCON.IdCuentaContable = DP.IdCuentaContable and NumeroCuenta like '815%'
-Where --tf.tipofactura = 4 and 
-(Tf.Fecha >= @FechaInicio AND Tf.Fecha <= @FechaFin) and (df.IdTarifa  BETWEEN @TarifarioInicio AND @TarifarioFin)
-Group by TF.Folio, TF.Fecha, CC.IdCliente, DF.Concepto, DF.IdTarifa, C_PartidasGastosIngresos.Clave, TF.Status, TF.IdPoliza,
-ctipo.Descripcion
+Where PagoInmediato in (1,2)
+AND (Tf.Fecha >= @FechaInicio AND Tf.Fecha <= @FechaFin) and (df.IdTarifa  BETWEEN @TarifarioInicio AND @TarifarioFin)
 
 END
 
@@ -181,28 +180,30 @@ ON C_PartidasGastosIngresos.IdPartidaGI=T_Tarifario.IdPartidaGI
 JOIN C_TipoCuentas ctipo
 ON ctipo.IdTipoCuenta = T_Tarifario.IdTipoCuenta
 Where tf.tipofactura = 4 and (Tf.Fecha >= @FechaInicio AND Tf.Fecha <= @FechaFin) and (df.IdTarifa  BETWEEN @TarifarioInicio AND @TarifarioFin)
+AND PagoInmediato in (0)
 
 union all
 --Recaudados
---Select TRC.Folio , TRC.Fecha, CC.IdCliente as Cliente, dr.Importe ,dr.Descripcion as Concepto, 'Recaudados' as Tipo, dr.IdTarifa,
---C_PartidasGastosIngresos.Clave, TRC.Status, IdPoliza, ctipo.Descripcion as NombreCuenta
---FROM c_clientes as cc
---JOIN
---T_RecibosCaja as TRC ON cc.IdCliente = TRC.IdCliente
---JOIN
---d_recibos as DR ON dr.IdIngreso = trc.idingreso
---JOIN T_Tarifario 
---ON T_Tarifario.IdTarifa=DR.IdTarifa
---JOIN C_PartidasGastosIngresos
---ON C_PartidasGastosIngresos.IdPartidaGI=T_Tarifario.IdPartidaGI
---JOIN C_TipoCuentas ctipo
---ON ctipo.IdTipoCuenta = T_Tarifario.IdTipoCuenta 
---Where TRC.TipoIngreso <> 'N' and TRC.TipoIngreso <> 'O' and TRC.TipoPago <> 'E' and (TRC.Fecha BETWEEN @FechaInicio AND @FechaFin)
---and (dr.IdTarifa  BETWEEN @TarifarioInicio AND @TarifarioFin)
+Select TRC.Folio , TRC.Fecha, CC.IdCliente as Cliente, dr.Importe ,dr.Descripcion as Concepto,  'Recaudados' as Tipo, dr.IdTarifa, C_PartidasGastosIngresos.Clave,TRC.status, idpoliza, ctipo.Descripcion as NombreCuenta
+FROM c_clientes as cc
+JOIN
+T_RecibosCaja as TRC ON cc.IdCliente = TRC.IdCliente
+JOIN
+d_recibos as DR ON dr.IdIngreso = trc.idingreso
+JOIN T_Tarifario 
+ON T_Tarifario.IdTarifa=DR.IdTarifa
+JOIN C_PartidasGastosIngresos
+ON C_PartidasGastosIngresos.IdPartidaGI=T_Tarifario.IdPartidaGI 
+JOIN C_TipoCuentas ctipo
+ON ctipo.IdTipoCuenta = T_Tarifario.IdTipoCuenta
+Where TRC.TipoIngreso <> 'N' and TRC.TipoIngreso <> 'O' and TRC.TipoPago <> 'E' and (TRC.Fecha BETWEEN @FechaInicio AND @FechaFin)
+and (dr.IdTarifa  BETWEEN @TarifarioInicio AND @TarifarioFin)
+--order by trc.Folio 
+
+union all
 
 Select Tf.Folio , Tf.Fecha , CC.IdCliente as Cliente, 
---df.Importe ,
-SUM(DP.ImporteAbono) as Importe,
+df.Importe ,
 df.Concepto  as Concepto, 'Recaudados' as Tipo, df.IdTarifa, 
 C_PartidasGastosIngresos.Clave, TF.Status, TF.IdPoliza, ctipo.Descripcion as NombreCuenta
 --,TP.TipoPoliza
@@ -218,12 +219,8 @@ ON C_PartidasGastosIngresos.IdPartidaGI=T_Tarifario.IdPartidaGI
 JOIN C_TipoCuentas ctipo
 ON ctipo.IdTipoCuenta = T_Tarifario.IdTipoCuenta
 JOIN T_Polizas TP ON TP.IdPoliza = TF.IdPoliza and TP.TipoPoliza ='I'
-JOIN D_Polizas DP ON DP.IdPoliza = TF.IdPoliza
-JOIN C_Contable CCON ON CCON.IdCuentaContable = DP.IdCuentaContable and NumeroCuenta like '815%'
-Where --tf.tipofactura = 4 and 
-(Tf.Fecha >= @FechaInicio AND Tf.Fecha <= @FechaFin) and (df.IdTarifa  BETWEEN @TarifarioInicio AND @TarifarioFin)
-Group by TF.Folio, TF.Fecha, CC.IdCliente, DF.Concepto, DF.IdTarifa, C_PartidasGastosIngresos.Clave, TF.Status, TF.IdPoliza,
-ctipo.Descripcion
+Where PagoInmediato in (1,2)
+AND (Tf.Fecha >= @FechaInicio AND Tf.Fecha <= @FechaFin) and (df.IdTarifa  BETWEEN @TarifarioInicio AND @TarifarioFin)
 
 union all
 --Devoluciones Detalle
@@ -245,7 +242,6 @@ Where TNC.Tipo=1 and (TNC.Fecha >= @FechaInicio AND TNC.Fecha <= @FechaFin) and 
 
 END
 
---Select * from @TablaTodos order by Fecha
 
 if @MostrarCancelados = 1 
 BEGIN
@@ -304,4 +300,4 @@ GO
 EXEC SP_FirmasReporte 'Tarifario Ingresos'
 GO
 
--- Exec SP_RPT_CriTarifario 2, '01-01-2021','30-09-2021',1,9999,1
+-- Exec SP_RPT_CriTarifario 2, '20210101','20210930',1,9999,1

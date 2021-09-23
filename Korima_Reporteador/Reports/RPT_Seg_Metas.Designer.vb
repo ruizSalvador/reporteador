@@ -46,7 +46,6 @@ Partial Public Class RPT_Seg_Metas
         Me.TreeListColumn2 = New DevExpress.XtraTreeList.Columns.TreeListColumn()
         Me.TreeListColumn4 = New DevExpress.XtraTreeList.Columns.TreeListColumn()
         Me.TreeListColumn5 = New DevExpress.XtraTreeList.Columns.TreeListColumn()
-        Me.TreeListColumn3 = New DevExpress.XtraTreeList.Columns.TreeListColumn()
         Me.TreeListColumn6 = New DevExpress.XtraTreeList.Columns.TreeListColumn()
         Me.TreeListColumn7 = New DevExpress.XtraTreeList.Columns.TreeListColumn()
         Me.TreeListColumn8 = New DevExpress.XtraTreeList.Columns.TreeListColumn()
@@ -86,6 +85,7 @@ Partial Public Class RPT_Seg_Metas
         Me.XrLabel3 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel2 = New DevExpress.XtraReports.UI.XRLabel()
         Me.PageHeader = New DevExpress.XtraReports.UI.PageHeaderBand()
+        Me.TreeListColumn3 = New DevExpress.XtraTreeList.Columns.TreeListColumn()
         CType(Me.RpT_FirmasHorizontal1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TreeList1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataSetBlanca1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -317,7 +317,7 @@ Partial Public Class RPT_Seg_Metas
         '
         'TreeList1
         '
-        Me.TreeList1.Columns.AddRange(New DevExpress.XtraTreeList.Columns.TreeListColumn() {Me.TreeListColumn1, Me.TreeListColumn2, Me.TreeListColumn4, Me.TreeListColumn5, Me.TreeListColumn3, Me.TreeListColumn6, Me.TreeListColumn7, Me.TreeListColumn8, Me.TreeListColumn9, Me.TreeListColumn10, Me.TreeListColumn11, Me.TreeListColumn12, Me.TreeListColumn13, Me.TreeListColumn14, Me.TreeListColumn15, Me.TreeListColumn16, Me.TreeListColumn17, Me.TreeListColumn22, Me.TreeListColumn27, Me.TreeListColumn28, Me.TreeListColumn18, Me.TreeListColumn23, Me.TreeListColumn19, Me.TreeListColumn24, Me.TreeListColumn20, Me.TreeListColumn25, Me.TreeListColumn21, Me.TreeListColumn26})
+        Me.TreeList1.Columns.AddRange(New DevExpress.XtraTreeList.Columns.TreeListColumn() {Me.TreeListColumn1, Me.TreeListColumn2, Me.TreeListColumn4, Me.TreeListColumn3, Me.TreeListColumn5, Me.TreeListColumn6, Me.TreeListColumn7, Me.TreeListColumn8, Me.TreeListColumn9, Me.TreeListColumn10, Me.TreeListColumn11, Me.TreeListColumn12, Me.TreeListColumn13, Me.TreeListColumn14, Me.TreeListColumn15, Me.TreeListColumn16, Me.TreeListColumn17, Me.TreeListColumn22, Me.TreeListColumn27, Me.TreeListColumn28, Me.TreeListColumn18, Me.TreeListColumn23, Me.TreeListColumn19, Me.TreeListColumn24, Me.TreeListColumn20, Me.TreeListColumn25, Me.TreeListColumn21, Me.TreeListColumn26})
         Me.TreeList1.Location = New System.Drawing.Point(0, 0)
         Me.TreeList1.Name = "TreeList1"
         Me.TreeList1.OptionsPrint.PrintAllNodes = True
@@ -343,7 +343,7 @@ Partial Public Class RPT_Seg_Metas
         Me.TreeListColumn2.AppearanceHeader.Options.UseTextOptions = True
         Me.TreeListColumn2.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
         Me.TreeListColumn2.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
-        Me.TreeListColumn2.Caption = "Descripcion"
+        Me.TreeListColumn2.Caption = "Descripción"
         Me.TreeListColumn2.FieldName = "Descripcion"
         Me.TreeListColumn2.Name = "TreeListColumn2"
         Me.TreeListColumn2.Visible = True
@@ -374,16 +374,8 @@ Partial Public Class RPT_Seg_Metas
         Me.TreeListColumn5.FieldName = "Cantidad"
         Me.TreeListColumn5.Name = "TreeListColumn5"
         Me.TreeListColumn5.Visible = True
-        Me.TreeListColumn5.VisibleIndex = 3
+        Me.TreeListColumn5.VisibleIndex = 4
         Me.TreeListColumn5.Width = 71
-        '
-        'TreeListColumn3
-        '
-        Me.TreeListColumn3.Caption = "Entregable"
-        Me.TreeListColumn3.FieldName = "Entregable"
-        Me.TreeListColumn3.Name = "TreeListColumn3"
-        Me.TreeListColumn3.Visible = True
-        Me.TreeListColumn3.VisibleIndex = 4
         '
         'TreeListColumn6
         '
@@ -897,6 +889,14 @@ Partial Public Class RPT_Seg_Metas
         Me.PageHeader.HeightF = 83.42001!
         Me.PageHeader.Name = "PageHeader"
         '
+        'TreeListColumn3
+        '
+        Me.TreeListColumn3.Caption = "Entregable"
+        Me.TreeListColumn3.FieldName = "Entregable"
+        Me.TreeListColumn3.Name = "TreeListColumn3"
+        Me.TreeListColumn3.Visible = True
+        Me.TreeListColumn3.VisibleIndex = 3
+        '
         'RPT_Seg_Metas
         '
         Me.Bands.AddRange(New DevExpress.XtraReports.UI.Band() {Me.Detail, Me.TopMargin, Me.BottomMargin, Me.ReportFooter, Me.PageHeader})
@@ -978,7 +978,6 @@ Partial Public Class RPT_Seg_Metas
     Public WithEvents XrSubreport1 As DevExpress.XtraReports.UI.XRSubreport
     Friend WithEvents XrLabel2 As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents XrLabel3 As DevExpress.XtraReports.UI.XRLabel
-    Friend WithEvents TreeListColumn3 As DevExpress.XtraTreeList.Columns.TreeListColumn
     Friend WithEvents XrLabel4 As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents XrLabel5 As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents TreeListColumn27 As DevExpress.XtraTreeList.Columns.TreeListColumn
@@ -986,4 +985,5 @@ Partial Public Class RPT_Seg_Metas
     Friend WithEvents XrLabel6 As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents XrLabel7 As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents PageHeader As DevExpress.XtraReports.UI.PageHeaderBand
+    Friend WithEvents TreeListColumn3 As DevExpress.XtraTreeList.Columns.TreeListColumn
 End Class

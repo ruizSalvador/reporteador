@@ -25,6 +25,7 @@ Partial Class CtrlUser_RPT_Tarifario_Ingresos
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CtrlUser_RPT_Tarifario_Ingresos))
         Me.SplitContainerControl1 = New DevExpress.XtraEditors.SplitContainerControl()
+        Me.ChkMuestraCancelado = New System.Windows.Forms.CheckBox()
         Me.FilterAlTarifario = New DevExpress.XtraEditors.LookUpEdit()
         Me.PrintBarManager1 = New DevExpress.XtraPrinting.Preview.PrintBarManager(Me.components)
         Me.PreviewBar1 = New DevExpress.XtraPrinting.Preview.PreviewBar()
@@ -97,7 +98,6 @@ Partial Class CtrlUser_RPT_Tarifario_Ingresos
         Me.filterPeriodoDe = New DevExpress.XtraEditors.DateEdit()
         Me.filterPeriodoAl = New DevExpress.XtraEditors.DateEdit()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
-        Me.ChkMuestraCancelado = New System.Windows.Forms.CheckBox()
         CType(Me.SplitContainerControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainerControl1.SuspendLayout()
         CType(Me.FilterAlTarifario.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -141,6 +141,18 @@ Partial Class CtrlUser_RPT_Tarifario_Ingresos
         Me.SplitContainerControl1.SplitterPosition = 222
         Me.SplitContainerControl1.TabIndex = 4
         Me.SplitContainerControl1.Text = "SplitContainerControl1"
+        '
+        'ChkMuestraCancelado
+        '
+        Me.ChkMuestraCancelado.AutoSize = True
+        Me.ChkMuestraCancelado.Checked = True
+        Me.ChkMuestraCancelado.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.ChkMuestraCancelado.Location = New System.Drawing.Point(17, 227)
+        Me.ChkMuestraCancelado.Name = "ChkMuestraCancelado"
+        Me.ChkMuestraCancelado.Size = New System.Drawing.Size(120, 17)
+        Me.ChkMuestraCancelado.TabIndex = 30
+        Me.ChkMuestraCancelado.Text = "Mostrar Cancelados"
+        Me.ChkMuestraCancelado.UseVisualStyleBackColor = True
         '
         'FilterAlTarifario
         '
@@ -762,7 +774,7 @@ Partial Class CtrlUser_RPT_Tarifario_Ingresos
         '
         Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"Por Recaudar", "Recaudados", "Devoluciones y Compensaciones", "Todos"})
+        Me.ComboBox1.Items.AddRange(New Object() {"Por Recaudar", "Recaudados", "Devoluciones y Compensaciones", "Por Recaudar-Recaudado", "Todos"})
         Me.ComboBox1.Location = New System.Drawing.Point(8, 30)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(168, 21)
@@ -824,18 +836,6 @@ Partial Class CtrlUser_RPT_Tarifario_Ingresos
         'ErrorProvider1
         '
         Me.ErrorProvider1.ContainerControl = Me
-        '
-        'ChkMuestraCancelado
-        '
-        Me.ChkMuestraCancelado.AutoSize = True
-        Me.ChkMuestraCancelado.Checked = True
-        Me.ChkMuestraCancelado.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.ChkMuestraCancelado.Location = New System.Drawing.Point(17, 227)
-        Me.ChkMuestraCancelado.Name = "ChkMuestraCancelado"
-        Me.ChkMuestraCancelado.Size = New System.Drawing.Size(120, 17)
-        Me.ChkMuestraCancelado.TabIndex = 30
-        Me.ChkMuestraCancelado.Text = "Mostrar Cancelados"
-        Me.ChkMuestraCancelado.UseVisualStyleBackColor = True
         '
         'CtrlUser_RPT_Tarifario_Ingresos
         '

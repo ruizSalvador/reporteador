@@ -107,7 +107,7 @@ Public Class CtrlUser_RPT_CriTarifario
         '
         Dim ObjTempSQL As New clsRPT_CFG_DatosEntesCtrl
         With FilterDelTarifario.Properties
-            .DataSource = ObjTempSQL.List("", 0, "T_Tarifario", " Order by IdTarifa ")
+            .DataSource = ObjTempSQL.List("YEAR(FechaVigencia) =" & Year(filterPeriodoDe.EditValue), 0, "T_Tarifario", " Order by IdTarifa ")
             .DisplayMember = "DecripcionTarifario"
             .ValueMember = "IdTarifa"
             .SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoFilter
@@ -120,7 +120,7 @@ Public Class CtrlUser_RPT_CriTarifario
         '
         Dim ObjTempSQL As New clsRPT_CFG_DatosEntesCtrl
         With FilterAlTarifario.Properties
-            .DataSource = ObjTempSQL.List("", 0, "T_Tarifario", " Order by IdTarifa ")
+            .DataSource = ObjTempSQL.List("YEAR(FechaVigencia) =" & Year(filterPeriodoDe.EditValue), 0, "T_Tarifario", " Order by IdTarifa ")
             .DisplayMember = "DecripcionTarifario"
             .ValueMember = "IdTarifa"
             .SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoFilter
@@ -142,5 +142,28 @@ Public Class CtrlUser_RPT_CriTarifario
 
     Private Sub ChkMuestraNulos_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles ChkMuestraCancelado.CheckedChanged
 
+    End Sub
+
+    Private Sub filterPeriodoDe_TextChanged(sender As System.Object, e As System.EventArgs) Handles filterPeriodoDe.TextChanged
+        Dim ObjTempSQL As New clsRPT_CFG_DatosEntesCtrl
+        With FilterDelTarifario.Properties
+            .DataSource = ObjTempSQL.List("YEAR(FechaVigencia) =" & Year(filterPeriodoDe.EditValue), 0, "T_Tarifario", " Order by IdTarifa ")
+            .DisplayMember = "DecripcionTarifario"
+            .ValueMember = "IdTarifa"
+            .SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoFilter
+            .NullText = ""
+            .ShowHeader = True
+        End With
+
+
+        ' Dim ObjTempSQL As New clsRPT_CFG_DatosEntesCtrl
+        With FilterAlTarifario.Properties
+            .DataSource = ObjTempSQL.List("YEAR(FechaVigencia) =" & Year(filterPeriodoDe.EditValue), 0, "T_Tarifario", " Order by IdTarifa ")
+            .DisplayMember = "DecripcionTarifario"
+            .ValueMember = "IdTarifa"
+            .SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoFilter
+            .NullText = ""
+            .ShowHeader = True
+        End With
     End Sub
 End Class
