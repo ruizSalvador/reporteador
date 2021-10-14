@@ -784,9 +784,9 @@ Partial Class CtrlUser_RPT_Tarifario_Ingresos
         '
         Me.LabelControl1.Location = New System.Drawing.Point(9, 11)
         Me.LabelControl1.Name = "LabelControl1"
-        Me.LabelControl1.Size = New System.Drawing.Size(79, 13)
+        Me.LabelControl1.Size = New System.Drawing.Size(191, 13)
         Me.LabelControl1.TabIndex = 11
-        Me.LabelControl1.Text = "Tipo de Ingreso:"
+        Me.LabelControl1.Text = "Tipo de Ingreso (debe seleccionar una):"
         '
         'SimpleButton4
         '
@@ -796,6 +796,7 @@ Partial Class CtrlUser_RPT_Tarifario_Ingresos
         Me.SimpleButton4.Size = New System.Drawing.Size(25, 20)
         Me.SimpleButton4.TabIndex = 10
         Me.SimpleButton4.Text = "SimpleButton2"
+        Me.SimpleButton4.Visible = False
         '
         'LabelControl4
         '

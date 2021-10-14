@@ -10,7 +10,7 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 
--- EXEC SP_RPT_K2_IndicadoresPosturaFiscal 1,9,2021,0
+-- EXEC SP_RPT_K2_IndicadoresPosturaFiscal 10,10,2021,0
 CREATE PROCEDURE [dbo].[SP_RPT_K2_IndicadoresPosturaFiscal]
 @MesInicio int, 
 @MesFin int,
@@ -41,7 +41,7 @@ Insert into @Titulos Values('',null,null,null,1,9)
 Insert into @Titulos Values('III. Balance Presupuestario (Superávit o Déficit) (III=I-II)',null,null,null,1,10)
 
 Insert into @Titulos Values('',null,null,null,2,11)
-Insert into @Titulos Values('III. Balance Presupuestario (Superávit o Dáficit)',null,null,null,2,12)
+Insert into @Titulos Values('III. Balance Presupuestario (Superávit o Déficit)',null,null,null,2,12)
 Insert into @Titulos Values('',null,null,null,2,13)
 Insert into @Titulos Values('IV. Intereses, Comisiones y Gastos de la Deuda',null,null,null,2,14)
 Insert into @Titulos Values('',null,null,null,2,15)
@@ -51,7 +51,7 @@ Insert into @Titulos Values('',null,null,null,2,17)
 Insert into @Titulos Values('',null,null,null,3,18)
 Insert into @Titulos Values('A. Financiamiento',null,null,null,3,19)
 Insert into @Titulos Values('',null,null,null,3,20)
-Insert into @Titulos Values('B. Amortizacion de la Deuda',null,null,null,3,21)
+Insert into @Titulos Values('B. Amortización de la Deuda',null,null,null,3,21)
 Insert into @Titulos Values('',null,null,null,3,22)
 Insert into @Titulos Values('C. Financiamiento Neto',null,null,null,3,23)
 Insert into @Titulos Values('',null,null,null,3,24)
@@ -108,7 +108,7 @@ and NumeroCuenta in ('821'+REPLICATE('0',@Estructura1-3)+'-09211','821'+REPLICAT
 '821'+REPLICATE('0',@Estructura1-3)+'-09511','821'+REPLICATE('0',@Estructura1-3)+'-009511'))
 
 Declare @SaldosCont14_Dev as Decimal (18,4) = (select 
-ISNULL(sum(T_SaldosInicialesCont.TotalAbonos),0)
+ISNULL(sum(T_SaldosInicialesCont.TotalCargos),0)
 From T_SaldosInicialesCont JOIN c_contable on C_Contable.IdCuentaContable=T_SaldosInicialesCont.IdCuentaContable 
 Where (Mes Between @MesInicio and @MesFin) and Year =@Ejercicio
 and NumeroCuenta in ('825'+REPLICATE('0',@Estructura1-3)+'-09211','825'+REPLICATE('0',@Estructura1-3)+'-009311',
@@ -190,7 +190,7 @@ insert into @Valores
 select 
 19,
 @SaldosCont19, 
-isnull((Select sum(isnull(T_SaldosInicialesCont.TotalCargos,0)) From T_SaldosInicialesCont JOIN c_contable on C_Contable.IdCuentaContable=T_SaldosInicialesCont.IdCuentaContable 
+isnull((Select sum(isnull(T_SaldosInicialesCont.TotalAbonos,0)) From T_SaldosInicialesCont JOIN c_contable on C_Contable.IdCuentaContable=T_SaldosInicialesCont.IdCuentaContable 
 Where (Mes between @MesInicio and @MesFin) and Year =@Ejercicio and (NumeroCuenta like ('814'+REPLICATE('0',@Estructura1-3)+'-01%') or NumeroCuenta like ('814'+REPLICATE('0',@Estructura1-3)+'-001%'))),0), 
 isnull((Select sum(isnull(T_SaldosInicialesCont.TotalAbonos,0)) From T_SaldosInicialesCont JOIN c_contable on C_Contable.IdCuentaContable=T_SaldosInicialesCont.IdCuentaContable 
 Where (Mes between @MesInicio and @MesFin) and Year =@Ejercicio and (NumeroCuenta like ('815'+REPLICATE('0',@Estructura1-3)+'-01%') or NumeroCuenta like ('815'+REPLICATE('0',@Estructura1-3)+'-001%'))),0)
@@ -199,7 +199,7 @@ insert into @Valores
 select 
 21,
 @SaldosCont21, 
-isnull((Select sum(isnull(T_SaldosInicialesCont.TotalAbonos,0)) From T_SaldosInicialesCont JOIN c_contable on C_Contable.IdCuentaContable=T_SaldosInicialesCont.IdCuentaContable 
+isnull((Select sum(isnull(T_SaldosInicialesCont.TotalCargos,0)) From T_SaldosInicialesCont JOIN c_contable on C_Contable.IdCuentaContable=T_SaldosInicialesCont.IdCuentaContable 
 Where (Mes between @MesInicio and @MesFin) and Year =@Ejercicio and (NumeroCuenta like ('825'+REPLICATE('0',@Estructura1-3)+'-091%') Or NumeroCuenta like ('825'+REPLICATE('0',@Estructura1-3)+'-91%'))),0), 
 isnull((Select sum(isnull(T_SaldosInicialesCont.TotalCargos,0)) From T_SaldosInicialesCont JOIN c_contable on C_Contable.IdCuentaContable=T_SaldosInicialesCont.IdCuentaContable 
 Where (Mes between @MesInicio and @MesFin) and Year =@Ejercicio and (NumeroCuenta like ('827'+REPLICATE('0',@Estructura1-3)+'-091%') Or NumeroCuenta like ('827'+REPLICATE('0',@Estructura1-3)+'-91%'))),0)

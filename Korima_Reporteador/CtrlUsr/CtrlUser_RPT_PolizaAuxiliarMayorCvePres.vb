@@ -134,7 +134,7 @@ Public Class CtrlUser_RPT_PolizaAuxiliarMayorCvePres
             SQLComando.Parameters.Add(New SqlParameter("@ClaveFF", ""))
 
         End If
-        SQLComando.CommandTimeout = 999
+        SQLComando.CommandTimeout = 0
         'Dim x As Int32 = filterFuenteFinanciamiento.Properties.KeyValue
         Dim adapter As New SqlClient.SqlDataAdapter(SQLComando)
         'adapter = New SqlClient.SqlDataAdapter("SELECT * FROM VW_RPT_K2_AuxiliarDeMayor " & FiltroSQL & " ORDER BY NumeroCuentaContable,Fecha", cnnString)

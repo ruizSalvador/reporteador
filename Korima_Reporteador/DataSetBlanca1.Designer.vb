@@ -6092,6 +6092,8 @@ Partial Public Class DataSetBlanca
         
         Private columnDescripcion As Global.System.Data.DataColumn
         
+        Private columnTotal As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub New()
@@ -6216,6 +6218,14 @@ Partial Public Class DataSetBlanca
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property TotalColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnTotal
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -6252,9 +6262,9 @@ Partial Public Class DataSetBlanca
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Function AddSP_RPT_Tarifario_IngresosRow(ByVal Folio As String, ByVal Fecha As String, ByVal Cliente As String, ByVal Importe As String, ByVal Concepto As String, ByVal Tipo As String, ByVal Clave As String, ByVal IdTarifa As String, ByVal IdPoliza As String, ByVal Estatus As String, ByVal Descripcion As String) As SP_RPT_Tarifario_IngresosRow
+        Public Overloads Function AddSP_RPT_Tarifario_IngresosRow(ByVal Folio As String, ByVal Fecha As String, ByVal Cliente As String, ByVal Importe As String, ByVal Concepto As String, ByVal Tipo As String, ByVal Clave As String, ByVal IdTarifa As String, ByVal IdPoliza As String, ByVal Estatus As String, ByVal Descripcion As String, ByVal Total As String) As SP_RPT_Tarifario_IngresosRow
             Dim rowSP_RPT_Tarifario_IngresosRow As SP_RPT_Tarifario_IngresosRow = CType(Me.NewRow,SP_RPT_Tarifario_IngresosRow)
-            Dim columnValuesArray() As Object = New Object() {Folio, Fecha, Cliente, Importe, Concepto, Tipo, Clave, IdTarifa, IdPoliza, Estatus, Descripcion}
+            Dim columnValuesArray() As Object = New Object() {Folio, Fecha, Cliente, Importe, Concepto, Tipo, Clave, IdTarifa, IdPoliza, Estatus, Descripcion, Total}
             rowSP_RPT_Tarifario_IngresosRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowSP_RPT_Tarifario_IngresosRow)
             Return rowSP_RPT_Tarifario_IngresosRow
@@ -6294,6 +6304,7 @@ Partial Public Class DataSetBlanca
             Me.columnIdPoliza = MyBase.Columns("IdPoliza")
             Me.columnEstatus = MyBase.Columns("Estatus")
             Me.columnDescripcion = MyBase.Columns("Descripcion")
+            Me.columnTotal = MyBase.Columns("Total")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -6321,6 +6332,8 @@ Partial Public Class DataSetBlanca
             MyBase.Columns.Add(Me.columnEstatus)
             Me.columnDescripcion = New Global.System.Data.DataColumn("Descripcion", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnDescripcion)
+            Me.columnTotal = New Global.System.Data.DataColumn("Total", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnTotal)
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -36632,6 +36645,22 @@ Partial Public Class DataSetBlanca
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Total() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableSP_RPT_Tarifario_Ingresos.TotalColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'Total' de la tabla 'SP_RPT_Tarifario_Ingresos' es DBNull."& _ 
+                            "", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableSP_RPT_Tarifario_Ingresos.TotalColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsFolioNull() As Boolean
             Return Me.IsNull(Me.tableSP_RPT_Tarifario_Ingresos.FolioColumn)
         End Function
@@ -36760,6 +36789,18 @@ Partial Public Class DataSetBlanca
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetDescripcionNull()
             Me(Me.tableSP_RPT_Tarifario_Ingresos.DescripcionColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsTotalNull() As Boolean
+            Return Me.IsNull(Me.tableSP_RPT_Tarifario_Ingresos.TotalColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetTotalNull()
+            Me(Me.tableSP_RPT_Tarifario_Ingresos.TotalColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     

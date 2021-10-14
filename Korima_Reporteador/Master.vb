@@ -9,20 +9,21 @@ Public Class MDI_Principal
     'Dim bdd As String = "CespteInicializacion"
     'Dim bdd As String = "Fiarum2016"
     'Dim bdd As String = "UNEME2020"
-    'Dim bdd As String = "k2301"
+    'Dim bdd As String = "Korima_IDEFT_JALISCO"
     'Dim bdd As String = "IECAN_PRODUCCION"
     'Dim bdd As String = "Korima_San_Miguel_Alto"
     'Dim bdd As String = "Korima_Municipio_Piedad"
-    Dim bdd As String = "Korima_TET"
+    'Dim bdd As String = "Korima_TET"
     'Dim bdd As String = "KorimaTSJ"
     'Dim bdd As String = "KorimaNogales"
-    'Dim bdd As String = "KorimaUPALT"
+    'Dim bdd As String = "KorimaUPALT_1"
+    Dim bdd As String = "KOR585_UPALT"
 
 
     'Dim server As String = "SRV-KORIMA\korima_2014"
     Dim server As String = "LAPTOP-OC11LS61\SQLEXPRESS19"
     'Dim server As String = "LAPTOP-OC11LS61\SQLEXPRESS17"
-    'Dim server As String = "ARTURODEV\SQLEXPRESS01"
+    'Dim server As String = "LAPTOP-OC11LS61\SQL2019DEV"
     'Dim server As String = "ARTURODEV\SQLEXPRESS02"
     'Dim server As String = "SRV-KORITEST\SQLEXPRESS14"
     'Dim server As String = "SRV-KORIMA\KORIMA_2014"
@@ -908,8 +909,10 @@ Public Class MDI_Principal
                 LoadCtrlUser(New CtrlUser_RPT_Padron_Proveedores, tvMenu.SelectedNode.Text.Trim)
             Case 1512 ' Auxiliar de Mayor por Fechas
                 LoadCtrlUser(New CtrlUser_RPT_PolizaAuxiliarMayor_Fechas, tvMenu.SelectedNode.Text.Trim)
-            Case 1513 ' Auxiliar de Mayor por Fechas
+            Case 1513 ' Seguimiento Metas
                 LoadCtrlUser(New CtrlUser_RPT_Seguimiento_Metas, tvMenu.SelectedNode.Text.Trim)
+            Case 1514 ' Layout Auditoría Federal
+                LoadCtrlUser(New CtrlUser_RPT_Layout_Auditoria_Federal, tvMenu.SelectedNode.Text.Trim)
             Case Else
                 'MessageBox.Show("Error: Consulte al administrador", "Reporte no encontrado", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End Select

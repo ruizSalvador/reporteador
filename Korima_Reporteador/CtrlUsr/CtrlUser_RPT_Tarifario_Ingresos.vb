@@ -48,8 +48,8 @@ Public Class CtrlUser_RPT_Tarifario_Ingresos
             SQLComando.Parameters.Add(New SqlParameter("@Tipo", 0))
         End If
 
-        SQLComando.Parameters.Add(New SqlParameter("@TarifarioInicio", IIf(FilterDelTarifario.Properties.KeyValue Is Nothing, 1, FilterDelTarifario.Properties.KeyValue)))
-        SQLComando.Parameters.Add(New SqlParameter("@TarifarioFin", IIf(FilterAlTarifario.Properties.KeyValue Is Nothing, 9999, FilterAlTarifario.Properties.KeyValue)))
+        SQLComando.Parameters.Add(New SqlParameter("@TarifarioInicio", IIf(FilterDelTarifario.Text = "", 1, FilterDelTarifario.Properties.KeyValue)))
+        SQLComando.Parameters.Add(New SqlParameter("@TarifarioFin", IIf(FilterAlTarifario.Text = "", 99999, FilterAlTarifario.Properties.KeyValue)))
         SQLComando.Parameters.Add(New SqlParameter("@MostrarCancelados", ChkMuestraCancelado.Checked))
 
         Dim adapter As New SqlClient.SqlDataAdapter(SQLComando)

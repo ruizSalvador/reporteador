@@ -734,7 +734,7 @@ Partial Public Class RPT_Tarifario_Ingresos
         '
         'XrLabel10
         '
-        Me.XrLabel10.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "SP_RPT_Tarifario_Ingresos.Importe")})
+        Me.XrLabel10.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "SP_RPT_Tarifario_Ingresos.Total", "{0:n2}")})
         Me.XrLabel10.Dpi = 254.0!
         Me.XrLabel10.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.XrLabel10.LocationFloat = New DevExpress.Utils.PointFloat(1277.891!, 43.58003!)
@@ -744,7 +744,6 @@ Partial Public Class RPT_Tarifario_Ingresos
         Me.XrLabel10.StylePriority.UseFont = False
         Me.XrLabel10.StylePriority.UseTextAlignment = False
         XrSummary2.FormatString = "{0:n2}"
-        XrSummary2.Running = DevExpress.XtraReports.UI.SummaryRunning.Report
         Me.XrLabel10.Summary = XrSummary2
         Me.XrLabel10.Text = "XrLabel10"
         Me.XrLabel10.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight
