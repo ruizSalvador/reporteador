@@ -90,7 +90,7 @@ Partial Class CtrlUser_RPT_Layout_Auditoria_Federal
         Me.cbTipoMov = New DevExpress.XtraEditors.LookUpEdit()
         Me.LabelControl1 = New DevExpress.XtraEditors.LabelControl()
         Me.SimpleButton2 = New DevExpress.XtraEditors.SimpleButton()
-        Me.filterBanco = New DevExpress.XtraEditors.LookUpEdit()
+        Me.filterProv = New DevExpress.XtraEditors.LookUpEdit()
         Me.ChkAnual = New System.Windows.Forms.CheckBox()
         Me.filterPeriodoIni = New DevExpress.XtraEditors.TimeEdit()
         Me.filterPeriodoFin = New DevExpress.XtraEditors.TimeEdit()
@@ -112,7 +112,7 @@ Partial Class CtrlUser_RPT_Layout_Auditoria_Federal
         CType(Me.FechaIni.Properties.VistaTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FechaIni.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.cbTipoMov.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.filterBanco.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.filterProv.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.filterPeriodoIni.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.filterPeriodoFin.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.filterEjercicio.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -133,7 +133,7 @@ Partial Class CtrlUser_RPT_Layout_Auditoria_Federal
         Me.SplitContainerControl1.Panel1.Controls.Add(Me.cbTipoMov)
         Me.SplitContainerControl1.Panel1.Controls.Add(Me.LabelControl1)
         Me.SplitContainerControl1.Panel1.Controls.Add(Me.SimpleButton2)
-        Me.SplitContainerControl1.Panel1.Controls.Add(Me.filterBanco)
+        Me.SplitContainerControl1.Panel1.Controls.Add(Me.filterProv)
         Me.SplitContainerControl1.Panel1.Controls.Add(Me.ChkAnual)
         Me.SplitContainerControl1.Panel1.Controls.Add(Me.filterPeriodoIni)
         Me.SplitContainerControl1.Panel1.Controls.Add(Me.filterPeriodoFin)
@@ -779,15 +779,15 @@ Partial Class CtrlUser_RPT_Layout_Auditoria_Federal
         Me.SimpleButton2.Size = New System.Drawing.Size(25, 20)
         Me.SimpleButton2.TabIndex = 49
         '
-        'filterBanco
+        'filterProv
         '
-        Me.filterBanco.Location = New System.Drawing.Point(13, 102)
-        Me.filterBanco.MenuManager = Me.PrintBarManager1
-        Me.filterBanco.Name = "filterBanco"
-        Me.filterBanco.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.filterBanco.Properties.Columns.AddRange(New DevExpress.XtraEditors.Controls.LookUpColumnInfo() {New DevExpress.XtraEditors.Controls.LookUpColumnInfo("IdBanco", "Id"), New DevExpress.XtraEditors.Controls.LookUpColumnInfo("NombreBanco", "Nombre")})
-        Me.filterBanco.Size = New System.Drawing.Size(170, 20)
-        Me.filterBanco.TabIndex = 48
+        Me.filterProv.Location = New System.Drawing.Point(13, 102)
+        Me.filterProv.MenuManager = Me.PrintBarManager1
+        Me.filterProv.Name = "filterProv"
+        Me.filterProv.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.filterProv.Properties.Columns.AddRange(New DevExpress.XtraEditors.Controls.LookUpColumnInfo() {New DevExpress.XtraEditors.Controls.LookUpColumnInfo("IdProveedor", "Id"), New DevExpress.XtraEditors.Controls.LookUpColumnInfo("RazonSocial", "Nombre")})
+        Me.filterProv.Size = New System.Drawing.Size(170, 20)
+        Me.filterProv.TabIndex = 48
         '
         'ChkAnual
         '
@@ -829,9 +829,9 @@ Partial Class CtrlUser_RPT_Layout_Auditoria_Federal
         Me.LabelControl6.CausesValidation = False
         Me.LabelControl6.Location = New System.Drawing.Point(15, 83)
         Me.LabelControl6.Name = "LabelControl6"
-        Me.LabelControl6.Size = New System.Drawing.Size(33, 13)
+        Me.LabelControl6.Size = New System.Drawing.Size(54, 13)
         Me.LabelControl6.TabIndex = 43
-        Me.LabelControl6.Text = "Banco:"
+        Me.LabelControl6.Text = "Proveedor:"
         '
         'LabelControl7
         '
@@ -893,7 +893,7 @@ Partial Class CtrlUser_RPT_Layout_Auditoria_Federal
         '
         Me.ErrorProvider1.ContainerControl = Me
         '
-        'CtrlUser_RPT_Pagado_Ejercicio
+        'CtrlUser_RPT_Layout_Auditoria_Federal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -902,7 +902,7 @@ Partial Class CtrlUser_RPT_Layout_Auditoria_Federal
         Me.Controls.Add(Me.barDockControlRight)
         Me.Controls.Add(Me.barDockControlBottom)
         Me.Controls.Add(Me.barDockControlTop)
-        Me.Name = "CtrlUser_RPT_Pagado_Ejercicio"
+        Me.Name = "CtrlUser_RPT_Layout_Auditoria_Federal"
         Me.Size = New System.Drawing.Size(752, 471)
         CType(Me.SplitContainerControl1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainerControl1.ResumeLayout(False)
@@ -915,7 +915,7 @@ Partial Class CtrlUser_RPT_Layout_Auditoria_Federal
         CType(Me.FechaIni.Properties.VistaTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.FechaIni.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.cbTipoMov.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.filterBanco.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.filterProv.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.filterPeriodoIni.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.filterPeriodoFin.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.filterEjercicio.Properties, System.ComponentModel.ISupportInitialize).EndInit()
@@ -991,7 +991,7 @@ Partial Class CtrlUser_RPT_Layout_Auditoria_Federal
     Friend WithEvents filterEjercicio As DevExpress.XtraEditors.TimeEdit
     Friend WithEvents LabelControl5 As DevExpress.XtraEditors.LabelControl
     Friend WithEvents ChkAnual As System.Windows.Forms.CheckBox
-    Friend WithEvents filterBanco As DevExpress.XtraEditors.LookUpEdit
+    Friend WithEvents filterProv As DevExpress.XtraEditors.LookUpEdit
     Friend WithEvents SimpleButton2 As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents btnClearTipoMov As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents cbTipoMov As DevExpress.XtraEditors.LookUpEdit

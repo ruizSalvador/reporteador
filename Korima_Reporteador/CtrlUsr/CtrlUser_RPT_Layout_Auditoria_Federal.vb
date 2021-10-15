@@ -58,14 +58,14 @@ Public Class CtrlUser_RPT_Layout_Auditoria_Federal
         '--Codgio para Llenar Reporte con SP
         SQLConexion = New SqlConnection(SQLmConnStr)
         SQLConexion.Open()
-        Dim SQLComando As New SqlCommand("RPT_SP_Pagado_Ejercicio", SQLConexion)
+        Dim SQLComando As New SqlCommand("SP_RPT_Layout_Federacion", SQLConexion)
         SQLComando.CommandType = CommandType.StoredProcedure
         '--- Parametros IN
         SQLComando.Parameters.Add(New SqlParameter("@FechaIni", FechaIni.DateTime))
         SQLComando.Parameters.Add(New SqlParameter("@FechaFin", FechaFin.DateTime))
-        'SQLComando.Parameters.Add(New SqlParameter("@Ejercicio", Year(filterEjercicio.EditValue)))
-        'SQLComando.Parameters.Add(New SqlParameter("@BancoId", filterBanco.EditValue))
-        SQLComando.Parameters.Add(New SqlParameter("@BancoId", IIf(filterBanco.Text = "", 0, Convert.ToInt32(filterBanco.EditValue))))
+        ''SQLComando.Parameters.Add(New SqlParameter("@Ejercicio", Year(filterEjercicio.EditValue)))
+        ''SQLComando.Parameters.Add(New SqlParameter("@BancoId", filterBanco.EditValue))
+        SQLComando.Parameters.Add(New SqlParameter("@IdProv", IIf(filterProv.Text = "", 0, Convert.ToInt32(filterProv.EditValue))))
         SQLComando.Parameters.Add(New SqlParameter("@TipoMov", IIf(cbTipoMov.Text = "", 0, Convert.ToInt32(cbTipoMov.EditValue))))
 
         SQLComando.CommandTimeout = 0
@@ -73,10 +73,10 @@ Public Class CtrlUser_RPT_Layout_Auditoria_Federal
         Dim adapter As New SqlDataAdapter(SQLComando)
         Dim ds As New DataSet()
         ds.EnforceConstraints = False
-        adapter.Fill(ds, "RPT_SP_Pagado_Ejercicio")
+        adapter.Fill(ds, "SP_RPT_Layout_Federacion")
         reporte.DataSource = ds
         reporte.DataAdapter = adapter
-        reporte.DataMember = "RPT_SP_Pagado_Ejercicio"
+        reporte.DataMember = "SP_RPT_Layout_Federacion"
 
         SQLComando.Dispose()
         SQLConexion.Close()
@@ -137,10 +137,10 @@ Public Class CtrlUser_RPT_Layout_Auditoria_Federal
         FechaFin.DateTime = Now
 
         Dim ObjTempSQL2 As New clsRPT_CFG_DatosEntesCtrl
-        With filterBanco.Properties
-            .DataSource = ObjTempSQL2.List("", 0, " C_Bancos ", " Order by IdBanco ASC")
-            .DisplayMember = "NombreBanco"
-            .ValueMember = "IdBanco"
+        With filterProv.Properties
+            .DataSource = ObjTempSQL2.List("", 0, " C_Proveedores ", " Order by IdProveedor ASC")
+            .DisplayMember = "RazonSocial"
+            .ValueMember = "IdProveedor"
             .SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoFilter
             .NullText = ""
             .ShowHeader = True
@@ -160,13 +160,13 @@ Public Class CtrlUser_RPT_Layout_Auditoria_Federal
     End Sub
 
 
-    Private Sub filterBanco_GotFocus(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles filterBanco.GotFocus
+    Private Sub filterProv_GotFocus(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles filterProv.GotFocus
         Dim ObjTempSQL2 As New clsRPT_CFG_DatosEntesCtrl
 
-        With filterBanco.Properties
-            .DataSource = ObjTempSQL2.List("", 0, " C_Bancos ", " Order by IdBanco ASC")
-            .DisplayMember = "NombreBanco"
-            .ValueMember = "IdBanco"
+        With filterProv.Properties
+            .DataSource = ObjTempSQL2.List("", 0, " C_Proveedores ", " Order by IdProveedor ASC")
+            .DisplayMember = "RazonSocial"
+            .ValueMember = "IdProveedor"
             .SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoFilter
             .NullText = ""
             .ShowHeader = True
@@ -203,9 +203,9 @@ Public Class CtrlUser_RPT_Layout_Auditoria_Federal
     End Sub
 
     Private Sub SimpleButton2_Click(sender As System.Object, e As System.EventArgs) Handles SimpleButton2.Click
-        filterBanco.Properties.DataSource = Nothing
-        filterBanco.Properties.NullText = ""
-        filterBanco.Properties.ValueMember = ""
+        filterProv.Properties.DataSource = Nothing
+        filterProv.Properties.NullText = ""
+        filterProv.Properties.ValueMember = ""
 
     End Sub
 

@@ -1,3 +1,23 @@
+/****** Object:  StoredProcedure [dbo].[SP_RPT_Layout_Federacion]    Script Date: 09/05/2013 13:46:10 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[SP_RPT_Layout_Federacion]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[SP_RPT_Layout_Federacion]
+GO
+/****** Object:  StoredProcedure [dbo].[SP_RPT_Layout_Federacion]    Script Date: 09/05/2013 13:46:10 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE PROCEDURE [dbo].[SP_RPT_Layout_Federacion]
+ 
+@FechaIni as DateTime,
+@FechaFin as DateTime,
+@IdProv as int,
+@TipoMov as int
+
+AS
+BEGIN
+
 Select  YEAR(GETDATE()) as Ejercicio,
 --TP.Folio as OSOC,
 	CP.RFC as RFCProv,
@@ -7,9 +27,9 @@ Select  YEAR(GETDATE()) as Ejercicio,
 		(Select RFC from RPT_CFG_DatosEntes) as RFCEnte,
 		(Select Nombre from RPT_CFG_DatosEntes) as RSEnte,
 		TP.Folio as OCOS,
-		TSol.Folio as Requisición,
+		TSol.Folio as Requisicion,
 		TSC.FolioPorTipo as SolicitudPago,
-		TSC.FolioDesconcentrado as NoAprobación,
+		TSC.FolioDesconcentrado as NoAprobacion,
 		CAST(PEJER.TipoPoliza as varchar(10)) + ' '  + CAST(PEJER.Periodo as varchar (5)) + ' ' + CAST(PEJER.NoPoliza as varchar (50))  as PolizaAprob,
 		PEJER.Fecha as FechaPolizaAprob,
 		'' as EstatusPolAprob,
@@ -35,6 +55,7 @@ Select  YEAR(GETDATE()) as Ejercicio,
 		TP.Observaciones as DescripcionBien,
 		
 		TRF.Serie+' '+TRF.Factura as Factura,
+		TRF.FolioFiscal,
 		TRF.FechaFactura,
 		TRF.Total as MontoFacturado,
 
@@ -53,26 +74,7 @@ Select  YEAR(GETDATE()) as Ejercicio,
 	'' as EstatusPolDevengado,
 	CFF.CLAVE as FF,
 
-		--(Select CAST(T_Polizas.TipoPoliza as varchar(10)) + ' '  + CAST(T_Polizas.Periodo as varchar (5)) + ' ' + CAST(T_Polizas.NoPoliza as varchar (50)) from T_Polizas where T_Polizas.IdCheque= TCH.IdCheques) as PolizaAnticipo,
-		--CASE 
-		--	WHEN TCH.FolioCheque = 0 AND TCH.Status = 'L' THEN (Select top 1 CAST(T_Polizas.TipoPoliza as varchar(10)) + ' '  + CAST(T_Polizas.Periodo as varchar (5)) + ' ' + CAST(T_Polizas.NoPoliza as varchar (50)) from T_Polizas where T_Polizas.IdCheque = TCH.IdChequesAgrupador)
-		--	WHEN TCH.FolioCheque = 0 AND TCH.Status <> 'L' THEN (Select CAST(T_Polizas.TipoPoliza as varchar(10)) + ' '  + CAST(T_Polizas.Periodo as varchar (5)) + ' ' + CAST(T_Polizas.NoPoliza as varchar (50)) from T_Polizas where T_Polizas.IdCheque = TCH.IdCheques)
-		--ELSE	
-	 --   (Select CAST(T_Polizas.TipoPoliza as varchar(10)) + ' '  + CAST(T_Polizas.Periodo as varchar (5)) + ' ' + CAST(T_Polizas.NoPoliza as varchar (50)) from T_Polizas where T_Polizas.IdCheque = TCH.IdCheques)
-		--END AS PolizaAnticipo,
-		--(Select Fecha from T_Polizas where T_Polizas.IdCheque= TCH.IdCheques) as FechaPolizaAnticipo,
-		--ISNULL((TP.Anticipo),0) as Anticipo,
-		--TSC.Fecha as FechaSolicitud,
-
 		
-
-		-- CAST(PEJER.TipoPoliza as varchar(10)) + ' '  + CAST(PEJER.Periodo as varchar (5)) + ' ' + CAST(PEJER.NoPoliza as varchar (50))  as PolizaEjercido,
-		--PEJER.Fecha as FechaPolizaEjercido,
-		--CASE WHEN PEJER.[Status] = 'C' THEN 'CANCELADA'
-		--ELSE 'ACTIVA'
-		--END as EstatusPolEgreso,
-		--PEJER.IdPoliza,
-
 		 --TSC.FolioDesconcentrado as Aprobacion,
 	  --  CASE 
 			--WHEN TC.FolioCheque = 0 AND TC.Status = 'L' THEN (Select FolioCheque from T_Cheques where IdCheques = TC.IdChequesAgrupador)
@@ -105,18 +107,11 @@ Select  YEAR(GETDATE()) as Ejercicio,
 		CB.NombreBanco,
 		TC.CuentaADepositar as CuentaBancariaProv,
 		CBPROV.NombreBanco as BancoProv,
-		TC.ImporteCheque as MontoPagado,
-		--CASE TC.Status
-		--	When 'G' THEN 'No generado'
-		--	When 'C' THEN 'Por imprimir'
-		--	When 'I' THEN 'Impreso'
-		--	When 'D' THEN 'Aplicado'
-		--	When 'N' THEN 'Cancelado'
-		--	When 'L' THEN 'Consolidado'
-		--Else '' END as EstatusCheque,
-		'OC' as Tipo
+		TC.ImporteCheque as MontoPagado
+		
+		--'OC' as Tipo
 		--,DP.IdSelloPresupuestal
-		,TC.IdPolizaPresupuestoPagado 
+		--,TC.IdPolizaPresupuestoPagado 
 FROM T_Pedidos TP
 LEFT JOIN C_Proveedores CP
     ON TP.IdProveedor = CP.IdProveedor 
@@ -174,9 +169,18 @@ LEFT JOIN C_Bancos CB
 on CCB.IdBanco= CB.idbanco
 LEFT JOIN C_Bancos CBPROV
 ON CBPROV.IdBanco = TC.IdBancoADespositar
-where TP.Fecha >= '20210101' and TP.Fecha <= '20211231'
+where 
+--TP.Fecha >= '20210101' and TP.Fecha <= '20211231'
+TP.Fecha >= @FechaIni and TP.Fecha <= @FechaFin
+AND PDEV.IdTipoMovimiento = CASE WHEN @TipoMov = 0 THEN PDEV.IdTipoMovimiento ELSE @TipoMov END
+AND CP.IdProveedor = CASE WHEN @IdProv = 0 THEN CP.IdProveedor ELSE @IdProv END
+
 --AND TP.Folio = 656
 	
+
+END
+
+
 	--AND TC.Status <> 'L' 
 --Group by TC.IdChequesAgrupador, TP.Folio, CP.RazonSocial, CP.RFC, TP.TotalGral, TP.Estatus, TRF.Serie, TRF.Factura, TRF.IdPoliza, TRF.FechaFactura,TP.IdPoliza,
 --TSC.Fecha, TSC.FolioPorTipo, TSC.IdPolizaPresupuestoEjercido, TSC.FolioDesconcentrado, TC.FolioCheque, TC.Status, TC.IdCheques,

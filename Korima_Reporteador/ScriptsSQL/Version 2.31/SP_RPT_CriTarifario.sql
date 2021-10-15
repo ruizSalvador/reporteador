@@ -77,7 +77,7 @@ If @Tipo=1
 BEGIN
 --Por Recaudar
 Insert @TablaTodos 
-Select Tf.Folio , Tf.Fecha , CC.IdCliente as Cliente, df.Importe ,df.Concepto  as Concepto, 'Por Recaudar' as Tipo,df.IdTarifa, C_PartidasGastosIngresos.Clave AS CLAVE, Tf.[status], idpoliza, ctipo.Descripcion as NombreCuenta
+Select Tf.Folio , Tf.Fecha , CC.IdCliente as Cliente, df.Importe ,df.Concepto  as Concepto, 'Por Recaudar' as Tipo,df.IdTarifa, C_PartidasGastosIngresos.Clave AS CLAVE, Tf.[status], TP.idpoliza, ctipo.Descripcion as NombreCuenta
 FROM c_clientes as cc
 JOIN T_Facturas as TF 
 ON cc.IdCliente = tf.IdCliente 
@@ -89,6 +89,8 @@ JOIN C_PartidasGastosIngresos
 ON C_PartidasGastosIngresos.IdPartidaGI=T_Tarifario.IdPartidaGI
 JOIN C_TipoCuentas ctipo
 ON ctipo.IdTipoCuenta = T_Tarifario.IdTipoCuenta
+JOIN T_Polizas TP ON TP.IdPoliza = TF.IdPoliza 
+
 Where tf.tipofactura = 4 and (Tf.Fecha >= @FechaInicio AND Tf.Fecha <= @FechaFin) and (df.IdTarifa  BETWEEN @TarifarioInicio AND @TarifarioFin)
 AND PagoInmediato in (0)
 order by Tf.Folio
@@ -112,6 +114,7 @@ ON C_PartidasGastosIngresos.IdPartidaGI=T_Tarifario.IdPartidaGI
 JOIN C_TipoCuentas ctipo
 ON ctipo.IdTipoCuenta = T_Tarifario.IdTipoCuenta
 Where TRC.TipoIngreso <> 'N' and TRC.TipoIngreso <> 'O' and TRC.TipoPago <> 'E' and (TRC.Fecha BETWEEN @FechaInicio AND @FechaFin)
+AND TRC.Status <> 'N'
 and (dr.IdTarifa  BETWEEN @TarifarioInicio AND @TarifarioFin)
 --order by trc.Folio 
 
@@ -133,8 +136,8 @@ JOIN C_PartidasGastosIngresos
 ON C_PartidasGastosIngresos.IdPartidaGI=T_Tarifario.IdPartidaGI
 JOIN C_TipoCuentas ctipo
 ON ctipo.IdTipoCuenta = T_Tarifario.IdTipoCuenta
-JOIN T_Polizas TP ON TP.IdPoliza = TF.IdPoliza and TP.TipoPoliza ='I'
-Where PagoInmediato in (1,2)
+--JOIN T_Polizas TP ON TP.IdPoliza = TF.IdPoliza and TP.TipoPoliza ='I'
+Where PagoInmediato in (1,2) AND TF.Status <> 'N'
 AND (Tf.Fecha >= @FechaInicio AND Tf.Fecha <= @FechaFin) and (df.IdTarifa  BETWEEN @TarifarioInicio AND @TarifarioFin)
 
 END
@@ -167,7 +170,7 @@ BEGIN
 Insert @TablaTodos      
 --Por Recaudar
 Select Tf.Folio , Tf.Fecha , CC.IdCliente as Cliente, df.Importe ,df.Concepto  as Concepto, 'Por Recaudar' as Tipo, df.IdTarifa, 
-C_PartidasGastosIngresos.Clave, TF.Status, IdPoliza, ctipo.Descripcion as NombreCuenta
+C_PartidasGastosIngresos.Clave, TF.Status, TP.IdPoliza, ctipo.Descripcion as NombreCuenta
 FROM c_clientes as cc
 JOIN
 T_Facturas as TF ON cc.IdCliente = tf.IdCliente 
@@ -179,6 +182,8 @@ JOIN C_PartidasGastosIngresos
 ON C_PartidasGastosIngresos.IdPartidaGI=T_Tarifario.IdPartidaGI
 JOIN C_TipoCuentas ctipo
 ON ctipo.IdTipoCuenta = T_Tarifario.IdTipoCuenta
+JOIN T_Polizas TP ON TP.IdPoliza = TF.IdPoliza 
+
 Where tf.tipofactura = 4 and (Tf.Fecha >= @FechaInicio AND Tf.Fecha <= @FechaFin) and (df.IdTarifa  BETWEEN @TarifarioInicio AND @TarifarioFin)
 AND PagoInmediato in (0)
 
@@ -197,6 +202,7 @@ ON C_PartidasGastosIngresos.IdPartidaGI=T_Tarifario.IdPartidaGI
 JOIN C_TipoCuentas ctipo
 ON ctipo.IdTipoCuenta = T_Tarifario.IdTipoCuenta
 Where TRC.TipoIngreso <> 'N' and TRC.TipoIngreso <> 'O' and TRC.TipoPago <> 'E' and (TRC.Fecha BETWEEN @FechaInicio AND @FechaFin)
+AND TRC.Status <> 'N'
 and (dr.IdTarifa  BETWEEN @TarifarioInicio AND @TarifarioFin)
 --order by trc.Folio 
 
@@ -218,8 +224,8 @@ JOIN C_PartidasGastosIngresos
 ON C_PartidasGastosIngresos.IdPartidaGI=T_Tarifario.IdPartidaGI
 JOIN C_TipoCuentas ctipo
 ON ctipo.IdTipoCuenta = T_Tarifario.IdTipoCuenta
-JOIN T_Polizas TP ON TP.IdPoliza = TF.IdPoliza and TP.TipoPoliza ='I'
-Where PagoInmediato in (1,2)
+--JOIN T_Polizas TP ON TP.IdPoliza = TF.IdPoliza and TP.TipoPoliza ='I'
+Where PagoInmediato in (1,2) AND TF.Status <> 'N'
 AND (Tf.Fecha >= @FechaInicio AND Tf.Fecha <= @FechaFin) and (df.IdTarifa  BETWEEN @TarifarioInicio AND @TarifarioFin)
 
 union all

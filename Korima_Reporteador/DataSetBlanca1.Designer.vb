@@ -161,6 +161,8 @@ Partial Public Class DataSetBlanca
     
     Private tableRPT_SP_Layout_Pagado As RPT_SP_Layout_PagadoDataTable
     
+    Private tableSP_RPT_Layout_Federacion As SP_RPT_Layout_FederacionDataTable
+    
     Private _schemaSerializationMode As Global.System.Data.SchemaSerializationMode = Global.System.Data.SchemaSerializationMode.IncludeSchema
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -393,6 +395,9 @@ Partial Public Class DataSetBlanca
             End If
             If (Not (ds.Tables("RPT_SP_Layout_Pagado")) Is Nothing) Then
                 MyBase.Tables.Add(New RPT_SP_Layout_PagadoDataTable(ds.Tables("RPT_SP_Layout_Pagado")))
+            End If
+            If (Not (ds.Tables("SP_RPT_Layout_Federacion")) Is Nothing) Then
+                MyBase.Tables.Add(New SP_RPT_Layout_FederacionDataTable(ds.Tables("SP_RPT_Layout_Federacion")))
             End If
             Me.DataSetName = ds.DataSetName
             Me.Prefix = ds.Prefix
@@ -1093,6 +1098,16 @@ Partial Public Class DataSetBlanca
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+     Global.System.ComponentModel.Browsable(false),  _
+     Global.System.ComponentModel.DesignerSerializationVisibility(Global.System.ComponentModel.DesignerSerializationVisibility.Content)>  _
+    Public ReadOnly Property SP_RPT_Layout_Federacion() As SP_RPT_Layout_FederacionDataTable
+        Get
+            Return Me.tableSP_RPT_Layout_Federacion
+        End Get
+    End Property
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
      Global.System.ComponentModel.BrowsableAttribute(true),  _
      Global.System.ComponentModel.DesignerSerializationVisibilityAttribute(Global.System.ComponentModel.DesignerSerializationVisibility.Visible)>  _
     Public Overrides Property SchemaSerializationMode() As Global.System.Data.SchemaSerializationMode
@@ -1361,6 +1376,9 @@ Partial Public Class DataSetBlanca
             End If
             If (Not (ds.Tables("RPT_SP_Layout_Pagado")) Is Nothing) Then
                 MyBase.Tables.Add(New RPT_SP_Layout_PagadoDataTable(ds.Tables("RPT_SP_Layout_Pagado")))
+            End If
+            If (Not (ds.Tables("SP_RPT_Layout_Federacion")) Is Nothing) Then
+                MyBase.Tables.Add(New SP_RPT_Layout_FederacionDataTable(ds.Tables("SP_RPT_Layout_Federacion")))
             End If
             Me.DataSetName = ds.DataSetName
             Me.Prefix = ds.Prefix
@@ -1802,6 +1820,12 @@ Partial Public Class DataSetBlanca
                 Me.tableRPT_SP_Layout_Pagado.InitVars
             End If
         End If
+        Me.tableSP_RPT_Layout_Federacion = CType(MyBase.Tables("SP_RPT_Layout_Federacion"),SP_RPT_Layout_FederacionDataTable)
+        If (initTable = true) Then
+            If (Not (Me.tableSP_RPT_Layout_Federacion) Is Nothing) Then
+                Me.tableSP_RPT_Layout_Federacion.InitVars
+            End If
+        End If
     End Sub
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1948,6 +1972,8 @@ Partial Public Class DataSetBlanca
         MyBase.Tables.Add(Me.tableRPT_SP_Comparativo_Calendarizado_Pres)
         Me.tableRPT_SP_Layout_Pagado = New RPT_SP_Layout_PagadoDataTable()
         MyBase.Tables.Add(Me.tableRPT_SP_Layout_Pagado)
+        Me.tableSP_RPT_Layout_Federacion = New SP_RPT_Layout_FederacionDataTable()
+        MyBase.Tables.Add(Me.tableSP_RPT_Layout_Federacion)
     End Sub
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -2360,6 +2386,12 @@ Partial Public Class DataSetBlanca
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Private Function ShouldSerializeSP_RPT_Layout_Federacion() As Boolean
+        Return false
+    End Function
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
     Private Sub SchemaChanged(ByVal sender As Object, ByVal e As Global.System.ComponentModel.CollectionChangeEventArgs)
         If (e.Action = Global.System.ComponentModel.CollectionChangeAction.Remove) Then
             Me.InitVars
@@ -2619,6 +2651,9 @@ Partial Public Class DataSetBlanca
     
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
     Public Delegate Sub RPT_SP_Layout_PagadoRowChangeEventHandler(ByVal sender As Object, ByVal e As RPT_SP_Layout_PagadoRowChangeEvent)
+    
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Public Delegate Sub SP_RPT_Layout_FederacionRowChangeEventHandler(ByVal sender As Object, ByVal e As SP_RPT_Layout_FederacionRowChangeEvent)
     
     '''<summary>
     '''Represents the strongly named DataTable class.
@@ -34304,6 +34339,938 @@ Partial Public Class DataSetBlanca
     End Class
     
     '''<summary>
+    '''Represents the strongly named DataTable class.
+    '''</summary>
+    <Global.System.Serializable(),  _
+     Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
+    Partial Public Class SP_RPT_Layout_FederacionDataTable
+        Inherits Global.System.Data.DataTable
+        Implements Global.System.Collections.IEnumerable
+        
+        Private columnEjercicio As Global.System.Data.DataColumn
+        
+        Private columnRFCProv As Global.System.Data.DataColumn
+        
+        Private columnRSProveedor As Global.System.Data.DataColumn
+        
+        Private columnDomProv As Global.System.Data.DataColumn
+        
+        Private columnCPProv As Global.System.Data.DataColumn
+        
+        Private columnRFCEnte As Global.System.Data.DataColumn
+        
+        Private columnRSEnte As Global.System.Data.DataColumn
+        
+        Private columnOCOS As Global.System.Data.DataColumn
+        
+        Private columnRequisicion As Global.System.Data.DataColumn
+        
+        Private columnSolicitudPago As Global.System.Data.DataColumn
+        
+        Private columnNoAprobacion As Global.System.Data.DataColumn
+        
+        Private columnPolizaAprob As Global.System.Data.DataColumn
+        
+        Private columnFechaPolizaAprob As Global.System.Data.DataColumn
+        
+        Private columnEstatusPolAprob As Global.System.Data.DataColumn
+        
+        Private columnTipoAdj As Global.System.Data.DataColumn
+        
+        Private columnContrato As Global.System.Data.DataColumn
+        
+        Private columnRSContrato As Global.System.Data.DataColumn
+        
+        Private columnDescripcionCont As Global.System.Data.DataColumn
+        
+        Private columnFechaOCOS As Global.System.Data.DataColumn
+        
+        Private columnMontoContratado As Global.System.Data.DataColumn
+        
+        Private columnConvenioMod As Global.System.Data.DataColumn
+        
+        Private columnMontoConvenido As Global.System.Data.DataColumn
+        
+        Private columnFechaConv As Global.System.Data.DataColumn
+        
+        Private columnDescripcionBien As Global.System.Data.DataColumn
+        
+        Private columnFactura As Global.System.Data.DataColumn
+        
+        Private columnFolioFiscal As Global.System.Data.DataColumn
+        
+        Private columnFechaFactura As Global.System.Data.DataColumn
+        
+        Private columnMontoFacturado As Global.System.Data.DataColumn
+        
+        Private columnPartidaClas As Global.System.Data.DataColumn
+        
+        Private columnCapitulo As Global.System.Data.DataColumn
+        
+        Private columnPolEgreAnticipo As Global.System.Data.DataColumn
+        
+        Private columnFechaPolEgreAnticipo As Global.System.Data.DataColumn
+        
+        Private columnEstatusPolEgreAnticipo As Global.System.Data.DataColumn
+        
+        Private columnImportePolDevengado As Global.System.Data.DataColumn
+        
+        Private columnPolizaDevengado As Global.System.Data.DataColumn
+        
+        Private columnFechaPolizaDevengado As Global.System.Data.DataColumn
+        
+        Private columnEstatusPolDevengado As Global.System.Data.DataColumn
+        
+        Private columnFF As Global.System.Data.DataColumn
+        
+        Private columnImportePolPagado As Global.System.Data.DataColumn
+        
+        Private columnPolizaPagado As Global.System.Data.DataColumn
+        
+        Private columnFechaPolizaPagado As Global.System.Data.DataColumn
+        
+        Private columnEstatusPolPagado As Global.System.Data.DataColumn
+        
+        Private columnComprobanteBancario As Global.System.Data.DataColumn
+        
+        Private columnFechaCheque As Global.System.Data.DataColumn
+        
+        Private columnCuentaBancaria As Global.System.Data.DataColumn
+        
+        Private columnNombreBanco As Global.System.Data.DataColumn
+        
+        Private columnCuentaBancariaProv As Global.System.Data.DataColumn
+        
+        Private columnBancoProv As Global.System.Data.DataColumn
+        
+        Private columnMontoPagado As Global.System.Data.DataColumn
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub New()
+            MyBase.New
+            Me.TableName = "SP_RPT_Layout_Federacion"
+            Me.BeginInit
+            Me.InitClass
+            Me.EndInit
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub New(ByVal table As Global.System.Data.DataTable)
+            MyBase.New
+            Me.TableName = table.TableName
+            If (table.CaseSensitive <> table.DataSet.CaseSensitive) Then
+                Me.CaseSensitive = table.CaseSensitive
+            End If
+            If (table.Locale.ToString <> table.DataSet.Locale.ToString) Then
+                Me.Locale = table.Locale
+            End If
+            If (table.Namespace <> table.DataSet.Namespace) Then
+                Me.Namespace = table.Namespace
+            End If
+            Me.Prefix = table.Prefix
+            Me.MinimumCapacity = table.MinimumCapacity
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Sub New(ByVal info As Global.System.Runtime.Serialization.SerializationInfo, ByVal context As Global.System.Runtime.Serialization.StreamingContext)
+            MyBase.New(info, context)
+            Me.InitVars
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property EjercicioColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnEjercicio
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property RFCProvColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnRFCProv
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property RSProveedorColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnRSProveedor
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property DomProvColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnDomProv
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property CPProvColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnCPProv
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property RFCEnteColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnRFCEnte
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property RSEnteColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnRSEnte
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property OCOSColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnOCOS
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property RequisicionColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnRequisicion
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property SolicitudPagoColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnSolicitudPago
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property NoAprobacionColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnNoAprobacion
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property PolizaAprobColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnPolizaAprob
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property FechaPolizaAprobColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnFechaPolizaAprob
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property EstatusPolAprobColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnEstatusPolAprob
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property TipoAdjColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnTipoAdj
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property ContratoColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnContrato
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property RSContratoColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnRSContrato
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property DescripcionContColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnDescripcionCont
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property FechaOCOSColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnFechaOCOS
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property MontoContratadoColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnMontoContratado
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property ConvenioModColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnConvenioMod
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property MontoConvenidoColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnMontoConvenido
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property FechaConvColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnFechaConv
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property DescripcionBienColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnDescripcionBien
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property FacturaColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnFactura
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property FolioFiscalColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnFolioFiscal
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property FechaFacturaColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnFechaFactura
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property MontoFacturadoColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnMontoFacturado
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property PartidaClasColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnPartidaClas
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property CapituloColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnCapitulo
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property PolEgreAnticipoColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnPolEgreAnticipo
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property FechaPolEgreAnticipoColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnFechaPolEgreAnticipo
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property EstatusPolEgreAnticipoColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnEstatusPolEgreAnticipo
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property ImportePolDevengadoColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnImportePolDevengado
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property PolizaDevengadoColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnPolizaDevengado
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property FechaPolizaDevengadoColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnFechaPolizaDevengado
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property EstatusPolDevengadoColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnEstatusPolDevengado
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property FFColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnFF
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property ImportePolPagadoColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnImportePolPagado
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property PolizaPagadoColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnPolizaPagado
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property FechaPolizaPagadoColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnFechaPolizaPagado
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property EstatusPolPagadoColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnEstatusPolPagado
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property ComprobanteBancarioColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnComprobanteBancario
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property FechaChequeColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnFechaCheque
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property CuentaBancariaColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnCuentaBancaria
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property NombreBancoColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnNombreBanco
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property CuentaBancariaProvColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnCuentaBancariaProv
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property BancoProvColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnBancoProv
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property MontoPagadoColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnMontoPagado
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Browsable(false)>  _
+        Public ReadOnly Property Count() As Integer
+            Get
+                Return Me.Rows.Count
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Default ReadOnly Property Item(ByVal index As Integer) As SP_RPT_Layout_FederacionRow
+            Get
+                Return CType(Me.Rows(index),SP_RPT_Layout_FederacionRow)
+            End Get
+        End Property
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event SP_RPT_Layout_FederacionRowChanging As SP_RPT_Layout_FederacionRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event SP_RPT_Layout_FederacionRowChanged As SP_RPT_Layout_FederacionRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event SP_RPT_Layout_FederacionRowDeleting As SP_RPT_Layout_FederacionRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event SP_RPT_Layout_FederacionRowDeleted As SP_RPT_Layout_FederacionRowChangeEventHandler
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overloads Sub AddSP_RPT_Layout_FederacionRow(ByVal row As SP_RPT_Layout_FederacionRow)
+            Me.Rows.Add(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overloads Function AddSP_RPT_Layout_FederacionRow( _
+                    ByVal Ejercicio As String,  _
+                    ByVal RFCProv As String,  _
+                    ByVal RSProveedor As String,  _
+                    ByVal DomProv As String,  _
+                    ByVal CPProv As String,  _
+                    ByVal RFCEnte As String,  _
+                    ByVal RSEnte As String,  _
+                    ByVal OCOS As String,  _
+                    ByVal Requisicion As String,  _
+                    ByVal SolicitudPago As String,  _
+                    ByVal NoAprobacion As String,  _
+                    ByVal PolizaAprob As String,  _
+                    ByVal FechaPolizaAprob As String,  _
+                    ByVal EstatusPolAprob As String,  _
+                    ByVal TipoAdj As String,  _
+                    ByVal Contrato As String,  _
+                    ByVal RSContrato As String,  _
+                    ByVal DescripcionCont As String,  _
+                    ByVal FechaOCOS As String,  _
+                    ByVal MontoContratado As String,  _
+                    ByVal ConvenioMod As String,  _
+                    ByVal MontoConvenido As String,  _
+                    ByVal FechaConv As String,  _
+                    ByVal DescripcionBien As String,  _
+                    ByVal Factura As String,  _
+                    ByVal FolioFiscal As String,  _
+                    ByVal FechaFactura As String,  _
+                    ByVal MontoFacturado As String,  _
+                    ByVal PartidaClas As String,  _
+                    ByVal Capitulo As String,  _
+                    ByVal PolEgreAnticipo As String,  _
+                    ByVal FechaPolEgreAnticipo As String,  _
+                    ByVal EstatusPolEgreAnticipo As String,  _
+                    ByVal ImportePolDevengado As String,  _
+                    ByVal PolizaDevengado As String,  _
+                    ByVal FechaPolizaDevengado As String,  _
+                    ByVal EstatusPolDevengado As String,  _
+                    ByVal FF As String,  _
+                    ByVal ImportePolPagado As String,  _
+                    ByVal PolizaPagado As String,  _
+                    ByVal FechaPolizaPagado As String,  _
+                    ByVal EstatusPolPagado As String,  _
+                    ByVal ComprobanteBancario As String,  _
+                    ByVal FechaCheque As String,  _
+                    ByVal CuentaBancaria As String,  _
+                    ByVal NombreBanco As String,  _
+                    ByVal CuentaBancariaProv As String,  _
+                    ByVal BancoProv As String,  _
+                    ByVal MontoPagado As String) As SP_RPT_Layout_FederacionRow
+            Dim rowSP_RPT_Layout_FederacionRow As SP_RPT_Layout_FederacionRow = CType(Me.NewRow,SP_RPT_Layout_FederacionRow)
+            Dim columnValuesArray() As Object = New Object() {Ejercicio, RFCProv, RSProveedor, DomProv, CPProv, RFCEnte, RSEnte, OCOS, Requisicion, SolicitudPago, NoAprobacion, PolizaAprob, FechaPolizaAprob, EstatusPolAprob, TipoAdj, Contrato, RSContrato, DescripcionCont, FechaOCOS, MontoContratado, ConvenioMod, MontoConvenido, FechaConv, DescripcionBien, Factura, FolioFiscal, FechaFactura, MontoFacturado, PartidaClas, Capitulo, PolEgreAnticipo, FechaPolEgreAnticipo, EstatusPolEgreAnticipo, ImportePolDevengado, PolizaDevengado, FechaPolizaDevengado, EstatusPolDevengado, FF, ImportePolPagado, PolizaPagado, FechaPolizaPagado, EstatusPolPagado, ComprobanteBancario, FechaCheque, CuentaBancaria, NombreBanco, CuentaBancariaProv, BancoProv, MontoPagado}
+            rowSP_RPT_Layout_FederacionRow.ItemArray = columnValuesArray
+            Me.Rows.Add(rowSP_RPT_Layout_FederacionRow)
+            Return rowSP_RPT_Layout_FederacionRow
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overridable Function GetEnumerator() As Global.System.Collections.IEnumerator Implements Global.System.Collections.IEnumerable.GetEnumerator
+            Return Me.Rows.GetEnumerator
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overrides Function Clone() As Global.System.Data.DataTable
+            Dim cln As SP_RPT_Layout_FederacionDataTable = CType(MyBase.Clone,SP_RPT_Layout_FederacionDataTable)
+            cln.InitVars
+            Return cln
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function CreateInstance() As Global.System.Data.DataTable
+            Return New SP_RPT_Layout_FederacionDataTable()
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub InitVars()
+            Me.columnEjercicio = MyBase.Columns("Ejercicio")
+            Me.columnRFCProv = MyBase.Columns("RFCProv")
+            Me.columnRSProveedor = MyBase.Columns("RSProveedor")
+            Me.columnDomProv = MyBase.Columns("DomProv")
+            Me.columnCPProv = MyBase.Columns("CPProv")
+            Me.columnRFCEnte = MyBase.Columns("RFCEnte")
+            Me.columnRSEnte = MyBase.Columns("RSEnte")
+            Me.columnOCOS = MyBase.Columns("OCOS")
+            Me.columnRequisicion = MyBase.Columns("Requisicion")
+            Me.columnSolicitudPago = MyBase.Columns("SolicitudPago")
+            Me.columnNoAprobacion = MyBase.Columns("NoAprobacion")
+            Me.columnPolizaAprob = MyBase.Columns("PolizaAprob")
+            Me.columnFechaPolizaAprob = MyBase.Columns("FechaPolizaAprob")
+            Me.columnEstatusPolAprob = MyBase.Columns("EstatusPolAprob")
+            Me.columnTipoAdj = MyBase.Columns("TipoAdj")
+            Me.columnContrato = MyBase.Columns("Contrato")
+            Me.columnRSContrato = MyBase.Columns("RSContrato")
+            Me.columnDescripcionCont = MyBase.Columns("DescripcionCont")
+            Me.columnFechaOCOS = MyBase.Columns("FechaOCOS")
+            Me.columnMontoContratado = MyBase.Columns("MontoContratado")
+            Me.columnConvenioMod = MyBase.Columns("ConvenioMod")
+            Me.columnMontoConvenido = MyBase.Columns("MontoConvenido")
+            Me.columnFechaConv = MyBase.Columns("FechaConv")
+            Me.columnDescripcionBien = MyBase.Columns("DescripcionBien")
+            Me.columnFactura = MyBase.Columns("Factura")
+            Me.columnFolioFiscal = MyBase.Columns("FolioFiscal")
+            Me.columnFechaFactura = MyBase.Columns("FechaFactura")
+            Me.columnMontoFacturado = MyBase.Columns("MontoFacturado")
+            Me.columnPartidaClas = MyBase.Columns("PartidaClas")
+            Me.columnCapitulo = MyBase.Columns("Capitulo")
+            Me.columnPolEgreAnticipo = MyBase.Columns("PolEgreAnticipo")
+            Me.columnFechaPolEgreAnticipo = MyBase.Columns("FechaPolEgreAnticipo")
+            Me.columnEstatusPolEgreAnticipo = MyBase.Columns("EstatusPolEgreAnticipo")
+            Me.columnImportePolDevengado = MyBase.Columns("ImportePolDevengado")
+            Me.columnPolizaDevengado = MyBase.Columns("PolizaDevengado")
+            Me.columnFechaPolizaDevengado = MyBase.Columns("FechaPolizaDevengado")
+            Me.columnEstatusPolDevengado = MyBase.Columns("EstatusPolDevengado")
+            Me.columnFF = MyBase.Columns("FF")
+            Me.columnImportePolPagado = MyBase.Columns("ImportePolPagado")
+            Me.columnPolizaPagado = MyBase.Columns("PolizaPagado")
+            Me.columnFechaPolizaPagado = MyBase.Columns("FechaPolizaPagado")
+            Me.columnEstatusPolPagado = MyBase.Columns("EstatusPolPagado")
+            Me.columnComprobanteBancario = MyBase.Columns("ComprobanteBancario")
+            Me.columnFechaCheque = MyBase.Columns("FechaCheque")
+            Me.columnCuentaBancaria = MyBase.Columns("CuentaBancaria")
+            Me.columnNombreBanco = MyBase.Columns("NombreBanco")
+            Me.columnCuentaBancariaProv = MyBase.Columns("CuentaBancariaProv")
+            Me.columnBancoProv = MyBase.Columns("BancoProv")
+            Me.columnMontoPagado = MyBase.Columns("MontoPagado")
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Private Sub InitClass()
+            Me.columnEjercicio = New Global.System.Data.DataColumn("Ejercicio", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnEjercicio)
+            Me.columnRFCProv = New Global.System.Data.DataColumn("RFCProv", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnRFCProv)
+            Me.columnRSProveedor = New Global.System.Data.DataColumn("RSProveedor", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnRSProveedor)
+            Me.columnDomProv = New Global.System.Data.DataColumn("DomProv", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnDomProv)
+            Me.columnCPProv = New Global.System.Data.DataColumn("CPProv", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCPProv)
+            Me.columnRFCEnte = New Global.System.Data.DataColumn("RFCEnte", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnRFCEnte)
+            Me.columnRSEnte = New Global.System.Data.DataColumn("RSEnte", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnRSEnte)
+            Me.columnOCOS = New Global.System.Data.DataColumn("OCOS", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnOCOS)
+            Me.columnRequisicion = New Global.System.Data.DataColumn("Requisicion", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnRequisicion)
+            Me.columnSolicitudPago = New Global.System.Data.DataColumn("SolicitudPago", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnSolicitudPago)
+            Me.columnNoAprobacion = New Global.System.Data.DataColumn("NoAprobacion", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnNoAprobacion)
+            Me.columnPolizaAprob = New Global.System.Data.DataColumn("PolizaAprob", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnPolizaAprob)
+            Me.columnFechaPolizaAprob = New Global.System.Data.DataColumn("FechaPolizaAprob", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnFechaPolizaAprob)
+            Me.columnEstatusPolAprob = New Global.System.Data.DataColumn("EstatusPolAprob", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnEstatusPolAprob)
+            Me.columnTipoAdj = New Global.System.Data.DataColumn("TipoAdj", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnTipoAdj)
+            Me.columnContrato = New Global.System.Data.DataColumn("Contrato", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnContrato)
+            Me.columnRSContrato = New Global.System.Data.DataColumn("RSContrato", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnRSContrato)
+            Me.columnDescripcionCont = New Global.System.Data.DataColumn("DescripcionCont", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnDescripcionCont)
+            Me.columnFechaOCOS = New Global.System.Data.DataColumn("FechaOCOS", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnFechaOCOS)
+            Me.columnMontoContratado = New Global.System.Data.DataColumn("MontoContratado", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnMontoContratado)
+            Me.columnConvenioMod = New Global.System.Data.DataColumn("ConvenioMod", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnConvenioMod)
+            Me.columnMontoConvenido = New Global.System.Data.DataColumn("MontoConvenido", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnMontoConvenido)
+            Me.columnFechaConv = New Global.System.Data.DataColumn("FechaConv", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnFechaConv)
+            Me.columnDescripcionBien = New Global.System.Data.DataColumn("DescripcionBien", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnDescripcionBien)
+            Me.columnFactura = New Global.System.Data.DataColumn("Factura", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnFactura)
+            Me.columnFolioFiscal = New Global.System.Data.DataColumn("FolioFiscal", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnFolioFiscal)
+            Me.columnFechaFactura = New Global.System.Data.DataColumn("FechaFactura", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnFechaFactura)
+            Me.columnMontoFacturado = New Global.System.Data.DataColumn("MontoFacturado", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnMontoFacturado)
+            Me.columnPartidaClas = New Global.System.Data.DataColumn("PartidaClas", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnPartidaClas)
+            Me.columnCapitulo = New Global.System.Data.DataColumn("Capitulo", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCapitulo)
+            Me.columnPolEgreAnticipo = New Global.System.Data.DataColumn("PolEgreAnticipo", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnPolEgreAnticipo)
+            Me.columnFechaPolEgreAnticipo = New Global.System.Data.DataColumn("FechaPolEgreAnticipo", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnFechaPolEgreAnticipo)
+            Me.columnEstatusPolEgreAnticipo = New Global.System.Data.DataColumn("EstatusPolEgreAnticipo", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnEstatusPolEgreAnticipo)
+            Me.columnImportePolDevengado = New Global.System.Data.DataColumn("ImportePolDevengado", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnImportePolDevengado)
+            Me.columnPolizaDevengado = New Global.System.Data.DataColumn("PolizaDevengado", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnPolizaDevengado)
+            Me.columnFechaPolizaDevengado = New Global.System.Data.DataColumn("FechaPolizaDevengado", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnFechaPolizaDevengado)
+            Me.columnEstatusPolDevengado = New Global.System.Data.DataColumn("EstatusPolDevengado", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnEstatusPolDevengado)
+            Me.columnFF = New Global.System.Data.DataColumn("FF", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnFF)
+            Me.columnImportePolPagado = New Global.System.Data.DataColumn("ImportePolPagado", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnImportePolPagado)
+            Me.columnPolizaPagado = New Global.System.Data.DataColumn("PolizaPagado", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnPolizaPagado)
+            Me.columnFechaPolizaPagado = New Global.System.Data.DataColumn("FechaPolizaPagado", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnFechaPolizaPagado)
+            Me.columnEstatusPolPagado = New Global.System.Data.DataColumn("EstatusPolPagado", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnEstatusPolPagado)
+            Me.columnComprobanteBancario = New Global.System.Data.DataColumn("ComprobanteBancario", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnComprobanteBancario)
+            Me.columnFechaCheque = New Global.System.Data.DataColumn("FechaCheque", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnFechaCheque)
+            Me.columnCuentaBancaria = New Global.System.Data.DataColumn("CuentaBancaria", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCuentaBancaria)
+            Me.columnNombreBanco = New Global.System.Data.DataColumn("NombreBanco", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnNombreBanco)
+            Me.columnCuentaBancariaProv = New Global.System.Data.DataColumn("CuentaBancariaProv", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCuentaBancariaProv)
+            Me.columnBancoProv = New Global.System.Data.DataColumn("BancoProv", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnBancoProv)
+            Me.columnMontoPagado = New Global.System.Data.DataColumn("MontoPagado", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnMontoPagado)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function NewSP_RPT_Layout_FederacionRow() As SP_RPT_Layout_FederacionRow
+            Return CType(Me.NewRow,SP_RPT_Layout_FederacionRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function NewRowFromBuilder(ByVal builder As Global.System.Data.DataRowBuilder) As Global.System.Data.DataRow
+            Return New SP_RPT_Layout_FederacionRow(builder)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function GetRowType() As Global.System.Type
+            Return GetType(SP_RPT_Layout_FederacionRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowChanged(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanged(e)
+            If (Not (Me.SP_RPT_Layout_FederacionRowChangedEvent) Is Nothing) Then
+                RaiseEvent SP_RPT_Layout_FederacionRowChanged(Me, New SP_RPT_Layout_FederacionRowChangeEvent(CType(e.Row,SP_RPT_Layout_FederacionRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowChanging(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanging(e)
+            If (Not (Me.SP_RPT_Layout_FederacionRowChangingEvent) Is Nothing) Then
+                RaiseEvent SP_RPT_Layout_FederacionRowChanging(Me, New SP_RPT_Layout_FederacionRowChangeEvent(CType(e.Row,SP_RPT_Layout_FederacionRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleted(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleted(e)
+            If (Not (Me.SP_RPT_Layout_FederacionRowDeletedEvent) Is Nothing) Then
+                RaiseEvent SP_RPT_Layout_FederacionRowDeleted(Me, New SP_RPT_Layout_FederacionRowChangeEvent(CType(e.Row,SP_RPT_Layout_FederacionRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleting(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleting(e)
+            If (Not (Me.SP_RPT_Layout_FederacionRowDeletingEvent) Is Nothing) Then
+                RaiseEvent SP_RPT_Layout_FederacionRowDeleting(Me, New SP_RPT_Layout_FederacionRowChangeEvent(CType(e.Row,SP_RPT_Layout_FederacionRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub RemoveSP_RPT_Layout_FederacionRow(ByVal row As SP_RPT_Layout_FederacionRow)
+            Me.Rows.Remove(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
+            Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
+            Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
+            Dim ds As DataSetBlanca = New DataSetBlanca()
+            Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any1.Namespace = "http://www.w3.org/2001/XMLSchema"
+            any1.MinOccurs = New Decimal(0)
+            any1.MaxOccurs = Decimal.MaxValue
+            any1.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any1)
+            Dim any2 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1"
+            any2.MinOccurs = New Decimal(1)
+            any2.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any2)
+            Dim attribute1 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute1.Name = "namespace"
+            attribute1.FixedValue = ds.Namespace
+            type.Attributes.Add(attribute1)
+            Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute2.Name = "tableTypeName"
+            attribute2.FixedValue = "SP_RPT_Layout_FederacionDataTable"
+            type.Attributes.Add(attribute2)
+            type.Particle = sequence
+            Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
+            If xs.Contains(dsSchema.TargetNamespace) Then
+                Dim s1 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Dim s2 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Try 
+                    Dim schema As Global.System.Xml.Schema.XmlSchema = Nothing
+                    dsSchema.Write(s1)
+                    Dim schemas As Global.System.Collections.IEnumerator = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator
+                    Do While schemas.MoveNext
+                        schema = CType(schemas.Current,Global.System.Xml.Schema.XmlSchema)
+                        s2.SetLength(0)
+                        schema.Write(s2)
+                        If (s1.Length = s2.Length) Then
+                            s1.Position = 0
+                            s2.Position = 0
+                            
+                            Do While ((s1.Position <> s1.Length)  _
+                                        AndAlso (s1.ReadByte = s2.ReadByte))
+                                
+                                
+                            Loop
+                            If (s1.Position = s1.Length) Then
+                                Return type
+                            End If
+                        End If
+                        
+                    Loop
+                Finally
+                    If (Not (s1) Is Nothing) Then
+                        s1.Close
+                    End If
+                    If (Not (s2) Is Nothing) Then
+                        s2.Close
+                    End If
+                End Try
+            End If
+            xs.Add(dsSchema)
+            Return type
+        End Function
+    End Class
+    
+    '''<summary>
     '''Represents strongly named DataRow class.
     '''</summary>
     Partial Public Class NotaRow
@@ -65739,6 +66706,1392 @@ Partial Public Class DataSetBlanca
     End Class
     
     '''<summary>
+    '''Represents strongly named DataRow class.
+    '''</summary>
+    Partial Public Class SP_RPT_Layout_FederacionRow
+        Inherits Global.System.Data.DataRow
+        
+        Private tableSP_RPT_Layout_Federacion As SP_RPT_Layout_FederacionDataTable
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub New(ByVal rb As Global.System.Data.DataRowBuilder)
+            MyBase.New(rb)
+            Me.tableSP_RPT_Layout_Federacion = CType(Me.Table,SP_RPT_Layout_FederacionDataTable)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Ejercicio() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableSP_RPT_Layout_Federacion.EjercicioColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'Ejercicio' de la tabla 'SP_RPT_Layout_Federacion' es DBNu"& _ 
+                            "ll.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableSP_RPT_Layout_Federacion.EjercicioColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property RFCProv() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableSP_RPT_Layout_Federacion.RFCProvColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'RFCProv' de la tabla 'SP_RPT_Layout_Federacion' es DBNull"& _ 
+                            ".", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableSP_RPT_Layout_Federacion.RFCProvColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property RSProveedor() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableSP_RPT_Layout_Federacion.RSProveedorColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'RSProveedor' de la tabla 'SP_RPT_Layout_Federacion' es DB"& _ 
+                            "Null.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableSP_RPT_Layout_Federacion.RSProveedorColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property DomProv() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableSP_RPT_Layout_Federacion.DomProvColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'DomProv' de la tabla 'SP_RPT_Layout_Federacion' es DBNull"& _ 
+                            ".", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableSP_RPT_Layout_Federacion.DomProvColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property CPProv() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableSP_RPT_Layout_Federacion.CPProvColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'CPProv' de la tabla 'SP_RPT_Layout_Federacion' es DBNull."& _ 
+                            "", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableSP_RPT_Layout_Federacion.CPProvColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property RFCEnte() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableSP_RPT_Layout_Federacion.RFCEnteColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'RFCEnte' de la tabla 'SP_RPT_Layout_Federacion' es DBNull"& _ 
+                            ".", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableSP_RPT_Layout_Federacion.RFCEnteColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property RSEnte() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableSP_RPT_Layout_Federacion.RSEnteColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'RSEnte' de la tabla 'SP_RPT_Layout_Federacion' es DBNull."& _ 
+                            "", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableSP_RPT_Layout_Federacion.RSEnteColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property OCOS() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableSP_RPT_Layout_Federacion.OCOSColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'OCOS' de la tabla 'SP_RPT_Layout_Federacion' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableSP_RPT_Layout_Federacion.OCOSColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Requisicion() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableSP_RPT_Layout_Federacion.RequisicionColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'Requisicion' de la tabla 'SP_RPT_Layout_Federacion' es DB"& _ 
+                            "Null.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableSP_RPT_Layout_Federacion.RequisicionColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property SolicitudPago() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableSP_RPT_Layout_Federacion.SolicitudPagoColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'SolicitudPago' de la tabla 'SP_RPT_Layout_Federacion' es "& _ 
+                            "DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableSP_RPT_Layout_Federacion.SolicitudPagoColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property NoAprobacion() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableSP_RPT_Layout_Federacion.NoAprobacionColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'NoAprobacion' de la tabla 'SP_RPT_Layout_Federacion' es D"& _ 
+                            "BNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableSP_RPT_Layout_Federacion.NoAprobacionColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property PolizaAprob() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableSP_RPT_Layout_Federacion.PolizaAprobColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'PolizaAprob' de la tabla 'SP_RPT_Layout_Federacion' es DB"& _ 
+                            "Null.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableSP_RPT_Layout_Federacion.PolizaAprobColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property FechaPolizaAprob() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableSP_RPT_Layout_Federacion.FechaPolizaAprobColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'FechaPolizaAprob' de la tabla 'SP_RPT_Layout_Federacion' "& _ 
+                            "es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableSP_RPT_Layout_Federacion.FechaPolizaAprobColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property EstatusPolAprob() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableSP_RPT_Layout_Federacion.EstatusPolAprobColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'EstatusPolAprob' de la tabla 'SP_RPT_Layout_Federacion' e"& _ 
+                            "s DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableSP_RPT_Layout_Federacion.EstatusPolAprobColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property TipoAdj() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableSP_RPT_Layout_Federacion.TipoAdjColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'TipoAdj' de la tabla 'SP_RPT_Layout_Federacion' es DBNull"& _ 
+                            ".", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableSP_RPT_Layout_Federacion.TipoAdjColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Contrato() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableSP_RPT_Layout_Federacion.ContratoColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'Contrato' de la tabla 'SP_RPT_Layout_Federacion' es DBNul"& _ 
+                            "l.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableSP_RPT_Layout_Federacion.ContratoColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property RSContrato() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableSP_RPT_Layout_Federacion.RSContratoColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'RSContrato' de la tabla 'SP_RPT_Layout_Federacion' es DBN"& _ 
+                            "ull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableSP_RPT_Layout_Federacion.RSContratoColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property DescripcionCont() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableSP_RPT_Layout_Federacion.DescripcionContColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'DescripcionCont' de la tabla 'SP_RPT_Layout_Federacion' e"& _ 
+                            "s DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableSP_RPT_Layout_Federacion.DescripcionContColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property FechaOCOS() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableSP_RPT_Layout_Federacion.FechaOCOSColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'FechaOCOS' de la tabla 'SP_RPT_Layout_Federacion' es DBNu"& _ 
+                            "ll.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableSP_RPT_Layout_Federacion.FechaOCOSColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property MontoContratado() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableSP_RPT_Layout_Federacion.MontoContratadoColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'MontoContratado' de la tabla 'SP_RPT_Layout_Federacion' e"& _ 
+                            "s DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableSP_RPT_Layout_Federacion.MontoContratadoColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property ConvenioMod() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableSP_RPT_Layout_Federacion.ConvenioModColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'ConvenioMod' de la tabla 'SP_RPT_Layout_Federacion' es DB"& _ 
+                            "Null.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableSP_RPT_Layout_Federacion.ConvenioModColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property MontoConvenido() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableSP_RPT_Layout_Federacion.MontoConvenidoColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'MontoConvenido' de la tabla 'SP_RPT_Layout_Federacion' es"& _ 
+                            " DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableSP_RPT_Layout_Federacion.MontoConvenidoColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property FechaConv() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableSP_RPT_Layout_Federacion.FechaConvColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'FechaConv' de la tabla 'SP_RPT_Layout_Federacion' es DBNu"& _ 
+                            "ll.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableSP_RPT_Layout_Federacion.FechaConvColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property DescripcionBien() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableSP_RPT_Layout_Federacion.DescripcionBienColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'DescripcionBien' de la tabla 'SP_RPT_Layout_Federacion' e"& _ 
+                            "s DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableSP_RPT_Layout_Federacion.DescripcionBienColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Factura() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableSP_RPT_Layout_Federacion.FacturaColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'Factura' de la tabla 'SP_RPT_Layout_Federacion' es DBNull"& _ 
+                            ".", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableSP_RPT_Layout_Federacion.FacturaColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property FolioFiscal() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableSP_RPT_Layout_Federacion.FolioFiscalColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'FolioFiscal' de la tabla 'SP_RPT_Layout_Federacion' es DB"& _ 
+                            "Null.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableSP_RPT_Layout_Federacion.FolioFiscalColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property FechaFactura() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableSP_RPT_Layout_Federacion.FechaFacturaColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'FechaFactura' de la tabla 'SP_RPT_Layout_Federacion' es D"& _ 
+                            "BNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableSP_RPT_Layout_Federacion.FechaFacturaColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property MontoFacturado() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableSP_RPT_Layout_Federacion.MontoFacturadoColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'MontoFacturado' de la tabla 'SP_RPT_Layout_Federacion' es"& _ 
+                            " DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableSP_RPT_Layout_Federacion.MontoFacturadoColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property PartidaClas() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableSP_RPT_Layout_Federacion.PartidaClasColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'PartidaClas' de la tabla 'SP_RPT_Layout_Federacion' es DB"& _ 
+                            "Null.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableSP_RPT_Layout_Federacion.PartidaClasColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Capitulo() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableSP_RPT_Layout_Federacion.CapituloColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'Capitulo' de la tabla 'SP_RPT_Layout_Federacion' es DBNul"& _ 
+                            "l.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableSP_RPT_Layout_Federacion.CapituloColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property PolEgreAnticipo() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableSP_RPT_Layout_Federacion.PolEgreAnticipoColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'PolEgreAnticipo' de la tabla 'SP_RPT_Layout_Federacion' e"& _ 
+                            "s DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableSP_RPT_Layout_Federacion.PolEgreAnticipoColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property FechaPolEgreAnticipo() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableSP_RPT_Layout_Federacion.FechaPolEgreAnticipoColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'FechaPolEgreAnticipo' de la tabla 'SP_RPT_Layout_Federaci"& _ 
+                            "on' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableSP_RPT_Layout_Federacion.FechaPolEgreAnticipoColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property EstatusPolEgreAnticipo() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableSP_RPT_Layout_Federacion.EstatusPolEgreAnticipoColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'EstatusPolEgreAnticipo' de la tabla 'SP_RPT_Layout_Federa"& _ 
+                            "cion' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableSP_RPT_Layout_Federacion.EstatusPolEgreAnticipoColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property ImportePolDevengado() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableSP_RPT_Layout_Federacion.ImportePolDevengadoColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'ImportePolDevengado' de la tabla 'SP_RPT_Layout_Federacio"& _ 
+                            "n' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableSP_RPT_Layout_Federacion.ImportePolDevengadoColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property PolizaDevengado() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableSP_RPT_Layout_Federacion.PolizaDevengadoColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'PolizaDevengado' de la tabla 'SP_RPT_Layout_Federacion' e"& _ 
+                            "s DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableSP_RPT_Layout_Federacion.PolizaDevengadoColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property FechaPolizaDevengado() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableSP_RPT_Layout_Federacion.FechaPolizaDevengadoColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'FechaPolizaDevengado' de la tabla 'SP_RPT_Layout_Federaci"& _ 
+                            "on' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableSP_RPT_Layout_Federacion.FechaPolizaDevengadoColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property EstatusPolDevengado() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableSP_RPT_Layout_Federacion.EstatusPolDevengadoColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'EstatusPolDevengado' de la tabla 'SP_RPT_Layout_Federacio"& _ 
+                            "n' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableSP_RPT_Layout_Federacion.EstatusPolDevengadoColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property FF() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableSP_RPT_Layout_Federacion.FFColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'FF' de la tabla 'SP_RPT_Layout_Federacion' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableSP_RPT_Layout_Federacion.FFColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property ImportePolPagado() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableSP_RPT_Layout_Federacion.ImportePolPagadoColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'ImportePolPagado' de la tabla 'SP_RPT_Layout_Federacion' "& _ 
+                            "es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableSP_RPT_Layout_Federacion.ImportePolPagadoColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property PolizaPagado() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableSP_RPT_Layout_Federacion.PolizaPagadoColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'PolizaPagado' de la tabla 'SP_RPT_Layout_Federacion' es D"& _ 
+                            "BNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableSP_RPT_Layout_Federacion.PolizaPagadoColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property FechaPolizaPagado() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableSP_RPT_Layout_Federacion.FechaPolizaPagadoColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'FechaPolizaPagado' de la tabla 'SP_RPT_Layout_Federacion'"& _ 
+                            " es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableSP_RPT_Layout_Federacion.FechaPolizaPagadoColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property EstatusPolPagado() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableSP_RPT_Layout_Federacion.EstatusPolPagadoColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'EstatusPolPagado' de la tabla 'SP_RPT_Layout_Federacion' "& _ 
+                            "es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableSP_RPT_Layout_Federacion.EstatusPolPagadoColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property ComprobanteBancario() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableSP_RPT_Layout_Federacion.ComprobanteBancarioColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'ComprobanteBancario' de la tabla 'SP_RPT_Layout_Federacio"& _ 
+                            "n' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableSP_RPT_Layout_Federacion.ComprobanteBancarioColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property FechaCheque() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableSP_RPT_Layout_Federacion.FechaChequeColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'FechaCheque' de la tabla 'SP_RPT_Layout_Federacion' es DB"& _ 
+                            "Null.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableSP_RPT_Layout_Federacion.FechaChequeColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property CuentaBancaria() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableSP_RPT_Layout_Federacion.CuentaBancariaColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'CuentaBancaria' de la tabla 'SP_RPT_Layout_Federacion' es"& _ 
+                            " DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableSP_RPT_Layout_Federacion.CuentaBancariaColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property NombreBanco() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableSP_RPT_Layout_Federacion.NombreBancoColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'NombreBanco' de la tabla 'SP_RPT_Layout_Federacion' es DB"& _ 
+                            "Null.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableSP_RPT_Layout_Federacion.NombreBancoColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property CuentaBancariaProv() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableSP_RPT_Layout_Federacion.CuentaBancariaProvColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'CuentaBancariaProv' de la tabla 'SP_RPT_Layout_Federacion"& _ 
+                            "' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableSP_RPT_Layout_Federacion.CuentaBancariaProvColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property BancoProv() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableSP_RPT_Layout_Federacion.BancoProvColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'BancoProv' de la tabla 'SP_RPT_Layout_Federacion' es DBNu"& _ 
+                            "ll.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableSP_RPT_Layout_Federacion.BancoProvColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property MontoPagado() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableSP_RPT_Layout_Federacion.MontoPagadoColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'MontoPagado' de la tabla 'SP_RPT_Layout_Federacion' es DB"& _ 
+                            "Null.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableSP_RPT_Layout_Federacion.MontoPagadoColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsEjercicioNull() As Boolean
+            Return Me.IsNull(Me.tableSP_RPT_Layout_Federacion.EjercicioColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetEjercicioNull()
+            Me(Me.tableSP_RPT_Layout_Federacion.EjercicioColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsRFCProvNull() As Boolean
+            Return Me.IsNull(Me.tableSP_RPT_Layout_Federacion.RFCProvColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetRFCProvNull()
+            Me(Me.tableSP_RPT_Layout_Federacion.RFCProvColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsRSProveedorNull() As Boolean
+            Return Me.IsNull(Me.tableSP_RPT_Layout_Federacion.RSProveedorColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetRSProveedorNull()
+            Me(Me.tableSP_RPT_Layout_Federacion.RSProveedorColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsDomProvNull() As Boolean
+            Return Me.IsNull(Me.tableSP_RPT_Layout_Federacion.DomProvColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetDomProvNull()
+            Me(Me.tableSP_RPT_Layout_Federacion.DomProvColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsCPProvNull() As Boolean
+            Return Me.IsNull(Me.tableSP_RPT_Layout_Federacion.CPProvColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetCPProvNull()
+            Me(Me.tableSP_RPT_Layout_Federacion.CPProvColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsRFCEnteNull() As Boolean
+            Return Me.IsNull(Me.tableSP_RPT_Layout_Federacion.RFCEnteColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetRFCEnteNull()
+            Me(Me.tableSP_RPT_Layout_Federacion.RFCEnteColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsRSEnteNull() As Boolean
+            Return Me.IsNull(Me.tableSP_RPT_Layout_Federacion.RSEnteColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetRSEnteNull()
+            Me(Me.tableSP_RPT_Layout_Federacion.RSEnteColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsOCOSNull() As Boolean
+            Return Me.IsNull(Me.tableSP_RPT_Layout_Federacion.OCOSColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetOCOSNull()
+            Me(Me.tableSP_RPT_Layout_Federacion.OCOSColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsRequisicionNull() As Boolean
+            Return Me.IsNull(Me.tableSP_RPT_Layout_Federacion.RequisicionColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetRequisicionNull()
+            Me(Me.tableSP_RPT_Layout_Federacion.RequisicionColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsSolicitudPagoNull() As Boolean
+            Return Me.IsNull(Me.tableSP_RPT_Layout_Federacion.SolicitudPagoColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetSolicitudPagoNull()
+            Me(Me.tableSP_RPT_Layout_Federacion.SolicitudPagoColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsNoAprobacionNull() As Boolean
+            Return Me.IsNull(Me.tableSP_RPT_Layout_Federacion.NoAprobacionColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetNoAprobacionNull()
+            Me(Me.tableSP_RPT_Layout_Federacion.NoAprobacionColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsPolizaAprobNull() As Boolean
+            Return Me.IsNull(Me.tableSP_RPT_Layout_Federacion.PolizaAprobColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetPolizaAprobNull()
+            Me(Me.tableSP_RPT_Layout_Federacion.PolizaAprobColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsFechaPolizaAprobNull() As Boolean
+            Return Me.IsNull(Me.tableSP_RPT_Layout_Federacion.FechaPolizaAprobColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetFechaPolizaAprobNull()
+            Me(Me.tableSP_RPT_Layout_Federacion.FechaPolizaAprobColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsEstatusPolAprobNull() As Boolean
+            Return Me.IsNull(Me.tableSP_RPT_Layout_Federacion.EstatusPolAprobColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetEstatusPolAprobNull()
+            Me(Me.tableSP_RPT_Layout_Federacion.EstatusPolAprobColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsTipoAdjNull() As Boolean
+            Return Me.IsNull(Me.tableSP_RPT_Layout_Federacion.TipoAdjColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetTipoAdjNull()
+            Me(Me.tableSP_RPT_Layout_Federacion.TipoAdjColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsContratoNull() As Boolean
+            Return Me.IsNull(Me.tableSP_RPT_Layout_Federacion.ContratoColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetContratoNull()
+            Me(Me.tableSP_RPT_Layout_Federacion.ContratoColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsRSContratoNull() As Boolean
+            Return Me.IsNull(Me.tableSP_RPT_Layout_Federacion.RSContratoColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetRSContratoNull()
+            Me(Me.tableSP_RPT_Layout_Federacion.RSContratoColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsDescripcionContNull() As Boolean
+            Return Me.IsNull(Me.tableSP_RPT_Layout_Federacion.DescripcionContColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetDescripcionContNull()
+            Me(Me.tableSP_RPT_Layout_Federacion.DescripcionContColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsFechaOCOSNull() As Boolean
+            Return Me.IsNull(Me.tableSP_RPT_Layout_Federacion.FechaOCOSColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetFechaOCOSNull()
+            Me(Me.tableSP_RPT_Layout_Federacion.FechaOCOSColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsMontoContratadoNull() As Boolean
+            Return Me.IsNull(Me.tableSP_RPT_Layout_Federacion.MontoContratadoColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetMontoContratadoNull()
+            Me(Me.tableSP_RPT_Layout_Federacion.MontoContratadoColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsConvenioModNull() As Boolean
+            Return Me.IsNull(Me.tableSP_RPT_Layout_Federacion.ConvenioModColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetConvenioModNull()
+            Me(Me.tableSP_RPT_Layout_Federacion.ConvenioModColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsMontoConvenidoNull() As Boolean
+            Return Me.IsNull(Me.tableSP_RPT_Layout_Federacion.MontoConvenidoColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetMontoConvenidoNull()
+            Me(Me.tableSP_RPT_Layout_Federacion.MontoConvenidoColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsFechaConvNull() As Boolean
+            Return Me.IsNull(Me.tableSP_RPT_Layout_Federacion.FechaConvColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetFechaConvNull()
+            Me(Me.tableSP_RPT_Layout_Federacion.FechaConvColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsDescripcionBienNull() As Boolean
+            Return Me.IsNull(Me.tableSP_RPT_Layout_Federacion.DescripcionBienColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetDescripcionBienNull()
+            Me(Me.tableSP_RPT_Layout_Federacion.DescripcionBienColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsFacturaNull() As Boolean
+            Return Me.IsNull(Me.tableSP_RPT_Layout_Federacion.FacturaColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetFacturaNull()
+            Me(Me.tableSP_RPT_Layout_Federacion.FacturaColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsFolioFiscalNull() As Boolean
+            Return Me.IsNull(Me.tableSP_RPT_Layout_Federacion.FolioFiscalColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetFolioFiscalNull()
+            Me(Me.tableSP_RPT_Layout_Federacion.FolioFiscalColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsFechaFacturaNull() As Boolean
+            Return Me.IsNull(Me.tableSP_RPT_Layout_Federacion.FechaFacturaColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetFechaFacturaNull()
+            Me(Me.tableSP_RPT_Layout_Federacion.FechaFacturaColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsMontoFacturadoNull() As Boolean
+            Return Me.IsNull(Me.tableSP_RPT_Layout_Federacion.MontoFacturadoColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetMontoFacturadoNull()
+            Me(Me.tableSP_RPT_Layout_Federacion.MontoFacturadoColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsPartidaClasNull() As Boolean
+            Return Me.IsNull(Me.tableSP_RPT_Layout_Federacion.PartidaClasColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetPartidaClasNull()
+            Me(Me.tableSP_RPT_Layout_Federacion.PartidaClasColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsCapituloNull() As Boolean
+            Return Me.IsNull(Me.tableSP_RPT_Layout_Federacion.CapituloColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetCapituloNull()
+            Me(Me.tableSP_RPT_Layout_Federacion.CapituloColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsPolEgreAnticipoNull() As Boolean
+            Return Me.IsNull(Me.tableSP_RPT_Layout_Federacion.PolEgreAnticipoColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetPolEgreAnticipoNull()
+            Me(Me.tableSP_RPT_Layout_Federacion.PolEgreAnticipoColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsFechaPolEgreAnticipoNull() As Boolean
+            Return Me.IsNull(Me.tableSP_RPT_Layout_Federacion.FechaPolEgreAnticipoColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetFechaPolEgreAnticipoNull()
+            Me(Me.tableSP_RPT_Layout_Federacion.FechaPolEgreAnticipoColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsEstatusPolEgreAnticipoNull() As Boolean
+            Return Me.IsNull(Me.tableSP_RPT_Layout_Federacion.EstatusPolEgreAnticipoColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetEstatusPolEgreAnticipoNull()
+            Me(Me.tableSP_RPT_Layout_Federacion.EstatusPolEgreAnticipoColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsImportePolDevengadoNull() As Boolean
+            Return Me.IsNull(Me.tableSP_RPT_Layout_Federacion.ImportePolDevengadoColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetImportePolDevengadoNull()
+            Me(Me.tableSP_RPT_Layout_Federacion.ImportePolDevengadoColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsPolizaDevengadoNull() As Boolean
+            Return Me.IsNull(Me.tableSP_RPT_Layout_Federacion.PolizaDevengadoColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetPolizaDevengadoNull()
+            Me(Me.tableSP_RPT_Layout_Federacion.PolizaDevengadoColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsFechaPolizaDevengadoNull() As Boolean
+            Return Me.IsNull(Me.tableSP_RPT_Layout_Federacion.FechaPolizaDevengadoColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetFechaPolizaDevengadoNull()
+            Me(Me.tableSP_RPT_Layout_Federacion.FechaPolizaDevengadoColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsEstatusPolDevengadoNull() As Boolean
+            Return Me.IsNull(Me.tableSP_RPT_Layout_Federacion.EstatusPolDevengadoColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetEstatusPolDevengadoNull()
+            Me(Me.tableSP_RPT_Layout_Federacion.EstatusPolDevengadoColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsFFNull() As Boolean
+            Return Me.IsNull(Me.tableSP_RPT_Layout_Federacion.FFColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetFFNull()
+            Me(Me.tableSP_RPT_Layout_Federacion.FFColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsImportePolPagadoNull() As Boolean
+            Return Me.IsNull(Me.tableSP_RPT_Layout_Federacion.ImportePolPagadoColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetImportePolPagadoNull()
+            Me(Me.tableSP_RPT_Layout_Federacion.ImportePolPagadoColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsPolizaPagadoNull() As Boolean
+            Return Me.IsNull(Me.tableSP_RPT_Layout_Federacion.PolizaPagadoColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetPolizaPagadoNull()
+            Me(Me.tableSP_RPT_Layout_Federacion.PolizaPagadoColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsFechaPolizaPagadoNull() As Boolean
+            Return Me.IsNull(Me.tableSP_RPT_Layout_Federacion.FechaPolizaPagadoColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetFechaPolizaPagadoNull()
+            Me(Me.tableSP_RPT_Layout_Federacion.FechaPolizaPagadoColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsEstatusPolPagadoNull() As Boolean
+            Return Me.IsNull(Me.tableSP_RPT_Layout_Federacion.EstatusPolPagadoColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetEstatusPolPagadoNull()
+            Me(Me.tableSP_RPT_Layout_Federacion.EstatusPolPagadoColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsComprobanteBancarioNull() As Boolean
+            Return Me.IsNull(Me.tableSP_RPT_Layout_Federacion.ComprobanteBancarioColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetComprobanteBancarioNull()
+            Me(Me.tableSP_RPT_Layout_Federacion.ComprobanteBancarioColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsFechaChequeNull() As Boolean
+            Return Me.IsNull(Me.tableSP_RPT_Layout_Federacion.FechaChequeColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetFechaChequeNull()
+            Me(Me.tableSP_RPT_Layout_Federacion.FechaChequeColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsCuentaBancariaNull() As Boolean
+            Return Me.IsNull(Me.tableSP_RPT_Layout_Federacion.CuentaBancariaColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetCuentaBancariaNull()
+            Me(Me.tableSP_RPT_Layout_Federacion.CuentaBancariaColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsNombreBancoNull() As Boolean
+            Return Me.IsNull(Me.tableSP_RPT_Layout_Federacion.NombreBancoColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetNombreBancoNull()
+            Me(Me.tableSP_RPT_Layout_Federacion.NombreBancoColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsCuentaBancariaProvNull() As Boolean
+            Return Me.IsNull(Me.tableSP_RPT_Layout_Federacion.CuentaBancariaProvColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetCuentaBancariaProvNull()
+            Me(Me.tableSP_RPT_Layout_Federacion.CuentaBancariaProvColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsBancoProvNull() As Boolean
+            Return Me.IsNull(Me.tableSP_RPT_Layout_Federacion.BancoProvColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetBancoProvNull()
+            Me(Me.tableSP_RPT_Layout_Federacion.BancoProvColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsMontoPagadoNull() As Boolean
+            Return Me.IsNull(Me.tableSP_RPT_Layout_Federacion.MontoPagadoColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetMontoPagadoNull()
+            Me(Me.tableSP_RPT_Layout_Federacion.MontoPagadoColumn) = Global.System.Convert.DBNull
+        End Sub
+    End Class
+    
+    '''<summary>
     '''Row event argument class
     '''</summary>
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
@@ -68172,6 +70525,42 @@ Partial Public Class DataSetBlanca
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public ReadOnly Property Row() As RPT_SP_Layout_PagadoRow
+            Get
+                Return Me.eventRow
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Action() As Global.System.Data.DataRowAction
+            Get
+                Return Me.eventAction
+            End Get
+        End Property
+    End Class
+    
+    '''<summary>
+    '''Row event argument class
+    '''</summary>
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Public Class SP_RPT_Layout_FederacionRowChangeEvent
+        Inherits Global.System.EventArgs
+        
+        Private eventRow As SP_RPT_Layout_FederacionRow
+        
+        Private eventAction As Global.System.Data.DataRowAction
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub New(ByVal row As SP_RPT_Layout_FederacionRow, ByVal action As Global.System.Data.DataRowAction)
+            MyBase.New
+            Me.eventRow = row
+            Me.eventAction = action
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Row() As SP_RPT_Layout_FederacionRow
             Get
                 Return Me.eventRow
             End Get

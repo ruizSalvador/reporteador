@@ -5609,7 +5609,6 @@ D:\GitHub\Reporteador\Korima_Reporteador\bin\Debug\DevExpress.XtraPrinting.v11.1
 D:\GitHub\Reporteador\Korima_Reporteador\bin\Debug\DevExpress.XtraReports.v11.1.xml
 D:\GitHub\Reporteador\Korima_Reporteador\bin\Debug\DevExpress.XtraRichEdit.v11.1.xml
 D:\GitHub\Reporteador\Korima_Reporteador\bin\Debug\DevExpress.XtraTreeList.v11.1.xml
-D:\GitHub\Reporteador\Korima_Reporteador\obj\x86\Debug\Korima_Reporteador.vbprojResolveAssemblyReference.cache
 D:\GitHub\Reporteador\Korima_Reporteador\obj\x86\Debug\Korima_Reporteador.CtrlNotaInformePasivosContingentes.resources
 D:\GitHub\Reporteador\Korima_Reporteador\obj\x86\Debug\Korima_Reporteador.CtrlUser_RPT_PolizaAuxiliarMayor_Fechas.resources
 D:\GitHub\Reporteador\Korima_Reporteador\obj\x86\Debug\Korima_Reporteador.CtrlUser_RPT_Padron_Proveedores.resources
