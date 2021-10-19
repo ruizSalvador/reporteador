@@ -913,6 +913,8 @@ Public Class MDI_Principal
                 LoadCtrlUser(New CtrlUser_RPT_Seguimiento_Metas, tvMenu.SelectedNode.Text.Trim)
             Case 1514 ' Layout Auditoría Federal
                 LoadCtrlUser(New CtrlUser_RPT_Layout_Auditoria_Federal, tvMenu.SelectedNode.Text.Trim)
+            Case 1515 ' Layout Auditoría Federal
+                LoadCtrlUser(New CtrlUser_RPT_Anexo_Comprobaciones, tvMenu.SelectedNode.Text.Trim)
             Case Else
                 'MessageBox.Show("Error: Consulte al administrador", "Reporte no encontrado", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End Select

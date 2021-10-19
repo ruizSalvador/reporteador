@@ -6322,3 +6322,5 @@ D:\GitHub\Reporteador\Korima_Reporteador\obj\x86\Debug\Korima_Reporteador.RPT_Se
 D:\GitHub\Reporteador\Korima_Reporteador\obj\x86\Debug\Korima_Reporteador.exe.licenses
 D:\GitHub\Reporteador\Korima_Reporteador\obj\x86\Debug\Korima_Reporteador.CtrlUser_RPT_Layout_Auditoria_Federal.resources
 D:\GitHub\Reporteador\Korima_Reporteador\obj\x86\Debug\Korima_Reporteador.RPT_Layout_Auditoria_Federal.resources
+D:\GitHub\Reporteador\Korima_Reporteador\obj\x86\Debug\Korima_Reporteador.CtrlUser_RPT_Anexo_Comprobaciones.resources
+D:\GitHub\Reporteador\Korima_Reporteador\obj\x86\Debug\Korima_Reporteador.RPT_Anexo_Comprobaciones.resources

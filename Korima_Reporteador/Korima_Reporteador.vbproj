@@ -168,6 +168,12 @@
     <Compile Include="CtrlNotas\CtrlNotaInformePasivosContingentes.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="CtrlUsr\CtrlUser_RPT_Anexo_Comprobaciones.Designer.vb">
+      <DependentUpon>CtrlUser_RPT_Anexo_Comprobaciones.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CtrlUsr\CtrlUser_RPT_Anexo_Comprobaciones.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="CtrlUsr\CtrlUser_RPT_Layout_Auditoria_Federal.Designer.vb">
       <DependentUpon>CtrlUser_RPT_Layout_Auditoria_Federal.vb</DependentUpon>
     </Compile>
@@ -2232,6 +2238,12 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="PrintRibbonControllerResources.Designer.vb" />
+    <Compile Include="Reports\RPT_Anexo_Comprobaciones.Designer.vb">
+      <DependentUpon>RPT_Anexo_Comprobaciones.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RPT_Anexo_Comprobaciones.vb">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Reports\RPT_Layout_Auditoria_Federal.Designer.vb">
       <DependentUpon>RPT_Layout_Auditoria_Federal.vb</DependentUpon>
     </Compile>
@@ -4491,6 +4503,9 @@
     <EmbeddedResource Include="CtrlNotas\CtrlNotaInformePasivosContingentes.resx">
       <DependentUpon>CtrlNotaInformePasivosContingentes.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CtrlUsr\CtrlUser_RPT_Anexo_Comprobaciones.resx">
+      <DependentUpon>CtrlUser_RPT_Anexo_Comprobaciones.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CtrlUsr\CtrlUser_RPT_Layout_Auditoria_Federal.resx">
       <DependentUpon>CtrlUser_RPT_Layout_Auditoria_Federal.vb</DependentUpon>
     </EmbeddedResource>
@@ -5495,6 +5510,9 @@
       <DependentUpon>CtrlUsr_CargadordeDocumentos.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PrintRibbonControllerResources.resx" />
+    <EmbeddedResource Include="Reports\RPT_Anexo_Comprobaciones.resx">
+      <DependentUpon>RPT_Anexo_Comprobaciones.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\RPT_Layout_Auditoria_Federal.resx">
       <DependentUpon>RPT_Layout_Auditoria_Federal.vb</DependentUpon>
     </EmbeddedResource>
