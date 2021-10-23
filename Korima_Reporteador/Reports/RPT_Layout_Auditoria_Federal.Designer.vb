@@ -1416,7 +1416,6 @@ Partial Public Class RPT_Layout_Auditoria_Federal
         Me.XrLabel24.StylePriority.UseFont = False
         Me.XrLabel24.StylePriority.UseTextAlignment = False
         XrSummary1.FormatString = "{0:n2}"
-        XrSummary1.Running = DevExpress.XtraReports.UI.SummaryRunning.Group
         Me.XrLabel24.Summary = XrSummary1
         Me.XrLabel24.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight
         '
@@ -2908,7 +2907,6 @@ Partial Public Class RPT_Layout_Auditoria_Federal
         Me.XrLabel49.StylePriority.UseFont = False
         Me.XrLabel49.StylePriority.UseTextAlignment = False
         XrSummary9.FormatString = "{0:n2}"
-        XrSummary9.Running = DevExpress.XtraReports.UI.SummaryRunning.Report
         Me.XrLabel49.Summary = XrSummary9
         Me.XrLabel49.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight
         '

@@ -2104,6 +2104,10 @@ Represents the strongly named DataTable class.
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.RPT_SP_Anexo_ComprobacionDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
 </member><member name="T:Korima_Reporteador.DataSetBlanca.NotaRow">
 	<summary>
 Represents strongly named DataRow class.
@@ -2380,6 +2384,10 @@ Represents strongly named DataRow class.
 	<summary>
 Represents strongly named DataRow class.
 </summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.RPT_SP_Anexo_ComprobacionRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
 </member><member name="T:Korima_Reporteador.DataSetBlanca.NotaRowChangeEvent">
 	<summary>
 Row event argument class
@@ -2653,6 +2661,10 @@ Row event argument class
 Row event argument class
 </summary>
 </member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_Layout_FederacionRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.RPT_SP_Anexo_ComprobacionRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>

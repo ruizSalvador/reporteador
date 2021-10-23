@@ -61,8 +61,8 @@ Public Class CtrlUser_RPT_Layout_Auditoria_Federal
         Dim SQLComando As New SqlCommand("SP_RPT_Layout_Federacion", SQLConexion)
         SQLComando.CommandType = CommandType.StoredProcedure
         '--- Parametros IN
-        SQLComando.Parameters.Add(New SqlParameter("@FechaIni", FechaIni.DateTime))
-        SQLComando.Parameters.Add(New SqlParameter("@FechaFin", FechaFin.DateTime))
+        SQLComando.Parameters.Add(New SqlParameter("@FechaIni", FechaIni.DateTime.Date))
+        SQLComando.Parameters.Add(New SqlParameter("@FechaFin", FechaFin.DateTime.Date))
         ''SQLComando.Parameters.Add(New SqlParameter("@Ejercicio", Year(filterEjercicio.EditValue)))
         ''SQLComando.Parameters.Add(New SqlParameter("@BancoId", filterBanco.EditValue))
         SQLComando.Parameters.Add(New SqlParameter("@IdProv", IIf(filterProv.Text = "", 0, Convert.ToInt32(filterProv.EditValue))))
@@ -101,7 +101,7 @@ Public Class CtrlUser_RPT_Layout_Auditoria_Federal
         '--- Llenar datos del ente
         With reporte
             .lblRptNombreEnte.Text = pRPTCFGDatosEntes.Nombre
-            .lblTitulo.Text = "Layout Pagado"
+            .lblTitulo.Text = "Anexo Federación"
             .lblRptNombreReporte.Text = ""
             .lblRptDescripcionFiltrado.Text = ""
             .lblRptEnteDomicilio.Text = pRPTCFGDatosEntes.Domicilio
@@ -110,9 +110,10 @@ Public Class CtrlUser_RPT_Layout_Auditoria_Federal
             .lblRptEnteTelefono.Text = pRPTCFGDatosEntes.Telefonos
             .PICEnteLogo.Image = pRPTCFGDatosEntes.LogoEnte
             .PICEnteLogoSecundario.Image = pRPTCFGDatosEntes.LogoEnteSecundario
+            .lblSubtitulo.Text = ""
 
 
-            .lblRptDescripcionFiltrado.Text = "Ejercicio: " & filterEjercicio.Time.Year.ToString
+            .lblRptDescripcionFiltrado.Text = "Del " + FechaIni.Text + " Al: " + FechaFin.Text
 
             .XrLblUsr.Text = "Generado por: " + MDI_Principal.strUsuario
             Dim cmd As New SqlCommand("SELECT TOP(1) T_Firmas.CodigoISO FROM C_Formatos JOIN T_Firmas ON C_Formatos.IdFormato = T_Firmas.IdFormato  Where Formato='Por Rubro/Tipo' ", New SqlConnection(cnnString))

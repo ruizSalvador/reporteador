@@ -163,6 +163,8 @@ Partial Public Class DataSetBlanca
     
     Private tableSP_RPT_Layout_Federacion As SP_RPT_Layout_FederacionDataTable
     
+    Private tableRPT_SP_Anexo_Comprobacion As RPT_SP_Anexo_ComprobacionDataTable
+    
     Private _schemaSerializationMode As Global.System.Data.SchemaSerializationMode = Global.System.Data.SchemaSerializationMode.IncludeSchema
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -398,6 +400,9 @@ Partial Public Class DataSetBlanca
             End If
             If (Not (ds.Tables("SP_RPT_Layout_Federacion")) Is Nothing) Then
                 MyBase.Tables.Add(New SP_RPT_Layout_FederacionDataTable(ds.Tables("SP_RPT_Layout_Federacion")))
+            End If
+            If (Not (ds.Tables("RPT_SP_Anexo_Comprobacion")) Is Nothing) Then
+                MyBase.Tables.Add(New RPT_SP_Anexo_ComprobacionDataTable(ds.Tables("RPT_SP_Anexo_Comprobacion")))
             End If
             Me.DataSetName = ds.DataSetName
             Me.Prefix = ds.Prefix
@@ -1108,6 +1113,16 @@ Partial Public Class DataSetBlanca
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+     Global.System.ComponentModel.Browsable(false),  _
+     Global.System.ComponentModel.DesignerSerializationVisibility(Global.System.ComponentModel.DesignerSerializationVisibility.Content)>  _
+    Public ReadOnly Property RPT_SP_Anexo_Comprobacion() As RPT_SP_Anexo_ComprobacionDataTable
+        Get
+            Return Me.tableRPT_SP_Anexo_Comprobacion
+        End Get
+    End Property
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
      Global.System.ComponentModel.BrowsableAttribute(true),  _
      Global.System.ComponentModel.DesignerSerializationVisibilityAttribute(Global.System.ComponentModel.DesignerSerializationVisibility.Visible)>  _
     Public Overrides Property SchemaSerializationMode() As Global.System.Data.SchemaSerializationMode
@@ -1379,6 +1394,9 @@ Partial Public Class DataSetBlanca
             End If
             If (Not (ds.Tables("SP_RPT_Layout_Federacion")) Is Nothing) Then
                 MyBase.Tables.Add(New SP_RPT_Layout_FederacionDataTable(ds.Tables("SP_RPT_Layout_Federacion")))
+            End If
+            If (Not (ds.Tables("RPT_SP_Anexo_Comprobacion")) Is Nothing) Then
+                MyBase.Tables.Add(New RPT_SP_Anexo_ComprobacionDataTable(ds.Tables("RPT_SP_Anexo_Comprobacion")))
             End If
             Me.DataSetName = ds.DataSetName
             Me.Prefix = ds.Prefix
@@ -1826,6 +1844,12 @@ Partial Public Class DataSetBlanca
                 Me.tableSP_RPT_Layout_Federacion.InitVars
             End If
         End If
+        Me.tableRPT_SP_Anexo_Comprobacion = CType(MyBase.Tables("RPT_SP_Anexo_Comprobacion"),RPT_SP_Anexo_ComprobacionDataTable)
+        If (initTable = true) Then
+            If (Not (Me.tableRPT_SP_Anexo_Comprobacion) Is Nothing) Then
+                Me.tableRPT_SP_Anexo_Comprobacion.InitVars
+            End If
+        End If
     End Sub
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1974,6 +1998,8 @@ Partial Public Class DataSetBlanca
         MyBase.Tables.Add(Me.tableRPT_SP_Layout_Pagado)
         Me.tableSP_RPT_Layout_Federacion = New SP_RPT_Layout_FederacionDataTable()
         MyBase.Tables.Add(Me.tableSP_RPT_Layout_Federacion)
+        Me.tableRPT_SP_Anexo_Comprobacion = New RPT_SP_Anexo_ComprobacionDataTable()
+        MyBase.Tables.Add(Me.tableRPT_SP_Anexo_Comprobacion)
     End Sub
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -2392,6 +2418,12 @@ Partial Public Class DataSetBlanca
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Private Function ShouldSerializeRPT_SP_Anexo_Comprobacion() As Boolean
+        Return false
+    End Function
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
     Private Sub SchemaChanged(ByVal sender As Object, ByVal e As Global.System.ComponentModel.CollectionChangeEventArgs)
         If (e.Action = Global.System.ComponentModel.CollectionChangeAction.Remove) Then
             Me.InitVars
@@ -2654,6 +2686,9 @@ Partial Public Class DataSetBlanca
     
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
     Public Delegate Sub SP_RPT_Layout_FederacionRowChangeEventHandler(ByVal sender As Object, ByVal e As SP_RPT_Layout_FederacionRowChangeEvent)
+    
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Public Delegate Sub RPT_SP_Anexo_ComprobacionRowChangeEventHandler(ByVal sender As Object, ByVal e As RPT_SP_Anexo_ComprobacionRowChangeEvent)
     
     '''<summary>
     '''Represents the strongly named DataTable class.
@@ -35227,6 +35262,784 @@ Partial Public Class DataSetBlanca
             Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
             attribute2.Name = "tableTypeName"
             attribute2.FixedValue = "SP_RPT_Layout_FederacionDataTable"
+            type.Attributes.Add(attribute2)
+            type.Particle = sequence
+            Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
+            If xs.Contains(dsSchema.TargetNamespace) Then
+                Dim s1 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Dim s2 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Try 
+                    Dim schema As Global.System.Xml.Schema.XmlSchema = Nothing
+                    dsSchema.Write(s1)
+                    Dim schemas As Global.System.Collections.IEnumerator = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator
+                    Do While schemas.MoveNext
+                        schema = CType(schemas.Current,Global.System.Xml.Schema.XmlSchema)
+                        s2.SetLength(0)
+                        schema.Write(s2)
+                        If (s1.Length = s2.Length) Then
+                            s1.Position = 0
+                            s2.Position = 0
+                            
+                            Do While ((s1.Position <> s1.Length)  _
+                                        AndAlso (s1.ReadByte = s2.ReadByte))
+                                
+                                
+                            Loop
+                            If (s1.Position = s1.Length) Then
+                                Return type
+                            End If
+                        End If
+                        
+                    Loop
+                Finally
+                    If (Not (s1) Is Nothing) Then
+                        s1.Close
+                    End If
+                    If (Not (s2) Is Nothing) Then
+                        s2.Close
+                    End If
+                End Try
+            End If
+            xs.Add(dsSchema)
+            Return type
+        End Function
+    End Class
+    
+    '''<summary>
+    '''Represents the strongly named DataTable class.
+    '''</summary>
+    <Global.System.Serializable(),  _
+     Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
+    Partial Public Class RPT_SP_Anexo_ComprobacionDataTable
+        Inherits Global.System.Data.DataTable
+        Implements Global.System.Collections.IEnumerable
+        
+        Private columnRFCEnte As Global.System.Data.DataColumn
+        
+        Private columnRSEnte As Global.System.Data.DataColumn
+        
+        Private columnSolicitudEgreso As Global.System.Data.DataColumn
+        
+        Private columnPolizaPagado As Global.System.Data.DataColumn
+        
+        Private columnFechaPolizaPagado As Global.System.Data.DataColumn
+        
+        Private columnEstatusPolPagado As Global.System.Data.DataColumn
+        
+        Private columnImportePolPagado As Global.System.Data.DataColumn
+        
+        Private columnCuentaDeudor As Global.System.Data.DataColumn
+        
+        Private columnNombreCuentaDeudor As Global.System.Data.DataColumn
+        
+        Private columnComprobanteBancario As Global.System.Data.DataColumn
+        
+        Private columnCuentaDepositante As Global.System.Data.DataColumn
+        
+        Private columnNombreCtaDepositante As Global.System.Data.DataColumn
+        
+        Private columnCtaProv As Global.System.Data.DataColumn
+        
+        Private columnBancoProv As Global.System.Data.DataColumn
+        
+        Private columnImportePagado As Global.System.Data.DataColumn
+        
+        Private columnRFCProv As Global.System.Data.DataColumn
+        
+        Private columnRSProveedor As Global.System.Data.DataColumn
+        
+        Private columnDescripcionBien As Global.System.Data.DataColumn
+        
+        Private columnFolioFiscal As Global.System.Data.DataColumn
+        
+        Private columnFechaFactura As Global.System.Data.DataColumn
+        
+        Private columnMontoFacturado As Global.System.Data.DataColumn
+        
+        Private columnCuentaPagado As Global.System.Data.DataColumn
+        
+        Private columnSello As Global.System.Data.DataColumn
+        
+        Private columnPartidaClas As Global.System.Data.DataColumn
+        
+        Private columnCapitulo As Global.System.Data.DataColumn
+        
+        Private columnFF As Global.System.Data.DataColumn
+        
+        Private columnDesFF As Global.System.Data.DataColumn
+        
+        Private columnPolizaDiario As Global.System.Data.DataColumn
+        
+        Private columnFechaPolDiario As Global.System.Data.DataColumn
+        
+        Private columnIdCancelacion As Global.System.Data.DataColumn
+        
+        Private columnImportePolDiario As Global.System.Data.DataColumn
+        
+        Private columnImporteDevuelto As Global.System.Data.DataColumn
+        
+        Private columnCuentaBancariaProv As Global.System.Data.DataColumn
+        
+        Private columnMontoPagado As Global.System.Data.DataColumn
+        
+        Private columnBancoDepositante As Global.System.Data.DataColumn
+        
+        Private columnCuentaImporteDevuelto As Global.System.Data.DataColumn
+        
+        Private columnPolImpDevuelto As Global.System.Data.DataColumn
+        
+        Private columnFechaPolImpDevuelto As Global.System.Data.DataColumn
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub New()
+            MyBase.New
+            Me.TableName = "RPT_SP_Anexo_Comprobacion"
+            Me.BeginInit
+            Me.InitClass
+            Me.EndInit
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub New(ByVal table As Global.System.Data.DataTable)
+            MyBase.New
+            Me.TableName = table.TableName
+            If (table.CaseSensitive <> table.DataSet.CaseSensitive) Then
+                Me.CaseSensitive = table.CaseSensitive
+            End If
+            If (table.Locale.ToString <> table.DataSet.Locale.ToString) Then
+                Me.Locale = table.Locale
+            End If
+            If (table.Namespace <> table.DataSet.Namespace) Then
+                Me.Namespace = table.Namespace
+            End If
+            Me.Prefix = table.Prefix
+            Me.MinimumCapacity = table.MinimumCapacity
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Sub New(ByVal info As Global.System.Runtime.Serialization.SerializationInfo, ByVal context As Global.System.Runtime.Serialization.StreamingContext)
+            MyBase.New(info, context)
+            Me.InitVars
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property RFCEnteColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnRFCEnte
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property RSEnteColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnRSEnte
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property SolicitudEgresoColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnSolicitudEgreso
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property PolizaPagadoColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnPolizaPagado
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property FechaPolizaPagadoColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnFechaPolizaPagado
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property EstatusPolPagadoColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnEstatusPolPagado
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property ImportePolPagadoColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnImportePolPagado
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property CuentaDeudorColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnCuentaDeudor
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property NombreCuentaDeudorColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnNombreCuentaDeudor
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property ComprobanteBancarioColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnComprobanteBancario
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property CuentaDepositanteColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnCuentaDepositante
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property NombreCtaDepositanteColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnNombreCtaDepositante
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property CtaProvColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnCtaProv
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property BancoProvColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnBancoProv
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property ImportePagadoColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnImportePagado
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property RFCProvColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnRFCProv
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property RSProveedorColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnRSProveedor
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property DescripcionBienColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnDescripcionBien
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property FolioFiscalColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnFolioFiscal
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property FechaFacturaColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnFechaFactura
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property MontoFacturadoColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnMontoFacturado
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property CuentaPagadoColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnCuentaPagado
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property SelloColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnSello
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property PartidaClasColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnPartidaClas
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property CapituloColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnCapitulo
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property FFColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnFF
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property DesFFColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnDesFF
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property PolizaDiarioColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnPolizaDiario
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property FechaPolDiarioColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnFechaPolDiario
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property IdCancelacionColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnIdCancelacion
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property ImportePolDiarioColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnImportePolDiario
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property ImporteDevueltoColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnImporteDevuelto
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property CuentaBancariaProvColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnCuentaBancariaProv
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property MontoPagadoColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnMontoPagado
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property BancoDepositanteColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnBancoDepositante
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property CuentaImporteDevueltoColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnCuentaImporteDevuelto
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property PolImpDevueltoColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnPolImpDevuelto
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property FechaPolImpDevueltoColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnFechaPolImpDevuelto
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Browsable(false)>  _
+        Public ReadOnly Property Count() As Integer
+            Get
+                Return Me.Rows.Count
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Default ReadOnly Property Item(ByVal index As Integer) As RPT_SP_Anexo_ComprobacionRow
+            Get
+                Return CType(Me.Rows(index),RPT_SP_Anexo_ComprobacionRow)
+            End Get
+        End Property
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event RPT_SP_Anexo_ComprobacionRowChanging As RPT_SP_Anexo_ComprobacionRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event RPT_SP_Anexo_ComprobacionRowChanged As RPT_SP_Anexo_ComprobacionRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event RPT_SP_Anexo_ComprobacionRowDeleting As RPT_SP_Anexo_ComprobacionRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event RPT_SP_Anexo_ComprobacionRowDeleted As RPT_SP_Anexo_ComprobacionRowChangeEventHandler
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overloads Sub AddRPT_SP_Anexo_ComprobacionRow(ByVal row As RPT_SP_Anexo_ComprobacionRow)
+            Me.Rows.Add(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overloads Function AddRPT_SP_Anexo_ComprobacionRow( _
+                    ByVal RFCEnte As String,  _
+                    ByVal RSEnte As String,  _
+                    ByVal SolicitudEgreso As String,  _
+                    ByVal PolizaPagado As String,  _
+                    ByVal FechaPolizaPagado As String,  _
+                    ByVal EstatusPolPagado As String,  _
+                    ByVal ImportePolPagado As String,  _
+                    ByVal CuentaDeudor As String,  _
+                    ByVal NombreCuentaDeudor As String,  _
+                    ByVal ComprobanteBancario As String,  _
+                    ByVal CuentaDepositante As String,  _
+                    ByVal NombreCtaDepositante As String,  _
+                    ByVal CtaProv As String,  _
+                    ByVal BancoProv As String,  _
+                    ByVal ImportePagado As String,  _
+                    ByVal RFCProv As String,  _
+                    ByVal RSProveedor As String,  _
+                    ByVal DescripcionBien As String,  _
+                    ByVal FolioFiscal As String,  _
+                    ByVal FechaFactura As String,  _
+                    ByVal MontoFacturado As String,  _
+                    ByVal CuentaPagado As String,  _
+                    ByVal Sello As String,  _
+                    ByVal PartidaClas As String,  _
+                    ByVal Capitulo As String,  _
+                    ByVal FF As String,  _
+                    ByVal DesFF As String,  _
+                    ByVal PolizaDiario As String,  _
+                    ByVal FechaPolDiario As String,  _
+                    ByVal IdCancelacion As String,  _
+                    ByVal ImportePolDiario As String,  _
+                    ByVal ImporteDevuelto As String,  _
+                    ByVal CuentaBancariaProv As String,  _
+                    ByVal MontoPagado As String,  _
+                    ByVal BancoDepositante As String,  _
+                    ByVal CuentaImporteDevuelto As String,  _
+                    ByVal PolImpDevuelto As String,  _
+                    ByVal FechaPolImpDevuelto As String) As RPT_SP_Anexo_ComprobacionRow
+            Dim rowRPT_SP_Anexo_ComprobacionRow As RPT_SP_Anexo_ComprobacionRow = CType(Me.NewRow,RPT_SP_Anexo_ComprobacionRow)
+            Dim columnValuesArray() As Object = New Object() {RFCEnte, RSEnte, SolicitudEgreso, PolizaPagado, FechaPolizaPagado, EstatusPolPagado, ImportePolPagado, CuentaDeudor, NombreCuentaDeudor, ComprobanteBancario, CuentaDepositante, NombreCtaDepositante, CtaProv, BancoProv, ImportePagado, RFCProv, RSProveedor, DescripcionBien, FolioFiscal, FechaFactura, MontoFacturado, CuentaPagado, Sello, PartidaClas, Capitulo, FF, DesFF, PolizaDiario, FechaPolDiario, IdCancelacion, ImportePolDiario, ImporteDevuelto, CuentaBancariaProv, MontoPagado, BancoDepositante, CuentaImporteDevuelto, PolImpDevuelto, FechaPolImpDevuelto}
+            rowRPT_SP_Anexo_ComprobacionRow.ItemArray = columnValuesArray
+            Me.Rows.Add(rowRPT_SP_Anexo_ComprobacionRow)
+            Return rowRPT_SP_Anexo_ComprobacionRow
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overridable Function GetEnumerator() As Global.System.Collections.IEnumerator Implements Global.System.Collections.IEnumerable.GetEnumerator
+            Return Me.Rows.GetEnumerator
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overrides Function Clone() As Global.System.Data.DataTable
+            Dim cln As RPT_SP_Anexo_ComprobacionDataTable = CType(MyBase.Clone,RPT_SP_Anexo_ComprobacionDataTable)
+            cln.InitVars
+            Return cln
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function CreateInstance() As Global.System.Data.DataTable
+            Return New RPT_SP_Anexo_ComprobacionDataTable()
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub InitVars()
+            Me.columnRFCEnte = MyBase.Columns("RFCEnte")
+            Me.columnRSEnte = MyBase.Columns("RSEnte")
+            Me.columnSolicitudEgreso = MyBase.Columns("SolicitudEgreso")
+            Me.columnPolizaPagado = MyBase.Columns("PolizaPagado")
+            Me.columnFechaPolizaPagado = MyBase.Columns("FechaPolizaPagado")
+            Me.columnEstatusPolPagado = MyBase.Columns("EstatusPolPagado")
+            Me.columnImportePolPagado = MyBase.Columns("ImportePolPagado")
+            Me.columnCuentaDeudor = MyBase.Columns("CuentaDeudor")
+            Me.columnNombreCuentaDeudor = MyBase.Columns("NombreCuentaDeudor")
+            Me.columnComprobanteBancario = MyBase.Columns("ComprobanteBancario")
+            Me.columnCuentaDepositante = MyBase.Columns("CuentaDepositante")
+            Me.columnNombreCtaDepositante = MyBase.Columns("NombreCtaDepositante")
+            Me.columnCtaProv = MyBase.Columns("CtaProv")
+            Me.columnBancoProv = MyBase.Columns("BancoProv")
+            Me.columnImportePagado = MyBase.Columns("ImportePagado")
+            Me.columnRFCProv = MyBase.Columns("RFCProv")
+            Me.columnRSProveedor = MyBase.Columns("RSProveedor")
+            Me.columnDescripcionBien = MyBase.Columns("DescripcionBien")
+            Me.columnFolioFiscal = MyBase.Columns("FolioFiscal")
+            Me.columnFechaFactura = MyBase.Columns("FechaFactura")
+            Me.columnMontoFacturado = MyBase.Columns("MontoFacturado")
+            Me.columnCuentaPagado = MyBase.Columns("CuentaPagado")
+            Me.columnSello = MyBase.Columns("Sello")
+            Me.columnPartidaClas = MyBase.Columns("PartidaClas")
+            Me.columnCapitulo = MyBase.Columns("Capitulo")
+            Me.columnFF = MyBase.Columns("FF")
+            Me.columnDesFF = MyBase.Columns("DesFF")
+            Me.columnPolizaDiario = MyBase.Columns("PolizaDiario")
+            Me.columnFechaPolDiario = MyBase.Columns("FechaPolDiario")
+            Me.columnIdCancelacion = MyBase.Columns("IdCancelacion")
+            Me.columnImportePolDiario = MyBase.Columns("ImportePolDiario")
+            Me.columnImporteDevuelto = MyBase.Columns("ImporteDevuelto")
+            Me.columnCuentaBancariaProv = MyBase.Columns("CuentaBancariaProv")
+            Me.columnMontoPagado = MyBase.Columns("MontoPagado")
+            Me.columnBancoDepositante = MyBase.Columns("BancoDepositante")
+            Me.columnCuentaImporteDevuelto = MyBase.Columns("CuentaImporteDevuelto")
+            Me.columnPolImpDevuelto = MyBase.Columns("PolImpDevuelto")
+            Me.columnFechaPolImpDevuelto = MyBase.Columns("FechaPolImpDevuelto")
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Private Sub InitClass()
+            Me.columnRFCEnte = New Global.System.Data.DataColumn("RFCEnte", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnRFCEnte)
+            Me.columnRSEnte = New Global.System.Data.DataColumn("RSEnte", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnRSEnte)
+            Me.columnSolicitudEgreso = New Global.System.Data.DataColumn("SolicitudEgreso", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnSolicitudEgreso)
+            Me.columnPolizaPagado = New Global.System.Data.DataColumn("PolizaPagado", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnPolizaPagado)
+            Me.columnFechaPolizaPagado = New Global.System.Data.DataColumn("FechaPolizaPagado", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnFechaPolizaPagado)
+            Me.columnEstatusPolPagado = New Global.System.Data.DataColumn("EstatusPolPagado", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnEstatusPolPagado)
+            Me.columnImportePolPagado = New Global.System.Data.DataColumn("ImportePolPagado", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnImportePolPagado)
+            Me.columnCuentaDeudor = New Global.System.Data.DataColumn("CuentaDeudor", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCuentaDeudor)
+            Me.columnNombreCuentaDeudor = New Global.System.Data.DataColumn("NombreCuentaDeudor", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnNombreCuentaDeudor)
+            Me.columnComprobanteBancario = New Global.System.Data.DataColumn("ComprobanteBancario", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnComprobanteBancario)
+            Me.columnCuentaDepositante = New Global.System.Data.DataColumn("CuentaDepositante", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCuentaDepositante)
+            Me.columnNombreCtaDepositante = New Global.System.Data.DataColumn("NombreCtaDepositante", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnNombreCtaDepositante)
+            Me.columnCtaProv = New Global.System.Data.DataColumn("CtaProv", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCtaProv)
+            Me.columnBancoProv = New Global.System.Data.DataColumn("BancoProv", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnBancoProv)
+            Me.columnImportePagado = New Global.System.Data.DataColumn("ImportePagado", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnImportePagado)
+            Me.columnRFCProv = New Global.System.Data.DataColumn("RFCProv", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnRFCProv)
+            Me.columnRSProveedor = New Global.System.Data.DataColumn("RSProveedor", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnRSProveedor)
+            Me.columnDescripcionBien = New Global.System.Data.DataColumn("DescripcionBien", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnDescripcionBien)
+            Me.columnFolioFiscal = New Global.System.Data.DataColumn("FolioFiscal", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnFolioFiscal)
+            Me.columnFechaFactura = New Global.System.Data.DataColumn("FechaFactura", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnFechaFactura)
+            Me.columnMontoFacturado = New Global.System.Data.DataColumn("MontoFacturado", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnMontoFacturado)
+            Me.columnCuentaPagado = New Global.System.Data.DataColumn("CuentaPagado", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCuentaPagado)
+            Me.columnSello = New Global.System.Data.DataColumn("Sello", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnSello)
+            Me.columnPartidaClas = New Global.System.Data.DataColumn("PartidaClas", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnPartidaClas)
+            Me.columnCapitulo = New Global.System.Data.DataColumn("Capitulo", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCapitulo)
+            Me.columnFF = New Global.System.Data.DataColumn("FF", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnFF)
+            Me.columnDesFF = New Global.System.Data.DataColumn("DesFF", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnDesFF)
+            Me.columnPolizaDiario = New Global.System.Data.DataColumn("PolizaDiario", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnPolizaDiario)
+            Me.columnFechaPolDiario = New Global.System.Data.DataColumn("FechaPolDiario", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnFechaPolDiario)
+            Me.columnIdCancelacion = New Global.System.Data.DataColumn("IdCancelacion", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnIdCancelacion)
+            Me.columnImportePolDiario = New Global.System.Data.DataColumn("ImportePolDiario", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnImportePolDiario)
+            Me.columnImporteDevuelto = New Global.System.Data.DataColumn("ImporteDevuelto", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnImporteDevuelto)
+            Me.columnCuentaBancariaProv = New Global.System.Data.DataColumn("CuentaBancariaProv", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCuentaBancariaProv)
+            Me.columnMontoPagado = New Global.System.Data.DataColumn("MontoPagado", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnMontoPagado)
+            Me.columnBancoDepositante = New Global.System.Data.DataColumn("BancoDepositante", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnBancoDepositante)
+            Me.columnCuentaImporteDevuelto = New Global.System.Data.DataColumn("CuentaImporteDevuelto", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCuentaImporteDevuelto)
+            Me.columnPolImpDevuelto = New Global.System.Data.DataColumn("PolImpDevuelto", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnPolImpDevuelto)
+            Me.columnFechaPolImpDevuelto = New Global.System.Data.DataColumn("FechaPolImpDevuelto", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnFechaPolImpDevuelto)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function NewRPT_SP_Anexo_ComprobacionRow() As RPT_SP_Anexo_ComprobacionRow
+            Return CType(Me.NewRow,RPT_SP_Anexo_ComprobacionRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function NewRowFromBuilder(ByVal builder As Global.System.Data.DataRowBuilder) As Global.System.Data.DataRow
+            Return New RPT_SP_Anexo_ComprobacionRow(builder)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function GetRowType() As Global.System.Type
+            Return GetType(RPT_SP_Anexo_ComprobacionRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowChanged(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanged(e)
+            If (Not (Me.RPT_SP_Anexo_ComprobacionRowChangedEvent) Is Nothing) Then
+                RaiseEvent RPT_SP_Anexo_ComprobacionRowChanged(Me, New RPT_SP_Anexo_ComprobacionRowChangeEvent(CType(e.Row,RPT_SP_Anexo_ComprobacionRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowChanging(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanging(e)
+            If (Not (Me.RPT_SP_Anexo_ComprobacionRowChangingEvent) Is Nothing) Then
+                RaiseEvent RPT_SP_Anexo_ComprobacionRowChanging(Me, New RPT_SP_Anexo_ComprobacionRowChangeEvent(CType(e.Row,RPT_SP_Anexo_ComprobacionRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleted(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleted(e)
+            If (Not (Me.RPT_SP_Anexo_ComprobacionRowDeletedEvent) Is Nothing) Then
+                RaiseEvent RPT_SP_Anexo_ComprobacionRowDeleted(Me, New RPT_SP_Anexo_ComprobacionRowChangeEvent(CType(e.Row,RPT_SP_Anexo_ComprobacionRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleting(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleting(e)
+            If (Not (Me.RPT_SP_Anexo_ComprobacionRowDeletingEvent) Is Nothing) Then
+                RaiseEvent RPT_SP_Anexo_ComprobacionRowDeleting(Me, New RPT_SP_Anexo_ComprobacionRowChangeEvent(CType(e.Row,RPT_SP_Anexo_ComprobacionRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub RemoveRPT_SP_Anexo_ComprobacionRow(ByVal row As RPT_SP_Anexo_ComprobacionRow)
+            Me.Rows.Remove(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
+            Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
+            Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
+            Dim ds As DataSetBlanca = New DataSetBlanca()
+            Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any1.Namespace = "http://www.w3.org/2001/XMLSchema"
+            any1.MinOccurs = New Decimal(0)
+            any1.MaxOccurs = Decimal.MaxValue
+            any1.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any1)
+            Dim any2 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1"
+            any2.MinOccurs = New Decimal(1)
+            any2.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any2)
+            Dim attribute1 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute1.Name = "namespace"
+            attribute1.FixedValue = ds.Namespace
+            type.Attributes.Add(attribute1)
+            Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute2.Name = "tableTypeName"
+            attribute2.FixedValue = "RPT_SP_Anexo_ComprobacionDataTable"
             type.Attributes.Add(attribute2)
             type.Particle = sequence
             Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
@@ -68092,6 +68905,1085 @@ Partial Public Class DataSetBlanca
     End Class
     
     '''<summary>
+    '''Represents strongly named DataRow class.
+    '''</summary>
+    Partial Public Class RPT_SP_Anexo_ComprobacionRow
+        Inherits Global.System.Data.DataRow
+        
+        Private tableRPT_SP_Anexo_Comprobacion As RPT_SP_Anexo_ComprobacionDataTable
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub New(ByVal rb As Global.System.Data.DataRowBuilder)
+            MyBase.New(rb)
+            Me.tableRPT_SP_Anexo_Comprobacion = CType(Me.Table,RPT_SP_Anexo_ComprobacionDataTable)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property RFCEnte() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableRPT_SP_Anexo_Comprobacion.RFCEnteColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'RFCEnte' de la tabla 'RPT_SP_Anexo_Comprobacion' es DBNul"& _ 
+                            "l.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRPT_SP_Anexo_Comprobacion.RFCEnteColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property RSEnte() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableRPT_SP_Anexo_Comprobacion.RSEnteColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'RSEnte' de la tabla 'RPT_SP_Anexo_Comprobacion' es DBNull"& _ 
+                            ".", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRPT_SP_Anexo_Comprobacion.RSEnteColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property SolicitudEgreso() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableRPT_SP_Anexo_Comprobacion.SolicitudEgresoColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'SolicitudEgreso' de la tabla 'RPT_SP_Anexo_Comprobacion' "& _ 
+                            "es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRPT_SP_Anexo_Comprobacion.SolicitudEgresoColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property PolizaPagado() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableRPT_SP_Anexo_Comprobacion.PolizaPagadoColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'PolizaPagado' de la tabla 'RPT_SP_Anexo_Comprobacion' es "& _ 
+                            "DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRPT_SP_Anexo_Comprobacion.PolizaPagadoColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property FechaPolizaPagado() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableRPT_SP_Anexo_Comprobacion.FechaPolizaPagadoColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'FechaPolizaPagado' de la tabla 'RPT_SP_Anexo_Comprobacion"& _ 
+                            "' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRPT_SP_Anexo_Comprobacion.FechaPolizaPagadoColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property EstatusPolPagado() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableRPT_SP_Anexo_Comprobacion.EstatusPolPagadoColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'EstatusPolPagado' de la tabla 'RPT_SP_Anexo_Comprobacion'"& _ 
+                            " es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRPT_SP_Anexo_Comprobacion.EstatusPolPagadoColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property ImportePolPagado() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableRPT_SP_Anexo_Comprobacion.ImportePolPagadoColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'ImportePolPagado' de la tabla 'RPT_SP_Anexo_Comprobacion'"& _ 
+                            " es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRPT_SP_Anexo_Comprobacion.ImportePolPagadoColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property CuentaDeudor() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableRPT_SP_Anexo_Comprobacion.CuentaDeudorColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'CuentaDeudor' de la tabla 'RPT_SP_Anexo_Comprobacion' es "& _ 
+                            "DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRPT_SP_Anexo_Comprobacion.CuentaDeudorColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property NombreCuentaDeudor() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableRPT_SP_Anexo_Comprobacion.NombreCuentaDeudorColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'NombreCuentaDeudor' de la tabla 'RPT_SP_Anexo_Comprobacio"& _ 
+                            "n' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRPT_SP_Anexo_Comprobacion.NombreCuentaDeudorColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property ComprobanteBancario() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableRPT_SP_Anexo_Comprobacion.ComprobanteBancarioColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'ComprobanteBancario' de la tabla 'RPT_SP_Anexo_Comprobaci"& _ 
+                            "on' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRPT_SP_Anexo_Comprobacion.ComprobanteBancarioColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property CuentaDepositante() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableRPT_SP_Anexo_Comprobacion.CuentaDepositanteColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'CuentaDepositante' de la tabla 'RPT_SP_Anexo_Comprobacion"& _ 
+                            "' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRPT_SP_Anexo_Comprobacion.CuentaDepositanteColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property NombreCtaDepositante() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableRPT_SP_Anexo_Comprobacion.NombreCtaDepositanteColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'NombreCtaDepositante' de la tabla 'RPT_SP_Anexo_Comprobac"& _ 
+                            "ion' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRPT_SP_Anexo_Comprobacion.NombreCtaDepositanteColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property CtaProv() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableRPT_SP_Anexo_Comprobacion.CtaProvColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'CtaProv' de la tabla 'RPT_SP_Anexo_Comprobacion' es DBNul"& _ 
+                            "l.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRPT_SP_Anexo_Comprobacion.CtaProvColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property BancoProv() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableRPT_SP_Anexo_Comprobacion.BancoProvColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'BancoProv' de la tabla 'RPT_SP_Anexo_Comprobacion' es DBN"& _ 
+                            "ull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRPT_SP_Anexo_Comprobacion.BancoProvColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property ImportePagado() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableRPT_SP_Anexo_Comprobacion.ImportePagadoColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'ImportePagado' de la tabla 'RPT_SP_Anexo_Comprobacion' es"& _ 
+                            " DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRPT_SP_Anexo_Comprobacion.ImportePagadoColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property RFCProv() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableRPT_SP_Anexo_Comprobacion.RFCProvColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'RFCProv' de la tabla 'RPT_SP_Anexo_Comprobacion' es DBNul"& _ 
+                            "l.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRPT_SP_Anexo_Comprobacion.RFCProvColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property RSProveedor() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableRPT_SP_Anexo_Comprobacion.RSProveedorColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'RSProveedor' de la tabla 'RPT_SP_Anexo_Comprobacion' es D"& _ 
+                            "BNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRPT_SP_Anexo_Comprobacion.RSProveedorColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property DescripcionBien() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableRPT_SP_Anexo_Comprobacion.DescripcionBienColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'DescripcionBien' de la tabla 'RPT_SP_Anexo_Comprobacion' "& _ 
+                            "es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRPT_SP_Anexo_Comprobacion.DescripcionBienColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property FolioFiscal() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableRPT_SP_Anexo_Comprobacion.FolioFiscalColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'FolioFiscal' de la tabla 'RPT_SP_Anexo_Comprobacion' es D"& _ 
+                            "BNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRPT_SP_Anexo_Comprobacion.FolioFiscalColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property FechaFactura() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableRPT_SP_Anexo_Comprobacion.FechaFacturaColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'FechaFactura' de la tabla 'RPT_SP_Anexo_Comprobacion' es "& _ 
+                            "DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRPT_SP_Anexo_Comprobacion.FechaFacturaColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property MontoFacturado() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableRPT_SP_Anexo_Comprobacion.MontoFacturadoColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'MontoFacturado' de la tabla 'RPT_SP_Anexo_Comprobacion' e"& _ 
+                            "s DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRPT_SP_Anexo_Comprobacion.MontoFacturadoColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property CuentaPagado() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableRPT_SP_Anexo_Comprobacion.CuentaPagadoColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'CuentaPagado' de la tabla 'RPT_SP_Anexo_Comprobacion' es "& _ 
+                            "DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRPT_SP_Anexo_Comprobacion.CuentaPagadoColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Sello() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableRPT_SP_Anexo_Comprobacion.SelloColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'Sello' de la tabla 'RPT_SP_Anexo_Comprobacion' es DBNull."& _ 
+                            "", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRPT_SP_Anexo_Comprobacion.SelloColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property PartidaClas() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableRPT_SP_Anexo_Comprobacion.PartidaClasColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'PartidaClas' de la tabla 'RPT_SP_Anexo_Comprobacion' es D"& _ 
+                            "BNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRPT_SP_Anexo_Comprobacion.PartidaClasColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Capitulo() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableRPT_SP_Anexo_Comprobacion.CapituloColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'Capitulo' de la tabla 'RPT_SP_Anexo_Comprobacion' es DBNu"& _ 
+                            "ll.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRPT_SP_Anexo_Comprobacion.CapituloColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property FF() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableRPT_SP_Anexo_Comprobacion.FFColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'FF' de la tabla 'RPT_SP_Anexo_Comprobacion' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRPT_SP_Anexo_Comprobacion.FFColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property DesFF() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableRPT_SP_Anexo_Comprobacion.DesFFColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'DesFF' de la tabla 'RPT_SP_Anexo_Comprobacion' es DBNull."& _ 
+                            "", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRPT_SP_Anexo_Comprobacion.DesFFColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property PolizaDiario() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableRPT_SP_Anexo_Comprobacion.PolizaDiarioColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'PolizaDiario' de la tabla 'RPT_SP_Anexo_Comprobacion' es "& _ 
+                            "DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRPT_SP_Anexo_Comprobacion.PolizaDiarioColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property FechaPolDiario() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableRPT_SP_Anexo_Comprobacion.FechaPolDiarioColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'FechaPolDiario' de la tabla 'RPT_SP_Anexo_Comprobacion' e"& _ 
+                            "s DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRPT_SP_Anexo_Comprobacion.FechaPolDiarioColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property IdCancelacion() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableRPT_SP_Anexo_Comprobacion.IdCancelacionColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'IdCancelacion' de la tabla 'RPT_SP_Anexo_Comprobacion' es"& _ 
+                            " DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRPT_SP_Anexo_Comprobacion.IdCancelacionColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property ImportePolDiario() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableRPT_SP_Anexo_Comprobacion.ImportePolDiarioColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'ImportePolDiario' de la tabla 'RPT_SP_Anexo_Comprobacion'"& _ 
+                            " es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRPT_SP_Anexo_Comprobacion.ImportePolDiarioColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property ImporteDevuelto() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableRPT_SP_Anexo_Comprobacion.ImporteDevueltoColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'ImporteDevuelto' de la tabla 'RPT_SP_Anexo_Comprobacion' "& _ 
+                            "es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRPT_SP_Anexo_Comprobacion.ImporteDevueltoColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property CuentaBancariaProv() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableRPT_SP_Anexo_Comprobacion.CuentaBancariaProvColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'CuentaBancariaProv' de la tabla 'RPT_SP_Anexo_Comprobacio"& _ 
+                            "n' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRPT_SP_Anexo_Comprobacion.CuentaBancariaProvColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property MontoPagado() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableRPT_SP_Anexo_Comprobacion.MontoPagadoColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'MontoPagado' de la tabla 'RPT_SP_Anexo_Comprobacion' es D"& _ 
+                            "BNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRPT_SP_Anexo_Comprobacion.MontoPagadoColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property BancoDepositante() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableRPT_SP_Anexo_Comprobacion.BancoDepositanteColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'BancoDepositante' de la tabla 'RPT_SP_Anexo_Comprobacion'"& _ 
+                            " es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRPT_SP_Anexo_Comprobacion.BancoDepositanteColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property CuentaImporteDevuelto() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableRPT_SP_Anexo_Comprobacion.CuentaImporteDevueltoColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'CuentaImporteDevuelto' de la tabla 'RPT_SP_Anexo_Comproba"& _ 
+                            "cion' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRPT_SP_Anexo_Comprobacion.CuentaImporteDevueltoColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property PolImpDevuelto() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableRPT_SP_Anexo_Comprobacion.PolImpDevueltoColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'PolImpDevuelto' de la tabla 'RPT_SP_Anexo_Comprobacion' e"& _ 
+                            "s DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRPT_SP_Anexo_Comprobacion.PolImpDevueltoColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property FechaPolImpDevuelto() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableRPT_SP_Anexo_Comprobacion.FechaPolImpDevueltoColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'FechaPolImpDevuelto' de la tabla 'RPT_SP_Anexo_Comprobaci"& _ 
+                            "on' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRPT_SP_Anexo_Comprobacion.FechaPolImpDevueltoColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsRFCEnteNull() As Boolean
+            Return Me.IsNull(Me.tableRPT_SP_Anexo_Comprobacion.RFCEnteColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetRFCEnteNull()
+            Me(Me.tableRPT_SP_Anexo_Comprobacion.RFCEnteColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsRSEnteNull() As Boolean
+            Return Me.IsNull(Me.tableRPT_SP_Anexo_Comprobacion.RSEnteColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetRSEnteNull()
+            Me(Me.tableRPT_SP_Anexo_Comprobacion.RSEnteColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsSolicitudEgresoNull() As Boolean
+            Return Me.IsNull(Me.tableRPT_SP_Anexo_Comprobacion.SolicitudEgresoColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetSolicitudEgresoNull()
+            Me(Me.tableRPT_SP_Anexo_Comprobacion.SolicitudEgresoColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsPolizaPagadoNull() As Boolean
+            Return Me.IsNull(Me.tableRPT_SP_Anexo_Comprobacion.PolizaPagadoColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetPolizaPagadoNull()
+            Me(Me.tableRPT_SP_Anexo_Comprobacion.PolizaPagadoColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsFechaPolizaPagadoNull() As Boolean
+            Return Me.IsNull(Me.tableRPT_SP_Anexo_Comprobacion.FechaPolizaPagadoColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetFechaPolizaPagadoNull()
+            Me(Me.tableRPT_SP_Anexo_Comprobacion.FechaPolizaPagadoColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsEstatusPolPagadoNull() As Boolean
+            Return Me.IsNull(Me.tableRPT_SP_Anexo_Comprobacion.EstatusPolPagadoColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetEstatusPolPagadoNull()
+            Me(Me.tableRPT_SP_Anexo_Comprobacion.EstatusPolPagadoColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsImportePolPagadoNull() As Boolean
+            Return Me.IsNull(Me.tableRPT_SP_Anexo_Comprobacion.ImportePolPagadoColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetImportePolPagadoNull()
+            Me(Me.tableRPT_SP_Anexo_Comprobacion.ImportePolPagadoColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsCuentaDeudorNull() As Boolean
+            Return Me.IsNull(Me.tableRPT_SP_Anexo_Comprobacion.CuentaDeudorColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetCuentaDeudorNull()
+            Me(Me.tableRPT_SP_Anexo_Comprobacion.CuentaDeudorColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsNombreCuentaDeudorNull() As Boolean
+            Return Me.IsNull(Me.tableRPT_SP_Anexo_Comprobacion.NombreCuentaDeudorColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetNombreCuentaDeudorNull()
+            Me(Me.tableRPT_SP_Anexo_Comprobacion.NombreCuentaDeudorColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsComprobanteBancarioNull() As Boolean
+            Return Me.IsNull(Me.tableRPT_SP_Anexo_Comprobacion.ComprobanteBancarioColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetComprobanteBancarioNull()
+            Me(Me.tableRPT_SP_Anexo_Comprobacion.ComprobanteBancarioColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsCuentaDepositanteNull() As Boolean
+            Return Me.IsNull(Me.tableRPT_SP_Anexo_Comprobacion.CuentaDepositanteColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetCuentaDepositanteNull()
+            Me(Me.tableRPT_SP_Anexo_Comprobacion.CuentaDepositanteColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsNombreCtaDepositanteNull() As Boolean
+            Return Me.IsNull(Me.tableRPT_SP_Anexo_Comprobacion.NombreCtaDepositanteColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetNombreCtaDepositanteNull()
+            Me(Me.tableRPT_SP_Anexo_Comprobacion.NombreCtaDepositanteColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsCtaProvNull() As Boolean
+            Return Me.IsNull(Me.tableRPT_SP_Anexo_Comprobacion.CtaProvColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetCtaProvNull()
+            Me(Me.tableRPT_SP_Anexo_Comprobacion.CtaProvColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsBancoProvNull() As Boolean
+            Return Me.IsNull(Me.tableRPT_SP_Anexo_Comprobacion.BancoProvColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetBancoProvNull()
+            Me(Me.tableRPT_SP_Anexo_Comprobacion.BancoProvColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsImportePagadoNull() As Boolean
+            Return Me.IsNull(Me.tableRPT_SP_Anexo_Comprobacion.ImportePagadoColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetImportePagadoNull()
+            Me(Me.tableRPT_SP_Anexo_Comprobacion.ImportePagadoColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsRFCProvNull() As Boolean
+            Return Me.IsNull(Me.tableRPT_SP_Anexo_Comprobacion.RFCProvColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetRFCProvNull()
+            Me(Me.tableRPT_SP_Anexo_Comprobacion.RFCProvColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsRSProveedorNull() As Boolean
+            Return Me.IsNull(Me.tableRPT_SP_Anexo_Comprobacion.RSProveedorColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetRSProveedorNull()
+            Me(Me.tableRPT_SP_Anexo_Comprobacion.RSProveedorColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsDescripcionBienNull() As Boolean
+            Return Me.IsNull(Me.tableRPT_SP_Anexo_Comprobacion.DescripcionBienColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetDescripcionBienNull()
+            Me(Me.tableRPT_SP_Anexo_Comprobacion.DescripcionBienColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsFolioFiscalNull() As Boolean
+            Return Me.IsNull(Me.tableRPT_SP_Anexo_Comprobacion.FolioFiscalColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetFolioFiscalNull()
+            Me(Me.tableRPT_SP_Anexo_Comprobacion.FolioFiscalColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsFechaFacturaNull() As Boolean
+            Return Me.IsNull(Me.tableRPT_SP_Anexo_Comprobacion.FechaFacturaColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetFechaFacturaNull()
+            Me(Me.tableRPT_SP_Anexo_Comprobacion.FechaFacturaColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsMontoFacturadoNull() As Boolean
+            Return Me.IsNull(Me.tableRPT_SP_Anexo_Comprobacion.MontoFacturadoColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetMontoFacturadoNull()
+            Me(Me.tableRPT_SP_Anexo_Comprobacion.MontoFacturadoColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsCuentaPagadoNull() As Boolean
+            Return Me.IsNull(Me.tableRPT_SP_Anexo_Comprobacion.CuentaPagadoColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetCuentaPagadoNull()
+            Me(Me.tableRPT_SP_Anexo_Comprobacion.CuentaPagadoColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsSelloNull() As Boolean
+            Return Me.IsNull(Me.tableRPT_SP_Anexo_Comprobacion.SelloColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetSelloNull()
+            Me(Me.tableRPT_SP_Anexo_Comprobacion.SelloColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsPartidaClasNull() As Boolean
+            Return Me.IsNull(Me.tableRPT_SP_Anexo_Comprobacion.PartidaClasColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetPartidaClasNull()
+            Me(Me.tableRPT_SP_Anexo_Comprobacion.PartidaClasColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsCapituloNull() As Boolean
+            Return Me.IsNull(Me.tableRPT_SP_Anexo_Comprobacion.CapituloColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetCapituloNull()
+            Me(Me.tableRPT_SP_Anexo_Comprobacion.CapituloColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsFFNull() As Boolean
+            Return Me.IsNull(Me.tableRPT_SP_Anexo_Comprobacion.FFColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetFFNull()
+            Me(Me.tableRPT_SP_Anexo_Comprobacion.FFColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsDesFFNull() As Boolean
+            Return Me.IsNull(Me.tableRPT_SP_Anexo_Comprobacion.DesFFColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetDesFFNull()
+            Me(Me.tableRPT_SP_Anexo_Comprobacion.DesFFColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsPolizaDiarioNull() As Boolean
+            Return Me.IsNull(Me.tableRPT_SP_Anexo_Comprobacion.PolizaDiarioColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetPolizaDiarioNull()
+            Me(Me.tableRPT_SP_Anexo_Comprobacion.PolizaDiarioColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsFechaPolDiarioNull() As Boolean
+            Return Me.IsNull(Me.tableRPT_SP_Anexo_Comprobacion.FechaPolDiarioColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetFechaPolDiarioNull()
+            Me(Me.tableRPT_SP_Anexo_Comprobacion.FechaPolDiarioColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsIdCancelacionNull() As Boolean
+            Return Me.IsNull(Me.tableRPT_SP_Anexo_Comprobacion.IdCancelacionColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetIdCancelacionNull()
+            Me(Me.tableRPT_SP_Anexo_Comprobacion.IdCancelacionColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsImportePolDiarioNull() As Boolean
+            Return Me.IsNull(Me.tableRPT_SP_Anexo_Comprobacion.ImportePolDiarioColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetImportePolDiarioNull()
+            Me(Me.tableRPT_SP_Anexo_Comprobacion.ImportePolDiarioColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsImporteDevueltoNull() As Boolean
+            Return Me.IsNull(Me.tableRPT_SP_Anexo_Comprobacion.ImporteDevueltoColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetImporteDevueltoNull()
+            Me(Me.tableRPT_SP_Anexo_Comprobacion.ImporteDevueltoColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsCuentaBancariaProvNull() As Boolean
+            Return Me.IsNull(Me.tableRPT_SP_Anexo_Comprobacion.CuentaBancariaProvColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetCuentaBancariaProvNull()
+            Me(Me.tableRPT_SP_Anexo_Comprobacion.CuentaBancariaProvColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsMontoPagadoNull() As Boolean
+            Return Me.IsNull(Me.tableRPT_SP_Anexo_Comprobacion.MontoPagadoColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetMontoPagadoNull()
+            Me(Me.tableRPT_SP_Anexo_Comprobacion.MontoPagadoColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsBancoDepositanteNull() As Boolean
+            Return Me.IsNull(Me.tableRPT_SP_Anexo_Comprobacion.BancoDepositanteColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetBancoDepositanteNull()
+            Me(Me.tableRPT_SP_Anexo_Comprobacion.BancoDepositanteColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsCuentaImporteDevueltoNull() As Boolean
+            Return Me.IsNull(Me.tableRPT_SP_Anexo_Comprobacion.CuentaImporteDevueltoColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetCuentaImporteDevueltoNull()
+            Me(Me.tableRPT_SP_Anexo_Comprobacion.CuentaImporteDevueltoColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsPolImpDevueltoNull() As Boolean
+            Return Me.IsNull(Me.tableRPT_SP_Anexo_Comprobacion.PolImpDevueltoColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetPolImpDevueltoNull()
+            Me(Me.tableRPT_SP_Anexo_Comprobacion.PolImpDevueltoColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsFechaPolImpDevueltoNull() As Boolean
+            Return Me.IsNull(Me.tableRPT_SP_Anexo_Comprobacion.FechaPolImpDevueltoColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetFechaPolImpDevueltoNull()
+            Me(Me.tableRPT_SP_Anexo_Comprobacion.FechaPolImpDevueltoColumn) = Global.System.Convert.DBNull
+        End Sub
+    End Class
+    
+    '''<summary>
     '''Row event argument class
     '''</summary>
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
@@ -70561,6 +72453,42 @@ Partial Public Class DataSetBlanca
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public ReadOnly Property Row() As SP_RPT_Layout_FederacionRow
+            Get
+                Return Me.eventRow
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Action() As Global.System.Data.DataRowAction
+            Get
+                Return Me.eventAction
+            End Get
+        End Property
+    End Class
+    
+    '''<summary>
+    '''Row event argument class
+    '''</summary>
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Public Class RPT_SP_Anexo_ComprobacionRowChangeEvent
+        Inherits Global.System.EventArgs
+        
+        Private eventRow As RPT_SP_Anexo_ComprobacionRow
+        
+        Private eventAction As Global.System.Data.DataRowAction
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub New(ByVal row As RPT_SP_Anexo_ComprobacionRow, ByVal action As Global.System.Data.DataRowAction)
+            MyBase.New
+            Me.eventRow = row
+            Me.eventAction = action
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Row() As RPT_SP_Anexo_ComprobacionRow
             Get
                 Return Me.eventRow
             End Get

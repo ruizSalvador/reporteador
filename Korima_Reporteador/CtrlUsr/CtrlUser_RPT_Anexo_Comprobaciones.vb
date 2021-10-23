@@ -47,7 +47,7 @@ Public Class CtrlUser_RPT_Anexo_Comprobaciones
         Me.Cursor = Cursors.WaitCursor
         SplitContainerControl1.Collapsed = True
         'ErrorProvider1.Clear()
-        Dim reporte As New RPT_Layout_Auditoria_Federal
+        Dim reporte As New RPT_Anexo_Comprobaciones
         Dim printTool As New ReportPrintTool(reporte)
         Dim SQLConexion As SqlConnection
         Dim SQLmConnStr As String = ""
@@ -58,7 +58,7 @@ Public Class CtrlUser_RPT_Anexo_Comprobaciones
         '--Codgio para Llenar Reporte con SP
         SQLConexion = New SqlConnection(SQLmConnStr)
         SQLConexion.Open()
-        Dim SQLComando As New SqlCommand("SP_RPT_Layout_Federacion", SQLConexion)
+        Dim SQLComando As New SqlCommand("RPT_SP_Anexo_Comprobaciones", SQLConexion)
         SQLComando.CommandType = CommandType.StoredProcedure
         '--- Parametros IN
         SQLComando.Parameters.Add(New SqlParameter("@FechaIni", FechaIni.DateTime))
@@ -73,10 +73,10 @@ Public Class CtrlUser_RPT_Anexo_Comprobaciones
         Dim adapter As New SqlDataAdapter(SQLComando)
         Dim ds As New DataSet()
         ds.EnforceConstraints = False
-        adapter.Fill(ds, "SP_RPT_Layout_Federacion")
+        adapter.Fill(ds, "RPT_SP_Anexo_Comprobaciones")
         reporte.DataSource = ds
         reporte.DataAdapter = adapter
-        reporte.DataMember = "SP_RPT_Layout_Federacion"
+        reporte.DataMember = "RPT_SP_Anexo_Comprobaciones"
 
         SQLComando.Dispose()
         SQLConexion.Close()

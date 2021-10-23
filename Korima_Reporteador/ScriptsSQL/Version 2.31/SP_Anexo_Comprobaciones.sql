@@ -1,3 +1,24 @@
+/****** Object:  StoredProcedure [dbo].[RPT_SP_Anexo_Comprobaciones]    Script Date: 09/05/2013 13:46:10 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[RPT_SP_Anexo_Comprobaciones]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[RPT_SP_Anexo_Comprobaciones]
+GO
+/****** Object:  StoredProcedure [dbo].[RPT_SP_Anexo_Comprobaciones]    Script Date: 09/05/2013 13:46:10 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+-- Exec RPT_SP_Anexo_Comprobaciones '20210201','20210228',0,0
+CREATE PROCEDURE [dbo].[RPT_SP_Anexo_Comprobaciones]
+ 
+@FechaIni as DateTime,
+@FechaFin as DateTime,
+@IdProv as int,
+@TipoMov as int
+
+AS
+BEGIN
+
 Select  
 TV.Folio as OCOS,
 --TV.IdViaticos,
@@ -41,9 +62,9 @@ TV.Folio as OCOS,
 		CFF.DESCRIPCION as DesFF,
 		 CAST(TPOL.TipoPoliza as varchar(10)) + ' '  + CAST(TPOL.Periodo as varchar (5)) + ' ' + CAST(TPOL.NoPoliza as varchar (50)) as PolizaDiario,
 		TPOL.Fecha as FechaPolDiario, 
-		'' as cancel,
+		'' as IdCancelacion,
 		ISNULL(DP.ImporteCargo,0) as ImportePolDiario,
-		(Select ISNULL(SUM(ImporteCargo),0) from D_Polizas Where IdPoliza = TV.IdPoliza) as ImporteDevuelto,
+		ISNULL(TC.ImporteCheque,0) - (Select ISNULL(SUM(ImporteCargo),0) from D_Polizas Where IdPoliza = TV.IdPoliza) as ImporteDevuelto,
 		--TSol.Folio as Requisicion,
 		--TSC.FolioPorTipo as SolicitudPago,
 		--TSC.FolioDesconcentrado as NoAprobacion,
@@ -141,14 +162,15 @@ LEFT JOIN C_CuentasBancarias CB2
 on TC.IdBancoADespositar= CB2.IdCuentaBancaria
 LEFT JOIN C_Bancos CBPROV
 ON CBPROV.IdBanco = TC.IdBancoADespositar
-Where TV.Folio > 0
-AND YEAR(TV.Fecha) = 2021
+--Where TV.Folio > 0
+Where  year(TV.Fecha) = 2021
 --Group by TV.Folio,TSC.FolioPorTipo, TC.IdChequesAgrupador, TC.FolioCheque, TC.IdPolizaPresupuestoPagado, TC.Status, TC.Entregado, CCE.NumeroCuenta, CCE.NombreCuenta,
 --CCB.CuentaBancaria, CB.NombreBanco, CB2.CuentaBancaria, CBPROV.NombreBanco, TC.ImporteCheque, CP.RFC, CP.RazonSocial, TV.Justificacion, TRF.FolioFiscal, TRF.FechaFactura, TRF.Total,
 --C2.NumeroCuenta, TS.Sello, TS.IdPartida, CG.IdCapitulo, CFF.CLAVE, CFF.DESCRIPCION, TPOL.TipoPoliza, TPOL.Periodo, TPOL.NoPoliza, TPOL.Fecha,
 --DP.ImporteCargo, DP2.ImporteCargo, TC.CuentaADepositar
 
 order by TV.Folio
+END
 --where 
 --TP.Fecha >= '20210101' and TP.Fecha <= '20211231'
 --TP.Fecha >= @FechaIni and TP.Fecha <= @FechaFin

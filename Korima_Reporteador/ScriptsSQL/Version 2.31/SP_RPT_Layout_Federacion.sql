@@ -8,7 +8,7 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 
--- Exec SP_RPT_Layout_Federacion '20210201','20210228',0,0
+-- Exec SP_RPT_Layout_Federacion '20211021','20211021',0,0
 CREATE PROCEDURE [dbo].[SP_RPT_Layout_Federacion]
  
 @FechaIni as DateTime,
@@ -40,7 +40,7 @@ Select  YEAR(@FechaIni) as Ejercicio,
 		CPROVCONT.RazonSocial as RSContrato,
 		TCON.Definicion as DescripcionCont,
 		TP.Fecha as FechaOCOS,
-		0 as MontoContratado,
+		TCON.ImporteActual as MontoContratado,
 		'' as ConvenioMod,
 		'' as MontoConvenido,
 		'' as FechaConv,
@@ -109,12 +109,12 @@ LEFT JOIN T_SolicitudCheques TSC
 --LEFT JOIN T_Polizas PCOMP
 --	ON PCOMP.IdPoliza = TP.IdPoliza
 LEFT JOIN T_Polizas PDEV
-	ON PDEV.IdPoliza = TRF.IdPoliza
+	ON PDEV.IdPoliza = TRF.IdPoliza and PDEV.IdTipoMovimiento = CASE WHEN @TipoMov = 0 THEN PDEV.IdTipoMovimiento ELSE @TipoMov END
 LEFT JOIN T_Polizas PEJER
-	ON PEJER.IdPoliza = TSC.IdPolizaPresupuestoEjercido
+	ON PEJER.IdPoliza = TSC.IdPolizaPresupuestoEjercido --and PEJER.IdTipoMovimiento = CASE WHEN @TipoMov = 0 THEN PEJER.IdTipoMovimiento ELSE @TipoMov END
 
-LEFT JOIN D_Polizas DP ON DP.IdPoliza = PDEV.IdPoliza
-JOIN C_Contable on C_Contable.IdCuentaContable = DP.IdCuentaContable AND NumeroCuenta like '825%'
+LEFT JOIN D_Polizas DP ON DP.IdPoliza = PDEV.IdPoliza AND DP.IdCuentaContable in (Select D_Polizas.IdCuentaContable from D_Polizas join C_Contable on D_Polizas.IdCuentaContable = C_Contable.IdCuentaContable AND NumeroCuenta like '825%' and D_Polizas.IdPoliza = PDEV.IdPoliza)
+
 LEFT JOIN T_SellosPresupuestales As TS  ON DP.IdSelloPresupuestal = TS.IdSelloPresupuestal
 LEFT JOIN C_PartidasPres As CPP ON CPP.IdPartida = TS.IdPartida
 LEFT JOIN C_ConceptosNEP As CN ON CN.IdConcepto = CPP.IdConcepto
@@ -145,8 +145,8 @@ LEFT JOIN C_Bancos CBPROV
 ON CBPROV.IdBanco = TC.IdBancoADespositar
 where 
 --TP.Fecha >= '20210101' and TP.Fecha <= '20211231'
-TP.Fecha >= @FechaIni and TP.Fecha <= @FechaFin
-AND PDEV.IdTipoMovimiento = CASE WHEN @TipoMov = 0 THEN PDEV.IdTipoMovimiento ELSE @TipoMov END
+(TP.Fecha >= @FechaIni and TP.Fecha <= @FechaFin)
+--AND PDEV.IdTipoMovimiento = CASE WHEN @TipoMov = 0 THEN PDEV.IdTipoMovimiento ELSE @TipoMov END
 AND CP.IdProveedor = CASE WHEN @IdProv = 0 THEN CP.IdProveedor ELSE @IdProv END
 
 --AND TP.Folio = 656
@@ -242,12 +242,12 @@ LEFT JOIN T_SolicitudCheques TSC
 --LEFT JOIN T_Polizas PCOMP
 --	ON PCOMP.IdPoliza = TOS.IdPoliza
 LEFT JOIN T_Polizas PDEV
-	ON PDEV.IdPoliza = TRF.IdPoliza
+	ON PDEV.IdPoliza = TRF.IdPoliza and PDEV.IdTipoMovimiento = CASE WHEN @TipoMov = 0 THEN PDEV.IdTipoMovimiento ELSE @TipoMov END
 LEFT JOIN T_Polizas PEJER
-	ON PEJER.IdPoliza = TSC.IdPolizaPresupuestoEjercido
+	ON PEJER.IdPoliza = TSC.IdPolizaPresupuestoEjercido --and PEJER.IdTipoMovimiento = CASE WHEN @TipoMov = 0 THEN PEJER.IdTipoMovimiento ELSE @TipoMov END
 
-LEFT JOIN D_Polizas DP ON DP.IdPoliza = PDEV.IdPoliza
-JOIN C_Contable on C_Contable.IdCuentaContable = DP.IdCuentaContable AND NumeroCuenta like '825%'
+LEFT JOIN D_Polizas DP ON DP.IdPoliza = PDEV.IdPoliza AND DP.IdCuentaContable in (Select D_Polizas.IdCuentaContable from D_Polizas join C_Contable on D_Polizas.IdCuentaContable = C_Contable.IdCuentaContable AND NumeroCuenta like '825%' and D_Polizas.IdPoliza = PDEV.IdPoliza)
+
 LEFT JOIN T_SellosPresupuestales As TS  ON DP.IdSelloPresupuestal = TS.IdSelloPresupuestal
 LEFT JOIN C_PartidasPres As CPP ON CPP.IdPartida = TS.IdPartida
 LEFT JOIN C_ConceptosNEP As CN ON CN.IdConcepto = CPP.IdConcepto
@@ -278,8 +278,8 @@ LEFT JOIN C_Bancos CBPROV
 ON CBPROV.IdBanco = TC.IdBancoADespositar
 where 
 --TP.Fecha >= '20210101' and TP.Fecha <= '20211231'
-TOS.Fecha >= @FechaIni and TOS.Fecha <= @FechaFin
-AND PDEV.IdTipoMovimiento = CASE WHEN @TipoMov = 0 THEN PDEV.IdTipoMovimiento ELSE @TipoMov END
+(TOS.Fecha >= @FechaIni and TOS.Fecha <= @FechaFin)
+--AND PDEV.IdTipoMovimiento = CASE WHEN @TipoMov = 0 THEN PDEV.IdTipoMovimiento ELSE @TipoMov END
 AND CP.IdProveedor = CASE WHEN @IdProv = 0 THEN CP.IdProveedor ELSE @IdProv END
 	
 
