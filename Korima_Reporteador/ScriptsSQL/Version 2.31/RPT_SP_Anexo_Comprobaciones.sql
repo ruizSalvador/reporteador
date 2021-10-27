@@ -8,7 +8,7 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 
--- Exec RPT_SP_Anexo_Comprobaciones '20210201','20210228',0,0
+-- Exec RPT_SP_Anexo_Comprobaciones '20210203','20210203',0,0
 CREATE PROCEDURE [dbo].[RPT_SP_Anexo_Comprobaciones]
  
 @FechaIni as DateTime,
@@ -22,12 +22,8 @@ BEGIN
 Select  
 TV.Folio as OCOS,
 --TV.IdViaticos,
---YEAR(@FechaIni) as Ejercicio,
---TP.Folio as OSOC,
-	--CP.RFC as RFCProv,
-	--	CP.RazonSocial as RSProveedor,
-	--	CP.Domicilio DomProv,
-	--	CP.CP as CPProv,
+ YEAR(@FechaIni) as Ejercicio,
+
 		(Select RFC from RPT_CFG_DatosEntes) as RFCEnte,
 		(Select Nombre from RPT_CFG_DatosEntes) as RSEnte,
 	 TSC.FolioPorTipo as SolicitudEgreso,
@@ -37,6 +33,13 @@ TV.Folio as OCOS,
 	    ELSE
 		(Select CAST(T_Polizas.TipoPoliza as varchar(10)) + ' '  + CAST(T_Polizas.Periodo as varchar (5)) + ' ' + CAST(T_Polizas.NoPoliza as varchar (50)) from T_Polizas where T_Polizas.IdPoliza = TC.IdPolizaPresupuestoPagado) 
 		END AS PolizaPagado,
+		--CASE 
+		--	WHEN TC.FolioCheque = 0 AND TC.Status = 'L' THEN (Select top 1 CAST(T_Polizas.TipoPoliza as varchar(10)) + ' '  + CAST(T_Polizas.Periodo as varchar (5)) + ' ' + CAST(T_Polizas.NoPoliza as varchar (50)) from T_Polizas where T_Polizas.IdCheque = TC.IdChequesAgrupador)
+		--	WHEN TC.FolioCheque = 0 AND TC.Status <> 'L' THEN (Select CAST(T_Polizas.TipoPoliza as varchar(10)) + ' '  + CAST(T_Polizas.Periodo as varchar (5)) + ' ' + CAST(T_Polizas.NoPoliza as varchar (50)) from T_Polizas where T_Polizas.IdCheque = TC.IdCheques)
+		--ELSE	
+	 --   (Select CAST(T_Polizas.TipoPoliza as varchar(10)) + ' '  + CAST(T_Polizas.Periodo as varchar (5)) + ' ' + CAST(T_Polizas.NoPoliza as varchar (50)) from T_Polizas where T_Polizas.IdCheque = TC.IdCheques)
+		--END AS PolizaPagado,
+		--(Select Fecha from T_Polizas where T_Polizas.IdCheque = TC.IdCheques) AS FechaPolizaPagado,
 		(Select Fecha from T_Polizas where T_Polizas.IdPoliza = TC.IdPolizaPresupuestoPagado) AS FechaPolizaPagado,
 		'' EstatusPolPagado,
 	    (Select TotalCargos from T_Polizas where T_Polizas.IdPoliza = TC.IdPolizaPresupuestoPagado) AS ImportePolPagado,
@@ -62,19 +65,13 @@ TV.Folio as OCOS,
 		CFF.DESCRIPCION as DesFF,
 		 CAST(TPOL.TipoPoliza as varchar(10)) + ' '  + CAST(TPOL.Periodo as varchar (5)) + ' ' + CAST(TPOL.NoPoliza as varchar (50)) as PolizaDiario,
 		TPOL.Fecha as FechaPolDiario, 
-		'' as IdCancelacion,
+		TC.IdPolizaCancelacion as IdCancelacion,
 		ISNULL(DP.ImporteCargo,0) as ImportePolDiario,
-		ISNULL(TC.ImporteCheque,0) - (Select ISNULL(SUM(ImporteCargo),0) from D_Polizas Where IdPoliza = TV.IdPoliza) as ImporteDevuelto,
-		--TSol.Folio as Requisicion,
-		--TSC.FolioPorTipo as SolicitudPago,
-		--TSC.FolioDesconcentrado as NoAprobacion,
-		--CAST(PEJER.TipoPoliza as varchar(10)) + ' '  + CAST(PEJER.Periodo as varchar (5)) + ' ' + CAST(PEJER.NoPoliza as varchar (50))  as PolizaAprob,
-		--PEJER.Fecha as FechaPolizaAprob,
-		--'' as EstatusPolAprob,
-		--CTCOM.Descripcion as TipoAdj,
-
-		0 as CuentaImporteDevuelto,
-		0 as PolImpDevuelto,
+		CASE WHEN TC.ImporteCheque is null THEN 0
+		ELSE ISNULL(TC.ImporteCheque,0) - (Select ISNULL(SUM(ImporteCargo),0) from D_Polizas join C_Contable on D_Polizas.IdCuentaContable = C_Contable.IdCuentaContable AND NumeroCuenta like '5%' Where IdPoliza = TV.IdPoliza) END as ImporteDevuelto,
+		--ISNULL(TC.ImporteCheque,0) -  ISNULL(SUM(DP.ImporteCargo),0)  as ImporteDevuelto,
+		null as CuentaImporteDevuelto,
+		null as PolImpDevuelto,
 		null as FechaPolImpDevuelto,
 	    
 		 
@@ -84,7 +81,7 @@ TV.Folio as OCOS,
 	--CFF.CLAVE as FF,
 
 			
-		--ISNULL(DP2.ImporteCargo,0) as ImportePolPagado,
+		ISNULL(DP2.ImporteCargo,0) as ImportePolPagado,
 		
 		--'' AS ComprobanteBancario,
 		--TC.Fecha as FechaCheque,
@@ -92,10 +89,7 @@ TV.Folio as OCOS,
 		TC.CuentaADepositar as CuentaBancariaProv,
 		--CBPROV.NombreBanco as BancoProv,
 		TC.ImporteCheque as MontoPagado
-		
-		--'OC' as Tipo
-		--,DP.IdSelloPresupuestal
-		--,TC.IdPolizaPresupuestoPagado 
+
 FROM T_Viaticos TV
  JOIN D_Viaticos DV ON TV.IdViaticos = DV.IdViatico
 LEFT JOIN T_RecepcionFacturas TRF 
@@ -117,8 +111,8 @@ LEFT JOIN C_Contable CCE
 
 LEFT JOIN T_Polizas TPOL
 	ON TPOL.IdPoliza = TV.IdPoliza
-Left JOIN D_Polizas DP 
-	ON DP.IdPoliza = TPOL.IdPoliza
+	LEFT JOIN D_Polizas DP ON DP.IdPoliza = TPOL.IdPoliza AND DP.IdCuentaContable in (Select D_Polizas.IdCuentaContable from D_Polizas join C_Contable on D_Polizas.IdCuentaContable = C_Contable.IdCuentaContable AND NumeroCuenta like '5%' and D_Polizas.IdPoliza = TPOL.IdPoliza)
+	--ON DP.IdPoliza = TPOL.IdPoliza
 
 --LEFT JOIN T_AfectacionPresupuesto TAP
 --	ON TAP.IdMovimiento = tp.IdPedido and TipoAfectacion = 'C' and TipoMovimientoGenera = 'P' and Cancelacion <> 1
@@ -168,20 +162,42 @@ ON CBPROV.IdBanco = TC.IdBancoADespositar
 Where  (TV.Fecha >= @FechaIni and TV.Fecha <= @FechaFin)
 AND CP.IdProveedor = CASE WHEN @IdProv = 0 THEN CP.IdProveedor ELSE @IdProv END
 
---Group by TV.Folio,TSC.FolioPorTipo, TC.IdChequesAgrupador, TC.FolioCheque, TC.IdPolizaPresupuestoPagado, TC.Status, TC.Entregado, CCE.NumeroCuenta, CCE.NombreCuenta,
---CCB.CuentaBancaria, CB.NombreBanco, CB2.CuentaBancaria, CBPROV.NombreBanco, TC.ImporteCheque, CP.RFC, CP.RazonSocial, TV.Justificacion, TRF.FolioFiscal, TRF.FechaFactura, TRF.Total,
---C2.NumeroCuenta, TS.Sello, TS.IdPartida, CG.IdCapitulo, CFF.CLAVE, CFF.DESCRIPCION, TPOL.TipoPoliza, TPOL.Periodo, TPOL.NoPoliza, TPOL.Fecha,
---DP.ImporteCargo, DP2.ImporteCargo, TC.CuentaADepositar
+Group by TV.Folio,
+TSC.FolioPorTipo, 
+TC.IdChequesAgrupador, 
+TC.FolioCheque, 
+TC.IdPolizaPresupuestoPagado, 
+TC.Status, 
+TC.Entregado,
+CCE.NumeroCuenta, 
+CCE.NombreCuenta,
+CCB.CuentaBancaria,
+CB.NombreBanco, 
+CB2.CuentaBancaria, 
+CBPROV.NombreBanco, 
+TC.ImporteCheque,
+CP.RFC, 
+CP.RazonSocial, 
+TV.Justificacion,
+TRF.FolioFiscal, 
+TRF.FechaFactura,
+TRF.Total,
+C2.NumeroCuenta,
+TS.Sello, 
+TS.IdPartida,
+CG.IdCapitulo,
+CFF.CLAVE, 
+CFF.DESCRIPCION, 
+TPOL.TipoPoliza, 
+TPOL.Periodo, 
+TPOL.NoPoliza,
+TPOL.Fecha,
+TC.IdPolizaCancelacion,
+DP.ImporteCargo ,
+DP2.ImporteCargo, 
+TC.CuentaADepositar,
+TV.IdPoliza,
+TSC.Importe
 
 order by TV.Folio
 END
---where 
---TP.Fecha >= '20210101' and TP.Fecha <= '20211231'
---TP.Fecha >= @FechaIni and TP.Fecha <= @FechaFin
---AND PDEV.IdTipoMovimiento = CASE WHEN @TipoMov = 0 THEN PDEV.IdTipoMovimiento ELSE @TipoMov END
---AND CP.IdProveedor = CASE WHEN @IdProv = 0 THEN CP.IdProveedor ELSE @IdProv END
---Select * from T_Viaticos
-
---Select * from T_Polizas where TipoPoliza = 'E'
---Select * from T_Viaticos where folio = 1
---Select * from D_Viaticos where IdViatico in (2,3)

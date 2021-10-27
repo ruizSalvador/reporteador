@@ -14,15 +14,15 @@ Public Class MDI_Principal
     'Dim bdd As String = "Korima_San_Miguel_Alto"
     'Dim bdd As String = "Korima_Municipio_Piedad"
     'Dim bdd As String = "Korima_TET"
-    Dim bdd As String = "Korima_TSJ"
+    Dim bdd As String = "KorimaTSJ"
     'Dim bdd As String = "KorimaNogales"
     'Dim bdd As String = "KorimaUPALT_1"
     'Dim bdd As String = "KOR585_UPALT"
 
 
     'Dim server As String = "SRV-KORIMA\korima_2014"
-    Dim server As String = "LAPTOP-OC11LS61\SQLEXPRESS19"
-    'Dim server As String = "LAPTOP-OC11LS61\SQLEXPRESS17"
+    'Dim server As String = "LAPTOP-OC11LS61\SQLEXPRESS19"
+    Dim server As String = "LAPTOP-OC11LS61\SQLEXPRESS17"
     'Dim server As String = "LAPTOP-OC11LS61\SQL2019DEV"
     'Dim server As String = "ARTURODEV\SQLEXPRESS02"
     'Dim server As String = "SRV-KORITEST\SQLEXPRESS14"
@@ -911,10 +911,12 @@ Public Class MDI_Principal
                 LoadCtrlUser(New CtrlUser_RPT_PolizaAuxiliarMayor_Fechas, tvMenu.SelectedNode.Text.Trim)
             Case 1513 ' Seguimiento Metas
                 LoadCtrlUser(New CtrlUser_RPT_Seguimiento_Metas, tvMenu.SelectedNode.Text.Trim)
-            Case 1514 ' Layout Auditoría Federal
+            Case 1514 ' Anexo Federación
                 LoadCtrlUser(New CtrlUser_RPT_Layout_Auditoria_Federal, tvMenu.SelectedNode.Text.Trim)
-            Case 1515 ' Layout Auditoría Federal
+            Case 1515 ' Anexo Comprobaciones
                 LoadCtrlUser(New CtrlUser_RPT_Anexo_Comprobaciones, tvMenu.SelectedNode.Text.Trim)
+            Case 1516 ' Anexo Nóminas
+                LoadCtrlUser(New CtrlUser_RPT_Anexo_Nominas, tvMenu.SelectedNode.Text.Trim)
             Case Else
                 'MessageBox.Show("Error: Consulte al administrador", "Reporte no encontrado", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End Select

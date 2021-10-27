@@ -58,7 +58,7 @@ Public Class CtrlUser_RPT_Layout_Auditoria_Federal
         '--Codgio para Llenar Reporte con SP
         SQLConexion = New SqlConnection(SQLmConnStr)
         SQLConexion.Open()
-        Dim SQLComando As New SqlCommand("SP_RPT_Layout_Federacion", SQLConexion)
+        Dim SQLComando As New SqlCommand("RPT_SP_Layout_Federacion", SQLConexion)
         SQLComando.CommandType = CommandType.StoredProcedure
         '--- Parametros IN
         SQLComando.Parameters.Add(New SqlParameter("@FechaIni", FechaIni.DateTime.Date))
@@ -73,10 +73,10 @@ Public Class CtrlUser_RPT_Layout_Auditoria_Federal
         Dim adapter As New SqlDataAdapter(SQLComando)
         Dim ds As New DataSet()
         ds.EnforceConstraints = False
-        adapter.Fill(ds, "SP_RPT_Layout_Federacion")
+        adapter.Fill(ds, "RPT_SP_Layout_Federacion")
         reporte.DataSource = ds
         reporte.DataAdapter = adapter
-        reporte.DataMember = "SP_RPT_Layout_Federacion"
+        reporte.DataMember = "RPT_SP_Layout_Federacion"
 
         SQLComando.Dispose()
         SQLConexion.Close()

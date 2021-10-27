@@ -312,7 +312,7 @@ Partial Public Class RPT_Anexo_Comprobaciones
         Me.XrLabel85.StylePriority.UseFont = False
         Me.XrLabel85.StylePriority.UseTextAlignment = False
         Me.XrLabel85.Text = "XrLabel85"
-        Me.XrLabel85.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
+        Me.XrLabel85.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight
         '
         'XrLabel72
         '
@@ -331,14 +331,14 @@ Partial Public Class RPT_Anexo_Comprobaciones
         Me.XrLabel72.StylePriority.UseFont = False
         Me.XrLabel72.StylePriority.UseTextAlignment = False
         Me.XrLabel72.Text = "XrLabel72"
-        Me.XrLabel72.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
+        Me.XrLabel72.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight
         '
         'XrLabel73
         '
         Me.XrLabel73.AnchorVertical = CType((DevExpress.XtraReports.UI.VerticalAnchorStyles.Top Or DevExpress.XtraReports.UI.VerticalAnchorStyles.Bottom), DevExpress.XtraReports.UI.VerticalAnchorStyles)
         Me.XrLabel73.Borders = DevExpress.XtraPrinting.BorderSide.None
         Me.XrLabel73.CanGrow = False
-        Me.XrLabel73.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "RPT_SP_Anexo_Comprobacion.CuentaImporteDevuelto", "{0:dd/MM/yyyy}")})
+        Me.XrLabel73.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "RPT_SP_Anexo_Comprobacion.CuentaImporteDevuelto", "{0}")})
         Me.XrLabel73.Dpi = 254.0!
         Me.XrLabel73.Font = New System.Drawing.Font("Tahoma", 8.0!)
         Me.XrLabel73.LocationFloat = New DevExpress.Utils.PointFloat(9575.874!, 0.0!)
@@ -569,16 +569,16 @@ Partial Public Class RPT_Anexo_Comprobaciones
         Me.XrLabel55.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "RPT_SP_Anexo_Comprobacion.MontoPagado", "{0}")})
         Me.XrLabel55.Dpi = 254.0!
         Me.XrLabel55.Font = New System.Drawing.Font("Tahoma", 8.0!)
-        Me.XrLabel55.LocationFloat = New DevExpress.Utils.PointFloat(3988.235!, 0.002745311!)
+        Me.XrLabel55.LocationFloat = New DevExpress.Utils.PointFloat(3985.989!, 0.002745311!)
         Me.XrLabel55.Name = "XrLabel55"
         Me.XrLabel55.OddStyleName = "OddStyle"
         Me.XrLabel55.Padding = New DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254.0!)
-        Me.XrLabel55.SizeF = New System.Drawing.SizeF(276.8579!, 69.00058!)
+        Me.XrLabel55.SizeF = New System.Drawing.SizeF(279.1042!, 69.00058!)
         Me.XrLabel55.StylePriority.UseBorders = False
         Me.XrLabel55.StylePriority.UseFont = False
         Me.XrLabel55.StylePriority.UseTextAlignment = False
         Me.XrLabel55.Text = "XrLabel55"
-        Me.XrLabel55.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
+        Me.XrLabel55.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight
         '
         'XrLabel52
         '
@@ -592,7 +592,7 @@ Partial Public Class RPT_Anexo_Comprobaciones
         Me.XrLabel52.Name = "XrLabel52"
         Me.XrLabel52.OddStyleName = "OddStyle"
         Me.XrLabel52.Padding = New DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254.0!)
-        Me.XrLabel52.SizeF = New System.Drawing.SizeF(324.0837!, 69.00058!)
+        Me.XrLabel52.SizeF = New System.Drawing.SizeF(324.0835!, 69.00058!)
         Me.XrLabel52.StylePriority.UseBorders = False
         Me.XrLabel52.StylePriority.UseFont = False
         Me.XrLabel52.StylePriority.UseTextAlignment = False
@@ -711,7 +711,7 @@ Partial Public Class RPT_Anexo_Comprobaciones
         Me.XrLabel19.StylePriority.UseFont = False
         Me.XrLabel19.StylePriority.UseTextAlignment = False
         Me.XrLabel19.Text = "XrLabel19"
-        Me.XrLabel19.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
+        Me.XrLabel19.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight
         '
         'XrLabel5
         '
@@ -744,7 +744,7 @@ Partial Public Class RPT_Anexo_Comprobaciones
         Me.label7.Name = "label7"
         Me.label7.OddStyleName = "OddStyle"
         Me.label7.Padding = New DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254.0!)
-        Me.label7.SizeF = New System.Drawing.SizeF(317.3027!, 58.41999!)
+        Me.label7.SizeF = New System.Drawing.SizeF(317.3027!, 68.99783!)
         Me.label7.StylePriority.UseBorders = False
         Me.label7.StylePriority.UseFont = False
         Me.label7.StylePriority.UseTextAlignment = False
@@ -794,7 +794,7 @@ Partial Public Class RPT_Anexo_Comprobaciones
         Me.XrLabel102.AnchorVertical = CType((DevExpress.XtraReports.UI.VerticalAnchorStyles.Top Or DevExpress.XtraReports.UI.VerticalAnchorStyles.Bottom), DevExpress.XtraReports.UI.VerticalAnchorStyles)
         Me.XrLabel102.Borders = DevExpress.XtraPrinting.BorderSide.None
         Me.XrLabel102.CanGrow = False
-        Me.XrLabel102.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "SP_RPT_Layout_Federacion.CuentaBancariaProv")})
+        Me.XrLabel102.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "RPT_SP_Anexo_Comprobacion.CuentaDepositante", "{0}")})
         Me.XrLabel102.Dpi = 254.0!
         Me.XrLabel102.Font = New System.Drawing.Font("Tahoma", 8.0!)
         Me.XrLabel102.LocationFloat = New DevExpress.Utils.PointFloat(3353.696!, 0.002745311!)
@@ -832,7 +832,7 @@ Partial Public Class RPT_Anexo_Comprobaciones
         Me.XrLabel114.AnchorVertical = CType((DevExpress.XtraReports.UI.VerticalAnchorStyles.Top Or DevExpress.XtraReports.UI.VerticalAnchorStyles.Bottom), DevExpress.XtraReports.UI.VerticalAnchorStyles)
         Me.XrLabel114.Borders = DevExpress.XtraPrinting.BorderSide.Right
         Me.XrLabel114.CanGrow = False
-        Me.XrLabel114.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "RPT_SP_Anexo_Comprobacion.FechaPolImpDevuelto", "{0}")})
+        Me.XrLabel114.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "RPT_SP_Anexo_Comprobacion.FechaPolImpDevuelto", "{0:dd/MM/yyyy}")})
         Me.XrLabel114.Dpi = 254.0!
         Me.XrLabel114.Font = New System.Drawing.Font("Tahoma", 8.0!)
         Me.XrLabel114.LocationFloat = New DevExpress.Utils.PointFloat(10135.12!, 0.0!)
@@ -851,14 +851,14 @@ Partial Public Class RPT_Anexo_Comprobaciones
         Me.XrLabel116.AnchorVertical = CType((DevExpress.XtraReports.UI.VerticalAnchorStyles.Top Or DevExpress.XtraReports.UI.VerticalAnchorStyles.Bottom), DevExpress.XtraReports.UI.VerticalAnchorStyles)
         Me.XrLabel116.Borders = DevExpress.XtraPrinting.BorderSide.None
         Me.XrLabel116.CanGrow = False
-        Me.XrLabel116.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "RPT_SP_Anexo_Comprobacion.PolImpDevuelto", "{0:n2}")})
+        Me.XrLabel116.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "RPT_SP_Anexo_Comprobacion.PolImpDevuelto", "{0}")})
         Me.XrLabel116.Dpi = 254.0!
         Me.XrLabel116.Font = New System.Drawing.Font("Tahoma", 8.0!)
-        Me.XrLabel116.LocationFloat = New DevExpress.Utils.PointFloat(9881.125!, 0.0!)
+        Me.XrLabel116.LocationFloat = New DevExpress.Utils.PointFloat(9881.124!, 0.0!)
         Me.XrLabel116.Name = "XrLabel116"
         Me.XrLabel116.OddStyleName = "OddStyle"
         Me.XrLabel116.Padding = New DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254.0!)
-        Me.XrLabel116.SizeF = New System.Drawing.SizeF(253.998!, 69.00058!)
+        Me.XrLabel116.SizeF = New System.Drawing.SizeF(253.9961!, 69.00058!)
         Me.XrLabel116.StylePriority.UseBorders = False
         Me.XrLabel116.StylePriority.UseFont = False
         Me.XrLabel116.StylePriority.UseTextAlignment = False
@@ -1685,7 +1685,7 @@ Partial Public Class RPT_Anexo_Comprobaciones
         Me.XrLabel69.StylePriority.UseBorderWidth = False
         Me.XrLabel69.StylePriority.UseFont = False
         Me.XrLabel69.StylePriority.UseTextAlignment = False
-        Me.XrLabel69.Text = "Cuenta deposito importe devuelto"
+        Me.XrLabel69.Text = "Cuenta depositó importe devuelto"
         Me.XrLabel69.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
         '
         'XrLabel61
@@ -2196,7 +2196,7 @@ Partial Public Class RPT_Anexo_Comprobaciones
         Me.XrLabel14.StylePriority.UseBorderWidth = False
         Me.XrLabel14.StylePriority.UseFont = False
         Me.XrLabel14.StylePriority.UseTextAlignment = False
-        Me.XrLabel14.Text = "Rasón Social"
+        Me.XrLabel14.Text = "Razón Social"
         Me.XrLabel14.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
         '
         'XrLabel10
@@ -2268,7 +2268,7 @@ Partial Public Class RPT_Anexo_Comprobaciones
         Me.XrLabel88.LocationFloat = New DevExpress.Utils.PointFloat(9881.124!, 81.70706!)
         Me.XrLabel88.Name = "XrLabel88"
         Me.XrLabel88.Padding = New DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254.0!)
-        Me.XrLabel88.SizeF = New System.Drawing.SizeF(253.999!, 74.00001!)
+        Me.XrLabel88.SizeF = New System.Drawing.SizeF(253.9961!, 74.0!)
         Me.XrLabel88.StylePriority.UseBorders = False
         Me.XrLabel88.StylePriority.UseBorderWidth = False
         Me.XrLabel88.StylePriority.UseFont = False

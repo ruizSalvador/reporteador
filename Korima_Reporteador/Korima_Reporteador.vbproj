@@ -168,6 +168,12 @@
     <Compile Include="CtrlNotas\CtrlNotaInformePasivosContingentes.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="CtrlUsr\CtrlUser_RPT_Anexo_Nominas.Designer.vb">
+      <DependentUpon>CtrlUser_RPT_Anexo_Nominas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CtrlUsr\CtrlUser_RPT_Anexo_Nominas.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="CtrlUsr\CtrlUser_RPT_Anexo_Comprobaciones.Designer.vb">
       <DependentUpon>CtrlUser_RPT_Anexo_Comprobaciones.vb</DependentUpon>
     </Compile>
@@ -2238,6 +2244,12 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="PrintRibbonControllerResources.Designer.vb" />
+    <Compile Include="Reports\RPT_Anexo_Nominas.Designer.vb">
+      <DependentUpon>RPT_Anexo_Nominas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RPT_Anexo_Nominas.vb">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Reports\RPT_Anexo_Comprobaciones.Designer.vb">
       <DependentUpon>RPT_Anexo_Comprobaciones.vb</DependentUpon>
     </Compile>
@@ -4503,6 +4515,9 @@
     <EmbeddedResource Include="CtrlNotas\CtrlNotaInformePasivosContingentes.resx">
       <DependentUpon>CtrlNotaInformePasivosContingentes.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CtrlUsr\CtrlUser_RPT_Anexo_Nominas.resx">
+      <DependentUpon>CtrlUser_RPT_Anexo_Nominas.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CtrlUsr\CtrlUser_RPT_Anexo_Comprobaciones.resx">
       <DependentUpon>CtrlUser_RPT_Anexo_Comprobaciones.vb</DependentUpon>
     </EmbeddedResource>
@@ -5499,7 +5514,6 @@
     <EmbeddedResource Include="Master.resx">
       <DependentUpon>Master.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="My Project\licenses.licx" />
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
@@ -5510,6 +5524,9 @@
       <DependentUpon>CtrlUsr_CargadordeDocumentos.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PrintRibbonControllerResources.resx" />
+    <EmbeddedResource Include="Reports\RPT_Anexo_Nominas.resx">
+      <DependentUpon>RPT_Anexo_Nominas.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\RPT_Anexo_Comprobaciones.resx">
       <DependentUpon>RPT_Anexo_Comprobaciones.vb</DependentUpon>
     </EmbeddedResource>

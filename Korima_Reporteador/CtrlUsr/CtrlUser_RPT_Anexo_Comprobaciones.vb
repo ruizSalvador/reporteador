@@ -61,8 +61,8 @@ Public Class CtrlUser_RPT_Anexo_Comprobaciones
         Dim SQLComando As New SqlCommand("RPT_SP_Anexo_Comprobaciones", SQLConexion)
         SQLComando.CommandType = CommandType.StoredProcedure
         '--- Parametros IN
-        SQLComando.Parameters.Add(New SqlParameter("@FechaIni", FechaIni.DateTime))
-        SQLComando.Parameters.Add(New SqlParameter("@FechaFin", FechaFin.DateTime))
+        SQLComando.Parameters.Add(New SqlParameter("@FechaIni", FechaIni.DateTime.Date))
+        SQLComando.Parameters.Add(New SqlParameter("@FechaFin", FechaFin.DateTime.Date))
         ''SQLComando.Parameters.Add(New SqlParameter("@Ejercicio", Year(filterEjercicio.EditValue)))
         ''SQLComando.Parameters.Add(New SqlParameter("@BancoId", filterBanco.EditValue))
         SQLComando.Parameters.Add(New SqlParameter("@IdProv", IIf(filterProv.Text = "", 0, Convert.ToInt32(filterProv.EditValue))))
@@ -101,7 +101,8 @@ Public Class CtrlUser_RPT_Anexo_Comprobaciones
         '--- Llenar datos del ente
         With reporte
             .lblRptNombreEnte.Text = pRPTCFGDatosEntes.Nombre
-            .lblTitulo.Text = "Layout Pagado"
+            .lblTitulo.Text = "Anexo Comprobaciones"
+            .lblSubtitulo.Text = ""
             .lblRptNombreReporte.Text = ""
             .lblRptDescripcionFiltrado.Text = ""
             .lblRptEnteDomicilio.Text = pRPTCFGDatosEntes.Domicilio
@@ -112,7 +113,7 @@ Public Class CtrlUser_RPT_Anexo_Comprobaciones
             .PICEnteLogoSecundario.Image = pRPTCFGDatosEntes.LogoEnteSecundario
 
 
-            .lblRptDescripcionFiltrado.Text = "Ejercicio: " & filterEjercicio.Time.Year.ToString
+            .lblRptDescripcionFiltrado.Text = "Del " + FechaIni.Text + " Al: " + FechaFin.Text
 
             .XrLblUsr.Text = "Generado por: " + MDI_Principal.strUsuario
             Dim cmd As New SqlCommand("SELECT TOP(1) T_Firmas.CodigoISO FROM C_Formatos JOIN T_Firmas ON C_Formatos.IdFormato = T_Firmas.IdFormato  Where Formato='Por Rubro/Tipo' ", New SqlConnection(cnnString))
