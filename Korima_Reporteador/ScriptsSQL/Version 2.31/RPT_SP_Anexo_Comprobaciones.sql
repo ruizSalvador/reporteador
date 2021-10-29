@@ -27,12 +27,14 @@ TV.Folio as OCOS,
 		(Select RFC from RPT_CFG_DatosEntes) as RFCEnte,
 		(Select Nombre from RPT_CFG_DatosEntes) as RSEnte,
 	 TSC.FolioPorTipo as SolicitudEgreso,
-	 CASE  
-			WHEN TC.FolioCheque=0 AND TC.Status = 'L' THEN  (Select CAST(T_Polizas.TipoPoliza as varchar(10)) + ' '  + CAST(T_Polizas.Periodo as varchar (5)) + ' ' + CAST(T_Polizas.NoPoliza as varchar (50)) from T_Polizas where T_Polizas.IdPoliza in (Select top 1 IdPolizaPresupuestoPagado from T_Cheques where T_Cheques.IdCheques = TC.IdChequesAgrupador))
-			WHEN TC.FolioCheque=0 AND TC.Status = 'D' AND TC.Entregado = 0 THEN  'PAGO ELECTRONICO'
-	    ELSE
-		(Select CAST(T_Polizas.TipoPoliza as varchar(10)) + ' '  + CAST(T_Polizas.Periodo as varchar (5)) + ' ' + CAST(T_Polizas.NoPoliza as varchar (50)) from T_Polizas where T_Polizas.IdPoliza = TC.IdPolizaPresupuestoPagado) 
-		END AS PolizaPagado,
+	 --CASE  
+		--	WHEN TC.FolioCheque=0 AND TC.Status = 'L' THEN  (Select CAST(T_Polizas.TipoPoliza as varchar(10)) + ' '  + CAST(T_Polizas.Periodo as varchar (5)) + ' ' + CAST(T_Polizas.NoPoliza as varchar (50)) from T_Polizas where T_Polizas.IdPoliza in (Select top 1 IdPolizaPresupuestoPagado from T_Cheques where T_Cheques.IdCheques = TC.IdChequesAgrupador))
+		--	WHEN TC.FolioCheque=0 AND TC.Status = 'D' AND TC.Entregado = 0 THEN  'PAGO ELECTRONICO'
+	 --   ELSE
+		--(Select CAST(T_Polizas.TipoPoliza as varchar(10)) + ' '  + CAST(T_Polizas.Periodo as varchar (5)) + ' ' + CAST(T_Polizas.NoPoliza as varchar (50)) from T_Polizas where T_Polizas.IdPoliza = TC.IdPolizaPresupuestoPagado) 
+		--END AS PolizaPagado,
+		CAST(POLPAG.TipoPoliza as varchar(10)) + ' '  + CAST(POLPAG.Periodo as varchar (5)) + ' ' + CAST(POLPAG.NoPoliza as varchar (50))  as PolizaPagado,
+
 		--CASE 
 		--	WHEN TC.FolioCheque = 0 AND TC.Status = 'L' THEN (Select top 1 CAST(T_Polizas.TipoPoliza as varchar(10)) + ' '  + CAST(T_Polizas.Periodo as varchar (5)) + ' ' + CAST(T_Polizas.NoPoliza as varchar (50)) from T_Polizas where T_Polizas.IdCheque = TC.IdChequesAgrupador)
 		--	WHEN TC.FolioCheque = 0 AND TC.Status <> 'L' THEN (Select CAST(T_Polizas.TipoPoliza as varchar(10)) + ' '  + CAST(T_Polizas.Periodo as varchar (5)) + ' ' + CAST(T_Polizas.NoPoliza as varchar (50)) from T_Polizas where T_Polizas.IdCheque = TC.IdCheques)
@@ -103,7 +105,7 @@ ON CTCOM.IdTipoCompra = TV.IdTipoCompra
 LEFT JOIN T_SolicitudCheques TSC
 	ON TSC.IdSolicitudCheques = TV.IdSolicitudChequesOriginal
 LEFT JOIN T_Cheques TC
-	ON TSC.IdSolicitudCheques = TC.IdSolicitudCheque
+	ON TSC.IdSolicitudCheques = TC.IdSolicitudCheque and TC.Status in ('D','I')
 LEFT JOIN R_CtasContxCtesProvEmp RCTAS	
 	ON RCTAS.NumeroEmpleado = TV.NumeroEmpleado
 LEFT JOIN C_Contable CCE
@@ -113,15 +115,6 @@ LEFT JOIN T_Polizas TPOL
 	ON TPOL.IdPoliza = TV.IdPoliza
 	LEFT JOIN D_Polizas DP ON DP.IdPoliza = TPOL.IdPoliza AND DP.IdCuentaContable in (Select D_Polizas.IdCuentaContable from D_Polizas join C_Contable on D_Polizas.IdCuentaContable = C_Contable.IdCuentaContable AND NumeroCuenta like '5%' and D_Polizas.IdPoliza = TPOL.IdPoliza)
 	--ON DP.IdPoliza = TPOL.IdPoliza
-
---LEFT JOIN T_AfectacionPresupuesto TAP
---	ON TAP.IdMovimiento = tp.IdPedido and TipoAfectacion = 'C' and TipoMovimientoGenera = 'P' and Cancelacion <> 1
---LEFT JOIN T_Polizas PCOMP
---	ON PCOMP.IdPoliza = TP.IdPoliza
---LEFT JOIN T_Polizas PDEV
---	ON PDEV.IdPoliza = TRF.IdPoliza
---LEFT JOIN T_Polizas PEJER
---	ON PEJER.IdPoliza = TSC.IdPolizaPresupuestoEjercido
 
 
 LEFT JOIN C_Proveedores CP
@@ -133,12 +126,10 @@ LEFT JOIN C_ConceptosNEP As CN ON CN.IdConcepto = CPP.IdConcepto
 LEFT JOIN C_CapitulosNEP As CG ON CG.IdCapitulo = CN.IdCapitulo
 LEFT JOIN C_FuenteFinanciamiento CFF on CFF.IDFUENTEFINANCIAMIENTO = TS.IdFuenteFinanciamiento
 	
---LEFT JOIN T_Cheques TC
---	ON TSC.IdSolicitudCheques = TC.IdSolicitudCheque
---LEFT JOIN T_SolicitudCheques TSC1 
---    on TP.IdSolicitudChequesAnticipo= TSC1.IdSolicitudCheques
---LEFT JOIN T_Cheques TCH  
---    on TCH.IdSolicitudCheque= TSC1.IdSolicitudCheques and TSC1.IdSolicitudCheques not in (Select IdSolicitudChequesOriginal From T_Viaticos)
+	LEFT JOIN T_Polizas POLPAG ON POLPAG.IdPoliza = 
+	CASE 
+WHEN TC.IdPolizaPresupuestoPagado = 0 THEN null 
+ELSE	TC.IdPolizaPresupuestoPagado end
 
 Left JOIN D_Polizas DP2 ON DP2.IdPoliza = --TC.IdPolizaPresupuestoPagado 
 CASE 
@@ -197,7 +188,10 @@ DP.ImporteCargo ,
 DP2.ImporteCargo, 
 TC.CuentaADepositar,
 TV.IdPoliza,
-TSC.Importe
+TSC.Importe,
+POLPAG.Periodo,
+POLPAG.NoPoliza,
+POLPAG.TipoPoliza
 
 order by TV.Folio
 END

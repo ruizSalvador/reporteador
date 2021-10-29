@@ -300,7 +300,7 @@ Partial Public Class RPT_Anexo_Comprobaciones
         Me.XrLabel85.AnchorVertical = CType((DevExpress.XtraReports.UI.VerticalAnchorStyles.Top Or DevExpress.XtraReports.UI.VerticalAnchorStyles.Bottom), DevExpress.XtraReports.UI.VerticalAnchorStyles)
         Me.XrLabel85.Borders = DevExpress.XtraPrinting.BorderSide.None
         Me.XrLabel85.CanGrow = False
-        Me.XrLabel85.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "RPT_SP_Anexo_Comprobacion.ImporteDevuelto", "{0}")})
+        Me.XrLabel85.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "RPT_SP_Anexo_Comprobacion.ImporteDevuelto", "{0:n2}")})
         Me.XrLabel85.Dpi = 254.0!
         Me.XrLabel85.Font = New System.Drawing.Font("Tahoma", 8.0!)
         Me.XrLabel85.LocationFloat = New DevExpress.Utils.PointFloat(9321.875!, 0.0!)
@@ -566,7 +566,7 @@ Partial Public Class RPT_Anexo_Comprobaciones
         Me.XrLabel55.AnchorVertical = CType((DevExpress.XtraReports.UI.VerticalAnchorStyles.Top Or DevExpress.XtraReports.UI.VerticalAnchorStyles.Bottom), DevExpress.XtraReports.UI.VerticalAnchorStyles)
         Me.XrLabel55.Borders = DevExpress.XtraPrinting.BorderSide.None
         Me.XrLabel55.CanGrow = False
-        Me.XrLabel55.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "RPT_SP_Anexo_Comprobacion.MontoPagado", "{0}")})
+        Me.XrLabel55.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "RPT_SP_Anexo_Comprobacion.MontoPagado", "{0:n2}")})
         Me.XrLabel55.Dpi = 254.0!
         Me.XrLabel55.Font = New System.Drawing.Font("Tahoma", 8.0!)
         Me.XrLabel55.LocationFloat = New DevExpress.Utils.PointFloat(3985.989!, 0.002745311!)
@@ -699,7 +699,7 @@ Partial Public Class RPT_Anexo_Comprobaciones
         Me.XrLabel19.AnchorVertical = CType((DevExpress.XtraReports.UI.VerticalAnchorStyles.Top Or DevExpress.XtraReports.UI.VerticalAnchorStyles.Bottom), DevExpress.XtraReports.UI.VerticalAnchorStyles)
         Me.XrLabel19.Borders = DevExpress.XtraPrinting.BorderSide.None
         Me.XrLabel19.CanGrow = False
-        Me.XrLabel19.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "RPT_SP_Anexo_Comprobacion.ImportePolPagado", "{0}")})
+        Me.XrLabel19.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "RPT_SP_Anexo_Comprobacion.ImportePolPagado", "{0:n2}")})
         Me.XrLabel19.Dpi = 254.0!
         Me.XrLabel19.Font = New System.Drawing.Font("Tahoma", 8.0!)
         Me.XrLabel19.LocationFloat = New DevExpress.Utils.PointFloat(1680.425!, 0.002745311!)

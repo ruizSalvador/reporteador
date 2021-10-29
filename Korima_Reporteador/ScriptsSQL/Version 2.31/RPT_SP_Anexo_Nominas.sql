@@ -8,7 +8,7 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 
--- Exec RPT_SP_Anexo_Nominas 1,7,2020
+-- Exec RPT_SP_Anexo_Nominas '20210101','20210228',0
 CREATE PROCEDURE [dbo].[RPT_SP_Anexo_Nominas] 
   
 @FechaIni as DateTime,
@@ -53,13 +53,16 @@ Select
  TC.ImporteCheque,
  TPP.IdTipoMovimiento	AS TipoMovPagado,
  CMOVPDO.Descripcion as DesTipoMovPagado,
-     CASE  
-			WHEN TC.FolioCheque=0 AND TC.Status = 'L' THEN  (Select CAST(T_Polizas.TipoPoliza as varchar(10)) + ' '  + CAST(T_Polizas.Periodo as varchar (5)) + ' ' + CAST(T_Polizas.NoPoliza as varchar (50)) from T_Polizas where T_Polizas.IdPoliza in (Select top 1 IdPolizaPresupuestoPagado from T_Cheques where T_Cheques.IdCheques = TC.IdChequesAgrupador))
-			WHEN TC.FolioCheque=0 AND TC.Status = 'D' AND TC.Entregado = 0 THEN  'PAGO ELECTRONICO'
-	    ELSE
-		(Select CAST(T_Polizas.TipoPoliza as varchar(10)) + ' '  + CAST(T_Polizas.Periodo as varchar (5)) + ' ' + CAST(T_Polizas.NoPoliza as varchar (50)) from T_Polizas where T_Polizas.IdPoliza = TC.IdPolizaPresupuestoPagado) 
-		END AS PolizaPagado,
-		(Select Fecha from T_Polizas where T_Polizas.IdPoliza = TC.IdPolizaPresupuestoPagado) AS FechaPolizaPagado,
+  --   CASE  
+		--	WHEN TC.FolioCheque=0 AND TC.Status = 'L' THEN  (Select CAST(T_Polizas.TipoPoliza as varchar(10)) + ' '  + CAST(T_Polizas.Periodo as varchar (5)) + ' ' + CAST(T_Polizas.NoPoliza as varchar (50)) from T_Polizas where T_Polizas.IdPoliza in (Select top 1 IdPolizaPresupuestoPagado from T_Cheques where T_Cheques.IdCheques = TC.IdChequesAgrupador))
+		--	WHEN TC.FolioCheque=0 AND TC.Status = 'D' AND TC.Entregado = 0 THEN  'PAGO ELECTRONICO'
+	 --   ELSE
+		--(Select CAST(T_Polizas.TipoPoliza as varchar(10)) + ' '  + CAST(T_Polizas.Periodo as varchar (5)) + ' ' + CAST(T_Polizas.NoPoliza as varchar (50)) from T_Polizas where T_Polizas.IdPoliza = TC.IdPolizaPresupuestoPagado) 
+		--END AS PolizaPagado,
+		CAST(TPP.TipoPoliza as varchar(10)) + ' '  + CAST(TPP.Periodo as varchar (5)) + ' ' + CAST(TPP.NoPoliza as varchar (50))  as PolizaPagado,
+
+		--(Select Fecha from T_Polizas where T_Polizas.IdPoliza = TC.IdPolizaPresupuestoPagado) AS FechaPolizaPagado,
+		TPP.Fecha AS FechaPolizaPagado,
 		ISNULL(DP2.ImporteCargo,0) as ImportePolPagado,
 		C2.NumeroCuenta  as CtaPagado,
 		C2.NombreCuenta as DesCtaPagado
@@ -76,7 +79,7 @@ Select
 	LEFT JOIN T_SolicitudCheques TSC
 	ON TSC.IdSolicitudCheques = RNSOL.IdSolicitudCheques
 	LEFT JOIN T_Cheques TC
-	ON TC.IdSolicitudCheque = TSC.IdSolicitudCheques
+	ON TC.IdSolicitudCheque = TSC.IdSolicitudCheques and TC.Status in ('D','I')
 	LEFT JOIN T_SellosPresupuestales As TS  ON DP.IdSelloPresupuestal = TS.IdSelloPresupuestal
 	LEFT JOIN C_PartidasPres As CPP ON CPP.IdPartida = TS.IdPartida
 	LEFT JOIN C_ConceptosNEP As CN ON CN.IdConcepto = CPP.IdConcepto
@@ -84,7 +87,11 @@ Select
 	LEFT JOIN C_FuenteFinanciamiento CFF on CFF.IDFUENTEFINANCIAMIENTO = TS.IdFuenteFinanciamiento
 	LEFT JOIN C_TipoMovPolizas CMOV ON TP.IdTipoMovimiento = CMOV.IdTipoMovimiento
 
-	LEFT JOIN T_Polizas TPP ON TPP.IdPoliza = TC.IdPolizaPresupuestoPagado
+	--LEFT JOIN T_Polizas TPP ON TPP.IdPoliza = TC.IdPolizaPresupuestoPagado
+	LEFT JOIN T_Polizas TPP ON TPP.IdPoliza = 
+	CASE 
+WHEN TC.IdPolizaPresupuestoPagado = 0 THEN null 
+ELSE	TC.IdPolizaPresupuestoPagado end
 	LEFT JOIN C_TipoMovPolizas CMOVPDO ON TPP.IdTipoMovimiento = CMOVPDO.IdTipoMovimiento
 	
 Left JOIN D_Polizas DP2 ON DP2.IdPoliza = --TC.IdPolizaPresupuestoPagado 
@@ -97,7 +104,7 @@ LEFT JOIN C_Contable C2 on C2.IdCuentaContable = DP2.IdCuentaContable
 Group by TIN.Year, TIN.Quincena, TIN.NoNomina, TC.Beneficiario, TP.Concepto, TIN.Importe, TP.TipoPoliza, TP.Periodo, TP.NoPoliza, TP.Fecha, DP.ImporteCargo, DP.IdCuentaContable,
 CG.IdCapitulo, TS.IdPartida, TS.Sello, CPP.DescripcionPartida, CFF.CLAVE, CFF.DESCRIPCION, TP.IdTipoMovimiento, CMOV.Descripcion, TSC.FolioPorTipo, TSC.Fecha, TSC.Beneficiario, TSC.Concepto, TSC.Importe,
 TSC.FolioDesconcentrado, TSC.FechaAprobacion, TC.ImporteCheque, TPP.IdTipoMovimiento, CMOVPDO.Descripcion, TC.Entregado, TC.IdChequesAgrupador, TC.Status, TC.FolioCheque, TC.IdPolizaPresupuestoPagado,
-DP2.ImporteCargo, C2.NumeroCuenta, C2.NombreCuenta, TIN.IdNomina
+DP2.ImporteCargo, C2.NumeroCuenta, C2.NombreCuenta, TIN.IdNomina, TPP.TipoPoliza ,TPP.NoPoliza, TPP.Periodo, TPP.Fecha
 	order by  TIN.IdNomina
 -------------------------------------
 
