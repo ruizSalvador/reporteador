@@ -22,15 +22,21 @@ Partial Public Class RPT_Guia_Cumplimiento_LDF
         Dim prmNota1 As DevExpress.XtraReports.Parameters.Parameter
         Dim XrSummary1 As DevExpress.XtraReports.UI.XRSummary = New DevExpress.XtraReports.UI.XRSummary()
         Me.Detail = New DevExpress.XtraReports.UI.DetailBand()
-        Me.FormattingRule4 = New DevExpress.XtraReports.UI.FormattingRule()
-        Me.DsNotasBenn1 = New Korima_Reporteador.dsNotasBenn()
-        Me.FormattingRule8 = New DevExpress.XtraReports.UI.FormattingRule()
+        Me.XrLabel24 = New DevExpress.XtraReports.UI.XRLabel()
         Me.FormattingRule2 = New DevExpress.XtraReports.UI.FormattingRule()
+        Me.DsNotasBenn1 = New Korima_Reporteador.dsNotasBenn()
+        Me.FormattingRule4 = New DevExpress.XtraReports.UI.FormattingRule()
+        Me.FormattingRule5 = New DevExpress.XtraReports.UI.FormattingRule()
         Me.g1 = New DevExpress.XtraReports.UI.FormattingRule()
         Me.g2 = New DevExpress.XtraReports.UI.FormattingRule()
         Me.g3 = New DevExpress.XtraReports.UI.FormattingRule()
+        Me.XrLabel23 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.XrLabel22 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.XrLabel21 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.XrLabel20 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.XrLabel19 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel8 = New DevExpress.XtraReports.UI.XRLabel()
-        Me.FormattingRule5 = New DevExpress.XtraReports.UI.FormattingRule()
+        Me.FormattingRule8 = New DevExpress.XtraReports.UI.FormattingRule()
         Me.FormattingRule6 = New DevExpress.XtraReports.UI.FormattingRule()
         Me.FormattingRule3 = New DevExpress.XtraReports.UI.FormattingRule()
         Me.FormattingRule7 = New DevExpress.XtraReports.UI.FormattingRule()
@@ -83,12 +89,6 @@ Partial Public Class RPT_Guia_Cumplimiento_LDF
         Me.XrLabel2 = New DevExpress.XtraReports.UI.XRLabel()
         Me.SumaHorizontal = New DevExpress.XtraReports.UI.CalculatedField()
         Me.EvenStyle = New DevExpress.XtraReports.UI.XRControlStyle()
-        Me.XrLabel19 = New DevExpress.XtraReports.UI.XRLabel()
-        Me.XrLabel20 = New DevExpress.XtraReports.UI.XRLabel()
-        Me.XrLabel21 = New DevExpress.XtraReports.UI.XRLabel()
-        Me.XrLabel22 = New DevExpress.XtraReports.UI.XRLabel()
-        Me.XrLabel23 = New DevExpress.XtraReports.UI.XRLabel()
-        Me.XrLabel24 = New DevExpress.XtraReports.UI.XRLabel()
         prmNota1 = New DevExpress.XtraReports.Parameters.Parameter()
         CType(Me.DsNotasBenn1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RpT_FirmasVertical1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -111,6 +111,50 @@ Partial Public Class RPT_Guia_Cumplimiento_LDF
         Me.Detail.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 254.0!)
         Me.Detail.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
         '
+        'XrLabel24
+        '
+        Me.XrLabel24.AnchorVertical = CType((DevExpress.XtraReports.UI.VerticalAnchorStyles.Top Or DevExpress.XtraReports.UI.VerticalAnchorStyles.Bottom), DevExpress.XtraReports.UI.VerticalAnchorStyles)
+        Me.XrLabel24.Borders = DevExpress.XtraPrinting.BorderSide.Right
+        Me.XrLabel24.BorderWidth = 1
+        Me.XrLabel24.CanGrow = False
+        Me.XrLabel24.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "SP_Guia_Cumplimiento_LDF.Comentarios")})
+        Me.XrLabel24.Dpi = 254.0!
+        Me.XrLabel24.EvenStyleName = "EvenStyle"
+        Me.XrLabel24.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.XrLabel24.FormattingRules.Add(Me.FormattingRule2)
+        Me.XrLabel24.FormattingRules.Add(Me.FormattingRule4)
+        Me.XrLabel24.FormattingRules.Add(Me.FormattingRule5)
+        Me.XrLabel24.FormattingRules.Add(Me.g1)
+        Me.XrLabel24.FormattingRules.Add(Me.g2)
+        Me.XrLabel24.FormattingRules.Add(Me.g3)
+        Me.XrLabel24.LocationFloat = New DevExpress.Utils.PointFloat(3378.95!, 0.0!)
+        Me.XrLabel24.Name = "XrLabel24"
+        Me.XrLabel24.Padding = New DevExpress.XtraPrinting.PaddingInfo(10, 5, 0, 0, 254.0!)
+        Me.XrLabel24.SizeF = New System.Drawing.SizeF(300.0!, 79.58672!)
+        Me.XrLabel24.StylePriority.UseBackColor = False
+        Me.XrLabel24.StylePriority.UseBorders = False
+        Me.XrLabel24.StylePriority.UseBorderWidth = False
+        Me.XrLabel24.StylePriority.UseFont = False
+        Me.XrLabel24.StylePriority.UsePadding = False
+        Me.XrLabel24.StylePriority.UseTextAlignment = False
+        Me.XrLabel24.Text = "XrLabel24"
+        Me.XrLabel24.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
+        '
+        'FormattingRule2
+        '
+        Me.FormattingRule2.Condition = "[Negritas]=1"
+        Me.FormattingRule2.DataSource = Me.DsNotasBenn1
+        '
+        '
+        '
+        Me.FormattingRule2.Formatting.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.FormattingRule2.Name = "FormattingRule2"
+        '
+        'DsNotasBenn1
+        '
+        Me.DsNotasBenn1.DataSetName = "dsNotasBenn"
+        Me.DsNotasBenn1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'FormattingRule4
         '
         Me.FormattingRule4.Condition = "[NombreCuenta]='TOTAL'"
@@ -122,31 +166,15 @@ Partial Public Class RPT_Guia_Cumplimiento_LDF
         Me.FormattingRule4.Formatting.BorderWidth = 3
         Me.FormattingRule4.Name = "FormattingRule4"
         '
-        'DsNotasBenn1
+        'FormattingRule5
         '
-        Me.DsNotasBenn1.DataSetName = "dsNotasBenn"
-        Me.DsNotasBenn1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'FormattingRule8
-        '
-        Me.FormattingRule8.Condition = "[NumeroCuenta] like '221%' or" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "[NumeroCuenta] like '222%' "
-        Me.FormattingRule8.DataSource = Me.DsNotasBenn1
+        Me.FormattingRule5.Condition = "[NombreCuenta]='TOTAL'"
+        Me.FormattingRule5.DataSource = Me.DsNotasBenn1
         '
         '
         '
-        Me.FormattingRule8.Formatting.ForeColor = System.Drawing.Color.Transparent
-        Me.FormattingRule8.Formatting.Visible = DevExpress.Utils.DefaultBoolean.[True]
-        Me.FormattingRule8.Name = "FormattingRule8"
-        '
-        'FormattingRule2
-        '
-        Me.FormattingRule2.Condition = "[Negritas]=1"
-        Me.FormattingRule2.DataSource = Me.DsNotasBenn1
-        '
-        '
-        '
-        Me.FormattingRule2.Formatting.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.FormattingRule2.Name = "FormattingRule2"
+        Me.FormattingRule5.Formatting.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight
+        Me.FormattingRule5.Name = "FormattingRule5"
         '
         'g1
         '
@@ -174,6 +202,151 @@ Partial Public Class RPT_Guia_Cumplimiento_LDF
         '
         Me.g3.Formatting.BackColor = System.Drawing.Color.LightGray
         Me.g3.Name = "g3"
+        '
+        'XrLabel23
+        '
+        Me.XrLabel23.AnchorVertical = CType((DevExpress.XtraReports.UI.VerticalAnchorStyles.Top Or DevExpress.XtraReports.UI.VerticalAnchorStyles.Bottom), DevExpress.XtraReports.UI.VerticalAnchorStyles)
+        Me.XrLabel23.Borders = DevExpress.XtraPrinting.BorderSide.Right
+        Me.XrLabel23.BorderWidth = 1
+        Me.XrLabel23.CanGrow = False
+        Me.XrLabel23.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "SP_Guia_Cumplimiento_LDF.Fundamento")})
+        Me.XrLabel23.Dpi = 254.0!
+        Me.XrLabel23.EvenStyleName = "EvenStyle"
+        Me.XrLabel23.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.XrLabel23.FormattingRules.Add(Me.FormattingRule2)
+        Me.XrLabel23.FormattingRules.Add(Me.FormattingRule4)
+        Me.XrLabel23.FormattingRules.Add(Me.FormattingRule5)
+        Me.XrLabel23.FormattingRules.Add(Me.g1)
+        Me.XrLabel23.FormattingRules.Add(Me.g2)
+        Me.XrLabel23.FormattingRules.Add(Me.g3)
+        Me.XrLabel23.LocationFloat = New DevExpress.Utils.PointFloat(3033.971!, 0.0!)
+        Me.XrLabel23.Name = "XrLabel23"
+        Me.XrLabel23.Padding = New DevExpress.XtraPrinting.PaddingInfo(10, 5, 0, 0, 254.0!)
+        Me.XrLabel23.SizeF = New System.Drawing.SizeF(344.979!, 79.58672!)
+        Me.XrLabel23.StylePriority.UseBackColor = False
+        Me.XrLabel23.StylePriority.UseBorders = False
+        Me.XrLabel23.StylePriority.UseBorderWidth = False
+        Me.XrLabel23.StylePriority.UseFont = False
+        Me.XrLabel23.StylePriority.UsePadding = False
+        Me.XrLabel23.StylePriority.UseTextAlignment = False
+        Me.XrLabel23.Text = "XrLabel23"
+        Me.XrLabel23.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
+        '
+        'XrLabel22
+        '
+        Me.XrLabel22.AnchorVertical = CType((DevExpress.XtraReports.UI.VerticalAnchorStyles.Top Or DevExpress.XtraReports.UI.VerticalAnchorStyles.Bottom), DevExpress.XtraReports.UI.VerticalAnchorStyles)
+        Me.XrLabel22.Borders = DevExpress.XtraPrinting.BorderSide.Right
+        Me.XrLabel22.BorderWidth = 1
+        Me.XrLabel22.CanGrow = False
+        Me.XrLabel22.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "SP_Guia_Cumplimiento_LDF.Unidad")})
+        Me.XrLabel22.Dpi = 254.0!
+        Me.XrLabel22.EvenStyleName = "EvenStyle"
+        Me.XrLabel22.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.XrLabel22.FormattingRules.Add(Me.FormattingRule2)
+        Me.XrLabel22.FormattingRules.Add(Me.FormattingRule4)
+        Me.XrLabel22.FormattingRules.Add(Me.FormattingRule5)
+        Me.XrLabel22.FormattingRules.Add(Me.g1)
+        Me.XrLabel22.FormattingRules.Add(Me.g2)
+        Me.XrLabel22.FormattingRules.Add(Me.g3)
+        Me.XrLabel22.LocationFloat = New DevExpress.Utils.PointFloat(2654.596!, 0.0!)
+        Me.XrLabel22.Name = "XrLabel22"
+        Me.XrLabel22.Padding = New DevExpress.XtraPrinting.PaddingInfo(10, 5, 0, 0, 254.0!)
+        Me.XrLabel22.SizeF = New System.Drawing.SizeF(379.3748!, 79.58672!)
+        Me.XrLabel22.StylePriority.UseBackColor = False
+        Me.XrLabel22.StylePriority.UseBorders = False
+        Me.XrLabel22.StylePriority.UseBorderWidth = False
+        Me.XrLabel22.StylePriority.UseFont = False
+        Me.XrLabel22.StylePriority.UsePadding = False
+        Me.XrLabel22.StylePriority.UseTextAlignment = False
+        Me.XrLabel22.Text = "XrLabel22"
+        Me.XrLabel22.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
+        '
+        'XrLabel21
+        '
+        Me.XrLabel21.AnchorVertical = CType((DevExpress.XtraReports.UI.VerticalAnchorStyles.Top Or DevExpress.XtraReports.UI.VerticalAnchorStyles.Bottom), DevExpress.XtraReports.UI.VerticalAnchorStyles)
+        Me.XrLabel21.Borders = DevExpress.XtraPrinting.BorderSide.Right
+        Me.XrLabel21.BorderWidth = 1
+        Me.XrLabel21.CanGrow = False
+        Me.XrLabel21.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "SP_Guia_Cumplimiento_LDF.Monto", "{0:n2}")})
+        Me.XrLabel21.Dpi = 254.0!
+        Me.XrLabel21.EvenStyleName = "EvenStyle"
+        Me.XrLabel21.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.XrLabel21.FormattingRules.Add(Me.FormattingRule2)
+        Me.XrLabel21.FormattingRules.Add(Me.FormattingRule4)
+        Me.XrLabel21.FormattingRules.Add(Me.FormattingRule5)
+        Me.XrLabel21.FormattingRules.Add(Me.g1)
+        Me.XrLabel21.FormattingRules.Add(Me.g2)
+        Me.XrLabel21.FormattingRules.Add(Me.g3)
+        Me.XrLabel21.LocationFloat = New DevExpress.Utils.PointFloat(2275.221!, 0.0!)
+        Me.XrLabel21.Name = "XrLabel21"
+        Me.XrLabel21.Padding = New DevExpress.XtraPrinting.PaddingInfo(10, 5, 0, 0, 254.0!)
+        Me.XrLabel21.SizeF = New System.Drawing.SizeF(379.3748!, 79.58672!)
+        Me.XrLabel21.StylePriority.UseBackColor = False
+        Me.XrLabel21.StylePriority.UseBorders = False
+        Me.XrLabel21.StylePriority.UseBorderWidth = False
+        Me.XrLabel21.StylePriority.UseFont = False
+        Me.XrLabel21.StylePriority.UsePadding = False
+        Me.XrLabel21.StylePriority.UseTextAlignment = False
+        Me.XrLabel21.Text = "XrLabel21"
+        Me.XrLabel21.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight
+        '
+        'XrLabel20
+        '
+        Me.XrLabel20.AnchorVertical = CType((DevExpress.XtraReports.UI.VerticalAnchorStyles.Top Or DevExpress.XtraReports.UI.VerticalAnchorStyles.Bottom), DevExpress.XtraReports.UI.VerticalAnchorStyles)
+        Me.XrLabel20.Borders = DevExpress.XtraPrinting.BorderSide.Right
+        Me.XrLabel20.BorderWidth = 1
+        Me.XrLabel20.CanGrow = False
+        Me.XrLabel20.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "SP_Guia_Cumplimiento_LDF.Fecha")})
+        Me.XrLabel20.Dpi = 254.0!
+        Me.XrLabel20.EvenStyleName = "EvenStyle"
+        Me.XrLabel20.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.XrLabel20.FormattingRules.Add(Me.FormattingRule2)
+        Me.XrLabel20.FormattingRules.Add(Me.FormattingRule4)
+        Me.XrLabel20.FormattingRules.Add(Me.FormattingRule5)
+        Me.XrLabel20.FormattingRules.Add(Me.g1)
+        Me.XrLabel20.FormattingRules.Add(Me.g2)
+        Me.XrLabel20.FormattingRules.Add(Me.g3)
+        Me.XrLabel20.LocationFloat = New DevExpress.Utils.PointFloat(1922.304!, 0.0!)
+        Me.XrLabel20.Name = "XrLabel20"
+        Me.XrLabel20.Padding = New DevExpress.XtraPrinting.PaddingInfo(10, 5, 0, 0, 254.0!)
+        Me.XrLabel20.SizeF = New System.Drawing.SizeF(352.9174!, 79.58672!)
+        Me.XrLabel20.StylePriority.UseBackColor = False
+        Me.XrLabel20.StylePriority.UseBorders = False
+        Me.XrLabel20.StylePriority.UseBorderWidth = False
+        Me.XrLabel20.StylePriority.UseFont = False
+        Me.XrLabel20.StylePriority.UsePadding = False
+        Me.XrLabel20.StylePriority.UseTextAlignment = False
+        Me.XrLabel20.Text = "XrLabel20"
+        Me.XrLabel20.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
+        '
+        'XrLabel19
+        '
+        Me.XrLabel19.AnchorVertical = CType((DevExpress.XtraReports.UI.VerticalAnchorStyles.Top Or DevExpress.XtraReports.UI.VerticalAnchorStyles.Bottom), DevExpress.XtraReports.UI.VerticalAnchorStyles)
+        Me.XrLabel19.Borders = DevExpress.XtraPrinting.BorderSide.Right
+        Me.XrLabel19.BorderWidth = 1
+        Me.XrLabel19.CanGrow = False
+        Me.XrLabel19.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "SP_Guia_Cumplimiento_LDF.Mecanismo")})
+        Me.XrLabel19.Dpi = 254.0!
+        Me.XrLabel19.EvenStyleName = "EvenStyle"
+        Me.XrLabel19.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.XrLabel19.FormattingRules.Add(Me.FormattingRule2)
+        Me.XrLabel19.FormattingRules.Add(Me.FormattingRule4)
+        Me.XrLabel19.FormattingRules.Add(Me.FormattingRule5)
+        Me.XrLabel19.FormattingRules.Add(Me.g1)
+        Me.XrLabel19.FormattingRules.Add(Me.g2)
+        Me.XrLabel19.FormattingRules.Add(Me.g3)
+        Me.XrLabel19.LocationFloat = New DevExpress.Utils.PointFloat(1437.095!, 0.0!)
+        Me.XrLabel19.Name = "XrLabel19"
+        Me.XrLabel19.Padding = New DevExpress.XtraPrinting.PaddingInfo(10, 5, 0, 0, 254.0!)
+        Me.XrLabel19.SizeF = New System.Drawing.SizeF(485.2087!, 79.58672!)
+        Me.XrLabel19.StylePriority.UseBackColor = False
+        Me.XrLabel19.StylePriority.UseBorders = False
+        Me.XrLabel19.StylePriority.UseBorderWidth = False
+        Me.XrLabel19.StylePriority.UseFont = False
+        Me.XrLabel19.StylePriority.UsePadding = False
+        Me.XrLabel19.StylePriority.UseTextAlignment = False
+        Me.XrLabel19.Text = "XrLabel19"
+        Me.XrLabel19.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
         '
         'XrLabel8
         '
@@ -204,15 +377,16 @@ Partial Public Class RPT_Guia_Cumplimiento_LDF
         Me.XrLabel8.Text = "XrLabel8"
         Me.XrLabel8.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
         '
-        'FormattingRule5
+        'FormattingRule8
         '
-        Me.FormattingRule5.Condition = "[NombreCuenta]='TOTAL'"
-        Me.FormattingRule5.DataSource = Me.DsNotasBenn1
+        Me.FormattingRule8.Condition = "[NumeroCuenta] like '221%' or" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "[NumeroCuenta] like '222%' "
+        Me.FormattingRule8.DataSource = Me.DsNotasBenn1
         '
         '
         '
-        Me.FormattingRule5.Formatting.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight
-        Me.FormattingRule5.Name = "FormattingRule5"
+        Me.FormattingRule8.Formatting.ForeColor = System.Drawing.Color.Transparent
+        Me.FormattingRule8.Formatting.Visible = DevExpress.Utils.DefaultBoolean.[True]
+        Me.FormattingRule8.Name = "FormattingRule8"
         '
         'FormattingRule6
         '
@@ -834,180 +1008,6 @@ Partial Public Class RPT_Guia_Cumplimiento_LDF
         '
         Me.EvenStyle.BackColor = System.Drawing.Color.Transparent
         Me.EvenStyle.Name = "EvenStyle"
-        '
-        'XrLabel19
-        '
-        Me.XrLabel19.AnchorVertical = CType((DevExpress.XtraReports.UI.VerticalAnchorStyles.Top Or DevExpress.XtraReports.UI.VerticalAnchorStyles.Bottom), DevExpress.XtraReports.UI.VerticalAnchorStyles)
-        Me.XrLabel19.Borders = DevExpress.XtraPrinting.BorderSide.Right
-        Me.XrLabel19.BorderWidth = 1
-        Me.XrLabel19.CanGrow = False
-        Me.XrLabel19.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "SP_Guia_Cumplimiento_LDF.Mecanismo")})
-        Me.XrLabel19.Dpi = 254.0!
-        Me.XrLabel19.EvenStyleName = "EvenStyle"
-        Me.XrLabel19.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.XrLabel19.FormattingRules.Add(Me.FormattingRule2)
-        Me.XrLabel19.FormattingRules.Add(Me.FormattingRule4)
-        Me.XrLabel19.FormattingRules.Add(Me.FormattingRule5)
-        Me.XrLabel19.FormattingRules.Add(Me.g1)
-        Me.XrLabel19.FormattingRules.Add(Me.g2)
-        Me.XrLabel19.FormattingRules.Add(Me.g3)
-        Me.XrLabel19.LocationFloat = New DevExpress.Utils.PointFloat(1437.095!, 0.0!)
-        Me.XrLabel19.Name = "XrLabel19"
-        Me.XrLabel19.Padding = New DevExpress.XtraPrinting.PaddingInfo(10, 5, 0, 0, 254.0!)
-        Me.XrLabel19.SizeF = New System.Drawing.SizeF(485.2087!, 79.58672!)
-        Me.XrLabel19.StylePriority.UseBackColor = False
-        Me.XrLabel19.StylePriority.UseBorders = False
-        Me.XrLabel19.StylePriority.UseBorderWidth = False
-        Me.XrLabel19.StylePriority.UseFont = False
-        Me.XrLabel19.StylePriority.UsePadding = False
-        Me.XrLabel19.StylePriority.UseTextAlignment = False
-        Me.XrLabel19.Text = "XrLabel19"
-        Me.XrLabel19.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
-        '
-        'XrLabel20
-        '
-        Me.XrLabel20.AnchorVertical = CType((DevExpress.XtraReports.UI.VerticalAnchorStyles.Top Or DevExpress.XtraReports.UI.VerticalAnchorStyles.Bottom), DevExpress.XtraReports.UI.VerticalAnchorStyles)
-        Me.XrLabel20.Borders = DevExpress.XtraPrinting.BorderSide.Right
-        Me.XrLabel20.BorderWidth = 1
-        Me.XrLabel20.CanGrow = False
-        Me.XrLabel20.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "SP_Guia_Cumplimiento_LDF.Fecha")})
-        Me.XrLabel20.Dpi = 254.0!
-        Me.XrLabel20.EvenStyleName = "EvenStyle"
-        Me.XrLabel20.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.XrLabel20.FormattingRules.Add(Me.FormattingRule2)
-        Me.XrLabel20.FormattingRules.Add(Me.FormattingRule4)
-        Me.XrLabel20.FormattingRules.Add(Me.FormattingRule5)
-        Me.XrLabel20.FormattingRules.Add(Me.g1)
-        Me.XrLabel20.FormattingRules.Add(Me.g2)
-        Me.XrLabel20.FormattingRules.Add(Me.g3)
-        Me.XrLabel20.LocationFloat = New DevExpress.Utils.PointFloat(1922.304!, 0.0!)
-        Me.XrLabel20.Name = "XrLabel20"
-        Me.XrLabel20.Padding = New DevExpress.XtraPrinting.PaddingInfo(10, 5, 0, 0, 254.0!)
-        Me.XrLabel20.SizeF = New System.Drawing.SizeF(352.9174!, 79.58672!)
-        Me.XrLabel20.StylePriority.UseBackColor = False
-        Me.XrLabel20.StylePriority.UseBorders = False
-        Me.XrLabel20.StylePriority.UseBorderWidth = False
-        Me.XrLabel20.StylePriority.UseFont = False
-        Me.XrLabel20.StylePriority.UsePadding = False
-        Me.XrLabel20.StylePriority.UseTextAlignment = False
-        Me.XrLabel20.Text = "XrLabel20"
-        Me.XrLabel20.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
-        '
-        'XrLabel21
-        '
-        Me.XrLabel21.AnchorVertical = CType((DevExpress.XtraReports.UI.VerticalAnchorStyles.Top Or DevExpress.XtraReports.UI.VerticalAnchorStyles.Bottom), DevExpress.XtraReports.UI.VerticalAnchorStyles)
-        Me.XrLabel21.Borders = DevExpress.XtraPrinting.BorderSide.Right
-        Me.XrLabel21.BorderWidth = 1
-        Me.XrLabel21.CanGrow = False
-        Me.XrLabel21.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "SP_Guia_Cumplimiento_LDF.Monto")})
-        Me.XrLabel21.Dpi = 254.0!
-        Me.XrLabel21.EvenStyleName = "EvenStyle"
-        Me.XrLabel21.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.XrLabel21.FormattingRules.Add(Me.FormattingRule2)
-        Me.XrLabel21.FormattingRules.Add(Me.FormattingRule4)
-        Me.XrLabel21.FormattingRules.Add(Me.FormattingRule5)
-        Me.XrLabel21.FormattingRules.Add(Me.g1)
-        Me.XrLabel21.FormattingRules.Add(Me.g2)
-        Me.XrLabel21.FormattingRules.Add(Me.g3)
-        Me.XrLabel21.LocationFloat = New DevExpress.Utils.PointFloat(2275.221!, 0.0!)
-        Me.XrLabel21.Name = "XrLabel21"
-        Me.XrLabel21.Padding = New DevExpress.XtraPrinting.PaddingInfo(10, 5, 0, 0, 254.0!)
-        Me.XrLabel21.SizeF = New System.Drawing.SizeF(379.3748!, 79.58672!)
-        Me.XrLabel21.StylePriority.UseBackColor = False
-        Me.XrLabel21.StylePriority.UseBorders = False
-        Me.XrLabel21.StylePriority.UseBorderWidth = False
-        Me.XrLabel21.StylePriority.UseFont = False
-        Me.XrLabel21.StylePriority.UsePadding = False
-        Me.XrLabel21.StylePriority.UseTextAlignment = False
-        Me.XrLabel21.Text = "XrLabel21"
-        Me.XrLabel21.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
-        '
-        'XrLabel22
-        '
-        Me.XrLabel22.AnchorVertical = CType((DevExpress.XtraReports.UI.VerticalAnchorStyles.Top Or DevExpress.XtraReports.UI.VerticalAnchorStyles.Bottom), DevExpress.XtraReports.UI.VerticalAnchorStyles)
-        Me.XrLabel22.Borders = DevExpress.XtraPrinting.BorderSide.Right
-        Me.XrLabel22.BorderWidth = 1
-        Me.XrLabel22.CanGrow = False
-        Me.XrLabel22.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "SP_Guia_Cumplimiento_LDF.Unidad")})
-        Me.XrLabel22.Dpi = 254.0!
-        Me.XrLabel22.EvenStyleName = "EvenStyle"
-        Me.XrLabel22.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.XrLabel22.FormattingRules.Add(Me.FormattingRule2)
-        Me.XrLabel22.FormattingRules.Add(Me.FormattingRule4)
-        Me.XrLabel22.FormattingRules.Add(Me.FormattingRule5)
-        Me.XrLabel22.FormattingRules.Add(Me.g1)
-        Me.XrLabel22.FormattingRules.Add(Me.g2)
-        Me.XrLabel22.FormattingRules.Add(Me.g3)
-        Me.XrLabel22.LocationFloat = New DevExpress.Utils.PointFloat(2654.596!, 0.0!)
-        Me.XrLabel22.Name = "XrLabel22"
-        Me.XrLabel22.Padding = New DevExpress.XtraPrinting.PaddingInfo(10, 5, 0, 0, 254.0!)
-        Me.XrLabel22.SizeF = New System.Drawing.SizeF(379.3748!, 79.58672!)
-        Me.XrLabel22.StylePriority.UseBackColor = False
-        Me.XrLabel22.StylePriority.UseBorders = False
-        Me.XrLabel22.StylePriority.UseBorderWidth = False
-        Me.XrLabel22.StylePriority.UseFont = False
-        Me.XrLabel22.StylePriority.UsePadding = False
-        Me.XrLabel22.StylePriority.UseTextAlignment = False
-        Me.XrLabel22.Text = "XrLabel22"
-        Me.XrLabel22.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
-        '
-        'XrLabel23
-        '
-        Me.XrLabel23.AnchorVertical = CType((DevExpress.XtraReports.UI.VerticalAnchorStyles.Top Or DevExpress.XtraReports.UI.VerticalAnchorStyles.Bottom), DevExpress.XtraReports.UI.VerticalAnchorStyles)
-        Me.XrLabel23.Borders = DevExpress.XtraPrinting.BorderSide.Right
-        Me.XrLabel23.BorderWidth = 1
-        Me.XrLabel23.CanGrow = False
-        Me.XrLabel23.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "SP_Guia_Cumplimiento_LDF.Fundamento")})
-        Me.XrLabel23.Dpi = 254.0!
-        Me.XrLabel23.EvenStyleName = "EvenStyle"
-        Me.XrLabel23.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.XrLabel23.FormattingRules.Add(Me.FormattingRule2)
-        Me.XrLabel23.FormattingRules.Add(Me.FormattingRule4)
-        Me.XrLabel23.FormattingRules.Add(Me.FormattingRule5)
-        Me.XrLabel23.FormattingRules.Add(Me.g1)
-        Me.XrLabel23.FormattingRules.Add(Me.g2)
-        Me.XrLabel23.FormattingRules.Add(Me.g3)
-        Me.XrLabel23.LocationFloat = New DevExpress.Utils.PointFloat(3033.971!, 0.0!)
-        Me.XrLabel23.Name = "XrLabel23"
-        Me.XrLabel23.Padding = New DevExpress.XtraPrinting.PaddingInfo(10, 5, 0, 0, 254.0!)
-        Me.XrLabel23.SizeF = New System.Drawing.SizeF(344.979!, 79.58672!)
-        Me.XrLabel23.StylePriority.UseBackColor = False
-        Me.XrLabel23.StylePriority.UseBorders = False
-        Me.XrLabel23.StylePriority.UseBorderWidth = False
-        Me.XrLabel23.StylePriority.UseFont = False
-        Me.XrLabel23.StylePriority.UsePadding = False
-        Me.XrLabel23.StylePriority.UseTextAlignment = False
-        Me.XrLabel23.Text = "XrLabel23"
-        Me.XrLabel23.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
-        '
-        'XrLabel24
-        '
-        Me.XrLabel24.AnchorVertical = CType((DevExpress.XtraReports.UI.VerticalAnchorStyles.Top Or DevExpress.XtraReports.UI.VerticalAnchorStyles.Bottom), DevExpress.XtraReports.UI.VerticalAnchorStyles)
-        Me.XrLabel24.Borders = DevExpress.XtraPrinting.BorderSide.Right
-        Me.XrLabel24.BorderWidth = 1
-        Me.XrLabel24.CanGrow = False
-        Me.XrLabel24.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "SP_Guia_Cumplimiento_LDF.Comentarios")})
-        Me.XrLabel24.Dpi = 254.0!
-        Me.XrLabel24.EvenStyleName = "EvenStyle"
-        Me.XrLabel24.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.XrLabel24.FormattingRules.Add(Me.FormattingRule2)
-        Me.XrLabel24.FormattingRules.Add(Me.FormattingRule4)
-        Me.XrLabel24.FormattingRules.Add(Me.FormattingRule5)
-        Me.XrLabel24.FormattingRules.Add(Me.g1)
-        Me.XrLabel24.FormattingRules.Add(Me.g2)
-        Me.XrLabel24.FormattingRules.Add(Me.g3)
-        Me.XrLabel24.LocationFloat = New DevExpress.Utils.PointFloat(3378.95!, 0.0!)
-        Me.XrLabel24.Name = "XrLabel24"
-        Me.XrLabel24.Padding = New DevExpress.XtraPrinting.PaddingInfo(10, 5, 0, 0, 254.0!)
-        Me.XrLabel24.SizeF = New System.Drawing.SizeF(300.0!, 79.58672!)
-        Me.XrLabel24.StylePriority.UseBackColor = False
-        Me.XrLabel24.StylePriority.UseBorders = False
-        Me.XrLabel24.StylePriority.UseBorderWidth = False
-        Me.XrLabel24.StylePriority.UseFont = False
-        Me.XrLabel24.StylePriority.UsePadding = False
-        Me.XrLabel24.StylePriority.UseTextAlignment = False
-        Me.XrLabel24.Text = "XrLabel24"
-        Me.XrLabel24.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
         '
         'RPT_Guia_Cumplimiento_LDF
         '

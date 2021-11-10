@@ -50,10 +50,10 @@ Public Class CtrlUser_RPT_Guia_Cumplimiento_LDF
         Dim conection As New SqlConnection(cnnString)
         'Dim prmPeriodo As New SqlParameter("Mes1", Month(filterPeriodoDe.EditValue))
         'Dim prmPeriodo2 As New SqlParameter("Mes2", Month(filterPeriodoDe2.EditValue))
-        'Dim prmEjercicio As New SqlParameter("Ejercicio", Year(filterPeriodoAl.EditValue))
+        Dim prmEjercicio As New SqlParameter("Ejercicio", Year(filterPeriodoAl.EditValue))
         Dim command As New SqlCommand("SP_Guia_Cumplimiento_LDF", conection)
         command.CommandType = CommandType.StoredProcedure
-        'command.Parameters.Add(prmEjercicio)
+        command.Parameters.Add(prmEjercicio)
         'command.Parameters.Add(prmPeriodo)
         'command.Parameters.Add(prmPeriodo2)
         Dim adapter As New SqlDataAdapter(command)

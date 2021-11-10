@@ -27,22 +27,13 @@ TV.Folio as OCOS,
 		(Select RFC from RPT_CFG_DatosEntes) as RFCEnte,
 		(Select Nombre from RPT_CFG_DatosEntes) as RSEnte,
 	 TSC.FolioPorTipo as SolicitudEgreso,
-	 --CASE  
-		--	WHEN TC.FolioCheque=0 AND TC.Status = 'L' THEN  (Select CAST(T_Polizas.TipoPoliza as varchar(10)) + ' '  + CAST(T_Polizas.Periodo as varchar (5)) + ' ' + CAST(T_Polizas.NoPoliza as varchar (50)) from T_Polizas where T_Polizas.IdPoliza in (Select top 1 IdPolizaPresupuestoPagado from T_Cheques where T_Cheques.IdCheques = TC.IdChequesAgrupador))
-		--	WHEN TC.FolioCheque=0 AND TC.Status = 'D' AND TC.Entregado = 0 THEN  'PAGO ELECTRONICO'
-	 --   ELSE
-		--(Select CAST(T_Polizas.TipoPoliza as varchar(10)) + ' '  + CAST(T_Polizas.Periodo as varchar (5)) + ' ' + CAST(T_Polizas.NoPoliza as varchar (50)) from T_Polizas where T_Polizas.IdPoliza = TC.IdPolizaPresupuestoPagado) 
-		--END AS PolizaPagado,
+
 		CAST(POLPAG.TipoPoliza as varchar(10)) + ' '  + CAST(POLPAG.Periodo as varchar (5)) + ' ' + CAST(POLPAG.NoPoliza as varchar (50))  as PolizaPagado,
 
-		--CASE 
-		--	WHEN TC.FolioCheque = 0 AND TC.Status = 'L' THEN (Select top 1 CAST(T_Polizas.TipoPoliza as varchar(10)) + ' '  + CAST(T_Polizas.Periodo as varchar (5)) + ' ' + CAST(T_Polizas.NoPoliza as varchar (50)) from T_Polizas where T_Polizas.IdCheque = TC.IdChequesAgrupador)
-		--	WHEN TC.FolioCheque = 0 AND TC.Status <> 'L' THEN (Select CAST(T_Polizas.TipoPoliza as varchar(10)) + ' '  + CAST(T_Polizas.Periodo as varchar (5)) + ' ' + CAST(T_Polizas.NoPoliza as varchar (50)) from T_Polizas where T_Polizas.IdCheque = TC.IdCheques)
-		--ELSE	
-	 --   (Select CAST(T_Polizas.TipoPoliza as varchar(10)) + ' '  + CAST(T_Polizas.Periodo as varchar (5)) + ' ' + CAST(T_Polizas.NoPoliza as varchar (50)) from T_Polizas where T_Polizas.IdCheque = TC.IdCheques)
-		--END AS PolizaPagado,
+
 		--(Select Fecha from T_Polizas where T_Polizas.IdCheque = TC.IdCheques) AS FechaPolizaPagado,
-		(Select Fecha from T_Polizas where T_Polizas.IdPoliza = TC.IdPolizaPresupuestoPagado) AS FechaPolizaPagado,
+		POLPAG.Fecha AS FechaPolizaPagado,
+		--(Select Fecha from T_Polizas where T_Polizas.IdPoliza = TC.IdPolizaPresupuestoPagado) AS FechaPolizaPagado,
 		'' EstatusPolPagado,
 	    (Select TotalCargos from T_Polizas where T_Polizas.IdPoliza = TC.IdPolizaPresupuestoPagado) AS ImportePolPagado,
 		CCE.NumeroCuenta as CuentaDeudor,
@@ -75,18 +66,8 @@ TV.Folio as OCOS,
 		null as CuentaImporteDevuelto,
 		null as PolImpDevuelto,
 		null as FechaPolImpDevuelto,
-	    
-		 
-		-- CAST(PDEV.TipoPoliza as varchar(10)) + ' '  + CAST(PDEV.Periodo as varchar (5)) + ' ' + CAST(PDEV.NoPoliza as varchar (50))  as PolizaDevengado,
-		--PDEV.Fecha as FechaPolizaDevengado,
-	--'' as EstatusPolDevengado,
-	--CFF.CLAVE as FF,
-
 			
 		ISNULL(DP2.ImporteCargo,0) as ImportePolPagado,
-		
-		--'' AS ComprobanteBancario,
-		--TC.Fecha as FechaCheque,
 		
 		TC.CuentaADepositar as CuentaBancariaProv,
 		--CBPROV.NombreBanco as BancoProv,
@@ -102,8 +83,14 @@ LEFT JOIN C_TiposCompra CTCOM
 ON CTCOM.IdTipoCompra = TV.IdTipoCompra
 
 
-LEFT JOIN T_SolicitudCheques TSC
-	ON TSC.IdSolicitudCheques = TV.IdSolicitudChequesOriginal
+--LEFT JOIN T_SolicitudCheques TSC
+--	ON TSC.IdSolicitudCheques = TV.IdSolicitudChequesOriginal
+
+		LEFT JOIN T_SolicitudCheques TSC ON TSC.IdSolicitudCheques = 
+	CASE 
+WHEN TV.CajaChica = 0 THEN TV.IdSolicitudChequesOriginal 
+ELSE	TV.IdSolicitudChequesGenerado end
+
 LEFT JOIN T_Cheques TC
 	ON TSC.IdSolicitudCheques = TC.IdSolicitudCheque and TC.Status in ('D','I')
 LEFT JOIN R_CtasContxCtesProvEmp RCTAS	
@@ -137,9 +124,6 @@ WHEN TC.IdPolizaPresupuestoPagado = 0 THEN null
 ELSE TC.IdPolizaPresupuestoPagado end AND DP2.IdCuentaContable in (Select D_Polizas.IdCuentaContable from D_Polizas join C_Contable on D_Polizas.IdCuentaContable = C_Contable.IdCuentaContable AND NumeroCuenta like '827%' and D_Polizas.IdPoliza = TC.IdPolizaPresupuestoPagado)
 LEFT JOIN C_Contable C2 on C2.IdCuentaContable = DP2.IdCuentaContable
 
---LEFT JOIN T_Contratos TCON ON TP.IdContrato = TCON.Contrato
---LEFT JOIN C_Proveedores CPROVCONT 
---ON TCON.IdProveedor = CPROVCONT.IdProveedor  
 LEFT JOIN C_CuentasBancarias CCB
 on TC.IdCuentaBancaria= CCB.IdCuentaBancaria 
 LEFT JOIN C_Bancos CB
@@ -151,6 +135,7 @@ LEFT JOIN C_Bancos CBPROV
 ON CBPROV.IdBanco = TC.IdBancoADespositar
 --Where TV.Folio > 0
 Where  (TV.Fecha >= @FechaIni and TV.Fecha <= @FechaFin)
+--AND TV.CajaChica = 0
 AND CP.IdProveedor = CASE WHEN @IdProv = 0 THEN CP.IdProveedor ELSE @IdProv END
 
 Group by TV.Folio,
@@ -191,7 +176,10 @@ TV.IdPoliza,
 TSC.Importe,
 POLPAG.Periodo,
 POLPAG.NoPoliza,
-POLPAG.TipoPoliza
+POLPAG.TipoPoliza,
+POLPAG.Fecha
+
 
 order by TV.Folio
+
 END
