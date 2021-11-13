@@ -53,27 +53,23 @@ Select
  TC.ImporteCheque,
  TPP.IdTipoMovimiento	AS TipoMovPagado,
  CMOVPDO.Descripcion as DesTipoMovPagado,
-  --   CASE  
-		--	WHEN TC.FolioCheque=0 AND TC.Status = 'L' THEN  (Select CAST(T_Polizas.TipoPoliza as varchar(10)) + ' '  + CAST(T_Polizas.Periodo as varchar (5)) + ' ' + CAST(T_Polizas.NoPoliza as varchar (50)) from T_Polizas where T_Polizas.IdPoliza in (Select top 1 IdPolizaPresupuestoPagado from T_Cheques where T_Cheques.IdCheques = TC.IdChequesAgrupador))
-		--	WHEN TC.FolioCheque=0 AND TC.Status = 'D' AND TC.Entregado = 0 THEN  'PAGO ELECTRONICO'
-	 --   ELSE
-		--(Select CAST(T_Polizas.TipoPoliza as varchar(10)) + ' '  + CAST(T_Polizas.Periodo as varchar (5)) + ' ' + CAST(T_Polizas.NoPoliza as varchar (50)) from T_Polizas where T_Polizas.IdPoliza = TC.IdPolizaPresupuestoPagado) 
-		--END AS PolizaPagado,
+
 		CAST(TPP.TipoPoliza as varchar(10)) + ' '  + CAST(TPP.Periodo as varchar (5)) + ' ' + CAST(TPP.NoPoliza as varchar (50))  as PolizaPagado,
 
 		--(Select Fecha from T_Polizas where T_Polizas.IdPoliza = TC.IdPolizaPresupuestoPagado) AS FechaPolizaPagado,
 		TPP.Fecha AS FechaPolizaPagado,
-		ISNULL(DP2.ImporteCargo,0) as ImportePolPagado,
-		C2.NumeroCuenta  as CtaPagado,
-		C2.NombreCuenta as DesCtaPagado
+		--ISNULL(DP2.ImporteCargo,0) as ImportePolPagado,
+		--C2.NumeroCuenta  as CtaPagado,
+		--C2.NombreCuenta as DesCtaPagado
+				(Select ImporteCargo from D_Polizas join C_Contable on D_Polizas.IdCuentaContable = C_Contable.IdCuentaContable AND NumeroCuenta like '827%'  and D_Polizas.IdSelloPresupuestal = DP.IdSelloPresupuestal and IdPoliza = TC.IdPolizaPresupuestoPagado) as ImportePolPagado,
+		(Select NumeroCuenta from D_Polizas join C_Contable on D_Polizas.IdCuentaContable = C_Contable.IdCuentaContable AND NumeroCuenta like '827%'  and D_Polizas.IdSelloPresupuestal = DP.IdSelloPresupuestal and IdPoliza = TC.IdPolizaPresupuestoPagado) as CtaPagado,
+		(Select NombreCuenta from D_Polizas join C_Contable on D_Polizas.IdCuentaContable = C_Contable.IdCuentaContable AND NumeroCuenta like '827%'  and D_Polizas.IdSelloPresupuestal = DP.IdSelloPresupuestal and IdPoliza = TC.IdPolizaPresupuestoPagado) as DesCtaPagado
 
 	FROM T_ImportaNomina TIN
 	LEFT JOIN T_Polizas TP
 	ON TIN.IdPoliza = TP.IdPoliza and TP.IdTipoMovimiento = CASE WHEN @TipoMov = 0 THEN TP.IdTipoMovimiento ELSE @TipoMov END
 	LEFT JOIN D_Polizas DP ON DP.IdPoliza = TP.IdPoliza AND DP.IdCuentaContable in (Select D_Polizas.IdCuentaContable from D_Polizas join C_Contable on D_Polizas.IdCuentaContable = C_Contable.IdCuentaContable AND NumeroCuenta like '5%' and D_Polizas.IdPoliza = TP.IdPoliza)
 
-	--LEFT JOIN D_Polizas DP ON DP.IdPoliza = TP.IdPoliza
-	--left  JOIN C_Contable CCON ON CCON.IdCuentaContable = DP.IdCuentaContable and CCON.NumeroCuenta like '5%'
 	LEFT JOIN R_NominaSolEgresos RNSOL
 	ON TIN.IdNomina = RNSOL.IdNomina
 	LEFT JOIN T_SolicitudCheques TSC
@@ -94,17 +90,19 @@ WHEN TC.IdPolizaPresupuestoPagado = 0 THEN null
 ELSE	TC.IdPolizaPresupuestoPagado end
 	LEFT JOIN C_TipoMovPolizas CMOVPDO ON TPP.IdTipoMovimiento = CMOVPDO.IdTipoMovimiento
 	
-Left JOIN D_Polizas DP2 ON DP2.IdPoliza = --TC.IdPolizaPresupuestoPagado 
-CASE 
-WHEN TC.IdPolizaPresupuestoPagado = 0 THEN null
-ELSE TC.IdPolizaPresupuestoPagado end AND DP2.IdCuentaContable in (Select D_Polizas.IdCuentaContable from D_Polizas join C_Contable on D_Polizas.IdCuentaContable = C_Contable.IdCuentaContable AND NumeroCuenta like '827%' and D_Polizas.IdPoliza = TC.IdPolizaPresupuestoPagado)
-LEFT JOIN C_Contable C2 on C2.IdCuentaContable = DP2.IdCuentaContable
+--Left JOIN D_Polizas DP2 ON DP2.IdPoliza = --TC.IdPolizaPresupuestoPagado 
+--CASE 
+--WHEN TC.IdPolizaPresupuestoPagado = 0 THEN null
+--ELSE TC.IdPolizaPresupuestoPagado end AND DP2.IdCuentaContable in (Select D_Polizas.IdCuentaContable from D_Polizas join C_Contable on D_Polizas.IdCuentaContable = C_Contable.IdCuentaContable AND NumeroCuenta like '827%' and D_Polizas.IdPoliza = TC.IdPolizaPresupuestoPagado)
+--LEFT JOIN C_Contable C2 on C2.IdCuentaContable = DP2.IdCuentaContable
 	Where  (TIN.FechaPago >= @FechaIni and TIN.FechaPago <= @FechaFin)
 
 Group by TIN.Year, TIN.Quincena, TIN.NoNomina, TC.Beneficiario, TP.Concepto, TIN.Importe, TP.TipoPoliza, TP.Periodo, TP.NoPoliza, TP.Fecha, DP.ImporteCargo, DP.IdCuentaContable,
 CG.IdCapitulo, TS.IdPartida, TS.Sello, CPP.DescripcionPartida, CFF.CLAVE, CFF.DESCRIPCION, TP.IdTipoMovimiento, CMOV.Descripcion, TSC.FolioPorTipo, TSC.Fecha, TSC.Beneficiario, TSC.Concepto, TSC.Importe,
 TSC.FolioDesconcentrado, TSC.FechaAprobacion, TC.ImporteCheque, TPP.IdTipoMovimiento, CMOVPDO.Descripcion, TC.Entregado, TC.IdChequesAgrupador, TC.Status, TC.FolioCheque, TC.IdPolizaPresupuestoPagado,
-DP2.ImporteCargo, C2.NumeroCuenta, C2.NombreCuenta, TIN.IdNomina, TPP.TipoPoliza ,TPP.NoPoliza, TPP.Periodo, TPP.Fecha
+DP.IdSelloPresupuestal,
+--DP2.ImporteCargo, C2.NumeroCuenta, C2.NombreCuenta, 
+TIN.IdNomina, TPP.TipoPoliza ,TPP.NoPoliza, TPP.Periodo, TPP.Fecha
 	order by  TIN.IdNomina
 -------------------------------------
 
