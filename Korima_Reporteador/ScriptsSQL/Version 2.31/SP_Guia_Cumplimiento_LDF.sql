@@ -13,7 +13,6 @@ CREATE PROCEDURE [dbo].[SP_Guia_Cumplimiento_LDF]
 
 @Ejercicio int
 
-
 AS
 BEGIN
 
@@ -130,7 +129,7 @@ Group by  CG.IdCapitulo, CG.Descripcion, CF.CLAVE,
 CP.DescripcionPartida, CP.IdPartida--, TS.IdFuenteFinanciamiento 
 Order by  CG.IdCapitulo 
 
---Select * from @Egresos
+
 -----------------------------------------------------------------------------------------------
 
 Declare @PresupuestoFlujo as Table (
@@ -151,13 +150,13 @@ SELECT * from T_PresupuestoFlujo
 where (mes between 1 and 12 ) and Ejercicio = @Ejercicio
 
 
-Declare @Ingresos as table(ClaveFF varchar(100), DescripcionFF varchar(max),-- IdPartida int, DescripcionPartida Varchar(max),
+Declare @Ingresos as table(ClaveFF varchar(100), DescripcionFF varchar(max),
 Estimado decimal(18,4), Modificado decimal(18,4),
 Devengado decimal(18,4), Recaudado decimal(18,4))
 
 
 Insert Into @Ingresos
-SELECT    -- C_ClasificacionGasto_3.Descripcion AS Clasificacion, 
+SELECT    
  C_FuenteFinanciamiento.CLAVE, 
                       C_FuenteFinanciamiento.DESCRIPCION ,
 					  SUM(MovimientosPresupuesto.Estimado) AS Total_Estimado, 
@@ -179,14 +178,12 @@ SELECT    -- C_ClasificacionGasto_3.Descripcion AS Clasificacion,
                       C_FuenteFinanciamiento.DESCRIPCION ,C_FuenteFinanciamiento.CLAVE
 
 
-	--Select * from @Ingresos
 ---------------------------------------------------------------
 UPDATE @Titulos set Monto = (Select ISNULL(SUM(Estimado),0) from @Ingresos)-((Select ISNULL(SUM(Autorizado),0) from @Egresos) - (Select ISNULL(SUM(Autorizado),0) from @Egresos Where LEFT(IdPartida,2) = '91')) Where Orden = 4
 --UPDATE @Titulos set Monto = (Select ISNULL(SUM(Estimado),0) from @Ingresos)-(Select ISNULL(SUM(Autorizado),0) from @Egresos Where LEFT(IdPartida,2) not in ('91')) Where Orden = 4
 UPDATE @Titulos set Monto = (Select ISNULL(SUM(Devengado),0) from @Ingresos)-(Select ISNULL(SUM(Devengado),0) from @Egresos ) Where Orden = 5
 
 UPDATE @Titulos set Monto = (Select ISNULL(SUM(Estimado),0) from @Ingresos Where LEFT(ClaveFF,2) not in ('25','26','27'))-((Select ISNULL(SUM(Autorizado),0) from @Egresos Where LEFT(ClaveFF,2) not in ('25','26','27')) - (Select ISNULL(SUM(Autorizado),0) from @Egresos Where LEFT(IdPartida,2) = '91' AND LEFT(ClaveFF,2) not in ('25','26','27'))) Where Orden = 8
---UPDATE @Titulos set Monto = (Select ISNULL(SUM(Estimado),0) from @Ingresos Where LEFT(ClaveFF,2) not in ('25','26','27'))-(Select ISNULL(SUM(Autorizado),0) from @Egresos Where LEFT(IdPartida,2) not in ('91') and  LEFT(ClaveFF,2) not in ('25','26','27')) Where Orden = 8
 UPDATE @Titulos set Monto = (Select ISNULL(SUM(Devengado),0) from @Ingresos Where LEFT(ClaveFF,2) not in ('25','26','27'))-(Select ISNULL(SUM(Devengado),0) from @Egresos Where LEFT(ClaveFF,2) not in ('25','26','27')) Where Orden = 9
 
 UPDATE @Titulos set Monto = (Select ISNULL(SUM(Autorizado),0) from @Egresos Where LEFT(IdCapitulo,1) = '1') Where Orden = 22
