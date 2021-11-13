@@ -10,7 +10,7 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 
---SP_RPT_BalancePresupuestario 1,12,2020,0
+-- SP_RPT_BalancePresupuestario 1,12,2020,0
 CREATE PROCEDURE [dbo].[SP_RPT_BalancePresupuestario]
 
 @Mes1 int,
@@ -74,7 +74,10 @@ sum(ISNULL(TP.Devengado,0)) -  sum(ISNULL(TP.Ejercido,0)) AS Deuda,
 (sum(ISNULL(TP.Autorizado,0)) + (sum(ISNULL(TP.Ampliaciones,0)) + sum(ISNULL(TP.TransferenciaAmp,0))) - (sum(ISNULL(TP.Reducciones,0)) + sum(ISNULL(TP.TransferenciaRed,0))))-
 sum(ISNULL(TP.Comprometido,0)) as SubEjercicio  
 
-From T_PresupuestoNW As TP, T_SellosPresupuestales As TS, C_PartidasPres As CP   ,c_fuentefinanciamiento FF
+--From T_PresupuestoNW As TP, T_SellosPresupuestales As TS, C_PartidasPres As CP   ,c_fuentefinanciamiento FF
+From T_PresupuestoNW As TP JOIN T_SellosPresupuestales As TS ON TP.IdSelloPresupuestal = TS.IdSelloPresupuestal
+			LEFT JOIN C_PartidasPres As CP ON CP.IdPartida = TS.IdPartida
+			LEFT JOIN C_FuenteFinanciamiento FF  ON FF.IDFUENTEFINANCIAMIENTO = TS.IdFuenteFinanciamiento 
 where  (Mes BETWEEN @Mes1 AND @Mes2) AND LYear=@Ejercicio AND Year=@Ejercicio and  TP.IdSelloPresupuestal = TS.IdSelloPresupuestal  
 and CP.IdPartida = TS.IdPartida   and TS.IdFuenteFinanciamiento = FF.IDFUENTEFINANCIAMIENTO
 group by TP.IdSelloPresupuestal, TS.Sello, CP.IdPartida, CP.IdConcepto  ,FF.IdClave
@@ -110,7 +113,7 @@ INSERT INTO @Titulos  values ('   B2. Gasto Etiquetado (sin incluir Amortización
 INSERT INTO @Titulos  values ('C.Remanentes del Ejercicio Anterior ( C = C1 + C 2)',0,0,0,1,1,8)  
 INSERT INTO @Titulos  values ('   C1. Remanentes de Ingresos de Libre Disposición aplicados en el periodo',0,0,0,0,1,9)  
 INSERT INTO @Titulos  values ('   C2. Remanentes de Transferencias Federales Etiquetadas Aplicados en el periodo',0,0,0,0,1,10)  
-INSERT INTO @Titulos  values ('I. Balance Presupuestario (I = A-B + C ))',0,0,0,1,1,11)  
+INSERT INTO @Titulos  values ('I. Balance Presupuestario (I = A - B + C ))',0,0,0,1,1,11)  
 INSERT INTO @Titulos  values ('II. Balance Presupuestario sin Financiamiento Neto (II= I - A3)',0,0,0,1,1,12)  
 INSERT INTO @Titulos  values ('III. Balance Presupuestario sin Financiamiento Neto y sin Remanentes del Ejercicio Anterior (III= II - C)',0,0,0,1,1,13)  
   
@@ -146,14 +149,14 @@ INSERT INTO @Titulos  values ('VII. Balance Presupuestario de Recuros Etiquetado
 INSERT INTO @Titulos  values ('VIII. Balance Presupuestario de Recursos Etiquetados sin Financiamiento Neto ( VIII = VII - A3.2)',0,0,0,1,5,40)  
   
 
-Update @Titulos set Estimado = ISNULL((Select SUM(Estimado) from @DataING where SUBSTRING(Clave,6,1) in ('1','2','3','4','5','6','7','9')),0),  
-    Devengado = ISNULL((Select SUM(Devengado) from @DataING where SUBSTRING(Clave,6,1) in ('1','2','3','4','5','6','7','9')),0),  
-    Recaudado  = ISNULL((Select SUM(Recaudado) from @DataING where SUBSTRING(Clave,6,1) in ('1','2','3','4','5','6','7','9')),0)  
+Update @Titulos set Estimado = ISNULL((Select SUM(Estimado) from @DataING Where (SUBSTRING(Clave,6,1) in ('1','2','3','4','5','6','7') AND IdClaveFF in (11,14,15,16,17))  OR (SUBSTRING(Clave,6,2) in ('81','82','83','84','85','91','93','95','97','99')AND IdClaveFF in (11,14,15,16,17))),0),  
+    Devengado = ISNULL((Select SUM(Devengado) from @DataING Where (SUBSTRING(Clave,6,1) in ('1','2','3','4','5','6','7') AND IdClaveFF in (11,14,15,16,17))  OR (SUBSTRING(Clave,6,2) in ('81','82','83','84','85','91','93','95','97','99')AND IdClaveFF in (11,14,15,16,17))),0),  
+    Recaudado  = ISNULL((Select SUM(Recaudado) from @DataING Where (SUBSTRING(Clave,6,1) in ('1','2','3','4','5','6','7') AND IdClaveFF in (11,14,15,16,17))  OR (SUBSTRING(Clave,6,2) in ('81','82','83','84','85','91','93','95','97','99')AND IdClaveFF in (11,14,15,16,17))),0)  
     Where Orden in (2,25)  
 
-Update @Titulos set Estimado = ISNULL((Select SUM(Estimado) from @DataING where SUBSTRING(Clave,6,1) in ('8')),0),  
-    Devengado = ISNULL((Select SUM(Devengado) from @DataING where SUBSTRING(Clave,6,1) in ('8')),0),  
-    Recaudado  = ISNULL((Select SUM(Recaudado) from @DataING where SUBSTRING(Clave,6,1) in ('8')),0)  
+Update @Titulos set Estimado = ISNULL((Select SUM(Estimado) from @DataING Where (SUBSTRING(Clave,6,1) in ('1','2','3','4','5','6','7') AND IdClaveFF in (25,26,27))  OR (SUBSTRING(Clave,6,2) in ('81','82','83','84','85','91','93','95','97','99')AND IdClaveFF in (25,26,27))),0),  
+    Devengado = ISNULL((Select SUM(Devengado) from @DataING Where (SUBSTRING(Clave,6,1) in ('1','2','3','4','5','6','7') AND IdClaveFF in (25,26,27))  OR (SUBSTRING(Clave,6,2) in ('81','82','83','84','85','91','93','95','97','99')AND IdClaveFF in (25,26,27))),0),  
+    Recaudado  = ISNULL((Select SUM(Recaudado) from @DataING Where (SUBSTRING(Clave,6,1) in ('1','2','3','4','5','6','7') AND IdClaveFF in (25,26,27))  OR (SUBSTRING(Clave,6,2) in ('81','82','83','84','85','91','93','95','97','99')AND IdClaveFF in (25,26,27))),0)  
     Where Orden in (3,33)  
   
 Update @Titulos set Estimado = ISNULL((Select SUM(Estimado) from @DataING where SUBSTRING(Clave,6,1) in ('0')),0),  
@@ -162,25 +165,25 @@ Update @Titulos set Estimado = ISNULL((Select SUM(Estimado) from @DataING where 
     Where Orden = 4  
   
   --KAZB 
-	Update @Titulos set Devengado = ISNULL((Select SUM(Devengado) from @DataING where SUBSTRING(Clave,6,1) in ('1','2','3','4','5','6','7','9') and IdClaveFF in (11,12,13,14,15,16,17)),0)  ,  
-    Recaudado  = ISNULL((Select SUM(Recaudado) from @DataING where SUBSTRING(Clave,6,1) in ('1','2','3','4','5','6','7','9') and IdClaveFF in (11,12,13,14,15,16,17)),0)
-    Where Orden in (2) 
-	Update @Titulos set Devengado = ISNULL((Select SUM(Devengado) from @DataING where SUBSTRING(Clave,6,1) in ('1','2','3','4','5','6','7','9') and IdClaveFF in (25,26,27)),0),  
-    Recaudado  = ISNULL((Select SUM(Recaudado) from @DataING where SUBSTRING(Clave,6,1) in ('8') and IdClaveFF in (25,26,27)),0)   
-    Where Orden in (3,33) 
-	Update @Titulos set Devengado = ISNULL((Select SUM(Devengado) from @DataING where SUBSTRING(Clave,6,1) in ('0') and IdClaveFF in (11,12,13,14,15,16,17)),0),  
-    Recaudado  = ISNULL((Select SUM(Recaudado) from @DataING where SUBSTRING(Clave,6,1) in ('0') and IdClaveFF in (11,12,13,14,15,16,17)),0) 
-    Where Orden in (4) 
+	--Update @Titulos set Devengado = ISNULL((Select SUM(Devengado) from @DataING where SUBSTRING(Clave,6,1) in ('1','2','3','4','5','6','7','9') and IdClaveFF in (11,12,13,14,15,16,17)),0)  ,  
+ --   Recaudado  = ISNULL((Select SUM(Recaudado) from @DataING where SUBSTRING(Clave,6,1) in ('1','2','3','4','5','6','7','9') and IdClaveFF in (11,12,13,14,15,16,17)),0)
+ --   Where Orden in (2) 
+	--Update @Titulos set Devengado = ISNULL((Select SUM(Devengado) from @DataING where SUBSTRING(Clave,6,1) in ('1','2','3','4','5','6','7','9') and IdClaveFF in (25,26,27)),0),  
+ --   Recaudado  = ISNULL((Select SUM(Recaudado) from @DataING where SUBSTRING(Clave,6,1) in ('8') and IdClaveFF in (25,26,27)),0)   
+ --   Where Orden in (3,33) 
+	--Update @Titulos set Devengado = ISNULL((Select SUM(Devengado) from @DataING where SUBSTRING(Clave,6,1) in ('0') and IdClaveFF in (11,12,13,14,15,16,17)),0),  
+ --   Recaudado  = ISNULL((Select SUM(Recaudado) from @DataING where SUBSTRING(Clave,6,1) in ('0') and IdClaveFF in (11,12,13,14,15,16,17)),0) 
+ --   Where Orden in (4) 
 
  --   select '@DataEGR',* from @DataEGR
 	--select '@Titulos',* from @Titulos
-declare @AutorizadoEGR as decimal (18,2) = (Select SUM(Autorizado) from @DataEGR where IdClaveFF in(11,12,13,14,15,16,17)and SUBSTRING(Partida,1,1) in ('1','2','3','4','5','6','7'))  
-declare @DevengadoEGR as decimal (18,2) = (Select SUM(Devengado) from @DataEGR where IdClaveFF in(11,12,13,14,15,16,17)and SUBSTRING(Partida,1,1) in ('1','2','3','4','5','6','7'))  
-declare @RecaudadoEGR as decimal (18,2) = (Select SUM(Pagado) from @DataEGR where IdClaveFF in(11,12,13,14,15,16,17)and SUBSTRING(Partida,1,1) in ('1','2','3','4','5','6','7'))  
+declare @AutorizadoEGR as decimal (18,2) = (Select SUM(Autorizado) from @DataEGR where IdClaveFF in(11,12,13,14,15,16,17) and SUBSTRING(Partida,1,2) not in ('91'))  
+declare @DevengadoEGR as decimal (18,2) = (Select SUM(Devengado) from @DataEGR where IdClaveFF in(11,12,13,14,15,16,17) and SUBSTRING(Partida,1,2) not in ('91'))  
+declare @RecaudadoEGR as decimal (18,2) = (Select SUM(Pagado) from @DataEGR where IdClaveFF in(11,12,13,14,15,16,17) and SUBSTRING(Partida,1,2) not in ('91'))  
   
-declare @Autorizado8EGR as decimal (18,2) = (Select SUM(Autorizado) from @DataEGR where IdClaveFF in(25,26,27) and SUBSTRING(Partida,1,1) in ('8'))  
-declare @Devengado8EGR as decimal (18,2) = (Select SUM(Devengado) from @DataEGR where IdClaveFF in(25,26,27) and SUBSTRING(Partida,1,1) in ('8'))  
-declare @Recaudado8EGR as decimal (18,2) = (Select SUM(Pagado) from @DataEGR where IdClaveFF in(25,26,27) and SUBSTRING(Partida,1,1) in ('8'))  
+declare @Autorizado7EGR as decimal (18,2) = (Select SUM(Autorizado) from @DataEGR where IdClaveFF in(25,26,27) and SUBSTRING(Partida,1,2) not in ('91'))  
+declare @Devengado7EGR as decimal (18,2) = (Select SUM(Devengado) from @DataEGR where IdClaveFF in(25,26,27) and SUBSTRING(Partida,1,2) not in ('91'))  
+declare @Recaudado7EGR as decimal (18,2) = (Select SUM(Pagado) from @DataEGR where IdClaveFF in(25,26,27) and SUBSTRING(Partida,1,2) not in ('91'))  
 
   
 Update @Titulos set Estimado = ISNULL(@AutorizadoEGR,0),  
@@ -188,9 +191,9 @@ Update @Titulos set Estimado = ISNULL(@AutorizadoEGR,0),
     Recaudado  = ISNULL(@RecaudadoEGR,0)  
     Where Orden in (6,29)  
   
-Update @Titulos set Estimado = ISNULL(@Autorizado8EGR,0),  
-    Devengado = ISNULL(@Devengado8EGR,0),  
-    Recaudado  = ISNULL(@Recaudado8EGR,0)  
+Update @Titulos set Estimado = ISNULL(@Autorizado7EGR,0),  
+    Devengado = ISNULL(@Devengado7EGR,0),  
+    Recaudado  = ISNULL(@Recaudado7EGR,0)  
     Where Orden in (7,37)  
 	--KAZB
 
@@ -204,8 +207,14 @@ Update @Titulos set Estimado = ISNULL(@Autorizado8EGR,0),
   declare @Recaudado8EGR2 as decimal (18,2) = (Select SUM(Pagado) from @DataEGR where SUBSTRING(Partida,1,1) in ('8') and IdClaveFF in (25,26,27))   
    Update @Titulos set Devengado = ISNULL(@Devengado8EGR2,0),  
     Recaudado  = ISNULL(@Recaudado8EGR2,0)   
-    Where Orden in (7,37)  
-  --KAZB
+    Where Orden in (7,37) 
+	
+	Update @Titulos set Estimado = null,  
+    Devengado = 0,  
+    Recaudado  = 0  
+    Where Orden in (8,9,10,30,38)  
+
+  -----------
 
 Update @Titulos set Estimado = ISNULL((Select SUM(Estimado) from @Titulos where orden in (2,3,4)),0),  
     Devengado = ISNULL((Select SUM(Devengado) from @Titulos where orden in (2,3,4)),0),  
@@ -229,18 +238,90 @@ Update @Titulos set Estimado = ISNULL((Select SUM(Estimado) from @Titulos where 
 
 Update @Titulos set Estimado = ISNULL((Select SUM(Estimado) from @Titulos where orden in (11)) - (Select SUM(Estimado) from @Titulos where orden in (4)) - (Select SUM(Estimado) from @Titulos where orden in (8)),0),  
     Devengado = ISNULL((Select SUM(Devengado) from @Titulos where orden in (11)) - (Select SUM(Devengado) from @Titulos where orden in (4)) - (Select SUM(Estimado) from @Titulos where orden in (8)),0),  
-    Recaudado  = ISNULL((Select SUM(Recaudado) from @Titulos where orden in (11)) - (Select SUM(Recaudado) from @Titulos where orden in (4)) - - (Select SUM(Estimado) from @Titulos where orden in (8)),0)  
+    Recaudado  = ISNULL((Select SUM(Recaudado) from @Titulos where orden in (11)) - (Select SUM(Recaudado) from @Titulos where orden in (4)) - (Select SUM(Estimado) from @Titulos where orden in (8)),0)  
     Where Orden = 13
 
-Update @Titulos set Estimado = ISNULL((Select SUM(Estimado) from @Titulos where orden in (25)) + (Select SUM(Estimado) from @Titulos where orden in (26)) - (Select SUM(Estimado) from @Titulos where orden in (29)) + (Select SUM(Estimado) from @Titulos where orden in (30)),0),  
-    Devengado = ISNULL((Select SUM(Devengado) from @Titulos where orden in (25)) + (Select SUM(Devengado) from @Titulos where orden in (26)) - (Select SUM(Devengado) from @Titulos where orden in (29)) + (Select SUM(Devengado) from @Titulos where orden in (30)),0),   
-    Recaudado  = ISNULL((Select SUM(Recaudado) from @Titulos where orden in (25)) + (Select SUM(Recaudado) from @Titulos where orden in (26)) - (Select SUM(Recaudado) from @Titulos where orden in (29)) + (Select SUM(Recaudado) from @Titulos where orden in (30)),0)  
+--declare @Autorizado7EGR as decimal (18,2) = (Select SUM(Autorizado) from @DataEGR where IdClaveFF in(25,26,27) and SUBSTRING(Partida,1,2) not in ('91'))  
+--declare @Devengado7EGR as decimal (18,2) = (Select SUM(Devengado) from @DataEGR where IdClaveFF in(25,26,27) and SUBSTRING(Partida,1,2) not in ('91'))  
+--declare @Recaudado7EGR as decimal (18,2) = (Select SUM(Pagado) from @DataEGR where IdClaveFF in(25,26,27) and SUBSTRING(Partida,1,2) not in ('91'))  
+
+	
+Update @Titulos set Estimado = (Select ISNULL(SUM(Autorizado),0) from @DataEGR Where IdClaveFF in (11,12,13,14,15,16,17) and SUBSTRING(Partida,1,2) in ('92','93','94','95')),  
+    Devengado = (Select ISNULL(SUM(Devengado),0) from @DataEGR Where IdClaveFF in (11,12,13,14,15,16,17) and SUBSTRING(Partida,1,2) in ('92','93','94','95')),  
+    Recaudado  = (Select ISNULL(SUM(Pagado),0) from @DataEGR Where IdClaveFF in (11,12,13,14,15,16,17) and SUBSTRING(Partida,1,2) in ('92','93','94','95'))  
+    Where Orden = 15
+
+Update @Titulos set Estimado = (Select ISNULL(SUM(Autorizado),0) from @DataEGR Where IdClaveFF in (25,26,27) and SUBSTRING(Partida,1,2) in ('92','93','94','95')),  
+    Devengado = (Select ISNULL(SUM(Devengado),0) from @DataEGR Where IdClaveFF in (25,26,27) and SUBSTRING(Partida,1,2) in ('92','93','94','95')),  
+    Recaudado  = (Select ISNULL(SUM(Pagado),0) from @DataEGR Where IdClaveFF in (25,26,27) and SUBSTRING(Partida,1,2) in ('92','93','94','95'))  
+    Where Orden = 16
+
+Update @Titulos set Estimado = ISNULL((Select SUM(Estimado) from @Titulos where orden in (15,16)),0),  
+    Devengado = ISNULL((Select SUM(Devengado) from @Titulos where orden in (15,16)),0),  
+    Recaudado  = ISNULL((Select SUM(Recaudado) from @Titulos where orden in (15,16)),0)  
+    Where Orden = 14
+
+Update @Titulos set Estimado = ISNULL((Select SUM(Estimado) from @Titulos Where orden in (13,14)),0),  
+    Devengado = ISNULL((Select SUM(Devengado) from @Titulos Where orden in (13,14)),0),  
+    Recaudado  = ISNULL((Select SUM(Recaudado) from @Titulos Where orden in (13,14)),0)  
+    Where Orden = 17
+
+  
+Update @Titulos set Estimado = ISNULL((Select SUM(Estimado) from @DataING Where SUBSTRING(Clave,6,1) in ('0') and IdClaveFF in (11,12,13,14,15,16,17)),0),  
+    Devengado = ISNULL((Select SUM(Devengado) from @DataING Where SUBSTRING(Clave,6,1) in ('0') and IdClaveFF in (11,12,13,14,15,16,17)),0),  
+    Recaudado  = ISNULL((Select SUM(Recaudado) from @DataING Where SUBSTRING(Clave,6,1) in ('0') and IdClaveFF in (11,12,13,14,15,16,17)),0)  
+    Where Orden in (19,27)
+
+Update @Titulos set Estimado = ISNULL((Select SUM(Estimado) from @DataING Where SUBSTRING(Clave,6,1) in ('0') and IdClaveFF in (25,26,27)),0),  
+    Devengado = ISNULL((Select SUM(Devengado) from @DataING Where SUBSTRING(Clave,6,1) in ('0') and IdClaveFF in (25,26,27)),0),  
+    Recaudado  = ISNULL((Select SUM(Recaudado) from @DataING Where SUBSTRING(Clave,6,1) in ('0') and IdClaveFF in (25,26,27)),0)  
+    Where Orden in (20,35)
+
+Update @Titulos set Estimado = ISNULL((Select SUM(Estimado) from @Titulos where orden in (19,20)),0),  
+    Devengado = ISNULL((Select SUM(Devengado) from @Titulos where orden in (19,20)),0),  
+    Recaudado  = ISNULL((Select SUM(Recaudado) from @Titulos where orden in (19,20)),0)  
+    Where Orden = 18
+
+Update @Titulos set Estimado = (Select ISNULL(SUM(Autorizado),0) from @DataEGR Where IdClaveFF in (11,12,13,14,15,16,17) and SUBSTRING(Partida,1,2) in ('91')),  
+    Devengado = (Select ISNULL(SUM(Devengado),0) from @DataEGR Where IdClaveFF in (11,12,13,14,15,16,17) and SUBSTRING(Partida,1,2) in ('91')),  
+    Recaudado  = (Select ISNULL(SUM(Pagado),0) from @DataEGR Where IdClaveFF in (11,12,13,14,15,16,17) and SUBSTRING(Partida,1,2) in ('91'))  
+    Where Orden in (22,28)
+
+Update @Titulos set Estimado = (Select ISNULL(SUM(Autorizado),0) from @DataEGR Where IdClaveFF in (25,26,27) and SUBSTRING(Partida,1,2) in ('91')),  
+    Devengado = (Select ISNULL(SUM(Devengado),0) from @DataEGR Where IdClaveFF in (25,26,27) and SUBSTRING(Partida,1,2) in ('91')),  
+    Recaudado  = (Select ISNULL(SUM(Pagado),0) from @DataEGR Where IdClaveFF in (25,26,27) and SUBSTRING(Partida,1,2) in ('91'))  
+    Where Orden in (23,36)
+
+Update @Titulos set Estimado = ISNULL((Select SUM(Estimado) from @Titulos where orden in (22,23)),0),  
+    Devengado = ISNULL((Select SUM(Devengado) from @Titulos where orden in (22,23)),0),  
+    Recaudado  = ISNULL((Select SUM(Recaudado) from @Titulos where orden in (22,23)),0)  
+    Where Orden = 21
+
+Update @Titulos set Estimado = ISNULL((Select SUM(Estimado) from @Titulos where orden in (18)),0) - ISNULL((Select SUM(Estimado) from @Titulos where orden in (21)),0),  
+    Devengado = ISNULL((Select SUM(Estimado) from @Titulos where orden in (18)),0) - ISNULL((Select SUM(Estimado) from @Titulos where orden in (21)),0), 
+    Recaudado  = ISNULL((Select SUM(Estimado) from @Titulos where orden in (18)),0) - ISNULL((Select SUM(Estimado) from @Titulos where orden in (21)),0) 
+    Where Orden = 24
+
+Update @Titulos set Estimado = ISNULL((Select SUM(Estimado) from @Titulos where orden in (19)),0) - ISNULL((Select SUM(Estimado) from @Titulos where orden in (22)),0),  
+    Devengado = ISNULL((Select SUM(Estimado) from @Titulos where orden in (19)),0) - ISNULL((Select SUM(Estimado) from @Titulos where orden in (22)),0), 
+    Recaudado  = ISNULL((Select SUM(Estimado) from @Titulos where orden in (19)),0) - ISNULL((Select SUM(Estimado) from @Titulos where orden in (22)),0) 
+    Where Orden = 26
+
+
+Update @Titulos set Estimado = ISNULL((Select SUM(Estimado) from @Titulos where orden in (25)) + (Select SUM(Estimado) from @Titulos where orden in (26)) - (Select SUM(Estimado) from @Titulos where orden in (29)) + (Select ISNULL(SUM(Estimado),0) from @Titulos where orden in (30)),0),  
+    Devengado = ISNULL((Select SUM(Devengado) from @Titulos where orden in (25)) + (Select SUM(Devengado) from @Titulos where orden in (26)) - (Select SUM(Devengado) from @Titulos where orden in (29)) + (Select ISNULL(SUM(Devengado),0) from @Titulos where orden in (30)),0),   
+    Recaudado  = ISNULL((Select SUM(Recaudado) from @Titulos where orden in (25)) + (Select SUM(Recaudado) from @Titulos where orden in (26)) - (Select SUM(Recaudado) from @Titulos where orden in (29)) + (Select ISNULL(SUM(Recaudado),0) from @Titulos where orden in (30)),0)  
     Where Orden = 31
 
-Update @Titulos set Estimado = ISNULL((Select SUM(Estimado) from @Titulos where orden in (25)) - (Select SUM(Estimado) from @Titulos where orden in (29)) + (Select SUM(Estimado) from @Titulos where orden in (30)),0),  
-    Devengado = ISNULL((Select SUM(Devengado) from @Titulos where orden in (25)) - (Select SUM(Devengado) from @Titulos where orden in (29)) + (Select SUM(Devengado) from @Titulos where orden in (30)),0),   
-    Recaudado  = ISNULL((Select SUM(Recaudado) from @Titulos where orden in (25)) - (Select SUM(Recaudado) from @Titulos where orden in (29)) + (Select SUM(Recaudado) from @Titulos where orden in (30)),0)  
+Update @Titulos set Estimado = ISNULL((Select SUM(Estimado) from @Titulos where orden in (31)) - (Select SUM(Estimado) from @Titulos where orden in (26)),0),  
+    Devengado = ISNULL((Select SUM(Devengado) from @Titulos where orden in (31)) - (Select SUM(Estimado) from @Titulos where orden in (26)),0),     
+    Recaudado  = ISNULL((Select SUM(Recaudado) from @Titulos where orden in (31)) - (Select SUM(Estimado) from @Titulos where orden in (26)),0)  
     Where Orden = 32
+
+Update @Titulos set Estimado = ISNULL((Select SUM(Estimado) from @Titulos where orden in (20)) - (Select SUM(Estimado) from @Titulos where orden in (23)),0),  
+    Devengado = ISNULL((Select SUM(Devengado) from @Titulos where orden in (20)) - (Select SUM(Estimado) from @Titulos where orden in (23)),0),     
+    Recaudado  = ISNULL((Select SUM(Recaudado) from @Titulos where orden in (20)) - (Select SUM(Estimado) from @Titulos where orden in (23)),0)  
+    Where Orden = 34
 
 Update @Titulos set Estimado = ISNULL((Select SUM(Estimado) from @Titulos where orden in (7)),0),  
     Devengado = ISNULL((Select SUM(Devengado) from @Titulos where orden in (7)),0),  
@@ -257,9 +338,14 @@ Update @Titulos set Estimado = ISNULL((Select SUM(Estimado) from @Titulos where 
     Recaudado  = ISNULL((Select SUM(Recaudado) from @Titulos where orden in (33)) + (Select SUM(Recaudado) from @Titulos where orden in (34)) - (Select SUM(Recaudado) from @Titulos where orden in (37)) + (Select SUM(Recaudado) from @Titulos where orden in (38)),0)  
     Where Orden = 39
   
-Update @Titulos set Estimado = ISNULL((Select SUM(Estimado) from @Titulos where orden in (33)) - (Select SUM(Estimado) from @Titulos where orden in (37)) + (Select SUM(Estimado) from @Titulos where orden in (38)),0),  
-    Devengado = ISNULL((Select SUM(Devengado) from @Titulos where orden in (33)) - (Select SUM(Devengado) from @Titulos where orden in (37)) + (Select SUM(Devengado) from @Titulos where orden in (38)),0),   
-    Recaudado  = ISNULL((Select SUM(Recaudado) from @Titulos where orden in (33)) - (Select SUM(Recaudado) from @Titulos where orden in (37)) + (Select SUM(Recaudado) from @Titulos where orden in (38)),0)  
+--Update @Titulos set Estimado = ISNULL((Select SUM(Estimado) from @Titulos where orden in (33)) - (Select SUM(Estimado) from @Titulos where orden in (37)) + (Select SUM(Estimado) from @Titulos where orden in (38)),0),  
+--    Devengado = ISNULL((Select SUM(Devengado) from @Titulos where orden in (33)) - (Select SUM(Devengado) from @Titulos where orden in (37)) + (Select SUM(Devengado) from @Titulos where orden in (38)),0),   
+--    Recaudado  = ISNULL((Select SUM(Recaudado) from @Titulos where orden in (33)) - (Select SUM(Recaudado) from @Titulos where orden in (37)) + (Select SUM(Recaudado) from @Titulos where orden in (38)),0)  
+--    Where Orden = 40
+
+Update @Titulos set Estimado = ISNULL((Select SUM(Estimado) from @Titulos where orden in (39)) - (Select SUM(Estimado) from @Titulos where orden in (34)) ,0),  
+    Devengado = ISNULL((Select SUM(Devengado) from @Titulos where orden in (39)) - (Select SUM(Devengado) from @Titulos where orden in (34)) ,0),   
+    Recaudado  = ISNULL((Select SUM(Recaudado) from @Titulos where orden in (39)) - (Select SUM(Recaudado) from @Titulos where orden in (34)) ,0)  
     Where Orden = 40
 
  Select Concepto,  

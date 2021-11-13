@@ -48,7 +48,7 @@ Public Class CtrlUser_RPT_BalancePres3
         Dim printTool As New ReportPrintTool(reporte)
 
         Dim conection As New SqlConnection(cnnString)
-        Dim prmPeriodo As New SqlParameter("Mes1", Month(filterPeriodoDe.EditValue))
+        Dim prmPeriodo As New SqlParameter("Mes1", 1)
         Dim prmPeriodo2 As New SqlParameter("Mes2", Month(filterPeriodoDe2.EditValue))
         Dim prmEjercicio As New SqlParameter("Ejercicio", Year(filterPeriodoAl.EditValue))
         Dim miles As New SqlParameter("miles", chkMiles.Checked)
@@ -91,8 +91,8 @@ Public Class CtrlUser_RPT_BalancePres3
 
         With reporte
             .lblRptNombreEnte.Text = pRPTCFGDatosEntes.Nombre
-            .lblRptNombreReporte.Text = "Balance Presupuestario"
-            .lblRptDescripcionFiltrado.Text = "Del 1 de " + MesLetra(primero.Month) + " al " + ultimo.Day.ToString + " de " + MesLetra(ultimo.Month) + " de " + ultimo.Year.ToString
+            .lblRptNombreReporte.Text = "Balance Presupuestario-LDF"
+            .lblRptDescripcionFiltrado.Text = "Del 1 de Enero al " + ultimo.Day.ToString + " de " + MesLetra(ultimo.Month) + " de " + ultimo.Year.ToString
             .lblRptEnteDomicilio.Text = pRPTCFGDatosEntes.Domicilio
             .lblRptEnteCiudad.Text = pRPTCFGDatosEntes.Ciudad + ", " + pRPTCFGDatosEntes.EntidadFederativa
             .lblRptEnteRFC.Text = pRPTCFGDatosEntes.RFC
@@ -102,7 +102,7 @@ Public Class CtrlUser_RPT_BalancePres3
             If chkMiles.Checked = True Then
                 .XrLabel1.Text = "(En miles de pesos)"
             Else
-                .XrLabel1.Text = ""
+                .XrLabel1.Text = "(PESOS)"
             End If
             .lblTitulo.Text = ""
             .lblSubtitulo.Text = ""

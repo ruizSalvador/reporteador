@@ -35,22 +35,7 @@ Partial Class CtrlUser_RPT_BalancePres3
         Me.filterPeriodoDe = New DevExpress.XtraEditors.TimeEdit()
         Me.PrintControl1 = New DevExpress.XtraPrinting.Control.PrintControl()
         Me.PrintBarManager2 = New DevExpress.XtraPrinting.Preview.PrintBarManager(Me.components)
-        Me.BarDockControl1 = New DevExpress.XtraBars.BarDockControl()
-        Me.BarDockControl2 = New DevExpress.XtraBars.BarDockControl()
-        Me.BarDockControl3 = New DevExpress.XtraBars.BarDockControl()
-        Me.BarDockControl4 = New DevExpress.XtraBars.BarDockControl()
         Me.PreviewBar4 = New DevExpress.XtraPrinting.Preview.PreviewBar()
-        Me.PreviewBar5 = New DevExpress.XtraPrinting.Preview.PreviewBar()
-        Me.PreviewBar6 = New DevExpress.XtraPrinting.Preview.PreviewBar()
-        Me.PrintPreviewStaticItem3 = New DevExpress.XtraPrinting.Preview.PrintPreviewStaticItem()
-        Me.BarStaticItem2 = New DevExpress.XtraBars.BarStaticItem()
-        Me.RepositoryItemProgressBar2 = New DevExpress.XtraEditors.Repository.RepositoryItemProgressBar()
-        Me.ProgressBarEditItem2 = New DevExpress.XtraPrinting.Preview.ProgressBarEditItem()
-        Me.PrintPreviewBarItem2 = New DevExpress.XtraPrinting.Preview.PrintPreviewBarItem()
-        Me.BarButtonItem5 = New DevExpress.XtraBars.BarButtonItem()
-        Me.PrintPreviewStaticItem4 = New DevExpress.XtraPrinting.Preview.PrintPreviewStaticItem()
-        Me.RepositoryItemZoomTrackBar2 = New DevExpress.XtraEditors.Repository.RepositoryItemZoomTrackBar()
-        Me.ZoomTrackBarEditItem2 = New DevExpress.XtraPrinting.Preview.ZoomTrackBarEditItem()
         Me.PrintPreviewBarItem3 = New DevExpress.XtraPrinting.Preview.PrintPreviewBarItem()
         Me.PrintPreviewBarItem5 = New DevExpress.XtraPrinting.Preview.PrintPreviewBarItem()
         Me.PrintPreviewBarItem6 = New DevExpress.XtraPrinting.Preview.PrintPreviewBarItem()
@@ -78,13 +63,28 @@ Partial Class CtrlUser_RPT_BalancePres3
         Me.PrintPreviewBarItem38 = New DevExpress.XtraPrinting.Preview.PrintPreviewBarItem()
         Me.PrintPreviewBarItem39 = New DevExpress.XtraPrinting.Preview.PrintPreviewBarItem()
         Me.PrintPreviewBarItem40 = New DevExpress.XtraPrinting.Preview.PrintPreviewBarItem()
+        Me.PreviewBar5 = New DevExpress.XtraPrinting.Preview.PreviewBar()
+        Me.PrintPreviewStaticItem3 = New DevExpress.XtraPrinting.Preview.PrintPreviewStaticItem()
+        Me.BarStaticItem2 = New DevExpress.XtraBars.BarStaticItem()
+        Me.ProgressBarEditItem2 = New DevExpress.XtraPrinting.Preview.ProgressBarEditItem()
+        Me.RepositoryItemProgressBar2 = New DevExpress.XtraEditors.Repository.RepositoryItemProgressBar()
+        Me.PrintPreviewBarItem2 = New DevExpress.XtraPrinting.Preview.PrintPreviewBarItem()
+        Me.BarButtonItem5 = New DevExpress.XtraBars.BarButtonItem()
+        Me.PrintPreviewStaticItem4 = New DevExpress.XtraPrinting.Preview.PrintPreviewStaticItem()
+        Me.ZoomTrackBarEditItem2 = New DevExpress.XtraPrinting.Preview.ZoomTrackBarEditItem()
+        Me.RepositoryItemZoomTrackBar2 = New DevExpress.XtraEditors.Repository.RepositoryItemZoomTrackBar()
+        Me.PreviewBar6 = New DevExpress.XtraPrinting.Preview.PreviewBar()
         Me.PrintPreviewSubItem3 = New DevExpress.XtraPrinting.Preview.PrintPreviewSubItem()
         Me.PrintPreviewSubItem5 = New DevExpress.XtraPrinting.Preview.PrintPreviewSubItem()
-        Me.PrintPreviewSubItem6 = New DevExpress.XtraPrinting.Preview.PrintPreviewSubItem()
         Me.PrintPreviewSubItem7 = New DevExpress.XtraPrinting.Preview.PrintPreviewSubItem()
         Me.PrintPreviewBarItem41 = New DevExpress.XtraPrinting.Preview.PrintPreviewBarItem()
         Me.PrintPreviewBarItem42 = New DevExpress.XtraPrinting.Preview.PrintPreviewBarItem()
         Me.BarToolbarsListItem2 = New DevExpress.XtraBars.BarToolbarsListItem()
+        Me.PrintPreviewSubItem6 = New DevExpress.XtraPrinting.Preview.PrintPreviewSubItem()
+        Me.BarDockControl1 = New DevExpress.XtraBars.BarDockControl()
+        Me.BarDockControl2 = New DevExpress.XtraBars.BarDockControl()
+        Me.BarDockControl3 = New DevExpress.XtraBars.BarDockControl()
+        Me.BarDockControl4 = New DevExpress.XtraBars.BarDockControl()
         Me.PrintPreviewBarCheckItem18 = New DevExpress.XtraPrinting.Preview.PrintPreviewBarCheckItem()
         Me.PrintPreviewBarCheckItem19 = New DevExpress.XtraPrinting.Preview.PrintPreviewBarCheckItem()
         Me.PrintPreviewBarCheckItem20 = New DevExpress.XtraPrinting.Preview.PrintPreviewBarCheckItem()
@@ -102,15 +102,16 @@ Partial Class CtrlUser_RPT_BalancePres3
         Me.PrintPreviewBarCheckItem32 = New DevExpress.XtraPrinting.Preview.PrintPreviewBarCheckItem()
         Me.PrintPreviewBarCheckItem33 = New DevExpress.XtraPrinting.Preview.PrintPreviewBarCheckItem()
         Me.PrintPreviewBarCheckItem34 = New DevExpress.XtraPrinting.Preview.PrintPreviewBarCheckItem()
+        Me.LabelControl3 = New DevExpress.XtraEditors.LabelControl()
         CType(Me.SplitContainerControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainerControl1.SuspendLayout()
         CType(Me.filterPeriodoDe2.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.filterPeriodoAl.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.filterPeriodoDe.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PrintBarManager2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PrintPreviewRepositoryItemComboBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemProgressBar2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemZoomTrackBar2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PrintPreviewRepositoryItemComboBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'SplitContainerControl1
@@ -119,6 +120,7 @@ Partial Class CtrlUser_RPT_BalancePres3
         Me.SplitContainerControl1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.SplitContainerControl1.Location = New System.Drawing.Point(0, 53)
         Me.SplitContainerControl1.Name = "SplitContainerControl1"
+        Me.SplitContainerControl1.Panel1.Controls.Add(Me.LabelControl3)
         Me.SplitContainerControl1.Panel1.Controls.Add(Me.LabelControl1)
         Me.SplitContainerControl1.Panel1.Controls.Add(Me.filterPeriodoDe2)
         Me.SplitContainerControl1.Panel1.Controls.Add(Me.chkMiles)
@@ -131,13 +133,13 @@ Partial Class CtrlUser_RPT_BalancePres3
         Me.SplitContainerControl1.Panel2.Controls.Add(Me.PrintControl1)
         Me.SplitContainerControl1.Panel2.Text = "Panel2"
         Me.SplitContainerControl1.Size = New System.Drawing.Size(752, 390)
-        Me.SplitContainerControl1.SplitterPosition = 177
+        Me.SplitContainerControl1.SplitterPosition = 190
         Me.SplitContainerControl1.TabIndex = 4
         Me.SplitContainerControl1.Text = "SplitContainerControl1"
         '
         'LabelControl1
         '
-        Me.LabelControl1.Location = New System.Drawing.Point(96, 62)
+        Me.LabelControl1.Location = New System.Drawing.Point(30, 62)
         Me.LabelControl1.Name = "LabelControl1"
         Me.LabelControl1.Size = New System.Drawing.Size(51, 13)
         Me.LabelControl1.TabIndex = 12
@@ -146,7 +148,7 @@ Partial Class CtrlUser_RPT_BalancePres3
         'filterPeriodoDe2
         '
         Me.filterPeriodoDe2.EditValue = Nothing
-        Me.filterPeriodoDe2.Location = New System.Drawing.Point(96, 81)
+        Me.filterPeriodoDe2.Location = New System.Drawing.Point(29, 81)
         Me.filterPeriodoDe2.Name = "filterPeriodoDe2"
         Me.filterPeriodoDe2.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton()})
         Me.filterPeriodoDe2.Properties.DisplayFormat.FormatString = "yyyy"
@@ -168,6 +170,7 @@ Partial Class CtrlUser_RPT_BalancePres3
         Me.chkMiles.TabIndex = 11
         Me.chkMiles.Text = "En miles de pesos"
         Me.chkMiles.UseVisualStyleBackColor = True
+        Me.chkMiles.Visible = False
         '
         'filterPeriodoAl
         '
@@ -195,11 +198,12 @@ Partial Class CtrlUser_RPT_BalancePres3
         '
         'LabelControl4
         '
-        Me.LabelControl4.Location = New System.Drawing.Point(29, 62)
+        Me.LabelControl4.Location = New System.Drawing.Point(31, 209)
         Me.LabelControl4.Name = "LabelControl4"
         Me.LabelControl4.Size = New System.Drawing.Size(57, 13)
         Me.LabelControl4.TabIndex = 3
         Me.LabelControl4.Text = "Periodo del:"
+        Me.LabelControl4.Visible = False
         '
         'SimpleButton1
         '
@@ -212,7 +216,7 @@ Partial Class CtrlUser_RPT_BalancePres3
         'filterPeriodoDe
         '
         Me.filterPeriodoDe.EditValue = Nothing
-        Me.filterPeriodoDe.Location = New System.Drawing.Point(28, 81)
+        Me.filterPeriodoDe.Location = New System.Drawing.Point(30, 228)
         Me.filterPeriodoDe.Name = "filterPeriodoDe"
         Me.filterPeriodoDe.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton()})
         Me.filterPeriodoDe.Properties.DisplayFormat.FormatString = "yyyy"
@@ -224,6 +228,7 @@ Partial Class CtrlUser_RPT_BalancePres3
         Me.filterPeriodoDe.Properties.Mask.UseMaskAsDisplayFormat = True
         Me.filterPeriodoDe.Size = New System.Drawing.Size(49, 20)
         Me.filterPeriodoDe.TabIndex = 9
+        Me.filterPeriodoDe.Visible = False
         '
         'PrintControl1
         '
@@ -233,7 +238,7 @@ Partial Class CtrlUser_RPT_BalancePres3
         Me.PrintControl1.IsMetric = True
         Me.PrintControl1.Location = New System.Drawing.Point(0, 0)
         Me.PrintControl1.Name = "PrintControl1"
-        Me.PrintControl1.Size = New System.Drawing.Size(570, 390)
+        Me.PrintControl1.Size = New System.Drawing.Size(557, 390)
         Me.PrintControl1.TabIndex = 1
         Me.PrintControl1.TooltipFont = New System.Drawing.Font("Tahoma", 8.25!)
         '
@@ -255,34 +260,6 @@ Partial Class CtrlUser_RPT_BalancePres3
         Me.PrintBarManager2.StatusBar = Me.PreviewBar5
         Me.PrintBarManager2.TransparentEditors = True
         '
-        'BarDockControl1
-        '
-        Me.BarDockControl1.CausesValidation = False
-        Me.BarDockControl1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.BarDockControl1.Location = New System.Drawing.Point(0, 0)
-        Me.BarDockControl1.Size = New System.Drawing.Size(752, 53)
-        '
-        'BarDockControl2
-        '
-        Me.BarDockControl2.CausesValidation = False
-        Me.BarDockControl2.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.BarDockControl2.Location = New System.Drawing.Point(0, 443)
-        Me.BarDockControl2.Size = New System.Drawing.Size(752, 28)
-        '
-        'BarDockControl3
-        '
-        Me.BarDockControl3.CausesValidation = False
-        Me.BarDockControl3.Dock = System.Windows.Forms.DockStyle.Left
-        Me.BarDockControl3.Location = New System.Drawing.Point(0, 53)
-        Me.BarDockControl3.Size = New System.Drawing.Size(0, 390)
-        '
-        'BarDockControl4
-        '
-        Me.BarDockControl4.CausesValidation = False
-        Me.BarDockControl4.Dock = System.Windows.Forms.DockStyle.Right
-        Me.BarDockControl4.Location = New System.Drawing.Point(752, 53)
-        Me.BarDockControl4.Size = New System.Drawing.Size(0, 390)
-        '
         'PreviewBar4
         '
         Me.PreviewBar4.BarName = "Toolbar"
@@ -291,113 +268,6 @@ Partial Class CtrlUser_RPT_BalancePres3
         Me.PreviewBar4.DockStyle = DevExpress.XtraBars.BarDockStyle.Top
         Me.PreviewBar4.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.PrintPreviewBarItem3), New DevExpress.XtraBars.LinkPersistInfo(Me.PrintPreviewBarItem5), New DevExpress.XtraBars.LinkPersistInfo(Me.PrintPreviewBarItem6), New DevExpress.XtraBars.LinkPersistInfo(Me.PrintPreviewBarItem7, True), New DevExpress.XtraBars.LinkPersistInfo(Me.PrintPreviewBarItem8, True), New DevExpress.XtraBars.LinkPersistInfo(Me.PrintPreviewBarItem10), New DevExpress.XtraBars.LinkPersistInfo(Me.PrintPreviewBarItem11, True), New DevExpress.XtraBars.LinkPersistInfo(Me.PrintPreviewBarItem12), New DevExpress.XtraBars.LinkPersistInfo(Me.PrintPreviewBarItem21), New DevExpress.XtraBars.LinkPersistInfo(Me.PrintPreviewBarItem22), New DevExpress.XtraBars.LinkPersistInfo(Me.PrintPreviewBarItem23), New DevExpress.XtraBars.LinkPersistInfo(Me.PrintPreviewBarItem24, True), New DevExpress.XtraBars.LinkPersistInfo(Me.PrintPreviewBarItem25), New DevExpress.XtraBars.LinkPersistInfo(Me.PrintPreviewBarItem29, True), New DevExpress.XtraBars.LinkPersistInfo(Me.ZoomBarEditItem2), New DevExpress.XtraBars.LinkPersistInfo(Me.PrintPreviewBarItem30), New DevExpress.XtraBars.LinkPersistInfo(Me.PrintPreviewBarItem31, True), New DevExpress.XtraBars.LinkPersistInfo(Me.PrintPreviewBarItem32), New DevExpress.XtraBars.LinkPersistInfo(Me.PrintPreviewBarItem33), New DevExpress.XtraBars.LinkPersistInfo(Me.PrintPreviewBarItem34), New DevExpress.XtraBars.LinkPersistInfo(Me.PrintPreviewBarItem35, True), New DevExpress.XtraBars.LinkPersistInfo(Me.PrintPreviewBarItem36), New DevExpress.XtraBars.LinkPersistInfo(Me.PrintPreviewBarItem37), New DevExpress.XtraBars.LinkPersistInfo(Me.PrintPreviewBarItem38, True), New DevExpress.XtraBars.LinkPersistInfo(Me.PrintPreviewBarItem39), New DevExpress.XtraBars.LinkPersistInfo(Me.PrintPreviewBarItem40, True)})
         Me.PreviewBar4.Text = "Toolbar"
-        '
-        'PreviewBar5
-        '
-        Me.PreviewBar5.BarName = "Status Bar"
-        Me.PreviewBar5.CanDockStyle = DevExpress.XtraBars.BarCanDockStyle.Bottom
-        Me.PreviewBar5.DockCol = 0
-        Me.PreviewBar5.DockRow = 0
-        Me.PreviewBar5.DockStyle = DevExpress.XtraBars.BarDockStyle.Bottom
-        Me.PreviewBar5.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.PrintPreviewStaticItem3), New DevExpress.XtraBars.LinkPersistInfo(Me.BarStaticItem2, True), New DevExpress.XtraBars.LinkPersistInfo(Me.ProgressBarEditItem2), New DevExpress.XtraBars.LinkPersistInfo(Me.PrintPreviewBarItem2), New DevExpress.XtraBars.LinkPersistInfo(Me.BarButtonItem5), New DevExpress.XtraBars.LinkPersistInfo(Me.PrintPreviewStaticItem4, True), New DevExpress.XtraBars.LinkPersistInfo(Me.ZoomTrackBarEditItem2)})
-        Me.PreviewBar5.OptionsBar.AllowQuickCustomization = False
-        Me.PreviewBar5.OptionsBar.DrawDragBorder = False
-        Me.PreviewBar5.OptionsBar.UseWholeRow = True
-        Me.PreviewBar5.Text = "Status Bar"
-        '
-        'PreviewBar6
-        '
-        Me.PreviewBar6.BarName = "Main Menu"
-        Me.PreviewBar6.DockCol = 0
-        Me.PreviewBar6.DockRow = 0
-        Me.PreviewBar6.DockStyle = DevExpress.XtraBars.BarDockStyle.Top
-        Me.PreviewBar6.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.PrintPreviewSubItem3), New DevExpress.XtraBars.LinkPersistInfo(Me.PrintPreviewSubItem5), New DevExpress.XtraBars.LinkPersistInfo(Me.PrintPreviewSubItem6)})
-        Me.PreviewBar6.OptionsBar.MultiLine = True
-        Me.PreviewBar6.OptionsBar.UseWholeRow = True
-        Me.PreviewBar6.Text = "Main Menu"
-        '
-        'PrintPreviewStaticItem3
-        '
-        Me.PrintPreviewStaticItem3.Border = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder
-        Me.PrintPreviewStaticItem3.Caption = "Nothing"
-        Me.PrintPreviewStaticItem3.Id = 0
-        Me.PrintPreviewStaticItem3.LeftIndent = 1
-        Me.PrintPreviewStaticItem3.Name = "PrintPreviewStaticItem3"
-        Me.PrintPreviewStaticItem3.RightIndent = 1
-        Me.PrintPreviewStaticItem3.TextAlignment = System.Drawing.StringAlignment.Near
-        Me.PrintPreviewStaticItem3.Type = "PageOfPages"
-        '
-        'BarStaticItem2
-        '
-        Me.BarStaticItem2.Border = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder
-        Me.BarStaticItem2.Id = 1
-        Me.BarStaticItem2.Name = "BarStaticItem2"
-        Me.BarStaticItem2.TextAlignment = System.Drawing.StringAlignment.Near
-        Me.BarStaticItem2.Visibility = DevExpress.XtraBars.BarItemVisibility.OnlyInRuntime
-        '
-        'RepositoryItemProgressBar2
-        '
-        Me.RepositoryItemProgressBar2.Name = "RepositoryItemProgressBar2"
-        Me.RepositoryItemProgressBar2.UseParentBackground = True
-        '
-        'ProgressBarEditItem2
-        '
-        Me.ProgressBarEditItem2.Edit = Me.RepositoryItemProgressBar2
-        Me.ProgressBarEditItem2.EditHeight = 12
-        Me.ProgressBarEditItem2.Id = 2
-        Me.ProgressBarEditItem2.Name = "ProgressBarEditItem2"
-        Me.ProgressBarEditItem2.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
-        Me.ProgressBarEditItem2.Width = 150
-        '
-        'PrintPreviewBarItem2
-        '
-        Me.PrintPreviewBarItem2.Caption = "Stop"
-        Me.PrintPreviewBarItem2.Command = DevExpress.XtraPrinting.PrintingSystemCommand.StopPageBuilding
-        Me.PrintPreviewBarItem2.Enabled = False
-        Me.PrintPreviewBarItem2.Hint = "Stop"
-        Me.PrintPreviewBarItem2.Id = 3
-        Me.PrintPreviewBarItem2.Name = "PrintPreviewBarItem2"
-        Me.PrintPreviewBarItem2.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
-        '
-        'BarButtonItem5
-        '
-        Me.BarButtonItem5.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Left
-        Me.BarButtonItem5.Enabled = False
-        Me.BarButtonItem5.Id = 4
-        Me.BarButtonItem5.Name = "BarButtonItem5"
-        Me.BarButtonItem5.Visibility = DevExpress.XtraBars.BarItemVisibility.OnlyInRuntime
-        '
-        'PrintPreviewStaticItem4
-        '
-        Me.PrintPreviewStaticItem4.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right
-        Me.PrintPreviewStaticItem4.Border = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder
-        Me.PrintPreviewStaticItem4.Caption = "100%"
-        Me.PrintPreviewStaticItem4.Id = 5
-        Me.PrintPreviewStaticItem4.Name = "PrintPreviewStaticItem4"
-        Me.PrintPreviewStaticItem4.TextAlignment = System.Drawing.StringAlignment.Far
-        Me.PrintPreviewStaticItem4.Type = "ZoomFactor"
-        Me.PrintPreviewStaticItem4.Width = 40
-        '
-        'RepositoryItemZoomTrackBar2
-        '
-        Me.RepositoryItemZoomTrackBar2.Alignment = DevExpress.Utils.VertAlignment.Center
-        Me.RepositoryItemZoomTrackBar2.AllowFocused = False
-        Me.RepositoryItemZoomTrackBar2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder
-        Me.RepositoryItemZoomTrackBar2.Maximum = 180
-        Me.RepositoryItemZoomTrackBar2.Name = "RepositoryItemZoomTrackBar2"
-        Me.RepositoryItemZoomTrackBar2.ScrollThumbStyle = DevExpress.XtraEditors.Repository.ScrollThumbStyle.ArrowDownRight
-        Me.RepositoryItemZoomTrackBar2.UseParentBackground = True
-        '
-        'ZoomTrackBarEditItem2
-        '
-        Me.ZoomTrackBarEditItem2.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right
-        Me.ZoomTrackBarEditItem2.Edit = Me.RepositoryItemZoomTrackBar2
-        Me.ZoomTrackBarEditItem2.EditValue = 90
-        Me.ZoomTrackBarEditItem2.Enabled = False
-        Me.ZoomTrackBarEditItem2.Id = 6
-        Me.ZoomTrackBarEditItem2.Name = "ZoomTrackBarEditItem2"
-        Me.ZoomTrackBarEditItem2.Range = New Integer() {10, 500}
-        Me.ZoomTrackBarEditItem2.Width = 140
         '
         'PrintPreviewBarItem3
         '
@@ -678,6 +548,113 @@ Partial Class CtrlUser_RPT_BalancePres3
         Me.PrintPreviewBarItem40.ImageIndex = 13
         Me.PrintPreviewBarItem40.Name = "PrintPreviewBarItem40"
         '
+        'PreviewBar5
+        '
+        Me.PreviewBar5.BarName = "Status Bar"
+        Me.PreviewBar5.CanDockStyle = DevExpress.XtraBars.BarCanDockStyle.Bottom
+        Me.PreviewBar5.DockCol = 0
+        Me.PreviewBar5.DockRow = 0
+        Me.PreviewBar5.DockStyle = DevExpress.XtraBars.BarDockStyle.Bottom
+        Me.PreviewBar5.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.PrintPreviewStaticItem3), New DevExpress.XtraBars.LinkPersistInfo(Me.BarStaticItem2, True), New DevExpress.XtraBars.LinkPersistInfo(Me.ProgressBarEditItem2), New DevExpress.XtraBars.LinkPersistInfo(Me.PrintPreviewBarItem2), New DevExpress.XtraBars.LinkPersistInfo(Me.BarButtonItem5), New DevExpress.XtraBars.LinkPersistInfo(Me.PrintPreviewStaticItem4, True), New DevExpress.XtraBars.LinkPersistInfo(Me.ZoomTrackBarEditItem2)})
+        Me.PreviewBar5.OptionsBar.AllowQuickCustomization = False
+        Me.PreviewBar5.OptionsBar.DrawDragBorder = False
+        Me.PreviewBar5.OptionsBar.UseWholeRow = True
+        Me.PreviewBar5.Text = "Status Bar"
+        '
+        'PrintPreviewStaticItem3
+        '
+        Me.PrintPreviewStaticItem3.Border = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder
+        Me.PrintPreviewStaticItem3.Caption = "Nothing"
+        Me.PrintPreviewStaticItem3.Id = 0
+        Me.PrintPreviewStaticItem3.LeftIndent = 1
+        Me.PrintPreviewStaticItem3.Name = "PrintPreviewStaticItem3"
+        Me.PrintPreviewStaticItem3.RightIndent = 1
+        Me.PrintPreviewStaticItem3.TextAlignment = System.Drawing.StringAlignment.Near
+        Me.PrintPreviewStaticItem3.Type = "PageOfPages"
+        '
+        'BarStaticItem2
+        '
+        Me.BarStaticItem2.Border = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder
+        Me.BarStaticItem2.Id = 1
+        Me.BarStaticItem2.Name = "BarStaticItem2"
+        Me.BarStaticItem2.TextAlignment = System.Drawing.StringAlignment.Near
+        Me.BarStaticItem2.Visibility = DevExpress.XtraBars.BarItemVisibility.OnlyInRuntime
+        '
+        'ProgressBarEditItem2
+        '
+        Me.ProgressBarEditItem2.Edit = Me.RepositoryItemProgressBar2
+        Me.ProgressBarEditItem2.EditHeight = 12
+        Me.ProgressBarEditItem2.Id = 2
+        Me.ProgressBarEditItem2.Name = "ProgressBarEditItem2"
+        Me.ProgressBarEditItem2.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
+        Me.ProgressBarEditItem2.Width = 150
+        '
+        'RepositoryItemProgressBar2
+        '
+        Me.RepositoryItemProgressBar2.Name = "RepositoryItemProgressBar2"
+        Me.RepositoryItemProgressBar2.UseParentBackground = True
+        '
+        'PrintPreviewBarItem2
+        '
+        Me.PrintPreviewBarItem2.Caption = "Stop"
+        Me.PrintPreviewBarItem2.Command = DevExpress.XtraPrinting.PrintingSystemCommand.StopPageBuilding
+        Me.PrintPreviewBarItem2.Enabled = False
+        Me.PrintPreviewBarItem2.Hint = "Stop"
+        Me.PrintPreviewBarItem2.Id = 3
+        Me.PrintPreviewBarItem2.Name = "PrintPreviewBarItem2"
+        Me.PrintPreviewBarItem2.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
+        '
+        'BarButtonItem5
+        '
+        Me.BarButtonItem5.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Left
+        Me.BarButtonItem5.Enabled = False
+        Me.BarButtonItem5.Id = 4
+        Me.BarButtonItem5.Name = "BarButtonItem5"
+        Me.BarButtonItem5.Visibility = DevExpress.XtraBars.BarItemVisibility.OnlyInRuntime
+        '
+        'PrintPreviewStaticItem4
+        '
+        Me.PrintPreviewStaticItem4.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right
+        Me.PrintPreviewStaticItem4.Border = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder
+        Me.PrintPreviewStaticItem4.Caption = "100%"
+        Me.PrintPreviewStaticItem4.Id = 5
+        Me.PrintPreviewStaticItem4.Name = "PrintPreviewStaticItem4"
+        Me.PrintPreviewStaticItem4.TextAlignment = System.Drawing.StringAlignment.Far
+        Me.PrintPreviewStaticItem4.Type = "ZoomFactor"
+        Me.PrintPreviewStaticItem4.Width = 40
+        '
+        'ZoomTrackBarEditItem2
+        '
+        Me.ZoomTrackBarEditItem2.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right
+        Me.ZoomTrackBarEditItem2.Edit = Me.RepositoryItemZoomTrackBar2
+        Me.ZoomTrackBarEditItem2.EditValue = 90
+        Me.ZoomTrackBarEditItem2.Enabled = False
+        Me.ZoomTrackBarEditItem2.Id = 6
+        Me.ZoomTrackBarEditItem2.Name = "ZoomTrackBarEditItem2"
+        Me.ZoomTrackBarEditItem2.Range = New Integer() {10, 500}
+        Me.ZoomTrackBarEditItem2.Width = 140
+        '
+        'RepositoryItemZoomTrackBar2
+        '
+        Me.RepositoryItemZoomTrackBar2.Alignment = DevExpress.Utils.VertAlignment.Center
+        Me.RepositoryItemZoomTrackBar2.AllowFocused = False
+        Me.RepositoryItemZoomTrackBar2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder
+        Me.RepositoryItemZoomTrackBar2.Maximum = 180
+        Me.RepositoryItemZoomTrackBar2.Name = "RepositoryItemZoomTrackBar2"
+        Me.RepositoryItemZoomTrackBar2.ScrollThumbStyle = DevExpress.XtraEditors.Repository.ScrollThumbStyle.ArrowDownRight
+        Me.RepositoryItemZoomTrackBar2.UseParentBackground = True
+        '
+        'PreviewBar6
+        '
+        Me.PreviewBar6.BarName = "Main Menu"
+        Me.PreviewBar6.DockCol = 0
+        Me.PreviewBar6.DockRow = 0
+        Me.PreviewBar6.DockStyle = DevExpress.XtraBars.BarDockStyle.Top
+        Me.PreviewBar6.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.PrintPreviewSubItem3), New DevExpress.XtraBars.LinkPersistInfo(Me.PrintPreviewSubItem5), New DevExpress.XtraBars.LinkPersistInfo(Me.PrintPreviewSubItem6)})
+        Me.PreviewBar6.OptionsBar.MultiLine = True
+        Me.PreviewBar6.OptionsBar.UseWholeRow = True
+        Me.PreviewBar6.Text = "Main Menu"
+        '
         'PrintPreviewSubItem3
         '
         Me.PrintPreviewSubItem3.Caption = "&File"
@@ -693,14 +670,6 @@ Partial Class CtrlUser_RPT_BalancePres3
         Me.PrintPreviewSubItem5.Id = 34
         Me.PrintPreviewSubItem5.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.PrintPreviewSubItem7, True), New DevExpress.XtraBars.LinkPersistInfo(Me.BarToolbarsListItem2, True)})
         Me.PrintPreviewSubItem5.Name = "PrintPreviewSubItem5"
-        '
-        'PrintPreviewSubItem6
-        '
-        Me.PrintPreviewSubItem6.Caption = "&Background"
-        Me.PrintPreviewSubItem6.Command = DevExpress.XtraPrinting.PrintingSystemCommand.Background
-        Me.PrintPreviewSubItem6.Id = 35
-        Me.PrintPreviewSubItem6.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.PrintPreviewBarItem36), New DevExpress.XtraBars.LinkPersistInfo(Me.PrintPreviewBarItem37)})
-        Me.PrintPreviewSubItem6.Name = "PrintPreviewSubItem6"
         '
         'PrintPreviewSubItem7
         '
@@ -735,6 +704,42 @@ Partial Class CtrlUser_RPT_BalancePres3
         Me.BarToolbarsListItem2.Caption = "Bars"
         Me.BarToolbarsListItem2.Id = 39
         Me.BarToolbarsListItem2.Name = "BarToolbarsListItem2"
+        '
+        'PrintPreviewSubItem6
+        '
+        Me.PrintPreviewSubItem6.Caption = "&Background"
+        Me.PrintPreviewSubItem6.Command = DevExpress.XtraPrinting.PrintingSystemCommand.Background
+        Me.PrintPreviewSubItem6.Id = 35
+        Me.PrintPreviewSubItem6.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.PrintPreviewBarItem36), New DevExpress.XtraBars.LinkPersistInfo(Me.PrintPreviewBarItem37)})
+        Me.PrintPreviewSubItem6.Name = "PrintPreviewSubItem6"
+        '
+        'BarDockControl1
+        '
+        Me.BarDockControl1.CausesValidation = False
+        Me.BarDockControl1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.BarDockControl1.Location = New System.Drawing.Point(0, 0)
+        Me.BarDockControl1.Size = New System.Drawing.Size(752, 53)
+        '
+        'BarDockControl2
+        '
+        Me.BarDockControl2.CausesValidation = False
+        Me.BarDockControl2.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.BarDockControl2.Location = New System.Drawing.Point(0, 443)
+        Me.BarDockControl2.Size = New System.Drawing.Size(752, 28)
+        '
+        'BarDockControl3
+        '
+        Me.BarDockControl3.CausesValidation = False
+        Me.BarDockControl3.Dock = System.Windows.Forms.DockStyle.Left
+        Me.BarDockControl3.Location = New System.Drawing.Point(0, 53)
+        Me.BarDockControl3.Size = New System.Drawing.Size(0, 390)
+        '
+        'BarDockControl4
+        '
+        Me.BarDockControl4.CausesValidation = False
+        Me.BarDockControl4.Dock = System.Windows.Forms.DockStyle.Right
+        Me.BarDockControl4.Location = New System.Drawing.Point(752, 53)
+        Me.BarDockControl4.Size = New System.Drawing.Size(0, 390)
         '
         'PrintPreviewBarCheckItem18
         '
@@ -908,6 +913,16 @@ Partial Class CtrlUser_RPT_BalancePres3
         Me.PrintPreviewBarCheckItem34.Id = 56
         Me.PrintPreviewBarCheckItem34.Name = "PrintPreviewBarCheckItem34"
         '
+        'LabelControl3
+        '
+        Me.LabelControl3.Appearance.ForeColor = System.Drawing.Color.Red
+        Me.LabelControl3.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Vertical
+        Me.LabelControl3.Location = New System.Drawing.Point(28, 170)
+        Me.LabelControl3.Name = "LabelControl3"
+        Me.LabelControl3.Size = New System.Drawing.Size(164, 26)
+        Me.LabelControl3.TabIndex = 16
+        Me.LabelControl3.Text = "C1 y C2 deben ser actualizados por el usuario."
+        '
         'CtrlUser_RPT_BalancePres3
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -925,9 +940,9 @@ Partial Class CtrlUser_RPT_BalancePres3
         CType(Me.filterPeriodoAl.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.filterPeriodoDe.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PrintBarManager2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PrintPreviewRepositoryItemComboBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RepositoryItemProgressBar2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RepositoryItemZoomTrackBar2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PrintPreviewRepositoryItemComboBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1009,5 +1024,6 @@ Partial Class CtrlUser_RPT_BalancePres3
     Friend WithEvents PrintPreviewBarCheckItem32 As DevExpress.XtraPrinting.Preview.PrintPreviewBarCheckItem
     Friend WithEvents PrintPreviewBarCheckItem33 As DevExpress.XtraPrinting.Preview.PrintPreviewBarCheckItem
     Friend WithEvents PrintPreviewBarCheckItem34 As DevExpress.XtraPrinting.Preview.PrintPreviewBarCheckItem
+    Friend WithEvents LabelControl3 As DevExpress.XtraEditors.LabelControl
 
 End Class

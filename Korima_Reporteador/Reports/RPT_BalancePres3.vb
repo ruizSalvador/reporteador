@@ -194,4 +194,41 @@ Public Class RPT_BalancePres3
 
         MdluserCtrl.BarButtonItem4_ItemClick(MdluserCtrl, Nothing)
     End Sub
+
+    Private Sub XrLabel6_BeforePrint(sender As System.Object, e As System.Drawing.Printing.PrintEventArgs) Handles XrLabel6.BeforePrint
+
+        Dim dos As String
+
+
+        Try
+            dos = GetCurrentColumnValue("Grupo").ToString
+        Catch ex As Exception
+        Finally
+            If dos Is Nothing Then dos = ""
+        End Try
+
+        If dos = "2" Then
+            XrLabel6.Text = "Aprobado"
+        Else
+            XrLabel6.Text = "Estimado/Aprobado"
+        End If
+
+    End Sub
+
+    Private Sub XrLabel15_BeforePrint(sender As System.Object, e As System.Drawing.Printing.PrintEventArgs) Handles XrLabel15.BeforePrint
+        Dim dos As String
+
+        Try
+            dos = GetCurrentColumnValue("Grupo").ToString
+        Catch ex As Exception
+        Finally
+            If dos Is Nothing Then dos = ""
+        End Try
+
+        If dos = "2" Then
+            XrLabel15.Text = "Pagado"
+        Else
+            XrLabel15.Text = "Recaudado/Pagado"
+        End If
+    End Sub
 End Class

@@ -60,7 +60,6 @@ Partial Public Class RPT_BalancePres3
         Me.XrPanel1 = New DevExpress.XtraReports.UI.XRPanel()
         Me.lbl_prmNota1 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel3 = New DevExpress.XtraReports.UI.XRLabel()
-        Me.XrSubreport1 = New DevExpress.XtraReports.UI.XRSubreport()
         Me.FormattingRule1 = New DevExpress.XtraReports.UI.FormattingRule()
         Me.DsNotasBenn1 = New Korima_Reporteador.dsNotasBenn()
         Me.XrLabel5 = New DevExpress.XtraReports.UI.XRLabel()
@@ -76,6 +75,7 @@ Partial Public Class RPT_BalancePres3
         Me.XrLabel6 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel2 = New DevExpress.XtraReports.UI.XRLabel()
         Me.SumaHorizontal = New DevExpress.XtraReports.UI.CalculatedField()
+        Me.XrSubreport1 = New DevExpress.XtraReports.UI.XRSubreport()
         Me.RpT_FirmasVerticalElectronica1 = New Korima_Reporteador.RPT_FirmasVerticalElectronica()
         prmNota1 = New DevExpress.XtraReports.Parameters.Parameter()
         CType(Me.DsNotasBenn1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -111,10 +111,10 @@ Partial Public Class RPT_BalancePres3
         Me.lbl_XrLabel18.FormattingRules.Add(Me.FormattingRule4)
         Me.lbl_XrLabel18.FormattingRules.Add(Me.FormattingRule8)
         Me.lbl_XrLabel18.FormattingRules.Add(Me.FormattingRule2)
-        Me.lbl_XrLabel18.LocationFloat = New DevExpress.Utils.PointFloat(2037.096!, 0.0!)
+        Me.lbl_XrLabel18.LocationFloat = New DevExpress.Utils.PointFloat(2132.341!, 0.0!)
         Me.lbl_XrLabel18.Name = "lbl_XrLabel18"
         Me.lbl_XrLabel18.Padding = New DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254.0!)
-        Me.lbl_XrLabel18.SizeF = New System.Drawing.SizeF(300.0!, 45.19088!)
+        Me.lbl_XrLabel18.SizeF = New System.Drawing.SizeF(347.6201!, 45.19088!)
         Me.lbl_XrLabel18.StylePriority.UseBorders = False
         Me.lbl_XrLabel18.StylePriority.UseBorderWidth = False
         Me.lbl_XrLabel18.StylePriority.UseFont = False
@@ -163,10 +163,10 @@ Partial Public Class RPT_BalancePres3
         Me.lbl_prmNaturaleza.FormattingRules.Add(Me.FormattingRule4)
         Me.lbl_prmNaturaleza.FormattingRules.Add(Me.FormattingRule8)
         Me.lbl_prmNaturaleza.FormattingRules.Add(Me.FormattingRule2)
-        Me.lbl_prmNaturaleza.LocationFloat = New DevExpress.Utils.PointFloat(1737.096!, 0.0!)
+        Me.lbl_prmNaturaleza.LocationFloat = New DevExpress.Utils.PointFloat(1784.721!, 0.0!)
         Me.lbl_prmNaturaleza.Name = "lbl_prmNaturaleza"
         Me.lbl_prmNaturaleza.Padding = New DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254.0!)
-        Me.lbl_prmNaturaleza.SizeF = New System.Drawing.SizeF(300.0!, 45.19088!)
+        Me.lbl_prmNaturaleza.SizeF = New System.Drawing.SizeF(347.6199!, 45.19088!)
         Me.lbl_prmNaturaleza.StylePriority.UseBorders = False
         Me.lbl_prmNaturaleza.StylePriority.UseBorderWidth = False
         Me.lbl_prmNaturaleza.StylePriority.UseFont = False
@@ -189,7 +189,7 @@ Partial Public Class RPT_BalancePres3
         Me.lbl_prmTipo.LocationFloat = New DevExpress.Utils.PointFloat(1437.096!, 0.0!)
         Me.lbl_prmTipo.Name = "lbl_prmTipo"
         Me.lbl_prmTipo.Padding = New DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254.0!)
-        Me.lbl_prmTipo.SizeF = New System.Drawing.SizeF(300.0!, 45.19088!)
+        Me.lbl_prmTipo.SizeF = New System.Drawing.SizeF(347.625!, 45.19088!)
         Me.lbl_prmTipo.StylePriority.UseBorders = False
         Me.lbl_prmTipo.StylePriority.UseBorderWidth = False
         Me.lbl_prmTipo.StylePriority.UseFont = False
@@ -281,7 +281,7 @@ Partial Public Class RPT_BalancePres3
         'PICEnteLogoSecundario
         '
         Me.PICEnteLogoSecundario.Dpi = 254.0!
-        Me.PICEnteLogoSecundario.LocationFloat = New DevExpress.Utils.PointFloat(1737.096!, 63.5!)
+        Me.PICEnteLogoSecundario.LocationFloat = New DevExpress.Utils.PointFloat(1866.221!, 63.5!)
         Me.PICEnteLogoSecundario.Name = "PICEnteLogoSecundario"
         Me.PICEnteLogoSecundario.SizeF = New System.Drawing.SizeF(215.3709!, 203.2!)
         Me.PICEnteLogoSecundario.Sizing = DevExpress.XtraPrinting.ImageSizeMode.ZoomImage
@@ -292,7 +292,7 @@ Partial Public Class RPT_BalancePres3
         Me.line1.LineWidth = 3
         Me.line1.LocationFloat = New DevExpress.Utils.PointFloat(0.0!, 381.0!)
         Me.line1.Name = "line1"
-        Me.line1.SizeF = New System.Drawing.SizeF(2337.096!, 15.875!)
+        Me.line1.SizeF = New System.Drawing.SizeF(2479.961!, 15.875!)
         '
         'lblSubtitulo
         '
@@ -301,7 +301,7 @@ Partial Public Class RPT_BalancePres3
         Me.lblSubtitulo.LocationFloat = New DevExpress.Utils.PointFloat(273.6329!, 176.9534!)
         Me.lblSubtitulo.Name = "lblSubtitulo"
         Me.lblSubtitulo.Padding = New DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254.0!)
-        Me.lblSubtitulo.SizeF = New System.Drawing.SizeF(1463.463!, 49.95338!)
+        Me.lblSubtitulo.SizeF = New System.Drawing.SizeF(1500.505!, 49.95338!)
         Me.lblSubtitulo.StylePriority.UseFont = False
         Me.lblSubtitulo.StylePriority.UseTextAlignment = False
         Me.lblSubtitulo.Text = "Sub titulo"
@@ -314,7 +314,7 @@ Partial Public Class RPT_BalancePres3
         Me.lblTitulo.LocationFloat = New DevExpress.Utils.PointFloat(273.6329!, 127.0!)
         Me.lblTitulo.Name = "lblTitulo"
         Me.lblTitulo.Padding = New DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254.0!)
-        Me.lblTitulo.SizeF = New System.Drawing.SizeF(1463.463!, 49.9534!)
+        Me.lblTitulo.SizeF = New System.Drawing.SizeF(1500.505!, 49.9534!)
         Me.lblTitulo.StylePriority.UseFont = False
         Me.lblTitulo.StylePriority.UseTextAlignment = False
         Me.lblTitulo.Text = "Titulo"
@@ -327,10 +327,10 @@ Partial Public Class RPT_BalancePres3
         Me.XrLabel1.LocationFloat = New DevExpress.Utils.PointFloat(273.6329!, 276.8602!)
         Me.XrLabel1.Name = "XrLabel1"
         Me.XrLabel1.Padding = New DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254.0!)
-        Me.XrLabel1.SizeF = New System.Drawing.SizeF(1463.463!, 58.42001!)
+        Me.XrLabel1.SizeF = New System.Drawing.SizeF(1500.505!, 58.42001!)
         Me.XrLabel1.StylePriority.UseFont = False
         Me.XrLabel1.StylePriority.UseTextAlignment = False
-        Me.XrLabel1.Text = "(En miles de pesos)"
+        Me.XrLabel1.Text = "(PESOS)"
         Me.XrLabel1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
         '
         'pageInfo2
@@ -338,7 +338,7 @@ Partial Public Class RPT_BalancePres3
         Me.pageInfo2.Dpi = 254.0!
         Me.pageInfo2.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.pageInfo2.Format = "{0:HH:mm}"
-        Me.pageInfo2.LocationFloat = New DevExpress.Utils.PointFloat(1974.609!, 176.9534!)
+        Me.pageInfo2.LocationFloat = New DevExpress.Utils.PointFloat(2108.05!, 176.9534!)
         Me.pageInfo2.Name = "pageInfo2"
         Me.pageInfo2.Padding = New DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254.0!)
         Me.pageInfo2.PageInfo = DevExpress.XtraPrinting.PageInfo.DateTime
@@ -352,7 +352,7 @@ Partial Public Class RPT_BalancePres3
         Me.pageInfo1.Dpi = 254.0!
         Me.pageInfo1.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.pageInfo1.Format = "{0:dd/MM/yyyy}"
-        Me.pageInfo1.LocationFloat = New DevExpress.Utils.PointFloat(1974.609!, 113.4533!)
+        Me.pageInfo1.LocationFloat = New DevExpress.Utils.PointFloat(2108.05!, 113.4533!)
         Me.pageInfo1.Name = "pageInfo1"
         Me.pageInfo1.Padding = New DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254.0!)
         Me.pageInfo1.PageInfo = DevExpress.XtraPrinting.PageInfo.DateTime
@@ -366,7 +366,7 @@ Partial Public Class RPT_BalancePres3
         Me.pageInfo3.Dpi = 254.0!
         Me.pageInfo3.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.pageInfo3.Format = "Pagina {0} de {1}"
-        Me.pageInfo3.LocationFloat = New DevExpress.Utils.PointFloat(1974.609!, 49.95343!)
+        Me.pageInfo3.LocationFloat = New DevExpress.Utils.PointFloat(2108.05!, 49.95343!)
         Me.pageInfo3.Name = "pageInfo3"
         Me.pageInfo3.Padding = New DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254.0!)
         Me.pageInfo3.SizeF = New System.Drawing.SizeF(353.3912!, 58.42002!)
@@ -381,7 +381,7 @@ Partial Public Class RPT_BalancePres3
         Me.lblRptNombreReporte.LocationFloat = New DevExpress.Utils.PointFloat(273.6329!, 63.5!)
         Me.lblRptNombreReporte.Name = "lblRptNombreReporte"
         Me.lblRptNombreReporte.Padding = New DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254.0!)
-        Me.lblRptNombreReporte.SizeF = New System.Drawing.SizeF(1463.463!, 58.42!)
+        Me.lblRptNombreReporte.SizeF = New System.Drawing.SizeF(1500.505!, 58.42!)
         Me.lblRptNombreReporte.StylePriority.UseFont = False
         Me.lblRptNombreReporte.StylePriority.UseTextAlignment = False
         Me.lblRptNombreReporte.Text = "Nombre del Reporte"
@@ -394,7 +394,7 @@ Partial Public Class RPT_BalancePres3
         Me.lblRptNombreEnte.LocationFloat = New DevExpress.Utils.PointFloat(273.6329!, 0.0!)
         Me.lblRptNombreEnte.Name = "lblRptNombreEnte"
         Me.lblRptNombreEnte.Padding = New DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254.0!)
-        Me.lblRptNombreEnte.SizeF = New System.Drawing.SizeF(1463.463!, 58.41998!)
+        Me.lblRptNombreEnte.SizeF = New System.Drawing.SizeF(1500.505!, 58.41998!)
         Me.lblRptNombreEnte.StylePriority.UseFont = False
         Me.lblRptNombreEnte.StylePriority.UseTextAlignment = False
         Me.lblRptNombreEnte.Text = "Nombre del Ente público"
@@ -415,7 +415,7 @@ Partial Public Class RPT_BalancePres3
         Me.lblRptDescripcionFiltrado.LocationFloat = New DevExpress.Utils.PointFloat(273.6329!, 226.9068!)
         Me.lblRptDescripcionFiltrado.Name = "lblRptDescripcionFiltrado"
         Me.lblRptDescripcionFiltrado.Padding = New DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254.0!)
-        Me.lblRptDescripcionFiltrado.SizeF = New System.Drawing.SizeF(1463.463!, 49.9534!)
+        Me.lblRptDescripcionFiltrado.SizeF = New System.Drawing.SizeF(1500.505!, 49.9534!)
         Me.lblRptDescripcionFiltrado.StylePriority.UseFont = False
         Me.lblRptDescripcionFiltrado.StylePriority.UseTextAlignment = False
         Me.lblRptDescripcionFiltrado.Text = "Fecha o Rango"
@@ -432,7 +432,7 @@ Partial Public Class RPT_BalancePres3
         '
         Me.XrLblIso.Dpi = 254.0!
         Me.XrLblIso.Font = New System.Drawing.Font("Tahoma", 8.0!)
-        Me.XrLblIso.LocationFloat = New DevExpress.Utils.PointFloat(1850.261!, 62.08972!)
+        Me.XrLblIso.LocationFloat = New DevExpress.Utils.PointFloat(1974.608!, 62.08972!)
         Me.XrLblIso.Name = "XrLblIso"
         Me.XrLblIso.Padding = New DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254.0!)
         Me.XrLblIso.SizeF = New System.Drawing.SizeF(486.8334!, 42.545!)
@@ -444,7 +444,7 @@ Partial Public Class RPT_BalancePres3
         '
         Me.XrLblUsr.Dpi = 254.0!
         Me.XrLblUsr.Font = New System.Drawing.Font("Tahoma", 8.0!)
-        Me.XrLblUsr.LocationFloat = New DevExpress.Utils.PointFloat(1850.262!, 19.54467!)
+        Me.XrLblUsr.LocationFloat = New DevExpress.Utils.PointFloat(1974.609!, 19.54467!)
         Me.XrLblUsr.Name = "XrLblUsr"
         Me.XrLblUsr.Padding = New DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254.0!)
         Me.XrLblUsr.SizeF = New System.Drawing.SizeF(486.8334!, 42.545!)
@@ -498,7 +498,7 @@ Partial Public Class RPT_BalancePres3
         Me.line2.LineWidth = 3
         Me.line2.LocationFloat = New DevExpress.Utils.PointFloat(0.0!, 0.0!)
         Me.line2.Name = "line2"
-        Me.line2.SizeF = New System.Drawing.SizeF(2337.096!, 19.54469!)
+        Me.line2.SizeF = New System.Drawing.SizeF(2479.961!, 19.54469!)
         '
         'ReportFooter
         '
@@ -516,9 +516,9 @@ Partial Public Class RPT_BalancePres3
         Me.XrPanel1.BorderWidth = 2
         Me.XrPanel1.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.lbl_prmNota1, Me.XrLabel3})
         Me.XrPanel1.Dpi = 254.0!
-        Me.XrPanel1.LocationFloat = New DevExpress.Utils.PointFloat(0.0!, 83.41992!)
+        Me.XrPanel1.LocationFloat = New DevExpress.Utils.PointFloat(0.0!, 83.41989!)
         Me.XrPanel1.Name = "XrPanel1"
-        Me.XrPanel1.SizeF = New System.Drawing.SizeF(2337.096!, 71.4375!)
+        Me.XrPanel1.SizeF = New System.Drawing.SizeF(2479.961!, 71.4375!)
         Me.XrPanel1.StylePriority.UseBorders = False
         Me.XrPanel1.StylePriority.UseBorderWidth = False
         Me.XrPanel1.Visible = False
@@ -551,14 +551,6 @@ Partial Public Class RPT_BalancePres3
         Me.XrLabel3.StylePriority.UseFont = False
         Me.XrLabel3.Text = "Comentarios:"
         '
-        'XrSubreport1
-        '
-        Me.XrSubreport1.Dpi = 254.0!
-        Me.XrSubreport1.LocationFloat = New DevExpress.Utils.PointFloat(260.6291!, 25.00001!)
-        Me.XrSubreport1.Name = "XrSubreport1"
-        Me.XrSubreport1.ReportSource = Me.RpT_FirmasVerticalElectronica1
-        Me.XrSubreport1.SizeF = New System.Drawing.SizeF(2012.458!, 58.41992!)
-        '
         'FormattingRule1
         '
         Me.FormattingRule1.Condition = "[Parameters.prmNota1]  Like  'Espacio asignado para notas%' or" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "[Parameters.prmTi" & _
@@ -587,7 +579,7 @@ Partial Public Class RPT_BalancePres3
         Me.XrLabel5.LocationFloat = New DevExpress.Utils.PointFloat(5.291667!, 0.0!)
         Me.XrLabel5.Name = "XrLabel5"
         Me.XrLabel5.Padding = New DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254.0!)
-        Me.XrLabel5.SizeF = New System.Drawing.SizeF(1325.543!, 63.0!)
+        Me.XrLabel5.SizeF = New System.Drawing.SizeF(1431.803!, 63.0!)
         Me.XrLabel5.StylePriority.UseBorders = False
         Me.XrLabel5.StylePriority.UseBorderWidth = False
         Me.XrLabel5.StylePriority.UseFont = False
@@ -603,10 +595,10 @@ Partial Public Class RPT_BalancePres3
         Me.XrLabel10.Dpi = 254.0!
         Me.XrLabel10.Font = New System.Drawing.Font("Tahoma", 8.0!)
         Me.XrLabel10.ForeColor = System.Drawing.Color.Transparent
-        Me.XrLabel10.LocationFloat = New DevExpress.Utils.PointFloat(1330.836!, 0.0!)
+        Me.XrLabel10.LocationFloat = New DevExpress.Utils.PointFloat(1437.096!, 0.0!)
         Me.XrLabel10.Name = "XrLabel10"
         Me.XrLabel10.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 11, 0, 0, 254.0!)
-        Me.XrLabel10.SizeF = New System.Drawing.SizeF(383.2084!, 63.0!)
+        Me.XrLabel10.SizeF = New System.Drawing.SizeF(347.6249!, 63.0!)
         Me.XrLabel10.StylePriority.UseBorders = False
         Me.XrLabel10.StylePriority.UseBorderWidth = False
         Me.XrLabel10.StylePriority.UseFont = False
@@ -640,10 +632,10 @@ Partial Public Class RPT_BalancePres3
         Me.XrLabel14.BorderWidth = 2
         Me.XrLabel14.Dpi = 254.0!
         Me.XrLabel14.ForeColor = System.Drawing.Color.Transparent
-        Me.XrLabel14.LocationFloat = New DevExpress.Utils.PointFloat(2077.296!, 0.0!)
+        Me.XrLabel14.LocationFloat = New DevExpress.Utils.PointFloat(2132.341!, 0.0!)
         Me.XrLabel14.Name = "XrLabel14"
         Me.XrLabel14.Padding = New DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254.0!)
-        Me.XrLabel14.SizeF = New System.Drawing.SizeF(259.7998!, 63.0!)
+        Me.XrLabel14.SizeF = New System.Drawing.SizeF(347.6201!, 63.0!)
         Me.XrLabel14.StylePriority.UseBorders = False
         Me.XrLabel14.StylePriority.UseBorderWidth = False
         Me.XrLabel14.StylePriority.UseForeColor = False
@@ -654,10 +646,10 @@ Partial Public Class RPT_BalancePres3
         Me.XrLabel13.BorderWidth = 2
         Me.XrLabel13.Dpi = 254.0!
         Me.XrLabel13.ForeColor = System.Drawing.Color.Transparent
-        Me.XrLabel13.LocationFloat = New DevExpress.Utils.PointFloat(1714.044!, 0.0!)
+        Me.XrLabel13.LocationFloat = New DevExpress.Utils.PointFloat(1784.721!, 0.0!)
         Me.XrLabel13.Name = "XrLabel13"
         Me.XrLabel13.Padding = New DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254.0!)
-        Me.XrLabel13.SizeF = New System.Drawing.SizeF(363.2515!, 63.0!)
+        Me.XrLabel13.SizeF = New System.Drawing.SizeF(347.6199!, 63.0!)
         Me.XrLabel13.StylePriority.UseBorders = False
         Me.XrLabel13.StylePriority.UseBorderWidth = False
         Me.XrLabel13.StylePriority.UseForeColor = False
@@ -678,10 +670,10 @@ Partial Public Class RPT_BalancePres3
         Me.XrLabel15.BorderWidth = 2
         Me.XrLabel15.Dpi = 254.0!
         Me.XrLabel15.Font = New System.Drawing.Font("Tahoma", 8.0!, System.Drawing.FontStyle.Bold)
-        Me.XrLabel15.LocationFloat = New DevExpress.Utils.PointFloat(2037.096!, 0.0!)
+        Me.XrLabel15.LocationFloat = New DevExpress.Utils.PointFloat(2132.341!, 0.0!)
         Me.XrLabel15.Name = "XrLabel15"
         Me.XrLabel15.Padding = New DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254.0!)
-        Me.XrLabel15.SizeF = New System.Drawing.SizeF(300.0!, 47.83667!)
+        Me.XrLabel15.SizeF = New System.Drawing.SizeF(347.62!, 47.83667!)
         Me.XrLabel15.StylePriority.UseBorders = False
         Me.XrLabel15.StylePriority.UseBorderWidth = False
         Me.XrLabel15.StylePriority.UseFont = False
@@ -696,10 +688,10 @@ Partial Public Class RPT_BalancePres3
         Me.XrLabel11.BorderWidth = 2
         Me.XrLabel11.Dpi = 254.0!
         Me.XrLabel11.Font = New System.Drawing.Font("Tahoma", 8.0!, System.Drawing.FontStyle.Bold)
-        Me.XrLabel11.LocationFloat = New DevExpress.Utils.PointFloat(1737.096!, 0.0!)
+        Me.XrLabel11.LocationFloat = New DevExpress.Utils.PointFloat(1784.721!, 0.0!)
         Me.XrLabel11.Name = "XrLabel11"
         Me.XrLabel11.Padding = New DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254.0!)
-        Me.XrLabel11.SizeF = New System.Drawing.SizeF(300.0!, 47.83667!)
+        Me.XrLabel11.SizeF = New System.Drawing.SizeF(347.62!, 47.83667!)
         Me.XrLabel11.StylePriority.UseBorders = False
         Me.XrLabel11.StylePriority.UseBorderWidth = False
         Me.XrLabel11.StylePriority.UseFont = False
@@ -717,7 +709,7 @@ Partial Public Class RPT_BalancePres3
         Me.XrLabel6.LocationFloat = New DevExpress.Utils.PointFloat(1437.096!, 0.0!)
         Me.XrLabel6.Name = "XrLabel6"
         Me.XrLabel6.Padding = New DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254.0!)
-        Me.XrLabel6.SizeF = New System.Drawing.SizeF(300.0!, 47.83667!)
+        Me.XrLabel6.SizeF = New System.Drawing.SizeF(347.625!, 47.83667!)
         Me.XrLabel6.StylePriority.UseBorders = False
         Me.XrLabel6.StylePriority.UseBorderWidth = False
         Me.XrLabel6.StylePriority.UseFont = False
@@ -742,12 +734,20 @@ Partial Public Class RPT_BalancePres3
         Me.XrLabel2.StylePriority.UseFont = False
         Me.XrLabel2.StylePriority.UseTextAlignment = False
         Me.XrLabel2.Text = "Concepto"
-        Me.XrLabel2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter
+        Me.XrLabel2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
         '
         'SumaHorizontal
         '
         Me.SumaHorizontal.Expression = "Iif([NumeroCuenta] Like '22%' ,[MasDe365] ,[Nota1] + [Nota2] + [Nota3])"
         Me.SumaHorizontal.Name = "SumaHorizontal"
+        '
+        'XrSubreport1
+        '
+        Me.XrSubreport1.Dpi = 254.0!
+        Me.XrSubreport1.LocationFloat = New DevExpress.Utils.PointFloat(260.6291!, 25.00001!)
+        Me.XrSubreport1.Name = "XrSubreport1"
+        Me.XrSubreport1.ReportSource = Me.RpT_FirmasVerticalElectronica1
+        Me.XrSubreport1.SizeF = New System.Drawing.SizeF(2012.458!, 58.41992!)
         '
         'RPT_BalancePres3
         '
@@ -759,9 +759,9 @@ Partial Public Class RPT_BalancePres3
         Me.Dpi = 254.0!
         Me.FormattingRuleSheet.AddRange(New DevExpress.XtraReports.UI.FormattingRule() {Me.FormattingRule1, Me.FormattingRule2, Me.FormattingRule3, Me.FormattingRule4, Me.FormattingRule5, Me.FormattingRule6, Me.FormattingRule7, Me.FormattingRule8})
         Me.Landscape = True
-        Me.Margins = New System.Drawing.Printing.Margins(198, 101, 100, 100)
+        Me.Margins = New System.Drawing.Printing.Margins(146, 101, 100, 100)
         Me.PageHeight = 2200
-        Me.PageWidth = 2652
+        Me.PageWidth = 2752
         Me.PaperKind = System.Drawing.Printing.PaperKind.Custom
         Me.Parameters.AddRange(New DevExpress.XtraReports.Parameters.Parameter() {prmNota1})
         Me.ReportUnit = DevExpress.XtraReports.UI.ReportUnit.TenthsOfAMillimeter
