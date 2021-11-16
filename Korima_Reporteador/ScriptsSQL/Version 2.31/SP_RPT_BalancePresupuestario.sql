@@ -10,7 +10,7 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 
--- SP_RPT_BalancePresupuestario 1,12,2020,0
+-- SP_RPT_BalancePresupuestario 1,12,2021,0
 CREATE PROCEDURE [dbo].[SP_RPT_BalancePresupuestario]
 
 @Mes1 int,
