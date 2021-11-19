@@ -674,6 +674,8 @@ Partial Public Class DSEnrique
         
         Private columnSaldo As Global.System.Data.DataColumn
         
+        Private columnCiudad As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub New()
@@ -870,6 +872,14 @@ Partial Public Class DSEnrique
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property CiudadColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnCiudad
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -926,9 +936,10 @@ Partial Public Class DSEnrique
                     ByVal Valor1 As String,  _
                     ByVal Valor2 As String,  _
                     ByVal LocalForaneo As String,  _
-                    ByVal Saldo As String) As SP_RPT_CatalogoProveedoresRow
+                    ByVal Saldo As String,  _
+                    ByVal Ciudad As String) As SP_RPT_CatalogoProveedoresRow
             Dim rowSP_RPT_CatalogoProveedoresRow As SP_RPT_CatalogoProveedoresRow = CType(Me.NewRow,SP_RPT_CatalogoProveedoresRow)
-            Dim columnValuesArray() As Object = New Object() {IdProv, RFC, RazonSocial, Domicilio, Colonia, CP, Telefono, GiroProv, Observaciones, Clave, Descripcion, NacionalExtranjero, TipoContribuyente, Confiable, NumeroCuenta, NombreBanco, Valor1, Valor2, LocalForaneo, Saldo}
+            Dim columnValuesArray() As Object = New Object() {IdProv, RFC, RazonSocial, Domicilio, Colonia, CP, Telefono, GiroProv, Observaciones, Clave, Descripcion, NacionalExtranjero, TipoContribuyente, Confiable, NumeroCuenta, NombreBanco, Valor1, Valor2, LocalForaneo, Saldo, Ciudad}
             rowSP_RPT_CatalogoProveedoresRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowSP_RPT_CatalogoProveedoresRow)
             Return rowSP_RPT_CatalogoProveedoresRow
@@ -977,6 +988,7 @@ Partial Public Class DSEnrique
             Me.columnValor2 = MyBase.Columns("Valor2")
             Me.columnLocalForaneo = MyBase.Columns("LocalForaneo")
             Me.columnSaldo = MyBase.Columns("Saldo")
+            Me.columnCiudad = MyBase.Columns("Ciudad")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1022,6 +1034,8 @@ Partial Public Class DSEnrique
             MyBase.Columns.Add(Me.columnLocalForaneo)
             Me.columnSaldo = New Global.System.Data.DataColumn("Saldo", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnSaldo)
+            Me.columnCiudad = New Global.System.Data.DataColumn("Ciudad", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCiudad)
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -7638,6 +7652,22 @@ Partial Public Class DSEnrique
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Ciudad() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableSP_RPT_CatalogoProveedores.CiudadColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'Ciudad' de la tabla 'SP_RPT_CatalogoProveedores' es DBNul"& _ 
+                            "l.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableSP_RPT_CatalogoProveedores.CiudadColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsIdProvNull() As Boolean
             Return Me.IsNull(Me.tableSP_RPT_CatalogoProveedores.IdProvColumn)
         End Function
@@ -7874,6 +7904,18 @@ Partial Public Class DSEnrique
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetSaldoNull()
             Me(Me.tableSP_RPT_CatalogoProveedores.SaldoColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsCiudadNull() As Boolean
+            Return Me.IsNull(Me.tableSP_RPT_CatalogoProveedores.CiudadColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetCiudadNull()
+            Me(Me.tableSP_RPT_CatalogoProveedores.CiudadColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     

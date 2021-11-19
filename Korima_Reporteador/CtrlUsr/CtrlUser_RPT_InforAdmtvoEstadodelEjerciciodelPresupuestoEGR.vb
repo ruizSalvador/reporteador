@@ -365,6 +365,9 @@ Public Class CtrlUser_RPT_InforAdmtvoEstadodelEjerciciodelPresupuestoEGR
                 Me.lblProgramaOperativo.Visible = True
                 Me.filterProgramaOperativo.Visible = True
                 Me.CleanProgramaOperativo.Visible = True
+                Me.LblFuenteFinanciameinto.Visible = True
+                Me.filterFuenteFinanciamiento.Visible = True
+                Me.CleanFuenteFinanciamiento.Visible = True
                 'Me.LabelControl8.Visible = True
                 'Me.filterPartida.Visible = True
                 'Me.SimpleButton5.Visible = True

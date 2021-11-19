@@ -147,7 +147,7 @@ Public Class CtrlUser_RPT_EstadoAnalitico_EjercicioPresupuestoEgresosDetallado_L
                 Return rpt
 
             Case 2
-                Me.nomREPORTE = "Estado Analítico del Ejercicio del Presupuesto de Egresos"
+                Me.nomREPORTE = "Estado Analítico del Ejercicio del Presupuesto de Egresos Detallado – LDF"
                 Me.TITULO = "Clasificación Administrativa"
                 Me.nomTipoReporte = "Concepto "
                 Me.nomTipoClaves = "" '"Ramo"
@@ -192,7 +192,7 @@ Public Class CtrlUser_RPT_EstadoAnalitico_EjercicioPresupuestoEgresosDetallado_L
                 Return rpt
 
             Case 6
-                Me.nomREPORTE = "Estado Analítico del Ejercicio del Presupuesto de Egresos"
+                Me.nomREPORTE = "Estado Analítico del Ejercicio del Presupuesto de Egresos Detallado – LDF"
                 Me.TITULO = "Clasificación por Objeto del Gasto (Capitulo y Concepto)"
                 Me.nomTipoReporte = "Concepto"
                 Me.nomTipoClaves = "Capítulo"
@@ -642,6 +642,7 @@ Public Class CtrlUser_RPT_EstadoAnalitico_EjercicioPresupuestoEgresosDetallado_L
             Me.SP = 1
         ElseIf ChkRelativo.Checked = True And Me.REPORTE = 2 Then
             Me.SP = 2
+            Me.chkAprAnual.Checked = True
         ElseIf ChkRelativo.Checked = True And Me.REPORTE = 3 Then
             Me.SP = 3
         ElseIf ChkRelativo.Checked = True And Me.REPORTE = 4 Then
@@ -650,6 +651,7 @@ Public Class CtrlUser_RPT_EstadoAnalitico_EjercicioPresupuestoEgresosDetallado_L
             Me.SP = 5
         ElseIf ChkRelativo.Checked = True And Me.REPORTE = 6 Then
             Me.SP = 6
+            Me.chkAprAnual.Checked = True
         ElseIf ChkRelativo.Checked = True And Me.REPORTE = 7 Then
             Me.SP = 7
         ElseIf ChkRelativo.Checked = True And Me.REPORTE = 8 Then

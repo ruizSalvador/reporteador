@@ -333,8 +333,8 @@ Partial Public Class SUBRPT_Totales_EstadoEjercicioPresupuestal_LDF
         Me.label42.StylePriority.UseBorders = False
         Me.label42.StylePriority.UseFont = False
         Me.label42.StylePriority.UseTextAlignment = False
-        Me.label42.Text = "Total del Gasto"
-        Me.label42.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
+        Me.label42.Text = "Total de Egresos (III = I + II)"
+        Me.label42.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
         '
         'XrLabel18
         '

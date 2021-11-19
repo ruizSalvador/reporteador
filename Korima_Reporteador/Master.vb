@@ -16,7 +16,7 @@ Public Class MDI_Principal
     'Dim bdd As String = "Korima_TET"
     'Dim bdd As String = "Korima_TSJ"
     'Dim bdd As String = "KorimaNogales"
-    'Dim bdd As String = "KorimaUPALT_1"
+    'Dim bdd As String = "KorimaSGG"
     'Dim bdd As String = "KOR585_UPALT"
 
 
