@@ -12,7 +12,7 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 
--- Exec SP_EstadoAnaliticoEjercicio_PresupuestoEgresosDetallado_NoEtiquetado 0, 1,3,2,2020,0,0,0
+-- Exec SP_EstadoAnaliticoEjercicio_PresupuestoEgresosDetallado_NoEtiquetado 0, 1,12,7,2021,0,0,0
 CREATE PROCEDURE  [dbo].[SP_EstadoAnaliticoEjercicio_PresupuestoEgresosDetallado_NoEtiquetado]  
   --@Mes  as int,   
   --@Mes2 as int,    
@@ -572,9 +572,10 @@ sum(ISNULL(TP.Devengado,0)) as SubEjercicio
 --From T_PresupuestoNW As TP, T_SellosPresupuestales As TS , C_AreaResponsabilidad As CR
 From T_PresupuestoNW As TP JOIN T_SellosPresupuestales As TS ON TP.IdSelloPresupuestal = TS.IdSelloPresupuestal
 			 JOIN C_AreaResponsabilidad As CR ON CR.IdAreaResp = TS.IdAreaResp
-			LEFT JOIN C_FuenteFinanciamiento As CFF ON CFF.IDFUENTEFINANCIAMIENTO = TS.IdFuenteFinanciamiento and CFF.IdClave not in (25,26,27)
+			LEFT JOIN C_FuenteFinanciamiento As CFF ON CFF.IDFUENTEFINANCIAMIENTO = TS.IdFuenteFinanciamiento --and CFF.IdClave not in (25,26,27)
+			
 where  (Mes BETWEEN  1 AND 12) AND LYear=@Ejercicio AND Year=@Ejercicio 
-
+and CFF.IdClave not in (25,26,27)
 AND TS.IdAreaResp = CASE WHEN @IdArea = 0 THEN TS.IdAreaResp ELSE @IdArea END
 group by CR.CLAVE, CR.Nombre 
 Order By CR.CLAVE
@@ -606,8 +607,10 @@ sum(ISNULL(TP.Devengado,0)) as SubEjercicio
 
 From T_PresupuestoNW As TP JOIN T_SellosPresupuestales As TS ON TP.IdSelloPresupuestal = TS.IdSelloPresupuestal
 			 JOIN C_AreaResponsabilidad As CR ON CR.IdAreaResp = TS.IdAreaResp
-			LEFT JOIN C_FuenteFinanciamiento As CFF ON CFF.IDFUENTEFINANCIAMIENTO = TS.IdFuenteFinanciamiento and CFF.IdClave not in (25,26,27)
+			LEFT JOIN C_FuenteFinanciamiento As CFF ON CFF.IDFUENTEFINANCIAMIENTO = TS.IdFuenteFinanciamiento --and CFF.IdClave not in (25,26,27)
+			
 where  (Mes BETWEEN  @Mes AND @Mes2) AND LYear=@Ejercicio AND Year=@Ejercicio 
+and CFF.IdClave not in (25,26,27)
 AND TS.IdAreaResp = CASE WHEN @IdArea = 0 THEN TS.IdAreaResp ELSE @IdArea END
 group by CR.CLAVE, CR.Nombre 
 Order By CR.CLAVE
@@ -752,11 +755,17 @@ Select CFS.Clave as IdClave,  CFS.Nombre as Descripcion, CF.Clave as Clave, CF.N
 sum(ISNULL(TP.Autorizado,0)) as Autorizado,
 (sum(ISNULL(TP.Ampliaciones,0)) + sum(ISNULL(TP.TransferenciaAmp,0))) -
 (sum(ISNULL(TP.Reducciones,0)) + sum(ISNULL(TP.TransferenciaRed,0))) as Amp_Red
-From T_PresupuestoNW As TP, T_SellosPresupuestales As TS , C_funciones As CF, C_Subfunciones As CS, C_Finalidades As CFS
-where (Mes = 0)	 AND LYear=@Ejercicio AND Year=@Ejercicio and  TP.IdSelloPresupuestal = TS.IdSelloPresupuestal AND TS.IdSubFuncion = CS.IdSubFuncion AND  CS.IdFuncion = CF.IdFuncion AND CF.IdFinalidad = CFS.IdFinalidad 
-AND TS.IdAreaResp = CASE WHEN @IdArea = 0 THEN TS.IdAreaResp ELSE @IdArea END
+From T_PresupuestoNW As TP JOIN T_SellosPresupuestales As TS ON TP.IdSelloPresupuestal = TS.IdSelloPresupuestal
+			 
+LEFT JOIN C_Subfunciones CS ON TS.IdSubFuncion = CS.IdSubFuncion 		
+LEFT JOIN C_funciones  CF ON CS.IdFuncion = CF.IdFuncion 
+LEFT JOIN C_Finalidades CFS ON CF.IdFinalidad = CFS.IdFinalidad
+LEFT JOIN C_FuenteFinanciamiento As FF ON FF.IDFUENTEFINANCIAMIENTO = TS.IdFuenteFinanciamiento 
+where (Mes = 0)  AND LYear=@Ejercicio AND Year=@Ejercicio   
+and FF.IdClave not in (25,26,27)
+AND TS.IdAreaResp = CASE WHEN @IdArea = 0 THEN TS.IdAreaResp ELSE @IdArea END  
 group by CF.Clave,CF.Nombre,  CFS.Clave, CFS.Nombre,CFS.IdFinalidad 
-Order By CF.Clave,  CFS.Clave,CFS.IdFinalidad 
+Order By CF.Clave,  CFS.Clave,CFS.IdFinalidad   
 
 Declare @Titulos7 as table(IdClave int,Descripcion varchar(max),Clave int,Descripcion2 Varchar(max),IdClave2 int,
 Autorizado decimal(18,4),TransferenciaAmp decimal(18,4),TransferenciaRed decimal(18,4),Modificado decimal(18,4),Comprometido decimal(18,4),
@@ -804,15 +813,61 @@ sum(ISNULL(TP.Devengado,0)) -  sum(ISNULL(TP.Ejercido,0)) AS Deuda,
 sum(ISNULL(TP.Devengado,0)) as SubEjercicio 
 
 
-From T_PresupuestoNW As TP, T_SellosPresupuestales As TS , C_funciones As CF, C_Subfunciones As CS, C_Finalidades As CFS
-where (Mes BETWEEN  @Mes AND @Mes2)	 AND LYear=@Ejercicio AND Year=@Ejercicio and  TP.IdSelloPresupuestal = TS.IdSelloPresupuestal AND TS.IdSubFuncion = CS.IdSubFuncion AND  CS.IdFuncion = CF.IdFuncion AND CF.IdFinalidad = CFS.IdFinalidad 
-AND TS.IdAreaResp = CASE WHEN @IdArea = 0 THEN TS.IdAreaResp ELSE @IdArea END
+From T_PresupuestoNW As TP JOIN T_SellosPresupuestales As TS ON TP.IdSelloPresupuestal = TS.IdSelloPresupuestal		 
+LEFT JOIN C_Subfunciones CS ON TS.IdSubFuncion = CS.IdSubFuncion 		
+LEFT JOIN C_funciones  CF ON CS.IdFuncion = CF.IdFuncion 
+LEFT JOIN C_Finalidades CFS ON CF.IdFinalidad = CFS.IdFinalidad
+LEFT JOIN C_FuenteFinanciamiento As FF ON FF.IDFUENTEFINANCIAMIENTO = TS.IdFuenteFinanciamiento 
+where (Mes BETWEEN  @Mes AND @Mes2)  AND LYear=@Ejercicio AND Year=@Ejercicio   
+and FF.IdClave not in (25,26,27)
+AND TS.IdAreaResp = CASE WHEN @IdArea = 0 THEN TS.IdAreaResp ELSE @IdArea END 
 group by CF.Clave,CF.Nombre,  CFS.Clave, CFS.Nombre,CFS.IdFinalidad 
-Order By CF.Clave,  CFS.Clave,CFS.IdFinalidad 
+Order By CF.Clave,  CFS.Clave,CFS.IdFinalidad   
 
 insert into @rpt7
 select* from @Titulos7 t 
 where t.Clave not in (select Clave from @rpt7)
+
+-----------------------------------------------------------------------------
+Update @rpt7 set Descripcion = 'A. Gobierno (A=a1+a2+a3+a4+a5+a6+a7+a8)' Where IdClave = 1 
+Update @rpt7 set Descripcion2 = ' a1) Legislación' Where  Clave = 11 
+Update @rpt7 set Descripcion2 = ' a2) Justicia' Where  Clave = 12
+Update @rpt7 set Descripcion2 = ' a3) Coordinación de la Política de Gobierno' Where  Clave = 13
+Update @rpt7 set Descripcion2 = ' a4) Relaciones Exteriores' Where  Clave = 14
+Update @rpt7 set Descripcion2 = ' a5) Asuntos Financieros y Hacendarios' Where  Clave = 15
+Update @rpt7 set Descripcion2 = ' a6) Seguridad Nacional' Where  Clave = 16
+Update @rpt7 set Descripcion2 = ' a7) Asuntos de Orden Público y de Seguridad Interior' Where  Clave = 17
+Update @rpt7 set Descripcion2 = ' a8) Otros Servicios Generales' Where  Clave = 18
+
+Update @rpt7 set Descripcion = 'B. Desarrollo Social (B=b1+b2+b3+b4+b5+b6+b7)' Where IdClave = 2 
+Update @rpt7 set Descripcion2 = ' b1) Protección Ambiental' Where  Clave = 21 
+Update @rpt7 set Descripcion2 = ' b2) Vivienda y Servicios a la Comunidad' Where  Clave = 22
+Update @rpt7 set Descripcion2 = ' b3) Salud' Where  Clave = 23
+Update @rpt7 set Descripcion2 = ' b4) Recreación, Cultura y Otras Manifestaciones Sociales' Where  Clave = 24
+Update @rpt7 set Descripcion2 = ' b5) Educación' Where  Clave = 25
+Update @rpt7 set Descripcion2 = ' b6) Protección Social' Where  Clave = 26
+Update @rpt7 set Descripcion2 = ' b7) Otros Asuntos Sociales' Where  Clave = 27
+
+Update @rpt7 set Descripcion = 'C. Desarrollo Económico (C=c1+c2+c3+c4+c5+c6+c7+c8+c9)' Where IdClave = 3 
+Update @rpt7 set Descripcion2 = ' c1) Asuntos Económicos, Comerciales y Laborales en General' Where  Clave = 31 
+Update @rpt7 set Descripcion2 = ' c2) Agropecuaria, Silvicultura, Pesca y Caza' Where  Clave = 32
+Update @rpt7 set Descripcion2 = ' c3) Combustibles y Energía' Where  Clave = 33
+Update @rpt7 set Descripcion2 = ' c4) Minería, Manufacturas y Construcción' Where  Clave = 34
+Update @rpt7 set Descripcion2 = ' c5) Transporte' Where  Clave = 35
+Update @rpt7 set Descripcion2 = ' c6) Comunicaciones' Where  Clave = 36
+Update @rpt7 set Descripcion2 = ' c7) Turismo' Where  Clave = 37
+Update @rpt7 set Descripcion2 = ' c8) Ciencia, Tecnología e Innovación' Where  Clave = 38
+Update @rpt7 set Descripcion2 = ' c9) Otras Industrias y Otros Asuntos Económicos' Where  Clave = 39
+
+Update @rpt7 set Descripcion = 'D. Otras No Clasificadas en Funciones Anteriores (D=d1+d2+d3+d4)' Where IdClave = 4
+Update @rpt7 set Descripcion2 = ' d1) Transacciones de la Deuda Publica / Costo Financiero de la Deuda' Where  Clave = 41 
+Update @rpt7 set Descripcion2 = ' d2) Transferencias, Participaciones y Aportaciones Entre Diferentes Niveles y Ordenes de Gobierno' Where  Clave = 42
+Update @rpt7 set Descripcion2 = ' d3) Saneamiento del Sistema Financiero' Where  Clave = 43
+Update @rpt7 set Descripcion2 = ' d4) Adeudos de Ejercicios Fiscales Anteriores' Where  Clave = 44
+
+-------------------------------------------------------------------------------------
+
+
 
 If @AprAnual = 1
 	Begin
@@ -833,10 +888,16 @@ Select CFS.Clave as IdClave,  CFS.Nombre as Descripcion, CF.Clave as Clave, CF.N
  sum(ISNULL(TP.Autorizado,0)) as Autorizado,
  (sum(ISNULL(TP.Ampliaciones,0)) + sum(ISNULL(TP.TransferenciaAmp,0))) - 
 (sum(ISNULL(TP.Reducciones,0)) + sum(ISNULL(TP.TransferenciaRed,0))) as Amp_Red
-From T_PresupuestoNW As TP, T_SellosPresupuestales As TS , C_funciones As CF, C_Subfunciones As CS, C_Finalidades As CFS
-where (Mes = 0) AND LYear=@Ejercicio AND Year=@Ejercicio and  TP.IdSelloPresupuestal = TS.IdSelloPresupuestal AND TS.IdSubFuncion = CS.IdSubFuncion AND  CS.IdFuncion = CF.IdFuncion AND CF.IdFinalidad = CFS.IdFinalidad 
+From T_PresupuestoNW As TP JOIN T_SellosPresupuestales As TS ON TP.IdSelloPresupuestal = TS.IdSelloPresupuestal		 
+LEFT JOIN C_Subfunciones CS ON TS.IdSubFuncion = CS.IdSubFuncion 		
+LEFT JOIN C_funciones  CF ON CS.IdFuncion = CF.IdFuncion 
+LEFT JOIN C_Finalidades CFS ON CF.IdFinalidad = CFS.IdFinalidad
+LEFT JOIN C_FuenteFinanciamiento As FF ON FF.IDFUENTEFINANCIAMIENTO = TS.IdFuenteFinanciamiento 
+where (Mes = 0)  AND LYear=@Ejercicio AND Year=@Ejercicio   
+and FF.IdClave not in (25,26,27)
+AND TS.IdAreaResp = CASE WHEN @IdArea = 0 THEN TS.IdAreaResp ELSE @IdArea END  
 group by CF.Clave,CF.Nombre,  CFS.Clave, CFS.Nombre,CFS.IdFinalidad 
-Order By CF.Clave,  CFS.Clave,CFS.IdFinalidad 
+Order By CF.Clave,  CFS.Clave,CFS.IdFinalidad
 
 declare @Titulos17 as table(IdClave int,Descripcion varchar(max),Clave int,Descripcion2 Varchar(max),IdClave2 int,
 Autorizado decimal(18,4),TransferenciaAmp decimal(18,4),TransferenciaRed decimal(18,4),Modificado decimal(18,4),Comprometido decimal(18,4),
@@ -885,17 +946,57 @@ sum(ISNULL(TP.Pagado,0)) As Pagado,
 (sum(ISNULL(TP.Autorizado,0)) + (sum(ISNULL(TP.Ampliaciones,0)) + sum(ISNULL(TP.TransferenciaAmp,0))) - (sum(ISNULL(TP.Reducciones,0)) + sum(ISNULL(TP.TransferenciaRed,0))))-
 (sum(ISNULL(TP.Devengado,0)) - sum(ISNULL(TP.Ejercido,0)) )As SubEjercicio
 
-
-From T_PresupuestoNW As TP, T_SellosPresupuestales As TS , C_funciones As CF, C_Subfunciones As CS, C_Finalidades As CFS
-where (Mes BETWEEN  @Mes AND @Mes2) AND LYear=@Ejercicio AND Year=@Ejercicio and  TP.IdSelloPresupuestal = TS.IdSelloPresupuestal AND TS.IdSubFuncion = CS.IdSubFuncion AND  CS.IdFuncion = CF.IdFuncion AND CF.IdFinalidad = CFS.IdFinalidad 
-AND TS.IdAreaResp = CASE WHEN @IdArea = 0 THEN TS.IdAreaResp ELSE @IdArea END
+From T_PresupuestoNW As TP JOIN T_SellosPresupuestales As TS ON TP.IdSelloPresupuestal = TS.IdSelloPresupuestal		 
+LEFT JOIN C_Subfunciones CS ON TS.IdSubFuncion = CS.IdSubFuncion 		
+LEFT JOIN C_funciones  CF ON CS.IdFuncion = CF.IdFuncion 
+LEFT JOIN C_Finalidades CFS ON CF.IdFinalidad = CFS.IdFinalidad
+LEFT JOIN C_FuenteFinanciamiento As FF ON FF.IDFUENTEFINANCIAMIENTO = TS.IdFuenteFinanciamiento 
+where (Mes BETWEEN  @Mes AND @Mes2)  AND LYear=@Ejercicio AND Year=@Ejercicio   
+and FF.IdClave not in (25,26,27)
+AND TS.IdAreaResp = CASE WHEN @IdArea = 0 THEN TS.IdAreaResp ELSE @IdArea END  
 group by CF.Clave,CF.Nombre,  CFS.Clave, CFS.Nombre,CFS.IdFinalidad 
-Order By CF.Clave,  CFS.Clave,CFS.IdFinalidad 
+Order By CF.Clave,  CFS.Clave,CFS.IdFinalidad
 
 insert into @rpt17
 select* from @Titulos17 t 
 where t.Clave not in (select Clave from @rpt17)
 
+-----------------------------------------------------------------------------
+Update @rpt17 set Descripcion = 'A. Gobierno (A=a1+a2+a3+a4+a5+a6+a7+a8)' Where IdClave = 1 
+Update @rpt17 set Descripcion2 = ' a1) Legislación' Where  Clave = 11 
+Update @rpt17 set Descripcion2 = ' a2) Justicia' Where  Clave = 12
+Update @rpt17 set Descripcion2 = ' a3) Coordinación de la Política de Gobierno' Where  Clave = 13
+Update @rpt17 set Descripcion2 = ' a4) Relaciones Exteriores' Where  Clave = 14
+Update @rpt17 set Descripcion2 = ' a5) Asuntos Financieros y Hacendarios' Where  Clave = 15
+Update @rpt17 set Descripcion2 = ' a6) Seguridad Nacional' Where  Clave = 16
+Update @rpt17 set Descripcion2 = ' a7) Asuntos de Orden Público y de Seguridad Interior' Where  Clave = 17
+Update @rpt17 set Descripcion2 = ' a8) Otros Servicios Generales' Where  Clave = 18
+
+Update @rpt17 set Descripcion = 'B. Desarrollo Social (B=b1+b2+b3+b4+b5+b6+b7)' Where IdClave = 2 
+Update @rpt17 set Descripcion2 = ' b1) Protección Ambiental' Where  Clave = 21 
+Update @rpt17 set Descripcion2 = ' b2) Vivienda y Servicios a la Comunidad' Where  Clave = 22
+Update @rpt17 set Descripcion2 = ' b3) Salud' Where  Clave = 23
+Update @rpt17 set Descripcion2 = ' b4) Recreación, Cultura y Otras Manifestaciones Sociales' Where  Clave = 24
+Update @rpt17 set Descripcion2 = ' b5) Educación' Where  Clave = 25
+Update @rpt17 set Descripcion2 = ' b6) Protección Social' Where  Clave = 26
+Update @rpt17 set Descripcion2 = ' b7) Otros Asuntos Sociales' Where  Clave = 27
+
+Update @rpt17 set Descripcion = 'C. Desarrollo Económico (C=c1+c2+c3+c4+c5+c6+c7+c8+c9)' Where IdClave = 3 
+Update @rpt17 set Descripcion2 = ' c1) Asuntos Económicos, Comerciales y Laborales en General' Where  Clave = 31 
+Update @rpt17 set Descripcion2 = ' c2) Agropecuaria, Silvicultura, Pesca y Caza' Where  Clave = 32
+Update @rpt17 set Descripcion2 = ' c3) Combustibles y Energía' Where  Clave = 33
+Update @rpt17 set Descripcion2 = ' c4) Minería, Manufacturas y Construcción' Where  Clave = 34
+Update @rpt17 set Descripcion2 = ' c5) Transporte' Where  Clave = 35
+Update @rpt17 set Descripcion2 = ' c6) Comunicaciones' Where  Clave = 36
+Update @rpt17 set Descripcion2 = ' c7) Turismo' Where  Clave = 37
+Update @rpt17 set Descripcion2 = ' c8) Ciencia, Tecnología e Innovación' Where  Clave = 38
+Update @rpt17 set Descripcion2 = ' c9) Otras Industrias y Otros Asuntos Económicos' Where  Clave = 39
+
+Update @rpt17 set Descripcion = 'D. Otras No Clasificadas en Funciones Anteriores (D=d1+d2+d3+d4)' Where IdClave = 4
+Update @rpt17 set Descripcion2 = ' d1) Transacciones de la Deuda Publica / Costo Financiero de la Deuda' Where  Clave = 41 
+Update @rpt17 set Descripcion2 = ' d2) Transferencias, Participaciones y Aportaciones Entre Diferentes Niveles y Ordenes de Gobierno' Where  Clave = 42
+Update @rpt17 set Descripcion2 = ' d3) Saneamiento del Sistema Financiero' Where  Clave = 43
+Update @rpt17 set Descripcion2 = ' d4) Adeudos de Ejercicios Fiscales Anteriores' Where  Clave = 44
 
 If @AprAnual = 1
 	Begin

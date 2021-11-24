@@ -12,7 +12,7 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 
--- Exec SP_EstadoAnaliticoEjercicio_PresupuestoEgresosDetallado_Etiquetado 1,4,2021,0,2,0,1,0
+-- Exec SP_EstadoAnaliticoEjercicio_PresupuestoEgresosDetallado_Etiquetado 0,0,2021,1,7,0,1,1
 CREATE PROCEDURE  [dbo].[SP_EstadoAnaliticoEjercicio_PresupuestoEgresosDetallado_Etiquetado]  
   @Mes  as int,   
   @Mes2 as int,    
@@ -217,59 +217,49 @@ sum(ISNULL(0,0)) as Pagado,
 (sum(ISNULL(0,0)) + (sum(ISNULL(0,0)) + sum(ISNULL(0,0))) - (sum(ISNULL(0,0)) + sum(ISNULL(0,0)))) - sum(ISNULL(0,0)) As PresDispComp,  
 sum(ISNULL(0,0)) - sum(ISNULL(0,0)) AS CompNoDev,  
 (sum(ISNULL(0,0)) + (sum(ISNULL(0,0)) + sum(ISNULL(0,0))) - (sum(ISNULL(0,0)) + sum(ISNULL(0,0))))- sum(ISNULL(0,0))  AS PresSinDev,  
-sum(ISNULL(0,0)) -  sum(ISNULL(0,0)) AS Deuda,  
-(sum(ISNULL(0,0)) + sum(ISNULL(0,0))) -   
-(sum(ISNULL(0,0)) + sum(ISNULL(0,0))) as Amp_Red,   
+sum(ISNULL(0,0)) -  sum(ISNULL(0,0)) AS Deuda,    
+(sum(ISNULL(TP.Ampliaciones,0)) + sum(ISNULL(TP.TransferenciaAmp,0))) -   
+(sum(ISNULL(TP.Reducciones,0)) + sum(ISNULL(TP.TransferenciaRed,0))) as Amp_Red,
 (sum(ISNULL(0,0)) + (sum(ISNULL(0,0)) + sum(ISNULL(0,0))) - (sum(ISNULL(0,0)) + sum(ISNULL(0,0))))-  
 sum(ISNULL(0,0)) as SubEjercicio 
-, case CFF.IdClave 
-		  when '25' then '25'
-		  when '26' then '25'
-		  when '27' then '25'
-		  when '0' then '0'
-		  else '11'
-		  end as idclaveFF 
+,''
 From T_PresupuestoNW As TP JOIN T_SellosPresupuestales As TS ON TP.IdSelloPresupuestal = TS.IdSelloPresupuestal
 			 JOIN C_AreaResponsabilidad As CR ON CR.IdAreaResp = TS.IdAreaResp
-			LEFT JOIN C_FuenteFinanciamiento As CFF ON CFF.IDFUENTEFINANCIAMIENTO = TS.IdFuenteFinanciamiento and CFF.IdClave in (25,26,27)
-Where (TP.Mes BETWEEN  1 AND 12) AND TP.[Year]=@Ejercicio AND TS.LYear=@Ejercicio AND TS.IdAreaResp  = CR.IdAreaResp 
-group by CFF.IdClave,CR.Clave,CR.Nombre
+			LEFT JOIN C_FuenteFinanciamiento As CFF ON CFF.IDFUENTEFINANCIAMIENTO = TS.IdFuenteFinanciamiento --and CFF.IdClave in (25,26,27)
+Where (TP.Mes BETWEEN  1 AND 12) AND TP.[Year]=@Ejercicio AND TS.LYear=@Ejercicio --AND TS.IdAreaResp  = CR.IdAreaResp 
+and CFF.IdClave in (25,26,27)
+group by CR.Clave,CR.Nombre
 Order By CR.CLAVE 
 --VALORES ABSOLUTOS  
   
-declare @rptt as table(CLAVE varchar(100),DESCRIPCION varchar(max),  
+declare @rpt2 as table(CLAVE varchar(100),DESCRIPCION varchar(max),  
 Autorizado decimal(18,4), TransferenciaAmp  decimal(18,4),TransferenciaRed  decimal(18,4),Modificado  decimal(18,4),Comprometido  decimal(18,4),Devengado  decimal(18,4),  
 Ejercido  decimal(18,4),Pagado  decimal(18,4),PresDispComp  decimal(18,4),CompNoDev  decimal(18,4),PresSinDev  decimal(18,4),Deuda  decimal(18,4),Amp_Red  decimal(18,4),SubEjercicio decimal(18,4),IdClaveFF int)  
-Insert into @rptt  
+Insert into @rpt2  
 Select CR.CLAVE, CR.Nombre,  
 sum(ISNULL(0,0)) as Autorizado,   
 (sum(ISNULL(0,0)) + sum(ISNULL(0,0))) as TransferenciaAmp,   
 (sum(ISNULL(0,0)) + sum(ISNULL(0,0))) as TransferenciaRed,   
 (sum(ISNULL(0,0)) + (sum(ISNULL(0,0)) + sum(ISNULL(0,0))) - (sum(ISNULL(0,0)) + sum(ISNULL(0,0))))as Modificado,  
-sum(ISNULL(TP.Comprometido,0)) as Comprometido,   
-sum(ISNULL(TP.Devengado,0)) as Devengado,   
-sum(ISNULL(TP.Ejercido,0)) as Ejercido,  
-sum(ISNULL(TP.Pagado,0)) as Pagado,   
-(sum(ISNULL(TP.Autorizado,0)) + (sum(ISNULL(TP.Ampliaciones,0)) + sum(ISNULL(TP.TransferenciaAmp,0))) - (sum(ISNULL(TP.Reducciones,0)) + sum(ISNULL(TP.TransferenciaRed,0)))) - sum(ISNULL(TP.Comprometido,0)) As PresDispComp,  
-sum(ISNULL(TP.Comprometido,0)) - sum(ISNULL(TP.Devengado,0)) AS CompNoDev,  
-(sum(ISNULL(TP.Autorizado,0)) + (sum(ISNULL(TP.Ampliaciones,0)) + sum(ISNULL(TP.TransferenciaAmp,0))) - (sum(ISNULL(TP.Reducciones,0)) + sum(ISNULL(TP.TransferenciaRed,0))))- sum(ISNULL(TP.Devengado,0))  AS PresSinDev,  
-sum(ISNULL(TP.Devengado,0)) -  sum(ISNULL(TP.Ejercido,0)) AS Deuda,  
-(sum(ISNULL(TP.Ampliaciones,0)) + sum(ISNULL(TP.TransferenciaAmp,0))) -   
-(sum(ISNULL(TP.Reducciones,0)) + sum(ISNULL(TP.TransferenciaRed,0))) as Amp_Red,   
-(sum(ISNULL(TP.Autorizado,0)) + (sum(ISNULL(TP.Ampliaciones,0)) + sum(ISNULL(TP.TransferenciaAmp,0))) - (sum(ISNULL(TP.Reducciones,0)) + sum(ISNULL(TP.TransferenciaRed,0))))-  
-sum(ISNULL(TP.Devengado,0)) as SubEjercicio 
-, case CFF.IdClave 
-		  when '25' then '25'
-		  when '26' then '25'
-		  when '27' then '25'
-		  when '0' then '0'
-		  else '11'
-		  end as idclaveFF 
+sum(ISNULL(0,0)) as Comprometido,   
+sum(ISNULL(0,0)) as Devengado,   
+sum(ISNULL(0,0)) as Ejercido,  
+sum(ISNULL(0,0)) as Pagado,   
+(sum(ISNULL(0,0)) + (sum(ISNULL(0,0)) + sum(ISNULL(0,0))) - (sum(ISNULL(0,0)) + sum(ISNULL(0,0)))) - sum(ISNULL(0,0)) As PresDispComp,  
+sum(ISNULL(0,0)) - sum(ISNULL(0,0)) AS CompNoDev,  
+(sum(ISNULL(0,0)) + (sum(ISNULL(0,0)) + sum(ISNULL(0,0))) - (sum(ISNULL(0,0)) + sum(ISNULL(0,0))))- sum(ISNULL(0,0))  AS PresSinDev,  
+sum(ISNULL(0,0)) -  sum(ISNULL(0,0)) AS Deuda,  
+(sum(ISNULL(0,0)) + sum(ISNULL(0,0))) -   
+(sum(ISNULL(0,0)) + sum(ISNULL(0,0))) as Amp_Red, 
+(sum(ISNULL(0,0)) + (sum(ISNULL(0,0)) + sum(ISNULL(0,0))) - (sum(ISNULL(0,0)) + sum(ISNULL(0,0))))-  
+sum(ISNULL(0,0)) as SubEjercicio ,
+''
 From T_PresupuestoNW As TP JOIN T_SellosPresupuestales As TS ON TP.IdSelloPresupuestal = TS.IdSelloPresupuestal
 			 JOIN C_AreaResponsabilidad As CR ON CR.IdAreaResp = TS.IdAreaResp
-			LEFT JOIN C_FuenteFinanciamiento As CFF ON CFF.IDFUENTEFINANCIAMIENTO = TS.IdFuenteFinanciamiento and CFF.IdClave in (25,26,27)
-Where (TP.Mes BETWEEN  @Mes AND @Mes2) AND TP.[Year]=@Ejercicio AND TS.LYear=@Ejercicio AND TS.IdAreaResp  = CR.IdAreaResp 
-group by CFF.IdClave,CR.Clave,CR.Nombre
+			LEFT JOIN C_FuenteFinanciamiento As CFF ON CFF.IDFUENTEFINANCIAMIENTO = TS.IdFuenteFinanciamiento 
+Where (TP.Mes BETWEEN  @Mes AND @Mes2) AND TP.[Year]=@Ejercicio AND TS.LYear=@Ejercicio --AND TS.IdAreaResp  = CR.IdAreaResp
+and CFF.IdClave not in (25,26,27)
+group by CR.Clave,CR.Nombre
 Order By CR.CLAVE 
   
 --If @AmpRedAnual = 1  
@@ -320,38 +310,97 @@ Order By CR.CLAVE
 --  group by CLAVE,DESCRIPCION,IdClaveFF)as X
 --  group by CLAVE,DESCRIPCION,IdClaveFF
 --end
+declare @rpt2Val as table(CLAVE varchar(100),DESCRIPCION varchar(max),  
+Autorizado decimal(18,4), TransferenciaAmp  decimal(18,4),TransferenciaRed  decimal(18,4),Modificado  decimal(18,4),Comprometido  decimal(18,4),Devengado  decimal(18,4),  
+Ejercido  decimal(18,4),Pagado  decimal(18,4),PresDispComp  decimal(18,4),CompNoDev  decimal(18,4),PresSinDev  decimal(18,4),Deuda  decimal(18,4),Amp_Red  decimal(18,4),SubEjercicio decimal(18,4),IdClaveFF int) 
+
+Insert into @rpt2Val
+Select CR.CLAVE, CR.Nombre,  
+sum(ISNULL(TP.Autorizado,0)) as Autorizado,
+(sum(ISNULL(0,0)) + sum(ISNULL(0,0))) as TransferenciaAmp,  
+(sum(ISNULL(0,0)) + sum(ISNULL(0,0))) as TransferenciaRed ,  
+(sum(ISNULL(0,0)) + (sum(ISNULL(0,0)) + sum(ISNULL(0,0))) - (sum(ISNULL(0,0)) + sum(ISNULL(0,0))))as Modificado ,
+sum(ISNULL(TP.Comprometido,0)) as Comprometido ,  
+sum(ISNULL(TP.Devengado,0)) as Devengado,   
+sum(ISNULL(TP.Ejercido,0)) as Ejercido,  
+sum(ISNULL(TP.Pagado,0)) as Pagado ,
+(sum(ISNULL(TP.Autorizado,0)) + (sum(ISNULL(TP.Ampliaciones,0)) + sum(ISNULL(TP.TransferenciaAmp,0))) - (sum(ISNULL(TP.Reducciones,0)) + sum(ISNULL(TP.TransferenciaRed,0)))) - sum(ISNULL(TP.Comprometido,0)) As PresDispComp,  
+sum(ISNULL(TP.Comprometido,0)) - sum(ISNULL(TP.Devengado,0)) AS CompNoDev,  
+(sum(ISNULL(TP.Autorizado,0)) + (sum(ISNULL(TP.Ampliaciones,0)) + sum(ISNULL(TP.TransferenciaAmp,0))) - (sum(ISNULL(TP.Reducciones,0)) + sum(ISNULL(TP.TransferenciaRed,0))))- sum(ISNULL(TP.Devengado,0))  AS PresSinDev,  
+sum(ISNULL(TP.Devengado,0)) -  sum(ISNULL(TP.Ejercido,0)) AS Deuda,  
+(sum(ISNULL(TP.Ampliaciones,0)) + sum(ISNULL(TP.TransferenciaAmp,0))) -   
+(sum(ISNULL(TP.Reducciones,0)) + sum(ISNULL(TP.TransferenciaRed,0))) as Amp_Red,   
+(sum(ISNULL(TP.Autorizado,0)) + (sum(ISNULL(TP.Ampliaciones,0)) + sum(ISNULL(TP.TransferenciaAmp,0))) - (sum(ISNULL(TP.Reducciones,0)) + sum(ISNULL(TP.TransferenciaRed,0))))-  
+sum(ISNULL(TP.Devengado,0)) as SubEjercicio ,
+ ''-- CFF.IdClave 
+
+From T_PresupuestoNW As TP JOIN T_SellosPresupuestales As TS ON TP.IdSelloPresupuestal = TS.IdSelloPresupuestal
+			 JOIN C_AreaResponsabilidad As CR ON CR.IdAreaResp = TS.IdAreaResp
+			LEFT JOIN C_FuenteFinanciamiento As CFF ON CFF.IDFUENTEFINANCIAMIENTO = TS.IdFuenteFinanciamiento 
+Where (TP.Mes BETWEEN  @Mes AND @Mes2) AND TP.[Year]=@Ejercicio AND TS.LYear= @Ejercicio AND TS.IdAreaResp  = CR.IdAreaResp 
+and CFF.IdClave  in (25,26,27)
+group by CR.Clave,CR.Nombre
+Order By CR.CLAVE 
+
+ --Select * from @rpt2
+ -- Select * from @rpt2Val
  
--- End  
+ update r set r.Autorizado = a.Autorizado,
+ r.Amp_Red = a.Amp_Red,
+ r.Devengado = a.Devengado,
+ r.Pagado = a.Pagado
+
+ FROM @rpt2 r, @rpt2Val a 
+ Where a.Clave = r.Clave
+
+  --Select * from @rpt2
+  --Select * from @Anual2
+  --Select * from @rpt2Val
+
+-- End
+----------------
+--If @AprAnual = 1
+--	Begin
+--	Select  
+--		a.CLAVE,a.DESCRIPCION,
+--		isnull(a.Autorizado,0) as Autorizado, isnull(r.TransferenciaAmp,0) as TransferenciaAmp,isnull(r.TransferenciaRed,0) as TransferenciaRed,isnull(r.Modificado,0) as Modificado,isnull(r.Comprometido,0) as Comprometido,isnull(r.Devengado,0) as Devengado,
+--		isnull(r.Ejercido,0) as Ejercido,isnull(r.Pagado,0) as Pagado,isnull(r.PresDispComp,0) as PresDispComp,isnull(r.CompNoDev,0) as CompNoDev,isnull(r.PresSinDev,0) as PresSinDev,isnull(r.Deuda,0) as Deuda,
+--		CASE @AmpRedAnual
+--		WHEN 1 THEN isnull(a.Amp_Red,0)
+--		ELSE isnull(r.Amp_Red,0) 
+--		END as Amp_Red,
+--		isnull(r.SubEjercicio,0) as SubEjercicio 
+--		from @Anual2 a
+--		LEFT JOIN @rpt2 r
+--		ON a.CLAVE = r.CLAVE
+--	End
+--Else
+--	Begin
+--		Select  
+--		a.CLAVE,a.DESCRIPCION,
+--		isnull(r.Autorizado,0) as Autorizado, isnull(r.TransferenciaAmp,0) as TransferenciaAmp,isnull(r.TransferenciaRed,0) as TransferenciaRed,isnull(r.Modificado,0) as Modificado,isnull(r.Comprometido,0) as Comprometido,isnull(r.Devengado,0) as Devengado,
+--		isnull(r.Ejercido,0) as Ejercido,isnull(r.Pagado,0) as Pagado,isnull(r.PresDispComp,0) as PresDispComp,isnull(r.CompNoDev,0) as CompNoDev,isnull(r.PresSinDev,0) as PresSinDev,isnull(r.Deuda,0) as Deuda,
+--		CASE @AmpRedAnual
+--		WHEN 1 THEN isnull(a.Amp_Red,0)
+--		ELSE isnull(r.Amp_Red,0) 
+--		END as Amp_Red,
+--		isnull(r.SubEjercicio,0) as SubEjercicio 
+--		from @Anual2 a
+--		LEFT JOIN @rpt2 r
+--		ON a.CLAVE = r.CLAVE
+--	End
+
 If @AprAnual = 1
 	Begin
-	Select  
-		a.CLAVE,a.DESCRIPCION,
-		isnull(a.Autorizado,0) as Autorizado, isnull(r.TransferenciaAmp,0) as TransferenciaAmp,isnull(r.TransferenciaRed,0) as TransferenciaRed,isnull(r.Modificado,0) as Modificado,isnull(r.Comprometido,0) as Comprometido,isnull(r.Devengado,0) as Devengado,
-		isnull(r.Ejercido,0) as Ejercido,isnull(r.Pagado,0) as Pagado,isnull(r.PresDispComp,0) as PresDispComp,isnull(r.CompNoDev,0) as CompNoDev,isnull(r.PresSinDev,0) as PresSinDev,isnull(r.Deuda,0) as Deuda,
-		CASE @AmpRedAnual
-		WHEN 1 THEN isnull(a.Amp_Red,0)
-		ELSE isnull(r.Amp_Red,0) 
-		END as Amp_Red,
-		isnull(r.SubEjercicio,0) as SubEjercicio 
-		from @Anual2 a
-		LEFT JOIN @rptt r
-		ON a.CLAVE = r.CLAVE
+		update r set r.Autorizado = a.Autorizado FROM @Anual2 a, @rpt2 r  Where a.Clave = r.Clave
 	End
-Else
+
+If @AmpRedAnual = 1
 	Begin
-		Select  
-		a.CLAVE,a.DESCRIPCION,
-		isnull(r.Autorizado,0) as Autorizado, isnull(r.TransferenciaAmp,0) as TransferenciaAmp,isnull(r.TransferenciaRed,0) as TransferenciaRed,isnull(r.Modificado,0) as Modificado,isnull(r.Comprometido,0) as Comprometido,isnull(r.Devengado,0) as Devengado,
-		isnull(r.Ejercido,0) as Ejercido,isnull(r.Pagado,0) as Pagado,isnull(r.PresDispComp,0) as PresDispComp,isnull(r.CompNoDev,0) as CompNoDev,isnull(r.PresSinDev,0) as PresSinDev,isnull(r.Deuda,0) as Deuda,
-		CASE @AmpRedAnual
-		WHEN 1 THEN isnull(a.Amp_Red,0)
-		ELSE isnull(r.Amp_Red,0) 
-		END as Amp_Red,
-		isnull(r.SubEjercicio,0) as SubEjercicio 
-		from @Anual2 a
-		LEFT JOIN @rptt r
-		ON a.CLAVE = r.CLAVE
+		update r set r.Amp_Red = a.Amp_Red FROM @Anual2 a, @rpt2 r  Where a.Clave = r.Clave
 	End
+
+	select * from @rpt2
 END  
 	
 Else if @Tipo=7   
@@ -365,21 +414,28 @@ Insert into @Anual7Aux
 Select CFS.Clave as IdClave,  CFS.Nombre as Descripcion, CF.Clave as Clave, CF.Nombre as Descripcion2 , CFS.IdFinalidad as IdClave2,   
 sum(ISNULL(TP.Autorizado,0)) as Autorizado,  
 (sum(ISNULL(TP.Ampliaciones,0)) + sum(ISNULL(TP.TransferenciaAmp,0))) -  
-(sum(ISNULL(TP.Reducciones,0)) + sum(ISNULL(TP.TransferenciaRed,0))) as Amp_Red 
-       ,--(select IdClave from c_fuentefinanciamiento where idfuentefinanciamiento = TS.IDFUENTEFINANCIAMIENTO)  as IdClaveFF 
-	    case FF.IdClave 
-		  when '25' then '25'
-		  when '26' then '25'
-		  when '27' then '25'
-		  when '0' then '0'
-		  else '11'
-		  end as idclaveFF
-	   ,(sum(ISNULL(TP.Autorizado,0)) + (sum(ISNULL(TP.Ampliaciones,0)) + sum(ISNULL(TP.TransferenciaAmp,0))) - (sum(ISNULL(TP.Reducciones,0)) + sum(ISNULL(TP.TransferenciaRed,0))))as Modificado           
-From T_PresupuestoNW As TP, T_SellosPresupuestales As TS , C_funciones As CF, C_Subfunciones As CS, C_Finalidades As CFS ,c_fuentefinanciamiento FF 
-where (Mes = 0)  AND LYear=@Ejercicio AND Year=@Ejercicio and  TP.IdSelloPresupuestal = TS.IdSelloPresupuestal AND TS.IdSubFuncion = CS.IdSubFuncion AND  CS.IdFuncion = CF.IdFuncion AND CF.IdFinalidad = CFS.IdFinalidad   
-AND TS.IdAreaResp = CASE WHEN @IdArea = 0 THEN TS.IdAreaResp ELSE @IdArea END  and  TS.IdFuenteFinanciamiento = FF.IDFUENTEFINANCIAMIENTO
-group by CF.Clave,CF.Nombre,  CFS.Clave, CFS.Nombre,CFS.IdFinalidad,FF.IdClave
-Order By CF.Clave,  CFS.Clave,CFS.IdFinalidad   
+(sum(ISNULL(TP.Reducciones,0)) + sum(ISNULL(TP.TransferenciaRed,0))) as Amp_Red ,
+  '' ,   
+  --(select IdClave from c_fuentefinanciamiento where idfuentefinanciamiento = TS.IDFUENTEFINANCIAMIENTO)  as IdClaveFF 
+	   -- case FF.IdClave 
+		  --when '25' then '25'
+		  --when '26' then '25'
+		  --when '27' then '25'
+		  --when '0' then '0'
+		  --else '11'
+		  --end as idclaveFF
+	   (sum(ISNULL(TP.Autorizado,0)) + (sum(ISNULL(TP.Ampliaciones,0)) + sum(ISNULL(TP.TransferenciaAmp,0))) - (sum(ISNULL(TP.Reducciones,0)) + sum(ISNULL(TP.TransferenciaRed,0))))as Modificado           
+From T_PresupuestoNW As TP JOIN T_SellosPresupuestales As TS ON TP.IdSelloPresupuestal = TS.IdSelloPresupuestal
+			 
+LEFT JOIN C_Subfunciones CS ON TS.IdSubFuncion = CS.IdSubFuncion 		
+LEFT JOIN C_funciones  CF ON CS.IdFuncion = CF.IdFuncion 
+LEFT JOIN C_Finalidades CFS ON CF.IdFinalidad = CFS.IdFinalidad
+LEFT JOIN C_FuenteFinanciamiento As FF ON FF.IDFUENTEFINANCIAMIENTO = TS.IdFuenteFinanciamiento 
+where (Mes = 0)  AND LYear=@Ejercicio AND Year=@Ejercicio   
+and FF.IdClave  in (25,26,27)
+AND TS.IdAreaResp = CASE WHEN @IdArea = 0 THEN TS.IdAreaResp ELSE @IdArea END  
+group by CF.Clave,CF.Nombre,  CFS.Clave, CFS.Nombre,CFS.IdFinalidad ,FF.IdClave
+Order By CF.Clave,  CFS.Clave,CFS.IdFinalidad  
 
 insert into @Anual7 
 Select IdClave ,
@@ -446,17 +502,23 @@ sum(ISNULL(TP.Devengado,0)) -  sum(ISNULL(TP.Ejercido,0)) AS Deuda,
 --(sum(ISNULL(TP.Autorizado,0)) + (sum(ISNULL(TP.Ampliaciones,0)) + sum(ISNULL(TP.TransferenciaAmp,0))) - (sum(ISNULL(TP.Reducciones,0)) + sum(ISNULL(TP.TransferenciaRed,0))))-  
 --sum(ISNULL(TP.Comprometido,0)) as SubEjercicio   
 (sum(ISNULL(TP.Autorizado,0)) + (sum(ISNULL(TP.Ampliaciones,0)) + sum(ISNULL(TP.TransferenciaAmp,0))) - (sum(ISNULL(TP.Reducciones,0)) + sum(ISNULL(TP.TransferenciaRed,0))))-  
-sum(ISNULL(TP.Devengado,0)) as SubEjercicio   
-    ,case FF.IdClave 
-		  when '25' then '25'
-		  when '26' then '25'
-		  when '27' then '25'
-		  when '0' then '0'
-		  else '11'
-		  end as idclaveFF --(select IdClave from c_fuentefinanciamiento where idfuentefinanciamiento = TS.IDFUENTEFINANCIAMIENTO)  as IdClaveFF   
-From T_PresupuestoNW As TP, T_SellosPresupuestales As TS , C_funciones As CF, C_Subfunciones As CS, C_Finalidades As CFS  ,C_FuenteFinanciamiento As FF 
-where (Mes BETWEEN  @Mes AND @Mes2)  AND LYear=@Ejercicio AND Year=@Ejercicio and  TP.IdSelloPresupuestal = TS.IdSelloPresupuestal AND TS.IdSubFuncion = CS.IdSubFuncion AND  CS.IdFuncion = CF.IdFuncion AND CF.IdFinalidad = CFS.IdFinalidad   
-AND TS.IdAreaResp = CASE WHEN @IdArea = 0 THEN TS.IdAreaResp ELSE @IdArea END  and  TS.IdFuenteFinanciamiento = FF.IDFUENTEFINANCIAMIENTO
+sum(ISNULL(TP.Devengado,0)) as SubEjercicio ,  
+ ''   --,case FF.IdClave 
+		  --when '25' then '25'
+		  --when '26' then '25'
+		  --when '27' then '25'
+		  --when '0' then '0'
+		  --else '11'
+		  --end as idclaveFF --(select IdClave from c_fuentefinanciamiento where idfuentefinanciamiento = TS.IDFUENTEFINANCIAMIENTO)  as IdClaveFF   
+From T_PresupuestoNW As TP JOIN T_SellosPresupuestales As TS ON TP.IdSelloPresupuestal = TS.IdSelloPresupuestal
+			 
+LEFT JOIN C_Subfunciones CS ON TS.IdSubFuncion = CS.IdSubFuncion 		
+LEFT JOIN C_funciones  CF ON CS.IdFuncion = CF.IdFuncion 
+LEFT JOIN C_Finalidades CFS ON CF.IdFinalidad = CFS.IdFinalidad
+LEFT JOIN C_FuenteFinanciamiento As FF ON FF.IDFUENTEFINANCIAMIENTO = TS.IdFuenteFinanciamiento 
+where (Mes BETWEEN  @Mes AND @Mes2)  AND LYear=@Ejercicio AND Year=@Ejercicio   
+and FF.IdClave  in (25,26,27)
+AND TS.IdAreaResp = CASE WHEN @IdArea = 0 THEN TS.IdAreaResp ELSE @IdArea END  
 group by CF.Clave,CF.Nombre,  CFS.Clave, CFS.Nombre,CFS.IdFinalidad ,FF.IdClave
 Order By CF.Clave,  CFS.Clave,CFS.IdFinalidad   
 
@@ -493,6 +555,43 @@ insert into @rpt7
 select* from @Titulos7 t   
 where t.Clave not in (select Clave from @rpt7)  
 
+-----------------------------------------------------------------------------
+Update @rpt7 set Descripcion = 'A. Gobierno (A=a1+a2+a3+a4+a5+a6+a7+a8)' Where IdClave = 1 
+Update @rpt7 set Descripcion2 = ' a1) Legislación' Where  Clave = 11 
+Update @rpt7 set Descripcion2 = ' a2) Justicia' Where  Clave = 12
+Update @rpt7 set Descripcion2 = ' a3) Coordinación de la Política de Gobierno' Where  Clave = 13
+Update @rpt7 set Descripcion2 = ' a4) Relaciones Exteriores' Where  Clave = 14
+Update @rpt7 set Descripcion2 = ' a5) Asuntos Financieros y Hacendarios' Where  Clave = 15
+Update @rpt7 set Descripcion2 = ' a6) Seguridad Nacional' Where  Clave = 16
+Update @rpt7 set Descripcion2 = ' a7) Asuntos de Orden Público y de Seguridad Interior' Where  Clave = 17
+Update @rpt7 set Descripcion2 = ' a8) Otros Servicios Generales' Where  Clave = 18
+
+Update @rpt7 set Descripcion = 'B. Desarrollo Social (B=b1+b2+b3+b4+b5+b6+b7)' Where IdClave = 2 
+Update @rpt7 set Descripcion2 = ' b1) Protección Ambiental' Where  Clave = 21 
+Update @rpt7 set Descripcion2 = ' b2) Vivienda y Servicios a la Comunidad' Where  Clave = 22
+Update @rpt7 set Descripcion2 = ' b3) Salud' Where  Clave = 23
+Update @rpt7 set Descripcion2 = ' b4) Recreación, Cultura y Otras Manifestaciones Sociales' Where  Clave = 24
+Update @rpt7 set Descripcion2 = ' b5) Educación' Where  Clave = 25
+Update @rpt7 set Descripcion2 = ' b6) Protección Social' Where  Clave = 26
+Update @rpt7 set Descripcion2 = ' b7) Otros Asuntos Sociales' Where  Clave = 27
+
+Update @rpt7 set Descripcion = 'C. Desarrollo Económico (C=c1+c2+c3+c4+c5+c6+c7+c8+c9)' Where IdClave = 3 
+Update @rpt7 set Descripcion2 = ' c1) Asuntos Económicos, Comerciales y Laborales en General' Where  Clave = 31 
+Update @rpt7 set Descripcion2 = ' c2) Agropecuaria, Silvicultura, Pesca y Caza' Where  Clave = 32
+Update @rpt7 set Descripcion2 = ' c3) Combustibles y Energía' Where  Clave = 33
+Update @rpt7 set Descripcion2 = ' c4) Minería, Manufacturas y Construcción' Where  Clave = 34
+Update @rpt7 set Descripcion2 = ' c5) Transporte' Where  Clave = 35
+Update @rpt7 set Descripcion2 = ' c6) Comunicaciones' Where  Clave = 36
+Update @rpt7 set Descripcion2 = ' c7) Turismo' Where  Clave = 37
+Update @rpt7 set Descripcion2 = ' c8) Ciencia, Tecnología e Innovación' Where  Clave = 38
+Update @rpt7 set Descripcion2 = ' c9) Otras Industrias y Otros Asuntos Económicos' Where  Clave = 39
+
+Update @rpt7 set Descripcion = 'D. Otras No Clasificadas en Funciones Anteriores (D=d1+d2+d3+d4)' Where IdClave = 4
+Update @rpt7 set Descripcion2 = ' d1) Transacciones de la Deuda Publica / Costo Financiero de la Deuda' Where  Clave = 41 
+Update @rpt7 set Descripcion2 = ' d2) Transferencias, Participaciones y Aportaciones Entre Diferentes Niveles y Ordenes de Gobierno' Where  Clave = 42
+Update @rpt7 set Descripcion2 = ' d3) Saneamiento del Sistema Financiero' Where  Clave = 43
+Update @rpt7 set Descripcion2 = ' d4) Adeudos de Ejercicios Fiscales Anteriores' Where  Clave = 44
+
 If @AmpRedAnual = 1  
  Begin  
 	--update r set r.Autorizado = a.Autorizado, r.Amp_Red = a.Amp_Red,r.Modificado=(a.Autorizado+r.Amp_Red) FROM @Anual7 a, @rpt7 r Where a.Clave = r.Clave and a.IdClaveFF in (0,25,26,27)--and a.IdClaveFF = r.IdClaveFF
@@ -504,11 +603,13 @@ If @AmpRedAnual = 1
 -- End  
  if @MuestraCeros = 0
 		begin
-		select * from @rpt7 where IdClaveFF in (25,26,27) Order by  IdClave , Clave, IdClave2  
+		--select * from @rpt7 where IdClaveFF in (25,26,27) Order by  IdClave , Clave, IdClave2 
+		select * from @rpt7 Order by  IdClave , Clave, IdClave2  
 		end
 		else
 		begin 
-		select * from @rpt7 where IdClaveFF in (0,25,26,27) Order by  IdClave , Clave, IdClave2
+		--select * from @rpt7 where IdClaveFF in (0,25,26,27) Order by  IdClave , Clave, IdClave2
+	    select * from @rpt7  Order by  IdClave , Clave, IdClave2
 		end
 
 END
@@ -546,8 +647,9 @@ sum(ISNULL(0,0)) as SubEjercicio
 		  end as idclaveFF 
 From T_PresupuestoNW As TP JOIN T_SellosPresupuestales As TS ON TP.IdSelloPresupuestal = TS.IdSelloPresupuestal
 			 JOIN C_AreaResponsabilidad As CR ON CR.IdAreaResp = TS.IdAreaResp
-			LEFT JOIN C_FuenteFinanciamiento As CFF ON CFF.IDFUENTEFINANCIAMIENTO = TS.IdFuenteFinanciamiento and CFF.IdClave in (25,26,27)
+			LEFT JOIN C_FuenteFinanciamiento As CFF ON CFF.IDFUENTEFINANCIAMIENTO = TS.IdFuenteFinanciamiento --and CFF.IdClave in (25,26,27)
 Where (TP.Mes BETWEEN  1 AND 12) AND TP.[Year]=@Ejercicio AND TS.LYear=@Ejercicio AND TS.IdAreaResp  = CR.IdAreaResp 
+and CFF.IdClave in (25,26,27)
 group by CFF.IdClave,CR.Clave,CR.Nombre
 Order By CR.CLAVE 
 --VALORES ABSOLUTOS  
@@ -582,8 +684,9 @@ sum(ISNULL(TP.Devengado,0)) as SubEjercicio
 		  end as idclaveFF 
 From T_PresupuestoNW As TP JOIN T_SellosPresupuestales As TS ON TP.IdSelloPresupuestal = TS.IdSelloPresupuestal
 			 JOIN C_AreaResponsabilidad As CR ON CR.IdAreaResp = TS.IdAreaResp
-			LEFT JOIN C_FuenteFinanciamiento As CFF ON CFF.IDFUENTEFINANCIAMIENTO = TS.IdFuenteFinanciamiento and CFF.IdClave in (25,26,27)
+			LEFT JOIN C_FuenteFinanciamiento As CFF ON CFF.IDFUENTEFINANCIAMIENTO = TS.IdFuenteFinanciamiento --and CFF.IdClave in (25,26,27)
 Where (TP.Mes BETWEEN  @Mes AND @Mes2) AND TP.[Year]=@Ejercicio AND TS.LYear=@Ejercicio AND TS.IdAreaResp  = CR.IdAreaResp 
+and CFF.IdClave in (25,26,27)
 group by CFF.IdClave,CR.Clave,CR.Nombre
 Order By CR.CLAVE 
   
@@ -715,6 +818,218 @@ If @AprAnual = 1
 
 
 END 
+
+----
+Else if @Tipo=17   
+BEGIN  
+Declare @Anual17 as table(IdClave int,Descripcion varchar(max),Clave int,Descripcion2 Varchar(max),IdClave2 int, Autorizado decimal(18,4), Amp_Red decimal(18,2),IdClaveFF int,Modificado decimal(18,4))  
+
+Declare @Anual17Aux as table(IdClave int,Descripcion varchar(max),Clave int,Descripcion2 Varchar(max),IdClave2 int, Autorizado decimal(18,4), Amp_Red decimal(18,2),IdClaveFF int,Modificado decimal(18,4))  
+
+
+Insert into @Anual17Aux  
+Select CFS.Clave as IdClave,  CFS.Nombre as Descripcion, CF.Clave as Clave, CF.Nombre as Descripcion2 , CFS.IdFinalidad as IdClave2,   
+sum(ISNULL(TP.Autorizado,0)) as Autorizado,  
+(sum(ISNULL(TP.Ampliaciones,0)) + sum(ISNULL(TP.TransferenciaAmp,0))) -  
+(sum(ISNULL(TP.Reducciones,0)) + sum(ISNULL(TP.TransferenciaRed,0))) as Amp_Red ,
+  '' ,   
+  --(select IdClave from c_fuentefinanciamiento where idfuentefinanciamiento = TS.IDFUENTEFINANCIAMIENTO)  as IdClaveFF 
+	   -- case FF.IdClave 
+		  --when '25' then '25'
+		  --when '26' then '25'
+		  --when '27' then '25'
+		  --when '0' then '0'
+		  --else '11'
+		  --end as idclaveFF
+	   (sum(ISNULL(TP.Autorizado,0)) + (sum(ISNULL(TP.Ampliaciones,0)) + sum(ISNULL(TP.TransferenciaAmp,0))) - (sum(ISNULL(TP.Reducciones,0)) + sum(ISNULL(TP.TransferenciaRed,0))))as Modificado           
+From T_PresupuestoNW As TP JOIN T_SellosPresupuestales As TS ON TP.IdSelloPresupuestal = TS.IdSelloPresupuestal
+			 
+LEFT JOIN C_Subfunciones CS ON TS.IdSubFuncion = CS.IdSubFuncion 		
+LEFT JOIN C_funciones  CF ON CS.IdFuncion = CF.IdFuncion 
+LEFT JOIN C_Finalidades CFS ON CF.IdFinalidad = CFS.IdFinalidad
+LEFT JOIN C_FuenteFinanciamiento As FF ON FF.IDFUENTEFINANCIAMIENTO = TS.IdFuenteFinanciamiento 
+where (Mes = 0)  AND LYear=@Ejercicio AND Year=@Ejercicio   
+and FF.IdClave  in (25,26,27)
+AND TS.IdAreaResp = CASE WHEN @IdArea = 0 THEN TS.IdAreaResp ELSE @IdArea END  
+group by CF.Clave,CF.Nombre,  CFS.Clave, CFS.Nombre,CFS.IdFinalidad ,FF.IdClave
+Order By CF.Clave,  CFS.Clave,CFS.IdFinalidad  
+
+insert into @Anual17 
+Select IdClave ,
+Descripcion ,
+Clave,
+Descripcion2 ,
+IdClave2, 
+sum(isnull(Autorizado,0)) , 
+sum(isnull(Amp_Red ,0)),
+IdClaveFF ,
+sum(isnull(Modificado,0))  
+from @Anual7Aux
+group by IdClave ,
+Descripcion ,
+Clave,
+Descripcion2 ,
+IdClave2,
+IdClaveFF 
+
+  
+Declare @Titulos17 as table(IdClave int,Descripcion varchar(max),Clave int,Descripcion2 Varchar(max),IdClave2 int,  
+Autorizado decimal(18,4),TransferenciaAmp decimal(18,4),TransferenciaRed decimal(18,4),Modificado decimal(18,4),Comprometido decimal(18,4),  
+Devengado decimal(18,4),Ejercido decimal(18,4),Pagado decimal(18,4),PresDispComp decimal(18,4),CompNoDev decimal(18,4),  
+PresSinDev decimal(18,4),Deuda decimal(18,4),Amp_Red decimal(18,4),SubEjercicio decimal(18,4),IdClaveFF int)  
+  
+INSERT INTO @Titulos17  
+SELECT CFS.Clave as IdClave,  CFS.Nombre as Descripcion, CF.Clave as Clave, CF.Nombre as Descripcion2 , CFS.IdFinalidad as IdClave2,   
+0 as Autorizado, 0 as TransferenciaAmp, 0 as TransferenciaRed, 0 as Modificado, 0 as Comprometido, 0 as Devengado, 0 as Ejercido,  
+0 as Pagado, 0 As PresDispComp, 0 AS CompNoDev, 0 AS PresSinDev, 0 AS Deuda, 0 as Amp_Red, 0 as SubEjercicio  , 0 as IdClaveFF 
+FROM C_funciones As CF, C_Finalidades As CFS  
+WHERE CF.IdFinalidad = CFS.IdFinalidad   
+GROUP BY CF.Clave,CF.Nombre,  CFS.Clave, CFS.Nombre,CFS.IdFinalidad   
+ORDER BY CF.Clave,  CFS.Clave,CFS.IdFinalidad   
+  
+Declare @rpt17 as table(IdClave int,Descripcion varchar(max),Clave int,Descripcion2 Varchar(max),IdClave2 int,  
+Autorizado decimal(18,4),TransferenciaAmp decimal(18,4),TransferenciaRed decimal(18,4),Modificado decimal(18,4),Comprometido decimal(18,4),  
+Devengado decimal(18,4),Ejercido decimal(18,4),Pagado decimal(18,4),PresDispComp decimal(18,4),CompNoDev decimal(18,4),  
+PresSinDev decimal(18,4),Deuda decimal(18,4),Amp_Red decimal(18,4),SubEjercicio decimal(18,4),IdClaveFF int)  
+
+Declare @rpt17Aux as table(IdClave int,Descripcion varchar(max),Clave int,Descripcion2 Varchar(max),IdClave2 int,  
+Autorizado decimal(18,4),TransferenciaAmp decimal(18,4),TransferenciaRed decimal(18,4),Modificado decimal(18,4),Comprometido decimal(18,4),  
+Devengado decimal(18,4),Ejercido decimal(18,4),Pagado decimal(18,4),PresDispComp decimal(18,4),CompNoDev decimal(18,4),  
+PresSinDev decimal(18,4),Deuda decimal(18,4),Amp_Red decimal(18,4),SubEjercicio decimal(18,4),IdClaveFF int) 
+  
+insert into @rpt17Aux  
+--VALORES ABSOLUTOS   
+--Consulta para Clasificación Funcional del Ejercicio del Presupuesto  **  
+Select CFS.Clave as IdClave,  CFS.Nombre as Descripcion, CF.Clave as Clave, CF.Nombre as Descripcion2 , CFS.IdFinalidad as IdClave2,   
+sum(ISNULL(TP.Autorizado,0)) as Autorizado,   
+(sum(ISNULL(TP.Ampliaciones,0)) + sum(ISNULL(TP.TransferenciaAmp,0))) as TransferenciaAmp,   
+(sum(ISNULL(TP.Reducciones,0)) + sum(ISNULL(TP.TransferenciaRed,0))) as TransferenciaRed,   
+(sum(ISNULL(TP.Autorizado,0)) + (sum(ISNULL(TP.Ampliaciones,0)) + sum(ISNULL(TP.TransferenciaAmp,0))) - (sum(ISNULL(TP.Reducciones,0)) + sum(ISNULL(TP.TransferenciaRed,0))))as Modificado,  
+sum(ISNULL(TP.Comprometido,0)) as Comprometido,   
+sum(ISNULL(TP.Devengado,0)) as Devengado,   
+sum(ISNULL(TP.Ejercido,0)) as Ejercido,  
+sum(ISNULL(TP.Pagado,0)) as Pagado,   
+(sum(ISNULL(TP.Autorizado,0)) + (sum(ISNULL(TP.Ampliaciones,0)) + sum(ISNULL(TP.TransferenciaAmp,0))) - (sum(ISNULL(TP.Reducciones,0)) + sum(ISNULL(TP.TransferenciaRed,0)))) - sum(ISNULL(TP.Comprometido,0)) As PresDispComp,  
+sum(ISNULL(TP.Comprometido,0)) - sum(ISNULL(TP.Devengado,0)) AS CompNoDev,  
+(sum(ISNULL(TP.Autorizado,0)) + (sum(ISNULL(TP.Ampliaciones,0)) + sum(ISNULL(TP.TransferenciaAmp,0))) - (sum(ISNULL(TP.Reducciones,0)) + sum(ISNULL(TP.TransferenciaRed,0))))- sum(ISNULL(TP.Devengado,0))  AS PresSinDev,  
+sum(ISNULL(TP.Devengado,0)) -  sum(ISNULL(TP.Ejercido,0)) AS Deuda,  
+(sum(ISNULL(TP.Ampliaciones,0)) + sum(ISNULL(TP.TransferenciaAmp,0))) -  
+(sum(ISNULL(TP.Reducciones,0)) + sum(ISNULL(TP.TransferenciaRed,0))) as Amp_Red,  
+--(sum(ISNULL(TP.Autorizado,0)) + (sum(ISNULL(TP.Ampliaciones,0)) + sum(ISNULL(TP.TransferenciaAmp,0))) - (sum(ISNULL(TP.Reducciones,0)) + sum(ISNULL(TP.TransferenciaRed,0))))-  
+--(sum(ISNULL(TP.Autorizado,0)) + (sum(ISNULL(TP.Ampliaciones,0)) + sum(ISNULL(TP.TransferenciaAmp,0))) - (sum(ISNULL(TP.Reducciones,0)) + sum(ISNULL(TP.TransferenciaRed,0))))-  
+--sum(ISNULL(TP.Comprometido,0)) as SubEjercicio   
+(sum(ISNULL(TP.Autorizado,0)) + (sum(ISNULL(TP.Ampliaciones,0)) + sum(ISNULL(TP.TransferenciaAmp,0))) - (sum(ISNULL(TP.Reducciones,0)) + sum(ISNULL(TP.TransferenciaRed,0))))-  
+sum(ISNULL(TP.Devengado,0)) as SubEjercicio ,  
+ ''   --,case FF.IdClave 
+		  --when '25' then '25'
+		  --when '26' then '25'
+		  --when '27' then '25'
+		  --when '0' then '0'
+		  --else '11'
+		  --end as idclaveFF --(select IdClave from c_fuentefinanciamiento where idfuentefinanciamiento = TS.IDFUENTEFINANCIAMIENTO)  as IdClaveFF   
+From T_PresupuestoNW As TP JOIN T_SellosPresupuestales As TS ON TP.IdSelloPresupuestal = TS.IdSelloPresupuestal
+			 
+LEFT JOIN C_Subfunciones CS ON TS.IdSubFuncion = CS.IdSubFuncion 		
+LEFT JOIN C_funciones  CF ON CS.IdFuncion = CF.IdFuncion 
+LEFT JOIN C_Finalidades CFS ON CF.IdFinalidad = CFS.IdFinalidad
+LEFT JOIN C_FuenteFinanciamiento As FF ON FF.IDFUENTEFINANCIAMIENTO = TS.IdFuenteFinanciamiento 
+where (Mes BETWEEN  @Mes AND @Mes2)  AND LYear=@Ejercicio AND Year=@Ejercicio   
+and FF.IdClave  in (25,26,27)
+AND TS.IdAreaResp = CASE WHEN @IdArea = 0 THEN TS.IdAreaResp ELSE @IdArea END  
+group by CF.Clave,CF.Nombre,  CFS.Clave, CFS.Nombre,CFS.IdFinalidad ,FF.IdClave
+Order By CF.Clave,  CFS.Clave,CFS.IdFinalidad   
+
+  insert into @rpt17
+   select IdClave,
+   Descripcion,
+   Clave ,
+   Descripcion2 ,
+   IdClave2 ,  
+   Sum(isnull(Autorizado,0)) ,
+    Sum(isnull(TransferenciaAmp,0)) ,
+    Sum(isnull(TransferenciaRed,0))  ,
+    Sum(isnull(Modificado,0))  ,
+    Sum(isnull(Comprometido,0)) ,  
+    Sum(isnull(Devengado,0))  ,
+    Sum(isnull(Ejercido,0))  ,
+    Sum(isnull(Pagado,0))  ,
+    Sum(isnull(PresDispComp,0))  ,
+    Sum(isnull(CompNoDev,0))  ,  
+    Sum(isnull(PresSinDev,0))  ,
+    Sum(isnull(Deuda,0))  ,
+    Sum(isnull(Amp_Red,0))  ,
+    Sum(isnull(SubEjercicio,0))  ,
+   IdClaveFF
+   from @rpt17Aux
+   group by IdClave,
+   Descripcion,
+   Clave ,
+   Descripcion2 ,
+   IdClave2 ,
+   IdClaveFF
+
+insert into @rpt17  
+select* from @Titulos17 t   
+where t.Clave not in (select Clave from @rpt17)  
+
+-----------------------------------------------------------------------------
+Update @rpt17 set Descripcion = 'A. Gobierno (A=a1+a2+a3+a4+a5+a6+a7+a8)' Where IdClave = 1 
+Update @rpt17 set Descripcion2 = ' a1) Legislación' Where  Clave = 11 
+Update @rpt17 set Descripcion2 = ' a2) Justicia' Where  Clave = 12
+Update @rpt17 set Descripcion2 = ' a3) Coordinación de la Política de Gobierno' Where  Clave = 13
+Update @rpt17 set Descripcion2 = ' a4) Relaciones Exteriores' Where  Clave = 14
+Update @rpt17 set Descripcion2 = ' a5) Asuntos Financieros y Hacendarios' Where  Clave = 15
+Update @rpt17 set Descripcion2 = ' a6) Seguridad Nacional' Where  Clave = 16
+Update @rpt17 set Descripcion2 = ' a7) Asuntos de Orden Público y de Seguridad Interior' Where  Clave = 17
+Update @rpt17 set Descripcion2 = ' a8) Otros Servicios Generales' Where  Clave = 18
+
+Update @rpt17 set Descripcion = 'B. Desarrollo Social (B=b1+b2+b3+b4+b5+b6+b7)' Where IdClave = 2 
+Update @rpt17 set Descripcion2 = ' b1) Protección Ambiental' Where  Clave = 21 
+Update @rpt17 set Descripcion2 = ' b2) Vivienda y Servicios a la Comunidad' Where  Clave = 22
+Update @rpt17 set Descripcion2 = ' b3) Salud' Where  Clave = 23
+Update @rpt17 set Descripcion2 = ' b4) Recreación, Cultura y Otras Manifestaciones Sociales' Where  Clave = 24
+Update @rpt17 set Descripcion2 = ' b5) Educación' Where  Clave = 25
+Update @rpt17 set Descripcion2 = ' b6) Protección Social' Where  Clave = 26
+Update @rpt17 set Descripcion2 = ' b7) Otros Asuntos Sociales' Where  Clave = 27
+
+Update @rpt17 set Descripcion = 'C. Desarrollo Económico (C=c1+c2+c3+c4+c5+c6+c7+c8+c9)' Where IdClave = 3 
+Update @rpt17 set Descripcion2 = ' c1) Asuntos Económicos, Comerciales y Laborales en General' Where  Clave = 31 
+Update @rpt17 set Descripcion2 = ' c2) Agropecuaria, Silvicultura, Pesca y Caza' Where  Clave = 32
+Update @rpt17 set Descripcion2 = ' c3) Combustibles y Energía' Where  Clave = 33
+Update @rpt17 set Descripcion2 = ' c4) Minería, Manufacturas y Construcción' Where  Clave = 34
+Update @rpt17 set Descripcion2 = ' c5) Transporte' Where  Clave = 35
+Update @rpt17 set Descripcion2 = ' c6) Comunicaciones' Where  Clave = 36
+Update @rpt17 set Descripcion2 = ' c7) Turismo' Where  Clave = 37
+Update @rpt17 set Descripcion2 = ' c8) Ciencia, Tecnología e Innovación' Where  Clave = 38
+Update @rpt17 set Descripcion2 = ' c9) Otras Industrias y Otros Asuntos Económicos' Where  Clave = 39
+
+Update @rpt17 set Descripcion = 'D. Otras No Clasificadas en Funciones Anteriores (D=d1+d2+d3+d4)' Where IdClave = 4
+Update @rpt17 set Descripcion2 = ' d1) Transacciones de la Deuda Publica / Costo Financiero de la Deuda' Where  Clave = 41 
+Update @rpt17 set Descripcion2 = ' d2) Transferencias, Participaciones y Aportaciones Entre Diferentes Niveles y Ordenes de Gobierno' Where  Clave = 42
+Update @rpt17 set Descripcion2 = ' d3) Saneamiento del Sistema Financiero' Where  Clave = 43
+Update @rpt17 set Descripcion2 = ' d4) Adeudos de Ejercicios Fiscales Anteriores' Where  Clave = 44
+
+If @AmpRedAnual = 1  
+ Begin  
+	--update r set r.Autorizado = a.Autorizado, r.Amp_Red = a.Amp_Red,r.Modificado=(a.Autorizado+r.Amp_Red) FROM @Anual7 a, @rpt7 r Where a.Clave = r.Clave and a.IdClaveFF in (0,25,26,27)--and a.IdClaveFF = r.IdClaveFF
+  	update r set r.Autorizado = a.Autorizado,r.Modificado=(a.Autorizado+r.Amp_Red) FROM @Anual17 a, @rpt17 r Where a.Clave = r.Clave and a.IdClaveFF in (0,25,26,27)--and a.IdClaveFF = r.IdClaveFF
+ End  
+--ELse  
+-- Begin  
+--  update r set r.Autorizado = a.Autorizado FROM @Anual7 a, @rpt7 r Where a.Clave = r.Clave  
+-- End  
+ if @MuestraCeros = 0
+		begin
+		--select * from @rpt7 where IdClaveFF in (25,26,27) Order by  IdClave , Clave, IdClave2 
+		select * from @rpt17 Order by  IdClave , Clave, IdClave2  
+		end
+		else
+		begin 
+		--select * from @rpt7 where IdClaveFF in (0,25,26,27) Order by  IdClave , Clave, IdClave2
+	    select * from @rpt17  Order by  IdClave , Clave, IdClave2
+		end
+
+END
 
 
 END  

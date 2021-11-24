@@ -205,7 +205,7 @@ Public Class CtrlUser_RPT_EstadoAnalitico_EjercicioPresupuestoEgresosDetallado_L
 
             Case 7
                 Me.nomREPORTE = "Estado Analitico del Ejercicio del Presupuesto de Egresos"
-                Me.TITULO = "Clasificación Funcional (Finalidad y Función)"
+                Me.TITULO = "Clasificación Funcional (Finalidad y Función) Detallado – LDF"
                 Me.nomTipoReporte = "CONCEPTO"
                 Me.nomTipoClaves = "" '"Finalidad"
                 Me.FIRMAS = "LDF Clasificación Funcional (Finalidad Y Función)"
@@ -457,9 +457,103 @@ Public Class CtrlUser_RPT_EstadoAnalitico_EjercicioPresupuestoEgresosDetallado_L
         SQLConexion.Close()
         '---Fin de llenado del subreporte
 
+        If Me.SP = 7 Or Me.SP = 17 Then
+            '--Codgio para Llenar el SubReporte Totales con SP
+            SQLConexion = New SqlConnection(SQLmConnStr)
+            SQLConexion.Open()
+            Dim SQLComando3 As New SqlCommand("RPT_SP_ClasificacionporObjetodeGasto_LDF_Totales", SQLConexion)
+            SQLComando3.CommandType = CommandType.StoredProcedure
+
+            '--- Parametros IN
+            If ChkAnual.Checked = True Then
+                SQLComando3.Parameters.Add(New SqlParameter("@Mes", 0))
+                SQLComando3.Parameters.Add(New SqlParameter("@Mes2", 0))
+                SQLComando3.Parameters.Add(New SqlParameter("@Tipo", Me.SP))
+                SQLComando3.Parameters.Add(New SqlParameter("@Ejercicio", Year(filterEjercicio.EditValue)))
+            ElseIf ChkAnual.Checked = False Then
+                SQLComando3.Parameters.Add(New SqlParameter("@Mes", Month(filterPeriodoIni.EditValue)))
+                SQLComando3.Parameters.Add(New SqlParameter("@Mes2", Month(filterPeriodoFin.EditValue)))
+                SQLComando3.Parameters.Add(New SqlParameter("@Tipo", Me.SP))
+                SQLComando3.Parameters.Add(New SqlParameter("@Ejercicio", Year(filterEjercicio.EditValue)))
+            End If
+
+            If ChkMuestraCeros.Checked = True Then
+                SQLComando3.Parameters.Add(New SqlParameter("@MuestraCeros", 1))
+            ElseIf ChkMuestraCeros.Checked = False Then
+                SQLComando3.Parameters.Add(New SqlParameter("@MuestraCeros", 0))
+            End If
+            If GetFiltrarXUR(MdlIdUsuario) = True Then
+                SQLComando3.Parameters.Add(New SqlParameter("@IdArea", GetIdUR(MdlIdUsuario)))
+            Else
+                SQLComando3.Parameters.Add(New SqlParameter("@IdArea", 0))
+            End If
+            SQLComando3.Parameters.Add(New SqlParameter("@AprAnual", chkAprAnual.Checked))
+            SQLComando3.Parameters.Add(New SqlParameter("@AmpRedAnual", ChkAmpRed.Checked))
 
 
-        If Me.SP = 6 Or Me.SP = 16 Then
+            Dim adapter3 As New SqlDataAdapter(SQLComando3)
+            Dim ds3 As New DataSet()
+            ds3.EnforceConstraints = False
+            adapter3.Fill(ds3, "RPT_SP_ClasificacionporObjetodeGasto_LDF_Totales")
+
+            reporte.Totales.ReportSource.DataSource = ds3
+            reporte.Totales.ReportSource.DataAdapter = adapter3
+            reporte.Totales.ReportSource.DataMember = "RPT_SP_ClasificacionporObjetodeGasto_LDF_Totales"
+
+            SQLComando3.Dispose()
+            SQLConexion.Close()
+            '---Fin de llenado del subreporte Totales
+            'End If
+        ElseIf Me.SP = 2 Or Me.SP = 12 Then
+            '--Codgio para Llenar el SubReporte Totales con SP
+            SQLConexion = New SqlConnection(SQLmConnStr)
+            SQLConexion.Open()
+            Dim SQLComando3 As New SqlCommand("RPT_SP_ClasificacionporObjetodeGasto_LDF_Totales", SQLConexion)
+            SQLComando3.CommandType = CommandType.StoredProcedure
+
+            '--- Parametros IN
+            If ChkAnual.Checked = True Then
+                SQLComando3.Parameters.Add(New SqlParameter("@Mes", 0))
+                SQLComando3.Parameters.Add(New SqlParameter("@Mes2", 0))
+                SQLComando3.Parameters.Add(New SqlParameter("@Tipo", Me.SP))
+                SQLComando3.Parameters.Add(New SqlParameter("@Ejercicio", Year(filterEjercicio.EditValue)))
+            ElseIf ChkAnual.Checked = False Then
+                SQLComando3.Parameters.Add(New SqlParameter("@Mes", Month(filterPeriodoIni.EditValue)))
+                SQLComando3.Parameters.Add(New SqlParameter("@Mes2", Month(filterPeriodoFin.EditValue)))
+                SQLComando3.Parameters.Add(New SqlParameter("@Tipo", Me.SP))
+                SQLComando3.Parameters.Add(New SqlParameter("@Ejercicio", Year(filterEjercicio.EditValue)))
+            End If
+
+            If ChkMuestraCeros.Checked = True Then
+                SQLComando3.Parameters.Add(New SqlParameter("@MuestraCeros", 1))
+            ElseIf ChkMuestraCeros.Checked = False Then
+                SQLComando3.Parameters.Add(New SqlParameter("@MuestraCeros", 0))
+            End If
+            If GetFiltrarXUR(MdlIdUsuario) = True Then
+                SQLComando3.Parameters.Add(New SqlParameter("@IdArea", GetIdUR(MdlIdUsuario)))
+            Else
+                SQLComando3.Parameters.Add(New SqlParameter("@IdArea", 0))
+            End If
+            SQLComando3.Parameters.Add(New SqlParameter("@AprAnual", chkAprAnual.Checked))
+            SQLComando3.Parameters.Add(New SqlParameter("@AmpRedAnual", ChkAmpRed.Checked))
+
+
+            Dim adapter3 As New SqlDataAdapter(SQLComando3)
+            Dim ds3 As New DataSet()
+            ds3.EnforceConstraints = False
+            adapter3.Fill(ds3, "RPT_SP_ClasificacionporObjetodeGasto_LDF_Totales")
+
+            reporte.Totales.ReportSource.DataSource = ds3
+            reporte.Totales.ReportSource.DataAdapter = adapter3
+            reporte.Totales.ReportSource.DataMember = "RPT_SP_ClasificacionporObjetodeGasto_LDF_Totales"
+
+            SQLComando3.Dispose()
+            SQLConexion.Close()
+            '---Fin de llenado del subreporte Totales
+            'End If
+
+
+        ElseIf Me.SP = 6 Or Me.SP = 16 Then
             '--Codgio para Llenar el SubReporte Totales con SP
             SQLConexion = New SqlConnection(SQLmConnStr)
             SQLConexion.Open()
@@ -654,6 +748,7 @@ Public Class CtrlUser_RPT_EstadoAnalitico_EjercicioPresupuestoEgresosDetallado_L
             Me.chkAprAnual.Checked = True
         ElseIf ChkRelativo.Checked = True And Me.REPORTE = 7 Then
             Me.SP = 7
+            Me.chkAprAnual.Checked = True
         ElseIf ChkRelativo.Checked = True And Me.REPORTE = 8 Then
             Me.SP = 8
         ElseIf ChkRelativo.Checked = True And Me.REPORTE = 9 Then

@@ -75,7 +75,7 @@ Public Class CtrlUser_RPT_PolizasDescuadradasTXT
             End While
 
             strStreamW = File.Create(PathArchivo) ' Crear
-            strStreamWriter = New StreamWriter(strStreamW, System.Text.Encoding.ASCII)
+            strStreamWriter = New StreamWriter(strStreamW, System.Text.Encoding.UTF8)
             'End If
             'Try
             '    Dim d As DialogResult = FolderBrowserDialog1.ShowDialog()
@@ -113,6 +113,7 @@ Public Class CtrlUser_RPT_PolizasDescuadradasTXT
                 tbl = ds.Tables(0)
                 For Each curr As DataRow In tbl.Rows
                     strStreamWriter.WriteLine("La poliza " + curr(1).ToString + " " + curr(2).ToString + " del mes " + Año + "-" + curr(0).ToString + " está descuadrada")
+
                 Next
                 strStreamWriter.Close()
                 objReader = New System.IO.StreamReader(PathArchivo, System.Text.Encoding.UTF8)

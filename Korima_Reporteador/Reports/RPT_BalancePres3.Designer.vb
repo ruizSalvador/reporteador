@@ -60,6 +60,8 @@ Partial Public Class RPT_BalancePres3
         Me.XrPanel1 = New DevExpress.XtraReports.UI.XRPanel()
         Me.lbl_prmNota1 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel3 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.XrSubreport1 = New DevExpress.XtraReports.UI.XRSubreport()
+        Me.RpT_FirmasVerticalElectronica1 = New Korima_Reporteador.RPT_FirmasVerticalElectronica()
         Me.FormattingRule1 = New DevExpress.XtraReports.UI.FormattingRule()
         Me.DsNotasBenn1 = New Korima_Reporteador.dsNotasBenn()
         Me.XrLabel5 = New DevExpress.XtraReports.UI.XRLabel()
@@ -75,12 +77,10 @@ Partial Public Class RPT_BalancePres3
         Me.XrLabel6 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel2 = New DevExpress.XtraReports.UI.XRLabel()
         Me.SumaHorizontal = New DevExpress.XtraReports.UI.CalculatedField()
-        Me.XrSubreport1 = New DevExpress.XtraReports.UI.XRSubreport()
-        Me.RpT_FirmasVerticalElectronica1 = New Korima_Reporteador.RPT_FirmasVerticalElectronica()
         prmNota1 = New DevExpress.XtraReports.Parameters.Parameter()
+        CType(Me.RpT_FirmasVerticalElectronica1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DsNotasBenn1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me._Korima2_00_ReporteadorDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RpT_FirmasVerticalElectronica1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         '
         'prmNota1
@@ -148,7 +148,7 @@ Partial Public Class RPT_BalancePres3
         '
         '
         '
-        Me.FormattingRule2.Formatting.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.FormattingRule2.Formatting.Font = New System.Drawing.Font("Tahoma", 6.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormattingRule2.Name = "FormattingRule2"
         '
         'lbl_prmNaturaleza
@@ -551,6 +551,14 @@ Partial Public Class RPT_BalancePres3
         Me.XrLabel3.StylePriority.UseFont = False
         Me.XrLabel3.Text = "Comentarios:"
         '
+        'XrSubreport1
+        '
+        Me.XrSubreport1.Dpi = 254.0!
+        Me.XrSubreport1.LocationFloat = New DevExpress.Utils.PointFloat(260.6291!, 25.00001!)
+        Me.XrSubreport1.Name = "XrSubreport1"
+        Me.XrSubreport1.ReportSource = Me.RpT_FirmasVerticalElectronica1
+        Me.XrSubreport1.SizeF = New System.Drawing.SizeF(2012.458!, 58.41992!)
+        '
         'FormattingRule1
         '
         Me.FormattingRule1.Condition = "[Parameters.prmNota1]  Like  'Espacio asignado para notas%' or" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "[Parameters.prmTi" & _
@@ -741,14 +749,6 @@ Partial Public Class RPT_BalancePres3
         Me.SumaHorizontal.Expression = "Iif([NumeroCuenta] Like '22%' ,[MasDe365] ,[Nota1] + [Nota2] + [Nota3])"
         Me.SumaHorizontal.Name = "SumaHorizontal"
         '
-        'XrSubreport1
-        '
-        Me.XrSubreport1.Dpi = 254.0!
-        Me.XrSubreport1.LocationFloat = New DevExpress.Utils.PointFloat(260.6291!, 25.00001!)
-        Me.XrSubreport1.Name = "XrSubreport1"
-        Me.XrSubreport1.ReportSource = Me.RpT_FirmasVerticalElectronica1
-        Me.XrSubreport1.SizeF = New System.Drawing.SizeF(2012.458!, 58.41992!)
-        '
         'RPT_BalancePres3
         '
         Me.Bands.AddRange(New DevExpress.XtraReports.UI.Band() {Me.Detail, Me.TopMargin, Me.BottomMargin, Me.PageHeader, Me.PageFooter, Me.ReportFooter, Me.GroupHeader1, Me.GroupFooter1})
@@ -767,9 +767,9 @@ Partial Public Class RPT_BalancePres3
         Me.ReportUnit = DevExpress.XtraReports.UI.ReportUnit.TenthsOfAMillimeter
         Me.SnapGridSize = 31.75!
         Me.Version = "11.1"
+        CType(Me.RpT_FirmasVerticalElectronica1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DsNotasBenn1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me._Korima2_00_ReporteadorDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RpT_FirmasVerticalElectronica1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
 
     End Sub
