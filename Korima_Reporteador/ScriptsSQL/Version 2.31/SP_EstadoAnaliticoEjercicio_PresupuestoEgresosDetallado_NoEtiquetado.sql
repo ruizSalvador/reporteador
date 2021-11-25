@@ -12,14 +12,10 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 
--- Exec SP_EstadoAnaliticoEjercicio_PresupuestoEgresosDetallado_NoEtiquetado 0, 1,12,7,2021,0,0,0
+-- Exec SP_EstadoAnaliticoEjercicio_PresupuestoEgresosDetallado_NoEtiquetado 0, 1,12,2,2021,0,0,0
 CREATE PROCEDURE  [dbo].[SP_EstadoAnaliticoEjercicio_PresupuestoEgresosDetallado_NoEtiquetado]  
-  --@Mes  as int,   
-  --@Mes2 as int,    
-  --@Ejercicio as int,
- @MuestraCeros as int = 0,
-  --@Tipo as int
 
+@MuestraCeros as int = 0,
 @Mes  as int, 
 @Mes2 as int,  
 @Tipo as int,
@@ -141,9 +137,10 @@ From T_PresupuestoNW As TP JOIN T_SellosPresupuestales As TS ON TP.IdSelloPresup
 			LEFT JOIN C_PartidasPres As CP ON CP.IdPartida = TS.IdPartida
 			LEFT JOIN C_ConceptosNEP As CN ON CN.IdConcepto = CP.IdConcepto
 			LEFT JOIN C_CapitulosNEP As CG ON CG.IdCapitulo = CN.IdCapitulo
-			LEFT JOIN C_FuenteFinanciamiento As CFF ON CFF.IDFUENTEFINANCIAMIENTO = TS.IdFuenteFinanciamiento and CFF.IdClave not in (25,26,27)
+			LEFT JOIN C_FuenteFinanciamiento As CFF ON CFF.IDFUENTEFINANCIAMIENTO = TS.IdFuenteFinanciamiento 
 where (Mes = 0) AND LYear=@Ejercicio AND Year=@Ejercicio 
 AND TS.IdAreaResp = CASE WHEN @IdArea = 0 THEN TS.IdAreaResp ELSE @IdArea END
+and CFF.IdClave not in (25,26,27)
 Group by  CG.IdCapitulo, CG.Descripcion, CN.IdConcepto, CN.Descripcion, CN.IdCapitulo
 Order by  CG.IdCapitulo , CN.IdConcepto, CN.IdCapitulo
 
@@ -196,9 +193,10 @@ From T_PresupuestoNW As TP JOIN T_SellosPresupuestales As TS ON TP.IdSelloPresup
 			LEFT JOIN C_PartidasPres As CP ON CP.IdPartida = TS.IdPartida
 			LEFT JOIN C_ConceptosNEP As CN ON CN.IdConcepto = CP.IdConcepto
 			LEFT JOIN C_CapitulosNEP As CG ON CG.IdCapitulo = CN.IdCapitulo
-			LEFT JOIN C_FuenteFinanciamiento As CFF ON CFF.IDFUENTEFINANCIAMIENTO = TS.IdFuenteFinanciamiento and CFF.IdClave not in (25,26,27)
+			LEFT JOIN C_FuenteFinanciamiento As CFF ON CFF.IDFUENTEFINANCIAMIENTO = TS.IdFuenteFinanciamiento 
 where (Mes BETWEEN  @Mes AND @Mes2) AND LYear=@Ejercicio AND Year=@Ejercicio 
 AND TS.IdAreaResp = CASE WHEN @IdArea = 0 THEN TS.IdAreaResp ELSE @IdArea END
+and CFF.IdClave not in (25,26,27)
 Group by  CG.IdCapitulo, CG.Descripcion, CN.IdConcepto, CN.Descripcion, CN.IdCapitulo
 Order by  CG.IdCapitulo , CN.IdConcepto, CN.IdCapitulo
 
@@ -316,10 +314,11 @@ From T_PresupuestoNW As TP JOIN T_SellosPresupuestales As TS ON TP.IdSelloPresup
 			LEFT JOIN C_PartidasPres As CP ON CP.IdPartida = TS.IdPartida
 			LEFT JOIN C_ConceptosNEP As CN ON CN.IdConcepto = CP.IdConcepto
 			LEFT JOIN C_CapitulosNEP As CG ON CG.IdCapitulo = CN.IdCapitulo
-			LEFT JOIN C_FuenteFinanciamiento As CFF ON CFF.IDFUENTEFINANCIAMIENTO = TS.IdFuenteFinanciamiento and CFF.IdClave not in (25,26,27)
+			LEFT JOIN C_FuenteFinanciamiento As CFF ON CFF.IDFUENTEFINANCIAMIENTO = TS.IdFuenteFinanciamiento 
 where (Mes = 0) AND LYear=@Ejercicio AND Year=@Ejercicio  
 --AND CFF.IDFUENTEFINANCIAMIENTO = TS.IdFuenteFinanciamiento and CFF.IdClave not in (25,26,27)
 AND TS.IdAreaResp = CASE WHEN @IdArea = 0 THEN TS.IdAreaResp ELSE @IdArea END
+and CFF.IdClave not in (25,26,27)
 Group by  CG.IdCapitulo, CG.Descripcion, CN.IdConcepto, CN.Descripcion, CN.IdCapitulo
 Order by  CG.IdCapitulo , CN.IdConcepto, CN.IdCapitulo
 --Tabla de titulos 
@@ -376,10 +375,11 @@ From T_PresupuestoNW As TP JOIN T_SellosPresupuestales As TS ON TP.IdSelloPresup
 			LEFT JOIN C_PartidasPres As CP ON CP.IdPartida = TS.IdPartida
 			LEFT JOIN C_ConceptosNEP As CN ON CN.IdConcepto = CP.IdConcepto
 			LEFT JOIN C_CapitulosNEP As CG ON CG.IdCapitulo = CN.IdCapitulo
-			LEFT JOIN C_FuenteFinanciamiento As CFF ON CFF.IDFUENTEFINANCIAMIENTO = TS.IdFuenteFinanciamiento and CFF.IdClave not in (25,26,27)
+			LEFT JOIN C_FuenteFinanciamiento As CFF ON CFF.IDFUENTEFINANCIAMIENTO = TS.IdFuenteFinanciamiento 
 where (Mes BETWEEN  @Mes AND @Mes2) AND LYear=@Ejercicio AND Year=@Ejercicio  
---AND CFF.IDFUENTEFINANCIAMIENTO = TS.IdFuenteFinanciamiento and CFF.IdClave not in (25,26,27)
+
 AND TS.IdAreaResp = CASE WHEN @IdArea = 0 THEN TS.IdAreaResp ELSE @IdArea END
+and CFF.IdClave not in (25,26,27)
 Group by  CG.IdCapitulo, CG.Descripcion, CN.IdConcepto, CN.Descripcion, CN.IdCapitulo
 Order by  CG.IdCapitulo , CN.IdConcepto, CN.IdCapitulo
 
@@ -615,6 +615,27 @@ AND TS.IdAreaResp = CASE WHEN @IdArea = 0 THEN TS.IdAreaResp ELSE @IdArea END
 group by CR.CLAVE, CR.Nombre 
 Order By CR.CLAVE
 
+declare @Titulos2 as table(CLAVE varchar(100),DESCRIPCION varchar(max),  
+Autorizado decimal(18,4), TransferenciaAmp  decimal(18,4),TransferenciaRed  decimal(18,4),Modificado  decimal(18,4),Comprometido  decimal(18,4),Devengado  decimal(18,4),  
+Ejercido  decimal(18,4),Pagado  decimal(18,4),PresDispComp  decimal(18,4),CompNoDev  decimal(18,4),PresSinDev  decimal(18,4),Deuda  decimal(18,4),Amp_Red  decimal(18,4),SubEjercicio decimal(18,4))
+
+INSERT INTO @Titulos2
+Select 
+CR.CLAVE, CR.Nombre,
+0 as Autorizado, 0 as TransferenciaAmp,  0 as TransferenciaRed, 0 as Modificado,0 as Comprometido, 0 as Devengado, 0 as Ejercido,0 as Pagado, 
+0 As PresDispComp, 0 AS CompNoDev, 0 AS PresSinDev, 0 AS Deuda, 0 as Amp_Red, 0 as SubEjercicio 
+From T_PresupuestoNW As TP JOIN T_SellosPresupuestales As TS ON TP.IdSelloPresupuestal = TS.IdSelloPresupuestal
+			 JOIN C_AreaResponsabilidad As CR ON CR.IdAreaResp = TS.IdAreaResp
+			 Where LYear = @Ejercicio
+Group by CR.IdAreaResp, CR.Clave, CR.Nombre
+
+Insert into @Anual2 
+select * from @Titulos2 t   
+where t.Clave not in (select Clave from @Anual2)
+
+--Select * from @rptt order by CLAVE
+
+
 If @AprAnual = 1
 	Begin
 	Select  
@@ -629,6 +650,7 @@ If @AprAnual = 1
 		from @Anual2 a
 		LEFT JOIN @rptt r
 		ON a.CLAVE = r.CLAVE
+		Order by CLAVE
 	End
 Else
 	Begin
@@ -644,6 +666,7 @@ Else
 		from @Anual2 a
 		LEFT JOIN @rptt r
 		ON a.CLAVE = r.CLAVE
+		Order by CLAVE
 	End
 END
 
@@ -715,6 +738,24 @@ AND TS.IdAreaResp = CASE WHEN @IdArea = 0 THEN TS.IdAreaResp ELSE @IdArea END
 group by CR.CLAVE, CR.Nombre 
 Order By CR.CLAVE
 
+declare @Titulos12 as table(CLAVE varchar(100),DESCRIPCION varchar(max),  
+Autorizado decimal(18,4), TransferenciaAmp  decimal(18,4),TransferenciaRed  decimal(18,4),Modificado  decimal(18,4),Comprometido  decimal(18,4),Devengado  decimal(18,4),  
+Ejercido  decimal(18,4),Pagado  decimal(18,4),PresDispComp  decimal(18,4),CompNoDev  decimal(18,4),PresSinDev  decimal(18,4),Deuda  decimal(18,4),Amp_Red  decimal(18,4),SubEjercicio decimal(18,4))
+
+INSERT INTO @Titulos12
+Select 
+CR.CLAVE, CR.Nombre,
+0 as Autorizado, 0 as TransferenciaAmp,  0 as TransferenciaRed, 0 as Modificado,0 as Comprometido, 0 as Devengado, 0 as Ejercido,0 as Pagado, 
+0 As PresDispComp, 0 AS CompNoDev, 0 AS PresSinDev, 0 AS Deuda, 0 as Amp_Red, 0 as SubEjercicio 
+From T_PresupuestoNW As TP JOIN T_SellosPresupuestales As TS ON TP.IdSelloPresupuestal = TS.IdSelloPresupuestal
+			 JOIN C_AreaResponsabilidad As CR ON CR.IdAreaResp = TS.IdAreaResp
+			 Where LYear = @Ejercicio
+Group by CR.IdAreaResp, CR.Clave, CR.Nombre
+
+insert into @Anual12  
+select* from @Titulos12 t   
+where t.Clave not in (select Clave from @Anual12)
+
 If @AprAnual = 1
 	Begin
 	Select  
@@ -729,6 +770,7 @@ If @AprAnual = 1
 		from @Anual12 a
 		LEFT JOIN @rptt12 r
 		ON a.CLAVE = r.CLAVE
+		Order by CLAVE
 	End
 	Else
 	Begin
@@ -744,6 +786,7 @@ If @AprAnual = 1
 		from @Anual12 a
 		LEFT JOIN @rptt12 r
 		ON a.CLAVE = r.CLAVE
+		Order by CLAVE
 	End
 END
 
@@ -811,7 +854,6 @@ sum(ISNULL(TP.Devengado,0)) -  sum(ISNULL(TP.Ejercido,0)) AS Deuda,
 --sum(ISNULL(TP.Comprometido,0)) as SubEjercicio 
 (sum(ISNULL(TP.Autorizado,0)) + (sum(ISNULL(TP.Ampliaciones,0)) + sum(ISNULL(TP.TransferenciaAmp,0))) - (sum(ISNULL(TP.Reducciones,0)) + sum(ISNULL(TP.TransferenciaRed,0))))-
 sum(ISNULL(TP.Devengado,0)) as SubEjercicio 
-
 
 From T_PresupuestoNW As TP JOIN T_SellosPresupuestales As TS ON TP.IdSelloPresupuestal = TS.IdSelloPresupuestal		 
 LEFT JOIN C_Subfunciones CS ON TS.IdSubFuncion = CS.IdSubFuncion 		

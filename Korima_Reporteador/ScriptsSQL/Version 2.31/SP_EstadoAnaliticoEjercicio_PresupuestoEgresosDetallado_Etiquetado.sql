@@ -12,7 +12,7 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 
--- Exec SP_EstadoAnaliticoEjercicio_PresupuestoEgresosDetallado_Etiquetado 0,0,2021,1,7,0,1,1
+-- Exec SP_EstadoAnaliticoEjercicio_PresupuestoEgresosDetallado_Etiquetado 0,0,2021,1,2,0,1,1
 CREATE PROCEDURE  [dbo].[SP_EstadoAnaliticoEjercicio_PresupuestoEgresosDetallado_Etiquetado]  
   @Mes  as int,   
   @Mes2 as int,    
@@ -38,10 +38,14 @@ Select CN.IdConcepto  as Clave,
 sum(ISNULL(TP.Autorizado,0)) as Autorizado,
 (sum(ISNULL(TP.Ampliaciones,0)) + sum(ISNULL(TP.TransferenciaAmp,0))) -
 (sum(ISNULL(TP.Reducciones,0)) + sum(ISNULL(TP.TransferenciaRed,0))) as Amp_Red
-From T_PresupuestoNW As TP, T_SellosPresupuestales As TS , C_ConceptosNEP As CN, C_PartidasPres As CP, C_CapitulosNEP As CG, C_FuenteFinanciamiento CFF
-where (Mes = 0) AND LYear=@Ejercicio AND Year=@Ejercicio AND  TP.IdSelloPresupuestal = TS.IdSelloPresupuestal AND CP.IdPartida = TS.IdPartida AND CN.IdConcepto = CP.IdConcepto AND CG.IdCapitulo = CN.IdCapitulo
-AND CFF.IDFUENTEFINANCIAMIENTO = TS.IdFuenteFinanciamiento and CFF.IdClave in (25,26,27)
+From T_PresupuestoNW As TP JOIN T_SellosPresupuestales As TS ON TP.IdSelloPresupuestal = TS.IdSelloPresupuestal
+			LEFT JOIN C_PartidasPres As CP ON CP.IdPartida = TS.IdPartida
+			LEFT JOIN C_ConceptosNEP As CN ON CN.IdConcepto = CP.IdConcepto
+			LEFT JOIN C_CapitulosNEP As CG ON CG.IdCapitulo = CN.IdCapitulo
+			LEFT JOIN C_FuenteFinanciamiento As CFF ON CFF.IDFUENTEFINANCIAMIENTO = TS.IdFuenteFinanciamiento 
+where (Mes = 0) AND LYear=@Ejercicio AND Year=@Ejercicio 
 AND TS.IdAreaResp = CASE WHEN @IdArea = 0 THEN TS.IdAreaResp ELSE @IdArea END
+and CFF.IdClave in (25,26,27)
 Group by  CG.IdCapitulo, CG.Descripcion, CN.IdConcepto, CN.Descripcion, CN.IdCapitulo
 Order by  CG.IdCapitulo , CN.IdConcepto, CN.IdCapitulo
 
@@ -89,10 +93,14 @@ sum(ISNULL(TP.Devengado,0)) -  sum(ISNULL(TP.Ejercido,0)) AS Deuda,
 (sum(ISNULL(TP.Autorizado,0)) + (sum(ISNULL(TP.Ampliaciones,0)) + sum(ISNULL(TP.TransferenciaAmp,0))) - (sum(ISNULL(TP.Reducciones,0)) + sum(ISNULL(TP.TransferenciaRed,0))))-
 sum(ISNULL(TP.Devengado,0))as SubEjercicio 
 
-From T_PresupuestoNW As TP, T_SellosPresupuestales As TS , C_ConceptosNEP As CN, C_PartidasPres As CP, C_CapitulosNEP As CG, C_FuenteFinanciamiento CFF
-where (Mes BETWEEN  @Mes AND @Mes2) AND LYear=@Ejercicio AND Year=@Ejercicio AND  TP.IdSelloPresupuestal = TS.IdSelloPresupuestal AND CP.IdPartida = TS.IdPartida AND CN.IdConcepto = CP.IdConcepto AND CG.IdCapitulo = CN.IdCapitulo
-AND CFF.IDFUENTEFINANCIAMIENTO = TS.IdFuenteFinanciamiento and CFF.IdClave  in (25,26,27)
+From T_PresupuestoNW As TP JOIN T_SellosPresupuestales As TS ON TP.IdSelloPresupuestal = TS.IdSelloPresupuestal
+			LEFT JOIN C_PartidasPres As CP ON CP.IdPartida = TS.IdPartida
+			LEFT JOIN C_ConceptosNEP As CN ON CN.IdConcepto = CP.IdConcepto
+			LEFT JOIN C_CapitulosNEP As CG ON CG.IdCapitulo = CN.IdCapitulo
+			LEFT JOIN C_FuenteFinanciamiento As CFF ON CFF.IDFUENTEFINANCIAMIENTO = TS.IdFuenteFinanciamiento 
+where (Mes BETWEEN  @Mes AND @Mes2) AND LYear=@Ejercicio AND Year=@Ejercicio 
 AND TS.IdAreaResp = CASE WHEN @IdArea = 0 THEN TS.IdAreaResp ELSE @IdArea END
+and CFF.IdClave in (25,26,27)
 Group by  CG.IdCapitulo, CG.Descripcion, CN.IdConcepto, CN.Descripcion, CN.IdCapitulo
 Order by  CG.IdCapitulo , CN.IdConcepto, CN.IdCapitulo
 
@@ -235,81 +243,7 @@ Order By CR.CLAVE
 declare @rpt2 as table(CLAVE varchar(100),DESCRIPCION varchar(max),  
 Autorizado decimal(18,4), TransferenciaAmp  decimal(18,4),TransferenciaRed  decimal(18,4),Modificado  decimal(18,4),Comprometido  decimal(18,4),Devengado  decimal(18,4),  
 Ejercido  decimal(18,4),Pagado  decimal(18,4),PresDispComp  decimal(18,4),CompNoDev  decimal(18,4),PresSinDev  decimal(18,4),Deuda  decimal(18,4),Amp_Red  decimal(18,4),SubEjercicio decimal(18,4),IdClaveFF int)  
-Insert into @rpt2  
-Select CR.CLAVE, CR.Nombre,  
-sum(ISNULL(0,0)) as Autorizado,   
-(sum(ISNULL(0,0)) + sum(ISNULL(0,0))) as TransferenciaAmp,   
-(sum(ISNULL(0,0)) + sum(ISNULL(0,0))) as TransferenciaRed,   
-(sum(ISNULL(0,0)) + (sum(ISNULL(0,0)) + sum(ISNULL(0,0))) - (sum(ISNULL(0,0)) + sum(ISNULL(0,0))))as Modificado,  
-sum(ISNULL(0,0)) as Comprometido,   
-sum(ISNULL(0,0)) as Devengado,   
-sum(ISNULL(0,0)) as Ejercido,  
-sum(ISNULL(0,0)) as Pagado,   
-(sum(ISNULL(0,0)) + (sum(ISNULL(0,0)) + sum(ISNULL(0,0))) - (sum(ISNULL(0,0)) + sum(ISNULL(0,0)))) - sum(ISNULL(0,0)) As PresDispComp,  
-sum(ISNULL(0,0)) - sum(ISNULL(0,0)) AS CompNoDev,  
-(sum(ISNULL(0,0)) + (sum(ISNULL(0,0)) + sum(ISNULL(0,0))) - (sum(ISNULL(0,0)) + sum(ISNULL(0,0))))- sum(ISNULL(0,0))  AS PresSinDev,  
-sum(ISNULL(0,0)) -  sum(ISNULL(0,0)) AS Deuda,  
-(sum(ISNULL(0,0)) + sum(ISNULL(0,0))) -   
-(sum(ISNULL(0,0)) + sum(ISNULL(0,0))) as Amp_Red, 
-(sum(ISNULL(0,0)) + (sum(ISNULL(0,0)) + sum(ISNULL(0,0))) - (sum(ISNULL(0,0)) + sum(ISNULL(0,0))))-  
-sum(ISNULL(0,0)) as SubEjercicio ,
-''
-From T_PresupuestoNW As TP JOIN T_SellosPresupuestales As TS ON TP.IdSelloPresupuestal = TS.IdSelloPresupuestal
-			 JOIN C_AreaResponsabilidad As CR ON CR.IdAreaResp = TS.IdAreaResp
-			LEFT JOIN C_FuenteFinanciamiento As CFF ON CFF.IDFUENTEFINANCIAMIENTO = TS.IdFuenteFinanciamiento 
-Where (TP.Mes BETWEEN  @Mes AND @Mes2) AND TP.[Year]=@Ejercicio AND TS.LYear=@Ejercicio --AND TS.IdAreaResp  = CR.IdAreaResp
-and CFF.IdClave not in (25,26,27)
-group by CR.Clave,CR.Nombre
-Order By CR.CLAVE 
-  
---If @AmpRedAnual = 1  
--- Begin  
--- if @MuestraCeros = 0
--- begin
---  select CLAVE,DESCRIPCION,  sum(isnull(Autorizado,0)) as Autorizado, sum( isnull(TransferenciaAmp,0)) as TransferenciaAmp,sum(isnull(TransferenciaRed,0)) as TransferenciaRed,
---  sum(isnull(Modificado,0)) as Modificado,sum(isnull(Comprometido,0)) as Comprometido,sum(isnull(Devengado,0)) as Devengado,  sum(isnull(Ejercido,0)) as Ejercido,
---  sum(isnull(Pagado,0) )as Pagado,sum(isnull(PresDispComp,0)) as PresDispComp,sum(isnull(CompNoDev,0))as CompNoDev,sum(isnull(PresSinDev,0)) as PresSinDev,
---  sum(isnull(Deuda,0))as Deuda,sum(isnull(Amp_Red,0)) as Amp_Red,sum(isnull(SubEjercicio,0) )as SubEjercicio,isnull(IdClaveFF,0) as IdClaveFF 
---  from (Select CLAVE,DESCRIPCION, sum( isnull(Autorizado,0)) as Autorizado, sum(isnull(TransferenciaAmp,0)) as TransferenciaAmp,sum(isnull(TransferenciaRed,0)) as TransferenciaRed,
---  sum(isnull(Modificado,0)) as Modificado,sum(isnull(Comprometido,0)) as Comprometido,sum( isnull(Devengado,0)) as Devengado,  sum( isnull(Ejercido,0)) as Ejercido,
---  sum( isnull(Pagado,0) )as Pagado,sum(isnull(PresDispComp,0)) as PresDispComp,sum(isnull(CompNoDev,0))as CompNoDev,sum(isnull(PresSinDev,0)) as PresSinDev,
---  sum(isnull(Deuda,0))as Deuda,sum(isnull(Amp_Red,0)) as Amp_Red,sum(isnull(SubEjercicio,0) )as SubEjercicio,isnull(IdClaveFF,0) as IdClaveFF   
---  from @Anual2  
---  --where IdClaveFF in (0,25,26,27)
---  group by CLAVE,DESCRIPCION,IdClaveFF
---   union 
---  Select CLAVE,DESCRIPCION,sum(isnull(Autorizado,0)) as Autorizado,sum(isnull(TransferenciaAmp,0)) as TransferenciaAmp,sum(isnull(TransferenciaRed,0)) as TransferenciaRed,
---  sum(isnull(Modificado,0)) as Modificado,sum(isnull(Comprometido,0)) as Comprometido,sum(isnull(Devengado,0)) as Devengado,  sum(isnull(Ejercido,0)) as Ejercido,
---  sum(isnull(Pagado,0) )as Pagado,sum(isnull(PresDispComp,0)) as PresDispComp,sum(isnull(CompNoDev,0))as CompNoDev,sum(isnull(PresSinDev,0)) as PresSinDev,
---  sum(isnull(Deuda,0))as Deuda,sum(isnull(Amp_Red,0)) as Amp_Red,sum(isnull(SubEjercicio,0) )as SubEjercicio,isnull(IdClaveFF,0) as IdClaveFF   
---  from @rptt  
---  --where IdClaveFF in (25,26,27)
---  group by CLAVE,DESCRIPCION,IdClaveFF)as X
---  group by CLAVE,DESCRIPCION,IdClaveFF
---end
---else
---begin 
---  select CLAVE,DESCRIPCION,  sum(isnull(Autorizado,0)) as Autorizado, sum( isnull(TransferenciaAmp,0)) as TransferenciaAmp,sum(isnull(TransferenciaRed,0)) as TransferenciaRed,
---  sum(isnull(Modificado,0)) as Modificado,sum(isnull(Comprometido,0)) as Comprometido,sum(isnull(Devengado,0)) as Devengado,  sum(isnull(Ejercido,0)) as Ejercido,
---  sum(isnull(Pagado,0) )as Pagado,sum(isnull(PresDispComp,0)) as PresDispComp,sum(isnull(CompNoDev,0))as CompNoDev,sum(isnull(PresSinDev,0)) as PresSinDev,
---  sum(isnull(Deuda,0))as Deuda,sum(isnull(Amp_Red,0)) as Amp_Red,sum(isnull(SubEjercicio,0) )as SubEjercicio,isnull(IdClaveFF,0) as IdClaveFF 
---  from (Select CLAVE,DESCRIPCION, sum( isnull(Autorizado,0)) as Autorizado, sum(isnull(TransferenciaAmp,0)) as TransferenciaAmp,sum(isnull(TransferenciaRed,0)) as TransferenciaRed,
---  sum(isnull(Modificado,0)) as Modificado,sum(isnull(Comprometido,0)) as Comprometido,sum( isnull(Devengado,0)) as Devengado,  sum( isnull(Ejercido,0)) as Ejercido,
---  sum( isnull(Pagado,0) )as Pagado,sum(isnull(PresDispComp,0)) as PresDispComp,sum(isnull(CompNoDev,0))as CompNoDev,sum(isnull(PresSinDev,0)) as PresSinDev,
---  sum(isnull(Deuda,0))as Deuda,sum(isnull(Amp_Red,0)) as Amp_Red,sum(isnull(SubEjercicio,0) )as SubEjercicio,isnull(IdClaveFF,0) as IdClaveFF   
---  from @Anual2  
---  --where IdClaveFF in (0,25,26,27)
---  group by CLAVE,DESCRIPCION,IdClaveFF
---   union 
---   Select CLAVE,DESCRIPCION,sum(isnull(Autorizado,0)) as Autorizado,sum(isnull(TransferenciaAmp,0)) as TransferenciaAmp,sum(isnull(TransferenciaRed,0)) as TransferenciaRed,
---  sum(isnull(Modificado,0)) as Modificado,sum(isnull(Comprometido,0)) as Comprometido,sum(isnull(Devengado,0)) as Devengado,  sum(isnull(Ejercido,0)) as Ejercido,
---  sum(isnull(Pagado,0) )as Pagado,sum(isnull(PresDispComp,0)) as PresDispComp,sum(isnull(CompNoDev,0))as CompNoDev,sum(isnull(PresSinDev,0)) as PresSinDev,
---  sum(isnull(Deuda,0))as Deuda,sum(isnull(Amp_Red,0)) as Amp_Red,sum(isnull(SubEjercicio,0) )as SubEjercicio,isnull(IdClaveFF,0) as IdClaveFF   
---  from @rptt  
---  --where IdClaveFF in (0,25,26,27)
---  group by CLAVE,DESCRIPCION,IdClaveFF)as X
---  group by CLAVE,DESCRIPCION,IdClaveFF
---end
+
 declare @rpt2Val as table(CLAVE varchar(100),DESCRIPCION varchar(max),  
 Autorizado decimal(18,4), TransferenciaAmp  decimal(18,4),TransferenciaRed  decimal(18,4),Modificado  decimal(18,4),Comprometido  decimal(18,4),Devengado  decimal(18,4),  
 Ejercido  decimal(18,4),Pagado  decimal(18,4),PresDispComp  decimal(18,4),CompNoDev  decimal(18,4),PresSinDev  decimal(18,4),Deuda  decimal(18,4),Amp_Red  decimal(18,4),SubEjercicio decimal(18,4),IdClaveFF int) 
@@ -344,6 +278,23 @@ Order By CR.CLAVE
 
  --Select * from @rpt2
  -- Select * from @rpt2Val
+declare @Titulos2 as table(CLAVE varchar(100),DESCRIPCION varchar(max),  
+Autorizado decimal(18,4), TransferenciaAmp  decimal(18,4),TransferenciaRed  decimal(18,4),Modificado  decimal(18,4),Comprometido  decimal(18,4),Devengado  decimal(18,4),  
+Ejercido  decimal(18,4),Pagado  decimal(18,4),PresDispComp  decimal(18,4),CompNoDev  decimal(18,4),PresSinDev  decimal(18,4),Deuda  decimal(18,4),Amp_Red  decimal(18,4),SubEjercicio decimal(18,4),IdClaveFF int)
+
+INSERT INTO @Titulos2
+Select 
+CR.CLAVE, CR.Nombre,
+0 as Autorizado, 0 as TransferenciaAmp,  0 as TransferenciaRed, 0 as Modificado,0 as Comprometido, 0 as Devengado, 0 as Ejercido,0 as Pagado, 
+0 As PresDispComp, 0 AS CompNoDev, 0 AS PresSinDev, 0 AS Deuda, 0 as Amp_Red, 0 as SubEjercicio , 0
+From T_PresupuestoNW As TP JOIN T_SellosPresupuestales As TS ON TP.IdSelloPresupuestal = TS.IdSelloPresupuestal
+			 JOIN C_AreaResponsabilidad As CR ON CR.IdAreaResp = TS.IdAreaResp
+			 Where LYear = @Ejercicio
+Group by CR.IdAreaResp, CR.Clave, CR.Nombre
+
+insert into @Anual2  
+select* from @Titulos2 t   
+where t.Clave not in (select Clave from @Anual2)
  
  update r set r.Autorizado = a.Autorizado,
  r.Amp_Red = a.Amp_Red,
@@ -359,48 +310,50 @@ Order By CR.CLAVE
 
 -- End
 ----------------
---If @AprAnual = 1
---	Begin
---	Select  
---		a.CLAVE,a.DESCRIPCION,
---		isnull(a.Autorizado,0) as Autorizado, isnull(r.TransferenciaAmp,0) as TransferenciaAmp,isnull(r.TransferenciaRed,0) as TransferenciaRed,isnull(r.Modificado,0) as Modificado,isnull(r.Comprometido,0) as Comprometido,isnull(r.Devengado,0) as Devengado,
---		isnull(r.Ejercido,0) as Ejercido,isnull(r.Pagado,0) as Pagado,isnull(r.PresDispComp,0) as PresDispComp,isnull(r.CompNoDev,0) as CompNoDev,isnull(r.PresSinDev,0) as PresSinDev,isnull(r.Deuda,0) as Deuda,
---		CASE @AmpRedAnual
---		WHEN 1 THEN isnull(a.Amp_Red,0)
---		ELSE isnull(r.Amp_Red,0) 
---		END as Amp_Red,
---		isnull(r.SubEjercicio,0) as SubEjercicio 
---		from @Anual2 a
---		LEFT JOIN @rpt2 r
---		ON a.CLAVE = r.CLAVE
---	End
---Else
---	Begin
---		Select  
---		a.CLAVE,a.DESCRIPCION,
---		isnull(r.Autorizado,0) as Autorizado, isnull(r.TransferenciaAmp,0) as TransferenciaAmp,isnull(r.TransferenciaRed,0) as TransferenciaRed,isnull(r.Modificado,0) as Modificado,isnull(r.Comprometido,0) as Comprometido,isnull(r.Devengado,0) as Devengado,
---		isnull(r.Ejercido,0) as Ejercido,isnull(r.Pagado,0) as Pagado,isnull(r.PresDispComp,0) as PresDispComp,isnull(r.CompNoDev,0) as CompNoDev,isnull(r.PresSinDev,0) as PresSinDev,isnull(r.Deuda,0) as Deuda,
---		CASE @AmpRedAnual
---		WHEN 1 THEN isnull(a.Amp_Red,0)
---		ELSE isnull(r.Amp_Red,0) 
---		END as Amp_Red,
---		isnull(r.SubEjercicio,0) as SubEjercicio 
---		from @Anual2 a
---		LEFT JOIN @rpt2 r
---		ON a.CLAVE = r.CLAVE
---	End
-
 If @AprAnual = 1
 	Begin
-		update r set r.Autorizado = a.Autorizado FROM @Anual2 a, @rpt2 r  Where a.Clave = r.Clave
+	Select  
+		a.CLAVE,a.DESCRIPCION,
+		isnull(a.Autorizado,0) as Autorizado, isnull(r.TransferenciaAmp,0) as TransferenciaAmp,isnull(r.TransferenciaRed,0) as TransferenciaRed,isnull(r.Modificado,0) as Modificado,isnull(r.Comprometido,0) as Comprometido,isnull(r.Devengado,0) as Devengado,
+		isnull(r.Ejercido,0) as Ejercido,isnull(r.Pagado,0) as Pagado,isnull(r.PresDispComp,0) as PresDispComp,isnull(r.CompNoDev,0) as CompNoDev,isnull(r.PresSinDev,0) as PresSinDev,isnull(r.Deuda,0) as Deuda,
+		CASE @AmpRedAnual
+		WHEN 1 THEN isnull(a.Amp_Red,0)
+		ELSE isnull(r.Amp_Red,0) 
+		END as Amp_Red,
+		isnull(r.SubEjercicio,0) as SubEjercicio 
+		from @Anual2 a
+		LEFT JOIN @rpt2 r
+		ON a.CLAVE = r.CLAVE
+		Order by CLAVE
 	End
-
-If @AmpRedAnual = 1
+Else
 	Begin
-		update r set r.Amp_Red = a.Amp_Red FROM @Anual2 a, @rpt2 r  Where a.Clave = r.Clave
+		Select  
+		a.CLAVE,a.DESCRIPCION,
+		isnull(r.Autorizado,0) as Autorizado, isnull(r.TransferenciaAmp,0) as TransferenciaAmp,isnull(r.TransferenciaRed,0) as TransferenciaRed,isnull(r.Modificado,0) as Modificado,isnull(r.Comprometido,0) as Comprometido,isnull(r.Devengado,0) as Devengado,
+		isnull(r.Ejercido,0) as Ejercido,isnull(r.Pagado,0) as Pagado,isnull(r.PresDispComp,0) as PresDispComp,isnull(r.CompNoDev,0) as CompNoDev,isnull(r.PresSinDev,0) as PresSinDev,isnull(r.Deuda,0) as Deuda,
+		CASE @AmpRedAnual
+		WHEN 1 THEN isnull(a.Amp_Red,0)
+		ELSE isnull(r.Amp_Red,0) 
+		END as Amp_Red,
+		isnull(r.SubEjercicio,0) as SubEjercicio 
+		from @Anual2 a
+		LEFT JOIN @rpt2 r
+		ON a.CLAVE = r.CLAVE
+		Order by CLAVE
 	End
 
-	select * from @rpt2
+--If @AprAnual = 1
+--	Begin
+--		update r set r.Autorizado = a.Autorizado FROM @Anual2 a, @rpt2 r  Where a.Clave = r.Clave
+--	End
+
+--If @AmpRedAnual = 1
+--	Begin
+--		update r set r.Amp_Red = a.Amp_Red FROM @Anual2 a, @rpt2 r  Where a.Clave = r.Clave
+--	End
+
+--	select * from @rpt2
 END  
 	
 Else if @Tipo=7   
@@ -638,19 +591,13 @@ sum(ISNULL(0,0)) -  sum(ISNULL(0,0)) AS Deuda,
 (sum(ISNULL(0,0)) + sum(ISNULL(0,0))) as Amp_Red,   
 (sum(ISNULL(0,0)) + (sum(ISNULL(0,0)) + sum(ISNULL(0,0))) - (sum(ISNULL(0,0)) + sum(ISNULL(0,0))))-  
 sum(ISNULL(0,0)) as SubEjercicio 
-, case CFF.IdClave 
-		  when '25' then '25'
-		  when '26' then '25'
-		  when '27' then '25'
-		  when '0' then '0'
-		  else '11'
-		  end as idclaveFF 
+, ''
 From T_PresupuestoNW As TP JOIN T_SellosPresupuestales As TS ON TP.IdSelloPresupuestal = TS.IdSelloPresupuestal
 			 JOIN C_AreaResponsabilidad As CR ON CR.IdAreaResp = TS.IdAreaResp
 			LEFT JOIN C_FuenteFinanciamiento As CFF ON CFF.IDFUENTEFINANCIAMIENTO = TS.IdFuenteFinanciamiento --and CFF.IdClave in (25,26,27)
 Where (TP.Mes BETWEEN  1 AND 12) AND TP.[Year]=@Ejercicio AND TS.LYear=@Ejercicio AND TS.IdAreaResp  = CR.IdAreaResp 
 and CFF.IdClave in (25,26,27)
-group by CFF.IdClave,CR.Clave,CR.Nombre
+group by CR.Clave,CR.Nombre
 Order By CR.CLAVE 
 --VALORES ABSOLUTOS  
   
@@ -675,21 +622,32 @@ sum(ISNULL(TP.Devengado,0)) -  sum(ISNULL(TP.Ejercido,0)) AS Deuda,
 (sum(ISNULL(TP.Reducciones,0)) + sum(ISNULL(TP.TransferenciaRed,0))) as Amp_Red,   
 (sum(ISNULL(TP.Autorizado,0)) + (sum(ISNULL(TP.Ampliaciones,0)) + sum(ISNULL(TP.TransferenciaAmp,0))) - (sum(ISNULL(TP.Reducciones,0)) + sum(ISNULL(TP.TransferenciaRed,0))))-  
 sum(ISNULL(TP.Devengado,0)) as SubEjercicio 
-, case CFF.IdClave 
-		  when '25' then '25'
-		  when '26' then '25'
-		  when '27' then '25'
-		  when '0' then '0'
-		  else '11'
-		  end as idclaveFF 
+,''
 From T_PresupuestoNW As TP JOIN T_SellosPresupuestales As TS ON TP.IdSelloPresupuestal = TS.IdSelloPresupuestal
 			 JOIN C_AreaResponsabilidad As CR ON CR.IdAreaResp = TS.IdAreaResp
 			LEFT JOIN C_FuenteFinanciamiento As CFF ON CFF.IDFUENTEFINANCIAMIENTO = TS.IdFuenteFinanciamiento --and CFF.IdClave in (25,26,27)
-Where (TP.Mes BETWEEN  @Mes AND @Mes2) AND TP.[Year]=@Ejercicio AND TS.LYear=@Ejercicio AND TS.IdAreaResp  = CR.IdAreaResp 
+Where (TP.Mes BETWEEN  @Mes AND @Mes2) AND TP.[Year]=@Ejercicio AND TS.LYear=@Ejercicio --AND TS.IdAreaResp  = CR.IdAreaResp 
 and CFF.IdClave in (25,26,27)
-group by CFF.IdClave,CR.Clave,CR.Nombre
+group by CR.Clave,CR.Nombre
 Order By CR.CLAVE 
   
+declare @Titulos12 as table(CLAVE varchar(100),DESCRIPCION varchar(max),  
+Autorizado decimal(18,4), TransferenciaAmp  decimal(18,4),TransferenciaRed  decimal(18,4),Modificado  decimal(18,4),Comprometido  decimal(18,4),Devengado  decimal(18,4),  
+Ejercido  decimal(18,4),Pagado  decimal(18,4),PresDispComp  decimal(18,4),CompNoDev  decimal(18,4),PresSinDev  decimal(18,4),Deuda  decimal(18,4),Amp_Red  decimal(18,4),SubEjercicio decimal(18,4),IdClaveFF int)
+
+INSERT INTO @Titulos12
+Select 
+CR.CLAVE, CR.Nombre,
+0 as Autorizado, 0 as TransferenciaAmp,  0 as TransferenciaRed, 0 as Modificado,0 as Comprometido, 0 as Devengado, 0 as Ejercido,0 as Pagado, 
+0 As PresDispComp, 0 AS CompNoDev, 0 AS PresSinDev, 0 AS Deuda, 0 as Amp_Red, 0 as SubEjercicio , 0
+From T_PresupuestoNW As TP JOIN T_SellosPresupuestales As TS ON TP.IdSelloPresupuestal = TS.IdSelloPresupuestal
+			 JOIN C_AreaResponsabilidad As CR ON CR.IdAreaResp = TS.IdAreaResp
+			 Where LYear = @Ejercicio
+Group by CR.IdAreaResp, CR.Clave, CR.Nombre
+
+insert into @Anual12  
+select* from @Titulos12 t   
+where t.Clave not in (select Clave from @Anual12)
 
 If @AprAnual = 1
 	Begin
@@ -705,6 +663,7 @@ If @AprAnual = 1
 		from @Anual12 a
 		LEFT JOIN @rptt12 r
 		ON a.CLAVE = r.CLAVE
+		Order by CLAVE
 	End
 	Else
 	Begin
@@ -720,6 +679,7 @@ If @AprAnual = 1
 		from @Anual12 a
 		LEFT JOIN @rptt12 r
 		ON a.CLAVE = r.CLAVE
+		Order by CLAVE
 	End
 END
 
@@ -732,12 +692,18 @@ Select CN.IdConcepto  as Clave, sum(ISNULL(TP.Autorizado,0)) as Autorizado,
 (sum(ISNULL(TP.Ampliaciones,0)) + sum(ISNULL(TP.TransferenciaAmp,0))) - 
 (sum(ISNULL(TP.Reducciones,0)) + sum(ISNULL(TP.TransferenciaRed,0))) as Amp_Red
 
-From T_PresupuestoNW As TP, T_SellosPresupuestales As TS , C_ConceptosNEP As CN, C_PartidasPres As CP, C_CapitulosNEP As CG, C_FuenteFinanciamiento CFF
-where (Mes = 0) AND LYear=@Ejercicio AND Year=@Ejercicio  AND  TP.IdSelloPresupuestal = TS.IdSelloPresupuestal AND CP.IdPartida = TS.IdPartida AND CN.IdConcepto = CP.IdConcepto AND CG.IdCapitulo = CN.IdCapitulo
-AND CFF.IDFUENTEFINANCIAMIENTO = TS.IdFuenteFinanciamiento and CFF.IdClave in (25,26,27)
+From T_PresupuestoNW As TP JOIN T_SellosPresupuestales As TS ON TP.IdSelloPresupuestal = TS.IdSelloPresupuestal
+			LEFT JOIN C_PartidasPres As CP ON CP.IdPartida = TS.IdPartida
+			LEFT JOIN C_ConceptosNEP As CN ON CN.IdConcepto = CP.IdConcepto
+			LEFT JOIN C_CapitulosNEP As CG ON CG.IdCapitulo = CN.IdCapitulo
+			LEFT JOIN C_FuenteFinanciamiento As CFF ON CFF.IDFUENTEFINANCIAMIENTO = TS.IdFuenteFinanciamiento 
+where (Mes = 0) AND LYear=@Ejercicio AND Year=@Ejercicio 
 AND TS.IdAreaResp = CASE WHEN @IdArea = 0 THEN TS.IdAreaResp ELSE @IdArea END
+and CFF.IdClave in (25,26,27)
+
 Group by  CG.IdCapitulo, CG.Descripcion, CN.IdConcepto, CN.Descripcion, CN.IdCapitulo
 Order by  CG.IdCapitulo , CN.IdConcepto, CN.IdCapitulo
+
 --Tabla de titulos 
 Declare @Titulos16 as table(IdClave int,Descripcion varchar(max),Clave int,Descripcion2 Varchar(max),IdClave2 int,
 Autorizado decimal(18,4),TransferenciaAmp decimal(18,4),TransferenciaRed decimal(18,4),Modificado decimal(18,4),Comprometido decimal(18,4),
@@ -787,10 +753,14 @@ sum(ISNULL(TP.Pagado,0)) As Pagado,
 (sum(ISNULL(TP.Devengado,0)) - sum(ISNULL(TP.Ejercido,0))) As SubEjercicio
 
 
-From T_PresupuestoNW As TP, T_SellosPresupuestales As TS , C_ConceptosNEP As CN, C_PartidasPres As CP, C_CapitulosNEP As CG, C_FuenteFinanciamiento CFF
-where (Mes BETWEEN  @Mes AND @Mes2) AND LYear=@Ejercicio AND Year=@Ejercicio  AND  TP.IdSelloPresupuestal = TS.IdSelloPresupuestal AND CP.IdPartida = TS.IdPartida AND CN.IdConcepto = CP.IdConcepto AND CG.IdCapitulo = CN.IdCapitulo
-AND CFF.IDFUENTEFINANCIAMIENTO = TS.IdFuenteFinanciamiento and CFF.IdClave  in (25,26,27)
+From T_PresupuestoNW As TP JOIN T_SellosPresupuestales As TS ON TP.IdSelloPresupuestal = TS.IdSelloPresupuestal
+			LEFT JOIN C_PartidasPres As CP ON CP.IdPartida = TS.IdPartida
+			LEFT JOIN C_ConceptosNEP As CN ON CN.IdConcepto = CP.IdConcepto
+			LEFT JOIN C_CapitulosNEP As CG ON CG.IdCapitulo = CN.IdCapitulo
+			LEFT JOIN C_FuenteFinanciamiento As CFF ON CFF.IDFUENTEFINANCIAMIENTO = TS.IdFuenteFinanciamiento 
+where (Mes BETWEEN  @Mes AND @Mes2) AND LYear=@Ejercicio AND Year=@Ejercicio 
 AND TS.IdAreaResp = CASE WHEN @IdArea = 0 THEN TS.IdAreaResp ELSE @IdArea END
+and CFF.IdClave in (25,26,27)
 Group by  CG.IdCapitulo, CG.Descripcion, CN.IdConcepto, CN.Descripcion, CN.IdCapitulo
 Order by  CG.IdCapitulo , CN.IdConcepto, CN.IdCapitulo
 

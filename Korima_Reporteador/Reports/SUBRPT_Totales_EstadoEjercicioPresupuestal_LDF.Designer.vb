@@ -89,10 +89,10 @@ Partial Public Class SUBRPT_Totales_EstadoEjercicioPresupuestal_LDF
         Me.label17.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "SP_EstadoAnaliticoEjercicio_PresupuestoEgresosDetallado.Autorizado")})
         Me.label17.Dpi = 254.0!
         Me.label17.Font = New System.Drawing.Font("Tahoma", 6.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.label17.LocationFloat = New DevExpress.Utils.PointFloat(1015.484!, 0.0!)
+        Me.label17.LocationFloat = New DevExpress.Utils.PointFloat(1020.33!, 0.0!)
         Me.label17.Name = "label17"
         Me.label17.Padding = New DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254.0!)
-        Me.label17.SizeF = New System.Drawing.SizeF(346.5963!, 58.41997!)
+        Me.label17.SizeF = New System.Drawing.SizeF(341.75!, 58.41997!)
         Me.label17.StylePriority.UseBorders = False
         Me.label17.StylePriority.UseFont = False
         Me.label17.StylePriority.UseTextAlignment = False
@@ -161,7 +161,7 @@ Partial Public Class SUBRPT_Totales_EstadoEjercicioPresupuestal_LDF
         Me.XrLabel31.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "SP_EstadoAnaliticoEjercicio_PresupuestoEgresosDetallado.Amp_Red")})
         Me.XrLabel31.Dpi = 254.0!
         Me.XrLabel31.Font = New System.Drawing.Font("Tahoma", 6.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.XrLabel31.LocationFloat = New DevExpress.Utils.PointFloat(1362.081!, 0.0!)
+        Me.XrLabel31.LocationFloat = New DevExpress.Utils.PointFloat(1362.08!, 0.0!)
         Me.XrLabel31.Name = "XrLabel31"
         Me.XrLabel31.Padding = New DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254.0!)
         Me.XrLabel31.SizeF = New System.Drawing.SizeF(341.4768!, 58.42005!)
@@ -329,7 +329,7 @@ Partial Public Class SUBRPT_Totales_EstadoEjercicioPresupuestal_LDF
         Me.label42.LocationFloat = New DevExpress.Utils.PointFloat(0.0!, 0.0!)
         Me.label42.Name = "label42"
         Me.label42.Padding = New DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254.0!)
-        Me.label42.SizeF = New System.Drawing.SizeF(1015.484!, 58.41996!)
+        Me.label42.SizeF = New System.Drawing.SizeF(1020.33!, 58.41996!)
         Me.label42.StylePriority.UseBorders = False
         Me.label42.StylePriority.UseFont = False
         Me.label42.StylePriority.UseTextAlignment = False

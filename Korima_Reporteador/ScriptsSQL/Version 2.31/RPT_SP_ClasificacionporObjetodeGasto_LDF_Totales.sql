@@ -11,7 +11,7 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 
--- Exec RPT_SP_ClasificacionporObjetodeGasto_LDF_Totales 0,0,2021,1,2,0,1,0
+-- Exec RPT_SP_ClasificacionporObjetodeGasto_LDF_Totales 1,12,2021,1,2,0,1,0
 CREATE PROCEDURE  [dbo].[RPT_SP_ClasificacionporObjetodeGasto_LDF_Totales]  
   @Mes  as int,   
   @Mes2 as int,    
@@ -33,9 +33,13 @@ Select CN.IdConcepto  as Clave,
 sum(ISNULL(TP.Autorizado,0)) as Autorizado,
 (sum(ISNULL(TP.Ampliaciones,0)) + sum(ISNULL(TP.TransferenciaAmp,0))) -
 (sum(ISNULL(TP.Reducciones,0)) + sum(ISNULL(TP.TransferenciaRed,0))) as Amp_Red
-From T_PresupuestoNW As TP, T_SellosPresupuestales As TS , C_ConceptosNEP As CN, C_PartidasPres As CP, C_CapitulosNEP As CG, C_FuenteFinanciamiento CFF
-where (Mes = 0) AND LYear=@Ejercicio AND Year=@Ejercicio AND  TP.IdSelloPresupuestal = TS.IdSelloPresupuestal AND CP.IdPartida = TS.IdPartida AND CN.IdConcepto = CP.IdConcepto AND CG.IdCapitulo = CN.IdCapitulo
-AND CFF.IDFUENTEFINANCIAMIENTO = TS.IdFuenteFinanciamiento --and CFF.IdClave not in (25,26,27)
+From T_PresupuestoNW As TP, T_SellosPresupuestales As TS 
+			LEFT JOIN C_PartidasPres As CP ON CP.IdPartida = TS.IdPartida
+			LEFT JOIN C_ConceptosNEP As CN ON CN.IdConcepto = CP.IdConcepto
+			LEFT JOIN C_CapitulosNEP As CG ON CG.IdCapitulo = CN.IdCapitulo
+			LEFT JOIN C_FuenteFinanciamiento As CF ON CF.IDFUENTEFINANCIAMIENTO = TS.IdFuenteFinanciamiento
+where (Mes = 0) AND LYear=@Ejercicio AND Year=@Ejercicio 
+AND CF.IDFUENTEFINANCIAMIENTO = TS.IdFuenteFinanciamiento --and CFF.IdClave not in (25,26,27)
 AND TS.IdAreaResp = CASE WHEN @IdArea = 0 THEN TS.IdAreaResp ELSE @IdArea END
 Group by  CG.IdCapitulo, CG.Descripcion, CN.IdConcepto, CN.Descripcion, CN.IdCapitulo
 Order by  CG.IdCapitulo , CN.IdConcepto, CN.IdCapitulo
@@ -94,6 +98,8 @@ Order by  CG.IdCapitulo , CN.IdConcepto, CN.IdCapitulo
 insert into @rpt2
 select* from @Titulos2 t 
 where t.Clave not in (select Clave from @rpt2)
+
+Select * from @rpt2
 
 	If @AprAnual = 1
 		Begin

@@ -3,7 +3,7 @@
 Public Class MDI_Principal
     Dim IdUsuario As String = "Debug"
     'Dim bdd As String = "Demo230abril"
-    Dim bdd As String = "KORIMAMUNICIPIO"
+    'Dim bdd As String = "KORIMAMUNICIPIO"
     'Dim bdd As String = "KmSClara"
     'Dim bdd As String = "KorimaITEI"
     'Dim bdd As String = "CespteInicializacion"
@@ -11,7 +11,7 @@ Public Class MDI_Principal
     'Dim bdd As String = "UNEME2020"
     'Dim bdd As String = "Korima_IDEFT_JALISCO"
     'Dim bdd As String = "IECAN_PRODUCCION"
-    'Dim bdd As String = "Korima_San_Miguel_Alto"
+    Dim bdd As String = "Korima_San_Miguel_Alto"
     'Dim bdd As String = "Korima_Municipio_Piedad"
     'Dim bdd As String = "Korima_TET"
     'Dim bdd As String = "Korima_TSJ"

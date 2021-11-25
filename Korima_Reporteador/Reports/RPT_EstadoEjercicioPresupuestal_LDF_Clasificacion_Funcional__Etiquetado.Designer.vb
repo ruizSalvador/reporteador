@@ -33,12 +33,12 @@ Partial Public Class RPT_EstadoEjercicioPresupuestal_LDF_Clasificacion_Funcional
         Dim XrSummary12 As DevExpress.XtraReports.UI.XRSummary = New DevExpress.XtraReports.UI.XRSummary()
         Dim XrSummary13 As DevExpress.XtraReports.UI.XRSummary = New DevExpress.XtraReports.UI.XRSummary()
         Dim XrSummary14 As DevExpress.XtraReports.UI.XRSummary = New DevExpress.XtraReports.UI.XRSummary()
-        Dim XrSummary20 As DevExpress.XtraReports.UI.XRSummary = New DevExpress.XtraReports.UI.XRSummary()
-        Dim XrSummary19 As DevExpress.XtraReports.UI.XRSummary = New DevExpress.XtraReports.UI.XRSummary()
-        Dim XrSummary18 As DevExpress.XtraReports.UI.XRSummary = New DevExpress.XtraReports.UI.XRSummary()
-        Dim XrSummary17 As DevExpress.XtraReports.UI.XRSummary = New DevExpress.XtraReports.UI.XRSummary()
-        Dim XrSummary16 As DevExpress.XtraReports.UI.XRSummary = New DevExpress.XtraReports.UI.XRSummary()
         Dim XrSummary15 As DevExpress.XtraReports.UI.XRSummary = New DevExpress.XtraReports.UI.XRSummary()
+        Dim XrSummary16 As DevExpress.XtraReports.UI.XRSummary = New DevExpress.XtraReports.UI.XRSummary()
+        Dim XrSummary17 As DevExpress.XtraReports.UI.XRSummary = New DevExpress.XtraReports.UI.XRSummary()
+        Dim XrSummary18 As DevExpress.XtraReports.UI.XRSummary = New DevExpress.XtraReports.UI.XRSummary()
+        Dim XrSummary19 As DevExpress.XtraReports.UI.XRSummary = New DevExpress.XtraReports.UI.XRSummary()
+        Dim XrSummary20 As DevExpress.XtraReports.UI.XRSummary = New DevExpress.XtraReports.UI.XRSummary()
         Me.DsNotasBenn2 = New Korima_Reporteador.dsNotasBenn()
         Me.TopMargin = New DevExpress.XtraReports.UI.TopMarginBand()
         Me.label14 = New DevExpress.XtraReports.UI.XRLabel()
@@ -81,15 +81,15 @@ Partial Public Class RPT_EstadoEjercicioPresupuestal_LDF_Clasificacion_Funcional
         Me.CalculatedField1 = New DevExpress.XtraReports.UI.CalculatedField()
         Me.CalculatedField2 = New DevExpress.XtraReports.UI.CalculatedField()
         Me.GroupHeader3 = New DevExpress.XtraReports.UI.GroupHeaderBand()
+        Me.XrLabel7 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.XrLabel6 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.XrLabel5 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.XrLabel4 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.XrLabel3 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.XrLabel2 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel1 = New DevExpress.XtraReports.UI.XRLabel()
         Me.VW_RPT_CFG_DatosEntesTableAdapter1 = New Korima_Reporteador._Korima2_00_ReporteadorDataSet1TableAdapters.VW_RPT_CFG_DatosEntesTableAdapter()
         Me.GroupFooter1 = New DevExpress.XtraReports.UI.GroupFooterBand()
-        Me.XrLabel2 = New DevExpress.XtraReports.UI.XRLabel()
-        Me.XrLabel3 = New DevExpress.XtraReports.UI.XRLabel()
-        Me.XrLabel4 = New DevExpress.XtraReports.UI.XRLabel()
-        Me.XrLabel5 = New DevExpress.XtraReports.UI.XRLabel()
-        Me.XrLabel6 = New DevExpress.XtraReports.UI.XRLabel()
-        Me.XrLabel7 = New DevExpress.XtraReports.UI.XRLabel()
         CType(Me.DsNotasBenn2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         '
@@ -134,7 +134,7 @@ Partial Public Class RPT_EstadoEjercicioPresupuestal_LDF_Clasificacion_Funcional
         Me.label15.LocationFloat = New DevExpress.Utils.PointFloat(0.00008074442!, 0.0!)
         Me.label15.Name = "label15"
         Me.label15.Padding = New DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254.0!)
-        Me.label15.SizeF = New System.Drawing.SizeF(1020.257!, 58.41997!)
+        Me.label15.SizeF = New System.Drawing.SizeF(1014.96!, 58.41997!)
         Me.label15.StylePriority.UseBorders = False
         Me.label15.StylePriority.UseFont = False
         Me.label15.StylePriority.UseTextAlignment = False
@@ -149,7 +149,7 @@ Partial Public Class RPT_EstadoEjercicioPresupuestal_LDF_Clasificacion_Funcional
         Me.label16.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "SP_EstadoAnaliticoEjercicio_PresupuestoEgresosDetallado.Autorizado", "{0:n2}")})
         Me.label16.Dpi = 254.0!
         Me.label16.Font = New System.Drawing.Font("Tahoma", 6.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.label16.LocationFloat = New DevExpress.Utils.PointFloat(1020.257!, 0.0!)
+        Me.label16.LocationFloat = New DevExpress.Utils.PointFloat(1014.965!, 0.0!)
         Me.label16.Name = "label16"
         Me.label16.Padding = New DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254.0!)
         Me.label16.SizeF = New System.Drawing.SizeF(341.824!, 58.41964!)
@@ -461,7 +461,7 @@ Partial Public Class RPT_EstadoEjercicioPresupuestal_LDF_Clasificacion_Funcional
         Me.label36.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "SP_EstadoAnaliticoEjercicio_PresupuestoEgresosDetallado.Autorizado")})
         Me.label36.Dpi = 254.0!
         Me.label36.Font = New System.Drawing.Font("Tahoma", 6.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.label36.LocationFloat = New DevExpress.Utils.PointFloat(1020.257!, 0.0!)
+        Me.label36.LocationFloat = New DevExpress.Utils.PointFloat(1014.965!, 0.0!)
         Me.label36.Name = "label36"
         Me.label36.Padding = New DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254.0!)
         Me.label36.SizeF = New System.Drawing.SizeF(341.824!, 63.20835!)
@@ -655,7 +655,7 @@ Partial Public Class RPT_EstadoEjercicioPresupuestal_LDF_Clasificacion_Funcional
         Me.label12.LocationFloat = New DevExpress.Utils.PointFloat(0.00008074442!, 0.0!)
         Me.label12.Name = "label12"
         Me.label12.Padding = New DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254.0!)
-        Me.label12.SizeF = New System.Drawing.SizeF(1020.257!, 63.20835!)
+        Me.label12.SizeF = New System.Drawing.SizeF(1014.96!, 63.20835!)
         Me.label12.StylePriority.UseBorders = False
         Me.label12.StylePriority.UseFont = False
         Me.label12.Text = "label12"
@@ -791,114 +791,27 @@ Partial Public Class RPT_EstadoEjercicioPresupuestal_LDF_Clasificacion_Funcional
         Me.GroupHeader3.Level = 1
         Me.GroupHeader3.Name = "GroupHeader3"
         '
-        'XrLabel1
+        'XrLabel7
         '
-        Me.XrLabel1.Borders = CType((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Top), DevExpress.XtraPrinting.BorderSide)
-        Me.XrLabel1.Dpi = 254.0!
-        Me.XrLabel1.Font = New System.Drawing.Font("Tahoma", 9.0!)
-        Me.XrLabel1.LocationFloat = New DevExpress.Utils.PointFloat(0.0!, 0.0!)
-        Me.XrLabel1.Name = "XrLabel1"
-        Me.XrLabel1.Padding = New DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254.0!)
-        Me.XrLabel1.SizeF = New System.Drawing.SizeF(1020.257!, 65.87291!)
-        Me.XrLabel1.StylePriority.UseBorders = False
-        Me.XrLabel1.StylePriority.UseFont = False
-        Me.XrLabel1.StylePriority.UseTextAlignment = False
-        Me.XrLabel1.Text = "II.Gasto Etiquetado(I=A+B+C+D+F+G+H+I)"
-        Me.XrLabel1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter
-        '
-        'VW_RPT_CFG_DatosEntesTableAdapter1
-        '
-        Me.VW_RPT_CFG_DatosEntesTableAdapter1.ClearBeforeFill = True
-        '
-        'GroupFooter1
-        '
-        Me.GroupFooter1.Dpi = 254.0!
-        Me.GroupFooter1.HeightF = 13.22917!
-        Me.GroupFooter1.Name = "GroupFooter1"
-        '
-        'XrLabel2
-        '
-        Me.XrLabel2.AnchorVertical = CType((DevExpress.XtraReports.UI.VerticalAnchorStyles.Top Or DevExpress.XtraReports.UI.VerticalAnchorStyles.Bottom), DevExpress.XtraReports.UI.VerticalAnchorStyles)
-        Me.XrLabel2.Borders = CType((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Top), DevExpress.XtraPrinting.BorderSide)
-        Me.XrLabel2.CanGrow = False
-        Me.XrLabel2.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "SP_EstadoAnaliticoEjercicio_PresupuestoEgresosDetallado.Autorizado")})
-        Me.XrLabel2.Dpi = 254.0!
-        Me.XrLabel2.Font = New System.Drawing.Font("Tahoma", 6.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.XrLabel2.LocationFloat = New DevExpress.Utils.PointFloat(1020.257!, 0.0!)
-        Me.XrLabel2.Name = "XrLabel2"
-        Me.XrLabel2.Padding = New DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254.0!)
-        Me.XrLabel2.SizeF = New System.Drawing.SizeF(347.116!, 65.87!)
-        Me.XrLabel2.StylePriority.UseBorders = False
-        Me.XrLabel2.StylePriority.UseFont = False
-        Me.XrLabel2.StylePriority.UseTextAlignment = False
-        XrSummary20.FormatString = "{0:n2}"
-        XrSummary20.Running = DevExpress.XtraReports.UI.SummaryRunning.Report
-        Me.XrLabel2.Summary = XrSummary20
-        Me.XrLabel2.Text = "XrLabel2"
-        Me.XrLabel2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight
-        '
-        'XrLabel3
-        '
-        Me.XrLabel3.AnchorVertical = CType((DevExpress.XtraReports.UI.VerticalAnchorStyles.Top Or DevExpress.XtraReports.UI.VerticalAnchorStyles.Bottom), DevExpress.XtraReports.UI.VerticalAnchorStyles)
-        Me.XrLabel3.Borders = CType((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Top), DevExpress.XtraPrinting.BorderSide)
-        Me.XrLabel3.CanGrow = False
-        Me.XrLabel3.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "SP_EstadoAnaliticoEjercicio_PresupuestoEgresosDetallado.Amp_Red")})
-        Me.XrLabel3.Dpi = 254.0!
-        Me.XrLabel3.Font = New System.Drawing.Font("Tahoma", 6.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.XrLabel3.LocationFloat = New DevExpress.Utils.PointFloat(1367.373!, 0.0!)
-        Me.XrLabel3.Name = "XrLabel3"
-        Me.XrLabel3.Padding = New DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254.0!)
-        Me.XrLabel3.SizeF = New System.Drawing.SizeF(341.4763!, 65.87!)
-        Me.XrLabel3.StylePriority.UseBorders = False
-        Me.XrLabel3.StylePriority.UseFont = False
-        Me.XrLabel3.StylePriority.UseTextAlignment = False
-        XrSummary19.FormatString = "{0:n2}"
-        XrSummary19.Running = DevExpress.XtraReports.UI.SummaryRunning.Report
-        Me.XrLabel3.Summary = XrSummary19
-        Me.XrLabel3.Text = "XrLabel3"
-        Me.XrLabel3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight
-        '
-        'XrLabel4
-        '
-        Me.XrLabel4.AnchorVertical = CType((DevExpress.XtraReports.UI.VerticalAnchorStyles.Top Or DevExpress.XtraReports.UI.VerticalAnchorStyles.Bottom), DevExpress.XtraReports.UI.VerticalAnchorStyles)
-        Me.XrLabel4.Borders = CType((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Top), DevExpress.XtraPrinting.BorderSide)
-        Me.XrLabel4.CanGrow = False
-        Me.XrLabel4.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "SP_EstadoAnaliticoEjercicio_PresupuestoEgresosDetallado.Modificado")})
-        Me.XrLabel4.Dpi = 254.0!
-        Me.XrLabel4.Font = New System.Drawing.Font("Tahoma", 6.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.XrLabel4.LocationFloat = New DevExpress.Utils.PointFloat(1708.849!, 0.0!)
-        Me.XrLabel4.Name = "XrLabel4"
-        Me.XrLabel4.Padding = New DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254.0!)
-        Me.XrLabel4.SizeF = New System.Drawing.SizeF(359.6759!, 65.87!)
-        Me.XrLabel4.StylePriority.UseBorders = False
-        Me.XrLabel4.StylePriority.UseFont = False
-        Me.XrLabel4.StylePriority.UseTextAlignment = False
-        XrSummary18.FormatString = "{0:n2}"
-        XrSummary18.Running = DevExpress.XtraReports.UI.SummaryRunning.Report
-        Me.XrLabel4.Summary = XrSummary18
-        Me.XrLabel4.Text = "XrLabel4"
-        Me.XrLabel4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight
-        '
-        'XrLabel5
-        '
-        Me.XrLabel5.AnchorVertical = CType((DevExpress.XtraReports.UI.VerticalAnchorStyles.Top Or DevExpress.XtraReports.UI.VerticalAnchorStyles.Bottom), DevExpress.XtraReports.UI.VerticalAnchorStyles)
-        Me.XrLabel5.Borders = CType((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Top), DevExpress.XtraPrinting.BorderSide)
-        Me.XrLabel5.CanGrow = False
-        Me.XrLabel5.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "SP_EstadoAnaliticoEjercicio_PresupuestoEgresosDetallado.Devengado")})
-        Me.XrLabel5.Dpi = 254.0!
-        Me.XrLabel5.Font = New System.Drawing.Font("Tahoma", 6.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.XrLabel5.LocationFloat = New DevExpress.Utils.PointFloat(2068.525!, 0.0!)
-        Me.XrLabel5.Name = "XrLabel5"
-        Me.XrLabel5.Padding = New DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254.0!)
-        Me.XrLabel5.SizeF = New System.Drawing.SizeF(353.7864!, 65.87!)
-        Me.XrLabel5.StylePriority.UseBorders = False
-        Me.XrLabel5.StylePriority.UseFont = False
-        Me.XrLabel5.StylePriority.UseTextAlignment = False
-        XrSummary17.FormatString = "{0:n2}"
-        XrSummary17.Running = DevExpress.XtraReports.UI.SummaryRunning.Report
-        Me.XrLabel5.Summary = XrSummary17
-        Me.XrLabel5.Text = "XrLabel5"
-        Me.XrLabel5.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight
+        Me.XrLabel7.AnchorVertical = CType((DevExpress.XtraReports.UI.VerticalAnchorStyles.Top Or DevExpress.XtraReports.UI.VerticalAnchorStyles.Bottom), DevExpress.XtraReports.UI.VerticalAnchorStyles)
+        Me.XrLabel7.Borders = CType(((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Top) _
+            Or DevExpress.XtraPrinting.BorderSide.Right), DevExpress.XtraPrinting.BorderSide)
+        Me.XrLabel7.CanGrow = False
+        Me.XrLabel7.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "SP_EstadoAnaliticoEjercicio_PresupuestoEgresosDetallado.CalculatedField2")})
+        Me.XrLabel7.Dpi = 254.0!
+        Me.XrLabel7.Font = New System.Drawing.Font("Tahoma", 6.0!, System.Drawing.FontStyle.Bold)
+        Me.XrLabel7.LocationFloat = New DevExpress.Utils.PointFloat(2759.087!, 0.0!)
+        Me.XrLabel7.Name = "XrLabel7"
+        Me.XrLabel7.Padding = New DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254.0!)
+        Me.XrLabel7.SizeF = New System.Drawing.SizeF(275.4131!, 65.87!)
+        Me.XrLabel7.StylePriority.UseBorders = False
+        Me.XrLabel7.StylePriority.UseFont = False
+        Me.XrLabel7.StylePriority.UseTextAlignment = False
+        XrSummary15.FormatString = "{0:n2}"
+        XrSummary15.Running = DevExpress.XtraReports.UI.SummaryRunning.Report
+        Me.XrLabel7.Summary = XrSummary15
+        Me.XrLabel7.Text = "XrLabel7"
+        Me.XrLabel7.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight
         '
         'XrLabel6
         '
@@ -908,7 +821,7 @@ Partial Public Class RPT_EstadoEjercicioPresupuestal_LDF_Clasificacion_Funcional
         Me.XrLabel6.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "SP_EstadoAnaliticoEjercicio_PresupuestoEgresosDetallado.Pagado")})
         Me.XrLabel6.Dpi = 254.0!
         Me.XrLabel6.Font = New System.Drawing.Font("Tahoma", 6.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.XrLabel6.LocationFloat = New DevExpress.Utils.PointFloat(2422.312!, 0.0!)
+        Me.XrLabel6.LocationFloat = New DevExpress.Utils.PointFloat(2417.021!, 0.0!)
         Me.XrLabel6.Name = "XrLabel6"
         Me.XrLabel6.Padding = New DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254.0!)
         Me.XrLabel6.SizeF = New System.Drawing.SizeF(342.0667!, 65.87!)
@@ -921,27 +834,114 @@ Partial Public Class RPT_EstadoEjercicioPresupuestal_LDF_Clasificacion_Funcional
         Me.XrLabel6.Text = "XrLabel6"
         Me.XrLabel6.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight
         '
-        'XrLabel7
+        'XrLabel5
         '
-        Me.XrLabel7.AnchorVertical = CType((DevExpress.XtraReports.UI.VerticalAnchorStyles.Top Or DevExpress.XtraReports.UI.VerticalAnchorStyles.Bottom), DevExpress.XtraReports.UI.VerticalAnchorStyles)
-        Me.XrLabel7.Borders = CType(((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Top) _
-            Or DevExpress.XtraPrinting.BorderSide.Right), DevExpress.XtraPrinting.BorderSide)
-        Me.XrLabel7.CanGrow = False
-        Me.XrLabel7.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "SP_EstadoAnaliticoEjercicio_PresupuestoEgresosDetallado.CalculatedField2")})
-        Me.XrLabel7.Dpi = 254.0!
-        Me.XrLabel7.Font = New System.Drawing.Font("Tahoma", 6.0!, System.Drawing.FontStyle.Bold)
-        Me.XrLabel7.LocationFloat = New DevExpress.Utils.PointFloat(2764.378!, 0.0!)
-        Me.XrLabel7.Name = "XrLabel7"
-        Me.XrLabel7.Padding = New DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254.0!)
-        Me.XrLabel7.SizeF = New System.Drawing.SizeF(275.4131!, 65.87!)
-        Me.XrLabel7.StylePriority.UseBorders = False
-        Me.XrLabel7.StylePriority.UseFont = False
-        Me.XrLabel7.StylePriority.UseTextAlignment = False
-        XrSummary15.FormatString = "{0:n2}"
-        XrSummary15.Running = DevExpress.XtraReports.UI.SummaryRunning.Report
-        Me.XrLabel7.Summary = XrSummary15
-        Me.XrLabel7.Text = "XrLabel7"
-        Me.XrLabel7.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight
+        Me.XrLabel5.AnchorVertical = CType((DevExpress.XtraReports.UI.VerticalAnchorStyles.Top Or DevExpress.XtraReports.UI.VerticalAnchorStyles.Bottom), DevExpress.XtraReports.UI.VerticalAnchorStyles)
+        Me.XrLabel5.Borders = CType((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Top), DevExpress.XtraPrinting.BorderSide)
+        Me.XrLabel5.CanGrow = False
+        Me.XrLabel5.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "SP_EstadoAnaliticoEjercicio_PresupuestoEgresosDetallado.Devengado")})
+        Me.XrLabel5.Dpi = 254.0!
+        Me.XrLabel5.Font = New System.Drawing.Font("Tahoma", 6.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.XrLabel5.LocationFloat = New DevExpress.Utils.PointFloat(2063.234!, 0.0!)
+        Me.XrLabel5.Name = "XrLabel5"
+        Me.XrLabel5.Padding = New DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254.0!)
+        Me.XrLabel5.SizeF = New System.Drawing.SizeF(353.7864!, 65.87!)
+        Me.XrLabel5.StylePriority.UseBorders = False
+        Me.XrLabel5.StylePriority.UseFont = False
+        Me.XrLabel5.StylePriority.UseTextAlignment = False
+        XrSummary17.FormatString = "{0:n2}"
+        XrSummary17.Running = DevExpress.XtraReports.UI.SummaryRunning.Report
+        Me.XrLabel5.Summary = XrSummary17
+        Me.XrLabel5.Text = "XrLabel5"
+        Me.XrLabel5.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight
+        '
+        'XrLabel4
+        '
+        Me.XrLabel4.AnchorVertical = CType((DevExpress.XtraReports.UI.VerticalAnchorStyles.Top Or DevExpress.XtraReports.UI.VerticalAnchorStyles.Bottom), DevExpress.XtraReports.UI.VerticalAnchorStyles)
+        Me.XrLabel4.Borders = CType((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Top), DevExpress.XtraPrinting.BorderSide)
+        Me.XrLabel4.CanGrow = False
+        Me.XrLabel4.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "SP_EstadoAnaliticoEjercicio_PresupuestoEgresosDetallado.Modificado")})
+        Me.XrLabel4.Dpi = 254.0!
+        Me.XrLabel4.Font = New System.Drawing.Font("Tahoma", 6.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.XrLabel4.LocationFloat = New DevExpress.Utils.PointFloat(1703.558!, 0.0!)
+        Me.XrLabel4.Name = "XrLabel4"
+        Me.XrLabel4.Padding = New DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254.0!)
+        Me.XrLabel4.SizeF = New System.Drawing.SizeF(359.6759!, 65.87!)
+        Me.XrLabel4.StylePriority.UseBorders = False
+        Me.XrLabel4.StylePriority.UseFont = False
+        Me.XrLabel4.StylePriority.UseTextAlignment = False
+        XrSummary18.FormatString = "{0:n2}"
+        XrSummary18.Running = DevExpress.XtraReports.UI.SummaryRunning.Report
+        Me.XrLabel4.Summary = XrSummary18
+        Me.XrLabel4.Text = "XrLabel4"
+        Me.XrLabel4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight
+        '
+        'XrLabel3
+        '
+        Me.XrLabel3.AnchorVertical = CType((DevExpress.XtraReports.UI.VerticalAnchorStyles.Top Or DevExpress.XtraReports.UI.VerticalAnchorStyles.Bottom), DevExpress.XtraReports.UI.VerticalAnchorStyles)
+        Me.XrLabel3.Borders = CType((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Top), DevExpress.XtraPrinting.BorderSide)
+        Me.XrLabel3.CanGrow = False
+        Me.XrLabel3.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "SP_EstadoAnaliticoEjercicio_PresupuestoEgresosDetallado.Amp_Red")})
+        Me.XrLabel3.Dpi = 254.0!
+        Me.XrLabel3.Font = New System.Drawing.Font("Tahoma", 6.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.XrLabel3.LocationFloat = New DevExpress.Utils.PointFloat(1362.081!, 0.0!)
+        Me.XrLabel3.Name = "XrLabel3"
+        Me.XrLabel3.Padding = New DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254.0!)
+        Me.XrLabel3.SizeF = New System.Drawing.SizeF(341.4763!, 65.87!)
+        Me.XrLabel3.StylePriority.UseBorders = False
+        Me.XrLabel3.StylePriority.UseFont = False
+        Me.XrLabel3.StylePriority.UseTextAlignment = False
+        XrSummary19.FormatString = "{0:n2}"
+        XrSummary19.Running = DevExpress.XtraReports.UI.SummaryRunning.Report
+        Me.XrLabel3.Summary = XrSummary19
+        Me.XrLabel3.Text = "XrLabel3"
+        Me.XrLabel3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight
+        '
+        'XrLabel2
+        '
+        Me.XrLabel2.AnchorVertical = CType((DevExpress.XtraReports.UI.VerticalAnchorStyles.Top Or DevExpress.XtraReports.UI.VerticalAnchorStyles.Bottom), DevExpress.XtraReports.UI.VerticalAnchorStyles)
+        Me.XrLabel2.Borders = CType((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Top), DevExpress.XtraPrinting.BorderSide)
+        Me.XrLabel2.CanGrow = False
+        Me.XrLabel2.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "SP_EstadoAnaliticoEjercicio_PresupuestoEgresosDetallado.Autorizado")})
+        Me.XrLabel2.Dpi = 254.0!
+        Me.XrLabel2.Font = New System.Drawing.Font("Tahoma", 6.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.XrLabel2.LocationFloat = New DevExpress.Utils.PointFloat(1014.965!, 0.0!)
+        Me.XrLabel2.Name = "XrLabel2"
+        Me.XrLabel2.Padding = New DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254.0!)
+        Me.XrLabel2.SizeF = New System.Drawing.SizeF(347.116!, 65.87!)
+        Me.XrLabel2.StylePriority.UseBorders = False
+        Me.XrLabel2.StylePriority.UseFont = False
+        Me.XrLabel2.StylePriority.UseTextAlignment = False
+        XrSummary20.FormatString = "{0:n2}"
+        XrSummary20.Running = DevExpress.XtraReports.UI.SummaryRunning.Report
+        Me.XrLabel2.Summary = XrSummary20
+        Me.XrLabel2.Text = "XrLabel2"
+        Me.XrLabel2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight
+        '
+        'XrLabel1
+        '
+        Me.XrLabel1.Borders = CType((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Top), DevExpress.XtraPrinting.BorderSide)
+        Me.XrLabel1.Dpi = 254.0!
+        Me.XrLabel1.Font = New System.Drawing.Font("Tahoma", 9.0!)
+        Me.XrLabel1.LocationFloat = New DevExpress.Utils.PointFloat(0.0!, 0.0!)
+        Me.XrLabel1.Name = "XrLabel1"
+        Me.XrLabel1.Padding = New DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254.0!)
+        Me.XrLabel1.SizeF = New System.Drawing.SizeF(1014.96!, 65.87291!)
+        Me.XrLabel1.StylePriority.UseBorders = False
+        Me.XrLabel1.StylePriority.UseFont = False
+        Me.XrLabel1.StylePriority.UseTextAlignment = False
+        Me.XrLabel1.Text = "II.Gasto Etiquetado(I=A+B+C+D)"
+        Me.XrLabel1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter
+        '
+        'VW_RPT_CFG_DatosEntesTableAdapter1
+        '
+        Me.VW_RPT_CFG_DatosEntesTableAdapter1.ClearBeforeFill = True
+        '
+        'GroupFooter1
+        '
+        Me.GroupFooter1.Dpi = 254.0!
+        Me.GroupFooter1.HeightF = 13.22917!
+        Me.GroupFooter1.Name = "GroupFooter1"
         '
         'RPT_EstadoEjercicioPresupuestal_LDF_Clasificacion_Funcional__Etiquetado
         '
