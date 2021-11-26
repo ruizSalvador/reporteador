@@ -1598,8 +1598,12 @@ inner join  C_AreaResponsabilidad CA
 on TS.IdAreaResp = CA.IdAreaResp and CR.IDRAMOPRESUPUESTAL = CA.IdRamoPresupuestal 
 left join C_PartidasPres  CP 
 on TS.IdPartida  = CP.IdPartida 
+LEFT JOIN C_FuenteFinanciamiento CFF on TS.IdFuenteFinanciamiento = CFF.IDFUENTEFINANCIAMIENTO
 
-where  (Mes = 0) AND LYear=@Ejercicio and Year=@Ejercicio AND CR.CLAVE = CASE WHEN @Clave = '' THEN CR.CLAVE else @Clave end and CA.Clave  = CASE WHEN @ClaveUR = '' THEN CA.Clave ELSE @ClaveUR END   
+
+where  (Mes = 0) AND LYear=@Ejercicio and Year=@Ejercicio AND CR.CLAVE = CASE WHEN @Clave = '' THEN CR.CLAVE else @Clave end 
+and CA.Clave  = CASE WHEN @ClaveUR = '' THEN CA.Clave ELSE @ClaveUR END 
+AND CFF.CLAVE = CASE WHEN @ClaveFF = '' THEN CFF.CLAVE ELSE @ClaveFF END  
 group by CP.ClavePartida, CP.DescripcionPartida , CA.Clave  , CA.Nombre 
 Order By CA.Clave ,CP.ClavePartida
 
@@ -3346,9 +3350,15 @@ inner join  C_AreaResponsabilidad CA
 on TS.IdAreaResp = CA.IdAreaResp and CR.IDRAMOPRESUPUESTAL = CA.IdRamoPresupuestal 
 left join C_PartidasPres  CP 
 on TS.IdPartida  = CP.IdPartida 
+LEFT JOIN C_FuenteFinanciamiento CFF ON CFF.IDFUENTEFINANCIAMIENTO = TS.IdFuenteFinanciamiento
 
-where  (Mes = 0) AND LYear=@Ejercicio  and Year=@Ejercicio AND CR.CLAVE = CASE WHEN @Clave = '' THEN CR.CLAVE else @Clave end and CA.Clave  = CASE WHEN @ClaveUR = '' THEN CA.Clave ELSE @ClaveUR END   
+
+where  (Mes = 0) AND LYear=@Ejercicio  and Year=@Ejercicio AND CR.CLAVE = CASE WHEN @Clave = '' THEN CR.CLAVE else @Clave end 
+and CA.Clave  = CASE WHEN @ClaveUR = '' THEN CA.Clave ELSE @ClaveUR END   
+AND CFF.CLAVE = CASE WHEN @ClaveFF = '' THEN CFF.CLAVE ELSE @ClaveFF END  
+
 group by CP.ClavePartida, CP.DescripcionPartida , CA.Clave  , CA.Nombre 
+
 Order By CA.Clave ,CP.ClavePartida
 
 If @AprAnual = 1
