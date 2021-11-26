@@ -98,8 +98,8 @@ Public Class CtrlUser_RPT_EstadoAnalitico_Ingresos_Detallado_LDF
         '--- Llenar datos del ente
         With reporte
             .lblRptNombreEnte.Text = pRPTCFGDatosEntes.Nombre
-            .lblTitulo.Text = "LDF"
-            .lblRptNombreReporte.Text = "Estado Analitico de Ingresos Detallado"
+            .lblTitulo.Text = ""
+            .lblRptNombreReporte.Text = "Estado Analitico de Ingresos Detallado – LDF"
             .lblRptDescripcionFiltrado.Text = ""
             .lblRptEnteDomicilio.Text = pRPTCFGDatosEntes.Domicilio
             .lblRptEnteCiudad.Text = pRPTCFGDatosEntes.Ciudad + ", " + pRPTCFGDatosEntes.EntidadFederativa

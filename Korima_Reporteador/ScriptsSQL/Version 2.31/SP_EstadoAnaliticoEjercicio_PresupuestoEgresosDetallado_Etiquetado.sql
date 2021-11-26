@@ -276,8 +276,6 @@ and CFF.IdClave  in (25,26,27)
 group by CR.Clave,CR.Nombre
 Order By CR.CLAVE 
 
- --Select * from @rpt2
- -- Select * from @rpt2Val
 declare @Titulos2 as table(CLAVE varchar(100),DESCRIPCION varchar(max),  
 Autorizado decimal(18,4), TransferenciaAmp  decimal(18,4),TransferenciaRed  decimal(18,4),Modificado  decimal(18,4),Comprometido  decimal(18,4),Devengado  decimal(18,4),  
 Ejercido  decimal(18,4),Pagado  decimal(18,4),PresDispComp  decimal(18,4),CompNoDev  decimal(18,4),PresSinDev  decimal(18,4),Deuda  decimal(18,4),Amp_Red  decimal(18,4),SubEjercicio decimal(18,4),IdClaveFF int)
@@ -295,18 +293,18 @@ Group by CR.IdAreaResp, CR.Clave, CR.Nombre
 insert into @Anual2  
 select* from @Titulos2 t   
 where t.Clave not in (select Clave from @Anual2)
+
  
  update r set r.Autorizado = a.Autorizado,
  r.Amp_Red = a.Amp_Red,
  r.Devengado = a.Devengado,
  r.Pagado = a.Pagado
 
- FROM @rpt2 r, @rpt2Val a 
+ FROM @Titulos2 r, @rpt2Val a 
  Where a.Clave = r.Clave
 
-  --Select * from @rpt2
-  --Select * from @Anual2
-  --Select * from @rpt2Val
+  Insert into @rpt2
+  Select * from @Titulos2
 
 -- End
 ----------------
