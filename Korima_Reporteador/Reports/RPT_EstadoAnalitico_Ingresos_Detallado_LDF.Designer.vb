@@ -204,9 +204,8 @@ Partial Public Class RPT_EstadoAnalitico_Ingresos_Detallado_LDF
         Me.XrLabel1.SizeF = New System.Drawing.SizeF(2160.753!, 58.4201!)
         Me.XrLabel1.StylePriority.UseFont = False
         Me.XrLabel1.StylePriority.UseTextAlignment = False
-        Me.XrLabel1.Text = "(pesos)"
+        Me.XrLabel1.Text = "(PESOS)"
         Me.XrLabel1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
-        Me.XrLabel1.Visible = False
         '
         'line1
         '
@@ -829,8 +828,7 @@ Partial Public Class RPT_EstadoAnalitico_Ingresos_Detallado_LDF
         Me.XrLabel36.StylePriority.UseBorders = False
         Me.XrLabel36.StylePriority.UseFont = False
         Me.XrLabel36.StylePriority.UseTextAlignment = False
-        Me.XrLabel36.Text = "Concepto                                                                         " & _
-    "                                               (c)          "
+        Me.XrLabel36.Text = "Concepto          "
         Me.XrLabel36.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
         '
         'XrLabel38
@@ -863,7 +861,7 @@ Partial Public Class RPT_EstadoAnalitico_Ingresos_Detallado_LDF
         Me.XrLabel32.StylePriority.UseBorders = False
         Me.XrLabel32.StylePriority.UseFont = False
         Me.XrLabel32.StylePriority.UseTextAlignment = False
-        Me.XrLabel32.Text = "Diferencia                                 (e)"
+        Me.XrLabel32.Text = "Diferencia"
         Me.XrLabel32.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter
         '
         'XrLabel31
@@ -880,7 +878,7 @@ Partial Public Class RPT_EstadoAnalitico_Ingresos_Detallado_LDF
         Me.XrLabel31.StylePriority.UseBorders = False
         Me.XrLabel31.StylePriority.UseFont = False
         Me.XrLabel31.StylePriority.UseTextAlignment = False
-        Me.XrLabel31.Text = "Ampliaciones y Reducciones"
+        Me.XrLabel31.Text = "Ampliaciones/ (Reducciones)"
         Me.XrLabel31.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter
         '
         'XrLabel21
@@ -1033,7 +1031,7 @@ Partial Public Class RPT_EstadoAnalitico_Ingresos_Detallado_LDF
         Me.XrLabel3.StylePriority.UseBorders = False
         Me.XrLabel3.StylePriority.UseFont = False
         Me.XrLabel3.StylePriority.UseTextAlignment = False
-        Me.XrLabel3.Text = "Estimado                              (d)"
+        Me.XrLabel3.Text = "Estimado"
         Me.XrLabel3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter
         '
         'XrLabel2
