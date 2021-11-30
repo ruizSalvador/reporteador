@@ -351,6 +351,7 @@ Partial Public Class RPT_EstadoAnalitico_Ingresos_Detallado_LDF
         Me.XrLabel33.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "SP_EstadoEjercicioIngresos_Rubro.AmpliacionesReducciones", "{0:n2}")})
         Me.XrLabel33.Dpi = 254.0!
         Me.XrLabel33.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.XrLabel33.FormattingRules.Add(Me.FormattingRule1)
         Me.XrLabel33.LocationFloat = New DevExpress.Utils.PointFloat(1476.539!, 0.0!)
         Me.XrLabel33.Name = "XrLabel33"
         Me.XrLabel33.Padding = New DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254.0!)
@@ -388,6 +389,7 @@ Partial Public Class RPT_EstadoAnalitico_Ingresos_Detallado_LDF
         Me.XrLabel19.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "SP_EstadoAnalitico_IngresoDetallad2.Excedentes", "{0:n2}")})
         Me.XrLabel19.Dpi = 254.0!
         Me.XrLabel19.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.XrLabel19.FormattingRules.Add(Me.FormattingRule1)
         Me.XrLabel19.LocationFloat = New DevExpress.Utils.PointFloat(2659.227!, 0.0!)
         Me.XrLabel19.Name = "XrLabel19"
         Me.XrLabel19.Padding = New DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254.0!)
@@ -449,6 +451,7 @@ Partial Public Class RPT_EstadoAnalitico_Ingresos_Detallado_LDF
         Me.XrLabel16.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "SP_EstadoAnalitico_IngresoDetallad2.Total_Recaudado", "{0:n2}")})
         Me.XrLabel16.Dpi = 254.0!
         Me.XrLabel16.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.XrLabel16.FormattingRules.Add(Me.FormattingRule1)
         Me.XrLabel16.LocationFloat = New DevExpress.Utils.PointFloat(2376.122!, 0.0!)
         Me.XrLabel16.Name = "XrLabel16"
         Me.XrLabel16.Padding = New DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254.0!)
@@ -467,6 +470,7 @@ Partial Public Class RPT_EstadoAnalitico_Ingresos_Detallado_LDF
         Me.XrLabel15.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "SP_EstadoAnalitico_IngresoDetallad2.Total_Devengado", "{0:n2}")})
         Me.XrLabel15.Dpi = 254.0!
         Me.XrLabel15.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.XrLabel15.FormattingRules.Add(Me.FormattingRule1)
         Me.XrLabel15.LocationFloat = New DevExpress.Utils.PointFloat(2093.018!, 0.0!)
         Me.XrLabel15.Name = "XrLabel15"
         Me.XrLabel15.Padding = New DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254.0!)
@@ -485,6 +489,7 @@ Partial Public Class RPT_EstadoAnalitico_Ingresos_Detallado_LDF
         Me.XrLabel14.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "SP_EstadoAnalitico_IngresoDetallad2.Total_Modificado", "{0:n2}")})
         Me.XrLabel14.Dpi = 254.0!
         Me.XrLabel14.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.XrLabel14.FormattingRules.Add(Me.FormattingRule1)
         Me.XrLabel14.LocationFloat = New DevExpress.Utils.PointFloat(1786.101!, 0.0!)
         Me.XrLabel14.Name = "XrLabel14"
         Me.XrLabel14.Padding = New DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254.0!)
@@ -503,6 +508,7 @@ Partial Public Class RPT_EstadoAnalitico_Ingresos_Detallado_LDF
         Me.XrLabel13.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "SP_EstadoAnalitico_IngresoDetallad2.Total_Estimado", "{0:n2}")})
         Me.XrLabel13.Dpi = 254.0!
         Me.XrLabel13.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.XrLabel13.FormattingRules.Add(Me.FormattingRule1)
         Me.XrLabel13.LocationFloat = New DevExpress.Utils.PointFloat(1177.56!, 0.0!)
         Me.XrLabel13.Name = "XrLabel13"
         Me.XrLabel13.Padding = New DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254.0!)
@@ -555,7 +561,7 @@ Partial Public Class RPT_EstadoAnalitico_Ingresos_Detallado_LDF
         '
         '
         Me.FormattingRule1.Formatting.BackColor = System.Drawing.Color.Transparent
-        Me.FormattingRule1.Formatting.Font = New System.Drawing.Font("Tahoma", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.FormattingRule1.Formatting.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormattingRule1.Name = "FormattingRule1"
         '
         'FormattingRule2

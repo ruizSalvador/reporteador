@@ -25,6 +25,7 @@ Partial Class CtrlUser_RPT_EstadoAnalitico_Ingresos_Detallado_LDF
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CtrlUser_RPT_EstadoAnalitico_Ingresos_Detallado_LDF))
         Me.SplitContainerControl1 = New DevExpress.XtraEditors.SplitContainerControl()
+        Me.LabelControl3 = New DevExpress.XtraEditors.LabelControl()
         Me.filterPeriodoIni = New DevExpress.XtraEditors.TimeEdit()
         Me.filterPeriodoFin = New DevExpress.XtraEditors.TimeEdit()
         Me.LabelControl6 = New DevExpress.XtraEditors.LabelControl()
@@ -110,6 +111,7 @@ Partial Class CtrlUser_RPT_EstadoAnalitico_Ingresos_Detallado_LDF
         Me.SplitContainerControl1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.SplitContainerControl1.Location = New System.Drawing.Point(0, 53)
         Me.SplitContainerControl1.Name = "SplitContainerControl1"
+        Me.SplitContainerControl1.Panel1.Controls.Add(Me.LabelControl3)
         Me.SplitContainerControl1.Panel1.Controls.Add(Me.filterPeriodoIni)
         Me.SplitContainerControl1.Panel1.Controls.Add(Me.filterPeriodoFin)
         Me.SplitContainerControl1.Panel1.Controls.Add(Me.LabelControl6)
@@ -126,6 +128,17 @@ Partial Class CtrlUser_RPT_EstadoAnalitico_Ingresos_Detallado_LDF
         Me.SplitContainerControl1.SplitterPosition = 193
         Me.SplitContainerControl1.TabIndex = 4
         Me.SplitContainerControl1.Text = "SplitContainerControl1"
+        '
+        'LabelControl3
+        '
+        Me.LabelControl3.Appearance.ForeColor = System.Drawing.Color.Red
+        Me.LabelControl3.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Vertical
+        Me.LabelControl3.Location = New System.Drawing.Point(14, 182)
+        Me.LabelControl3.Name = "LabelControl3"
+        Me.LabelControl3.Size = New System.Drawing.Size(164, 39)
+        Me.LabelControl3.TabIndex = 41
+        Me.LabelControl3.Text = "Ingresos Excedentes y desglose de H, I, L, A, B, C debe ser generado por el usuar" & _
+    "io"
         '
         'filterPeriodoIni
         '
@@ -870,5 +883,6 @@ Partial Class CtrlUser_RPT_EstadoAnalitico_Ingresos_Detallado_LDF
     Friend WithEvents LabelControl7 As DevExpress.XtraEditors.LabelControl
     Friend WithEvents filterEjercicio As DevExpress.XtraEditors.TimeEdit
     Friend WithEvents LabelControl5 As DevExpress.XtraEditors.LabelControl
+    Friend WithEvents LabelControl3 As DevExpress.XtraEditors.LabelControl
 
 End Class
