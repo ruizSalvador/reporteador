@@ -463,7 +463,7 @@ Public Class CtrlUser_RPT_EstadoAnalitico_EjercicioPresupuestoEgresosDetallado_L
             SQLConexion.Open()
             Dim SQLComando3 As New SqlCommand("RPT_SP_ClasificacionporObjetodeGasto_LDF_Totales", SQLConexion)
             SQLComando3.CommandType = CommandType.StoredProcedure
-
+            SQLComando3.CommandTimeout = 0
             '--- Parametros IN
             If ChkAnual.Checked = True Then
                 SQLComando3.Parameters.Add(New SqlParameter("@Mes", 0))

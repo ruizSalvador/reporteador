@@ -5511,3 +5511,4 @@ D:\GitHub\Reporteador\Korima_Reporteador\obj\x86\Release\Korima_Reporteador.Ctrl
 D:\GitHub\Reporteador\Korima_Reporteador\obj\x86\Release\Korima_Reporteador.RPT_Anexo_Comprobaciones.resources
 D:\GitHub\Reporteador\Korima_Reporteador\obj\x86\Release\Korima_Reporteador.CtrlUser_RPT_Anexo_Nominas.resources
 D:\GitHub\Reporteador\Korima_Reporteador\obj\x86\Release\Korima_Reporteador.RPT_Anexo_Nominas.resources
+D:\GitHub\Reporteador\Korima_Reporteador\obj\x86\Release\Korima_Reporteador.exe.licenses

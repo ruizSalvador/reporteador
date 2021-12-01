@@ -699,9 +699,10 @@ sum(ISNULL(TP.Pagado,0)) As Pagado,
 --From T_PresupuestoNW As TP, T_SellosPresupuestales As TS , C_AreaResponsabilidad As CR
 From T_PresupuestoNW As TP JOIN T_SellosPresupuestales As TS ON TP.IdSelloPresupuestal = TS.IdSelloPresupuestal
 			 JOIN C_AreaResponsabilidad As CR ON CR.IdAreaResp = TS.IdAreaResp
-			LEFT JOIN C_FuenteFinanciamiento As CFF ON CFF.IDFUENTEFINANCIAMIENTO = TS.IdFuenteFinanciamiento and CFF.IdClave not in (25,26,27)
+			LEFT JOIN C_FuenteFinanciamiento As CFF ON CFF.IDFUENTEFINANCIAMIENTO = TS.IdFuenteFinanciamiento 
 where  (Mes BETWEEN  1 AND 12) AND LYear=@Ejercicio AND Year=@Ejercicio 
 AND TS.IdAreaResp = CASE WHEN @IdArea = 0 THEN TS.IdAreaResp ELSE @IdArea END
+and CFF.IdClave not in (25,26,27)
 group by CR.CLAVE, CR.Nombre 
 Order By CR.CLAVE
 --VALORES RELATIVOS
@@ -732,9 +733,10 @@ sum(ISNULL(TP.Pagado,0)) As Pagado,
 --From T_PresupuestoNW As TP, T_SellosPresupuestales As TS , C_AreaResponsabilidad As CR
 From T_PresupuestoNW As TP JOIN T_SellosPresupuestales As TS ON TP.IdSelloPresupuestal = TS.IdSelloPresupuestal
 			JOIN C_AreaResponsabilidad As CR ON CR.IdAreaResp = TS.IdAreaResp
-			LEFT JOIN C_FuenteFinanciamiento As CFF ON CFF.IDFUENTEFINANCIAMIENTO = TS.IdFuenteFinanciamiento and CFF.IdClave not in (25,26,27)
+			LEFT JOIN C_FuenteFinanciamiento As CFF ON CFF.IDFUENTEFINANCIAMIENTO = TS.IdFuenteFinanciamiento 
 where  (Mes BETWEEN  @Mes AND @Mes2) AND LYear=@Ejercicio AND Year=@Ejercicio 
 AND TS.IdAreaResp = CASE WHEN @IdArea = 0 THEN TS.IdAreaResp ELSE @IdArea END
+and CFF.IdClave not in (25,26,27)
 group by CR.CLAVE, CR.Nombre 
 Order By CR.CLAVE
 
