@@ -3,7 +3,7 @@
 Public Class MDI_Principal
     Dim IdUsuario As String = "Debug"
     'Dim bdd As String = "Demo230abril"
-    'Dim bdd As String = "KORIMAMUNICIPIO"
+    Dim bdd As String = "KORIMAMUNICIPIO"
     'Dim bdd As String = "KmSClara"
     'Dim bdd As String = "KorimaITEI"
     'Dim bdd As String = "CespteInicializacion"
@@ -11,10 +11,10 @@ Public Class MDI_Principal
     'Dim bdd As String = "UNEME2020"
     'Dim bdd As String = "Korima_IDEFT_JALISCO"
     'Dim bdd As String = "IECAN_PRODUCCION"
-    Dim bdd As String = "Korima_San_Miguel_Alto"
+    'Dim bdd As String = "Korima_San_Miguel_Alto"
     'Dim bdd As String = "Korima_Municipio_Piedad"
     'Dim bdd As String = "Korima_TET"
-    'Dim bdd As String = "Korima_TSJ"
+    'Dim bdd As String = "KorimaTSJ"
     'Dim bdd As String = "KorimaNogales"
     'Dim bdd As String = "KorimaSGG"
     'Dim bdd As String = "KOR585_UPALT"
@@ -22,8 +22,8 @@ Public Class MDI_Principal
 
     'Dim server As String = "SRV-KORIMA\korima_2014"
     'Dim server As String = "LAPTOP-OC11LS61\SQLEXPRESS19"
-    Dim server As String = "LAPTOP-OC11LS61\SQLEXPRESS17"
-    'Dim server As String = "LAPTOP-OC11LS61\SQL2019DEV"
+    'Dim server As String = "LAPTOP-OC11LS61\SQLEXPRESS17"
+    Dim server As String = "MSIDEV\SQLEXPRESS2019"
     'Dim server As String = "ARTURODEV\SQLEXPRESS02"
     'Dim server As String = "SRV-KORITEST\SQLEXPRESS14"
     'Dim server As String = "SRV-KORIMA\KORIMA_2014"
@@ -31,7 +31,7 @@ Public Class MDI_Principal
     'Dim server As String = "DESKTOP-QH8FRPG\SQLEXPRESS16"
 
     Dim user As String = "sa"
-    Dim pass As String = "Kori$123"
+    Dim pass As String = "1234"
 
     Public val As String = "0"
     Public strUsuario As String

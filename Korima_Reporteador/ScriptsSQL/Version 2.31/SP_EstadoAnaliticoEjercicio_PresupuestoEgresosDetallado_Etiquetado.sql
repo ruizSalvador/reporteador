@@ -12,7 +12,7 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 
--- Exec SP_EstadoAnaliticoEjercicio_PresupuestoEgresosDetallado_Etiquetado 0,0,2021,1,2,0,1,1
+-- Exec SP_EstadoAnaliticoEjercicio_PresupuestoEgresosDetallado_Etiquetado 1,1,2021,1,17,0,1,1
 CREATE PROCEDURE  [dbo].[SP_EstadoAnaliticoEjercicio_PresupuestoEgresosDetallado_Etiquetado]  
   @Mes  as int,   
   @Mes2 as int,    
@@ -543,15 +543,24 @@ Update @rpt7 set Descripcion2 = ' d2) Transferencias, Participaciones y Aportaci
 Update @rpt7 set Descripcion2 = ' d3) Saneamiento del Sistema Financiero' Where  Clave = 43
 Update @rpt7 set Descripcion2 = ' d4) Adeudos de Ejercicios Fiscales Anteriores' Where  Clave = 44
 
-If @AmpRedAnual = 1  
- Begin  
-	--update r set r.Autorizado = a.Autorizado, r.Amp_Red = a.Amp_Red,r.Modificado=(a.Autorizado+r.Amp_Red) FROM @Anual7 a, @rpt7 r Where a.Clave = r.Clave and a.IdClaveFF in (0,25,26,27)--and a.IdClaveFF = r.IdClaveFF
-  	update r set r.Autorizado = a.Autorizado,r.Modificado=(a.Autorizado+r.Amp_Red) FROM @Anual7 a, @rpt7 r Where a.Clave = r.Clave and a.IdClaveFF in (0,25,26,27)--and a.IdClaveFF = r.IdClaveFF
- End  
---ELse  
+--If @AmpRedAnual = 1  
 -- Begin  
---  update r set r.Autorizado = a.Autorizado FROM @Anual7 a, @rpt7 r Where a.Clave = r.Clave  
--- End  
+--	--update r set r.Autorizado = a.Autorizado, r.Amp_Red = a.Amp_Red,r.Modificado=(a.Autorizado+r.Amp_Red) FROM @Anual7 a, @rpt7 r Where a.Clave = r.Clave and a.IdClaveFF in (0,25,26,27)--and a.IdClaveFF = r.IdClaveFF
+--  	update r set r.Autorizado = a.Autorizado,r.Modificado=(a.Autorizado+r.Amp_Red) FROM @Anual7 a, @rpt7 r Where a.Clave = r.Clave and a.IdClaveFF in (0,25,26,27)--and a.IdClaveFF = r.IdClaveFF
+-- End 
+ 
+
+If @AprAnual = 1
+		Begin
+			update r set r.Autorizado = a.Autorizado FROM @Anual7 a, @rpt7 r Where a.Clave = r.Clave
+			--select * from @rpt Order by  IdClave , Clave, IdClave2
+		End
+	If @AmpRedAnual = 1
+		Begin
+			update r set r.Amp_Red = a.Amp_Red FROM @Anual7 a, @rpt7 r Where a.Clave = r.Clave
+			--select * from @rpt Order by  IdClave , Clave, IdClave2
+		End
+
  if @MuestraCeros = 0
 		begin
 		--select * from @rpt7 where IdClaveFF in (25,26,27) Order by  IdClave , Clave, IdClave2 
@@ -585,8 +594,8 @@ sum(ISNULL(0,0)) as Pagado,
 sum(ISNULL(0,0)) - sum(ISNULL(0,0)) AS CompNoDev,  
 (sum(ISNULL(0,0)) + (sum(ISNULL(0,0)) + sum(ISNULL(0,0))) - (sum(ISNULL(0,0)) + sum(ISNULL(0,0))))- sum(ISNULL(0,0))  AS PresSinDev,  
 sum(ISNULL(0,0)) -  sum(ISNULL(0,0)) AS Deuda,  
-(sum(ISNULL(0,0)) + sum(ISNULL(0,0))) -   
-(sum(ISNULL(0,0)) + sum(ISNULL(0,0))) as Amp_Red,   
+(sum(ISNULL(TP.Ampliaciones,0)) + sum(ISNULL(TP.TransferenciaAmp,0))) -   
+(sum(ISNULL(TP.Reducciones,0)) + sum(ISNULL(TP.TransferenciaRed,0))) as Amp_Red,   
 (sum(ISNULL(0,0)) + (sum(ISNULL(0,0)) + sum(ISNULL(0,0))) - (sum(ISNULL(0,0)) + sum(ISNULL(0,0))))-  
 sum(ISNULL(0,0)) as SubEjercicio 
 , ''
@@ -609,7 +618,7 @@ sum(ISNULL(0,0)) as Autorizado,
 (sum(ISNULL(0,0)) + sum(ISNULL(0,0))) as TransferenciaRed,   
 (sum(ISNULL(0,0)) + (sum(ISNULL(0,0)) + sum(ISNULL(0,0))) - (sum(ISNULL(0,0)) + sum(ISNULL(0,0))))as Modificado,  
 sum(ISNULL(TP.Comprometido,0)) as Comprometido,   
-sum(ISNULL(TP.Devengado,0)) as Devengado,   
+sum(ISNULL(TP.Devengado,0)) - sum(ISNULL(TP.Ejercido,0)) as Devengado,   
 sum(ISNULL(TP.Ejercido,0)) as Ejercido,  
 sum(ISNULL(TP.Pagado,0)) as Pagado,   
 (sum(ISNULL(TP.Autorizado,0)) + (sum(ISNULL(TP.Ampliaciones,0)) + sum(ISNULL(TP.TransferenciaAmp,0))) - (sum(ISNULL(TP.Reducciones,0)) + sum(ISNULL(TP.TransferenciaRed,0)))) - sum(ISNULL(TP.Comprometido,0)) As PresDispComp,  
@@ -646,6 +655,9 @@ Group by CR.IdAreaResp, CR.Clave, CR.Nombre
 insert into @Anual12  
 select* from @Titulos12 t   
 where t.Clave not in (select Clave from @Anual12)
+
+--Select * from @Anual12
+--Select * from @rptt12
 
 If @AprAnual = 1
 	Begin
@@ -832,7 +844,7 @@ sum(isnull(Autorizado,0)) ,
 sum(isnull(Amp_Red ,0)),
 IdClaveFF ,
 sum(isnull(Modificado,0))  
-from @Anual7Aux
+from @Anual17Aux
 group by IdClave ,
 Descripcion ,
 Clave,
@@ -840,7 +852,7 @@ Descripcion2 ,
 IdClave2,
 IdClaveFF 
 
-  
+
 Declare @Titulos17 as table(IdClave int,Descripcion varchar(max),Clave int,Descripcion2 Varchar(max),IdClave2 int,  
 Autorizado decimal(18,4),TransferenciaAmp decimal(18,4),TransferenciaRed decimal(18,4),Modificado decimal(18,4),Comprometido decimal(18,4),  
 Devengado decimal(18,4),Ejercido decimal(18,4),Pagado decimal(18,4),PresDispComp decimal(18,4),CompNoDev decimal(18,4),  
@@ -977,15 +989,18 @@ Update @rpt17 set Descripcion2 = ' d2) Transferencias, Participaciones y Aportac
 Update @rpt17 set Descripcion2 = ' d3) Saneamiento del Sistema Financiero' Where  Clave = 43
 Update @rpt17 set Descripcion2 = ' d4) Adeudos de Ejercicios Fiscales Anteriores' Where  Clave = 44
 
-If @AmpRedAnual = 1  
- Begin  
-	--update r set r.Autorizado = a.Autorizado, r.Amp_Red = a.Amp_Red,r.Modificado=(a.Autorizado+r.Amp_Red) FROM @Anual7 a, @rpt7 r Where a.Clave = r.Clave and a.IdClaveFF in (0,25,26,27)--and a.IdClaveFF = r.IdClaveFF
-  	update r set r.Autorizado = a.Autorizado,r.Modificado=(a.Autorizado+r.Amp_Red) FROM @Anual17 a, @rpt17 r Where a.Clave = r.Clave and a.IdClaveFF in (0,25,26,27)--and a.IdClaveFF = r.IdClaveFF
- End  
---ELse  
--- Begin  
---  update r set r.Autorizado = a.Autorizado FROM @Anual7 a, @rpt7 r Where a.Clave = r.Clave  
--- End  
+
+If @AprAnual = 1
+		Begin
+			update r set r.Autorizado = a.Autorizado FROM @Anual17 a, @rpt17 r Where a.Clave = r.Clave
+			--select * from @rpt Order by  IdClave , Clave, IdClave2
+		End
+	If @AmpRedAnual = 1
+		Begin
+			update r set r.Amp_Red = a.Amp_Red FROM @Anual17 a, @rpt17 r Where a.Clave = r.Clave
+			--select * from @rpt Order by  IdClave , Clave, IdClave2
+		End
+		
  if @MuestraCeros = 0
 		begin
 		--select * from @rpt7 where IdClaveFF in (25,26,27) Order by  IdClave , Clave, IdClave2 

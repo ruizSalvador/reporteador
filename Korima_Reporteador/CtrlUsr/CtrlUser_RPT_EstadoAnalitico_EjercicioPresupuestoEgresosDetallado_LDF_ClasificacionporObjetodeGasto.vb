@@ -696,10 +696,10 @@ Public Class CtrlUser_RPT_EstadoAnalitico_EjercicioPresupuestoEgresosDetallado_L
             ultimo = ultimo.AddDays(-ultimo.Day + 1).AddMonths(1).AddDays(-1)
 
             If ChkAnual.Checked = True Then
-                .lblRptDescripcionFiltrado.Text = "Del 1 de Enero" & filterEjercicio.Time.Year.ToString & " Al " & "31 de diciembre" & filterEjercicio.Time.Year.ToString
+                .lblRptDescripcionFiltrado.Text = "Del 1 de Enero " & filterEjercicio.Time.Year.ToString & " Al " & "31 de Diciembre " & filterEjercicio.Time.Year.ToString
             Else
                 ' .lblRptDescripcionFiltrado.Text = "Del 1 de Enero Al " & DateTime.DaysInMonth(filterEjercicio.Time.Year, filterPeriodoFin.Time.Month).ToString & " de " & filterPeriodoFin.Time.Month.ToString & " de " & filterEjercicio.Time.Year.ToString
-                .lblRptDescripcionFiltrado.Text = "Del 1 de " + MesLetra(primero.Month) + " Al " + ultimo.Day.ToString + " del " + MesLetra(segundo.Month) + " del " & filterEjercicio.Time.Year.ToString
+                .lblRptDescripcionFiltrado.Text = "Del 1 de " + MesLetra(primero.Month) + " Al " + ultimo.Day.ToString + " de " + MesLetra(segundo.Month) + " del " & filterEjercicio.Time.Year.ToString
             End If
             .lblRptTituloTipo.Text = nomTipoReporte
             .XrLblUsr.Text = "Generado por: " + MDI_Principal.strUsuario
