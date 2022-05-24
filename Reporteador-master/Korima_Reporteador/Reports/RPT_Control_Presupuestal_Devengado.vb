@@ -1,0 +1,3 @@
+﻿Public Class RPT_Control_Presupuestal_Devengado
+
+End Class

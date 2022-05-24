@@ -1,0 +1,3 @@
+﻿Public Class RPT_Relacion_Analitica_DeudoresDiversos_PorCobrar_CP
+
+End Class

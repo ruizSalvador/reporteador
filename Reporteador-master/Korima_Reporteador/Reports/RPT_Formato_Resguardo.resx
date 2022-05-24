@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="DataSetBlanca1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="RichTextBox1.Text" xml:space="preserve">
+    <value>Notas:
+1)El Titular de cada Centro de Costo firmará los Resguardos Generales de los bienes muebles que se encuentren físicamente bajo su responsabilidad y será el encargado de asegurarse de llevar a cabo las acciones que considere pertinentes a fin de elaborar y mantener actualizados los Resguardos Personalizados, es decir, los correspondientes a los usuarios finales de los bienes muebles. 
+2)Los Resguardos Generales deberán proporcionarse al Departamento de Bienes Patrimoniales "DBP" y los Resguardos Personalizados (de usuarios finales), salvaguardarse directamente en el Centro de Costo con firmas autógrafas y debidamente requisitados para lo conducente. 
+3) Cada una de las hojas del presente formato deberá contener firma autógrafa del Resguardante en tinta azul y el sello del Centro de Costo en la última hoja.
+4)Los servidores públicos que tengan bajo su Resguardo y disposición permanente bienes muebles, están obligados a cumplir las disposiciones legales y normativas en la materia. Para mayor referencia ver Lineamientos para el Registro y Control de Bienes Muebles del Colegio de Bachilleres del Estado de Chihuahua. 
+5)El Resguardante será el Responsable de la custodia, conservación y buen uso de los bienes muebles que se le hayan asignado para un destino específico en el desempeño de sus funciones, quien tendrá el cargo patrimonial por su tenencia. En este sentido, deberá vigilar que los bienes se encuentren en su lugar de trabajo y revisar que tengan la etiqueta de identificación, según aplique.
+6)El Resguardante tiene la obligación de comunicar inmediatamente a las autoridades del Centro de Costo al que esté adscrito la pérdida, robo, extravíoo siniestro de los bienes asignados para que se notifique en tiempo y forma al Departamento de Bienes Patrimoniales para lo conducente.</value>
+  </data>
+  <data name="XrRichText1.SerializableRtfString" xml:space="preserve">
+    <value>ewBcAHIAdABmADEAXABhAG4AcwBpAFwAYQBuAHMAaQBjAHAAZwAxADIANQAyAFwAZABlAGYAZgAwAHsAXABmAG8AbgB0AHQAYgBsAHsAXABmADAAXABmAG4AaQBsACAAVABhAGgAbwBtAGEAOwB9AHsAXABmADEAXABmAG4AaQBsAFwAZgBjAGgAYQByAHMAZQB0ADAAIABUAGEAaABvAG0AYQA7AH0AewBcAGYAMgBcAGYAbgBpAGwAIABUAGkAbQBlAHMAIABOAGUAdwAgAFIAbwBtAGEAbgA7AH0AfQANAAoAewBcAGMAbwBsAG8AcgB0AGIAbAAgADsAXAByAGUAZAAwAFwAZwByAGUAZQBuADAAXABiAGwAdQBlADAAOwBcAHIAZQBkADEAMgA4AFwAZwByAGUAZQBuADEAMgA4AFwAYgBsAHUAZQAxADIAOAA7AH0ADQAKAFwAdgBpAGUAdwBrAGkAbgBkADQAXAB1AGMAMQBcAHAAYQByAGQAXABjAGYAMQBcAGwAYQBuAGcAMgAwADUAOABcAGYAMABcAGYAcwAxADYAIABSAGUAYwBpAGIAXABmADEAXAAnAGUAZABcAGYAMAAgACAAZgBcAGYAMQBcACcAZQBkAFwAZgAwACAAcwBpAGMAYQBtAGUAbgB0AGUAIABkAGUAbAAgAEMAbwBsAGUAZwBpAG8AIABkAGUAIABCAGEAYwBoAGkAbABsAGUAcgBlAHMAIABkAGUAbAAgAEUAcwB0AGEAZABvACAAZABlACAAQwBoAGkAaAB1AGEAaAB1AGEAIAAiAEMATwBCAEEAQwBIACIAIABsAG8AcwAgAGIAaQBlAG4AZQBzACAAYwBvAG4AdABlAG4AaQBkAG8AcwAgAGUAbgAgAGwAYQAgAHMAaQBnAHUAaQBlAG4AdABlACAAdABhAGIAbABhAFwAYwBmADIAIAAsAFwAYwBmADEAIAAgAGQAZQAgAGwAbwBzACAAYwB1AGEAbABlAHMAIABhAHAAYQByAHQAaQByACAAZABlACAAZQBzAHQAYQAgAGYAZQBjAGgAYQAgAHEAdQBlAGQAYQAgAGIAYQBqAG8AIABtAGkAIAByAGUAcwBwAG8AbgBzAGEAYgBpAGwAaQBkAGEAZAAgAGwAYQAgAGMAdQBzAHQAbwBkAGkAYQBcAGMAZgAyACAALABcAGMAZgAxACAAIABjAG8AbgBzAGUAcgB2AGEAYwBpAFwAZgAxAFwAJwBmADMAXABmADAAIABuACAAeQAgAGIAdQBlAG4AIAB1AHMAbwAgAGQAZQAgAGwAbwBzACAAbQBpAHMAbQBvAHMAXABjAGYAMgAgACwAXABjAGYAMQAgACAAYwBvAG0AcAByAG8AbQBlAHQAaQBcAGYAMQBcACcAZQA5AFwAZgAwACAAbgBkAG8AbQBlACAAYQAgAHEAdQBlACAAcwBlAGEAbgAgAGQAZQBzAHQAaQBuAGEAZABvAHMAIABlAHgAYwBsAHUAcwBpAHYAYQBtAGUAbgB0AGUAIABwAGEAcgBhACAAZQBsACAAZABlAHMAZQBtAHAAZQBcAGYAMQBcACcAZgAxAFwAZgAwACAAbwBcAGYAMQAgACAAXABmADAAIABkAGUAIABtAGkAcwAgAGYAdQBuAGMAaQBvAG4AZQBzACAAbABhAGIAbwByAGEAbABlAHMAXABjAGYAMgAgAC4AXABjAGYAMABcAGYAMgBcAGYAcwAyADQAXABwAGEAcgANAAoAfQANAAoA</value>
+  </data>
+</root>

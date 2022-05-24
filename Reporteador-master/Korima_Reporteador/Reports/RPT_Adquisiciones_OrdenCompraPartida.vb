@@ -1,0 +1,3 @@
+﻿Public Class RPT_Adquisiciones_OrdenCompraPartida
+
+End Class

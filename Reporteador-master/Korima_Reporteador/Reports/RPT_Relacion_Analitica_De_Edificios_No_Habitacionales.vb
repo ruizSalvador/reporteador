@@ -1,0 +1,3 @@
+﻿Public Class RPT_Relacion_Analitica_De_Edificios_No_Habitacionales
+
+End Class

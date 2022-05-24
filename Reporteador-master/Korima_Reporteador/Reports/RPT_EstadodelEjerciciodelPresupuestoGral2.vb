@@ -1,0 +1,3 @@
+﻿Public Class RPT_EstadodelEjerciciodelPresupuestoGral2
+
+End Class

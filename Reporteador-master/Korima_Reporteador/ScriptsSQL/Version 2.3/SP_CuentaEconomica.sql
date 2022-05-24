@@ -1,0 +1,220 @@
+
+
+/****** Object:  StoredProcedure [dbo].[SP_CuentaEconomica]    Script Date: 03/21/2013 15:48:41 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[SP_CuentaEconomica]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[SP_CuentaEconomica]
+GO
+
+/****** Object:  StoredProcedure [dbo].[SP_CuentaEconomica]    Script Date: 03/21/2013 15:48:41 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE PROCEDURE [dbo].[SP_CuentaEconomica]
+
+AS
+DECLARE @Tabla as TABLE(
+	[Id] [varchar](max) NULL,
+	[Nivel1] [varchar](max) NULL,
+	[Nivel2] [varchar](max) NULL,
+	[Nivel3] [varchar](max) NULL,
+	[Nivel4] [varchar](max) NULL,
+	[Nivel5] [varchar](max) NULL,
+	[Nota1] [varchar](max) NULL,
+	[Negritas] [bit] NULL
+) 
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'1', N'1. INGRESOS CORRIENTES', N'', N'', N'', N'', NULL,1)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'2', N'', N'1.1. INGRESOS DE LA GESTION:', N'', N'', N'', NULL,1)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'3', N'', N'', N'Impuestos', N'', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'4', N'', N'', N'', N'Impuestos sobre el ingreso, las utilidades y las ganancias de capital', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'5', N'', N'', N'', N'Impuestos sobre la nómina y la fuerza de trabajo', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'6', N'', N'', N'', N'Impuestos sobre la propiedad.', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'7', N'', N'', N'', N'Impuestos sobre la producción, el consumo y las transacciones', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'8', N'', N'', N'', N'Impuestos sobre el comercio y las transacciones internacionales/Comercio Exterior', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'9', N'', N'', N'', N' Impuestos Ecológicos', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'10', N'', N'', N'', N' Accesorios', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'11', N'', N'', N'', N' Otros impuestos', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'12', N'', N'', N'Contribuciones a la Seguridad Social', N'', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'13', N'', N'', N'Ingresos No Tributarios', N'', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'14', N'', N'', N'', N' Contribuciones de Mejoras ', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'15', N'', N'', N'', N' Derechos', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'16', N'', N'', N'', N' Productos de Tipo Corriente', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'17', N'', N'', N'', N' Aprovechamientos de Tipo Corriente', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'18', N'', N'', N'', N' Otros ingresos no tributarios', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'19', N'', N'', N'Ventas de Bienes y Servicios de las administraciones públicas', N'', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'20', N'', N'', N' Renta de la propiedad', N'', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'21', N'', N'', N'', N' Intereses', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'22', N'', N'', N'', N'', N'Internos', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'23', N'', N'', N'', N'', N'Externos', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'24', N'', N'', N'', N' Dividendos y otros retiros', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'25', N'', N'', N'', N' Otras', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'26', N'', N'', N' Incremento de existencias', N'', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'27', N'', N'', N' Otros Ingresos de la Gestión', N'', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'28', N'', N'1.2 TRANSFERENCIAS Y ASIGNACIONES CORRIENTES RECIBIDAS', N'', N'', N'', NULL,1)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'29', N'', N'', N'Transferencias y Asignaciones Corrientes ', N'', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'30', N'', N'', N'', N' Del sector privado', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'31', N'', N'', N'', N' Del sector público', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'32', N'', N'', N'', N' Del sector externo', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'33', N'', N'', N'Participaciones', N'', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'34', N'', N'', N'Donaciones Corrientes Recibidas', N'', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'35', N'', N'', N'Otros Ingresos corrientes', N'', N'', NULL,0)
+--INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'36', N'', N'', N'', N'', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'37', N'2. GASTOS CORRIENTES', N'', N'', N'', N'', NULL,1)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'38', N'', N'2.1. GASTOS DE CONSUMO', N'', N'', N'', NULL,1)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'39', N'', N'', N' Remuneraciones', N'', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'40', N'', N'', N'', N' Sueldos y Salarios', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'41', N'', N'', N'', N' Contribuciones Sociales', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'42', N'', N'', N'', N' Impuestos sobre Nóminas', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'43', N'', N'', N' Compra de bienes y servicios', N'', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'44', N'', N'', N' Disminución de existencias', N'', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'45', N'', N'', N' Depreciación y Amortización', N'', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'46', N'', N'2.2. PRÉSTACIONES DE SEGURIDAD SOCIAL', N'', N'', N'', NULL,1)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'47', N'', N'', N' Jubilaciones', N'', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'48', N'', N'', N' Pensiones', N'', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'49', N'', N'', N' Otros', N'', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'50', N'', N'2.3. GASTOS DE LA PROPIEDAD', N'', N'', N'', NULL,1)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'51', N'', N'', N' Intereses', N'', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'52', N'', N'', N'', N'Internos', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'53', N'', N'', N'', N'Externos', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'54', N'', N'', N' Dividendos y otras rentas distribuidas', N'', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'55', N'', N'', N' Otros gastos de la propiedad', N'', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'56', N'', N'2.4. TRANSFERENCIAS Y ASIGNACIONES CORRIENTES ASIGNADAS', N'', N'', N'', NULL,1)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'57', N'', N'', N' Subsidios y Subvenciones', N'', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'58', N'', N'', N' Transferencias corrientes', N'', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'59', N'', N'', N'', N' Al sector privado', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'60', N'', N'', N'', N' Al sector público', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'61', N'', N'', N'', N' Al sector externo', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'62', N'', N'', N' Participaciones', N'', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'63', N'', N'2.5. OTROS GASTOS CORRIENTES', N'', N'', N'', NULL,1)
+--INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'64', N'', N'', N'', N'', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'65', N'3. RESULTADO ECONÓMICO AHORRO/DESAHORRO (1 - 2 )', N'', N'', N'', N'', NULL,1)
+--INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'66', N'', N'', N'', N'', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'67', N'4. INGRESOS DE CAPITAL', N'', N'', N'', N'', NULL,1)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'68', N'', N'4.1. INGRESOS PROPIOS DE CAPITAL', N'', N'', N'', NULL,1)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'69', N'', N'', N'Ingresos de Capital de las Administraciones Públicas', N'', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'70', N'', N'', N'', N' Productos de Capital', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'71', N'', N'', N'', N' Aprovechamientos de Capital', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'72', N'', N'', N'', N' Otros', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'73', N'', N'', N'Venta de Activos Físicos, objetos de valor y no producidos', N'', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'74', N'', N'', N'Disminución de existencias', N'', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'75', N'', N'', N'Variación depreciación y amortización acumulada', N'', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'76', N'', N'4.2. TRANSFERENCIAS DE CAPITAL RECIBIDAS', N'', N'', N'', NULL,1)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'77', N'', N'', N' Transferencias ', N'', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'78', N'', N'', N'', N' Del sector privado', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'79', N'', N'', N'', N' Del sector público', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'80', N'', N'', N'', N' Del sector externo', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'81', N'', N'', N' Participaciones ', N'', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'82', N'', N'4.3. Donaciones de Capital recibidas', N'', N'', N'', NULL,1)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'83', N'', N'4.4 RECUPERACION DE ACTIVOS FINANCIEROS (adquiridos con fines de política económica)', N'', N'', N'', NULL,1)
+--INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'84', N'', N'', N'', N'', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'85', N'5. GASTOS DE CAPITAL', N'', N'', N'', N'', NULL,1)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'86', N'', N'5.1. FORMACION DE CAPITAL', N'', N'', N'', NULL,1)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'87', N'', N'', N' Formación de Capital Fijo ', N'', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'88', N'', N'', N'', N'Construcciones en Proceso', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'89', N'', N'', N'', N' Edificios y estructuras', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'90', N'', N'', N'', N' Otros activos fijos', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'91', N'', N'', N'', N' Maquinaria y Equipo', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'92', N'', N'', N' Incremento de existencias', N'', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'93', N'', N'', N' Objetos de valor', N'', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'94', N'', N'', N' Activos no producidos', N'', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'95', N'', N'5.2. TRANSFERENCIAS Y ASIGNACIONES DE CAPITAL OTORGADAS', N'', N'', N'', NULL,1)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'96', N'', N'', N' Transferencias de Capital', N'', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'97', N'', N'', N'', N' Al sector privado', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'98', N'', N'', N'', N' Al sector público', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'99', N'', N'', N'', N' Al sector externo', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'100', N'', N'', N' Participaciones ', N'', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'101', N'', N'5.3. INVERSION FINANCIERA (con fines de política económica)', N'', N'', N'', NULL,1)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'102', N'', N'', N' Acciones y otras participaciones de capital', N'', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'103', N'', N'', N'', N' Internos', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'104', N'', N'', N'', N' Externos', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'105', N'', N'', N' Concesión de préstamos', N'', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'106', N'', N'', N'', N' Internos', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'107', N'', N'', N'', N' Externos', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'108', N'', N'', N' Títulos y Valores representativos de la Deuda', N'', N'', NULL,0)
+--INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'109', N'', N'', N'', N'', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'110', N'6. INGRESOS TOTALES (1+4)', N'', N'', N'', N'', NULL,1)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'111', N'7. GASTOS TOTALES (2+5)', N'', N'', N'', N'', NULL,1)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'112', N'8. GASTO PROGRAMABLE: (2+5 - Participaciones - intereses y otros gastos de la deuda)', N'', N'', N'', N'', NULL,1)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'113', N'9. RESULTADO FINANCIERO SUPERAVIT / (DEFICIT): (3+4-5)', N'', N'', N'', N'', NULL,1)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'114', N'10. RESULTADO PRIMARIO SUPERAVIT / (DEFICIT) PRIMARIO: (9 - Intereses)', N'', N'', N'', N'', NULL,1)
+--INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'115', N'', N'', N'', N'', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'116', N'11. FUENTES FINANCIERAS', N'', N'', N'', N'', NULL,1)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'117', N'', N'11.1. DISMINUCION DE ACTIVOS FINANCIEROS', N'', N'', N'', NULL,1)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'118', N'', N'', N' Disminución de Caja y Bancos (efectivos y equvalentes)', N'', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'119', N'', N'', N' Disminución de cuentas por cobrar', N'', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'120', N'', N'', N' Disminución de documentos por cobrar', N'', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'121', N'', N'', N' Disminución de Inversiones financieras de corto plazo', N'', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'122', N'', N'', N' Recuperación de Inversiones financieras a largo plazo con fines de liquidez', N'', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'123', N'', N'', N'', N' Acciones y otras participaciones de capital', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'124', N'', N'', N'', N'', N' Internos', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'125', N'', N'', N'', N'', N' Externos', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'126', N'', N'', N'', N' Concesión de préstamos', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'127', N'', N'', N'', N'', N' Internos', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'128', N'', N'', N'', N'', N' Externos', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'129', N'', N'', N'', N' Títulos y Valores representativos de la Deuda', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'130', N'', N'', N' Disminución de otros activos financieros ', N'', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'131', N'', N'11.2. INCREMENTO DE PASIVOS', N'', N'', N'', NULL,1)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'132', N'', N'', N' Incremento de cuentas por pagar', N'', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'133', N'', N'', N' Incremento de documentos por pagar', N'', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'134', N'', N'', N' Incremento de otros pasivos de corto plazo', N'', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'135', N'', N'', N' Endeudamiento público', N'', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'136', N'', N'', N'', N' Interno', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'137', N'', N'', N'', N'', N'Colocación de títulos y valores de la deuda pública interna', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'138', N'', N'', N'', N'', N'Obtención de prestamos internos', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'139', N'', N'', N'', N'', N'Otros', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'140', N'', N'', N'', N' Externo', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'141', N'', N'', N'', N'', N'Colocación de títulos y valores de la deuda pública externa', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'142', N'', N'', N'', N'', N'Obtención de prestamos externos', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'143', N'', N'', N'', N'', N'Otros', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'144', N'', N'', N' Incremento de otros pasivos de largo plazo', N'', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'145', N'', N'11.3 INCREMENTO DEL PATRIMONIO', N'', N'', N'', NULL,1)
+--INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'146', N'', N'', N'', N'', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'147', N'12. APLICACIONES FINANCIERAS (USOS)', N'', N'', N'', N'', NULL,1)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'148', N'', N'12.1 INCREMENTO DE ACTIVOS FINANCIEROS', N'', N'', N'', NULL,1)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'149', N'', N'', N' Incremento de Caja y Bancos (efectivos y equvalentes)', N'', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'150', N'', N'', N' Incremento de cuentas por cobrar', N'', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'151', N'', N'', N' Incremento de documentos por cobrar', N'', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'152', N'', N'', N' Inversiones financieras de corto plazo', N'', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'153', N'', N'', N' Inversiones financieras a largo plazo con fines de liquidez', N'', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'154', N'', N'', N'', N' Acciones y otras participaciones de capital', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'155', N'', N'', N'', N'', N' Internos', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'156', N'', N'', N'', N'', N' Externos', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'157', N'', N'', N'', N' Concesión de préstamos', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'158', N'', N'', N'', N'', N' Internos', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'159', N'', N'', N'', N'', N' Externos', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'160', N'', N'', N'', N' Títulos y Valores representativos de la Deuda', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'161', N'', N'', N' Incremento de otros activos financieros ', N'', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'162', N'', N'12.2 DISMINUCION DE PASIVOS', N'', N'', N'', NULL,1)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'163', N'', N'', N' Disminución de cuentas por pagar', N'', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'164', N'', N'', N' Disminución de documentos por pagar', N'', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'165', N'', N'', N' Disminuciónde otros pasivos de corto plazo', N'', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'166', N'', N'', N' Amortización de la deuda', N'', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'167', N'', N'', N'', N' Interna', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'168', N'', N'', N'', N'', N'Amortización de títulos y valores de la deuda pública interna', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'169', N'', N'', N'', N'', N'Amortización de prestamos internos', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'170', N'', N'', N'', N'', N'Otra', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'171', N'', N'', N'', N'Externa', N'', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'172', N'', N'', N'', N'', N'Amortización de títulos y valores de la deuda pública externa', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'173', N'', N'', N'', N'', N'Amortización de prestamos externos', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'174', N'', N'', N'', N'', N'Otra', NULL,0)
+INSERT INTO @Tabla ([Id], [Nivel1], [Nivel2], [Nivel3], [Nivel4], [Nivel5], [Nota1],[Negritas]) VALUES (N'175', N'', N'', N' Disminición de otros pasivos de largo plazo', N'', N'', NULL,0)
+
+
+UPDATE @Tabla Set Nota1 = Nivel1 + ' Click Aqui...' where Nivel1 <>''
+UPDATE @Tabla Set Nota1 = Nivel2 + ' Click Aqui...' where Nivel2 <>''
+UPDATE @Tabla Set Nota1 = Nivel3 + ' Click Aqui...' where Nivel3 <>''
+UPDATE @Tabla Set Nota1 = Nivel4 + ' Click Aqui...' where Nivel4 <>''
+UPDATE @Tabla Set Nota1 = Nivel5 + ' Click Aqui...' where Nivel5 <>''
+
+
+SELECT * FROM @Tabla 
+
+GO
+
+EXEC SP_FirmasReporte 'Cuenta Economica'
+GO
+Update C_Menu set Utilizar=1 where idmenu=1163
+GO
+

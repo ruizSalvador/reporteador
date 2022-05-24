@@ -1,0 +1,3 @@
+﻿Public Class RPT_Detalle_Movimientos_Almacen_Ajustes
+
+End Class

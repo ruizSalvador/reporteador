@@ -1,0 +1,3 @@
+﻿Public Class RPT_EgresosClasificacionAdministrativaPoder
+
+End Class
