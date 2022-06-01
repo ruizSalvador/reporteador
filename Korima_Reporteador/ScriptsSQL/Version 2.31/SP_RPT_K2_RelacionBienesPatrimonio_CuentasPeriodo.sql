@@ -113,7 +113,7 @@ if @General = 0
 	SUM(isnull(d_depreciaciones.costo,0))
 	from d_depreciaciones
 	JOIN T_Depreciaciones ON T_Depreciaciones.IdDepreciacion = D_Depreciaciones.IdDepreciacion
-	where T_Depreciaciones.Ano <=2021
+	where T_Depreciaciones.Ano <=@EjercicioFin
 	and T_Depreciaciones.IdDepreciacion in (
     Select top 1 T_Depreciaciones.IdDepreciacion from t_Depreciaciones Where Ano = @EjercicioFin and Mes <= @mesFin order by IdDepreciacion desc)
 	--and T_Depreciaciones.Mes >=@mesInicio and T_Depreciaciones.Mes <=@mesFin

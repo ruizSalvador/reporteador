@@ -19,10 +19,11 @@ Public Class CtrlUser_RPT_EgresosClasificacionAdministrativaPoder
         Dim SQLmConnStr As String = ""
         SQLmConnStr = cnnString
 
-
-#If DEBUG Then
-        MdlIdUsuario = 21
-#End If
+        'Salvador Ruiz 31052022
+        'comente las líneas de Debug
+        '#If DEBUG Then
+        '        MdlIdUsuario = 21
+        '#End If
         '--Codgio para Llenar Reporte con SP
         SQLConexion = New SqlConnection(SQLmConnStr)
         SQLConexion.Open()

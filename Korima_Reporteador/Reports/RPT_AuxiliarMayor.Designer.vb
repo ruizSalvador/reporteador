@@ -156,7 +156,7 @@ Partial Public Class RPT_AuxiliarMayor
         'oleDbConnection1
         '
         Me.oleDbConnection1.ConnectionString = "Provider=SQLNCLI.1;Password=123;Persist Security Info=True;User ID=sa;Initial Cat" & _
-    "alog=K2ReportesTlaquepaque;Data Source=benjaminmelende\sqlexpress"
+            "alog=K2ReportesTlaquepaque;Data Source=benjaminmelende\sqlexpress"
         '
         'Detail
         '
@@ -300,7 +300,7 @@ Partial Public Class RPT_AuxiliarMayor
         'label16
         '
         Me.label16.Borders = CType(((DevExpress.XtraPrinting.BorderSide.Top Or DevExpress.XtraPrinting.BorderSide.Right) _
-            Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
+                    Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
         Me.label16.BorderWidth = 1
         Me.label16.CanGrow = False
         Me.label16.Dpi = 254.0!
@@ -319,7 +319,7 @@ Partial Public Class RPT_AuxiliarMayor
         'label5
         '
         Me.label5.Borders = CType(((DevExpress.XtraPrinting.BorderSide.Top Or DevExpress.XtraPrinting.BorderSide.Right) _
-            Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
+                    Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
         Me.label5.BorderWidth = 1
         Me.label5.Dpi = 254.0!
         Me.label5.Font = New System.Drawing.Font("Tahoma", 8.0!, System.Drawing.FontStyle.Bold)
@@ -599,7 +599,7 @@ Partial Public Class RPT_AuxiliarMayor
         'XrLabel4
         '
         Me.XrLabel4.Borders = CType(((DevExpress.XtraPrinting.BorderSide.Top Or DevExpress.XtraPrinting.BorderSide.Right) _
-            Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
+                    Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
         Me.XrLabel4.BorderWidth = 1
         Me.XrLabel4.Dpi = 254.0!
         Me.XrLabel4.Font = New System.Drawing.Font("Tahoma", 8.0!, System.Drawing.FontStyle.Bold)
@@ -617,8 +617,8 @@ Partial Public Class RPT_AuxiliarMayor
         'XrLabel3
         '
         Me.XrLabel3.Borders = CType((((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Top) _
-            Or DevExpress.XtraPrinting.BorderSide.Right) _
-            Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
+                    Or DevExpress.XtraPrinting.BorderSide.Right) _
+                    Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
         Me.XrLabel3.BorderWidth = 1
         Me.XrLabel3.Dpi = 254.0!
         Me.XrLabel3.Font = New System.Drawing.Font("Tahoma", 8.0!, System.Drawing.FontStyle.Bold)
@@ -636,8 +636,8 @@ Partial Public Class RPT_AuxiliarMayor
         'label3
         '
         Me.label3.Borders = CType((((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Top) _
-            Or DevExpress.XtraPrinting.BorderSide.Right) _
-            Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
+                    Or DevExpress.XtraPrinting.BorderSide.Right) _
+                    Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
         Me.label3.BorderWidth = 1
         Me.label3.Dpi = 254.0!
         Me.label3.Font = New System.Drawing.Font("Tahoma", 8.0!, System.Drawing.FontStyle.Bold)
@@ -655,7 +655,7 @@ Partial Public Class RPT_AuxiliarMayor
         'label4
         '
         Me.label4.Borders = CType(((DevExpress.XtraPrinting.BorderSide.Top Or DevExpress.XtraPrinting.BorderSide.Right) _
-            Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
+                    Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
         Me.label4.BorderWidth = 1
         Me.label4.Dpi = 254.0!
         Me.label4.Font = New System.Drawing.Font("Tahoma", 8.0!, System.Drawing.FontStyle.Bold)
@@ -690,7 +690,7 @@ Partial Public Class RPT_AuxiliarMayor
         'label17
         '
         Me.label17.Borders = CType(((DevExpress.XtraPrinting.BorderSide.Top Or DevExpress.XtraPrinting.BorderSide.Right) _
-            Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
+                    Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
         Me.label17.BorderWidth = 1
         Me.label17.CanGrow = False
         Me.label17.Dpi = 254.0!
@@ -860,7 +860,7 @@ Partial Public Class RPT_AuxiliarMayor
         'TipoA
         '
         Me.TipoA.Condition = "[TipoCuenta]= 'A' OR" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "[TipoCuenta]= 'C' OR" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "[TipoCuenta]= 'E' OR" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "[TipoCuenta]= '" & _
-    "G' OR" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "[TipoCuenta]= 'I' "
+            "G' OR" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "[TipoCuenta]= 'I' "
         Me.TipoA.DataSource = Me.DsNotasBenn1
         '
         '
@@ -957,7 +957,7 @@ Partial Public Class RPT_AuxiliarMayor
         'NoTipoA
         '
         Me.NoTipoA.Condition = "[TipoCuenta]<> 'A' AND" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "[TipoCuenta]<> 'C' AND" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "[TipoCuenta]<> 'E' AND" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "[TipoCuen" & _
-    "ta]<> 'G' AND" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "[TipoCuenta]<> 'I' "
+            "ta]<> 'G' AND" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "[TipoCuenta]<> 'I' "
         Me.NoTipoA.DataSource = Me.DsNotasBenn1
         '
         '

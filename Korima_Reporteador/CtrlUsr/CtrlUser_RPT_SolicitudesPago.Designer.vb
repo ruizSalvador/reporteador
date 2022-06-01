@@ -94,6 +94,8 @@ Partial Class CtrlUser_RPT_SolicitudesPago
         Me.filterPeriodoAl = New DevExpress.XtraEditors.DateEdit()
         Me.filterPeriodoDe = New DevExpress.XtraEditors.DateEdit()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.LabelControl5 = New DevExpress.XtraEditors.LabelControl()
+        Me.cmbStatus = New System.Windows.Forms.ComboBox()
         CType(Me.SplitContainerControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainerControl1.SuspendLayout()
         CType(Me.FilterCuenta.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -112,8 +114,11 @@ Partial Class CtrlUser_RPT_SolicitudesPago
         '
         Me.SplitContainerControl1.CollapsePanel = DevExpress.XtraEditors.SplitCollapsePanel.Panel1
         Me.SplitContainerControl1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.SplitContainerControl1.Location = New System.Drawing.Point(0, 53)
+        Me.SplitContainerControl1.Location = New System.Drawing.Point(0, 71)
+        Me.SplitContainerControl1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.SplitContainerControl1.Name = "SplitContainerControl1"
+        Me.SplitContainerControl1.Panel1.Controls.Add(Me.cmbStatus)
+        Me.SplitContainerControl1.Panel1.Controls.Add(Me.LabelControl5)
         Me.SplitContainerControl1.Panel1.Controls.Add(Me.SimpleButton2)
         Me.SplitContainerControl1.Panel1.Controls.Add(Me.cmbTipoServicio)
         Me.SplitContainerControl1.Panel1.Controls.Add(Me.LabelControl2)
@@ -128,60 +133,66 @@ Partial Class CtrlUser_RPT_SolicitudesPago
         Me.SplitContainerControl1.Panel1.Text = "Panel1"
         Me.SplitContainerControl1.Panel2.Controls.Add(Me.PrintControl1)
         Me.SplitContainerControl1.Panel2.Text = "Panel2"
-        Me.SplitContainerControl1.Size = New System.Drawing.Size(752, 390)
-        Me.SplitContainerControl1.SplitterPosition = 222
+        Me.SplitContainerControl1.Size = New System.Drawing.Size(1128, 619)
+        Me.SplitContainerControl1.SplitterPosition = 340
         Me.SplitContainerControl1.TabIndex = 4
         Me.SplitContainerControl1.Text = "SplitContainerControl1"
         '
         'SimpleButton2
         '
         Me.SimpleButton2.Image = Global.Korima_Reporteador.My.Resources.Resources.Delete_16x16
-        Me.SimpleButton2.Location = New System.Drawing.Point(186, 32)
+        Me.SimpleButton2.Location = New System.Drawing.Point(279, 49)
+        Me.SimpleButton2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.SimpleButton2.Name = "SimpleButton2"
-        Me.SimpleButton2.Size = New System.Drawing.Size(25, 20)
+        Me.SimpleButton2.Size = New System.Drawing.Size(38, 31)
         Me.SimpleButton2.TabIndex = 21
         Me.SimpleButton2.Text = "SimpleButton2"
         '
         'cmbTipoServicio
         '
         Me.cmbTipoServicio.FormattingEnabled = True
-        Me.cmbTipoServicio.Location = New System.Drawing.Point(13, 31)
+        Me.cmbTipoServicio.Location = New System.Drawing.Point(20, 48)
+        Me.cmbTipoServicio.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.cmbTipoServicio.Name = "cmbTipoServicio"
-        Me.cmbTipoServicio.Size = New System.Drawing.Size(167, 21)
+        Me.cmbTipoServicio.Size = New System.Drawing.Size(248, 28)
         Me.cmbTipoServicio.TabIndex = 20
         '
         'LabelControl2
         '
-        Me.LabelControl2.Location = New System.Drawing.Point(17, 12)
+        Me.LabelControl2.Location = New System.Drawing.Point(26, 18)
+        Me.LabelControl2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.LabelControl2.Name = "LabelControl2"
-        Me.LabelControl2.Size = New System.Drawing.Size(79, 13)
+        Me.LabelControl2.Size = New System.Drawing.Size(120, 19)
         Me.LabelControl2.TabIndex = 19
         Me.LabelControl2.Text = "Tipo de Servicio:"
         '
         'SimpleButton1
         '
-        Me.SimpleButton1.Location = New System.Drawing.Point(13, 109)
+        Me.SimpleButton1.Location = New System.Drawing.Point(20, 243)
+        Me.SimpleButton1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.SimpleButton1.Name = "SimpleButton1"
-        Me.SimpleButton1.Size = New System.Drawing.Size(202, 21)
+        Me.SimpleButton1.Size = New System.Drawing.Size(303, 32)
         Me.SimpleButton1.TabIndex = 18
         Me.SimpleButton1.Text = "Imprimir reporte"
         '
         'LabelControl3
         '
-        Me.LabelControl3.Location = New System.Drawing.Point(18, 59)
+        Me.LabelControl3.Location = New System.Drawing.Point(27, 166)
+        Me.LabelControl3.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.LabelControl3.Name = "LabelControl3"
-        Me.LabelControl3.Size = New System.Drawing.Size(48, 13)
+        Me.LabelControl3.Size = New System.Drawing.Size(68, 19)
         Me.LabelControl3.TabIndex = 16
         Me.LabelControl3.Text = "Fecha de:"
         '
         'FilterCuenta
         '
-        Me.FilterCuenta.Location = New System.Drawing.Point(17, 164)
+        Me.FilterCuenta.Location = New System.Drawing.Point(26, 327)
+        Me.FilterCuenta.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.FilterCuenta.MenuManager = Me.PrintBarManager1
         Me.FilterCuenta.Name = "FilterCuenta"
         Me.FilterCuenta.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.FilterCuenta.Properties.Columns.AddRange(New DevExpress.XtraEditors.Controls.LookUpColumnInfo() {New DevExpress.XtraEditors.Controls.LookUpColumnInfo("CuentaBancaria", 120, "Numero"), New DevExpress.XtraEditors.Controls.LookUpColumnInfo("Sucursal", 200, "Nombre"), New DevExpress.XtraEditors.Controls.LookUpColumnInfo("IdCuentaBancaria", "Id", 20, DevExpress.Utils.FormatType.None, "", False, DevExpress.Utils.HorzAlignment.[Default])})
-        Me.FilterCuenta.Size = New System.Drawing.Size(170, 20)
+        Me.FilterCuenta.Size = New System.Drawing.Size(255, 26)
         Me.FilterCuenta.TabIndex = 2
         Me.FilterCuenta.Visible = False
         '
@@ -533,28 +544,32 @@ Partial Class CtrlUser_RPT_SolicitudesPago
         Me.barDockControlTop.CausesValidation = False
         Me.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top
         Me.barDockControlTop.Location = New System.Drawing.Point(0, 0)
-        Me.barDockControlTop.Size = New System.Drawing.Size(752, 53)
+        Me.barDockControlTop.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.barDockControlTop.Size = New System.Drawing.Size(1128, 71)
         '
         'barDockControlBottom
         '
         Me.barDockControlBottom.CausesValidation = False
         Me.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.barDockControlBottom.Location = New System.Drawing.Point(0, 443)
-        Me.barDockControlBottom.Size = New System.Drawing.Size(752, 28)
+        Me.barDockControlBottom.Location = New System.Drawing.Point(0, 690)
+        Me.barDockControlBottom.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.barDockControlBottom.Size = New System.Drawing.Size(1128, 35)
         '
         'barDockControlLeft
         '
         Me.barDockControlLeft.CausesValidation = False
         Me.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left
-        Me.barDockControlLeft.Location = New System.Drawing.Point(0, 53)
-        Me.barDockControlLeft.Size = New System.Drawing.Size(0, 390)
+        Me.barDockControlLeft.Location = New System.Drawing.Point(0, 71)
+        Me.barDockControlLeft.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.barDockControlLeft.Size = New System.Drawing.Size(0, 619)
         '
         'barDockControlRight
         '
         Me.barDockControlRight.CausesValidation = False
         Me.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right
-        Me.barDockControlRight.Location = New System.Drawing.Point(752, 53)
-        Me.barDockControlRight.Size = New System.Drawing.Size(0, 390)
+        Me.barDockControlRight.Location = New System.Drawing.Point(1128, 71)
+        Me.barDockControlRight.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.barDockControlRight.Size = New System.Drawing.Size(0, 619)
         '
         'PrintPreviewBarCheckItem1
         '
@@ -735,16 +750,18 @@ Partial Class CtrlUser_RPT_SolicitudesPago
         Me.PrintControl1.ForeColor = System.Drawing.Color.Empty
         Me.PrintControl1.IsMetric = True
         Me.PrintControl1.Location = New System.Drawing.Point(0, 0)
+        Me.PrintControl1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PrintControl1.Name = "PrintControl1"
-        Me.PrintControl1.Size = New System.Drawing.Size(525, 390)
+        Me.PrintControl1.Size = New System.Drawing.Size(783, 619)
         Me.PrintControl1.TabIndex = 1
         Me.PrintControl1.TooltipFont = New System.Drawing.Font("Tahoma", 8.25!)
         '
         'LabelControl1
         '
-        Me.LabelControl1.Location = New System.Drawing.Point(17, 145)
+        Me.LabelControl1.Location = New System.Drawing.Point(26, 298)
+        Me.LabelControl1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.LabelControl1.Name = "LabelControl1"
-        Me.LabelControl1.Size = New System.Drawing.Size(83, 13)
+        Me.LabelControl1.Size = New System.Drawing.Size(119, 19)
         Me.LabelControl1.TabIndex = 11
         Me.LabelControl1.Text = "Cuenta Bancaria:"
         Me.LabelControl1.Visible = False
@@ -752,56 +769,78 @@ Partial Class CtrlUser_RPT_SolicitudesPago
         'SimpleButton4
         '
         Me.SimpleButton4.Image = Global.Korima_Reporteador.My.Resources.Resources.Delete_16x16
-        Me.SimpleButton4.Location = New System.Drawing.Point(193, 164)
+        Me.SimpleButton4.Location = New System.Drawing.Point(290, 327)
+        Me.SimpleButton4.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.SimpleButton4.Name = "SimpleButton4"
-        Me.SimpleButton4.Size = New System.Drawing.Size(25, 20)
+        Me.SimpleButton4.Size = New System.Drawing.Size(38, 31)
         Me.SimpleButton4.TabIndex = 10
         Me.SimpleButton4.Text = "SimpleButton2"
         Me.SimpleButton4.Visible = False
         '
         'LabelControl4
         '
-        Me.LabelControl4.Location = New System.Drawing.Point(125, 59)
+        Me.LabelControl4.Location = New System.Drawing.Point(188, 166)
+        Me.LabelControl4.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.LabelControl4.Name = "LabelControl4"
-        Me.LabelControl4.Size = New System.Drawing.Size(44, 13)
+        Me.LabelControl4.Size = New System.Drawing.Size(63, 19)
         Me.LabelControl4.TabIndex = 3
         Me.LabelControl4.Text = "Fecha al:"
         '
         'filterPeriodoAl
         '
         Me.filterPeriodoAl.EditValue = Nothing
-        Me.filterPeriodoAl.Location = New System.Drawing.Point(122, 77)
+        Me.filterPeriodoAl.Location = New System.Drawing.Point(183, 193)
+        Me.filterPeriodoAl.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.filterPeriodoAl.Name = "filterPeriodoAl"
         Me.filterPeriodoAl.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.filterPeriodoAl.Properties.VistaTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton()})
-        Me.filterPeriodoAl.Size = New System.Drawing.Size(93, 20)
+        Me.filterPeriodoAl.Size = New System.Drawing.Size(140, 26)
         Me.filterPeriodoAl.TabIndex = 17
         '
         'filterPeriodoDe
         '
         Me.filterPeriodoDe.EditValue = Nothing
-        Me.filterPeriodoDe.Location = New System.Drawing.Point(14, 77)
+        Me.filterPeriodoDe.Location = New System.Drawing.Point(21, 193)
+        Me.filterPeriodoDe.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.filterPeriodoDe.Name = "filterPeriodoDe"
         Me.filterPeriodoDe.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.filterPeriodoDe.Properties.VistaTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton()})
-        Me.filterPeriodoDe.Size = New System.Drawing.Size(92, 20)
+        Me.filterPeriodoDe.Size = New System.Drawing.Size(138, 26)
         Me.filterPeriodoDe.TabIndex = 6
         '
         'ErrorProvider1
         '
         Me.ErrorProvider1.ContainerControl = Me
         '
+        'LabelControl5
+        '
+        Me.LabelControl5.Location = New System.Drawing.Point(26, 86)
+        Me.LabelControl5.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.LabelControl5.Name = "LabelControl5"
+        Me.LabelControl5.Size = New System.Drawing.Size(96, 19)
+        Me.LabelControl5.TabIndex = 22
+        Me.LabelControl5.Text = "Estatus Pago:"
+        '
+        'cmbStatus
+        '
+        Me.cmbStatus.FormattingEnabled = True
+        Me.cmbStatus.Location = New System.Drawing.Point(20, 112)
+        Me.cmbStatus.Name = "cmbStatus"
+        Me.cmbStatus.Size = New System.Drawing.Size(248, 28)
+        Me.cmbStatus.TabIndex = 23
+        '
         'CtrlUser_RPT_SolicitudesPago
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.Controls.Add(Me.SplitContainerControl1)
         Me.Controls.Add(Me.barDockControlLeft)
         Me.Controls.Add(Me.barDockControlRight)
         Me.Controls.Add(Me.barDockControlBottom)
         Me.Controls.Add(Me.barDockControlTop)
+        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "CtrlUser_RPT_SolicitudesPago"
-        Me.Size = New System.Drawing.Size(752, 471)
+        Me.Size = New System.Drawing.Size(1128, 725)
         CType(Me.SplitContainerControl1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainerControl1.ResumeLayout(False)
         CType(Me.FilterCuenta.Properties, System.ComponentModel.ISupportInitialize).EndInit()
@@ -887,5 +926,7 @@ Partial Class CtrlUser_RPT_SolicitudesPago
     Friend WithEvents cmbTipoServicio As System.Windows.Forms.ComboBox
     Friend WithEvents LabelControl2 As DevExpress.XtraEditors.LabelControl
     Friend WithEvents SimpleButton2 As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents cmbStatus As System.Windows.Forms.ComboBox
+    Friend WithEvents LabelControl5 As DevExpress.XtraEditors.LabelControl
 
 End Class

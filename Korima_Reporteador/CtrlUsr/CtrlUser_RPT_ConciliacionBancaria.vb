@@ -64,6 +64,16 @@ Public Class CtrlUser_RPT_ConciliacionBancaria
         reporte.DataAdapter = adapter
         reporte.DataMember = "SP_RPT_ConciliacionBancaria"
 
+        'Firmas 
+        Dim adapterC As SqlClient.SqlDataAdapter
+        adapterC = New SqlClient.SqlDataAdapter("SELECT * FROM VW_RPT_K2_Firmas2 where Formato = 'Conciliación Bancaria' and (Nombre1 <>'' or Puesto1 <> '' or Nombre2 <>'' or Puesto2<>'') Order by Orden", cnnString)
+        Dim dsC As New DataSet()
+        dsC.EnforceConstraints = False
+        adapterC.Fill(dsC, "VW_RPT_K2_Firmas2")
+        reporte.subFirmas.ReportSource.DataSource = dsC
+        reporte.subFirmas.ReportSource.DataAdapter = adapterC
+        reporte.subFirmas.ReportSource.DataMember = "VW_RPT_K2_Firmas2"
+
         Dim ctrlRPTCFGDatosEntes As New clsRPT_CFG_DatosEntesCtrl
         Dim pRPTCFGDatosEntes As New clsRPT_CFG_DatosEntes
         pRPTCFGDatosEntes = ctrlRPTCFGDatosEntes.GetOne

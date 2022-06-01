@@ -52,9 +52,13 @@ Public Class CtrlUser_RPT_Resultados_EgresosLDF
         'Dim prmPeriodo2 As New SqlParameter("Mes2", Month(filterPeriodoDe2.EditValue))
         'Dim prmEjercicio As New SqlParameter("Ejercicio", Year(filterPeriodoAl.EditValue))
         Dim command As New SqlCommand("SP_Resultados_Egresos", conection)
-#If DEBUG Then
-        MdlIdUsuario = 25
-#End If
+
+        'Salvador Ruiz 31052022
+        'comente las líneas de Debug
+        '#If DEBUG Then
+        '        MdlIdUsuario = 25
+        '#End If
+
         If GetFiltrarXUR(MdlIdUsuario) = True Then
             command.Parameters.Add(New SqlParameter("@IdArea", GetIdUR(MdlIdUsuario)))
         Else

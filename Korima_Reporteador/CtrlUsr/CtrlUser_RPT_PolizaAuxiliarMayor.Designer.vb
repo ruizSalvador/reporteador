@@ -25,6 +25,7 @@ Partial Class CtrlUser_RPT_PolizaAuxiliarMayor
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CtrlUser_RPT_PolizaAuxiliarMayor))
         Me.SplitContainerControl1 = New DevExpress.XtraEditors.SplitContainerControl()
+        Me.LabelControl8 = New DevExpress.XtraEditors.LabelControl()
         Me.srchRangoA = New DevExpress.XtraEditors.SearchLookUpEdit()
         Me.PrintBarManager1 = New DevExpress.XtraPrinting.Preview.PrintBarManager(Me.components)
         Me.PreviewBar1 = New DevExpress.XtraPrinting.Preview.PreviewBar()
@@ -142,8 +143,10 @@ Partial Class CtrlUser_RPT_PolizaAuxiliarMayor
         '
         Me.SplitContainerControl1.CollapsePanel = DevExpress.XtraEditors.SplitCollapsePanel.Panel1
         Me.SplitContainerControl1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.SplitContainerControl1.Location = New System.Drawing.Point(0, 53)
+        Me.SplitContainerControl1.Location = New System.Drawing.Point(0, 71)
+        Me.SplitContainerControl1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.SplitContainerControl1.Name = "SplitContainerControl1"
+        Me.SplitContainerControl1.Panel1.Controls.Add(Me.LabelControl8)
         Me.SplitContainerControl1.Panel1.Controls.Add(Me.srchRangoA)
         Me.SplitContainerControl1.Panel1.Controls.Add(Me.srchRangoDe)
         Me.SplitContainerControl1.Panel1.Controls.Add(Me.srchFilterCuentaAfectable)
@@ -169,20 +172,32 @@ Partial Class CtrlUser_RPT_PolizaAuxiliarMayor
         Me.SplitContainerControl1.Panel1.Text = "Panel1"
         Me.SplitContainerControl1.Panel2.Controls.Add(Me.PrintControl1)
         Me.SplitContainerControl1.Panel2.Text = "Panel2"
-        Me.SplitContainerControl1.Size = New System.Drawing.Size(752, 390)
+        Me.SplitContainerControl1.Size = New System.Drawing.Size(1128, 619)
         Me.SplitContainerControl1.SplitterPosition = 223
         Me.SplitContainerControl1.TabIndex = 4
         Me.SplitContainerControl1.Text = "SplitContainerControl1"
         '
+        'LabelControl8
+        '
+        Me.LabelControl8.Appearance.ForeColor = System.Drawing.Color.Red
+        Me.LabelControl8.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Vertical
+        Me.LabelControl8.Location = New System.Drawing.Point(21, 540)
+        Me.LabelControl8.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.LabelControl8.Name = "LabelControl8"
+        Me.LabelControl8.Size = New System.Drawing.Size(199, 38)
+        Me.LabelControl8.TabIndex = 50
+        Me.LabelControl8.Text = """Saldos y Totales se calculan a 4 decimales."""
+        '
         'srchRangoA
         '
-        Me.srchRangoA.Location = New System.Drawing.Point(15, 249)
+        Me.srchRangoA.Location = New System.Drawing.Point(22, 383)
+        Me.srchRangoA.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.srchRangoA.MenuManager = Me.PrintBarManager1
         Me.srchRangoA.Name = "srchRangoA"
         Me.srchRangoA.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.srchRangoA.Properties.View = Me.GridView3
         Me.srchRangoA.Properties.ViewType = DevExpress.XtraEditors.Repository.GridLookUpViewType.GridView
-        Me.srchRangoA.Size = New System.Drawing.Size(172, 20)
+        Me.srchRangoA.Size = New System.Drawing.Size(258, 26)
         Me.srchRangoA.TabIndex = 49
         '
         'PrintBarManager1
@@ -533,28 +548,32 @@ Partial Class CtrlUser_RPT_PolizaAuxiliarMayor
         Me.barDockControlTop.CausesValidation = False
         Me.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top
         Me.barDockControlTop.Location = New System.Drawing.Point(0, 0)
-        Me.barDockControlTop.Size = New System.Drawing.Size(752, 53)
+        Me.barDockControlTop.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.barDockControlTop.Size = New System.Drawing.Size(1128, 71)
         '
         'barDockControlBottom
         '
         Me.barDockControlBottom.CausesValidation = False
         Me.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.barDockControlBottom.Location = New System.Drawing.Point(0, 443)
-        Me.barDockControlBottom.Size = New System.Drawing.Size(752, 28)
+        Me.barDockControlBottom.Location = New System.Drawing.Point(0, 690)
+        Me.barDockControlBottom.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.barDockControlBottom.Size = New System.Drawing.Size(1128, 35)
         '
         'barDockControlLeft
         '
         Me.barDockControlLeft.CausesValidation = False
         Me.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left
-        Me.barDockControlLeft.Location = New System.Drawing.Point(0, 53)
-        Me.barDockControlLeft.Size = New System.Drawing.Size(0, 390)
+        Me.barDockControlLeft.Location = New System.Drawing.Point(0, 71)
+        Me.barDockControlLeft.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.barDockControlLeft.Size = New System.Drawing.Size(0, 619)
         '
         'barDockControlRight
         '
         Me.barDockControlRight.CausesValidation = False
         Me.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right
-        Me.barDockControlRight.Location = New System.Drawing.Point(752, 53)
-        Me.barDockControlRight.Size = New System.Drawing.Size(0, 390)
+        Me.barDockControlRight.Location = New System.Drawing.Point(1128, 71)
+        Me.barDockControlRight.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.barDockControlRight.Size = New System.Drawing.Size(0, 619)
         '
         'PrintPreviewBarCheckItem1
         '
@@ -735,8 +754,9 @@ Partial Class CtrlUser_RPT_PolizaAuxiliarMayor
         Me.PrintControl1.ForeColor = System.Drawing.Color.Empty
         Me.PrintControl1.IsMetric = True
         Me.PrintControl1.Location = New System.Drawing.Point(0, 0)
+        Me.PrintControl1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PrintControl1.Name = "PrintControl1"
-        Me.PrintControl1.Size = New System.Drawing.Size(524, 390)
+        Me.PrintControl1.Size = New System.Drawing.Size(900, 619)
         Me.PrintControl1.TabIndex = 1
         Me.PrintControl1.TooltipFont = New System.Drawing.Font("Tahoma", 8.25!)
         '
@@ -766,13 +786,14 @@ Partial Class CtrlUser_RPT_PolizaAuxiliarMayor
         '
         'srchRangoDe
         '
-        Me.srchRangoDe.Location = New System.Drawing.Point(14, 205)
+        Me.srchRangoDe.Location = New System.Drawing.Point(21, 315)
+        Me.srchRangoDe.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.srchRangoDe.MenuManager = Me.PrintBarManager1
         Me.srchRangoDe.Name = "srchRangoDe"
         Me.srchRangoDe.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.srchRangoDe.Properties.View = Me.GridView2
         Me.srchRangoDe.Properties.ViewType = DevExpress.XtraEditors.Repository.GridLookUpViewType.GridView
-        Me.srchRangoDe.Size = New System.Drawing.Size(172, 20)
+        Me.srchRangoDe.Size = New System.Drawing.Size(258, 26)
         Me.srchRangoDe.TabIndex = 48
         '
         'GridView2
@@ -801,13 +822,14 @@ Partial Class CtrlUser_RPT_PolizaAuxiliarMayor
         '
         'srchFilterCuentaAfectable
         '
-        Me.srchFilterCuentaAfectable.Location = New System.Drawing.Point(15, 67)
+        Me.srchFilterCuentaAfectable.Location = New System.Drawing.Point(22, 103)
+        Me.srchFilterCuentaAfectable.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.srchFilterCuentaAfectable.MenuManager = Me.PrintBarManager1
         Me.srchFilterCuentaAfectable.Name = "srchFilterCuentaAfectable"
         Me.srchFilterCuentaAfectable.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.srchFilterCuentaAfectable.Properties.View = Me.GridView1
         Me.srchFilterCuentaAfectable.Properties.ViewType = DevExpress.XtraEditors.Repository.GridLookUpViewType.GridView
-        Me.srchFilterCuentaAfectable.Size = New System.Drawing.Size(172, 20)
+        Me.srchFilterCuentaAfectable.Size = New System.Drawing.Size(258, 26)
         Me.srchFilterCuentaAfectable.TabIndex = 47
         '
         'GridView1
@@ -836,13 +858,14 @@ Partial Class CtrlUser_RPT_PolizaAuxiliarMayor
         '
         'srchFilterCuenta
         '
-        Me.srchFilterCuenta.Location = New System.Drawing.Point(15, 24)
+        Me.srchFilterCuenta.Location = New System.Drawing.Point(22, 37)
+        Me.srchFilterCuenta.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.srchFilterCuenta.MenuManager = Me.PrintBarManager1
         Me.srchFilterCuenta.Name = "srchFilterCuenta"
         Me.srchFilterCuenta.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.srchFilterCuenta.Properties.View = Me.srchlookupView
         Me.srchFilterCuenta.Properties.ViewType = DevExpress.XtraEditors.Repository.GridLookUpViewType.GridView
-        Me.srchFilterCuenta.Size = New System.Drawing.Size(172, 20)
+        Me.srchFilterCuenta.Size = New System.Drawing.Size(258, 26)
         Me.srchFilterCuenta.TabIndex = 46
         '
         'srchlookupView
@@ -878,165 +901,183 @@ Partial Class CtrlUser_RPT_PolizaAuxiliarMayor
         'CheckBox3
         '
         Me.CheckBox3.AutoSize = True
-        Me.CheckBox3.Location = New System.Drawing.Point(15, 295)
+        Me.CheckBox3.Location = New System.Drawing.Point(22, 454)
+        Me.CheckBox3.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.CheckBox3.Name = "CheckBox3"
-        Me.CheckBox3.Size = New System.Drawing.Size(146, 17)
+        Me.CheckBox3.Size = New System.Drawing.Size(216, 24)
         Me.CheckBox3.TabIndex = 36
         Me.CheckBox3.Text = "Mostrar cuentas sin saldo"
         Me.CheckBox3.UseVisualStyleBackColor = True
         '
         'LabelControl7
         '
-        Me.LabelControl7.Location = New System.Drawing.Point(15, 230)
+        Me.LabelControl7.Location = New System.Drawing.Point(22, 354)
+        Me.LabelControl7.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.LabelControl7.Name = "LabelControl7"
-        Me.LabelControl7.Size = New System.Drawing.Size(121, 13)
+        Me.LabelControl7.Size = New System.Drawing.Size(173, 19)
         Me.LabelControl7.TabIndex = 35
         Me.LabelControl7.Text = "Rango de cuentas hasta:"
         '
         'SimpleButton5
         '
         Me.SimpleButton5.Image = Global.Korima_Reporteador.My.Resources.Resources.Delete_16x16
-        Me.SimpleButton5.Location = New System.Drawing.Point(191, 249)
+        Me.SimpleButton5.Location = New System.Drawing.Point(286, 383)
+        Me.SimpleButton5.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.SimpleButton5.Name = "SimpleButton5"
-        Me.SimpleButton5.Size = New System.Drawing.Size(25, 20)
+        Me.SimpleButton5.Size = New System.Drawing.Size(38, 31)
         Me.SimpleButton5.TabIndex = 34
         Me.SimpleButton5.Text = "SimpleButton5"
         '
         'LabelControl6
         '
-        Me.LabelControl6.Location = New System.Drawing.Point(14, 186)
+        Me.LabelControl6.Location = New System.Drawing.Point(21, 286)
+        Me.LabelControl6.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.LabelControl6.Name = "LabelControl6"
-        Me.LabelControl6.Size = New System.Drawing.Size(123, 13)
+        Me.LabelControl6.Size = New System.Drawing.Size(177, 19)
         Me.LabelControl6.TabIndex = 32
         Me.LabelControl6.Text = "Rango de cuentas desde:"
         '
         'SimpleButton3
         '
         Me.SimpleButton3.Image = Global.Korima_Reporteador.My.Resources.Resources.Delete_16x16
-        Me.SimpleButton3.Location = New System.Drawing.Point(190, 205)
+        Me.SimpleButton3.Location = New System.Drawing.Point(285, 315)
+        Me.SimpleButton3.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.SimpleButton3.Name = "SimpleButton3"
-        Me.SimpleButton3.Size = New System.Drawing.Size(25, 20)
+        Me.SimpleButton3.Size = New System.Drawing.Size(38, 31)
         Me.SimpleButton3.TabIndex = 31
         Me.SimpleButton3.Text = "SimpleButton3"
         '
         'CheckBox2
         '
         Me.CheckBox2.AutoSize = True
-        Me.CheckBox2.Location = New System.Drawing.Point(15, 317)
+        Me.CheckBox2.Location = New System.Drawing.Point(22, 488)
+        Me.CheckBox2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.CheckBox2.Name = "CheckBox2"
-        Me.CheckBox2.Size = New System.Drawing.Size(238, 17)
+        Me.CheckBox2.Size = New System.Drawing.Size(353, 24)
         Me.CheckBox2.TabIndex = 29
         Me.CheckBox2.Text = "Sin saltos de pagina (SubTotales por cuenta)"
         Me.CheckBox2.UseVisualStyleBackColor = True
         '
         'LabelControl3
         '
-        Me.LabelControl3.Location = New System.Drawing.Point(14, 96)
+        Me.LabelControl3.Location = New System.Drawing.Point(21, 148)
+        Me.LabelControl3.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.LabelControl3.Name = "LabelControl3"
-        Me.LabelControl3.Size = New System.Drawing.Size(39, 13)
+        Me.LabelControl3.Size = New System.Drawing.Size(59, 19)
         Me.LabelControl3.TabIndex = 16
         Me.LabelControl3.Text = "Ejercicio"
         '
         'LabelControl2
         '
-        Me.LabelControl2.Location = New System.Drawing.Point(14, 48)
+        Me.LabelControl2.Location = New System.Drawing.Point(21, 74)
+        Me.LabelControl2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.LabelControl2.Name = "LabelControl2"
-        Me.LabelControl2.Size = New System.Drawing.Size(86, 13)
+        Me.LabelControl2.Size = New System.Drawing.Size(128, 19)
         Me.LabelControl2.TabIndex = 14
         Me.LabelControl2.Text = "Cuenta individual:"
         '
         'SimpleButton2
         '
         Me.SimpleButton2.Image = Global.Korima_Reporteador.My.Resources.Resources.Delete_16x16
-        Me.SimpleButton2.Location = New System.Drawing.Point(190, 66)
+        Me.SimpleButton2.Location = New System.Drawing.Point(285, 102)
+        Me.SimpleButton2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.SimpleButton2.Name = "SimpleButton2"
-        Me.SimpleButton2.Size = New System.Drawing.Size(25, 20)
+        Me.SimpleButton2.Size = New System.Drawing.Size(38, 31)
         Me.SimpleButton2.TabIndex = 13
         Me.SimpleButton2.Text = "SimpleButton2"
         '
         'CheckBox1
         '
         Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(15, 275)
+        Me.CheckBox1.Location = New System.Drawing.Point(22, 423)
+        Me.CheckBox1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(179, 17)
+        Me.CheckBox1.Size = New System.Drawing.Size(266, 24)
         Me.CheckBox1.TabIndex = 2
         Me.CheckBox1.Text = "Mostrar cuentas sin movimientos"
         Me.CheckBox1.UseVisualStyleBackColor = True
         '
         'LabelControl1
         '
-        Me.LabelControl1.Location = New System.Drawing.Point(14, 6)
+        Me.LabelControl1.Location = New System.Drawing.Point(21, 9)
+        Me.LabelControl1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.LabelControl1.Name = "LabelControl1"
-        Me.LabelControl1.Size = New System.Drawing.Size(154, 13)
+        Me.LabelControl1.Size = New System.Drawing.Size(223, 19)
         Me.LabelControl1.TabIndex = 11
         Me.LabelControl1.Text = "Cuenta de mayor y subcuentas:"
         '
         'SimpleButton4
         '
         Me.SimpleButton4.Image = Global.Korima_Reporteador.My.Resources.Resources.Delete_16x16
-        Me.SimpleButton4.Location = New System.Drawing.Point(190, 24)
+        Me.SimpleButton4.Location = New System.Drawing.Point(285, 37)
+        Me.SimpleButton4.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.SimpleButton4.Name = "SimpleButton4"
-        Me.SimpleButton4.Size = New System.Drawing.Size(25, 20)
+        Me.SimpleButton4.Size = New System.Drawing.Size(38, 31)
         Me.SimpleButton4.TabIndex = 10
         Me.SimpleButton4.Text = "SimpleButton2"
         '
         'LabelControl5
         '
-        Me.LabelControl5.Location = New System.Drawing.Point(90, 141)
+        Me.LabelControl5.Location = New System.Drawing.Point(135, 217)
+        Me.LabelControl5.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.LabelControl5.Name = "LabelControl5"
-        Me.LabelControl5.Size = New System.Drawing.Size(12, 13)
+        Me.LabelControl5.Size = New System.Drawing.Size(18, 19)
         Me.LabelControl5.TabIndex = 3
         Me.LabelControl5.Text = "al:"
         '
         'LabelControl4
         '
-        Me.LabelControl4.Location = New System.Drawing.Point(15, 141)
+        Me.LabelControl4.Location = New System.Drawing.Point(22, 217)
+        Me.LabelControl4.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.LabelControl4.Name = "LabelControl4"
-        Me.LabelControl4.Size = New System.Drawing.Size(57, 13)
+        Me.LabelControl4.Size = New System.Drawing.Size(86, 19)
         Me.LabelControl4.TabIndex = 3
         Me.LabelControl4.Text = "Periodo del:"
         '
         'SimpleButton1
         '
-        Me.SimpleButton1.Location = New System.Drawing.Point(15, 350)
+        Me.SimpleButton1.Location = New System.Drawing.Point(20, 586)
+        Me.SimpleButton1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.SimpleButton1.Name = "SimpleButton1"
-        Me.SimpleButton1.Size = New System.Drawing.Size(202, 21)
+        Me.SimpleButton1.Size = New System.Drawing.Size(303, 32)
         Me.SimpleButton1.TabIndex = 2
         Me.SimpleButton1.Text = "Imprimir reporte"
         '
         'FilterEjercicio
         '
         Me.FilterEjercicio.EditValue = Nothing
-        Me.FilterEjercicio.Location = New System.Drawing.Point(14, 115)
+        Me.FilterEjercicio.Location = New System.Drawing.Point(21, 177)
+        Me.FilterEjercicio.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.FilterEjercicio.Name = "FilterEjercicio"
         Me.FilterEjercicio.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton()})
         Me.FilterEjercicio.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.[Default]
         Me.FilterEjercicio.Properties.Mask.EditMask = "yyyy"
-        Me.FilterEjercicio.Size = New System.Drawing.Size(57, 20)
+        Me.FilterEjercicio.Size = New System.Drawing.Size(86, 26)
         Me.FilterEjercicio.TabIndex = 17
         '
         'filterPeriodoDe
         '
         Me.filterPeriodoDe.EditValue = Nothing
-        Me.filterPeriodoDe.Location = New System.Drawing.Point(15, 160)
+        Me.filterPeriodoDe.Location = New System.Drawing.Point(22, 246)
+        Me.filterPeriodoDe.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.filterPeriodoDe.Name = "filterPeriodoDe"
         Me.filterPeriodoDe.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton()})
         Me.filterPeriodoDe.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.[Default]
         Me.filterPeriodoDe.Properties.Mask.EditMask = "MM"
-        Me.filterPeriodoDe.Size = New System.Drawing.Size(57, 20)
+        Me.filterPeriodoDe.Size = New System.Drawing.Size(86, 26)
         Me.filterPeriodoDe.TabIndex = 6
         '
         'filterPeriodoAl
         '
         Me.filterPeriodoAl.EditValue = Nothing
-        Me.filterPeriodoAl.Location = New System.Drawing.Point(90, 160)
+        Me.filterPeriodoAl.Location = New System.Drawing.Point(135, 246)
+        Me.filterPeriodoAl.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.filterPeriodoAl.MenuManager = Me.PrintBarManager1
         Me.filterPeriodoAl.Name = "filterPeriodoAl"
         Me.filterPeriodoAl.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton()})
         Me.filterPeriodoAl.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.[Default]
         Me.filterPeriodoAl.Properties.Mask.EditMask = "MM"
-        Me.filterPeriodoAl.Size = New System.Drawing.Size(58, 20)
+        Me.filterPeriodoAl.Size = New System.Drawing.Size(87, 26)
         Me.filterPeriodoAl.TabIndex = 6
         '
         'ErrorProvider1
@@ -1045,15 +1086,16 @@ Partial Class CtrlUser_RPT_PolizaAuxiliarMayor
         '
         'CtrlUser_RPT_PolizaAuxiliarMayor
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.Controls.Add(Me.SplitContainerControl1)
         Me.Controls.Add(Me.barDockControlLeft)
         Me.Controls.Add(Me.barDockControlRight)
         Me.Controls.Add(Me.barDockControlBottom)
         Me.Controls.Add(Me.barDockControlTop)
+        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "CtrlUser_RPT_PolizaAuxiliarMayor"
-        Me.Size = New System.Drawing.Size(752, 471)
+        Me.Size = New System.Drawing.Size(1128, 725)
         CType(Me.SplitContainerControl1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainerControl1.ResumeLayout(False)
         CType(Me.srchRangoA.Properties, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1169,5 +1211,6 @@ Partial Class CtrlUser_RPT_PolizaAuxiliarMayor
     Friend WithEvents GridView3 As DevExpress.XtraGrid.Views.Grid.GridView
     Friend WithEvents GridColumn10 As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents GridColumn11 As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents LabelControl8 As DevExpress.XtraEditors.LabelControl
 
 End Class

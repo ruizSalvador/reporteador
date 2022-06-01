@@ -37,11 +37,11 @@ Partial Public Class RPT_ConciliacionBancaria
         Me.label1 = New DevExpress.XtraReports.UI.XRLabel()
         Me.lblRptNombreReporte = New DevExpress.XtraReports.UI.XRLabel()
         Me.BottomMargin = New DevExpress.XtraReports.UI.BottomMarginBand()
-        Me.XrLabel10 = New DevExpress.XtraReports.UI.XRLabel()
-        Me.XrLine1 = New DevExpress.XtraReports.UI.XRLine()
         Me.XrLblIso = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLblUsr = New DevExpress.XtraReports.UI.XRLabel()
         Me.lblRptEnteRFC = New DevExpress.XtraReports.UI.XRLabel()
+        Me.XrLine1 = New DevExpress.XtraReports.UI.XRLine()
+        Me.XrLabel10 = New DevExpress.XtraReports.UI.XRLabel()
         Me.label10 = New DevExpress.XtraReports.UI.XRLabel()
         Me.lblRptDescripcionFiltrado = New DevExpress.XtraReports.UI.XRLabel()
         Me.lblRptNombreEnte = New DevExpress.XtraReports.UI.XRLabel()
@@ -50,12 +50,15 @@ Partial Public Class RPT_ConciliacionBancaria
         Me.lblSubtitulo = New DevExpress.XtraReports.UI.XRLabel()
         Me.pageInfo1 = New DevExpress.XtraReports.UI.XRPageInfo()
         Me.ReportFooter = New DevExpress.XtraReports.UI.ReportFooterBand()
+        Me.subFirmas = New DevExpress.XtraReports.UI.XRSubreport()
+        Me.RpT_FirmasVerticalElectronica_Sin_Leyenda1 = New Korima_Reporteador.RPT_FirmasVerticalElectronica_Sin_Leyenda()
         Me.Detail = New DevExpress.XtraReports.UI.DetailBand()
         Me.XrLabel6 = New DevExpress.XtraReports.UI.XRLabel()
         Me.label9 = New DevExpress.XtraReports.UI.XRLabel()
         Me.lblTitulo = New DevExpress.XtraReports.UI.XRLabel()
         Me.pageInfo3 = New DevExpress.XtraReports.UI.XRPageInfo()
         Me.TopMargin = New DevExpress.XtraReports.UI.TopMarginBand()
+        Me.PICEnteLogoSecundario = New DevExpress.XtraReports.UI.XRPictureBox()
         Me.GroupHeader1 = New DevExpress.XtraReports.UI.GroupHeaderBand()
         Me.XrLabel4 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel5 = New DevExpress.XtraReports.UI.XRLabel()
@@ -86,7 +89,9 @@ Partial Public Class RPT_ConciliacionBancaria
         Me.Saldo = New DevExpress.XtraReports.UI.CalculatedField()
         Me.FormattingRule1 = New DevExpress.XtraReports.UI.FormattingRule()
         Me.Type = New DevExpress.XtraReports.UI.CalculatedField()
-        Me.PICEnteLogoSecundario = New DevExpress.XtraReports.UI.XRPictureBox()
+        Me.PageFooter = New DevExpress.XtraReports.UI.PageFooterBand()
+        Me.XrLabel27 = New DevExpress.XtraReports.UI.XRLabel()
+        CType(Me.RpT_FirmasVerticalElectronica_Sin_Leyenda1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DsNotasBenn1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         '
@@ -102,7 +107,7 @@ Partial Public Class RPT_ConciliacionBancaria
         '
         Me.lblRptEnteTelefono.Dpi = 254.0!
         Me.lblRptEnteTelefono.Font = New System.Drawing.Font("Tahoma", 8.0!)
-        Me.lblRptEnteTelefono.LocationFloat = New DevExpress.Utils.PointFloat(632.3542!, 158.1532!)
+        Me.lblRptEnteTelefono.LocationFloat = New DevExpress.Utils.PointFloat(632.3542!, 78.03465!)
         Me.lblRptEnteTelefono.Name = "lblRptEnteTelefono"
         Me.lblRptEnteTelefono.Padding = New DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254.0!)
         Me.lblRptEnteTelefono.SizeF = New System.Drawing.SizeF(632.3541!, 42.54501!)
@@ -126,7 +131,7 @@ Partial Public Class RPT_ConciliacionBancaria
         '
         Me.lblRptEnteCiudad.Dpi = 254.0!
         Me.lblRptEnteCiudad.Font = New System.Drawing.Font("Tahoma", 8.0!)
-        Me.lblRptEnteCiudad.LocationFloat = New DevExpress.Utils.PointFloat(0.0!, 158.1532!)
+        Me.lblRptEnteCiudad.LocationFloat = New DevExpress.Utils.PointFloat(0.0!, 78.03465!)
         Me.lblRptEnteCiudad.Name = "lblRptEnteCiudad"
         Me.lblRptEnteCiudad.Padding = New DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254.0!)
         Me.lblRptEnteCiudad.SizeF = New System.Drawing.SizeF(632.3541!, 42.545!)
@@ -158,7 +163,7 @@ Partial Public Class RPT_ConciliacionBancaria
         '
         Me.lblRptEnteDomicilio.Dpi = 254.0!
         Me.lblRptEnteDomicilio.Font = New System.Drawing.Font("Tahoma", 8.0!)
-        Me.lblRptEnteDomicilio.LocationFloat = New DevExpress.Utils.PointFloat(0.0!, 115.6081!)
+        Me.lblRptEnteDomicilio.LocationFloat = New DevExpress.Utils.PointFloat(0.0!, 35.48944!)
         Me.lblRptEnteDomicilio.Name = "lblRptEnteDomicilio"
         Me.lblRptEnteDomicilio.Padding = New DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254.0!)
         Me.lblRptEnteDomicilio.SizeF = New System.Drawing.SizeF(952.5005!, 42.54498!)
@@ -213,34 +218,16 @@ Partial Public Class RPT_ConciliacionBancaria
         '
         'BottomMargin
         '
-        Me.BottomMargin.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.XrLabel10, Me.XrLine1, Me.XrLblIso, Me.XrLblUsr, Me.lblRptEnteTelefono, Me.lblRptEnteRFC, Me.lblRptEnteCiudad, Me.lblRptEnteDomicilio})
+        Me.BottomMargin.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.lblRptEnteDomicilio, Me.XrLblIso, Me.XrLblUsr, Me.lblRptEnteTelefono, Me.lblRptEnteRFC, Me.lblRptEnteCiudad, Me.XrLine1})
         Me.BottomMargin.Dpi = 254.0!
-        Me.BottomMargin.HeightF = 315.0!
+        Me.BottomMargin.HeightF = 161.0!
         Me.BottomMargin.Name = "BottomMargin"
-        '
-        'XrLabel10
-        '
-        Me.XrLabel10.Borders = DevExpress.XtraPrinting.BorderSide.Top
-        Me.XrLabel10.Dpi = 254.0!
-        Me.XrLabel10.LocationFloat = New DevExpress.Utils.PointFloat(0.0!, 0.0!)
-        Me.XrLabel10.Name = "XrLabel10"
-        Me.XrLabel10.Padding = New DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254.0!)
-        Me.XrLabel10.SizeF = New System.Drawing.SizeF(1833.999!, 31.96167!)
-        Me.XrLabel10.StylePriority.UseBorders = False
-        '
-        'XrLine1
-        '
-        Me.XrLine1.Dpi = 254.0!
-        Me.XrLine1.LineWidth = 3
-        Me.XrLine1.LocationFloat = New DevExpress.Utils.PointFloat(0.0!, 83.64646!)
-        Me.XrLine1.Name = "XrLine1"
-        Me.XrLine1.SizeF = New System.Drawing.SizeF(1833.999!, 31.96167!)
         '
         'XrLblIso
         '
         Me.XrLblIso.Dpi = 254.0!
         Me.XrLblIso.Font = New System.Drawing.Font("Tahoma", 8.0!)
-        Me.XrLblIso.LocationFloat = New DevExpress.Utils.PointFloat(1347.166!, 164.2576!)
+        Me.XrLblIso.LocationFloat = New DevExpress.Utils.PointFloat(1344.958!, 84.13892!)
         Me.XrLblIso.Name = "XrLblIso"
         Me.XrLblIso.Padding = New DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254.0!)
         Me.XrLblIso.SizeF = New System.Drawing.SizeF(486.8334!, 42.545!)
@@ -252,7 +239,7 @@ Partial Public Class RPT_ConciliacionBancaria
         '
         Me.XrLblUsr.Dpi = 254.0!
         Me.XrLblUsr.Font = New System.Drawing.Font("Tahoma", 8.0!)
-        Me.XrLblUsr.LocationFloat = New DevExpress.Utils.PointFloat(1347.166!, 115.6081!)
+        Me.XrLblUsr.LocationFloat = New DevExpress.Utils.PointFloat(1344.958!, 35.48944!)
         Me.XrLblUsr.Name = "XrLblUsr"
         Me.XrLblUsr.Padding = New DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254.0!)
         Me.XrLblUsr.SizeF = New System.Drawing.SizeF(486.8334!, 42.545!)
@@ -264,11 +251,29 @@ Partial Public Class RPT_ConciliacionBancaria
         '
         Me.lblRptEnteRFC.Dpi = 254.0!
         Me.lblRptEnteRFC.Font = New System.Drawing.Font("Tahoma", 8.0!)
-        Me.lblRptEnteRFC.LocationFloat = New DevExpress.Utils.PointFloat(952.5005!, 115.6081!)
+        Me.lblRptEnteRFC.LocationFloat = New DevExpress.Utils.PointFloat(952.5005!, 35.48944!)
         Me.lblRptEnteRFC.Name = "lblRptEnteRFC"
         Me.lblRptEnteRFC.Padding = New DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254.0!)
         Me.lblRptEnteRFC.SizeF = New System.Drawing.SizeF(328.0834!, 42.545!)
         Me.lblRptEnteRFC.StylePriority.UseFont = False
+        '
+        'XrLine1
+        '
+        Me.XrLine1.Dpi = 254.0!
+        Me.XrLine1.LineWidth = 3
+        Me.XrLine1.LocationFloat = New DevExpress.Utils.PointFloat(0.0!, 3.527767!)
+        Me.XrLine1.Name = "XrLine1"
+        Me.XrLine1.SizeF = New System.Drawing.SizeF(1833.999!, 31.96167!)
+        '
+        'XrLabel10
+        '
+        Me.XrLabel10.Borders = DevExpress.XtraPrinting.BorderSide.Top
+        Me.XrLabel10.Dpi = 254.0!
+        Me.XrLabel10.LocationFloat = New DevExpress.Utils.PointFloat(0.0!, 0.0!)
+        Me.XrLabel10.Name = "XrLabel10"
+        Me.XrLabel10.Padding = New DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254.0!)
+        Me.XrLabel10.SizeF = New System.Drawing.SizeF(1833.999!, 31.96167!)
+        Me.XrLabel10.StylePriority.UseBorders = False
         '
         'label10
         '
@@ -380,11 +385,18 @@ Partial Public Class RPT_ConciliacionBancaria
         '
         'ReportFooter
         '
+        Me.ReportFooter.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.subFirmas, Me.XrLabel10})
         Me.ReportFooter.Dpi = 254.0!
-        Me.ReportFooter.Expanded = False
-        Me.ReportFooter.HeightF = 0.0!
-        Me.ReportFooter.KeepTogether = True
+        Me.ReportFooter.HeightF = 146.4028!
         Me.ReportFooter.Name = "ReportFooter"
+        '
+        'subFirmas
+        '
+        Me.subFirmas.Dpi = 254.0!
+        Me.subFirmas.LocationFloat = New DevExpress.Utils.PointFloat(0.0!, 62.98275!)
+        Me.subFirmas.Name = "subFirmas"
+        Me.subFirmas.ReportSource = Me.RpT_FirmasVerticalElectronica_Sin_Leyenda1
+        Me.subFirmas.SizeF = New System.Drawing.SizeF(254.0!, 58.42!)
         '
         'Detail
         '
@@ -463,6 +475,14 @@ Partial Public Class RPT_ConciliacionBancaria
         Me.TopMargin.Dpi = 254.0!
         Me.TopMargin.HeightF = 507.0!
         Me.TopMargin.Name = "TopMargin"
+        '
+        'PICEnteLogoSecundario
+        '
+        Me.PICEnteLogoSecundario.Dpi = 254.0!
+        Me.PICEnteLogoSecundario.LocationFloat = New DevExpress.Utils.PointFloat(1262.5!, 172.1908!)
+        Me.PICEnteLogoSecundario.Name = "PICEnteLogoSecundario"
+        Me.PICEnteLogoSecundario.SizeF = New System.Drawing.SizeF(215.3709!, 203.2!)
+        Me.PICEnteLogoSecundario.Sizing = DevExpress.XtraPrinting.ImageSizeMode.ZoomImage
         '
         'GroupHeader1
         '
@@ -899,23 +919,32 @@ Partial Public Class RPT_ConciliacionBancaria
         Me.Type.Expression = "(Iif([TipoMov] == 'CARGO',[Cargo],[Abono]))"
         Me.Type.Name = "Type"
         '
-        'PICEnteLogoSecundario
+        'PageFooter
         '
-        Me.PICEnteLogoSecundario.Dpi = 254.0!
-        Me.PICEnteLogoSecundario.LocationFloat = New DevExpress.Utils.PointFloat(1262.499!, 172.1908!)
-        Me.PICEnteLogoSecundario.Name = "PICEnteLogoSecundario"
-        Me.PICEnteLogoSecundario.SizeF = New System.Drawing.SizeF(215.3709!, 203.2!)
-        Me.PICEnteLogoSecundario.Sizing = DevExpress.XtraPrinting.ImageSizeMode.ZoomImage
+        Me.PageFooter.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.XrLabel27})
+        Me.PageFooter.Dpi = 254.0!
+        Me.PageFooter.HeightF = 38.80556!
+        Me.PageFooter.Name = "PageFooter"
+        '
+        'XrLabel27
+        '
+        Me.XrLabel27.Borders = DevExpress.XtraPrinting.BorderSide.Top
+        Me.XrLabel27.Dpi = 254.0!
+        Me.XrLabel27.LocationFloat = New DevExpress.Utils.PointFloat(0.0!, 0.0!)
+        Me.XrLabel27.Name = "XrLabel27"
+        Me.XrLabel27.Padding = New DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254.0!)
+        Me.XrLabel27.SizeF = New System.Drawing.SizeF(1833.999!, 31.96167!)
+        Me.XrLabel27.StylePriority.UseBorders = False
         '
         'RPT_ConciliacionBancaria
         '
-        Me.Bands.AddRange(New DevExpress.XtraReports.UI.Band() {Me.TopMargin, Me.Detail, Me.BottomMargin, Me.ReportFooter, Me.GroupHeader1, Me.GroupFooter1, Me.GroupHeader2})
+        Me.Bands.AddRange(New DevExpress.XtraReports.UI.Band() {Me.TopMargin, Me.Detail, Me.BottomMargin, Me.ReportFooter, Me.GroupHeader1, Me.GroupFooter1, Me.GroupHeader2, Me.PageFooter})
         Me.CalculatedFields.AddRange(New DevExpress.XtraReports.UI.CalculatedField() {Me.Saldo, Me.Type})
         Me.DataMember = "SP_RPT_ConciliacionBancaria"
         Me.DataSource = Me.DsNotasBenn1
         Me.Dpi = 254.0!
         Me.FormattingRuleSheet.AddRange(New DevExpress.XtraReports.UI.FormattingRule() {Me.FormattingRule1})
-        Me.Margins = New System.Drawing.Printing.Margins(185, 153, 507, 315)
+        Me.Margins = New System.Drawing.Printing.Margins(185, 143, 507, 161)
         Me.PageHeight = 2794
         Me.PageWidth = 2190
         Me.PaperKind = System.Drawing.Printing.PaperKind.Custom
@@ -923,6 +952,7 @@ Partial Public Class RPT_ConciliacionBancaria
         Me.ScriptsSource = "" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         Me.SnapGridSize = 31.75!
         Me.Version = "11.1"
+        CType(Me.RpT_FirmasVerticalElectronica_Sin_Leyenda1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DsNotasBenn1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
 
@@ -989,5 +1019,9 @@ Partial Public Class RPT_ConciliacionBancaria
     Friend WithEvents XrLabel12 As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents XrLabel11 As DevExpress.XtraReports.UI.XRLabel
     Public WithEvents PICEnteLogoSecundario As DevExpress.XtraReports.UI.XRPictureBox
+    Public WithEvents subFirmas As DevExpress.XtraReports.UI.XRSubreport
+    Friend WithEvents PageFooter As DevExpress.XtraReports.UI.PageFooterBand
+    Friend WithEvents XrLabel27 As DevExpress.XtraReports.UI.XRLabel
+    Private WithEvents RpT_FirmasVerticalElectronica_Sin_Leyenda1 As Korima_Reporteador.RPT_FirmasVerticalElectronica_Sin_Leyenda
     'Friend ds As XtraReportSerialization.dsDataSet
 End Class

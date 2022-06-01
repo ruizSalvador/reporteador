@@ -30,7 +30,8 @@ Public Class CtrlUser_RPT_Estado_De_Actividades_Periodos
         SQLComando.CommandTimeout = 0
         SQLComando.Parameters.Add(New SqlParameter("@mes", Month(filterPeriodoDe.EditValue)))
         SQLComando.Parameters.Add(New SqlParameter("@mes2", Month(filterPeriodo2.EditValue)))
-        SQLComando.Parameters.Add(New SqlParameter("@Año", Year(filterPeriodoAl.EditValue)))
+        SQLComando.Parameters.Add(New SqlParameter("@Año", Year(filterEjercDe.EditValue)))
+        SQLComando.Parameters.Add(New SqlParameter("@Año2", Year(filterPeriodoAl.EditValue)))
         SQLComando.Parameters.Add(New SqlParameter("@Miles", CheckBox1.Checked))
         SQLComando.Parameters.Add(New SqlParameter("@MostrarVacios", CheckBox2.Checked))
         SQLComando.Parameters.Add(New SqlParameter("@Redondeo", chkRedondeo.Checked))
@@ -84,8 +85,8 @@ Public Class CtrlUser_RPT_Estado_De_Actividades_Periodos
             .PICEnteLogoSecundario.Image = pRPTCFGDatosEntes.LogoEnteSecundario
             '.lblFechaRango.Text = "Del 01/01/" + filterPeriodoAl.Time.Year.ToString + " Al " + lastDay.AddMonths(1).AddDays(-1).ToString("dd/MM/yyyy") '"Ejercicio " & filterPeriodoAl.Text & " Periodo " & filterPeriodoDe.Text
             .lblFechaRango.Text = "Del " & Primer & " al " & Ultimo
-            .XrLabel2.Text = filterPeriodoAl.Text
-            .XrLabel3.Text = Convert.ToInt16(filterPeriodoAl.Text) - 1
+            .XrLabel2.Text = filterEjercDe.Text
+            .XrLabel3.Text = filterPeriodoAl.Text 'Convert.ToInt16(filterPeriodoAl.Text) - 1
             .XrLblUsr.Text = "Generado por: " + MDI_Principal.strUsuario
             Dim cmd As New SqlCommand("SELECT TOP(1) T_Firmas.CodigoISO FROM C_Formatos JOIN T_Firmas ON C_Formatos.IdFormato = T_Firmas.IdFormato  Where Formato='Estado de actividades' ", New SqlConnection(cnnString))
             cmd.Connection.Open()
@@ -127,5 +128,10 @@ Public Class CtrlUser_RPT_Estado_De_Actividades_Periodos
         filterPeriodoDe.EditValue = Now
         filterPeriodoAl.EditValue = Now
         filterPeriodo2.EditValue = Now
+        filterEjercDe.EditValue = Now
+    End Sub
+
+    Private Sub filterEjercDe_EditValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles filterEjercDe.EditValueChanged
+
     End Sub
 End Class

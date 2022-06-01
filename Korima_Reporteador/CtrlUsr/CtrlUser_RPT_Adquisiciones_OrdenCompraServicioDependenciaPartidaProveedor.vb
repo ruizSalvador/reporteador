@@ -133,10 +133,11 @@ Public Class CtrlUser_RPT_Adquisiciones_OrdenCompraServicioDependenciaPartidaPro
             .ShowHeader = True
         End With
 
-
-#If DEBUG Then
-        MdlIdUsuario = 2
-#End If
+        'Salvador Ruiz 31052022
+        'comente las líneas de Debug
+        '#If DEBUG Then
+        '        MdlIdUsuario = 2
+        '#End If
         If GetFiltrarXUR(MdlIdUsuario) = True Then
             filterUnidadResponsable.Enabled = False
             SimpleButton2.Enabled = False

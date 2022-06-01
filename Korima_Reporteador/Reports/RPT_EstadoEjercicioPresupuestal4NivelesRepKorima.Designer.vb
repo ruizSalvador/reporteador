@@ -90,8 +90,6 @@ Partial Public Class RPT_EstadoEjercicioPresupuestal4NivelesRepKorima
         Me.ReportFooter = New DevExpress.XtraReports.UI.ReportFooterBand()
         Me.XrLabel31 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel28 = New DevExpress.XtraReports.UI.XRLabel()
-        Me.Firmas = New DevExpress.XtraReports.UI.XRSubreport()
-        Me.RpT_FirmasHorizontal1 = New Korima_Reporteador.RPT_FirmasHorizontal()
         Me.label34 = New DevExpress.XtraReports.UI.XRLabel()
         Me.label30 = New DevExpress.XtraReports.UI.XRLabel()
         Me.label42 = New DevExpress.XtraReports.UI.XRLabel()
@@ -150,6 +148,8 @@ Partial Public Class RPT_EstadoEjercicioPresupuestal4NivelesRepKorima
         Me.XrLabel56 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel55 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel54 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.Firmas = New DevExpress.XtraReports.UI.XRSubreport()
+        Me.RpT_FirmasHorizontal1 = New Korima_Reporteador.RPT_FirmasHorizontal()
         Me.DataSetBlanca11 = New Korima_Reporteador.DataSetBlanca1()
         CType(Me.DataSetBlanca1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RpT_FirmasHorizontal1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -813,14 +813,6 @@ Partial Public Class RPT_EstadoEjercicioPresupuestal4NivelesRepKorima
         Me.XrLabel28.Text = "XrLabel28"
         Me.XrLabel28.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight
         '
-        'Firmas
-        '
-        Me.Firmas.Dpi = 254.0!
-        Me.Firmas.LocationFloat = New DevExpress.Utils.PointFloat(383.6532!, 79.58817!)
-        Me.Firmas.Name = "Firmas"
-        Me.Firmas.ReportSource = Me.RpT_FirmasHorizontal1
-        Me.Firmas.SizeF = New System.Drawing.SizeF(2314.481!, 68.33649!)
-        '
         'label34
         '
         Me.label34.Borders = CType(((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Top) _
@@ -976,7 +968,7 @@ Partial Public Class RPT_EstadoEjercicioPresupuestal4NivelesRepKorima
         Me.lblRptTituloTipo.StylePriority.UseBorders = False
         Me.lblRptTituloTipo.StylePriority.UseFont = False
         Me.lblRptTituloTipo.StylePriority.UseTextAlignment = False
-        Me.lblRptTituloTipo.Text = "Ejercisio del Presupuesto" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Capítulo/Concepto/PartidaEspecifica"
+        Me.lblRptTituloTipo.Text = "Ejercicio del Presupuesto" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Capítulo/Concepto/PartidaEspecifica"
         Me.lblRptTituloTipo.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
         '
         'label14
@@ -1687,6 +1679,14 @@ Partial Public Class RPT_EstadoEjercicioPresupuestal4NivelesRepKorima
         Me.XrLabel54.Summary = XrSummary30
         Me.XrLabel54.Text = "XrLabel54"
         Me.XrLabel54.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight
+        '
+        'Firmas
+        '
+        Me.Firmas.Dpi = 254.0!
+        Me.Firmas.LocationFloat = New DevExpress.Utils.PointFloat(383.6532!, 79.58817!)
+        Me.Firmas.Name = "Firmas"
+        Me.Firmas.ReportSource = Me.RpT_FirmasHorizontal1
+        Me.Firmas.SizeF = New System.Drawing.SizeF(2314.481!, 68.33649!)
         '
         'DataSetBlanca11
         '

@@ -25,10 +25,8 @@ Partial Class CtrlUser_RPT_Estado_De_Actividades_Periodos
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CtrlUser_RPT_Estado_De_Actividades_Periodos))
         Me.SplitContainerControl1 = New DevExpress.XtraEditors.SplitContainerControl()
-        Me.chkRedondeo = New System.Windows.Forms.CheckBox()
-        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
-        Me.filterPeriodoAl = New DevExpress.XtraEditors.TimeEdit()
+        Me.LabelControl1 = New DevExpress.XtraEditors.LabelControl()
+        Me.filterPeriodo2 = New DevExpress.XtraEditors.TimeEdit()
         Me.PrintBarManager1 = New DevExpress.XtraPrinting.Preview.PrintBarManager(Me.components)
         Me.PreviewBar1 = New DevExpress.XtraPrinting.Preview.PreviewBar()
         Me.PrintPreviewBarItem4 = New DevExpress.XtraPrinting.Preview.PrintPreviewBarItem()
@@ -86,29 +84,37 @@ Partial Class CtrlUser_RPT_Estado_De_Actividades_Periodos
         Me.PrintPreviewBarCheckItem16 = New DevExpress.XtraPrinting.Preview.PrintPreviewBarCheckItem()
         Me.PrintPreviewBarCheckItem17 = New DevExpress.XtraPrinting.Preview.PrintPreviewBarCheckItem()
         Me.PrintControl1 = New DevExpress.XtraPrinting.Control.PrintControl()
+        Me.chkRedondeo = New System.Windows.Forms.CheckBox()
+        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.filterPeriodoAl = New DevExpress.XtraEditors.TimeEdit()
         Me.LabelControl5 = New DevExpress.XtraEditors.LabelControl()
         Me.LabelControl4 = New DevExpress.XtraEditors.LabelControl()
         Me.SimpleButton1 = New DevExpress.XtraEditors.SimpleButton()
         Me.filterPeriodoDe = New DevExpress.XtraEditors.TimeEdit()
-        Me.filterPeriodo2 = New DevExpress.XtraEditors.TimeEdit()
-        Me.LabelControl1 = New DevExpress.XtraEditors.LabelControl()
+        Me.filterEjercDe = New DevExpress.XtraEditors.TimeEdit()
+        Me.LabelControl2 = New DevExpress.XtraEditors.LabelControl()
         CType(Me.SplitContainerControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainerControl1.SuspendLayout()
-        CType(Me.filterPeriodoAl.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.filterPeriodo2.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PrintBarManager1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PrintPreviewRepositoryItemComboBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemProgressBar1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemZoomTrackBar1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.filterPeriodoAl.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.filterPeriodoDe.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.filterPeriodo2.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.filterEjercDe.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'SplitContainerControl1
         '
         Me.SplitContainerControl1.CollapsePanel = DevExpress.XtraEditors.SplitCollapsePanel.Panel1
         Me.SplitContainerControl1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.SplitContainerControl1.Location = New System.Drawing.Point(0, 53)
+        Me.SplitContainerControl1.Location = New System.Drawing.Point(0, 71)
+        Me.SplitContainerControl1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.SplitContainerControl1.Name = "SplitContainerControl1"
+        Me.SplitContainerControl1.Panel1.Controls.Add(Me.filterEjercDe)
+        Me.SplitContainerControl1.Panel1.Controls.Add(Me.LabelControl2)
         Me.SplitContainerControl1.Panel1.Controls.Add(Me.LabelControl1)
         Me.SplitContainerControl1.Panel1.Controls.Add(Me.filterPeriodo2)
         Me.SplitContainerControl1.Panel1.Controls.Add(Me.chkRedondeo)
@@ -122,59 +128,37 @@ Partial Class CtrlUser_RPT_Estado_De_Actividades_Periodos
         Me.SplitContainerControl1.Panel1.Text = "Panel1"
         Me.SplitContainerControl1.Panel2.Controls.Add(Me.PrintControl1)
         Me.SplitContainerControl1.Panel2.Text = "Panel2"
-        Me.SplitContainerControl1.Size = New System.Drawing.Size(752, 390)
-        Me.SplitContainerControl1.SplitterPosition = 127
+        Me.SplitContainerControl1.Size = New System.Drawing.Size(1128, 619)
+        Me.SplitContainerControl1.SplitterPosition = 193
         Me.SplitContainerControl1.TabIndex = 4
         Me.SplitContainerControl1.Text = "SplitContainerControl1"
         '
-        'chkRedondeo
+        'LabelControl1
         '
-        Me.chkRedondeo.AutoSize = True
-        Me.chkRedondeo.Location = New System.Drawing.Point(11, 169)
-        Me.chkRedondeo.Name = "chkRedondeo"
-        Me.chkRedondeo.Size = New System.Drawing.Size(76, 17)
-        Me.chkRedondeo.TabIndex = 12
-        Me.chkRedondeo.Text = "Redondeo"
-        Me.chkRedondeo.UseVisualStyleBackColor = True
+        Me.LabelControl1.Location = New System.Drawing.Point(17, 93)
+        Me.LabelControl1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.LabelControl1.Name = "LabelControl1"
+        Me.LabelControl1.Size = New System.Drawing.Size(80, 19)
+        Me.LabelControl1.TabIndex = 14
+        Me.LabelControl1.Text = "Periodo Al:"
         '
-        'CheckBox2
+        'filterPeriodo2
         '
-        Me.CheckBox2.AutoSize = True
-        Me.CheckBox2.Checked = True
-        Me.CheckBox2.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.CheckBox2.Location = New System.Drawing.Point(11, 146)
-        Me.CheckBox2.Name = "CheckBox2"
-        Me.CheckBox2.Size = New System.Drawing.Size(105, 17)
-        Me.CheckBox2.TabIndex = 11
-        Me.CheckBox2.Text = "Mostrar sin saldo"
-        Me.CheckBox2.UseVisualStyleBackColor = True
-        '
-        'CheckBox1
-        '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(11, 123)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(111, 17)
-        Me.CheckBox1.TabIndex = 2
-        Me.CheckBox1.Text = "En miles de pesos"
-        Me.CheckBox1.UseVisualStyleBackColor = True
-        '
-        'filterPeriodoAl
-        '
-        Me.filterPeriodoAl.EditValue = Nothing
-        Me.filterPeriodoAl.Location = New System.Drawing.Point(9, 85)
-        Me.filterPeriodoAl.MenuManager = Me.PrintBarManager1
-        Me.filterPeriodoAl.Name = "filterPeriodoAl"
-        Me.filterPeriodoAl.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton()})
-        Me.filterPeriodoAl.Properties.DisplayFormat.FormatString = "yyyy"
-        Me.filterPeriodoAl.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime
-        Me.filterPeriodoAl.Properties.EditFormat.FormatString = "d"
-        Me.filterPeriodoAl.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime
-        Me.filterPeriodoAl.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.[Default]
-        Me.filterPeriodoAl.Properties.Mask.EditMask = "yyyy"
-        Me.filterPeriodoAl.Properties.Mask.UseMaskAsDisplayFormat = True
-        Me.filterPeriodoAl.Size = New System.Drawing.Size(49, 20)
-        Me.filterPeriodoAl.TabIndex = 10
+        Me.filterPeriodo2.EditValue = Nothing
+        Me.filterPeriodo2.Location = New System.Drawing.Point(18, 117)
+        Me.filterPeriodo2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.filterPeriodo2.MenuManager = Me.PrintBarManager1
+        Me.filterPeriodo2.Name = "filterPeriodo2"
+        Me.filterPeriodo2.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton()})
+        Me.filterPeriodo2.Properties.DisplayFormat.FormatString = "yyyy"
+        Me.filterPeriodo2.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime
+        Me.filterPeriodo2.Properties.EditFormat.FormatString = "d"
+        Me.filterPeriodo2.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime
+        Me.filterPeriodo2.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.[Default]
+        Me.filterPeriodo2.Properties.Mask.EditMask = "MM"
+        Me.filterPeriodo2.Properties.Mask.UseMaskAsDisplayFormat = True
+        Me.filterPeriodo2.Size = New System.Drawing.Size(56, 26)
+        Me.filterPeriodo2.TabIndex = 13
         '
         'PrintBarManager1
         '
@@ -525,28 +509,32 @@ Partial Class CtrlUser_RPT_Estado_De_Actividades_Periodos
         Me.barDockControlTop.CausesValidation = False
         Me.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top
         Me.barDockControlTop.Location = New System.Drawing.Point(0, 0)
-        Me.barDockControlTop.Size = New System.Drawing.Size(752, 53)
+        Me.barDockControlTop.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.barDockControlTop.Size = New System.Drawing.Size(1128, 71)
         '
         'barDockControlBottom
         '
         Me.barDockControlBottom.CausesValidation = False
         Me.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.barDockControlBottom.Location = New System.Drawing.Point(0, 443)
-        Me.barDockControlBottom.Size = New System.Drawing.Size(752, 28)
+        Me.barDockControlBottom.Location = New System.Drawing.Point(0, 690)
+        Me.barDockControlBottom.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.barDockControlBottom.Size = New System.Drawing.Size(1128, 35)
         '
         'barDockControlLeft
         '
         Me.barDockControlLeft.CausesValidation = False
         Me.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left
-        Me.barDockControlLeft.Location = New System.Drawing.Point(0, 53)
-        Me.barDockControlLeft.Size = New System.Drawing.Size(0, 390)
+        Me.barDockControlLeft.Location = New System.Drawing.Point(0, 71)
+        Me.barDockControlLeft.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.barDockControlLeft.Size = New System.Drawing.Size(0, 619)
         '
         'barDockControlRight
         '
         Me.barDockControlRight.CausesValidation = False
         Me.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right
-        Me.barDockControlRight.Location = New System.Drawing.Point(752, 53)
-        Me.barDockControlRight.Size = New System.Drawing.Size(0, 390)
+        Me.barDockControlRight.Location = New System.Drawing.Point(1128, 71)
+        Me.barDockControlRight.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.barDockControlRight.Size = New System.Drawing.Size(0, 619)
         '
         'PrintPreviewBarCheckItem1
         '
@@ -727,39 +715,97 @@ Partial Class CtrlUser_RPT_Estado_De_Actividades_Periodos
         Me.PrintControl1.ForeColor = System.Drawing.Color.Empty
         Me.PrintControl1.IsMetric = True
         Me.PrintControl1.Location = New System.Drawing.Point(0, 0)
+        Me.PrintControl1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PrintControl1.Name = "PrintControl1"
-        Me.PrintControl1.Size = New System.Drawing.Size(620, 390)
+        Me.PrintControl1.Size = New System.Drawing.Size(930, 619)
         Me.PrintControl1.TabIndex = 1
         Me.PrintControl1.TooltipFont = New System.Drawing.Font("Tahoma", 8.25!)
         '
+        'chkRedondeo
+        '
+        Me.chkRedondeo.AutoSize = True
+        Me.chkRedondeo.Location = New System.Drawing.Point(16, 260)
+        Me.chkRedondeo.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.chkRedondeo.Name = "chkRedondeo"
+        Me.chkRedondeo.Size = New System.Drawing.Size(110, 24)
+        Me.chkRedondeo.TabIndex = 12
+        Me.chkRedondeo.Text = "Redondeo"
+        Me.chkRedondeo.UseVisualStyleBackColor = True
+        '
+        'CheckBox2
+        '
+        Me.CheckBox2.AutoSize = True
+        Me.CheckBox2.Checked = True
+        Me.CheckBox2.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.CheckBox2.Location = New System.Drawing.Point(16, 225)
+        Me.CheckBox2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.CheckBox2.Name = "CheckBox2"
+        Me.CheckBox2.Size = New System.Drawing.Size(155, 24)
+        Me.CheckBox2.TabIndex = 11
+        Me.CheckBox2.Text = "Mostrar sin saldo"
+        Me.CheckBox2.UseVisualStyleBackColor = True
+        '
+        'CheckBox1
+        '
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.Location = New System.Drawing.Point(16, 189)
+        Me.CheckBox1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(164, 24)
+        Me.CheckBox1.TabIndex = 2
+        Me.CheckBox1.Text = "En miles de pesos"
+        Me.CheckBox1.UseVisualStyleBackColor = True
+        '
+        'filterPeriodoAl
+        '
+        Me.filterPeriodoAl.EditValue = Nothing
+        Me.filterPeriodoAl.Location = New System.Drawing.Point(110, 117)
+        Me.filterPeriodoAl.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.filterPeriodoAl.MenuManager = Me.PrintBarManager1
+        Me.filterPeriodoAl.Name = "filterPeriodoAl"
+        Me.filterPeriodoAl.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton()})
+        Me.filterPeriodoAl.Properties.DisplayFormat.FormatString = "yyyy"
+        Me.filterPeriodoAl.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime
+        Me.filterPeriodoAl.Properties.EditFormat.FormatString = "d"
+        Me.filterPeriodoAl.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime
+        Me.filterPeriodoAl.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.[Default]
+        Me.filterPeriodoAl.Properties.Mask.EditMask = "yyyy"
+        Me.filterPeriodoAl.Properties.Mask.UseMaskAsDisplayFormat = True
+        Me.filterPeriodoAl.Size = New System.Drawing.Size(70, 26)
+        Me.filterPeriodoAl.TabIndex = 10
+        '
         'LabelControl5
         '
-        Me.LabelControl5.Location = New System.Drawing.Point(9, 66)
+        Me.LabelControl5.Location = New System.Drawing.Point(108, 19)
+        Me.LabelControl5.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.LabelControl5.Name = "LabelControl5"
-        Me.LabelControl5.Size = New System.Drawing.Size(43, 13)
+        Me.LabelControl5.Size = New System.Drawing.Size(65, 19)
         Me.LabelControl5.TabIndex = 3
         Me.LabelControl5.Text = "Ejercicio:"
         '
         'LabelControl4
         '
-        Me.LabelControl4.Location = New System.Drawing.Point(9, 12)
+        Me.LabelControl4.Location = New System.Drawing.Point(14, 18)
+        Me.LabelControl4.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.LabelControl4.Name = "LabelControl4"
-        Me.LabelControl4.Size = New System.Drawing.Size(40, 13)
+        Me.LabelControl4.Size = New System.Drawing.Size(60, 19)
         Me.LabelControl4.TabIndex = 3
         Me.LabelControl4.Text = "Periodo:"
         '
         'SimpleButton1
         '
-        Me.SimpleButton1.Location = New System.Drawing.Point(9, 190)
+        Me.SimpleButton1.Location = New System.Drawing.Point(14, 292)
+        Me.SimpleButton1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.SimpleButton1.Name = "SimpleButton1"
-        Me.SimpleButton1.Size = New System.Drawing.Size(102, 21)
+        Me.SimpleButton1.Size = New System.Drawing.Size(153, 32)
         Me.SimpleButton1.TabIndex = 2
         Me.SimpleButton1.Text = "Imprimir reporte"
         '
         'filterPeriodoDe
         '
         Me.filterPeriodoDe.EditValue = Nothing
-        Me.filterPeriodoDe.Location = New System.Drawing.Point(11, 31)
+        Me.filterPeriodoDe.Location = New System.Drawing.Point(16, 48)
+        Me.filterPeriodoDe.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.filterPeriodoDe.MenuManager = Me.PrintBarManager1
         Me.filterPeriodoDe.Name = "filterPeriodoDe"
         Me.filterPeriodoDe.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton()})
@@ -770,54 +816,58 @@ Partial Class CtrlUser_RPT_Estado_De_Actividades_Periodos
         Me.filterPeriodoDe.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.[Default]
         Me.filterPeriodoDe.Properties.Mask.EditMask = "MM"
         Me.filterPeriodoDe.Properties.Mask.UseMaskAsDisplayFormat = True
-        Me.filterPeriodoDe.Size = New System.Drawing.Size(37, 20)
+        Me.filterPeriodoDe.Size = New System.Drawing.Size(56, 26)
         Me.filterPeriodoDe.TabIndex = 9
         '
-        'filterPeriodo2
+        'filterEjercDe
         '
-        Me.filterPeriodo2.EditValue = Nothing
-        Me.filterPeriodo2.Location = New System.Drawing.Point(66, 31)
-        Me.filterPeriodo2.MenuManager = Me.PrintBarManager1
-        Me.filterPeriodo2.Name = "filterPeriodo2"
-        Me.filterPeriodo2.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton()})
-        Me.filterPeriodo2.Properties.DisplayFormat.FormatString = "yyyy"
-        Me.filterPeriodo2.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime
-        Me.filterPeriodo2.Properties.EditFormat.FormatString = "d"
-        Me.filterPeriodo2.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime
-        Me.filterPeriodo2.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.[Default]
-        Me.filterPeriodo2.Properties.Mask.EditMask = "MM"
-        Me.filterPeriodo2.Properties.Mask.UseMaskAsDisplayFormat = True
-        Me.filterPeriodo2.Size = New System.Drawing.Size(37, 20)
-        Me.filterPeriodo2.TabIndex = 13
+        Me.filterEjercDe.EditValue = Nothing
+        Me.filterEjercDe.Location = New System.Drawing.Point(106, 48)
+        Me.filterEjercDe.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.filterEjercDe.MenuManager = Me.PrintBarManager1
+        Me.filterEjercDe.Name = "filterEjercDe"
+        Me.filterEjercDe.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton()})
+        Me.filterEjercDe.Properties.DisplayFormat.FormatString = "yyyy"
+        Me.filterEjercDe.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime
+        Me.filterEjercDe.Properties.EditFormat.FormatString = "d"
+        Me.filterEjercDe.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime
+        Me.filterEjercDe.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.[Default]
+        Me.filterEjercDe.Properties.Mask.EditMask = "yyyy"
+        Me.filterEjercDe.Properties.Mask.UseMaskAsDisplayFormat = True
+        Me.filterEjercDe.Size = New System.Drawing.Size(74, 26)
+        Me.filterEjercDe.TabIndex = 16
         '
-        'LabelControl1
+        'LabelControl2
         '
-        Me.LabelControl1.Location = New System.Drawing.Point(68, 13)
-        Me.LabelControl1.Name = "LabelControl1"
-        Me.LabelControl1.Size = New System.Drawing.Size(52, 13)
-        Me.LabelControl1.TabIndex = 14
-        Me.LabelControl1.Text = "Periodo Al:"
+        Me.LabelControl2.Location = New System.Drawing.Point(110, 92)
+        Me.LabelControl2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.LabelControl2.Name = "LabelControl2"
+        Me.LabelControl2.Size = New System.Drawing.Size(65, 19)
+        Me.LabelControl2.TabIndex = 15
+        Me.LabelControl2.Text = "Ejercicio:"
         '
         'CtrlUser_RPT_Estado_De_Actividades_Periodos
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.Controls.Add(Me.SplitContainerControl1)
         Me.Controls.Add(Me.barDockControlLeft)
         Me.Controls.Add(Me.barDockControlRight)
         Me.Controls.Add(Me.barDockControlBottom)
         Me.Controls.Add(Me.barDockControlTop)
+        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "CtrlUser_RPT_Estado_De_Actividades_Periodos"
-        Me.Size = New System.Drawing.Size(752, 471)
+        Me.Size = New System.Drawing.Size(1128, 725)
         CType(Me.SplitContainerControl1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainerControl1.ResumeLayout(False)
-        CType(Me.filterPeriodoAl.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.filterPeriodo2.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PrintBarManager1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PrintPreviewRepositoryItemComboBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RepositoryItemProgressBar1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RepositoryItemZoomTrackBar1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.filterPeriodoAl.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.filterPeriodoDe.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.filterPeriodo2.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.filterEjercDe.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -889,5 +939,7 @@ Partial Class CtrlUser_RPT_Estado_De_Actividades_Periodos
     Friend WithEvents chkRedondeo As System.Windows.Forms.CheckBox
     Friend WithEvents LabelControl1 As DevExpress.XtraEditors.LabelControl
     Friend WithEvents filterPeriodo2 As DevExpress.XtraEditors.TimeEdit
+    Friend WithEvents filterEjercDe As DevExpress.XtraEditors.TimeEdit
+    Friend WithEvents LabelControl2 As DevExpress.XtraEditors.LabelControl
 
 End Class

@@ -1,0 +1,3 @@
+﻿Public Class RPT_FirmasVerticalElectronica_Sin_Leyenda
+
+End Class

@@ -70,6 +70,8 @@ Partial Public Class RPT_EstadoEjercicioPresupuestal2Niveles
         Me.ReportFooter = New DevExpress.XtraReports.UI.ReportFooterBand()
         Me.XrLabel31 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel28 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.Firmas = New DevExpress.XtraReports.UI.XRSubreport()
+        Me.RpT_FirmasVerticalElectronica1 = New Korima_Reporteador.RPT_FirmasVerticalElectronica()
         Me.label34 = New DevExpress.XtraReports.UI.XRLabel()
         Me.label30 = New DevExpress.XtraReports.UI.XRLabel()
         Me.label28 = New DevExpress.XtraReports.UI.XRLabel()
@@ -111,8 +113,6 @@ Partial Public Class RPT_EstadoEjercicioPresupuestal2Niveles
         Me.VW_RPT_CFG_DatosEntesTableAdapter1 = New Korima_Reporteador._Korima2_00_ReporteadorDataSet1TableAdapters.VW_RPT_CFG_DatosEntesTableAdapter()
         Me.CalculatedField1 = New DevExpress.XtraReports.UI.CalculatedField()
         Me.CalculatedField2 = New DevExpress.XtraReports.UI.CalculatedField()
-        Me.Firmas = New DevExpress.XtraReports.UI.XRSubreport()
-        Me.RpT_FirmasVerticalElectronica1 = New Korima_Reporteador.RPT_FirmasVerticalElectronica()
         CType(Me.DataSetBlanca1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RpT_FirmasVerticalElectronica1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -157,7 +157,7 @@ Partial Public Class RPT_EstadoEjercicioPresupuestal2Niveles
         '
         Me.label17.Borders = CType(((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Top) _
             Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
-        Me.label17.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "VW_RPT_K2_EstadodelEjercicioPresupuesto.Autorizado")})
+        Me.label17.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "SP_RPT_EstadoEjercicioPresupuestoEGR.Autorizado")})
         Me.label17.Dpi = 254.0!
         Me.label17.Font = New System.Drawing.Font("Tahoma", 5.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.label17.LocationFloat = New DevExpress.Utils.PointFloat(1053.042!, 0.0014534!)
@@ -177,7 +177,7 @@ Partial Public Class RPT_EstadoEjercicioPresupuestal2Niveles
         '
         Me.label33.Borders = CType(((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Top) _
             Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
-        Me.label33.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "VW_RPT_K2_EstadodelEjercicioPresupuesto.Ejercido")})
+        Me.label33.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "SP_RPT_EstadoEjercicioPresupuestoEGR.Ejercido")})
         Me.label33.Dpi = 254.0!
         Me.label33.Font = New System.Drawing.Font("Tahoma", 5.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.label33.LocationFloat = New DevExpress.Utils.PointFloat(1976.02!, 0.001291911!)
@@ -225,7 +225,7 @@ Partial Public Class RPT_EstadoEjercicioPresupuestal2Niveles
         Me.label37.AnchorVertical = CType((DevExpress.XtraReports.UI.VerticalAnchorStyles.Top Or DevExpress.XtraReports.UI.VerticalAnchorStyles.Bottom), DevExpress.XtraReports.UI.VerticalAnchorStyles)
         Me.label37.Borders = CType((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Top), DevExpress.XtraPrinting.BorderSide)
         Me.label37.CanGrow = False
-        Me.label37.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "VW_RPT_K2_EstadodelEjercicioPresupuesto.Comprometido")})
+        Me.label37.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "SP_RPT_EstadoEjercicioPresupuestoEGR.Comprometido")})
         Me.label37.Dpi = 254.0!
         Me.label37.Font = New System.Drawing.Font("Tahoma", 6.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.label37.LocationFloat = New DevExpress.Utils.PointFloat(1740.286!, 0.0!)
@@ -370,7 +370,7 @@ Partial Public Class RPT_EstadoEjercicioPresupuestal2Niveles
         Me.label21.AnchorVertical = CType((DevExpress.XtraReports.UI.VerticalAnchorStyles.Top Or DevExpress.XtraReports.UI.VerticalAnchorStyles.Bottom), DevExpress.XtraReports.UI.VerticalAnchorStyles)
         Me.label21.Borders = CType((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Top), DevExpress.XtraPrinting.BorderSide)
         Me.label21.CanGrow = False
-        Me.label21.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "VW_RPT_K2_EstadodelEjercicioPresupuesto.Devengado", "{0:n2}")})
+        Me.label21.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "SP_RPT_EstadoEjercicioPresupuestoEGR.Devengado", "{0:n2}")})
         Me.label21.Dpi = 254.0!
         Me.label21.Font = New System.Drawing.Font("Tahoma", 6.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.label21.LocationFloat = New DevExpress.Utils.PointFloat(1740.281!, 0.0!)
@@ -388,7 +388,7 @@ Partial Public Class RPT_EstadoEjercicioPresupuestal2Niveles
         Me.label25.AnchorVertical = CType((DevExpress.XtraReports.UI.VerticalAnchorStyles.Top Or DevExpress.XtraReports.UI.VerticalAnchorStyles.Bottom), DevExpress.XtraReports.UI.VerticalAnchorStyles)
         Me.label25.Borders = CType((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Top), DevExpress.XtraPrinting.BorderSide)
         Me.label25.CanGrow = False
-        Me.label25.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "VW_RPT_K2_EstadodelEjercicioPresupuesto.Pagado", "{0:n2}")})
+        Me.label25.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "SP_RPT_EstadoEjercicioPresupuestoEGR.Pagado", "{0:n2}")})
         Me.label25.Dpi = 254.0!
         Me.label25.Font = New System.Drawing.Font("Tahoma", 6.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.label25.LocationFloat = New DevExpress.Utils.PointFloat(1976.021!, 0.0!)
@@ -474,10 +474,10 @@ Partial Public Class RPT_EstadoEjercicioPresupuestal2Niveles
         Me.label45.AnchorVertical = CType((DevExpress.XtraReports.UI.VerticalAnchorStyles.Top Or DevExpress.XtraReports.UI.VerticalAnchorStyles.Bottom), DevExpress.XtraReports.UI.VerticalAnchorStyles)
         Me.label45.Borders = CType((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Top), DevExpress.XtraPrinting.BorderSide)
         Me.label45.CanGrow = False
-        Me.label45.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "VW_RPT_K2_EstadodelEjercicioPresupuesto.Pagado")})
+        Me.label45.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "SP_RPT_EstadoEjercicioPresupuestoEGR.Pagado")})
         Me.label45.Dpi = 254.0!
         Me.label45.Font = New System.Drawing.Font("Tahoma", 6.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.label45.LocationFloat = New DevExpress.Utils.PointFloat(1976.013!, 0.0002422333!)
+        Me.label45.LocationFloat = New DevExpress.Utils.PointFloat(1976.028!, 0.0!)
         Me.label45.Name = "label45"
         Me.label45.Padding = New DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254.0!)
         Me.label45.SizeF = New System.Drawing.SizeF(219.8506!, 58.42287!)
@@ -495,7 +495,7 @@ Partial Public Class RPT_EstadoEjercicioPresupuestal2Niveles
         Me.label44.AnchorVertical = CType((DevExpress.XtraReports.UI.VerticalAnchorStyles.Top Or DevExpress.XtraReports.UI.VerticalAnchorStyles.Bottom), DevExpress.XtraReports.UI.VerticalAnchorStyles)
         Me.label44.Borders = CType((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Top), DevExpress.XtraPrinting.BorderSide)
         Me.label44.CanGrow = False
-        Me.label44.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "VW_RPT_K2_EstadodelEjercicioPresupuesto.Ejercido")})
+        Me.label44.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "SP_RPT_EstadoEjercicioPresupuestoEGR.Ejercido")})
         Me.label44.Dpi = 254.0!
         Me.label44.Font = New System.Drawing.Font("Tahoma", 6.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.label44.LocationFloat = New DevExpress.Utils.PointFloat(1976.013!, 0.0002422333!)
@@ -517,7 +517,7 @@ Partial Public Class RPT_EstadoEjercicioPresupuestal2Niveles
         Me.label40.AnchorVertical = CType((DevExpress.XtraReports.UI.VerticalAnchorStyles.Top Or DevExpress.XtraReports.UI.VerticalAnchorStyles.Bottom), DevExpress.XtraReports.UI.VerticalAnchorStyles)
         Me.label40.Borders = CType((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Top), DevExpress.XtraPrinting.BorderSide)
         Me.label40.CanGrow = False
-        Me.label40.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "VW_RPT_K2_EstadodelEjercicioPresupuesto.Devengado")})
+        Me.label40.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "SP_RPT_EstadoEjercicioPresupuestoEGR.Devengado")})
         Me.label40.Dpi = 254.0!
         Me.label40.Font = New System.Drawing.Font("Tahoma", 6.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.label40.LocationFloat = New DevExpress.Utils.PointFloat(1740.281!, 0.0002422333!)
@@ -536,7 +536,7 @@ Partial Public Class RPT_EstadoEjercicioPresupuestal2Niveles
         'label12
         '
         Me.label12.Borders = CType((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Top), DevExpress.XtraPrinting.BorderSide)
-        Me.label12.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "VW_RPT_K2_EstadodelEjercicioPresupuesto.Descripcion")})
+        Me.label12.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "SP_RPT_EstadoEjercicioPresupuestoEGR.Descripcion")})
         Me.label12.Dpi = 254.0!
         Me.label12.Font = New System.Drawing.Font("Tahoma", 6.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.label12.LocationFloat = New DevExpress.Utils.PointFloat(0.001291911!, 0.0!)
@@ -552,7 +552,7 @@ Partial Public Class RPT_EstadoEjercicioPresupuestal2Niveles
         Me.label1.AnchorVertical = CType((DevExpress.XtraReports.UI.VerticalAnchorStyles.Top Or DevExpress.XtraReports.UI.VerticalAnchorStyles.Bottom), DevExpress.XtraReports.UI.VerticalAnchorStyles)
         Me.label1.Borders = CType((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Top), DevExpress.XtraPrinting.BorderSide)
         Me.label1.CanGrow = False
-        Me.label1.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "VW_RPT_K2_EstadodelEjercicioPresupuesto.IdClave")})
+        Me.label1.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "SP_RPT_EstadoEjercicioPresupuestoEGR.IdClave")})
         Me.label1.Dpi = 254.0!
         Me.label1.Font = New System.Drawing.Font("Tahoma", 6.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.label1.LocationFloat = New DevExpress.Utils.PointFloat(0.0!, 0.0!)
@@ -569,9 +569,9 @@ Partial Public Class RPT_EstadoEjercicioPresupuestal2Niveles
         Me.label36.AnchorVertical = CType((DevExpress.XtraReports.UI.VerticalAnchorStyles.Top Or DevExpress.XtraReports.UI.VerticalAnchorStyles.Bottom), DevExpress.XtraReports.UI.VerticalAnchorStyles)
         Me.label36.Borders = CType((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Top), DevExpress.XtraPrinting.BorderSide)
         Me.label36.CanGrow = False
-        Me.label36.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "VW_RPT_K2_EstadodelEjercicioPresupuesto.Autorizado")})
+        Me.label36.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "SP_RPT_EstadoEjercicioPresupuestoEGR.Autorizado")})
         Me.label36.Dpi = 254.0!
-        Me.label36.Font = New System.Drawing.Font("Tahoma", 6.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.label36.Font = New System.Drawing.Font("Tahoma", 6.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.label36.LocationFloat = New DevExpress.Utils.PointFloat(1053.044!, 0.0!)
         Me.label36.Name = "label36"
         Me.label36.Padding = New DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254.0!)
@@ -619,7 +619,7 @@ Partial Public Class RPT_EstadoEjercicioPresupuestal2Niveles
         Me.XrLabel31.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "SP_RPT_EstadoEjercicioPresupuestoEGR.Amp_Red")})
         Me.XrLabel31.Dpi = 254.0!
         Me.XrLabel31.Font = New System.Drawing.Font("Tahoma", 5.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.XrLabel31.LocationFloat = New DevExpress.Utils.PointFloat(1305.59!, 0.001291911!)
+        Me.XrLabel31.LocationFloat = New DevExpress.Utils.PointFloat(1305.588!, 0.001507229!)
         Me.XrLabel31.Name = "XrLabel31"
         Me.XrLabel31.Padding = New DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254.0!)
         Me.XrLabel31.SizeF = New System.Drawing.SizeF(214.8452!, 58.42005!)
@@ -653,11 +653,19 @@ Partial Public Class RPT_EstadoEjercicioPresupuestal2Niveles
         Me.XrLabel28.Text = "XrLabel28"
         Me.XrLabel28.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight
         '
+        'Firmas
+        '
+        Me.Firmas.Dpi = 254.0!
+        Me.Firmas.LocationFloat = New DevExpress.Utils.PointFloat(306.9167!, 149.6251!)
+        Me.Firmas.Name = "Firmas"
+        Me.Firmas.ReportSource = Me.RpT_FirmasVerticalElectronica1
+        Me.Firmas.SizeF = New System.Drawing.SizeF(1545.747!, 68.3365!)
+        '
         'label34
         '
         Me.label34.Borders = CType(((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Top) _
             Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
-        Me.label34.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "VW_RPT_K2_EstadodelEjercicioPresupuesto.Pagado")})
+        Me.label34.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "SP_RPT_EstadoEjercicioPresupuestoEGR.Pagado")})
         Me.label34.Dpi = 254.0!
         Me.label34.Font = New System.Drawing.Font("Tahoma", 5.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.label34.LocationFloat = New DevExpress.Utils.PointFloat(1976.028!, 0.001291911!)
@@ -677,7 +685,7 @@ Partial Public Class RPT_EstadoEjercicioPresupuestal2Niveles
         '
         Me.label30.Borders = CType(((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Top) _
             Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
-        Me.label30.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "VW_RPT_K2_EstadodelEjercicioPresupuesto.Devengado")})
+        Me.label30.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "SP_RPT_EstadoEjercicioPresupuestoEGR.Devengado")})
         Me.label30.Dpi = 254.0!
         Me.label30.Font = New System.Drawing.Font("Tahoma", 5.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.label30.LocationFloat = New DevExpress.Utils.PointFloat(1740.291!, 0.001291911!)
@@ -697,7 +705,7 @@ Partial Public Class RPT_EstadoEjercicioPresupuestal2Niveles
         '
         Me.label28.Borders = CType(((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Top) _
             Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
-        Me.label28.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "VW_RPT_K2_EstadodelEjercicioPresupuesto.Comprometido")})
+        Me.label28.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "SP_RPT_EstadoEjercicioPresupuestoEGR.Comprometido")})
         Me.label28.Dpi = 254.0!
         Me.label28.Font = New System.Drawing.Font("Tahoma", 5.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.label28.LocationFloat = New DevExpress.Utils.PointFloat(1740.286!, 0.001291911!)
@@ -735,7 +743,7 @@ Partial Public Class RPT_EstadoEjercicioPresupuestal2Niveles
         Me.label19.AnchorVertical = CType((DevExpress.XtraReports.UI.VerticalAnchorStyles.Top Or DevExpress.XtraReports.UI.VerticalAnchorStyles.Bottom), DevExpress.XtraReports.UI.VerticalAnchorStyles)
         Me.label19.Borders = CType((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Top), DevExpress.XtraPrinting.BorderSide)
         Me.label19.CanGrow = False
-        Me.label19.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "VW_RPT_K2_EstadodelEjercicioPresupuesto.Comprometido", "{0:n2}")})
+        Me.label19.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "SP_RPT_EstadoEjercicioPresupuestoEGR.Comprometido", "{0:n2}")})
         Me.label19.Dpi = 254.0!
         Me.label19.Font = New System.Drawing.Font("Tahoma", 6.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.label19.LocationFloat = New DevExpress.Utils.PointFloat(1740.286!, 0.0!)
@@ -754,7 +762,7 @@ Partial Public Class RPT_EstadoEjercicioPresupuestal2Niveles
         Me.label24.AnchorVertical = CType((DevExpress.XtraReports.UI.VerticalAnchorStyles.Top Or DevExpress.XtraReports.UI.VerticalAnchorStyles.Bottom), DevExpress.XtraReports.UI.VerticalAnchorStyles)
         Me.label24.Borders = CType((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Top), DevExpress.XtraPrinting.BorderSide)
         Me.label24.CanGrow = False
-        Me.label24.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "VW_RPT_K2_EstadodelEjercicioPresupuesto.Ejercido", "{0:n2}")})
+        Me.label24.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "SP_RPT_EstadoEjercicioPresupuestoEGR.Ejercido", "{0:n2}")})
         Me.label24.Dpi = 254.0!
         Me.label24.Font = New System.Drawing.Font("Tahoma", 6.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.label24.LocationFloat = New DevExpress.Utils.PointFloat(1976.013!, 0.0!)
@@ -771,7 +779,7 @@ Partial Public Class RPT_EstadoEjercicioPresupuestal2Niveles
         'label15
         '
         Me.label15.Borders = CType((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Top), DevExpress.XtraPrinting.BorderSide)
-        Me.label15.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "VW_RPT_K2_EstadodelEjercicioPresupuesto.Descripcion2")})
+        Me.label15.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "SP_RPT_EstadoEjercicioPresupuestoEGR.Descripcion2")})
         Me.label15.Dpi = 254.0!
         Me.label15.Font = New System.Drawing.Font("Tahoma", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.label15.LocationFloat = New DevExpress.Utils.PointFloat(0.001291911!, 0.0!)
@@ -873,7 +881,7 @@ Partial Public Class RPT_EstadoEjercicioPresupuestal2Niveles
         Me.label14.AnchorVertical = CType((DevExpress.XtraReports.UI.VerticalAnchorStyles.Top Or DevExpress.XtraReports.UI.VerticalAnchorStyles.Bottom), DevExpress.XtraReports.UI.VerticalAnchorStyles)
         Me.label14.Borders = CType((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Top), DevExpress.XtraPrinting.BorderSide)
         Me.label14.CanGrow = False
-        Me.label14.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "VW_RPT_K2_EstadodelEjercicioPresupuesto.Clave")})
+        Me.label14.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "SP_RPT_EstadoEjercicioPresupuestoEGR.Clave")})
         Me.label14.Dpi = 254.0!
         Me.label14.Font = New System.Drawing.Font("Tahoma", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.label14.LocationFloat = New DevExpress.Utils.PointFloat(0.0!, 0.0!)
@@ -958,7 +966,7 @@ Partial Public Class RPT_EstadoEjercicioPresupuestal2Niveles
         Me.label16.AnchorVertical = CType((DevExpress.XtraReports.UI.VerticalAnchorStyles.Top Or DevExpress.XtraReports.UI.VerticalAnchorStyles.Bottom), DevExpress.XtraReports.UI.VerticalAnchorStyles)
         Me.label16.Borders = CType((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Top), DevExpress.XtraPrinting.BorderSide)
         Me.label16.CanGrow = False
-        Me.label16.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "VW_RPT_K2_EstadodelEjercicioPresupuesto.Autorizado", "{0:n2}")})
+        Me.label16.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "SP_RPT_EstadoEjercicioPresupuestoEGR.Autorizado", "{0:n2}")})
         Me.label16.Dpi = 254.0!
         Me.label16.Font = New System.Drawing.Font("Tahoma", 6.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.label16.LocationFloat = New DevExpress.Utils.PointFloat(1053.044!, 0.0!)
@@ -1221,14 +1229,6 @@ Partial Public Class RPT_EstadoEjercicioPresupuestal2Niveles
         Me.CalculatedField2.DataSource = Me.DataSetBlanca1
         Me.CalculatedField2.Expression = "([Autorizado] + [Amp_Red]) - [Devengado]"
         Me.CalculatedField2.Name = "CalculatedField2"
-        '
-        'Firmas
-        '
-        Me.Firmas.Dpi = 254.0!
-        Me.Firmas.LocationFloat = New DevExpress.Utils.PointFloat(306.9167!, 149.6251!)
-        Me.Firmas.Name = "Firmas"
-        Me.Firmas.ReportSource = Me.RpT_FirmasVerticalElectronica1
-        Me.Firmas.SizeF = New System.Drawing.SizeF(1545.747!, 68.3365!)
         '
         'RPT_EstadoEjercicioPresupuestal2Niveles
         '

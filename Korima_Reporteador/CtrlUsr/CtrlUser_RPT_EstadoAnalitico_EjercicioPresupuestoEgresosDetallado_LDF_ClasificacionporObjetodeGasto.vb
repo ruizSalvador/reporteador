@@ -309,9 +309,11 @@ Public Class CtrlUser_RPT_EstadoAnalitico_EjercicioPresupuestoEgresosDetallado_L
         SQLComando.CommandType = CommandType.StoredProcedure
 
         '--- Parametros IN
-#If DEBUG Then
-        MdlIdUsuario = 25
-#End If
+        'Salvador Ruiz 31052022
+        'comente las líneas de Debug
+        '#If DEBUG Then
+        '        MdlIdUsuario = 25
+        '#End If
 
         If ChkAnual.Checked = True Then
             SQLComando.Parameters.Add(New SqlParameter("@Mes", 0))

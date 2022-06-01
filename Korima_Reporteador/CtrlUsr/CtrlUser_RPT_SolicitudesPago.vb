@@ -51,7 +51,9 @@ Public Class CtrlUser_RPT_SolicitudesPago
         SQLComando.Parameters.Add(New SqlParameter("@FechaInicio", Convert.ToDateTime(filterPeriodoDe.Text)))
         SQLComando.Parameters.Add(New SqlParameter("@FechaFin", Convert.ToDateTime(filterPeriodoAl.Text)))
         SQLComando.Parameters.Add(New SqlParameter("@IdTipo", Convert.ToInt32(cmbTipoServicio.SelectedValue)))
-        SQLComando.CommandTimeout = 99999
+        SQLComando.Parameters.Add(New SqlParameter("@Estatus", Convert.ToInt32(cmbStatus.SelectedValue)))
+
+        SQLComando.CommandTimeout = 0
 
         Dim adapter As New SqlClient.SqlDataAdapter(SQLComando)
 
@@ -120,6 +122,16 @@ Public Class CtrlUser_RPT_SolicitudesPago
         cmbTipoServicio.DataSource = New BindingSource(comboSource, Nothing)
         cmbTipoServicio.DisplayMember = "Value"
         cmbTipoServicio.ValueMember = "Key"
+
+        '----------------
+        Dim cmbStatusSrc As New Dictionary(Of Integer, String)()
+        cmbStatusSrc.Add(0, "Todos")
+        cmbStatusSrc.Add(1, "Pagado")
+        cmbStatusSrc.Add(2, "Pendiente")
+
+        cmbStatus.DataSource = New BindingSource(cmbStatusSrc, Nothing)
+        cmbStatus.DisplayMember = "Value"
+        cmbStatus.ValueMember = "Key"
 
         '--Llenar listas
         Dim ObjTempSQL2 As New clsRPT_CFG_DatosEntesCtrl

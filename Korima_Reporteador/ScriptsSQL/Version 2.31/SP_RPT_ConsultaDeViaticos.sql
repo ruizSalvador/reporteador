@@ -10,7 +10,7 @@ SET QUOTED_IDENTIFIER ON
 GO
 
 
---EXEC SP_RPT_ConsultaDeViaticos '20200101','20201231'
+--EXEC SP_RPT_ConsultaDeViaticos '20210103','20210228'
 CREATE PROCEDURE [dbo].[SP_RPT_ConsultaDeViaticos] 
 
 @FechaIni as Datetime,
@@ -157,7 +157,7 @@ FROM (
 		INNER JOIN Temp_Destinos DE ON TSC.IdSolicitudCheques = DE.idsolicitudcheques
 
 		--INNER JOIN C_Empleados CEV ON TV.NumeroEmpleado = CEV.NumeroEmpleado
-		LEFT JOIN T_EmpPlaza TEP ON TV.NumeroEmpleado = TEP.IdEmpleado
+		LEFT JOIN T_EmpPlaza TEP ON TV.NumeroEmpleado = TEP.IdEmpleado AND (TEP.Estatus = 1 and IdPlaza > 0)
 	    LEFT JOIN C_Plazas CPL ON CPL.IdPlaza = TEP.IdPlaza
 		LEFT JOIN T_Nombramientos TN ON TN.IdNombramiento = CPL.IdNombramiento
 		LEFT JOIN C_Puestos CPU ON CPU.IdPuesto = CPL.IdPuesto 

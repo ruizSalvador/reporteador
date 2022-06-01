@@ -136,9 +136,13 @@ Public Class CtrlUser_RPT_ImpresionPolizas_Firmas
             '    .lblRptDescripcionFiltrado.Text = "Anual" & "-" & Year(filterPeriodoAl.EditValue)
             'End If
             '-------------------------
-#If DEBUG Then
-            MdlIdUsuario = 47
-#End If
+
+            'Salvador Ruiz 31052022
+            'comente las líneas de Debug
+            '#If DEBUG Then
+            '            MdlIdUsuario = 47
+            '#End If
+
             Dim cmd2 As New SqlCommand("Select ApellidoPaterno + ' ' + ApellidoMaterno + ' ' + Nombres From C_Empleados Inner Join C_Usuarios On C_Empleados.NumeroEmpleado = C_Usuarios.NumeroEmpleado Where C_Usuarios.IdUsuario =" & MdlIdUsuario, New SqlConnection(cnnString))
             cmd2.Connection.Open()
             Dim reader2 = cmd2.ExecuteScalar()

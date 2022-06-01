@@ -1,37 +1,37 @@
 ﻿Imports System.Data.SqlClient
 
 Public Class MDI_Principal
-    Dim IdUsuario As String = "Debug"
     'Dim bdd As String = "Demo230abril"
-    Dim bdd As String = "KORIMAMUNICIPIO"
+    'Dim bdd As String = "KORIMAMUNICIPIO"
     'Dim bdd As String = "KmSClara"
-    'Dim bdd As String = "KorimaITEI"
+    'Dim bdd As String = "BD_Korima"
     'Dim bdd As String = "CespteInicializacion"
     'Dim bdd As String = "Fiarum2016"
     'Dim bdd As String = "UNEME2020"
     'Dim bdd As String = "Korima_IDEFT_JALISCO"
     'Dim bdd As String = "IECAN_PRODUCCION"
-    'Dim bdd As String = "Korima_San_Miguel_Alto"
     'Dim bdd As String = "Korima_Municipio_Piedad"
-    'Dim bdd As String = "Korima_TET"
+    'Dim bdd As String = "KorimaSGGEDINEN"
     'Dim bdd As String = "KorimaTSJ"
     'Dim bdd As String = "KorimaNogales"
-    'Dim bdd As String = "KorimaSGG"
+    'Dim bdd As String = "KmCecytem2015"
     'Dim bdd As String = "KOR585_UPALT"
 
+    'Salvador Ruiz 31052022
+    'descomentar para compilar
+    'Dim IdUsuario As String = ""
+    'Dim bdd As String = ""
+    'Dim server As String = ""
+    'Dim user As String = ""
+    'Dim pass As String = ""
 
-    'Dim server As String = "SRV-KORIMA\korima_2014"
-    'Dim server As String = "LAPTOP-OC11LS61\SQLEXPRESS19"
-    'Dim server As String = "LAPTOP-OC11LS61\SQLEXPRESS17"
-    Dim server As String = "MSIDEV\SQLEXPRESS2019"
-    'Dim server As String = "ARTURODEV\SQLEXPRESS02"
-    'Dim server As String = "SRV-KORITEST\SQLEXPRESS14"
-    'Dim server As String = "SRV-KORIMA\KORIMA_2014"
-    'Dim server As String = "WIN-AUH6FIP79C3\KORIMA"
-    'Dim server As String = "DESKTOP-QH8FRPG\SQLEXPRESS16"
-
+    'Salvador Ruiz 31052022
+    'comentar para compilar
+    Dim IdUsuario As String = "Debug"
+    Dim bdd As String = "KORIMAIMPLAN"
+    Dim server As String = "LAPTOP-OC11LS61\SQLEXPRESS17"
     Dim user As String = "sa"
-    Dim pass As String = "1234"
+    Dim pass As String = "Kori$123"
 
     Public val As String = "0"
     Public strUsuario As String
@@ -39,8 +39,11 @@ Public Class MDI_Principal
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         '---Versiones
         '1.0.0 - Se agregaron los 3 reportes iniciales
-        lblVer.Caption = "Reportes Kórima Versión 2.31"
+        lblVer.Caption = "Reportes Kórima Versión 2.30.1"
         '--- Asignación de Id de Usua.1o desde parametro en linea de comando
+
+        'Salvador Ruiz 31052022
+        'comentar las líneas de Debug para compilar
 #If Not Debug Then
         If Environment.GetCommandLineArgs.Length > 1 Then
             IdUsuario = Environment.GetCommandLineArgs(1)
@@ -82,9 +85,11 @@ Public Class MDI_Principal
     End Sub
 
     Private Sub LlenaStatuBar()
+        'Salvador Ruiz 31052022
+        'comentar las líneas de Debug para compilar
 #If DEBUG Then
-        TxtUser.Caption = "Usuario: " & IdUsuario
-        strUsuario = IdUsuario
+                TxtUser.Caption = "Usuario: " & IdUsuario
+                strUsuario = IdUsuario
 #Else
         Dim cmd As New SqlCommand("Select Login From C_Usuarios Where IdUsuario = " & IdUsuario, New SqlConnection(cnnString))
         cmd.Connection.Open()
@@ -891,9 +896,9 @@ Public Class MDI_Principal
                 LoadCtrlUser(New CtrlUser_RPT_Layout_Presupuestal, tvMenu.SelectedNode.Text.Trim)
             Case 1499 ' Guía de Cumplimiento de la Ley de Disciplina Financiera de las Entidades Federativas y Municipios
                 LoadCtrlUser(New CtrlUser_RPT_Guia_Cumplimiento_LDF, tvMenu.SelectedNode.Text.Trim)
-            Case 1501 ' Guía de Cumplimiento de la Ley de Disciplina Financiera de las Entidades Federativas y Municipios
+            Case 1501 ' Folios no tramitados
                 LoadCtrlUser(New CtrlUser_RPT_FoliosNoTramitados, tvMenu.SelectedNode.Text.Trim)
-            Case 1502 ' Guía de Cumplimiento de la Ley de Disciplina Financiera de las Entidades Federativas y Municipios
+            Case 1502 ' Auxiliar
                 LoadCtrlUser(New CtrlUser_RPT_PolizaAuxiliarMayorCveIng, tvMenu.SelectedNode.Text.Trim)
             Case 1503 ' Comparativo Presupuestal por Sello
                 LoadCtrlUser(New CtrlUser_RPT_Comparativo_Calendarizado_Pres, tvMenu.SelectedNode.Text.Trim)
@@ -917,6 +922,30 @@ Public Class MDI_Principal
                 LoadCtrlUser(New CtrlUser_RPT_Anexo_Comprobaciones, tvMenu.SelectedNode.Text.Trim)
             Case 1516 ' Anexo Nóminas
                 LoadCtrlUser(New CtrlUser_RPT_Anexo_Nominas, tvMenu.SelectedNode.Text.Trim)
+            Case 1518 ' Presupuestales IDEFT
+                LoadCtrlUser(New CtrlUser_RPT_Presupuestales_IDEFT(1, 1), tvMenu.SelectedNode.Text.Trim)
+            Case 1519 ' Presupuestales IDEFT
+                LoadCtrlUser(New CtrlUser_RPT_Presupuestales_IDEFT(2, 2), tvMenu.SelectedNode.Text.Trim)
+            Case 1520 ' Presupuestales IDEFT
+                LoadCtrlUser(New CtrlUser_RPT_Presupuestales_IDEFT(3, 3), tvMenu.SelectedNode.Text.Trim)
+            Case 1521 ' Presupuestales IDEFT
+                LoadCtrlUser(New CtrlUser_RPT_Presupuestales_IDEFT(4, 4), tvMenu.SelectedNode.Text.Trim)
+            Case 1522 ' Presupuestales IDEFT
+                LoadCtrlUser(New CtrlUser_RPT_Presupuestales_IDEFT(5, 5), tvMenu.SelectedNode.Text.Trim)
+            Case 1523 ' Presupuestales IDEFT
+                LoadCtrlUser(New CtrlUser_RPT_Presupuestales_IDEFT(6, 6), tvMenu.SelectedNode.Text.Trim)
+            Case 1524 ' Presupuestales IDEFT Comparativo Ingreso vs Egreso
+                LoadCtrlUser(New CtrlUser_RPT_Presupuestales_IDEFT(7, 7), tvMenu.SelectedNode.Text.Trim)
+            Case 1525 ' Comparativo Ingreso vs Egreso
+                LoadCtrlUser(New CtrlUsr_RPT_Calendario_ING_EGR, tvMenu.SelectedNode.Text.Trim)
+            Case 1526 ' Anexo 1000
+                LoadCtrlUser(New CtrlUser_RPT_Anexo_1000, tvMenu.SelectedNode.Text.Trim)
+            Case 1527 ' Anexo 2000
+                LoadCtrlUser(New CtrlUser_RPT_Anexo_2000, tvMenu.SelectedNode.Text.Trim)
+            Case 1528 ' Erogaciones de Recursos 
+                LoadCtrlUser(New CtrlUser_RPT_Erogaciones_Recursos, tvMenu.SelectedNode.Text.Trim)
+            Case 1529 ' Anexo 5
+                LoadCtrlUser(New CtrlUser_RPT_Anexo5, tvMenu.SelectedNode.Text.Trim)
             Case Else
                 'MessageBox.Show("Error: Consulte al administrador", "Reporte no encontrado", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End Select
@@ -928,8 +957,11 @@ Public Class MDI_Principal
         Dim SQLConexion As SqlConnection = New SqlConnection(cnnString)
         SQLConexion.Open()
         Dim qryMenus As String
+
+        'Salvador Ruiz 31052022
+        'comentar las líneas de Debug para compilar
 #If DEBUG Then
-        qryMenus = "Select * From C_Menu Where OrigenDll = 'Reporteador' And Utilizar = 1 And IdPadre = " & IdPadre & " Order By Orden"
+                qryMenus = "Select * From C_Menu Where OrigenDll = 'Reporteador' And Utilizar = 1 And IdPadre = " & IdPadre & " Order By Orden"
 #Else
         qryMenus = "Select * From C_MenuUsuarios Where OrigenDll = 'Reporteador' And Utilizar = 1 And IdMenuPadre = " & IdPadre & " And IdUsuario = " & IdUsuario & " Order By Orden"
 #End If

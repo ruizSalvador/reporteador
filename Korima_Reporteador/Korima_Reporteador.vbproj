@@ -171,6 +171,48 @@
     <Compile Include="CtrlNotas\CtrlNotaInformePasivosContingentes.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="CtrlUsr\CtrlUser_RPT_Anexo5.Designer.vb">
+      <DependentUpon>CtrlUser_RPT_Anexo5.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CtrlUsr\CtrlUser_RPT_Anexo5.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtrlUsr\CtrlUser_RPT_Erogaciones_Recursos.Designer.vb">
+      <DependentUpon>CtrlUser_RPT_Erogaciones_Recursos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CtrlUsr\CtrlUser_RPT_Erogaciones_Recursos.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtrlUsr\CtrlUser_RPT_Anexo_2000.designer.vb">
+      <DependentUpon>CtrlUser_RPT_Anexo_2000.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CtrlUsr\CtrlUser_RPT_Anexo_2000.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtrlUsr\CtrlUser_RPT_Anexo_1000.designer.vb">
+      <DependentUpon>CtrlUser_RPT_Anexo_1000.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CtrlUsr\CtrlUser_RPT_Anexo_1000.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtrlUsr\CtrlUsr_RPT_Calendario_ING_EGR.designer.vb">
+      <DependentUpon>CtrlUsr_RPT_Calendario_ING_EGR.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CtrlUsr\CtrlUsr_RPT_Calendario_ING_EGR.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtrlUsr\CtrlUser_RPT_Ingresos_Egresos.Designer.vb">
+      <DependentUpon>CtrlUser_RPT_Ingresos_Egresos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CtrlUsr\CtrlUser_RPT_Ingresos_Egresos.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtrlUsr\CtrlUser_RPT_Presupuestales_IDEFT.designer.vb">
+      <DependentUpon>CtrlUser_RPT_Presupuestales_IDEFT.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CtrlUsr\CtrlUser_RPT_Presupuestales_IDEFT.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="CtrlUsr\CtrlUser_RPT_Anexo_Nominas.Designer.vb">
       <DependentUpon>CtrlUser_RPT_Anexo_Nominas.vb</DependentUpon>
     </Compile>
@@ -2247,6 +2289,84 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="PrintRibbonControllerResources.Designer.vb" />
+    <Compile Include="Reports\RPT_Anexo5_3.Designer.vb">
+      <DependentUpon>RPT_Anexo5_3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RPT_Anexo5_3.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RPT_Anexo5_2.Designer.vb">
+      <DependentUpon>RPT_Anexo5_2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RPT_Anexo5_2.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RPT_Anexo5_1.Designer.vb">
+      <DependentUpon>RPT_Anexo5_1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RPT_Anexo5_1.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RPT_Erogaciones_de_Recursos.Designer.vb">
+      <DependentUpon>RPT_Erogaciones_de_Recursos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RPT_Erogaciones_de_Recursos.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RPT_Anexo_4000_Nomina.Designer.vb">
+      <DependentUpon>RPT_Anexo_4000_Nomina.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RPT_Anexo_4000_Nomina.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RPT_Anexo_1000_Nomina.Designer.vb">
+      <DependentUpon>RPT_Anexo_1000_Nomina.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RPT_Anexo_1000_Nomina.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RPT_Calendario_ING_EGR.Designer.vb">
+      <DependentUpon>RPT_Calendario_ING_EGR.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RPT_Calendario_ING_EGR.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RPT_Presupuestal_IDEFT_4Colum_5.Designer.vb">
+      <DependentUpon>RPT_Presupuestal_IDEFT_4Colum_5.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RPT_Presupuestal_IDEFT_4Colum_5.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RPT_Presupuestal_IDEFT_2Colum_7.Designer.vb">
+      <DependentUpon>RPT_Presupuestal_IDEFT_2Colum_7.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RPT_Presupuestal_IDEFT_2Colum_7.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RPT_Presupuestal_IDEFT_4Colum.Designer.vb">
+      <DependentUpon>RPT_Presupuestal_IDEFT_4Colum.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RPT_Presupuestal_IDEFT_4Colum.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RPT_Ingresos_Egresos.Designer.vb">
+      <DependentUpon>RPT_Ingresos_Egresos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RPT_Ingresos_Egresos.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RPT_Presupuestal_IDEFT_2Colum.Designer.vb">
+      <DependentUpon>RPT_Presupuestal_IDEFT_2Colum.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RPT_Presupuestal_IDEFT_2Colum.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RPT_FirmasVerticalElectronica_Sin_Leyenda.Designer.vb">
+      <DependentUpon>RPT_FirmasVerticalElectronica_Sin_Leyenda.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RPT_FirmasVerticalElectronica_Sin_Leyenda.vb">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Reports\RPT_Anexo_Nominas.Designer.vb">
       <DependentUpon>RPT_Anexo_Nominas.vb</DependentUpon>
     </Compile>
@@ -4513,10 +4633,34 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>_Korima2_00_ReporteadorDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="_Korima2_00_ReporteadorDataSet1.vb">
+      <DependentUpon>_Korima2_00_ReporteadorDataSet1.xsd</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="CtrlNotas\CtrlNotaInformePasivosContingentes.resx">
       <DependentUpon>CtrlNotaInformePasivosContingentes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtrlUsr\CtrlUser_RPT_Anexo5.resx">
+      <DependentUpon>CtrlUser_RPT_Anexo5.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtrlUsr\CtrlUser_RPT_Erogaciones_Recursos.resx">
+      <DependentUpon>CtrlUser_RPT_Erogaciones_Recursos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtrlUsr\CtrlUser_RPT_Anexo_2000.resx">
+      <DependentUpon>CtrlUser_RPT_Anexo_2000.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtrlUsr\CtrlUser_RPT_Anexo_1000.resx">
+      <DependentUpon>CtrlUser_RPT_Anexo_1000.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtrlUsr\CtrlUsr_RPT_Calendario_ING_EGR.resx">
+      <DependentUpon>CtrlUsr_RPT_Calendario_ING_EGR.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtrlUsr\CtrlUser_RPT_Ingresos_Egresos.resx">
+      <DependentUpon>CtrlUser_RPT_Ingresos_Egresos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtrlUsr\CtrlUser_RPT_Presupuestales_IDEFT.resx">
+      <DependentUpon>CtrlUser_RPT_Presupuestales_IDEFT.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CtrlUsr\CtrlUser_RPT_Anexo_Nominas.resx">
       <DependentUpon>CtrlUser_RPT_Anexo_Nominas.vb</DependentUpon>
@@ -5348,18 +5492,22 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CtrlNotas\CtrlNota_BMI_ARMSCSC.resx">
       <DependentUpon>CtrlNota_BMI_ARMSCSC.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="CtrlNotas\CtrlNota_EFE_SIF.resx">
       <DependentUpon>CtrlNota_EFE_SIF.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="CtrlNotas\CtrlNota_IndiceDesgloseNotas.resx">
       <DependentUpon>CtrlNota_IndiceDesgloseNotas.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="CtrlNotas\CtrlNota_IndiceNotasGestionAdmtva.resx">
       <DependentUpon>CtrlNota_IndiceNotasGestionAdmtva.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CtrlNotas\CtrlNota_Indice_NotasdeMemoria.resx">
       <DependentUpon>CtrlNota_Indice_NotasdeMemoria.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="CtrlNotas\CtrlNota_NOTAS_DE_GESTION_ADMTIVA.resx">
       <DependentUpon>CtrlNota_NOTAS_DE_GESTION_ADMTIVA.vb</DependentUpon>
@@ -5528,6 +5676,45 @@
       <DependentUpon>CtrlUsr_CargadordeDocumentos.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PrintRibbonControllerResources.resx" />
+    <EmbeddedResource Include="Reports\RPT_Anexo5_3.resx">
+      <DependentUpon>RPT_Anexo5_3.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RPT_Anexo5_2.resx">
+      <DependentUpon>RPT_Anexo5_2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RPT_Anexo5_1.resx">
+      <DependentUpon>RPT_Anexo5_1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RPT_Erogaciones_de_Recursos.resx">
+      <DependentUpon>RPT_Erogaciones_de_Recursos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RPT_Anexo_4000_Nomina.resx">
+      <DependentUpon>RPT_Anexo_4000_Nomina.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RPT_Anexo_1000_Nomina.resx">
+      <DependentUpon>RPT_Anexo_1000_Nomina.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RPT_Calendario_ING_EGR.resx">
+      <DependentUpon>RPT_Calendario_ING_EGR.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RPT_Presupuestal_IDEFT_4Colum_5.resx">
+      <DependentUpon>RPT_Presupuestal_IDEFT_4Colum_5.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RPT_Presupuestal_IDEFT_2Colum_7.resx">
+      <DependentUpon>RPT_Presupuestal_IDEFT_2Colum_7.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RPT_Presupuestal_IDEFT_4Colum.resx">
+      <DependentUpon>RPT_Presupuestal_IDEFT_4Colum.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RPT_Ingresos_Egresos.resx">
+      <DependentUpon>RPT_Ingresos_Egresos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RPT_Presupuestal_IDEFT_2Colum.resx">
+      <DependentUpon>RPT_Presupuestal_IDEFT_2Colum.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RPT_FirmasVerticalElectronica_Sin_Leyenda.resx">
+      <DependentUpon>RPT_FirmasVerticalElectronica_Sin_Leyenda.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\RPT_Anexo_Nominas.resx">
       <DependentUpon>RPT_Anexo_Nominas.vb</DependentUpon>
     </EmbeddedResource>
@@ -6665,6 +6852,8 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="bin\Debug\Config.ini" />
+    <None Include="ClassDiagram2.cd" />
+    <None Include="ClassDiagram3.cd" />
     <None Include="DataSetAlvirde.xsc">
       <DependentUpon>DataSetAlvirde.xsd</DependentUpon>
     </None>

@@ -101,8 +101,6 @@ Partial Class CtrlUser_RPT_Anexo_Nominas
         Me.ChkMuestraNulos = New System.Windows.Forms.CheckBox()
         Me.SimpleButton1 = New DevExpress.XtraEditors.SimpleButton()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
-        Me.SearchLookUpEdit1 = New DevExpress.XtraEditors.SearchLookUpEdit()
-        Me.SearchLookUpEdit1View = New DevExpress.XtraGrid.Views.Grid.GridView()
         CType(Me.SplitContainerControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainerControl1.SuspendLayout()
         CType(Me.FechaFin.Properties.VistaTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -119,8 +117,6 @@ Partial Class CtrlUser_RPT_Anexo_Nominas
         CType(Me.filterPeriodoFin.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.filterEjercicio.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SearchLookUpEdit1.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SearchLookUpEdit1View, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'SplitContainerControl1
@@ -149,7 +145,6 @@ Partial Class CtrlUser_RPT_Anexo_Nominas
         Me.SplitContainerControl1.Panel1.Controls.Add(Me.ChkMuestraNulos)
         Me.SplitContainerControl1.Panel1.Controls.Add(Me.SimpleButton1)
         Me.SplitContainerControl1.Panel1.Text = "Panel1"
-        Me.SplitContainerControl1.Panel2.Controls.Add(Me.SearchLookUpEdit1)
         Me.SplitContainerControl1.Panel2.Controls.Add(Me.PrintControl1)
         Me.SplitContainerControl1.Panel2.Text = "Panel2"
         Me.SplitContainerControl1.Size = New System.Drawing.Size(1128, 619)
@@ -925,23 +920,6 @@ Partial Class CtrlUser_RPT_Anexo_Nominas
         '
         Me.ErrorProvider1.ContainerControl = Me
         '
-        'SearchLookUpEdit1
-        '
-        Me.SearchLookUpEdit1.Location = New System.Drawing.Point(200, 286)
-        Me.SearchLookUpEdit1.MenuManager = Me.PrintBarManager1
-        Me.SearchLookUpEdit1.Name = "SearchLookUpEdit1"
-        Me.SearchLookUpEdit1.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.SearchLookUpEdit1.Properties.View = Me.SearchLookUpEdit1View
-        Me.SearchLookUpEdit1.Size = New System.Drawing.Size(100, 26)
-        Me.SearchLookUpEdit1.TabIndex = 2
-        '
-        'SearchLookUpEdit1View
-        '
-        Me.SearchLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus
-        Me.SearchLookUpEdit1View.Name = "SearchLookUpEdit1View"
-        Me.SearchLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = False
-        Me.SearchLookUpEdit1View.OptionsView.ShowGroupPanel = False
-        '
         'CtrlUser_RPT_Anexo_Nominas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
@@ -970,8 +948,6 @@ Partial Class CtrlUser_RPT_Anexo_Nominas
         CType(Me.filterPeriodoFin.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.filterEjercicio.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.SearchLookUpEdit1.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.SearchLookUpEdit1View, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1052,7 +1028,5 @@ Partial Class CtrlUser_RPT_Anexo_Nominas
     Friend WithEvents LabelControl2 As DevExpress.XtraEditors.LabelControl
     Friend WithEvents FechaFin As DevExpress.XtraEditors.DateEdit
     Friend WithEvents FechaIni As DevExpress.XtraEditors.DateEdit
-    Friend WithEvents SearchLookUpEdit1 As DevExpress.XtraEditors.SearchLookUpEdit
-    Friend WithEvents SearchLookUpEdit1View As DevExpress.XtraGrid.Views.Grid.GridView
 
 End Class
