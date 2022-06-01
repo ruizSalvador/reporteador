@@ -1,0 +1,3 @@
+﻿Public Class RPT_Estado_De_Actividades_Detallado
+
+End Class

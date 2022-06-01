@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="label77.Text" xml:space="preserve">
+    <value>Los Estados Financieros  deberán estar rubricados en cada página de los mismos e incluir al final la siguiente leyenda:
+
+" Bajo protesta de decir verdad declaramos que los Estados Financieros y sus notas, son razonablemente correctos y son responsabilidad del emisor".</value>
+  </data>
+  <data name="label22.Text" xml:space="preserve">
+    <value>e).- Para las entidades que por primera vez estén implementando la base devengado de acuerdo a la Ley de Contabilidad, deberán:
+
+- Revelar las nuevas políticas de reconocimiento.
+- Su plan de implementación.
+- Revelar los cambios en las políticas, la clasificación y medición de las mismas, así como su impacto en la información financiera.
+- Presentar los últimos estados financieros con la normatividad anteriormente utilizada con las nuevas políticas para fines de comparación en la transición a la base devengado.</value>
+  </data>
+  <data name="label17.Text" xml:space="preserve">
+    <value>b).- La normatividad aplicada para el reconocimiento, valuación y revelación de los diferentes rubros de la información financiera, así como las bases de medición utilizadas para la elaboración de los estados financieros; por ejemplo: costo histórico, valor de realización, valor razonable, valor de recuperación o cualquier otro método empleado y los criterios de aplicación de los mismos.</value>
+  </data>
+  <data name="label71.Text" xml:space="preserve">
+    <value>Cuando se considere necesario se podrá revelar la información financiera de manera segmentada debido a la diversidad de las actividades y operaciones que se realizan los entes públicos, ya que la misma proporciona información acerca de las diferentes actividades operativas en las cuales participa, de los productos o servicios que maneja, de las diferentes áreas geográficas, de los grupos homogéneos con el objetivo de entender el desempeño del ente, evaluar mejor los riesgos y beneficios del mismo; y entenderlo como un todo y sus partes integrantes.
+
+Consecuentemente, esta información contribuye al análisis más preciso de la situación financiera, grados y fuentes de riesgo y crecimiento potencial de negocio.
+
+</value>
+  </data>
+  <data name="label21.Text" xml:space="preserve">
+    <value>d).- Normatividad supletoria. En caso de emplear varios grupos de normatividades (normatividades supletorias), deberá realizar la justificación razonable correspondiente, su alineación con los PBCG y  a las características cualitativas asociadas descritas en el MCCG (documentos publicados en el Diario Oficial de la Federación, agosto 2009).</value>
+  </data>
+  <data name="label73.Text" xml:space="preserve">
+    <value>El ente público informará el efecto  en sus estados financieros de aquellos hechos ocurridos en el periodo posterior al que informa, que proporcionan mayor evidencia sobre eventos que le afectan económicamente y que no se conocían a la fecha de cierre.</value>
+  </data>
+  <data name="label47.Text" xml:space="preserve">
+    <value>f).- Otras circunstancias de carácter significativo que afecten el archivo, tales como bienes en garantía, señalados en embargos, litigios, títulos de inversiones entregados en garantías, baja significativa del valor de inversiones financieras, etc.</value>
+  </data>
+  <data name="label29.Text" xml:space="preserve">
+    <value>e).- Beneficios y empleados: revelar el cálculo de la reserva actuarial, valor presente de los ingresos esperados comparado con el valor presente de la estimación de gastos tanto de los beneficiarios actuales como futuros.</value>
+  </data>
+  <data name="label25.Text" xml:space="preserve">
+    <value>a).- Actualización: se informará del método utilizado para la actualización del valor de los activos, pasivos y Hacienda Pública y/o patrimonio y las razones de dicha elección. Así como informar de la desconexión o reconexión inflacionaria.</value>
+  </data>
+  <data name="label11.Text" xml:space="preserve">
+    <value>Los Estados Financieros de los entes públicos, proveen de información financiera a los principales usuarios de la misma, al congreso y a los ciudadanos.
+
+El objetivo del presente documento es la revelación del contexto y de los aspectos económicos-financieros más relevantes que influyeron en las decisiones del periodo, y que deberán ser considerados en la elaboración de los estados financieros para la mayor comprensión de los mismos y sus particularidades.
+
+De esta manera, se informa y explica la respuesta del gobierno a las condiciones relacionadas con la información financiera de cada periodo de gestión; además, de exponer aquellas políticas que podrían afectar la toma de decisiones en periodos posteriores.</value>
+  </data>
+</root>

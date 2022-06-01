@@ -1,0 +1,3 @@
+﻿Public Class RPT_Relacion_Analitica_Otras_Cuentas_por_Pagar_Corto_Plazo
+
+End Class

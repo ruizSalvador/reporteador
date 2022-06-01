@@ -1,0 +1,58 @@
+Update C_Menu Set Utilizar = 1 Where IdMenu in (1105, 1102, 1081)
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_nota_ea_gop]') AND type in (N'P'))
+DROP PROCEDURE sp_nota_ea_gop
+GO
+
+CREATE PROCEDURE sp_nota_ea_gop
+@ejercicio int, @periodo int
+AS
+DECLARE @tablaRpt TABLE(Cuenta varchar(30), Nombre varchar(255), Monto decimal(15,2), Nota text, porcentaje decimal(15,2), negritas bit, tipo bit)
+
+DECLARE @total decimal(15,2)
+
+SELECT @total = CargosSinFlujo - AbonosSinFlujo + TotalCargos - TotalAbonos
+FROM C_Contable a INNER JOIN T_SaldosInicialesCont b ON a.IdCuentaContable = b.IdCuentaContable
+WHERE Mes = @periodo AND [Year] = @ejercicio AND substring(a.NumeroCuenta,1,5) in ('50000') 
+And SUBSTRING(NumeroCuenta,7,5) = '00000'
+
+Insert Into @tablaRpt 
+Select Substring(NumeroCuenta,1,5), NombreCuenta, 0, Substring(NumeroCuenta,1,5) +' ...Click para editar...' , 0, 0, 0 From C_Contable
+Where NumeroCuenta like '5%' AND NumeroCuenta not like '54%' AND SUBSTRING(NumeroCuenta,7,5) = '00000'
+Order By NumeroCuenta
+
+If @total <> 0
+Update @tablaRpt Set Monto = CargosSinFlujo - AbonosSinFlujo + TotalCargos - TotalAbonos,
+porcentaje = (((CargosSinFlujo - AbonosSinFlujo + TotalCargos - TotalAbonos)*100)/@total)
+--Nota = Substring(Cuenta,1,5)  + ' Click para editar...',
+--Cuenta = Substring(Cuenta,1,5)
+From T_SaldosInicialesCont b INNER JOIN C_Contable c ON b.IdCuentaContable = c.IdCuentaContable
+INNER JOIN @tablaRpt a ON a.Cuenta = c.NumeroCuenta
+Where Mes = @periodo And [Year] = @ejercicio
+
+else If @total = 0
+Update @tablaRpt Set Monto = CargosSinFlujo - AbonosSinFlujo + TotalCargos - TotalAbonos,
+porcentaje = (((CargosSinFlujo - AbonosSinFlujo + TotalCargos - TotalAbonos)*100))
+--Nota =  Substring(Cuenta,1,5) + ' Click para editar...',
+--Cuenta = Substring(Cuenta,1,5)
+From T_SaldosInicialesCont b INNER JOIN C_Contable c ON b.IdCuentaContable = c.IdCuentaContable
+INNER JOIN @tablaRpt a ON a.Cuenta = c.NumeroCuenta
+Where Mes = @periodo And [Year] = @ejercicio
+
+
+Update @tablaRpt Set negritas = 1
+Where SUBSTRING(Cuenta,1,2) In ('50', '51', '52', '53', '55')
+And SUBSTRING(Cuenta,4,1) = '0'
+
+Update @tablaRpt Set tipo = 1
+Where Cuenta = '5000'
+
+
+Select Cuenta, Nombre, Monto/1000 as Monto, porcentaje, Nota, negritas, tipo From @tablaRpt Order by Cuenta
+GO
+
+
+Exec SP_FirmasReporte 'Gastos y Otras Pérdidas'
+GO
+--exec sp_nota_ea_gop 2012, 1

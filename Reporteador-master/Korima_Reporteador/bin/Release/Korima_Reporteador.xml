@@ -1,0 +1,3089 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Korima_Reporteador
+</name>
+</assembly>
+<members>
+<member name="T:Korima_Reporteador.DSLuisRojas.SP_RPT_Relacion_Analitica_Efectivo_ISAFDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DSLuisRojas.SP_RPT_Relacion_Analitica_Bancos_Tesoreria_ISAFDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DSLuisRojas.SP_RPT_Relacion_Analitica_CXC_Corto_Plazo_ISAFDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DSLuisRojas.SP_RPT_Relacion_Analitica_Terrenos_ISAFDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DSLuisRojas.SP_RPT_Relacion_Analitica_Edificios_NO_Habitacionales_ISAFDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DSLuisRojas.SP_RPT_Relacion_Analitica_Mobiliario_Equipo_Admon_ISAFDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DSLuisRojas.SP_RPT_Relacion_Analitica_Vehículos_Equipo_Transporte_ISAFDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DSLuisRojas.SP_RPT_Relacion_Analitica_Proveedores_por_Pagar_Corto_Plazo_ISAFDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DSLuisRojas.SP_RPT_Relacion_Analitica_Otras_Cuentas_por_Pagar_Corto_Plazo_ISAFDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DSLuisRojas.SP_RPT_K2_Comprobacion_DIOTDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DSLuisRojas.SP_RPT_Relacion_Analitica_Efectivo_ISAFRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DSLuisRojas.SP_RPT_Relacion_Analitica_Bancos_Tesoreria_ISAFRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DSLuisRojas.SP_RPT_Relacion_Analitica_CXC_Corto_Plazo_ISAFRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DSLuisRojas.SP_RPT_Relacion_Analitica_Terrenos_ISAFRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DSLuisRojas.SP_RPT_Relacion_Analitica_Edificios_NO_Habitacionales_ISAFRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DSLuisRojas.SP_RPT_Relacion_Analitica_Mobiliario_Equipo_Admon_ISAFRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DSLuisRojas.SP_RPT_Relacion_Analitica_Vehículos_Equipo_Transporte_ISAFRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DSLuisRojas.SP_RPT_Relacion_Analitica_Proveedores_por_Pagar_Corto_Plazo_ISAFRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DSLuisRojas.SP_RPT_Relacion_Analitica_Otras_Cuentas_por_Pagar_Corto_Plazo_ISAFRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DSLuisRojas.SP_RPT_K2_Comprobacion_DIOTRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DSLuisRojas.SP_RPT_Relacion_Analitica_Efectivo_ISAFRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DSLuisRojas.SP_RPT_Relacion_Analitica_Bancos_Tesoreria_ISAFRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DSLuisRojas.SP_RPT_Relacion_Analitica_CXC_Corto_Plazo_ISAFRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DSLuisRojas.SP_RPT_Relacion_Analitica_Terrenos_ISAFRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DSLuisRojas.SP_RPT_Relacion_Analitica_Edificios_NO_Habitacionales_ISAFRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DSLuisRojas.SP_RPT_Relacion_Analitica_Mobiliario_Equipo_Admon_ISAFRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DSLuisRojas.SP_RPT_Relacion_Analitica_Vehículos_Equipo_Transporte_ISAFRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DSLuisRojas.SP_RPT_Relacion_Analitica_Proveedores_por_Pagar_Corto_Plazo_ISAFRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DSLuisRojas.SP_RPT_Relacion_Analitica_Otras_Cuentas_por_Pagar_Corto_Plazo_ISAFRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DSLuisRojas.SP_RPT_K2_Comprobacion_DIOTRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DSLuisRojas">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.ResourceManager">
+	<summary>
+  Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Culture">
+	<summary>
+  Reemplaza la propiedad CurrentUICulture del subproceso actual para todas las
+  búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources._16_On">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources._24_On">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources._32_On">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources._48_On">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.account_settings_16">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Add_16x16">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Add_24x24">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Add_32x32">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Add_48x48">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.CC_Buscar_128">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.CC_Buscar_16">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.CC_Buscar_24">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.CC_Buscar_32">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.CC_Buscar_48">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.CC_ExportExcel_16">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.CC_ExportExcel_24">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.CC_ExportExcel_32">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.CC_ExportExcel_48">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.cms_128">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.cms_16">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.cms_161">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.cms_24">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.cms_32">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.cms_48">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.connection_string_config_128">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.connection_string_config_16">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.connection_string_config_24">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.connection_string_config_32">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.connection_string_config_48">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Copy_16x16">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Copy_24x24">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Copy_32x32">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Copy_48x48">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Cut_16x16">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Cut_24x24">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Cut_32x32">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Cut_48x48">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Delete_16x16">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Delete_24x24">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Delete_32x32">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Delete_48x48">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Filter_128x128">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Filter_16x16">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Filter_24x24">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Filter_32x32">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Filter_48x48">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Frame_Imagen_128">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Help_16x16">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Help_24x24">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Help_32x32">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Help_48x48">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Information_16x16">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Information_24x24">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Information_32x32">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Information_48x48">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Invoce_128">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Invoce_16">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Invoce_24">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Invoce_32">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Invoce_48">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Korima128">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Korima16">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Korima24">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Korima256">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Korima32">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Korima48">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Log_Out_16x16">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Log_Out_24x24">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Log_Out_32x32">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Log_Out_48x48">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Ok_128">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Ok_16">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Ok_24">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Ok_32">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Ok_48">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Open_16x16">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Open_24x24">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Open_32x32">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Open_48x48">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.password_lock_128">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.password_lock_16">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.password_lock_24">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.password_lock_32">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.password_lock_48">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Paste_16x16">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Paste_24x24">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Paste_32x32">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Paste_48x48">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Print_16x16">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Print_24x24">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Print_32x32">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Print_48x48">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Redo_16x16">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Redo_24x24">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Redo_32x32">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Redo_48x48">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Refresh_16x16">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Refresh_24x24">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Refresh_32x32">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Refresh_48x48">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Remove_16x16">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Remove_24x24">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Remove_32x32">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Remove_48x48">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Save_16x16">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Save_24x24">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Save_32x32">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Save_48x48">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Servidor_128">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Servidor_24">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Servidor_32">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Servidor_48">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Servidor_Buscar_128">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Servidor_Buscar_16">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Servidor_Buscar_24">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Servidor_Buscar_32">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Servidor_Buscar_48">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Servidor_Mal_128">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Servidor_Mal_16">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Servidor_Mal_24">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Servidor_Mal_32">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Servidor_Mal_48">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Servidor_Ok_128">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Servidor_Ok_16">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Servidor_Ok_24">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Servidor_Ok_32">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Servidor_Ok_48">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Servidor_Q_128">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Servidor_Q_15">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Servidor_Q_16">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Servidor_Q_24">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Servidor_Q_32">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Servidor_Q_48">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Spell_Check16">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Spell_Check24">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Spell_Check32">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Spell_Check48">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Trash_Green16">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Trash_Green24">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Trash_Green32">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Trash_Green48">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Undo_16x16">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Undo_24x24">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Undo_32x32">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.Undo_48x48">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.User_16x16">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.User_24x24">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.User_32x32">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Korima_Reporteador.My.Resources.Resources.User_48x48">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="T:Korima_Reporteador.My.Resources.Resources">
+	<summary>
+  Clase de recurso fuertemente tipado, para buscar cadenas traducidas, etc.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_NOTA_ESF_PDODataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_AuxiliarMayorDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_NOTA_ESF_BMII_AIDDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_NOTA_ESF_CDPDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_NOTA_ESF_BMII_BMIDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_EstadoEjercicioIngresos_Rubro_TipoDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_EstadoEjercicioIngresos_Rubro_Tipo_ClaseDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_EstadoEjercicioIngresos_Rubro_Tipo_Clase_ConceptoDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_EstadoEjercicioIngresos_Concepto_FuenteFinanciamientoDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.VW_RPT_K2_AnaliticoDelActivoDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_PlanCuentasDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.VW_RPT_K2_Balanza_De_ComprobacionDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_NOTA_FEDGFRDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_CalendarioMensualIngresosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_ClasificacionEconomicaDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_CuentaEconomicaDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.VW_RPT_K2_Adquisiciones_OrdenesCompraServicioDependenciaPartidaProveedorDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_Conciliacion_MovimientosConciliadosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_Conciliacion_MovimientosNoConciliadosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_Conciliacion_AhorroDeshorroDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_ChequesTrasferenciasDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_CuentasBancariasProductivasDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_AplicacionRecursosFORTAMUNDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_SaldosPromediosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn._sp_rpt_Libro_InventarioMateriasPrimas_AlmacenMateriasSuministrosConsumoDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_TablaVacia_DataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_FacturasRecibidasDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_Libro_Inventario_Bienes_Muebles_InmueblesDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_Montos_Pagados_Ayudas_SubsidiosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_RelacionBienesPatrimonio2DataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_Analitico_PlazasDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_Conceptos_Percepciones_DeduccionesDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_Plazas_ExistentesDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_Personal_HonorariosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_EstadoEjercicioIngresos_RubroDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_Estado_Situacion_FinancieraDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_Estado_Situacion_FinancieraV1_1DataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_AnaliticoDeLaDeudaPublicaV2DataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_GastosDepartamentoDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_CuentasPorPagarDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_CatalogoServiciosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_AuxiliarPresupuestalDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_FAISDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_ExistenciasAlmacenDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_EgresosClasificacionAdministrativaPoderDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_IngresosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_EgresosClasificacionAdministrativaParaestatalDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_ConciliacionIngresosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_ConciliacionEgresosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_IndicadoresPosturaFiscalDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_EndeudamientoNetoDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_InteresesDeudaDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_RelacionBienesPatrimonioDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_ConsultaActivosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_ConciliacionBancariaDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_RelacionBienesPatrimonio_CuentasPeriodoDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_Informes_ActuariasDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_TestBalanceDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_EstadoAnalitico_IngresosDetalladoDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_ClasificacionFuncional_finalidadFuncionDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_EstadoAnaliticoEjercicio_PresupuestoEgresosDetalladoDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_EstadoAnalitico_PresupuestoEgresosDetalladoDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_EstadoEjercicio_PresupuestoEgresosDetalladoDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_Proyecciones_IngresosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_Proyecciones_EgresosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_Resultado_IngresosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_Resultados_EgresosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_Traspaso2DataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_Inversion2DataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_CuentasBancariasDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.RPT_K2_Adquisiciones_OrdenesCompraServicioDependenciaPartidaProveedorDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_ConceptosNominaDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_OrdenCompraTipoAsignacionDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_ImportesPorTipoServiciosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT__Relacion_DE_Adquisiciones_DE_Bienes_Muebles_E_InmueblesDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_Pagos_ADEFASDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_Informativa_ProveedoresDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_Guia_Cumplimiento_LDFDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_FoliosNoTramitadosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.RPT_SP_Padron_ProveedoresDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_NOTA_ESF_PDORow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_AuxiliarMayorRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_NOTA_ESF_BMII_AIDRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_NOTA_ESF_CDPRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_NOTA_ESF_BMII_BMIRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_EstadoEjercicioIngresos_Rubro_TipoRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_EstadoEjercicioIngresos_Rubro_Tipo_ClaseRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_EstadoEjercicioIngresos_Rubro_Tipo_Clase_ConceptoRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_EstadoEjercicioIngresos_Concepto_FuenteFinanciamientoRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.VW_RPT_K2_AnaliticoDelActivoRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_PlanCuentasRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.VW_RPT_K2_Balanza_De_ComprobacionRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_NOTA_FEDGFRRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_CalendarioMensualIngresosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_ClasificacionEconomicaRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_CuentaEconomicaRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.VW_RPT_K2_Adquisiciones_OrdenesCompraServicioDependenciaPartidaProveedorRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_Conciliacion_MovimientosConciliadosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_Conciliacion_MovimientosNoConciliadosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_Conciliacion_AhorroDeshorroRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_ChequesTrasferenciasRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_CuentasBancariasProductivasRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_AplicacionRecursosFORTAMUNRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_SaldosPromediosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn._sp_rpt_Libro_InventarioMateriasPrimas_AlmacenMateriasSuministrosConsumoRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_TablaVacia_Row">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_FacturasRecibidasRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_Libro_Inventario_Bienes_Muebles_InmueblesRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_Montos_Pagados_Ayudas_SubsidiosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_RelacionBienesPatrimonio2Row">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_Analitico_PlazasRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_Conceptos_Percepciones_DeduccionesRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_Plazas_ExistentesRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_Personal_HonorariosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_EstadoEjercicioIngresos_RubroRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_Estado_Situacion_FinancieraRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_Estado_Situacion_FinancieraV1_1Row">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_AnaliticoDeLaDeudaPublicaV2Row">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_GastosDepartamentoRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_CuentasPorPagarRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_CatalogoServiciosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_AuxiliarPresupuestalRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_FAISRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_ExistenciasAlmacenRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_EgresosClasificacionAdministrativaPoderRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_IngresosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_EgresosClasificacionAdministrativaParaestatalRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_ConciliacionIngresosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_ConciliacionEgresosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_IndicadoresPosturaFiscalRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_EndeudamientoNetoRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_InteresesDeudaRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_RelacionBienesPatrimonioRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_ConsultaActivosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_ConciliacionBancariaRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_RelacionBienesPatrimonio_CuentasPeriodoRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_Informes_ActuariasRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_TestBalanceRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_EstadoAnalitico_IngresosDetalladoRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_ClasificacionFuncional_finalidadFuncionRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_EstadoAnaliticoEjercicio_PresupuestoEgresosDetalladoRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_EstadoAnalitico_PresupuestoEgresosDetalladoRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_EstadoEjercicio_PresupuestoEgresosDetalladoRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_Proyecciones_IngresosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_Proyecciones_EgresosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_Resultado_IngresosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_Resultados_EgresosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_Traspaso2Row">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_Inversion2Row">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_CuentasBancariasRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.RPT_K2_Adquisiciones_OrdenesCompraServicioDependenciaPartidaProveedorRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_ConceptosNominaRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_OrdenCompraTipoAsignacionRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_ImportesPorTipoServiciosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT__Relacion_DE_Adquisiciones_DE_Bienes_Muebles_E_InmueblesRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_Pagos_ADEFASRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_Informativa_ProveedoresRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_Guia_Cumplimiento_LDFRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_FoliosNoTramitadosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.RPT_SP_Padron_ProveedoresRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_NOTA_ESF_PDORowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_AuxiliarMayorRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_NOTA_ESF_BMII_AIDRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_NOTA_ESF_CDPRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_NOTA_ESF_BMII_BMIRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_EstadoEjercicioIngresos_Rubro_TipoRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_EstadoEjercicioIngresos_Rubro_Tipo_ClaseRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_EstadoEjercicioIngresos_Rubro_Tipo_Clase_ConceptoRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_EstadoEjercicioIngresos_Concepto_FuenteFinanciamientoRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.VW_RPT_K2_AnaliticoDelActivoRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_PlanCuentasRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.VW_RPT_K2_Balanza_De_ComprobacionRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_NOTA_FEDGFRRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_CalendarioMensualIngresosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_ClasificacionEconomicaRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_CuentaEconomicaRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.VW_RPT_K2_Adquisiciones_OrdenesCompraServicioDependenciaPartidaProveedorRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_Conciliacion_MovimientosConciliadosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_Conciliacion_MovimientosNoConciliadosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_Conciliacion_AhorroDeshorroRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_ChequesTrasferenciasRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_CuentasBancariasProductivasRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_AplicacionRecursosFORTAMUNRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_SaldosPromediosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn._sp_rpt_Libro_InventarioMateriasPrimas_AlmacenMateriasSuministrosConsumoRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_TablaVacia_RowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_FacturasRecibidasRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_Libro_Inventario_Bienes_Muebles_InmueblesRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_Montos_Pagados_Ayudas_SubsidiosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_RelacionBienesPatrimonio2RowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_Analitico_PlazasRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_Conceptos_Percepciones_DeduccionesRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_Plazas_ExistentesRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_Personal_HonorariosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_EstadoEjercicioIngresos_RubroRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_Estado_Situacion_FinancieraRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_Estado_Situacion_FinancieraV1_1RowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_AnaliticoDeLaDeudaPublicaV2RowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_GastosDepartamentoRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_CuentasPorPagarRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_CatalogoServiciosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_AuxiliarPresupuestalRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_FAISRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_ExistenciasAlmacenRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_EgresosClasificacionAdministrativaPoderRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_IngresosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_EgresosClasificacionAdministrativaParaestatalRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_ConciliacionIngresosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_ConciliacionEgresosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_IndicadoresPosturaFiscalRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_EndeudamientoNetoRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_InteresesDeudaRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_RelacionBienesPatrimonioRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_ConsultaActivosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_ConciliacionBancariaRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_RelacionBienesPatrimonio_CuentasPeriodoRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_Informes_ActuariasRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_TestBalanceRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_EstadoAnalitico_IngresosDetalladoRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_ClasificacionFuncional_finalidadFuncionRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_EstadoAnaliticoEjercicio_PresupuestoEgresosDetalladoRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_EstadoAnalitico_PresupuestoEgresosDetalladoRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_EstadoEjercicio_PresupuestoEgresosDetalladoRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_Proyecciones_IngresosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_Proyecciones_EgresosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_Resultado_IngresosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_Resultados_EgresosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_Traspaso2RowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_Inversion2RowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_CuentasBancariasRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.RPT_K2_Adquisiciones_OrdenesCompraServicioDependenciaPartidaProveedorRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_ConceptosNominaRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_OrdenCompraTipoAsignacionRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_K2_ImportesPorTipoServiciosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT__Relacion_DE_Adquisiciones_DE_Bienes_Muebles_E_InmueblesRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_Pagos_ADEFASRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_Informativa_ProveedoresRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_Guia_Cumplimiento_LDFRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.SP_RPT_FoliosNoTramitadosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn.RPT_SP_Padron_ProveedoresRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.dsNotasBenn">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:Korima_Reporteador.DSetArturo.SP_RPT_AnaliticoDeLaDeudaPublicaPorPeriodoLDFDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DSetArturo.SP_RPT_AnaliticoDeLaDeudaPublicaPorPeriodoLDFRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DSetArturo.SP_RPT_AnaliticoDeLaDeudaPublicaPorPeriodoLDFRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DSetArturo">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSet1.VW_RPT_CFG_DatosEntesDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSet1.VW_RPT_CFG_DatosEntesRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSet1.VW_RPT_CFG_DatosEntesRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSet1">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSet1TableAdapters.VW_RPT_CFG_DatosEntesTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:Korima_Reporteador._Korima2_00_ReporteadorDataSet1TableAdapters.TableAdapterManager.UpdateUpdatedRows(Korima_Reporteador._Korima2_00_ReporteadorDataSet1,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:Korima_Reporteador._Korima2_00_ReporteadorDataSet1TableAdapters.TableAdapterManager.UpdateInsertedRows(Korima_Reporteador._Korima2_00_ReporteadorDataSet1,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:Korima_Reporteador._Korima2_00_ReporteadorDataSet1TableAdapters.TableAdapterManager.UpdateDeletedRows(Korima_Reporteador._Korima2_00_ReporteadorDataSet1,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:Korima_Reporteador._Korima2_00_ReporteadorDataSet1TableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:Korima_Reporteador._Korima2_00_ReporteadorDataSet1TableAdapters.TableAdapterManager.UpdateAll(Korima_Reporteador._Korima2_00_ReporteadorDataSet1)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSet1TableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSet1TableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetArturo.SP_RPT_AnaliticoDeLaDeudaPublicaPorPeriodoDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetArturo.SP_RPT_AnaliticoDeLaDeudaPublicaPorPeriodoRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetArturo.SP_RPT_AnaliticoDeLaDeudaPublicaPorPeriodoRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetArturo">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca1.NotaDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca1.Nota2DataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca1.NotaRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca1.Nota2Row">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca1.NotaRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca1.Nota2RowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca1">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="P:Korima_Reporteador.PrintRibbonControllerResources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:Korima_Reporteador.PrintRibbonControllerResources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:Korima_Reporteador.PrintRibbonControllerResources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.NotaDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.Nota2DataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPTIniciativaLeydeIngresosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_CalendarioPresupuestoEgresosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_FormatoProgramaRecursosOrdendeGobDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_DifusionPresupuestoEgresosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_DifusionLeydeIngresosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_NOTA_FIOPoGFFedDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_SUB_NOTA_FIOPoGFFed2DataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_SUB_NOTA_FIOPoGFFedDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_Tarifario_IngresosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_EstadoEjercicioPresupuestoEGRDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_InformeAdmtvoEstadoEjercicioPresupuestoEGRDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_EstadoEjercicioPresupuestoEGR4NivelesDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_ConsultaEstadodelEjerciciodelPresupuestoDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_Control_PresupuestalDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_ControlPresupuestalIngresoDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_CriTarifarioDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_TarifarioIngresosUsuarioDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_PuntoRecaudacionTarifarioDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_AuditoriaContableDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_PolizasFuenteFinanciamientoDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_CatalogoMatricesConversionDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_ReporteCalendarizadoPresupuestalDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_ReporteCalendarizadoPresupuestalPorSelloDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_GastosXComprobar_FondosRevolventesDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_NominasDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_IngresosXRecaudarDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_IngresosRecaudadosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_AnaliticoPorProveedorContableDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_TransferenciasPresupuestalesDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_Plaza_FunciónDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_PagosRetroactivosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_MovimientosPlazasDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_CatalogoPercDeducDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_PersonalFederalizadoXRfcDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_JubiladosPeriodoDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_CategoriasPlazasAutorizadasDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_CategoriasTabuladoresDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_ImpresionPolizasDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_ContrareciboMultiplesFacturasDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_CuadroComparativoDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_OrdenCompraDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_OrdenServicioDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_ExistenciasConMinimosyMaximosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_UltimosCostosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_EntradaSalidasAlmacenDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_ConsultaDeViaticosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_InformeAnaliticoObligacionesDifFinanciamientosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_BalancePresupuestarioDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_Informes_ActuariasDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_RequisicionesDeServiciosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_OrdenesServicioDetalleDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_CuentasGastoFacturaDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_SolicitudesPagoDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_Control_Presupuestal_DevengadoDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.VW_RPT_K2_Balanza_De_Comprobacion_AnexosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.RPT_FichaTecnicaIndicadorProyectoInstitucionalDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_Gasto_DepartamentoDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_Detalle_Movimientos_AlmacenDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_Formato_ResguardoDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_Transferencias_Asignaciones_AyudasDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_K2_Auxiliar_DIOTDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_Layout_PresupuestalDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.RPT_SP_Layout_DevengadoDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.RPT_SP_Layout_Devengado_ContableDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.RPT_SP_Comparativo_Calendarizado_PresDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.RPT_SP_Layout_PagadoDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_Layout_FederacionDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.RPT_SP_Anexo_ComprobacionDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.RPT_SP_Anexo_NominasDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.NotaRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.Nota2Row">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPTIniciativaLeydeIngresosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_CalendarioPresupuestoEgresosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_FormatoProgramaRecursosOrdendeGobRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_DifusionPresupuestoEgresosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_DifusionLeydeIngresosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_NOTA_FIOPoGFFedRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_SUB_NOTA_FIOPoGFFed2Row">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_SUB_NOTA_FIOPoGFFedRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_Tarifario_IngresosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_EstadoEjercicioPresupuestoEGRRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_InformeAdmtvoEstadoEjercicioPresupuestoEGRRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_EstadoEjercicioPresupuestoEGR4NivelesRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_ConsultaEstadodelEjerciciodelPresupuestoRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_Control_PresupuestalRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_ControlPresupuestalIngresoRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_CriTarifarioRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_TarifarioIngresosUsuarioRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_PuntoRecaudacionTarifarioRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_AuditoriaContableRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_PolizasFuenteFinanciamientoRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_CatalogoMatricesConversionRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_ReporteCalendarizadoPresupuestalRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_ReporteCalendarizadoPresupuestalPorSelloRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_GastosXComprobar_FondosRevolventesRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_NominasRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_IngresosXRecaudarRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_IngresosRecaudadosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_AnaliticoPorProveedorContableRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_TransferenciasPresupuestalesRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_Plaza_FunciónRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_PagosRetroactivosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_MovimientosPlazasRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_CatalogoPercDeducRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_PersonalFederalizadoXRfcRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_JubiladosPeriodoRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_CategoriasPlazasAutorizadasRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_CategoriasTabuladoresRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_ImpresionPolizasRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_ContrareciboMultiplesFacturasRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_CuadroComparativoRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_OrdenCompraRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_OrdenServicioRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_ExistenciasConMinimosyMaximosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_UltimosCostosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_EntradaSalidasAlmacenRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_ConsultaDeViaticosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_InformeAnaliticoObligacionesDifFinanciamientosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_BalancePresupuestarioRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_Informes_ActuariasRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_RequisicionesDeServiciosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_OrdenesServicioDetalleRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_CuentasGastoFacturaRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_SolicitudesPagoRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_Control_Presupuestal_DevengadoRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.VW_RPT_K2_Balanza_De_Comprobacion_AnexosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.RPT_FichaTecnicaIndicadorProyectoInstitucionalRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_Gasto_DepartamentoRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_Detalle_Movimientos_AlmacenRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_Formato_ResguardoRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_Transferencias_Asignaciones_AyudasRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_K2_Auxiliar_DIOTRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_Layout_PresupuestalRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.RPT_SP_Layout_DevengadoRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.RPT_SP_Layout_Devengado_ContableRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.RPT_SP_Comparativo_Calendarizado_PresRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.RPT_SP_Layout_PagadoRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_Layout_FederacionRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.RPT_SP_Anexo_ComprobacionRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.RPT_SP_Anexo_NominasRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.NotaRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.Nota2RowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPTIniciativaLeydeIngresosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_CalendarioPresupuestoEgresosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_FormatoProgramaRecursosOrdendeGobRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_DifusionPresupuestoEgresosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_DifusionLeydeIngresosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_NOTA_FIOPoGFFedRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_SUB_NOTA_FIOPoGFFed2RowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_SUB_NOTA_FIOPoGFFedRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_Tarifario_IngresosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_EstadoEjercicioPresupuestoEGRRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_InformeAdmtvoEstadoEjercicioPresupuestoEGRRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_EstadoEjercicioPresupuestoEGR4NivelesRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_ConsultaEstadodelEjerciciodelPresupuestoRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_Control_PresupuestalRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_ControlPresupuestalIngresoRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_CriTarifarioRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_TarifarioIngresosUsuarioRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_PuntoRecaudacionTarifarioRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_AuditoriaContableRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_PolizasFuenteFinanciamientoRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_CatalogoMatricesConversionRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_ReporteCalendarizadoPresupuestalRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_ReporteCalendarizadoPresupuestalPorSelloRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_GastosXComprobar_FondosRevolventesRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_NominasRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_IngresosXRecaudarRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_IngresosRecaudadosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_AnaliticoPorProveedorContableRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_TransferenciasPresupuestalesRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_Plaza_FunciónRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_PagosRetroactivosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_MovimientosPlazasRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_CatalogoPercDeducRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_PersonalFederalizadoXRfcRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_JubiladosPeriodoRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_CategoriasPlazasAutorizadasRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_CategoriasTabuladoresRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_ImpresionPolizasRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_ContrareciboMultiplesFacturasRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_CuadroComparativoRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_OrdenCompraRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_OrdenServicioRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_ExistenciasConMinimosyMaximosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_UltimosCostosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_EntradaSalidasAlmacenRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_ConsultaDeViaticosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_InformeAnaliticoObligacionesDifFinanciamientosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_BalancePresupuestarioRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_Informes_ActuariasRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_RequisicionesDeServiciosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_OrdenesServicioDetalleRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_CuentasGastoFacturaRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_SolicitudesPagoRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_Control_Presupuestal_DevengadoRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.VW_RPT_K2_Balanza_De_Comprobacion_AnexosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.RPT_FichaTecnicaIndicadorProyectoInstitucionalRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_Gasto_DepartamentoRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_Detalle_Movimientos_AlmacenRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_Formato_ResguardoRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_Transferencias_Asignaciones_AyudasRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_K2_Auxiliar_DIOTRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_Layout_PresupuestalRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.RPT_SP_Layout_DevengadoRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.RPT_SP_Layout_Devengado_ContableRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.RPT_SP_Comparativo_Calendarizado_PresRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.RPT_SP_Layout_PagadoRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.SP_RPT_Layout_FederacionRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.RPT_SP_Anexo_ComprobacionRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca.RPT_SP_Anexo_NominasRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetBlanca">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetAlvirde.SP_RPT_InformeProgramaEstadoEjercicioPresupuestoEGRDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetAlvirde.SP_RPT_K2_Libro_Inventario_Arqueologicos_Artisticos_HistoricosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetAlvirde.RPT_OrdenesCompraServiciosProveedor2DataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetAlvirde.SP_RPT_EstadoEjercicioPresupuestoINGDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetAlvirde.SP_RPT_InformeProgramaEstadoEjercicioPresupuestoEGRRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetAlvirde.SP_RPT_K2_Libro_Inventario_Arqueologicos_Artisticos_HistoricosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetAlvirde.RPT_OrdenesCompraServiciosProveedor2Row">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetAlvirde.SP_RPT_EstadoEjercicioPresupuestoINGRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetAlvirde.SP_RPT_InformeProgramaEstadoEjercicioPresupuestoEGRRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetAlvirde.SP_RPT_K2_Libro_Inventario_Arqueologicos_Artisticos_HistoricosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetAlvirde.RPT_OrdenesCompraServiciosProveedor2RowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetAlvirde.SP_RPT_EstadoEjercicioPresupuestoINGRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetAlvirde">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:Korima_Reporteador.DSEnrique.SP_RPT_CatalogoProveedoresDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DSEnrique.SP_RPT_CatalogoEmpleadosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DSEnrique.SP_EstadoEjercicioIngresos_FuenteFinanciamientoDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DSEnrique.REPORTE_Estado_De_ActividadesDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DSEnrique.SP_RPT_Formato_Gral_SPDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DSEnrique.SP_RPT_Formato_Espec_SPDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DSEnrique.REPORTE_Estado_De_ActividadesAnaliticoRedondeo2DataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DSEnrique.REPORTE_Estado_De_ActividadesAnaliticoRedondeoDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DSEnrique.SP_RPT_CatalogoProductosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DSEnrique.SP_RPT_K2_ComprobacionDeGastosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DSEnrique.REPORTE_Estado_De_ActividadesRedondeo_PeriodosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DSEnrique.SP_RPT_CatalogoProveedoresRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DSEnrique.SP_RPT_CatalogoEmpleadosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DSEnrique.SP_EstadoEjercicioIngresos_FuenteFinanciamientoRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DSEnrique.REPORTE_Estado_De_ActividadesRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DSEnrique.SP_RPT_Formato_Gral_SPRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DSEnrique.SP_RPT_Formato_Espec_SPRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DSEnrique.REPORTE_Estado_De_ActividadesAnaliticoRedondeo2Row">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DSEnrique.REPORTE_Estado_De_ActividadesAnaliticoRedondeoRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DSEnrique.SP_RPT_CatalogoProductosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DSEnrique.SP_RPT_K2_ComprobacionDeGastosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DSEnrique.REPORTE_Estado_De_ActividadesRedondeo_PeriodosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DSEnrique.SP_RPT_CatalogoProveedoresRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DSEnrique.SP_RPT_CatalogoEmpleadosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DSEnrique.SP_EstadoEjercicioIngresos_FuenteFinanciamientoRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DSEnrique.REPORTE_Estado_De_ActividadesRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DSEnrique.SP_RPT_Formato_Gral_SPRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DSEnrique.SP_RPT_Formato_Espec_SPRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DSEnrique.REPORTE_Estado_De_ActividadesAnaliticoRedondeo2RowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DSEnrique.REPORTE_Estado_De_ActividadesAnaliticoRedondeoRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DSEnrique.SP_RPT_CatalogoProductosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DSEnrique.SP_RPT_K2_ComprobacionDeGastosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DSEnrique.REPORTE_Estado_De_ActividadesRedondeo_PeriodosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DSEnrique">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetDavid.NotaPercentDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetDavid.NotaActualAnteriorDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetDavid.NotaDividendosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetDavid.SP_RPT_EstadoEjercicioPresupuestoEGRDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetDavid.SP_RPT_MatrizPagadoGastosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetDavid.SP_RPT_MatrizDevengadoGastosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetDavid.SP_RPT_MatrizIngresosDevengadosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetDavid.SP_RPT_MatrizIngresosRecaudadosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetDavid.SP_RPT_MatrizRecaudadoIngresosSinDevengadoDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetDavid.NotaPercentRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetDavid.NotaActualAnteriorRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetDavid.NotaDividendosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetDavid.SP_RPT_EstadoEjercicioPresupuestoEGRRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetDavid.SP_RPT_MatrizPagadoGastosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetDavid.SP_RPT_MatrizDevengadoGastosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetDavid.SP_RPT_MatrizIngresosDevengadosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetDavid.SP_RPT_MatrizIngresosRecaudadosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetDavid.SP_RPT_MatrizRecaudadoIngresosSinDevengadoRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetDavid.NotaPercentRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetDavid.NotaActualAnteriorRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetDavid.NotaDividendosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetDavid.SP_RPT_EstadoEjercicioPresupuestoEGRRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetDavid.SP_RPT_MatrizPagadoGastosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetDavid.SP_RPT_MatrizDevengadoGastosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetDavid.SP_RPT_MatrizIngresosDevengadosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetDavid.SP_RPT_MatrizIngresosRecaudadosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetDavid.SP_RPT_MatrizRecaudadoIngresosSinDevengadoRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador.DataSetDavid">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSet.VW_C_UsuariosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSet.VariacionesHPDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSet.NotasDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSet.TotalCargosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSet.FlujoEfectivoDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSet.VW_C_UsuariosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSet.VariacionesHPRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSet.NotasRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSet.TotalCargosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSet.FlujoEfectivoRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSet.VW_C_UsuariosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSet.VariacionesHPRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSet.NotasRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSet.TotalCargosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSet.FlujoEfectivoRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSet">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSetTableAdapters.VW_C_UsuariosTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:Korima_Reporteador._Korima2_00_ReporteadorDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(Korima_Reporteador._Korima2_00_ReporteadorDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:Korima_Reporteador._Korima2_00_ReporteadorDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(Korima_Reporteador._Korima2_00_ReporteadorDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:Korima_Reporteador._Korima2_00_ReporteadorDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(Korima_Reporteador._Korima2_00_ReporteadorDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:Korima_Reporteador._Korima2_00_ReporteadorDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:Korima_Reporteador._Korima2_00_ReporteadorDataSetTableAdapters.TableAdapterManager.UpdateAll(Korima_Reporteador._Korima2_00_ReporteadorDataSet)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:Korima_Reporteador._Korima2_00_ReporteadorDataSetTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+</members>
+</doc>

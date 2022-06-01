@@ -1,0 +1,3 @@
+﻿Public Class SUBRPT_Estado_Situacion_FinancieraAnalitico
+
+End Class

@@ -1,0 +1,3 @@
+﻿Public Class RPT_Transferencias_Asignaciones_Ayudas
+
+End Class

@@ -1,0 +1,3 @@
+﻿Public Class RPT_Balanza_de_ComprobacionTOTALES
+
+End Class

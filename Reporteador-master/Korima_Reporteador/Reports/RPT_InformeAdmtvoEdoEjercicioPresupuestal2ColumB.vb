@@ -1,0 +1,3 @@
+﻿Public Class RPT_InformeAdmtvoEdoEjercicioPresupuestal2ColumB
+
+End Class

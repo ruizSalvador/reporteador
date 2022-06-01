@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DSetArturo" targetNamespace="http://tempuri.org/DSetArturo.xsd" xmlns:mstns="http://tempuri.org/DSetArturo.xsd" xmlns="http://tempuri.org/DSetArturo.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DSetArturo" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DSetArturo" msprop:Generator_UserDSName="DSetArturo">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="SP_RPT_AnaliticoDeLaDeudaPublicaPorPeriodoLDF" msprop:Generator_TableClassName="SP_RPT_AnaliticoDeLaDeudaPublicaPorPeriodoLDFDataTable" msprop:Generator_TableVarName="tableSP_RPT_AnaliticoDeLaDeudaPublicaPorPeriodoLDF" msprop:Generator_TablePropName="SP_RPT_AnaliticoDeLaDeudaPublicaPorPeriodoLDF" msprop:Generator_RowDeletingName="SP_RPT_AnaliticoDeLaDeudaPublicaPorPeriodoLDFRowDeleting" msprop:Generator_RowChangingName="SP_RPT_AnaliticoDeLaDeudaPublicaPorPeriodoLDFRowChanging" msprop:Generator_RowEvHandlerName="SP_RPT_AnaliticoDeLaDeudaPublicaPorPeriodoLDFRowChangeEventHandler" msprop:Generator_RowDeletedName="SP_RPT_AnaliticoDeLaDeudaPublicaPorPeriodoLDFRowDeleted" msprop:Generator_UserTableName="SP_RPT_AnaliticoDeLaDeudaPublicaPorPeriodoLDF" msprop:Generator_RowChangedName="SP_RPT_AnaliticoDeLaDeudaPublicaPorPeriodoLDFRowChanged" msprop:Generator_RowEvArgName="SP_RPT_AnaliticoDeLaDeudaPublicaPorPeriodoLDFRowChangeEvent" msprop:Generator_RowClassName="SP_RPT_AnaliticoDeLaDeudaPublicaPorPeriodoLDFRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NombreCuenta" msprop:Generator_ColumnVarNameInTable="columnNombreCuenta" msprop:Generator_ColumnPropNameInRow="NombreCuenta" msprop:Generator_ColumnPropNameInTable="NombreCuentaColumn" msprop:Generator_UserColumnName="NombreCuenta" type="xs:string" minOccurs="0" />
+              <xs:element name="Saldo" msprop:Generator_ColumnVarNameInTable="columnSaldo" msprop:Generator_ColumnPropNameInRow="Saldo" msprop:Generator_ColumnPropNameInTable="SaldoColumn" msprop:Generator_UserColumnName="Saldo" type="xs:string" minOccurs="0" />
+              <xs:element name="Disposiciones" msprop:Generator_ColumnVarNameInTable="columnDisposiciones" msprop:Generator_ColumnPropNameInRow="Disposiciones" msprop:Generator_ColumnPropNameInTable="DisposicionesColumn" msprop:Generator_UserColumnName="Disposiciones" type="xs:string" minOccurs="0" />
+              <xs:element name="Amortizaciones" msprop:Generator_ColumnVarNameInTable="columnAmortizaciones" msprop:Generator_ColumnPropNameInRow="Amortizaciones" msprop:Generator_ColumnPropNameInTable="AmortizacionesColumn" msprop:Generator_UserColumnName="Amortizaciones" type="xs:string" minOccurs="0" />
+              <xs:element name="Revaluaciones" msprop:Generator_ColumnVarNameInTable="columnRevaluaciones" msprop:Generator_ColumnPropNameInRow="Revaluaciones" msprop:Generator_ColumnPropNameInTable="RevaluacionesColumn" msprop:Generator_UserColumnName="Revaluaciones" type="xs:string" minOccurs="0" />
+              <xs:element name="SaldoFinal" msprop:Generator_ColumnVarNameInTable="columnSaldoFinal" msprop:Generator_ColumnPropNameInRow="SaldoFinal" msprop:Generator_ColumnPropNameInTable="SaldoFinalColumn" msprop:Generator_UserColumnName="SaldoFinal" type="xs:string" minOccurs="0" />
+              <xs:element name="PagoDeIntereses" msprop:Generator_ColumnVarNameInTable="columnPagoDeIntereses" msprop:Generator_ColumnPropNameInRow="PagoDeIntereses" msprop:Generator_ColumnPropNameInTable="PagoDeInteresesColumn" msprop:Generator_UserColumnName="PagoDeIntereses" type="xs:string" minOccurs="0" />
+              <xs:element name="PagoDeComisiones" msprop:Generator_ColumnVarNameInTable="columnPagoDeComisiones" msprop:Generator_ColumnPropNameInRow="PagoDeComisiones" msprop:Generator_ColumnPropNameInTable="PagoDeComisionesColumn" msprop:Generator_UserColumnName="PagoDeComisiones" type="xs:string" minOccurs="0" />
+              <xs:element name="mes" msprop:Generator_ColumnVarNameInTable="columnmes" msprop:Generator_ColumnPropNameInRow="mes" msprop:Generator_ColumnPropNameInTable="mesColumn" msprop:Generator_UserColumnName="mes" type="xs:string" minOccurs="0" />
+              <xs:element name="year" msprop:Generator_ColumnVarNameInTable="columnyear" msprop:Generator_ColumnPropNameInRow="year" msprop:Generator_ColumnPropNameInTable="yearColumn" msprop:Generator_UserColumnName="year" type="xs:string" minOccurs="0" />
+              <xs:element name="DeudaPublica" msprop:Generator_ColumnVarNameInTable="columnDeudaPublica" msprop:Generator_ColumnPropNameInRow="DeudaPublica" msprop:Generator_ColumnPropNameInTable="DeudaPublicaColumn" msprop:Generator_UserColumnName="DeudaPublica" type="xs:string" minOccurs="0" />
+              <xs:element name="Plazo" msprop:Generator_ColumnVarNameInTable="columnPlazo" msprop:Generator_ColumnPropNameInRow="Plazo" msprop:Generator_ColumnPropNameInTable="PlazoColumn" msprop:Generator_UserColumnName="Plazo" type="xs:string" minOccurs="0" />
+              <xs:element name="ordenamiento" msprop:Generator_ColumnVarNameInTable="columnordenamiento" msprop:Generator_ColumnPropNameInRow="ordenamiento" msprop:Generator_ColumnPropNameInTable="ordenamientoColumn" msprop:Generator_UserColumnName="ordenamiento" type="xs:string" minOccurs="0" />
+              <xs:element name="ordenamiento2" msprop:Generator_ColumnVarNameInTable="columnordenamiento2" msprop:Generator_ColumnPropNameInRow="ordenamiento2" msprop:Generator_ColumnPropNameInTable="ordenamiento2Column" msprop:Generator_UserColumnName="ordenamiento2" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

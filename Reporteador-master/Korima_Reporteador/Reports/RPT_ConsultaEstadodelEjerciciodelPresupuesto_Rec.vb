@@ -1,0 +1,3 @@
+﻿Public Class RPT_ConsultaEstadodelEjerciciodelPresupuesto_Rec
+
+End Class

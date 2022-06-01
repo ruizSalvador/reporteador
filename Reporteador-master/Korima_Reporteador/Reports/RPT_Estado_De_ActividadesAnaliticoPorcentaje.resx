@@ -1,0 +1,272 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="DsEnrique1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="negritas5.Condition" xml:space="preserve">
+    <value>[NumeroCuenta] like '5_000-00000' or
+[NumeroCuenta] like '5_0000-000000' or
+
+[NumeroCuenta] like '5_000-000000'  Or 
+[NumeroCuenta] ==  '51100-00000' Or 
+[NumeroCuenta] ==  '51200-00000' Or 
+[NumeroCuenta] ==  '51300-00000'  Or 
+[NumeroCuenta] ==  '52100-00000' Or 
+[NumeroCuenta] ==  '52200-00000' Or 
+[NumeroCuenta] ==  '52300-00000' Or 
+[NumeroCuenta] ==  '52400-00000' Or 
+[NumeroCuenta] ==  '52500-00000' Or 
+[NumeroCuenta] ==  '52600-00000' Or 
+[NumeroCuenta] ==  '52700-00000' Or 
+[NumeroCuenta] ==  '52800-00000' Or 
+[NumeroCuenta] ==  '52900-00000' Or 
+[NumeroCuenta] ==  '53000-00000' Or 
+[NumeroCuenta] ==  '53100-00000' Or 
+[NumeroCuenta] ==  '53200-00000' Or 
+[NumeroCuenta] ==  '53300-00000' Or 
+[NumeroCuenta] ==  '54000-00000' Or 
+[NumeroCuenta] ==  '54100-00000' Or 
+[NumeroCuenta] ==  '54200-00000' Or 
+[NumeroCuenta] ==  '54300-00000' Or 
+[NumeroCuenta] ==  '54400-00000' Or 
+[NumeroCuenta] ==  '54500-00000' Or 
+[NumeroCuenta] ==  '55000-00000' Or 
+[NumeroCuenta] ==  '55100-00000' Or 
+[NumeroCuenta] ==  '55200-00000' Or 
+[NumeroCuenta] ==  '55300-00000' Or 
+[NumeroCuenta] ==  '55400-00000' Or 
+[NumeroCuenta] ==  '55500-00000' Or 
+[NumeroCuenta] ==  '55900-00000' Or 
+[NumeroCuenta] ==  '56000-00000' Or 
+[NumeroCuenta] ==  '56100-00000'</value>
+  </data>
+  <metadata name="VW_RPT_CFG_DatosEntesTableAdapter1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>130, 17</value>
+  </metadata>
+  <data name="CalculatedField15.Expression" xml:space="preserve">
+    <value>(Iif([MaskNumeroCuenta]='40000' or [MaskNumeroCuenta]='400000' , + ([TotalAbonos2] - [TotalCargos2]) , 
+Iif([MaskNumeroCuenta]='50000' or [MaskNumeroCuenta]='500000', - ([TotalCargos2]  - [TotalAbonos2]) ,0 ) )) </value>
+  </data>
+  <data name="CalculatedField16.Expression" xml:space="preserve">
+    <value>(Iif([MaskNumeroCuenta]='40000' or [MaskNumeroCuenta]='400000' , +( [TotalAbonos3] - [TotalCargos3])  , 
+Iif([MaskNumeroCuenta]='50000' or [MaskNumeroCuenta]='500000', - ([TotalCargos3] - [TotalAbonos3])  ,0 ) )) </value>
+  </data>
+  <data name="CalculatedField17.Expression" xml:space="preserve">
+    <value>(Iif([MaskNumeroCuenta]='40000' or [MaskNumeroCuenta]='400000' , + ([TotalAbonos4] - [TotalCargos4])  , 
+Iif([MaskNumeroCuenta]='50000' or [MaskNumeroCuenta]='500000', - ([TotalCargos4] - [TotalAbonos4])  ,0 ) )) </value>
+  </data>
+  <data name="CalculatedField18.Expression" xml:space="preserve">
+    <value>(Iif([MaskNumeroCuenta]='40000' or [MaskNumeroCuenta]='400000' , +( [TotalAbonos5] - [TotalCargos5])  , 
+Iif([MaskNumeroCuenta]='50000' or [MaskNumeroCuenta]='500000', -( [TotalCargos5] - [TotalAbonos5])  ,0 ) )) </value>
+  </data>
+  <data name="CalculatedField19.Expression" xml:space="preserve">
+    <value>(Iif([MaskNumeroCuenta]='40000' or [MaskNumeroCuenta]='400000' , +( [TotalAbonos6] - [TotalCargos6])  , 
+Iif([MaskNumeroCuenta]='50000' or [MaskNumeroCuenta]='500000', -( [TotalCargos6] - [TotalAbonos6])  ,0 ) )) </value>
+  </data>
+  <data name="CalculatedField20.Expression" xml:space="preserve">
+    <value>(Iif([MaskNumeroCuenta]='40000' or [MaskNumeroCuenta]='400000' , +( [TotalAbonos7] - [TotalCargos7])  , 
+Iif([MaskNumeroCuenta]='50000' or [MaskNumeroCuenta]='500000', - ([TotalCargos7] - [TotalAbonos7])  ,0 ) )) </value>
+  </data>
+  <data name="CalculatedField21.Expression" xml:space="preserve">
+    <value>(Iif([MaskNumeroCuenta]='40000' or [MaskNumeroCuenta]='400000' , + ([TotalAbonos8] - [TotalCargos8])  , 
+Iif([MaskNumeroCuenta]='50000' or [MaskNumeroCuenta]='500000', - ([TotalCargos8] - [TotalAbonos8])  ,0 ) )) </value>
+  </data>
+  <data name="CalculatedField22.Expression" xml:space="preserve">
+    <value>(Iif([MaskNumeroCuenta]='40000' or [MaskNumeroCuenta]='400000' , + ([TotalAbonos9] - [TotalCargos9])  , 
+Iif([MaskNumeroCuenta]='50000' or [MaskNumeroCuenta]='500000', - ([TotalCargos9] - [TotalAbonos9])  ,0 ) )) </value>
+  </data>
+  <data name="CalculatedField23.Expression" xml:space="preserve">
+    <value>(Iif([MaskNumeroCuenta]='40000' or [MaskNumeroCuenta]='400000' , + ([TotalAbonos10] - [TotalCargos10])  , 
+Iif([MaskNumeroCuenta]='50000' or [MaskNumeroCuenta]='500000', - ([TotalCargos10] - [TotalAbonos10])  ,0 ) )) </value>
+  </data>
+  <data name="CalculatedField24.Expression" xml:space="preserve">
+    <value>(Iif([MaskNumeroCuenta]='40000' or [MaskNumeroCuenta]='400000' , + ([TotalAbonos11] - [TotalCargos11])  , 
+Iif([MaskNumeroCuenta]='50000' or [MaskNumeroCuenta]='500000', - ([TotalCargos11] - [TotalAbonos11])  ,0 ) )) </value>
+  </data>
+  <data name="CalculatedField25.Expression" xml:space="preserve">
+    <value>(Iif([MaskNumeroCuenta]='40000' or [MaskNumeroCuenta]='400000' , + ([TotalAbonos12] - [TotalCargos12])  , 
+Iif([MaskNumeroCuenta]='50000' or [MaskNumeroCuenta]='500000', - ([TotalCargos12] - [TotalAbonos12])  ,0 ) )) </value>
+  </data>
+  <data name="CalculatedField26.Expression" xml:space="preserve">
+    <value>(Iif([MaskNumeroCuenta]='40000' or [MaskNumeroCuenta]='400000' , +( [TotalAbonos] - [TotalCargos])  , 
+Iif([MaskNumeroCuenta]='50000' or [MaskNumeroCuenta]='500000', - ([TotalCargos] - [TotalAbonos])  ,0 ) )) </value>
+  </data>
+  <data name="CalculatedField27.Expression" xml:space="preserve">
+    <value>(Iif([MaskNumeroCuenta]='40000' or [MaskNumeroCuenta]='400000' ,  ( 
+([TotalAbonos] - [TotalCargos]) + 
+([TotalAbonos2] - [TotalCargos2]) +
+([TotalAbonos3] - [TotalCargos3]) +
+([TotalAbonos4] - [TotalCargos4]) +
+([TotalAbonos5] - [TotalCargos5]) +
+([TotalAbonos6] - [TotalCargos6]) +
+([TotalAbonos7] - [TotalCargos7]) +
+([TotalAbonos8] - [TotalCargos8]) +
+([TotalAbonos9] - [TotalCargos9]) +
+([TotalAbonos10] - [TotalCargos10]) +
+([TotalAbonos11] - [TotalCargos11]) +
+([TotalAbonos12] - [TotalCargos12]))  , 
+Iif([MaskNumeroCuenta]='50000' or [MaskNumeroCuenta]='500000',   -   (
+([TotalCargos] - [TotalAbonos])  + 
+([TotalCargos2] - [TotalAbonos2]) + 
+([TotalCargos3] - [TotalAbonos3]) + 
+([TotalCargos4] - [TotalAbonos4]) + 
+([TotalCargos5] - [TotalAbonos5]) + 
+([TotalCargos6] - [TotalAbonos6]) + 
+([TotalCargos7] - [TotalAbonos7]) + 
+([TotalCargos8] - [TotalAbonos8]) + 
+([TotalCargos9] - [TotalAbonos9]) + 
+([TotalCargos10] - [TotalAbonos10]) + 
+([TotalCargos11] - [TotalAbonos11]) + 
+([TotalCargos12] - [TotalAbonos12])) ,0 ) )) 
+
+
+
+
+</value>
+  </data>
+  <data name="CalculatedField28.Expression" xml:space="preserve">
+    <value>Iif([MaskNumeroCuenta] Like '5%',( 
+([TotalCargos] - [TotalAbonos])  + 
+([TotalCargos2] - [TotalAbonos2]) + 
+([TotalCargos3] - [TotalAbonos3]) + 
+([TotalCargos4] - [TotalAbonos4]) + 
+([TotalCargos5] - [TotalAbonos5]) + 
+([TotalCargos6] - [TotalAbonos6]) + 
+([TotalCargos7] - [TotalAbonos7]) + 
+([TotalCargos8] - [TotalAbonos8]) + 
+([TotalCargos9] - [TotalAbonos9]) + 
+([TotalCargos10] - [TotalAbonos10]) + 
+([TotalCargos11] - [TotalAbonos11]) + 
+([TotalCargos12] - [TotalAbonos12])) ,(
+([TotalAbonos] - [TotalCargos]) + 
+([TotalAbonos2] - [TotalCargos2]) +
+([TotalAbonos3] - [TotalCargos3]) +
+([TotalAbonos4] - [TotalCargos4]) +
+([TotalAbonos5] - [TotalCargos5]) +
+([TotalAbonos6] - [TotalCargos6]) +
+([TotalAbonos7] - [TotalCargos7]) +
+([TotalAbonos8] - [TotalCargos8]) +
+([TotalAbonos9] - [TotalCargos9]) +
+([TotalAbonos10] - [TotalCargos10]) +
+([TotalAbonos11] - [TotalCargos11]) +
+([TotalAbonos12] - [TotalCargos12])) 
+ )</value>
+  </data>
+</root>

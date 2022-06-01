@@ -1,0 +1,2 @@
+﻿Public Class SUBRPT_AnaliticoDeLaDeudaPorPeriodoLDF
+End Class
